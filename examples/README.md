@@ -4,7 +4,7 @@
 
 ## Running Locally
 
-This project builds as a .NET Core console application. It contains a number of Runly processes that can be run from the CLI. For a full list of commands, run:
+This project builds as a .NET Core console application. It contains a number of Runly processes that can be run from the CLI. For a full list of available commands, run:
 
 ```
 dotnet run -- help
@@ -14,12 +14,12 @@ dotnet run -- help
 
 ### Processes
 
-* [`CopyDirectory`](#CopyDirectory)
+* [`CopyDirectory`](#copydirectory)
 * more coming soon...
 
 #### `CopyDirectory`
 
-Create a file called `copydirectory.json` in the root of this directory with the following contents:
+Create a file called `copydirectory.json` in the the project root with the following contents:
 
 ```json
 {
@@ -36,7 +36,7 @@ Change the settings to your liking and then run the process:
 dotnet run -- run copydirectory.json
 ```
 
-This will copy files from the `source` folder to the `destination` folder.
+This will copy files from the `source` folder to the `destination` folder and report the results to the console.
 
 ## Running on Runly
 
