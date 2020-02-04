@@ -16,5 +16,7 @@ namespace Runly.Examples.Census
 
 		[Name("TYPE")]
 		public string Type { get; set; }
+
+		public override string ToString() => Name;
 	}
 }
