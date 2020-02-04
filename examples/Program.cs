@@ -1,12 +1,14 @@
-﻿using System;
+﻿using System.Threading.Tasks;
 
-namespace examples
+namespace Runly.Examples
 {
 	class Program
 	{
-		static void Main(string[] args)
+		static async Task Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			await ProcessHost.CreateDefaultBuilder(args)
+				.Build()
+				.RunProcessAsync();
 		}
 	}
 }
