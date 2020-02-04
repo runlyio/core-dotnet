@@ -40,4 +40,14 @@ This will copy files from the `source` folder to the `destination` folder and re
 
 ## Running on Runly
 
-...
+1. Pack the application into a nuget package.
+
+```
+dotnet pack -c Release
+```
+
+2. Create a free account at [Runly](https://www.runly.io/).
+
+3. Upload the created package (`bin/Release/Runly.Examples.1.0.0.nupkg`) to your organization.
+
+4. Queue the process using one of the aformentioned json config files.
