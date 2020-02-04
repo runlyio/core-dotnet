@@ -26,7 +26,7 @@ Create a file called `copydirectory.json` in the the project root with the follo
   "source": "/some/path/to/a/folder/with/files/in/it",
   "destination": "/another/path/to/copy/those/files/to",
   "ignoreUnauthorizedAccessException": false,
-  "process": "Runly.Examples.CopyDirectory"
+  "process": "Runly.Examples.FileSystem.CopyDirectory"
 }
 ```
 
