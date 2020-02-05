@@ -10,6 +10,7 @@ namespace Runly.Examples
 			await ProcessHost.CreateDefaultBuilder(args)
 				.ConfigureServices((host, services) =>
 				{
+					// We can register any dependencies our processes need here.
 					services.AddCensusProcesses();
 				})
 				.Build()

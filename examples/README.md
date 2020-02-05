@@ -15,7 +15,7 @@ dotnet run -- help
 ### Processes
 
 * [`CopyDirectory`](#copydirectory)
-* more coming soon...
+* [Census `PlaceImporter`](#placeimporter)
 
 #### `CopyDirectory`
 
@@ -33,10 +33,35 @@ Create a file called `copydirectory.json` in the the project root with the follo
 Change the settings to your liking and then run the process:
 
 ```
-dotnet run -- run copydirectory.json
+dotnet run -- run copydirectory.json -c
 ```
 
 This will copy files from the `source` folder to the `destination` folder and report the results to the console.
+
+
+#### `PlaceImporter`
+
+This process "imports" national places from a US Census publicly available CSV file into a fake database. This process demonstrates processing a CSV file in parallel and doing something with the parsed data.
+
+Create a file called `placeimporter.json` in the the project root with the following contents:
+
+```json
+{
+	"baseUrl": "http://www2.census.gov/geo/docs/reference/codes/files/",
+	"process": "Runly.Examples.Census.PlaceImporter",
+	"execution": {
+		"parallelTaskCount": 10
+	}
+}
+```
+
+Note the `parallelTaskCount` which determines how many parallel tasks will execute at a time to process the CSV file. Change the settings to your liking and then run the process:
+
+```
+dotnet run -- run placeimporter.json -c
+```
+
+This will output the parsed place names categorized by state.
 
 ## Running on Runly
 
