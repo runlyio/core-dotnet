@@ -27,7 +27,7 @@ namespace Runly.Examples.Census
 			logger.LogDebug("Fake saving {name} with fake database #{id}", place.Name, instanceId);
 
 			// a real database would save this data...
-			return Task.Delay(25);
+			return Task.Delay(100);
 		}
 	}
 }

@@ -28,7 +28,7 @@ Create a file called `placeimporter.json` in the the project root with the follo
 	"baseUrl": "http://www2.census.gov/geo/docs/reference/codes/files/",
 	"process": "Runly.Examples.Census.PlaceImporter",
 	"execution": {
-		"parallelTaskCount": 10
+		"parallelTaskCount": 50
 	}
 }
 ```
