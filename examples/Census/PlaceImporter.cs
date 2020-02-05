@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Runly.Examples.Census
 {
-	public class PlaceImporter : Process<CensusConfig, Place>, IDisposable
+	public class PlaceImporter : Process<CensusConfig, Place, IDatabase>, IDisposable
 	{
 		readonly IDownloader downloader;
 		readonly ILogger<PlaceImporter> logger;
@@ -41,9 +41,12 @@ namespace Runly.Examples.Census
 			return Task.FromResult(items);
 		}
 
-		public override Task<Result> ProcessAsync(Place place)
+		public override async Task<Result> ProcessAsync(Place place, IDatabase database)
 		{
-			return Task.FromResult(Result.Success(place.State));
+			// database is not a thread-safe dependency, resolve a new instance of it for each thread we process
+			await database.SavePlace(place);
+
+			return Result.Success(place.State);
 		}
 
 		public void Dispose()

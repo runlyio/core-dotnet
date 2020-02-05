@@ -13,7 +13,7 @@ namespace Runly.Examples.Census
 				client.BaseAddress = new Uri(config.BaseUrl);
 			});
 
-			services.AddSingleton<IDatabase, FakeDatabase>();
+			services.AddScoped<IDatabase, FakeDatabase>();
 
 			return services;
 		}

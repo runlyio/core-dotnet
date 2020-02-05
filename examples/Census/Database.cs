@@ -1,4 +1,6 @@
+using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace Runly.Examples.Census
 {
@@ -9,8 +11,21 @@ namespace Runly.Examples.Census
 
 	public class FakeDatabase : IDatabase
 	{
+		public static int InstanceCount = 0;
+
+		readonly ILogger<FakeDatabase> logger;
+		readonly int instanceId;
+
+		public FakeDatabase(ILogger<FakeDatabase> logger)
+		{
+			instanceId = Interlocked.Increment(ref InstanceCount);
+			this.logger = logger;
+		}
+
 		public Task SavePlace(Place place)
 		{
+			logger.LogDebug("Fake saving {name} with fake database #{id}", place.Name, instanceId);
+
 			// a real database would save this data...
 			return Task.Delay(100);
 		}
