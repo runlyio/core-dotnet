@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
-using System.Linq;
 using System.Threading.Tasks;
 using CsvHelper;
 using Microsoft.Extensions.Logging;
@@ -20,6 +19,9 @@ namespace Runly.Examples.Census
 		{
 			this.downloader = downloader;
 			this.logger = logger;
+
+			// we want to stream/read the CSV file as we are parsing it
+			Options.CanCountItems = false;
 		}
 
 		public override async Task InitializeAsync()
@@ -31,15 +33,7 @@ namespace Runly.Examples.Census
 			csv.Configuration.Delimiter = "|";
 		}
 
-		public override Task<IEnumerable<Place>> GetItemsAsync()
-		{
-			logger.LogInformation("Parsing CSV file...");
-
-			// use ToList to parse the entire file right here so we can process the items on multiple threads
-			IEnumerable<Place> items = csv.GetRecords<Place>().ToList();
-
-			return Task.FromResult(items);
-		}
+		public override Task<IEnumerable<Place>> GetItemsAsync() => Task.FromResult(csv.GetRecords<Place>());
 
 		public override async Task<Result> ProcessAsync(Place place, IDatabase database)
 		{
