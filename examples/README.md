@@ -14,30 +14,8 @@ dotnet run -- help
 
 ### Processes
 
+* [`PlaceImporter`](#placeimporter)
 * [`CopyDirectory`](#copydirectory)
-* [Census `PlaceImporter`](#placeimporter)
-
-#### `CopyDirectory`
-
-Create a file called `copydirectory.json` in the the project root with the following contents:
-
-```json
-{
-  "source": "/some/path/to/a/folder/with/files/in/it",
-  "destination": "/another/path/to/copy/those/files/to",
-  "ignoreUnauthorizedAccessException": false,
-  "process": "Runly.Examples.FileSystem.CopyDirectory"
-}
-```
-
-Change the settings to your liking and then run the process:
-
-```
-dotnet run -- run copydirectory.json -c
-```
-
-This will copy files from the `source` folder to the `destination` folder and report the results to the console.
-
 
 #### `PlaceImporter`
 
@@ -62,6 +40,27 @@ dotnet run -- run placeimporter.json -c
 ```
 
 This will output the parsed place names categorized by state.
+
+#### `CopyDirectory`
+
+Create a file called `copydirectory.json` in the the project root with the following contents:
+
+```json
+{
+  "source": "/some/path/to/a/folder/with/files/in/it",
+  "destination": "/another/path/to/copy/those/files/to",
+  "ignoreUnauthorizedAccessException": false,
+  "process": "Runly.Examples.FileSystem.CopyDirectory"
+}
+```
+
+Change the settings to your liking and then run the process:
+
+```
+dotnet run -- run copydirectory.json -c
+```
+
+This will copy files from the `source` folder to the `destination` folder and report the results to the console.
 
 ## Running on Runly
 
