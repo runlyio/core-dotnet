@@ -64,7 +64,7 @@ namespace Runly.Examples.Census
 			// parameter in the ProcessAsync method instead of a constructor parameter. The process will resolve
 			// a new instance of the dependency either per thread or per item (depending on if we registered
 			// it as Transient or Scoped). Play around with the registration in ServiceExtensions to see how the
-			// behavior changes.
+			// behavior changes (also change the log level of Runly.Examples to Debug).
 			await database.SavePlace(place);
 
 			return Result.Success(place.State);
