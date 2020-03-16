@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using Microsoft.Extensions.Logging;
 
-namespace Runly.Examples.Census
+namespace Runly.GettingStarted.Census
 {
 	/// <summary>
 	/// "Imports" national places from a US Census publicly available CSV file. This process demonstrates

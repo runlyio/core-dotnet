@@ -2,7 +2,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 
-namespace Runly.Examples.Census
+namespace Runly.GettingStarted.Census
 {
 	public interface IDatabase
 	{

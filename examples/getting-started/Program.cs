@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
-using Runly.Examples.Census;
+using Runly.GettingStarted.Census;
 
-namespace Runly.Examples
+namespace Runly.GettingStarted
 {
 	class Program
 	{

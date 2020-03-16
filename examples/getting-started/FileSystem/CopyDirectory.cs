@@ -4,7 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Runly.Examples.FileSystem
+namespace Runly.GettingStarted.FileSystem
 {
 	public class CopyDirectory : Process<CopyDirectoryConfig, string>
 	{

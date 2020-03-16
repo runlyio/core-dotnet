@@ -1,6 +1,6 @@
 using CsvHelper.Configuration.Attributes;
 
-namespace Runly.Examples.Census
+namespace Runly.GettingStarted.Census
 {
 	public class Place
 	{
