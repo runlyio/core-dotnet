@@ -5,6 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <Version>0.1.0</Version>
 
+    <AssemblyName>Runly.GettingStarted</AssemblyName>
+    <RootNamespace>Runly.GettingStarted</RootNamespace>
+
     <PackAsTool>true</PackAsTool>
   </PropertyGroup>
 
