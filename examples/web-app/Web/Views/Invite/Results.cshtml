@@ -1,0 +1,13 @@
+@using Microsoft.Extensions.Options
+
+@inject IOptionsSnapshot<RunlyOptions> opts
+@model RunResultsModel
+
+@section Scripts {
+	<script type="text/javascript" src="https://cdn.runly.io/v0.1.0/runly.js"></script>
+}
+
+<div
+	data-runly-token="@opts.Value.PublishableKey"
+	data-runly-org="@opts.Value.Org"
+	data-runly-run="@Model.RunId">Loading run results...</div>
