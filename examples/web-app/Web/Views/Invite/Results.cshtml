@@ -3,9 +3,21 @@
 @inject IOptionsSnapshot<RunlyOptions> opts
 @model RunResultsModel
 
-@section Scripts {
-	<script type="text/javascript" src="https://cdn.runly.io/v0.1.0/runly.js"></script>
+@{
+	ViewData["Title"] = "Invitation Results";
 }
+
+@section Scripts {
+	<script type="text/javascript" src="https://cdn.runly.io/v0.1.2/runly.js"></script>
+}
+
+<h1>Sending Invitations</h1>
+
+<p>
+	Thanks for inviting all those users! We're sending the invitations now.
+	You can watch the progress here or safely leave this page and return to your life.
+	The email invitations will be sent either way.
+</p>
 
 <div
 	data-runly-token="@opts.Value.PublishableKey"
