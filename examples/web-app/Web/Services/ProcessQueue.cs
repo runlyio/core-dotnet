@@ -42,7 +42,10 @@ namespace Examples.WebApp.Web.Services
 					Execution = new ExecutionConfig
 					{
 						// let's send 50 emails at a time
-						ParallelTaskCount = 50
+						ParallelTaskCount = 50,
+
+						// don't stop the process unless we get over 100 failed items
+						ItemFailureCountToStopProcess = 100
 					}
 				}
 			);

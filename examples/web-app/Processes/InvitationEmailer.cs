@@ -3,12 +3,14 @@ using Runly;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Common;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Examples.WebApp.Processes
 {
 	public class InvitationEmailer : Process<InvitationEmailerConfig, string, DbConnection, IEmailService>
 	{
+		int count = 0;
 		readonly DbConnection db;
 
 		public InvitationEmailer(InvitationEmailerConfig config, DbConnection db)
@@ -29,6 +31,11 @@ namespace Examples.WebApp.Processes
 		{
 			// use method-scoped db rather than the class-scoped db for parallel tasks
 			// https://www.runly.io/docs/dependency-injection/#method-injection
+
+			// fake a failure for every 100th item
+			int i = Interlocked.Increment(ref count);
+			if (i % 100 == 0)
+				return Result.Failure("Internet Down");
 
 			// send our fake email
 			await emails.SendEmail(email, "You are invited!", "Join us. We have cake.");
