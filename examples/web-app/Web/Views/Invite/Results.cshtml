@@ -8,7 +8,7 @@
 }
 
 @section Scripts {
-	<script type="text/javascript" src="https://cdn.runly.io/v0.1.3/runly.js"></script>
+	<script type="text/javascript" src="https://cdn.runly.io/v0.2.1/runly.js"></script>
 }
 
 <h1>Sending Invitations</h1>
@@ -20,9 +20,10 @@
 </p>
 
 <div
+	data-runly-component="RunProgress"
 	data-runly-token="@opts.Value.PublishableKey"
 	data-runly-org="@opts.Value.Org"
-	data-runly-run="@Model.RunId">Loading run results...</div>
+	data-runly-run-id="@Model.RunId">Loading run results...</div>
 
 <hr/>
 
