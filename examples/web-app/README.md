@@ -4,7 +4,7 @@ This is an example MVC web application rendered with razor pages. It is intended
 
 ## Running Locally
 
-Clone this repo and update `runly` section in `appsettings.json` to suit your local environment. [Read the associated documentation](https://www.runly.io/docs/integration/web/#setup) for more information on setting up this example.
+Clone this repo and update `runly` section in `appsettings.json` to suit your local environment. [Read the associated documentation](https://www.runly.io/docs/examples/web/#setup) for more information on setting up this example.
 
 To start the web application on `localhost:5000`:
 
