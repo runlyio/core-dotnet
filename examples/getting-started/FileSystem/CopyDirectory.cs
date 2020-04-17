@@ -61,12 +61,9 @@ namespace Examples.GettingStarted.FileSystem
 					}
 				}
 			}
-			catch (UnauthorizedAccessException)
+			catch (UnauthorizedAccessException) when (Config.IgnoreUnauthorizedAccessException)
 			{
-				if (Config.IgnoreUnauthorizedAccessException)
-					return Result.Success("Skipped - Unauthorized", "Skipping file copy due to an UnauthorizedAccessException being thrown. Set IgnoreWhenAccessDenied = false to treat as an error.");
-				else
-					throw;
+				return Result.Success("Skipped - Unauthorized", "Skipping file copy due to an UnauthorizedAccessException being thrown. Set IgnoreWhenAccessDenied = false to treat as an error.");
 			}
 
 			return Result.SuccessOrCancelled(CancellationToken);
