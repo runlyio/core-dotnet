@@ -1,4 +1,6 @@
-namespace Runly.GettingStarted.Census
+using Runly;
+
+namespace Examples.GettingStarted.Census
 {
 	public class CensusConfig : Config
 	{

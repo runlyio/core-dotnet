@@ -1,9 +1,10 @@
 using Microsoft.Extensions.Logging;
+using Runly;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Runly.GettingStarted.Census
+namespace Examples.GettingStarted.Census
 {
 	public interface IDownloader
 	{

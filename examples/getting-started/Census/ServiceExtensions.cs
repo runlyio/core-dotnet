@@ -1,7 +1,8 @@
 using Microsoft.Extensions.DependencyInjection;
+using Runly;
 using System;
 
-namespace Runly.GettingStarted.Census
+namespace Examples.GettingStarted.Census
 {
 	public static class ServiceExtensions
 	{

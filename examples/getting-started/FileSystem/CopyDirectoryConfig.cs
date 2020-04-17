@@ -1,6 +1,7 @@
-﻿using System;
+﻿using Runly;
+using System;
 
-namespace Runly.GettingStarted.FileSystem
+namespace Examples.GettingStarted.FileSystem
 {
 	public class CopyDirectoryConfig : Config
 	{

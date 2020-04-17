@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Runly;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Runly.GettingStarted.FileSystem
+namespace Examples.GettingStarted.FileSystem
 {
 	public class CopyDirectory : Process<CopyDirectoryConfig, string>
 	{
