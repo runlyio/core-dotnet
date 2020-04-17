@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{BD87C1C9-31B6-4606-8A7C-ADF04143BADC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Processes", "Processes\Processes.csproj", "{4CF037E9-2465-476E-8D6D-540D3C7F6C4A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jobs", "Jobs\Jobs.csproj", "{4CF037E9-2465-476E-8D6D-540D3C7F6C4A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

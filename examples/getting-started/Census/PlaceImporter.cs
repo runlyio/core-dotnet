@@ -10,14 +10,14 @@ using System.Threading.Tasks;
 namespace Examples.GettingStarted.Census
 {
 	/// <summary>
-	/// "Imports" national places from a US Census publicly available CSV file. This process demonstrates
+	/// "Imports" national places from a US Census publicly available CSV file. This job demonstrates
 	/// processing a CSV file in parallel and doing something with the parsed data.
 	/// </summary>
 	/// <remarks>
 	/// Makes use of OSS library CsvHelper.
 	/// https://joshclose.github.io/CsvHelper/
 	/// </remarks>
-	public class PlaceImporter : Process<CensusConfig, Place, IDatabase>, IDisposable
+	public class PlaceImporter : Job<CensusConfig, Place, IDatabase>, IDisposable
 	{
 		readonly IDownloader downloader;
 		readonly ILogger<PlaceImporter> logger;
@@ -30,10 +30,10 @@ namespace Examples.GettingStarted.Census
 			this.logger = logger;
 
 			// The CsvReader.GetRecords<T> method will return an IEnumerable<T> that will yield records.
-			// What this means is that only a single record is returned at a time as the process iterates the records.
-			// That also means that only a small portion of the file is read into memory. However, if we let the process
+			// What this means is that only a single record is returned at a time as the job iterates the records.
+			// That also means that only a small portion of the file is read into memory. However, if we let the job
 			// count the items (using .Count()), or do anything that executes a LINQ projection, such as calling .ToList(),
-			// the entire file will be read into memory. We can disable the counting behavior so that the process will
+			// the entire file will be read into memory. We can disable the counting behavior so that the job will
 			// stream the CSV file.
 			Options.CanCountItems = false;
 		}
@@ -52,7 +52,7 @@ namespace Examples.GettingStarted.Census
 		public override Task<IEnumerable<Place>> GetItemsAsync()
 		{
 			// Even though the CsvReader is not thread-safe (see https://github.com/JoshClose/CsvHelper/issues/908),
-			// we can still stream the file using csv.GetRecords (without calling .ToList() first) since the process
+			// we can still stream the file using csv.GetRecords (without calling .ToList() first) since the job
 			// will synchronize access to the enumerator so that only a single thread is reading/parsing a CSV record
 			// at a time. This makes it easy to do multi-threaded processing even if not all of your dependencies
 			// support it.
@@ -62,7 +62,7 @@ namespace Examples.GettingStarted.Census
 		public override async Task<Result> ProcessAsync(Place place, IDatabase database)
 		{
 			// If a dependency is not thread-safe (in this case our fake IDatabase), we can take it as a
-			// parameter in the ProcessAsync method instead of a constructor parameter. The process will resolve
+			// parameter in the ProcessAsync method instead of a constructor parameter. The job will resolve
 			// a new instance of the dependency either per thread or per item (depending on if we registered
 			// it as Transient or Scoped). Play around with the registration in ServiceExtensions to see how the
 			// behavior changes (also change the log level of Runly.Examples to Debug).

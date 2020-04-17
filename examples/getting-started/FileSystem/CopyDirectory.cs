@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Examples.GettingStarted.FileSystem
 {
-	public class CopyDirectory : Process<CopyDirectoryConfig, string>
+	public class CopyDirectory : Job<CopyDirectoryConfig, string>
 	{
 		public CopyDirectory(CopyDirectoryConfig config)
 			: base(config) { }

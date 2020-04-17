@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace Examples.WebApp.Processes
+namespace Examples.WebApp.Jobs
 {
 	public interface IEmailService
 	{

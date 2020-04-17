@@ -3,16 +3,16 @@ using System.Data.Common;
 using System.Data.SQLite;
 using System.Threading.Tasks;
 
-namespace Examples.WebApp.Processes
+namespace Examples.WebApp.Jobs
 {
 	class Program
 	{
 		static async Task Main(string[] args)
 		{
-			await ProcessHost.CreateDefaultBuilder(args)
+			await JobHost.CreateDefaultBuilder(args)
 				.ConfigureServices((host, services) =>
 				{
-					// Register the deps our process needs using the process config.
+					// Register the deps our job needs using the job config.
 					// https://www.runly.io/docs/dependency-injection/#registering-dependencies
 
 					services.AddScoped<DbConnection, InvitationEmailerConfig>((s, cfg) =>
@@ -24,7 +24,7 @@ namespace Examples.WebApp.Processes
 					);
 				})
 				.Build()
-				.RunProcessAsync();
+				.RunJobAsync();
 		}
 	}
 }

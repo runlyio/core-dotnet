@@ -8,14 +8,14 @@ namespace Examples.GettingStarted
 	{
 		static async Task Main(string[] args)
 		{
-			await ProcessHost.CreateDefaultBuilder(args)
+			await JobHost.CreateDefaultBuilder(args)
 				.ConfigureServices((host, services) =>
 				{
-					// We can register any dependencies our processes need here.
-					services.AddCensusProcesses();
+					// We can register any dependencies our jobs need here.
+					services.AddCensusJobs();
 				})
 				.Build()
-				.RunProcessAsync();
+				.RunJobAsync();
 		}
 	}
 }

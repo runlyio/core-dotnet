@@ -1,6 +1,6 @@
 # Web App Example
 
-This is an example MVC web application rendered with razor pages. It is intended to show how you can integrate a Runly process into a web application workflow. The web application queues a long-running, asynchronous process in response to a user action. The application provides real-time feedback to the user on the state of their long-running process.
+This is an example MVC web application rendered with razor pages. It is intended to show how you can integrate a Runly job into a web application workflow. The web application queues a long-running, asynchronous job in response to a user action. The application provides real-time feedback to the user on the state of their long-running job.
 
 ## Running Locally
 

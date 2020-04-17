@@ -6,9 +6,9 @@ using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Examples.WebApp.Processes
+namespace Examples.WebApp.Jobs
 {
-	public class InvitationEmailer : Process<InvitationEmailerConfig, string, DbConnection, IEmailService>
+	public class InvitationEmailer : Job<InvitationEmailerConfig, string, DbConnection, IEmailService>
 	{
 		int count = 0;
 		readonly DbConnection db;
@@ -42,7 +42,7 @@ namespace Examples.WebApp.Processes
 
 			// Open the connection if it is not already opened. Since we register the DbConnection as Scoped,
 			// a previous call to ProcessAsync with this Task could have opened the connection. In that case,
-			// the connection would already be open. Though multiple parralel tasks could be calling ProcessAsync
+			// the connection would already be open. Though multiple parallel tasks could be calling ProcessAsync
 			// at the same time, the DbConnection is used only with a single Task.
 			if (db.State != ConnectionState.Open)
 				await db.OpenAsync();

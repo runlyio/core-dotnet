@@ -6,7 +6,7 @@ namespace Examples.GettingStarted.Census
 {
 	public static class ServiceExtensions
 	{
-		public static IServiceCollection AddCensusProcesses(this IServiceCollection services)
+		public static IServiceCollection AddCensusJobs(this IServiceCollection services)
 		{
 			services.AddHttpClient<IDownloader, HttpDownloader>((s, client) =>
 			{
@@ -17,9 +17,9 @@ namespace Examples.GettingStarted.Census
 			});
 
 			// We are pretending this fake dependency is not thread-safe. We can register
-			// it as scoped and we will get a new instance in the process for each thread
+			// it as scoped and we will get a new instance in the job for each thread
 			// it creates. If we change the registration to Transient, we will get a new
-			// instance in the process for each item that it processes.
+			// instance in the job for each item that it processes.
 			services.AddScoped<IDatabase, FakeDatabase>();
 
 			return services;

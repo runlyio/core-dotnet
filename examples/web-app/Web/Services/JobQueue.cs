@@ -1,4 +1,4 @@
-using Examples.WebApp.Processes;
+using Examples.WebApp.Jobs;
 using Examples.WebApp.Web.Config;
 using Microsoft.Extensions.Options;
 using Runly;
@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 
 namespace Examples.WebApp.Web.Services
 {
-	public interface IProcessQueue
+	public interface IJobQueue
 	{
-		// provide a domain-specific method to queue processes
+		// provide a domain-specific method to queue jobs
 		Task<Guid> SendPendingInvitations();
 	}
 
-	public class RunlyProcessQueue : IProcessQueue
+	public class RunlyJobQueue : IJobQueue
 	{
 		readonly AppOptions appOpts;
 		readonly RunlyOptions runlyOpts;
 		readonly IRunClient runs;
 
-		public RunlyProcessQueue(
+		public RunlyJobQueue(
 			IOptionsSnapshot<AppOptions> appOpts,
 			IOptionsSnapshot<RunlyOptions> runlyOpts,
 			IRunClient runs
@@ -32,7 +32,7 @@ namespace Examples.WebApp.Web.Services
 
 		public async Task<Guid> SendPendingInvitations()
 		{
-			// this method just abstracts the specifics of queueing a process away from the app
+			// this method just abstracts the specifics of queueing a job away from the app
 			var run = await runs.Enqueue<InvitationEmailer, InvitationEmailerConfig>(
 				runlyOpts.Org,
 				runlyOpts.Env,
@@ -44,8 +44,8 @@ namespace Examples.WebApp.Web.Services
 						// let's send 50 emails at a time
 						ParallelTaskCount = 50,
 
-						// don't stop the process unless we get over 100 failed items
-						ItemFailureCountToStopProcess = 100
+						// don't stop the job unless we get over 100 failed items
+						ItemFailureCountToStopJob = 100
 					}
 				}
 			);

@@ -12,12 +12,12 @@ namespace Examples.WebApp.Web.Controllers
 	public class InviteController : Controller
 	{
 		readonly DbConnection db;
-		readonly IProcessQueue processes;
+		readonly IJobQueue jobs;
 
-		public InviteController(DbConnection db, IProcessQueue processes)
+		public InviteController(DbConnection db, IJobQueue jobs)
 		{
 			this.db = db;
-			this.processes = processes;
+			this.jobs = jobs;
 		}
 
 		public IActionResult Index() => View();
@@ -30,12 +30,12 @@ namespace Examples.WebApp.Web.Controllers
 			await InsertUsersIntoDatabase(data.EmailList);
 
 			// Then queue the non-critical path work
-			// in a separate async-process: email
+			// in a separate async-job: email
 			// invitations will be sent to each user.
-			// This also makes the process of sending
+			// This also makes the job of sending
 			// emails fault tolerant in case of
 			// temporary errors while sending a message.
-			Guid runId = await processes.SendPendingInvitations();
+			Guid runId = await jobs.SendPendingInvitations();
 
 			return View("Results", new RunResultsModel
 			{

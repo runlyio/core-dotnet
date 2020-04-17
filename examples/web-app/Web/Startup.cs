@@ -58,7 +58,7 @@ namespace Examples.WebApp.Web
 			});
 
 			// Add our abstraction that will interface with Runly.
-			services.AddTransient<IProcessQueue, RunlyProcessQueue>();
+			services.AddTransient<IJobQueue, RunlyJobQueue>();
 		}
 
 		public void Configure(IApplicationBuilder app)
