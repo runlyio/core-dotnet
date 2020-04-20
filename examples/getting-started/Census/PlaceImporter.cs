@@ -28,14 +28,6 @@ namespace Examples.GettingStarted.Census
 		{
 			this.downloader = downloader;
 			this.logger = logger;
-
-			// The CsvReader.GetRecords<T> method will return an IEnumerable<T> that will yield records.
-			// What this means is that only a single record is returned at a time as the job iterates the records.
-			// That also means that only a small portion of the file is read into memory. However, if we let the job
-			// count the items (using .Count()), or do anything that executes a LINQ projection, such as calling .ToList(),
-			// the entire file will be read into memory. We can disable the counting behavior so that the job will
-			// stream the CSV file.
-			Options.CanCountItems = false;
 		}
 
 		public override async Task InitializeAsync()
@@ -49,14 +41,14 @@ namespace Examples.GettingStarted.Census
 			logger.LogDebug("Finished downloading CSV file. Preparing to process...");
 		}
 
-		public override Task<IEnumerable<Place>> GetItemsAsync()
+		public override IAsyncEnumerable<Place> GetItemsAsync()
 		{
 			// Even though the CsvReader is not thread-safe (see https://github.com/JoshClose/CsvHelper/issues/908),
-			// we can still stream the file using csv.GetRecords (without calling .ToList() first) since the job
+			// we can still stream the file using csv.GetRecordsAsync (without calling .ToList() first) since the job
 			// will synchronize access to the enumerator so that only a single thread is reading/parsing a CSV record
 			// at a time. This makes it easy to do multi-threaded processing even if not all of your dependencies
 			// support it.
-			return Task.FromResult(csv.GetRecords<Place>());
+			return csv.GetRecordsAsync<Place>();
 		}
 
 		public override async Task<Result> ProcessAsync(Place place, IDatabase database)

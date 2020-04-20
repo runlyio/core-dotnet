@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace Examples.GettingStarted.FileSystem
 {
+	/// <summary>
+	/// Copies a directory tree from its source path to the destination path.
+	/// </summary>
 	public class CopyDirectory : Job<CopyDirectoryConfig, string>
 	{
 		public CopyDirectory(CopyDirectoryConfig config)
@@ -23,9 +26,16 @@ namespace Examples.GettingStarted.FileSystem
 			return base.InitializeAsync();
 		}
 
-		public override Task<IEnumerable<string>> GetItemsAsync()
+		public override IAsyncEnumerable<string> GetItemsAsync()
 		{
-			return Task.FromResult(GetFilesIn(Config.Source).Select(file => Path.GetRelativePath(Config.Source, file)));
+			// The GetFilesIn method will return an IEnumerable<T> that will yield file names. GetItemsAsync wraps
+			// the IEnumerable<T> in an AsyncEnumerableWrapper<T> so it can be accessed via the IAsyncEnumerable<T> 
+			// interface. Because of this, the returned collection will be counted with the Linq extension Count() 
+			// to determine the total number of items so that progress as a percentage can be displayed to users.
+			// If the underlying data source was a stream in which there would be a high cost to enumerating the 
+			// collection to obtain a count, the count can be disabled by setting the parameter canBeCounted to false.
+			// See https://www.runly.io/docs/jobs/#total-count for more on this topic.
+			return GetFilesIn(Config.Source).Select(file => Path.GetRelativePath(Config.Source, file)).ToAsyncEnumerable();
 		}
 
 		private IEnumerable<string> GetFilesIn(string dir)
