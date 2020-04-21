@@ -19,12 +19,15 @@ namespace Examples.WebApp.Jobs
 			this.db = db;
 		}
 
-		public override async Task<IEnumerable<string>> GetItemsAsync()
+		public override async Task InitializeAsync()
+		{
+			await db.OpenAsync();
+		}
+
+		public override IAsyncEnumerable<string> GetItemsAsync()
 		{
 			// run our database query to get the emails we want to send
-			await db.OpenAsync();
-			var emails = await db.QueryAsync<string>("select [Email] from [User] where HasBeenEmailed = 0");
-			return emails;
+			return db.QueryAsync<string>("select [Email] from [User] where HasBeenEmailed = 0").ToAsyncEnumerable();
 		}
 
 		public override async Task<Result> ProcessAsync(string email, DbConnection db, IEmailService emails)
