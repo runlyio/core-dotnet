@@ -9,18 +9,18 @@ namespace Runly.Tests.Scenarios.Results
 {
 	public class Execution_results
 	{
-		readonly TestHost<TestJob> testHost;
-		readonly TestConfig config;
+		readonly TestHost<DiagnosticJob> testHost;
+		readonly DiagnosticConfig config;
 
 		public Execution_results()
 		{
-			config = new TestConfig()
+			config = new DiagnosticConfig()
 			{
 				CanCountItems = true,
 				NumberOfItems = 2
 			};
 
-			testHost = new TestHost<TestJob>(config);
+			testHost = new TestHost<DiagnosticJob>(config);
 
 			testHost.Services.AddLogging();
 		}
@@ -29,12 +29,12 @@ namespace Runly.Tests.Scenarios.Results
 		public async Task Should_sum_categories()
 		{
 			config.Execution.ItemFailureCountToStopJob = 10;
-			config.Categories = new TestConfig.Category[]
+			config.Categories = new DiagnosticConfig.Category[]
 			{
-				new TestConfig.Category() { IsSuccessful = true, Count = 5, Name = "Good" },
-				new TestConfig.Category() { IsSuccessful = true, Count = 4, Name = "Great" },
-				new TestConfig.Category() { IsSuccessful = false, Count = 3, Name = "Nah" },
-				new TestConfig.Category() { IsSuccessful = false, Count = 2, Name = "Bruh" }
+				new DiagnosticConfig.Category() { IsSuccessful = true, Count = 5, Name = "Good" },
+				new DiagnosticConfig.Category() { IsSuccessful = true, Count = 4, Name = "Great" },
+				new DiagnosticConfig.Category() { IsSuccessful = false, Count = 3, Name = "Nah" },
+				new DiagnosticConfig.Category() { IsSuccessful = false, Count = 2, Name = "Bruh" }
 			};
 
 			var run = testHost.CreateRun();

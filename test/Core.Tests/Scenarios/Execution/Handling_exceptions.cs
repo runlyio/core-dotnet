@@ -10,18 +10,18 @@ namespace Runly.Tests.Scenarios.Execution
 {
 	public class Handling_exceptions
 	{
-		readonly TestHost<TestJob> testHost;
-		readonly TestConfig config;
+		readonly TestHost<DiagnosticJob> testHost;
+		readonly DiagnosticConfig config;
 
 		public Handling_exceptions()
 		{
-			config = new TestConfig()
+			config = new DiagnosticConfig()
 			{
 				NumberOfItems = 1,
 				CanCountItems = false
 			};
 
-			testHost = new TestHost<TestJob>(config);
+			testHost = new TestHost<DiagnosticJob>(config);
 
 			testHost.Services.AddLogging();
 		}
@@ -219,9 +219,9 @@ namespace Runly.Tests.Scenarios.Execution
 		[Fact]
 		public async Task Should_handle_failed_result_in_process()
 		{
-			config.Categories = new TestConfig.Category[]
+			config.Categories = new DiagnosticConfig.Category[]
 			{
-				new TestConfig.Category
+				new DiagnosticConfig.Category
 				{
 					Count = 1,
 					IsSuccessful = false

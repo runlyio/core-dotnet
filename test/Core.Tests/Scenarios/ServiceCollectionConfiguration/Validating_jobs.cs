@@ -11,7 +11,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		ServiceProvider BuildServiceProvider()
 		{
 			var services = new ServiceCollection();
-			services.AddRunlyJobs(new[] { "list" }, typeof(Validating_jobs).Assembly, typeof(TestJob).Assembly);
+			services.AddRunlyJobs(new[] { "list" }, typeof(Validating_jobs).Assembly, typeof(DiagnosticJob).Assembly);
 			return services.BuildServiceProvider();
 		}
 
@@ -32,7 +32,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 				info.IsValid.Should().BeFalse();
 				info.Errors.Should().Be(JobLoadErrors.IsGenericTypeDefinition);
 
-				info = pc.Jobs.Single(i => i.JobType == typeof(TestJob));
+				info = pc.Jobs.Single(i => i.JobType == typeof(DiagnosticJob));
 
 				info.IsValid.Should().BeTrue();
 				info.Errors.Should().Be(JobLoadErrors.None);

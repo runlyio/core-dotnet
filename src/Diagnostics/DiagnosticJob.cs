@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Runly.Diagnostics
 {
-	public class TestJob : Job<TestConfig, TestItem>
+	public class DiagnosticJob : Job<DiagnosticConfig, DiagnosticItem>
 	{
 		readonly AutoResetEvent signal = new AutoResetEvent(false);
 		public DateTime? InitializedAt { get; private set; }
@@ -14,7 +14,7 @@ namespace Runly.Diagnostics
 		public DateTime? ProcessedAt { get; private set; }
 		public DateTime? FinalizedAt { get; private set; }
 
-		public TestJob(TestConfig config)
+		public DiagnosticJob(DiagnosticConfig config)
 			: base(config) { }
 
 		public void Signal()
@@ -30,22 +30,22 @@ namespace Runly.Diagnostics
 			this.InitializedAt = DateTime.Now;
 
 			if (Config.ThrowExceptionInInitializeAsync)
-				throw new TestJobException(JobMethod.InitializeAsync, "Exception thrown because Config.ThrowExceptionInInitialize is true.");
+				throw new DiagnosticJobException(JobMethod.InitializeAsync, "Exception thrown because Config.ThrowExceptionInInitialize is true.");
 
 			return Task.CompletedTask;
 		}
 
-		public override IAsyncEnumerable<TestItem> GetItemsAsync()
+		public override IAsyncEnumerable<DiagnosticItem> GetItemsAsync()
 		{
 			this.ItemsRetrievedAt = DateTime.Now;
 
 			if (Config.ThrowExceptionInGetItemsAsync)
-				throw new TestJobException(JobMethod.GetItemsAsync, "Exception thrown because Config.ThrowExceptionInGetItemsToProcess is true.");
+				throw new DiagnosticJobException(JobMethod.GetItemsAsync, "Exception thrown because Config.ThrowExceptionInGetItemsToProcess is true.");
 
 			if (Config.Categories == null || Config.Categories.Length == 0)
-				Config.Categories = new TestConfig.Category[]
+				Config.Categories = new DiagnosticConfig.Category[]
 				{	
-					new TestConfig.Category
+					new DiagnosticConfig.Category
 					{
 						IsSuccessful = true,
 						Name = Result.Successful,
@@ -53,14 +53,14 @@ namespace Runly.Diagnostics
 					}
 				};
 
-			var items = new TestItem[Config.Categories.Sum(c => c.Count)];
+			var items = new DiagnosticItem[Config.Categories.Sum(c => c.Count)];
 			int i = 0;
 
 			foreach (var cat in Config.Categories)
 			{
 				for (int j = 0; j < cat.Count; j++)
 				{
-					items[i] = new TestItem
+					items[i] = new DiagnosticItem
 					{
 						Id = (i++).ToString(),
 						Category = cat.Name ?? (cat.IsSuccessful ? Result.Successful : Result.Failed),
@@ -70,24 +70,24 @@ namespace Runly.Diagnostics
 			}
 
 			if (Config.ThrowExceptionInGetEnumerator)
-				return new TestEnumerable<TestItem>(MethodResponse.ThrowException, MethodResponse.ValidValue, MethodResponse.ValidValue).ToAsyncEnumerable(Config.CanCountItems);
+				return new DiagnosticEnumerable<DiagnosticItem>(MethodResponse.ThrowException, MethodResponse.ValidValue, MethodResponse.ValidValue).ToAsyncEnumerable(Config.CanCountItems);
 			else if (Config.ThrowExceptionInEnumeratorMoveNext)
-				return new TestEnumerable<TestItem>(MethodResponse.ValidValue, MethodResponse.ThrowException, MethodResponse.ValidValue).ToAsyncEnumerable(Config.CanCountItems);
+				return new DiagnosticEnumerable<DiagnosticItem>(MethodResponse.ValidValue, MethodResponse.ThrowException, MethodResponse.ValidValue).ToAsyncEnumerable(Config.CanCountItems);
 			else if (Config.ThrowExceptionInEnumeratorCurrent)
-				return new TestEnumerable<TestItem>(MethodResponse.ValidValue, MethodResponse.ValidValue, MethodResponse.ThrowException).ToAsyncEnumerable(Config.CanCountItems);
+				return new DiagnosticEnumerable<DiagnosticItem>(MethodResponse.ValidValue, MethodResponse.ValidValue, MethodResponse.ThrowException).ToAsyncEnumerable(Config.CanCountItems);
 			else
 				return items.ToAsyncEnumerable(Config.CanCountItems);
 		}
 
-		public override Task<string> GetItemIdAsync(TestItem item)
+		public override Task<string> GetItemIdAsync(DiagnosticItem item)
 		{
 			if (Config.ThrowExceptionInGetItemIdAsync)
-				throw new TestJobException(JobMethod.GetItemIdAsync, "Exception thrown because Config.ThrowExceptionInGetItemsAsync is true.");
+				throw new DiagnosticJobException(JobMethod.GetItemIdAsync, "Exception thrown because Config.ThrowExceptionInGetItemsAsync is true.");
 
 			return Task.FromResult(item.Id);
 		}
 
-		public override Task<Result> ProcessAsync(TestItem item)
+		public override Task<Result> ProcessAsync(DiagnosticItem item)
 		{
 			if (Config.MillisecondDelayPerItem > 0)
 				Thread.Sleep(Config.MillisecondDelayPerItem);
@@ -102,7 +102,7 @@ namespace Runly.Diagnostics
 				Console.WriteLine($"{item.Id}: {Config.MessageToLogInProcessAsync}");
 
 			if (Config.ThrowExceptionInProcessAsync)
-				throw new TestJobException(JobMethod.ProcessAsync, "Exception thrown because Config.ThrowExceptionInProcess is true.");
+				throw new DiagnosticJobException(JobMethod.ProcessAsync, "Exception thrown because Config.ThrowExceptionInProcess is true.");
 
 			return Task.FromResult(item.IsSuccessful ? Result.Success(item.Category) : Result.Failure(item.Category));
 		}
@@ -115,7 +115,7 @@ namespace Runly.Diagnostics
 			this.FinalizedAt = DateTime.Now;
 
 			if (Config.ThrowExceptionInFinalizeAsync)
-				throw new TestJobException(JobMethod.FinalizeAsync, "Exception thrown because Config.ThrowExceptionInFinalize is true.");
+				throw new DiagnosticJobException(JobMethod.FinalizeAsync, "Exception thrown because Config.ThrowExceptionInFinalize is true.");
 
 			return base.FinalizeAsync(disposition);
 		}

@@ -9,18 +9,18 @@ namespace Runly.Tests.Scenarios.Cancel
 {
 	public class Cancelling_a_job
 	{
-		readonly TestHost<TestJob> testHost;
-		readonly TestConfig config;
+		readonly TestHost<DiagnosticJob> testHost;
+		readonly DiagnosticConfig config;
 
 		public Cancelling_a_job()
 		{
-			config = new TestConfig()
+			config = new DiagnosticConfig()
 			{
 				CanCountItems = true,
 				NumberOfItems = 2
 			};
 
-			testHost = new TestHost<TestJob>(config);
+			testHost = new TestHost<DiagnosticJob>(config);
 
 			testHost.Services.AddLogging();
 		}

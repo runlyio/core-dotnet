@@ -5,12 +5,12 @@ using System.Collections.Generic;
 
 namespace Runly.Diagnostics
 {
-	public class TestEnumerator<T> : IEnumerator<T>
+	public class DiagnosticEnumerator<T> : IEnumerator<T>
 	{
 		private MethodResponse moveNext;
 		private MethodResponse getCurrent;
 
-		public TestEnumerator(MethodResponse moveNext, MethodResponse getCurrent)
+		public DiagnosticEnumerator(MethodResponse moveNext, MethodResponse getCurrent)
 		{
 			this.moveNext = moveNext;
 			this.getCurrent = getCurrent;
@@ -29,7 +29,7 @@ namespace Runly.Diagnostics
 		private T GetCurrent()
 		{
 			if (getCurrent == MethodResponse.ThrowException)
-				throw new TestJobException(JobMethod.EnumeratorCurrent, "Exception thrown because Config.ThrowExceptionInEnumeratorCurrent is true.");
+				throw new DiagnosticJobException(JobMethod.EnumeratorCurrent, "Exception thrown because Config.ThrowExceptionInEnumeratorCurrent is true.");
 			else
 				return default(T);
 		}
@@ -39,7 +39,7 @@ namespace Runly.Diagnostics
 		public bool MoveNext()
 		{
 			if (moveNext == MethodResponse.ThrowException)
-				throw new TestJobException(JobMethod.EnumeratorMoveNext, "Exception thrown because Config.ThrowExceptionInEnumeratorMoveNext is true.");
+				throw new DiagnosticJobException(JobMethod.EnumeratorMoveNext, "Exception thrown because Config.ThrowExceptionInEnumeratorMoveNext is true.");
 			else
 				return true;
 		}

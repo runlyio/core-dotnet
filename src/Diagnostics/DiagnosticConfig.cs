@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Runly.Diagnostics
 {
-	public class TestConfig : Config
+	public class DiagnosticConfig : Config
 	{
 		public int NumberOfItems { get; set; }
 		/// <summary>
@@ -26,7 +26,7 @@ namespace Runly.Diagnostics
 		public bool ThrowExceptionInFinalizeAsync { get; set; }
 		public string MessageToLogInProcessAsync { get; set; }
 
-		public TestConfig()
+		public DiagnosticConfig()
 		{
 			NumberOfItems = 100;
 			MillisecondDelayPerItem = 100;

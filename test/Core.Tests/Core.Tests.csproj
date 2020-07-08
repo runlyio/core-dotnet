@@ -29,7 +29,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Core\Core.csproj" />
     <ProjectReference Include="..\..\src\Diagnostics\Diagnostics.csproj" />
-    <ProjectReference Include="..\..\src\Job\Job.csproj" />
+    <ProjectReference Include="..\..\src\Job\Runly.csproj" />
   </ItemGroup>
 
 </Project>

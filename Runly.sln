@@ -1,25 +1,25 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26124.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29519.181
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C61D354E-356E-4ABC-9A40-AD5CD2F96E07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "src\Client\Client.csproj", "{6A5344CC-7B78-4330-9EE9-E5C96EE975E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "src\Client\Client.csproj", "{6A5344CC-7B78-4330-9EE9-E5C96EE975E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "src\Core\Core.csproj", "{A88150CF-DB1F-47DA-8F26-F74B99736932}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "src\Core\Core.csproj", "{A88150CF-DB1F-47DA-8F26-F74B99736932}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Job", "src\Job\Job.csproj", "{14376705-F9A0-4326-AFF9-05D046DC071F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Runly", "src\Job\Runly.csproj", "{14376705-F9A0-4326-AFF9-05D046DC071F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "src\Templates\Templates.csproj", "{260BBF1A-C525-4662-9B8C-BEB48CA77AEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Templates", "src\Templates\Templates.csproj", "{260BBF1A-C525-4662-9B8C-BEB48CA77AEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D5DB7646-288F-4A29-8BBB-8EED9D1EC43C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client.Tests", "test\Client.Tests\Client.Tests.csproj", "{30C362AB-8DBE-48AC-A8B4-6D9CE89643C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.Tests", "test\Client.Tests\Client.Tests.csproj", "{30C362AB-8DBE-48AC-A8B4-6D9CE89643C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Tests", "test\Core.Tests\Core.Tests.csproj", "{E8C1C6C0-44D6-48AB-8EB5-22CC6AEF6CBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Tests", "test\Core.Tests\Core.Tests.csproj", "{E8C1C6C0-44D6-48AB-8EB5-22CC6AEF6CBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Diagnostics", "src\Diagnostics\Diagnostics.csproj", "{5EAC3C62-D609-4876-BE38-2A0ABC0A59D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diagnostics", "src\Diagnostics\Diagnostics.csproj", "{5EAC3C62-D609-4876-BE38-2A0ABC0A59D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,9 +29,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{6A5344CC-7B78-4330-9EE9-E5C96EE975E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -119,6 +116,9 @@ Global
 		{5EAC3C62-D609-4876-BE38-2A0ABC0A59D9}.Release|x86.ActiveCfg = Release|Any CPU
 		{5EAC3C62-D609-4876-BE38-2A0ABC0A59D9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6A5344CC-7B78-4330-9EE9-E5C96EE975E4} = {C61D354E-356E-4ABC-9A40-AD5CD2F96E07}
 		{A88150CF-DB1F-47DA-8F26-F74B99736932} = {C61D354E-356E-4ABC-9A40-AD5CD2F96E07}
@@ -127,5 +127,8 @@ Global
 		{30C362AB-8DBE-48AC-A8B4-6D9CE89643C9} = {D5DB7646-288F-4A29-8BBB-8EED9D1EC43C}
 		{E8C1C6C0-44D6-48AB-8EB5-22CC6AEF6CBF} = {D5DB7646-288F-4A29-8BBB-8EED9D1EC43C}
 		{5EAC3C62-D609-4876-BE38-2A0ABC0A59D9} = {C61D354E-356E-4ABC-9A40-AD5CD2F96E07}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {416E5223-E0F8-4168-B9B5-F2FD26CD8CC2}
 	EndGlobalSection
 EndGlobal

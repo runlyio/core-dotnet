@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace Runly
 {
+	/// <summary>
+	/// Logs results from a <see cref="IJob"/>.
+	/// </summary>
 	public class ResultLog
 	{
 		readonly Execution execution;
@@ -79,7 +82,7 @@ namespace Runly
 		/// Gets a list of item result categories and counts.
 		/// </summary>
 		[JsonIgnore]
-		public IEnumerable<ItemResultSummary> ItemSummary => Items.GroupBy(r => new { r.IsSuccessful, r.Category }).Select(g => new ItemResultSummary(g.Count(), g.Key.IsSuccessful, g.Key.Category)).OrderBy(s => s.IsSuccessful).ThenBy(s => s.Category);
+		public IEnumerable<CategoryResult> Categories => Items.GroupBy(r => new { r.IsSuccessful, r.Category }).Select(g => new CategoryResult(g.Count(), g.Key.IsSuccessful, g.Key.Category)).OrderBy(s => s.IsSuccessful).ThenBy(s => s.Category);
 
 		/// <summary>
 		/// Gets a list of items that have completed successfully.
@@ -189,7 +192,7 @@ namespace Runly
 			report.AppendLine(ConsoleFormat.AsColumns(20, nameof(FinalizeAsync), FinalizeAsync.IsSuccessful ? "Successful" : "Unsuccessful"));
 			report.AppendLine();
 
-			foreach (var summary in ItemSummary)
+			foreach (var summary in Categories)
 				report.AppendLine(ConsoleFormat.AsColumns(20, $"{summary.Count} item{ConsoleFormat.AsPlural(Items.Count())}", summary.IsSuccessful ? "Successful" : "Unsuccessful", summary.Category));
 
 			report.AppendLine();
@@ -199,7 +202,7 @@ namespace Runly
 			report.AppendLine(ConsoleFormat.DoubleLine);
 			report.AppendLine();
 
-			foreach (var summary in ItemSummary)
+			foreach (var summary in Categories)
 			{
 				report.AppendLine(ConsoleFormat.SingleLine);
 				report.AppendLine($"{summary.Category}");

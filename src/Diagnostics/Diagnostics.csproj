@@ -13,11 +13,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Job\Job.csproj" />
+    <None Include="..\logo.png" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\logo.png" Pack="true" PackagePath="\" />
+    <ProjectReference Include="..\Job\Runly.csproj" />
   </ItemGroup>
 
 </Project>
