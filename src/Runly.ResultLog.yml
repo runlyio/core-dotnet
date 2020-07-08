@@ -7,6 +7,7 @@ items:
   children:
   - Runly.ResultLog.#ctor(IEnumerable{Runly.ItemResult},Runly.Disposition,System.Nullable{System.Int32},Dictionary{Runly.JobMethod,Runly.MethodOutcome},System.Object)
   - Runly.ResultLog.#ctor(Runly.Execution)
+  - Runly.ResultLog.Categories
   - Runly.ResultLog.CompletedAt
   - Runly.ResultLog.ConfigPath
   - Runly.ResultLog.Count
@@ -19,7 +20,6 @@ items:
   - Runly.ResultLog.GetItemsAsync
   - Runly.ResultLog.InitializeAsync
   - Runly.ResultLog.Items
-  - Runly.ResultLog.ItemSummary
   - Runly.ResultLog.Methods
   - Runly.ResultLog.Output
   - Runly.ResultLog.StartedAt
@@ -37,10 +37,12 @@ items:
   source:
     id: ResultLog
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 11
+    startLine: 14
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nLogs results from a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class ResultLog : object'
     content.vb: >-
@@ -68,7 +70,7 @@ items:
   source:
     id: ConfigPath
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 19
+    startLine: 22
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -101,7 +103,7 @@ items:
   source:
     id: StartedAt
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 24
+    startLine: 27
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -134,7 +136,7 @@ items:
   source:
     id: CompletedAt
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 29
+    startLine: 32
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -167,7 +169,7 @@ items:
   source:
     id: Disposition
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -200,7 +202,7 @@ items:
   source:
     id: Methods
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -233,7 +235,7 @@ items:
   source:
     id: InitializeAsync
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -266,7 +268,7 @@ items:
   source:
     id: GetItemsAsync
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 51
+    startLine: 54
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -299,7 +301,7 @@ items:
   source:
     id: Count
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 57
+    startLine: 60
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -332,7 +334,7 @@ items:
   source:
     id: GetEnumerator
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 63
+    startLine: 66
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -365,7 +367,7 @@ items:
   source:
     id: FinalizeAsync
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 69
+    startLine: 72
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -398,7 +400,7 @@ items:
   source:
     id: Items
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 75
+    startLine: 78
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -417,33 +419,33 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.ResultLog.ItemSummary
-  commentId: P:Runly.ResultLog.ItemSummary
-  id: ItemSummary
+- uid: Runly.ResultLog.Categories
+  commentId: P:Runly.ResultLog.Categories
+  id: Categories
   parent: Runly.ResultLog
   langs:
   - csharp
   - vb
-  name: ItemSummary
-  nameWithType: ResultLog.ItemSummary
-  fullName: Runly.ResultLog.ItemSummary
+  name: Categories
+  nameWithType: ResultLog.Categories
+  fullName: Runly.ResultLog.Categories
   type: Property
   source:
-    id: ItemSummary
+    id: Categories
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 80
+    startLine: 83
   assemblies:
   - Runly.Core
   namespace: Runly
   summary: "\nGets a list of item result categories and counts.\n"
   example: []
   syntax:
-    content: public IEnumerable<ItemResultSummary> ItemSummary { get; }
+    content: public IEnumerable<CategoryResult> Categories { get; }
     parameters: []
     return:
-      type: IEnumerable{Runly.ItemResultSummary}
-    content.vb: Public ReadOnly Property ItemSummary As IEnumerable(Of ItemResultSummary)
-  overload: Runly.ResultLog.ItemSummary*
+      type: IEnumerable{Runly.CategoryResult}
+    content.vb: Public ReadOnly Property Categories As IEnumerable(Of CategoryResult)
+  overload: Runly.ResultLog.Categories*
   modifiers.csharp:
   - public
   - get
@@ -464,7 +466,7 @@ items:
   source:
     id: SuccessfulItems
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 86
+    startLine: 89
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -497,7 +499,7 @@ items:
   source:
     id: FailedItems
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 92
+    startLine: 95
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -530,7 +532,7 @@ items:
   source:
     id: FailedItemsThatThrewExceptions
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 98
+    startLine: 101
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -563,7 +565,7 @@ items:
   source:
     id: TotalItemCount
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 109
+    startLine: 112
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -597,7 +599,7 @@ items:
   source:
     id: SuccessfulItemCount
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 114
+    startLine: 117
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -630,7 +632,7 @@ items:
   source:
     id: FailedItemCount
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 119
+    startLine: 122
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -663,7 +665,7 @@ items:
   source:
     id: Output
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 124
+    startLine: 127
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -696,7 +698,7 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 126
+    startLine: 129
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -725,7 +727,7 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 135
+    startLine: 138
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -765,7 +767,7 @@ items:
   source:
     id: ToString
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 175
+    startLine: 178
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -782,6 +784,12 @@ items:
   - Public
   - Overrides
 references:
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
 - uid: Runly
   commentId: N:Runly
   name: Runly
@@ -1129,20 +1137,20 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.ResultLog.ItemSummary*
-  commentId: Overload:Runly.ResultLog.ItemSummary
-  name: ItemSummary
-  nameWithType: ResultLog.ItemSummary
-  fullName: Runly.ResultLog.ItemSummary
-- uid: IEnumerable{Runly.ItemResultSummary}
-  commentId: '!:IEnumerable{Runly.ItemResultSummary}'
+- uid: Runly.ResultLog.Categories*
+  commentId: Overload:Runly.ResultLog.Categories
+  name: Categories
+  nameWithType: ResultLog.Categories
+  fullName: Runly.ResultLog.Categories
+- uid: IEnumerable{Runly.CategoryResult}
+  commentId: '!:IEnumerable{Runly.CategoryResult}'
   definition: IEnumerable`1
-  name: IEnumerable<ItemResultSummary>
-  nameWithType: IEnumerable<ItemResultSummary>
-  fullName: IEnumerable<Runly.ItemResultSummary>
-  nameWithType.vb: IEnumerable(Of ItemResultSummary)
-  fullName.vb: IEnumerable(Of Runly.ItemResultSummary)
-  name.vb: IEnumerable(Of ItemResultSummary)
+  name: IEnumerable<CategoryResult>
+  nameWithType: IEnumerable<CategoryResult>
+  fullName: IEnumerable<Runly.CategoryResult>
+  nameWithType.vb: IEnumerable(Of CategoryResult)
+  fullName.vb: IEnumerable(Of Runly.CategoryResult)
+  name.vb: IEnumerable(Of CategoryResult)
   spec.csharp:
   - uid: IEnumerable`1
     name: IEnumerable
@@ -1152,10 +1160,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Runly.ItemResultSummary
-    name: ItemResultSummary
-    nameWithType: ItemResultSummary
-    fullName: Runly.ItemResultSummary
+  - uid: Runly.CategoryResult
+    name: CategoryResult
+    nameWithType: CategoryResult
+    fullName: Runly.CategoryResult
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1168,10 +1176,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Runly.ItemResultSummary
-    name: ItemResultSummary
-    nameWithType: ItemResultSummary
-    fullName: Runly.ItemResultSummary
+  - uid: Runly.CategoryResult
+    name: CategoryResult
+    nameWithType: CategoryResult
+    fullName: Runly.CategoryResult
   - name: )
     nameWithType: )
     fullName: )
@@ -1202,12 +1210,6 @@ references:
 - uid: Runly.ResultLog.TotalItemCount
   commentId: P:Runly.ResultLog.TotalItemCount
   isExternal: true
-- uid: Runly.IJob
-  commentId: T:Runly.IJob
-  parent: Runly
-  name: IJob
-  nameWithType: IJob
-  fullName: Runly.IJob
 - uid: Runly.ResultLog.SuccessfulItemCount
   commentId: P:Runly.ResultLog.SuccessfulItemCount
   isExternal: true

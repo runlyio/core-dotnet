@@ -8,6 +8,7 @@ items:
   - Runly.AsyncEnumerableExtensions
   - Runly.AsyncEnumerableWrapper`1
   - Runly.AsyncEnumeratorWrapper`1
+  - Runly.CategoryResult
   - Runly.Config
   - Runly.ConfigException
   - Runly.ConfigNullException
@@ -29,7 +30,6 @@ items:
   - Runly.IResultsConnection
   - Runly.ItemCategory
   - Runly.ItemResult
-  - Runly.ItemResultSummary
   - Runly.Job
   - Runly.Job`1
   - Runly.Job`10
@@ -80,6 +80,11 @@ items:
   assemblies:
   - Runly.Core
 references:
+- uid: Runly.CategoryResult
+  commentId: T:Runly.CategoryResult
+  name: CategoryResult
+  nameWithType: CategoryResult
+  fullName: Runly.CategoryResult
 - uid: Runly.Config
   commentId: T:Runly.Config
   parent: Runly
@@ -159,11 +164,6 @@ references:
   name: ItemResult
   nameWithType: ItemResult
   fullName: Runly.ItemResult
-- uid: Runly.ItemResultSummary
-  commentId: T:Runly.ItemResultSummary
-  name: ItemResultSummary
-  nameWithType: ItemResultSummary
-  fullName: Runly.ItemResultSummary
 - uid: Runly.JobConfig
   commentId: T:Runly.JobConfig
   parent: Runly

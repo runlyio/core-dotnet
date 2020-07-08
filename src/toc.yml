@@ -12,6 +12,8 @@
   - uid: Runly.AsyncEnumeratorWrapper`1
     name: AsyncEnumeratorWrapper<T>
     name.vb: AsyncEnumeratorWrapper(Of T)
+  - uid: Runly.CategoryResult
+    name: CategoryResult
   - uid: Runly.Config
     name: Config
   - uid: Runly.ConfigException
@@ -54,8 +56,6 @@
     name: ItemCategory
   - uid: Runly.ItemResult
     name: ItemResult
-  - uid: Runly.ItemResultSummary
-    name: ItemResultSummary
   - uid: Runly.Job
     name: Job
   - uid: Runly.Job`18
