@@ -1,0 +1,303 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JobMethod
+  commentId: T:Runly.JobMethod
+  id: JobMethod
+  parent: Runly
+  children:
+  - Runly.JobMethod.Count
+  - Runly.JobMethod.EnumeratorCurrent
+  - Runly.JobMethod.EnumeratorMoveNext
+  - Runly.JobMethod.FinalizeAsync
+  - Runly.JobMethod.GetEnumerator
+  - Runly.JobMethod.GetItemIdAsync
+  - Runly.JobMethod.GetItemsAsync
+  - Runly.JobMethod.InitializeAsync
+  - Runly.JobMethod.ProcessAsync
+  langs:
+  - csharp
+  - vb
+  name: JobMethod
+  nameWithType: JobMethod
+  fullName: Runly.JobMethod
+  type: Enum
+  source:
+    id: JobMethod
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 2
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public enum JobMethod : int'
+    content.vb: Public Enum JobMethod As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Runly.JobMethod.InitializeAsync
+  commentId: F:Runly.JobMethod.InitializeAsync
+  id: InitializeAsync
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: InitializeAsync
+  nameWithType: JobMethod.InitializeAsync
+  fullName: Runly.JobMethod.InitializeAsync
+  type: Field
+  source:
+    id: InitializeAsync
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 4
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: InitializeAsync = 0
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.GetItemsAsync
+  commentId: F:Runly.JobMethod.GetItemsAsync
+  id: GetItemsAsync
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: GetItemsAsync
+  nameWithType: JobMethod.GetItemsAsync
+  fullName: Runly.JobMethod.GetItemsAsync
+  type: Field
+  source:
+    id: GetItemsAsync
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 5
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: GetItemsAsync = 1
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.Count
+  commentId: F:Runly.JobMethod.Count
+  id: Count
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: JobMethod.Count
+  fullName: Runly.JobMethod.Count
+  type: Field
+  source:
+    id: Count
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 6
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Count = 2
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.GetEnumerator
+  commentId: F:Runly.JobMethod.GetEnumerator
+  id: GetEnumerator
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator
+  nameWithType: JobMethod.GetEnumerator
+  fullName: Runly.JobMethod.GetEnumerator
+  type: Field
+  source:
+    id: GetEnumerator
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 7
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: GetEnumerator = 3
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.EnumeratorMoveNext
+  commentId: F:Runly.JobMethod.EnumeratorMoveNext
+  id: EnumeratorMoveNext
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: EnumeratorMoveNext
+  nameWithType: JobMethod.EnumeratorMoveNext
+  fullName: Runly.JobMethod.EnumeratorMoveNext
+  type: Field
+  source:
+    id: EnumeratorMoveNext
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: EnumeratorMoveNext = 4
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.EnumeratorCurrent
+  commentId: F:Runly.JobMethod.EnumeratorCurrent
+  id: EnumeratorCurrent
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: EnumeratorCurrent
+  nameWithType: JobMethod.EnumeratorCurrent
+  fullName: Runly.JobMethod.EnumeratorCurrent
+  type: Field
+  source:
+    id: EnumeratorCurrent
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 9
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: EnumeratorCurrent = 5
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.GetItemIdAsync
+  commentId: F:Runly.JobMethod.GetItemIdAsync
+  id: GetItemIdAsync
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: GetItemIdAsync
+  nameWithType: JobMethod.GetItemIdAsync
+  fullName: Runly.JobMethod.GetItemIdAsync
+  type: Field
+  source:
+    id: GetItemIdAsync
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 10
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: GetItemIdAsync = 6
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.ProcessAsync
+  commentId: F:Runly.JobMethod.ProcessAsync
+  id: ProcessAsync
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: ProcessAsync
+  nameWithType: JobMethod.ProcessAsync
+  fullName: Runly.JobMethod.ProcessAsync
+  type: Field
+  source:
+    id: ProcessAsync
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 11
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: ProcessAsync = 7
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobMethod.FinalizeAsync
+  commentId: F:Runly.JobMethod.FinalizeAsync
+  id: FinalizeAsync
+  parent: Runly.JobMethod
+  langs:
+  - csharp
+  - vb
+  name: FinalizeAsync
+  nameWithType: JobMethod.FinalizeAsync
+  fullName: Runly.JobMethod.FinalizeAsync
+  type: Field
+  source:
+    id: FinalizeAsync
+    path: /github/workspace/src/Core/JobMethod.cs
+    startLine: 12
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: FinalizeAsync = 8
+    return:
+      type: Runly.JobMethod
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.JobMethod
+  commentId: T:Runly.JobMethod
+  parent: Runly
+  name: JobMethod
+  nameWithType: JobMethod
+  fullName: Runly.JobMethod

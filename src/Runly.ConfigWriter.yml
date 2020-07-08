@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ConfigWriter
+  commentId: T:Runly.ConfigWriter
+  id: ConfigWriter
+  parent: Runly
+  children:
+  - Runly.ConfigWriter.Serializer
+  - Runly.ConfigWriter.Settings
+  - Runly.ConfigWriter.ToJson(Runly.Config)
+  - Runly.ConfigWriter.ToReducedJson(Runly.Config)
+  langs:
+  - csharp
+  - vb
+  name: ConfigWriter
+  nameWithType: ConfigWriter
+  fullName: Runly.ConfigWriter
+  type: Class
+  source:
+    id: ConfigWriter
+    path: /github/workspace/src/Core/ConfigWriter.cs
+    startLine: 7
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public static class ConfigWriter : object'
+    content.vb: >-
+      Public Module ConfigWriter
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.ConfigWriter.Settings
+  commentId: F:Runly.ConfigWriter.Settings
+  id: Settings
+  parent: Runly.ConfigWriter
+  langs:
+  - csharp
+  - vb
+  name: Settings
+  nameWithType: ConfigWriter.Settings
+  fullName: Runly.ConfigWriter.Settings
+  type: Field
+  source:
+    id: Settings
+    path: /github/workspace/src/Core/ConfigWriter.cs
+    startLine: 9
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static readonly JsonSerializerSettings Settings
+    return:
+      type: JsonSerializerSettings
+    content.vb: Public Shared ReadOnly Settings As JsonSerializerSettings
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Runly.ConfigWriter.Serializer
+  commentId: F:Runly.ConfigWriter.Serializer
+  id: Serializer
+  parent: Runly.ConfigWriter
+  langs:
+  - csharp
+  - vb
+  name: Serializer
+  nameWithType: ConfigWriter.Serializer
+  fullName: Runly.ConfigWriter.Serializer
+  type: Field
+  source:
+    id: Serializer
+    path: /github/workspace/src/Core/ConfigWriter.cs
+    startLine: 21
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static readonly JsonSerializer Serializer
+    return:
+      type: JsonSerializer
+    content.vb: Public Shared ReadOnly Serializer As JsonSerializer
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Runly.ConfigWriter.ToJson(Runly.Config)
+  commentId: M:Runly.ConfigWriter.ToJson(Runly.Config)
+  id: ToJson(Runly.Config)
+  parent: Runly.ConfigWriter
+  langs:
+  - csharp
+  - vb
+  name: ToJson(Config)
+  nameWithType: ConfigWriter.ToJson(Config)
+  fullName: Runly.ConfigWriter.ToJson(Runly.Config)
+  type: Method
+  source:
+    id: ToJson
+    path: /github/workspace/src/Core/ConfigWriter.cs
+    startLine: 23
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string ToJson(Config config)
+    parameters:
+    - id: config
+      type: Runly.Config
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToJson(config As Config) As String
+  overload: Runly.ConfigWriter.ToJson*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.ConfigWriter.ToReducedJson(Runly.Config)
+  commentId: M:Runly.ConfigWriter.ToReducedJson(Runly.Config)
+  id: ToReducedJson(Runly.Config)
+  parent: Runly.ConfigWriter
+  langs:
+  - csharp
+  - vb
+  name: ToReducedJson(Config)
+  nameWithType: ConfigWriter.ToReducedJson(Config)
+  fullName: Runly.ConfigWriter.ToReducedJson(Runly.Config)
+  type: Method
+  source:
+    id: ToReducedJson
+    path: /github/workspace/src/Core/ConfigWriter.cs
+    startLine: 28
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string ToReducedJson(Config config)
+    parameters:
+    - id: config
+      type: Runly.Config
+    return:
+      type: System.String
+    content.vb: Public Shared Function ToReducedJson(config As Config) As String
+  overload: Runly.ConfigWriter.ToReducedJson*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: JsonSerializerSettings
+  commentId: '!:JsonSerializerSettings'
+  isExternal: true
+  name: JsonSerializerSettings
+  nameWithType: JsonSerializerSettings
+  fullName: JsonSerializerSettings
+- uid: JsonSerializer
+  isExternal: true
+  name: JsonSerializer
+  nameWithType: JsonSerializer
+  fullName: JsonSerializer
+- uid: Runly.ConfigWriter.ToJson*
+  commentId: Overload:Runly.ConfigWriter.ToJson
+  name: ToJson
+  nameWithType: ConfigWriter.ToJson
+  fullName: Runly.ConfigWriter.ToJson
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ConfigWriter.ToReducedJson*
+  commentId: Overload:Runly.ConfigWriter.ToReducedJson
+  name: ToReducedJson
+  nameWithType: ConfigWriter.ToReducedJson
+  fullName: Runly.ConfigWriter.ToReducedJson

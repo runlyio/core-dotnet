@@ -1,0 +1,232 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Error
+  commentId: T:Runly.Error
+  id: Error
+  parent: Runly
+  children:
+  - Runly.Error.#ctor(Exception)
+  - Runly.Error.#ctor(System.String,System.String)
+  - Runly.Error.Message
+  - Runly.Error.ToString
+  - Runly.Error.Trace
+  langs:
+  - csharp
+  - vb
+  name: Error
+  nameWithType: Error
+  fullName: Runly.Error
+  type: Class
+  source:
+    id: Error
+    path: /github/workspace/src/Core/Error.cs
+    startLine: 5
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public class Error : object'
+    content.vb: >-
+      Public Class Error
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.Error.Message
+  commentId: P:Runly.Error.Message
+  id: Message
+  parent: Runly.Error
+  langs:
+  - csharp
+  - vb
+  name: Message
+  nameWithType: Error.Message
+  fullName: Runly.Error.Message
+  type: Property
+  source:
+    id: Message
+    path: /github/workspace/src/Core/Error.cs
+    startLine: 7
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public string Message { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Message As String
+  overload: Runly.Error.Message*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Error.Trace
+  commentId: P:Runly.Error.Trace
+  id: Trace
+  parent: Runly.Error
+  langs:
+  - csharp
+  - vb
+  name: Trace
+  nameWithType: Error.Trace
+  fullName: Runly.Error.Trace
+  type: Property
+  source:
+    id: Trace
+    path: /github/workspace/src/Core/Error.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public string Trace { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Trace As String
+  overload: Runly.Error.Trace*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Error.#ctor(System.String,System.String)
+  commentId: M:Runly.Error.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Runly.Error
+  langs:
+  - csharp
+  - vb
+  name: Error(String, String)
+  nameWithType: Error.Error(String, String)
+  fullName: Runly.Error.Error(System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/Error.cs
+    startLine: 10
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public Error(string message, string trace)
+    parameters:
+    - id: message
+      type: System.String
+    - id: trace
+      type: System.String
+    content.vb: Public Sub New(message As String, trace As String)
+  overload: Runly.Error.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Error.#ctor(Exception)
+  commentId: M:Runly.Error.#ctor(Exception)
+  id: '#ctor(Exception)'
+  parent: Runly.Error
+  langs:
+  - csharp
+  - vb
+  name: Error(Exception)
+  nameWithType: Error.Error(Exception)
+  fullName: Runly.Error.Error(Exception)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/Error.cs
+    startLine: 17
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public Error(Exception ex)
+    parameters:
+    - id: ex
+      type: Exception
+    content.vb: Public Sub New(ex As Exception)
+  overload: Runly.Error.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Error.ToString
+  commentId: M:Runly.Error.ToString
+  id: ToString
+  parent: Runly.Error
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Error.ToString()
+  fullName: Runly.Error.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: /github/workspace/src/Core/Error.cs
+    startLine: 30
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: Runly.Error.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Error.Message*
+  commentId: Overload:Runly.Error.Message
+  name: Message
+  nameWithType: Error.Message
+  fullName: Runly.Error.Message
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.Error.Trace*
+  commentId: Overload:Runly.Error.Trace
+  name: Trace
+  nameWithType: Error.Trace
+  fullName: Runly.Error.Trace
+- uid: Runly.Error.#ctor*
+  commentId: Overload:Runly.Error.#ctor
+  name: Error
+  nameWithType: Error.Error
+  fullName: Runly.Error.Error
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception
+- uid: Runly.Error.ToString*
+  commentId: Overload:Runly.Error.ToString
+  name: ToString
+  nameWithType: Error.ToString
+  fullName: Runly.Error.ToString

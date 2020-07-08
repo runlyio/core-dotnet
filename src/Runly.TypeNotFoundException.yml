@@ -1,0 +1,85 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.TypeNotFoundException
+  commentId: T:Runly.TypeNotFoundException
+  id: TypeNotFoundException
+  parent: Runly
+  children:
+  - Runly.TypeNotFoundException.#ctor(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TypeNotFoundException
+  nameWithType: TypeNotFoundException
+  fullName: Runly.TypeNotFoundException
+  type: Class
+  source:
+    id: TypeNotFoundException
+    path: /github/workspace/src/Job/TypeNotFoundException.cs
+    startLine: 4
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class TypeNotFoundException : ApplicationException'
+    content.vb: >-
+      Public Class TypeNotFoundException
+          Inherits ApplicationException
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.TypeNotFoundException.#ctor(System.String)
+  commentId: M:Runly.TypeNotFoundException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Runly.TypeNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: TypeNotFoundException(String)
+  nameWithType: TypeNotFoundException.TypeNotFoundException(String)
+  fullName: Runly.TypeNotFoundException.TypeNotFoundException(System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/TypeNotFoundException.cs
+    startLine: 6
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public TypeNotFoundException(string typeName)
+    parameters:
+    - id: typeName
+      type: System.String
+    content.vb: Public Sub New(typeName As String)
+  overload: Runly.TypeNotFoundException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.TypeNotFoundException.#ctor*
+  commentId: Overload:Runly.TypeNotFoundException.#ctor
+  name: TypeNotFoundException
+  nameWithType: TypeNotFoundException.TypeNotFoundException
+  fullName: Runly.TypeNotFoundException.TypeNotFoundException
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

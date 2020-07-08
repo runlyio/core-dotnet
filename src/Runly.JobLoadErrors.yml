@@ -1,0 +1,162 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JobLoadErrors
+  commentId: T:Runly.JobLoadErrors
+  id: JobLoadErrors
+  parent: Runly
+  children:
+  - Runly.JobLoadErrors.IsAbstract
+  - Runly.JobLoadErrors.IsGenericTypeDefinition
+  - Runly.JobLoadErrors.IsInterface
+  - Runly.JobLoadErrors.None
+  langs:
+  - csharp
+  - vb
+  name: JobLoadErrors
+  nameWithType: JobLoadErrors
+  fullName: Runly.JobLoadErrors
+  type: Enum
+  source:
+    id: JobLoadErrors
+    path: /github/workspace/src/Job/JobLoadErrors.cs
+    startLine: 4
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public enum JobLoadErrors : int'
+    content.vb: Public Enum JobLoadErrors As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Runly.JobLoadErrors.None
+  commentId: F:Runly.JobLoadErrors.None
+  id: None
+  parent: Runly.JobLoadErrors
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: JobLoadErrors.None
+  fullName: Runly.JobLoadErrors.None
+  type: Field
+  source:
+    id: None
+    path: /github/workspace/src/Job/JobLoadErrors.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: None = null
+    return:
+      type: Runly.JobLoadErrors
+    content.vb: None = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobLoadErrors.IsInterface
+  commentId: F:Runly.JobLoadErrors.IsInterface
+  id: IsInterface
+  parent: Runly.JobLoadErrors
+  langs:
+  - csharp
+  - vb
+  name: IsInterface
+  nameWithType: JobLoadErrors.IsInterface
+  fullName: Runly.JobLoadErrors.IsInterface
+  type: Field
+  source:
+    id: IsInterface
+    path: /github/workspace/src/Job/JobLoadErrors.cs
+    startLine: 8
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: IsInterface = null
+    return:
+      type: Runly.JobLoadErrors
+    content.vb: IsInterface = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobLoadErrors.IsAbstract
+  commentId: F:Runly.JobLoadErrors.IsAbstract
+  id: IsAbstract
+  parent: Runly.JobLoadErrors
+  langs:
+  - csharp
+  - vb
+  name: IsAbstract
+  nameWithType: JobLoadErrors.IsAbstract
+  fullName: Runly.JobLoadErrors.IsAbstract
+  type: Field
+  source:
+    id: IsAbstract
+    path: /github/workspace/src/Job/JobLoadErrors.cs
+    startLine: 9
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: IsAbstract = null
+    return:
+      type: Runly.JobLoadErrors
+    content.vb: IsAbstract = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.JobLoadErrors.IsGenericTypeDefinition
+  commentId: F:Runly.JobLoadErrors.IsGenericTypeDefinition
+  id: IsGenericTypeDefinition
+  parent: Runly.JobLoadErrors
+  langs:
+  - csharp
+  - vb
+  name: IsGenericTypeDefinition
+  nameWithType: JobLoadErrors.IsGenericTypeDefinition
+  fullName: Runly.JobLoadErrors.IsGenericTypeDefinition
+  type: Field
+  source:
+    id: IsGenericTypeDefinition
+    path: /github/workspace/src/Job/JobLoadErrors.cs
+    startLine: 10
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: IsGenericTypeDefinition = null
+    return:
+      type: Runly.JobLoadErrors
+    content.vb: IsGenericTypeDefinition = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.JobLoadErrors
+  commentId: T:Runly.JobLoadErrors
+  parent: Runly
+  name: JobLoadErrors
+  nameWithType: JobLoadErrors
+  fullName: Runly.JobLoadErrors

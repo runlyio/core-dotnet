@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Disposition
+  commentId: T:Runly.Disposition
+  id: Disposition
+  parent: Runly
+  children:
+  - Runly.Disposition.Cancelled
+  - Runly.Disposition.Failed
+  - Runly.Disposition.NotComplete
+  - Runly.Disposition.Successful
+  langs:
+  - csharp
+  - vb
+  name: Disposition
+  nameWithType: Disposition
+  fullName: Runly.Disposition
+  type: Enum
+  source:
+    id: Disposition
+    path: /github/workspace/src/Core/Disposition.cs
+    startLine: 5
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe final state of a job run.\n"
+  example: []
+  syntax:
+    content: 'public enum Disposition : int'
+    content.vb: Public Enum Disposition As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Runly.Disposition.NotComplete
+  commentId: F:Runly.Disposition.NotComplete
+  id: NotComplete
+  parent: Runly.Disposition
+  langs:
+  - csharp
+  - vb
+  name: NotComplete
+  nameWithType: Disposition.NotComplete
+  fullName: Runly.Disposition.NotComplete
+  type: Field
+  source:
+    id: NotComplete
+    path: /github/workspace/src/Core/Disposition.cs
+    startLine: 7
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: NotComplete = 0
+    return:
+      type: Runly.Disposition
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.Disposition.Successful
+  commentId: F:Runly.Disposition.Successful
+  id: Successful
+  parent: Runly.Disposition
+  langs:
+  - csharp
+  - vb
+  name: Successful
+  nameWithType: Disposition.Successful
+  fullName: Runly.Disposition.Successful
+  type: Field
+  source:
+    id: Successful
+    path: /github/workspace/src/Core/Disposition.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Successful = null
+    return:
+      type: Runly.Disposition
+    content.vb: Successful = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.Disposition.Failed
+  commentId: F:Runly.Disposition.Failed
+  id: Failed
+  parent: Runly.Disposition
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: Disposition.Failed
+  fullName: Runly.Disposition.Failed
+  type: Field
+  source:
+    id: Failed
+    path: /github/workspace/src/Core/Disposition.cs
+    startLine: 9
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Failed = null
+    return:
+      type: Runly.Disposition
+    content.vb: Failed = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.Disposition.Cancelled
+  commentId: F:Runly.Disposition.Cancelled
+  id: Cancelled
+  parent: Runly.Disposition
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: Disposition.Cancelled
+  fullName: Runly.Disposition.Cancelled
+  type: Field
+  source:
+    id: Cancelled
+    path: /github/workspace/src/Core/Disposition.cs
+    startLine: 10
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Cancelled = null
+    return:
+      type: Runly.Disposition
+    content.vb: Cancelled = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Disposition
+  commentId: T:Runly.Disposition
+  parent: Runly
+  name: Disposition
+  nameWithType: Disposition
+  fullName: Runly.Disposition

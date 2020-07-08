@@ -1,0 +1,209 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JobConfigConverter
+  commentId: T:Runly.JobConfigConverter
+  id: JobConfigConverter
+  parent: Runly
+  children:
+  - Runly.JobConfigConverter.CanConvert(Type)
+  - Runly.JobConfigConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  - Runly.JobConfigConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  langs:
+  - csharp
+  - vb
+  name: JobConfigConverter
+  nameWithType: JobConfigConverter
+  fullName: Runly.JobConfigConverter
+  type: Class
+  source:
+    id: JobConfigConverter
+    path: /github/workspace/src/Core/JobConfigConverter.cs
+    startLine: 17
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nUsed to deserialize a simplified version of <xref href=\"Runly.JobConfig\" data-throw-if-not-resolved=\"false\"></xref> containing only the type name into the full class.\n"
+  remarks: "\nDeserializes a string into the full class. In the following JSON the value &quot;Acme.Job&quot; would be placed in the <xref href=\"Runly.JobConfig.Type\" data-throw-if-not-resolved=\"false\"></xref> property.\n```json\n{\n&quot;job&quot;: &quot;Acme.Job&quot;\n}\n```\n"
+  example: []
+  syntax:
+    content: 'public class JobConfigConverter : JsonConverter'
+    content.vb: >-
+      Public Class JobConfigConverter
+          Inherits JsonConverter
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.JobConfigConverter.CanConvert(Type)
+  commentId: M:Runly.JobConfigConverter.CanConvert(Type)
+  id: CanConvert(Type)
+  parent: Runly.JobConfigConverter
+  langs:
+  - csharp
+  - vb
+  name: CanConvert(Type)
+  nameWithType: JobConfigConverter.CanConvert(Type)
+  fullName: Runly.JobConfigConverter.CanConvert(Type)
+  type: Method
+  source:
+    id: CanConvert
+    path: /github/workspace/src/Core/JobConfigConverter.cs
+    startLine: 19
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public override bool CanConvert(Type objectType)
+    parameters:
+    - id: objectType
+      type: Type
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function CanConvert(objectType As Type) As Boolean
+  overload: Runly.JobConfigConverter.CanConvert*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Runly.JobConfigConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  commentId: M:Runly.JobConfigConverter.WriteJson(JsonWriter,System.Object,JsonSerializer)
+  id: WriteJson(JsonWriter,System.Object,JsonSerializer)
+  parent: Runly.JobConfigConverter
+  langs:
+  - csharp
+  - vb
+  name: WriteJson(JsonWriter, Object, JsonSerializer)
+  nameWithType: JobConfigConverter.WriteJson(JsonWriter, Object, JsonSerializer)
+  fullName: Runly.JobConfigConverter.WriteJson(JsonWriter, System.Object, JsonSerializer)
+  type: Method
+  source:
+    id: WriteJson
+    path: /github/workspace/src/Core/JobConfigConverter.cs
+    startLine: 21
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+    parameters:
+    - id: writer
+      type: JsonWriter
+    - id: value
+      type: System.Object
+    - id: serializer
+      type: JsonSerializer
+    content.vb: Public Overrides Sub WriteJson(writer As JsonWriter, value As Object, serializer As JsonSerializer)
+  overload: Runly.JobConfigConverter.WriteJson*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: Runly.JobConfigConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  commentId: M:Runly.JobConfigConverter.ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  id: ReadJson(JsonReader,Type,System.Object,JsonSerializer)
+  parent: Runly.JobConfigConverter
+  langs:
+  - csharp
+  - vb
+  name: ReadJson(JsonReader, Type, Object, JsonSerializer)
+  nameWithType: JobConfigConverter.ReadJson(JsonReader, Type, Object, JsonSerializer)
+  fullName: Runly.JobConfigConverter.ReadJson(JsonReader, Type, System.Object, JsonSerializer)
+  type: Method
+  source:
+    id: ReadJson
+    path: /github/workspace/src/Core/JobConfigConverter.cs
+    startLine: 43
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+    parameters:
+    - id: reader
+      type: JsonReader
+    - id: objectType
+      type: Type
+    - id: existingValue
+      type: System.Object
+    - id: serializer
+      type: JsonSerializer
+    return:
+      type: System.Object
+    content.vb: Public Overrides Function ReadJson(reader As JsonReader, objectType As Type, existingValue As Object, serializer As JsonSerializer) As Object
+  overload: Runly.JobConfigConverter.ReadJson*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Runly.JobConfig
+  commentId: T:Runly.JobConfig
+  parent: Runly
+  name: JobConfig
+  nameWithType: JobConfig
+  fullName: Runly.JobConfig
+- uid: Runly.JobConfig.Type
+  commentId: P:Runly.JobConfig.Type
+  isExternal: true
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.JobConfigConverter.CanConvert*
+  commentId: Overload:Runly.JobConfigConverter.CanConvert
+  name: CanConvert
+  nameWithType: JobConfigConverter.CanConvert
+  fullName: Runly.JobConfigConverter.CanConvert
+- uid: Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.JobConfigConverter.WriteJson*
+  commentId: Overload:Runly.JobConfigConverter.WriteJson
+  name: WriteJson
+  nameWithType: JobConfigConverter.WriteJson
+  fullName: Runly.JobConfigConverter.WriteJson
+- uid: JsonWriter
+  commentId: '!:JsonWriter'
+  isExternal: true
+  name: JsonWriter
+  nameWithType: JsonWriter
+  fullName: JsonWriter
+- uid: JsonSerializer
+  isExternal: true
+  name: JsonSerializer
+  nameWithType: JsonSerializer
+  fullName: JsonSerializer
+- uid: Runly.JobConfigConverter.ReadJson*
+  commentId: Overload:Runly.JobConfigConverter.ReadJson
+  name: ReadJson
+  nameWithType: JobConfigConverter.ReadJson
+  fullName: Runly.JobConfigConverter.ReadJson
+- uid: JsonReader
+  commentId: '!:JsonReader'
+  isExternal: true
+  name: JsonReader
+  nameWithType: JsonReader
+  fullName: JsonReader

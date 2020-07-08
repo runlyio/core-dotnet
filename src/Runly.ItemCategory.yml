@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ItemCategory
+  commentId: T:Runly.ItemCategory
+  id: ItemCategory
+  parent: Runly
+  children:
+  - Runly.ItemCategory.Category
+  - Runly.ItemCategory.Count
+  - Runly.ItemCategory.IsSuccessful
+  langs:
+  - csharp
+  - vb
+  name: ItemCategory
+  nameWithType: ItemCategory
+  fullName: Runly.ItemCategory
+  type: Class
+  source:
+    id: ItemCategory
+    path: /github/workspace/src/Core/ItemCategory.cs
+    startLine: 2
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public class ItemCategory : object'
+    content.vb: >-
+      Public Class ItemCategory
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.ItemCategory.IsSuccessful
+  commentId: P:Runly.ItemCategory.IsSuccessful
+  id: IsSuccessful
+  parent: Runly.ItemCategory
+  langs:
+  - csharp
+  - vb
+  name: IsSuccessful
+  nameWithType: ItemCategory.IsSuccessful
+  fullName: Runly.ItemCategory.IsSuccessful
+  type: Property
+  source:
+    id: IsSuccessful
+    path: /github/workspace/src/Core/ItemCategory.cs
+    startLine: 6
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public bool IsSuccessful { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsSuccessful As Boolean
+  overload: Runly.ItemCategory.IsSuccessful*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ItemCategory.Category
+  commentId: P:Runly.ItemCategory.Category
+  id: Category
+  parent: Runly.ItemCategory
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: ItemCategory.Category
+  fullName: Runly.ItemCategory.Category
+  type: Property
+  source:
+    id: Category
+    path: /github/workspace/src/Core/ItemCategory.cs
+    startLine: 7
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public string Category { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Category As String
+  overload: Runly.ItemCategory.Category*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ItemCategory.Count
+  commentId: P:Runly.ItemCategory.Count
+  id: Count
+  parent: Runly.ItemCategory
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ItemCategory.Count
+  fullName: Runly.ItemCategory.Count
+  type: Property
+  source:
+    id: Count
+    path: /github/workspace/src/Core/ItemCategory.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: Runly.ItemCategory.Count*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ItemCategory.IsSuccessful*
+  commentId: Overload:Runly.ItemCategory.IsSuccessful
+  name: IsSuccessful
+  nameWithType: ItemCategory.IsSuccessful
+  fullName: Runly.ItemCategory.IsSuccessful
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.ItemCategory.Category*
+  commentId: Overload:Runly.ItemCategory.Category
+  name: Category
+  nameWithType: ItemCategory.Category
+  fullName: Runly.ItemCategory.Category
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ItemCategory.Count*
+  commentId: Overload:Runly.ItemCategory.Count
+  name: Count
+  nameWithType: ItemCategory.Count
+  fullName: Runly.ItemCategory.Count
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

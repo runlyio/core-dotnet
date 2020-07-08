@@ -1,0 +1,345 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.PollingStream`1.Enumerator
+  commentId: T:Runly.PollingStream`1.Enumerator
+  id: PollingStream`1.Enumerator
+  parent: Runly
+  children:
+  - Runly.PollingStream`1.Enumerator.#ctor(Runly.PollingStream{`0},CancellationToken)
+  - Runly.PollingStream`1.Enumerator.Current
+  - Runly.PollingStream`1.Enumerator.DisposeAsync
+  - Runly.PollingStream`1.Enumerator.MoveNextAsync
+  langs:
+  - csharp
+  - vb
+  name: PollingStream<T>.Enumerator
+  nameWithType: PollingStream<T>.Enumerator
+  fullName: Runly.PollingStream<T>.Enumerator
+  type: Class
+  source:
+    id: Enumerator
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 26
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class Enumerator : IAsyncEnumerator<T>'
+    content.vb: >-
+      Public Class Enumerator
+          Inherits IAsyncEnumerator(Of T)
+  inheritance:
+  - System.Object
+  nameWithType.vb: PollingStream(Of T).Enumerator
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Runly.PollingStream(Of T).Enumerator
+  name.vb: PollingStream(Of T).Enumerator
+- uid: Runly.PollingStream`1.Enumerator.#ctor(Runly.PollingStream{`0},CancellationToken)
+  commentId: M:Runly.PollingStream`1.Enumerator.#ctor(Runly.PollingStream{`0},CancellationToken)
+  id: '#ctor(Runly.PollingStream{`0},CancellationToken)'
+  parent: Runly.PollingStream`1.Enumerator
+  langs:
+  - csharp
+  - vb
+  name: Enumerator(PollingStream<T>, CancellationToken)
+  nameWithType: PollingStream<T>.Enumerator.Enumerator(PollingStream<T>, CancellationToken)
+  fullName: Runly.PollingStream<T>.Enumerator.Enumerator(Runly.PollingStream<T>, CancellationToken)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 33
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Enumerator(PollingStream<T> pollingStream, CancellationToken cancellationToken)
+    parameters:
+    - id: pollingStream
+      type: Runly.PollingStream`1
+    - id: cancellationToken
+      type: CancellationToken
+    content.vb: Public Sub New(pollingStream As PollingStream(Of T), cancellationToken As CancellationToken)
+  overload: Runly.PollingStream`1.Enumerator.#ctor*
+  nameWithType.vb: PollingStream(Of T).Enumerator.Enumerator(PollingStream(Of T), CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.Enumerator(Runly.PollingStream(Of T), CancellationToken)
+  name.vb: Enumerator(PollingStream(Of T), CancellationToken)
+- uid: Runly.PollingStream`1.Enumerator.Current
+  commentId: P:Runly.PollingStream`1.Enumerator.Current
+  id: Current
+  parent: Runly.PollingStream`1.Enumerator
+  langs:
+  - csharp
+  - vb
+  name: Current
+  nameWithType: PollingStream<T>.Enumerator.Current
+  fullName: Runly.PollingStream<T>.Enumerator.Current
+  type: Property
+  source:
+    id: Current
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 39
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public T Current { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public ReadOnly Property Current As T
+  overload: Runly.PollingStream`1.Enumerator.Current*
+  nameWithType.vb: PollingStream(Of T).Enumerator.Current
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.Current
+- uid: Runly.PollingStream`1.Enumerator.MoveNextAsync
+  commentId: M:Runly.PollingStream`1.Enumerator.MoveNextAsync
+  id: MoveNextAsync
+  parent: Runly.PollingStream`1.Enumerator
+  langs:
+  - csharp
+  - vb
+  name: MoveNextAsync()
+  nameWithType: PollingStream<T>.Enumerator.MoveNextAsync()
+  fullName: Runly.PollingStream<T>.Enumerator.MoveNextAsync()
+  type: Method
+  source:
+    id: MoveNextAsync
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 41
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public ValueTask<bool> MoveNextAsync()
+    return:
+      type: ValueTask{System.Boolean}
+    content.vb: Public Function MoveNextAsync As ValueTask(Of Boolean)
+  overload: Runly.PollingStream`1.Enumerator.MoveNextAsync*
+  nameWithType.vb: PollingStream(Of T).Enumerator.MoveNextAsync()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.MoveNextAsync()
+- uid: Runly.PollingStream`1.Enumerator.DisposeAsync
+  commentId: M:Runly.PollingStream`1.Enumerator.DisposeAsync
+  id: DisposeAsync
+  parent: Runly.PollingStream`1.Enumerator
+  langs:
+  - csharp
+  - vb
+  name: DisposeAsync()
+  nameWithType: PollingStream<T>.Enumerator.DisposeAsync()
+  fullName: Runly.PollingStream<T>.Enumerator.DisposeAsync()
+  type: Method
+  source:
+    id: DisposeAsync
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 74
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public ValueTask DisposeAsync()
+    return:
+      type: ValueTask
+    content.vb: Public Function DisposeAsync As ValueTask
+  overload: Runly.PollingStream`1.Enumerator.DisposeAsync*
+  nameWithType.vb: PollingStream(Of T).Enumerator.DisposeAsync()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.DisposeAsync()
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.PollingStream`1.Enumerator.#ctor*
+  commentId: Overload:Runly.PollingStream`1.Enumerator.#ctor
+  name: Enumerator
+  nameWithType: PollingStream<T>.Enumerator.Enumerator
+  fullName: Runly.PollingStream<T>.Enumerator.Enumerator
+  nameWithType.vb: PollingStream(Of T).Enumerator.Enumerator
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.Enumerator
+- uid: Runly.PollingStream`1
+  commentId: T:Runly.PollingStream`1
+  parent: Runly
+  name: PollingStream<T>
+  nameWithType: PollingStream<T>
+  fullName: Runly.PollingStream<T>
+  nameWithType.vb: PollingStream(Of T)
+  fullName.vb: Runly.PollingStream(Of T)
+  name.vb: PollingStream(Of T)
+  spec.csharp:
+  - uid: Runly.PollingStream`1
+    name: PollingStream
+    nameWithType: PollingStream
+    fullName: Runly.PollingStream
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.PollingStream`1
+    name: PollingStream
+    nameWithType: PollingStream
+    fullName: Runly.PollingStream
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Runly.PollingStream`1.Enumerator.Current*
+  commentId: Overload:Runly.PollingStream`1.Enumerator.Current
+  name: Current
+  nameWithType: PollingStream<T>.Enumerator.Current
+  fullName: Runly.PollingStream<T>.Enumerator.Current
+  nameWithType.vb: PollingStream(Of T).Enumerator.Current
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.Current
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: Runly.PollingStream`1.Enumerator.MoveNextAsync*
+  commentId: Overload:Runly.PollingStream`1.Enumerator.MoveNextAsync
+  name: MoveNextAsync
+  nameWithType: PollingStream<T>.Enumerator.MoveNextAsync
+  fullName: Runly.PollingStream<T>.Enumerator.MoveNextAsync
+  nameWithType.vb: PollingStream(Of T).Enumerator.MoveNextAsync
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.MoveNextAsync
+- uid: ValueTask{System.Boolean}
+  commentId: '!:ValueTask{System.Boolean}'
+  definition: ValueTask`1
+  name: ValueTask<Boolean>
+  nameWithType: ValueTask<Boolean>
+  fullName: ValueTask<System.Boolean>
+  nameWithType.vb: ValueTask(Of Boolean)
+  fullName.vb: ValueTask(Of System.Boolean)
+  name.vb: ValueTask(Of Boolean)
+  spec.csharp:
+  - uid: ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: ValueTask
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: ValueTask
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ValueTask`1
+  isExternal: true
+  name: ValueTask<>
+  nameWithType: ValueTask<>
+  fullName: ValueTask<>
+  nameWithType.vb: ValueTask(Of )
+  fullName.vb: ValueTask(Of )
+  name.vb: ValueTask(Of )
+  spec.csharp:
+  - uid: ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: ValueTask
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ValueTask`1
+    name: ValueTask
+    nameWithType: ValueTask
+    fullName: ValueTask
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.PollingStream`1.Enumerator.DisposeAsync*
+  commentId: Overload:Runly.PollingStream`1.Enumerator.DisposeAsync
+  name: DisposeAsync
+  nameWithType: PollingStream<T>.Enumerator.DisposeAsync
+  fullName: Runly.PollingStream<T>.Enumerator.DisposeAsync
+  nameWithType.vb: PollingStream(Of T).Enumerator.DisposeAsync
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.DisposeAsync
+- uid: ValueTask
+  isExternal: true
+  name: ValueTask
+  nameWithType: ValueTask
+  fullName: ValueTask

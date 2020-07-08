@@ -1,0 +1,668 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Job
+  commentId: T:Runly.Job
+  id: Job
+  parent: Runly
+  children:
+  - Runly.Job.#ctor(Runly.Config)
+  langs:
+  - csharp
+  - vb
+  name: Job
+  nameWithType: Job
+  fullName: Runly.Job
+  type: Class
+  source:
+    id: Job
+    path: /github/workspace/src/Job/Job.cs
+    startLine: 9
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nA configurationless, single-action <see cref=\"!:Task\"></see>-based asynchronous job.\n"
+  example: []
+  syntax:
+    content: 'public abstract class Job : Job<Config>, IJob'
+    content.vb: >-
+      Public MustInherit Class Job
+          Inherits Job(Of Config)
+          Implements IJob
+  inheritance:
+  - System.Object
+  - Runly.JobBase{Runly.Config}
+  - Runly.Job{Runly.Config}
+  implements:
+  - Runly.IJob
+  inheritedMembers:
+  - Runly.Job{Runly.Config}.GetExecution(IServiceProvider)
+  - Runly.Job{Runly.Config}.ProcessAsync
+  - Runly.JobBase{Runly.Config}.Config
+  - Runly.JobBase{Runly.Config}.Options
+  - Runly.JobBase{Runly.Config}.CancellationToken
+  - Runly.JobBase{Runly.Config}.Runly#IJob#Config
+  - Runly.JobBase{Runly.Config}.Runly#IJob#GetDefaultConfig
+  - Runly.JobBase{Runly.Config}.InitializeAsync
+  - Runly.JobBase{Runly.Config}.FinalizeAsync(Runly.Disposition)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Runly.Job.#ctor(Runly.Config)
+  commentId: M:Runly.Job.#ctor(Runly.Config)
+  id: '#ctor(Runly.Config)'
+  parent: Runly.Job
+  langs:
+  - csharp
+  - vb
+  name: Job(Config)
+  nameWithType: Job.Job(Config)
+  fullName: Runly.Job.Job(Runly.Config)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/Job.cs
+    startLine: 11
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: protected Job(Config config)
+    parameters:
+    - id: config
+      type: Runly.Config
+    content.vb: Protected Sub New(config As Config)
+  overload: Runly.Job.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.JobBase{Runly.Config}
+  commentId: T:Runly.JobBase{Runly.Config}
+  parent: Runly
+  definition: Runly.JobBase`1
+  name: JobBase<Config>
+  nameWithType: JobBase<Config>
+  fullName: Runly.JobBase<Runly.Config>
+  nameWithType.vb: JobBase(Of Config)
+  fullName.vb: Runly.JobBase(Of Runly.Config)
+  name.vb: JobBase(Of Config)
+  spec.csharp:
+  - uid: Runly.JobBase`1
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.Config
+    name: Config
+    nameWithType: Config
+    fullName: Runly.Config
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.JobBase`1
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.Config
+    name: Config
+    nameWithType: Config
+    fullName: Runly.Config
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job{Runly.Config}
+  commentId: T:Runly.Job{Runly.Config}
+  parent: Runly
+  definition: Runly.Job`1
+  name: Job<Config>
+  nameWithType: Job<Config>
+  fullName: Runly.Job<Runly.Config>
+  nameWithType.vb: Job(Of Config)
+  fullName.vb: Runly.Job(Of Runly.Config)
+  name.vb: Job(Of Config)
+  spec.csharp:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.Config
+    name: Config
+    nameWithType: Config
+    fullName: Runly.Config
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.Config
+    name: Config
+    nameWithType: Config
+    fullName: Runly.Config
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
+- uid: Runly.Job{Runly.Config}.GetExecution(IServiceProvider)
+  commentId: M:Runly.Job{Runly.Config}.GetExecution(IServiceProvider)
+  parent: Runly.Job{Runly.Config}
+  definition: Runly.Job`1.GetExecution(IServiceProvider)
+  name: GetExecution(IServiceProvider)
+  nameWithType: Job<Config>.GetExecution(IServiceProvider)
+  fullName: Runly.Job<Runly.Config>.GetExecution(IServiceProvider)
+  nameWithType.vb: Job(Of Config).GetExecution(IServiceProvider)
+  fullName.vb: Runly.Job(Of Runly.Config).GetExecution(IServiceProvider)
+  spec.csharp:
+  - uid: Runly.Job`1.GetExecution(IServiceProvider)
+    name: GetExecution
+    nameWithType: Job<Config>.GetExecution
+    fullName: Runly.Job<Runly.Config>.GetExecution
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Job`1.GetExecution(IServiceProvider)
+    name: GetExecution
+    nameWithType: Job(Of Config).GetExecution
+    fullName: Runly.Job(Of Runly.Config).GetExecution
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job{Runly.Config}.ProcessAsync
+  commentId: M:Runly.Job{Runly.Config}.ProcessAsync
+  parent: Runly.Job{Runly.Config}
+  definition: Runly.Job`1.ProcessAsync
+  name: ProcessAsync()
+  nameWithType: Job<Config>.ProcessAsync()
+  fullName: Runly.Job<Runly.Config>.ProcessAsync()
+  nameWithType.vb: Job(Of Config).ProcessAsync()
+  fullName.vb: Runly.Job(Of Runly.Config).ProcessAsync()
+  spec.csharp:
+  - uid: Runly.Job`1.ProcessAsync
+    name: ProcessAsync
+    nameWithType: Job<Config>.ProcessAsync
+    fullName: Runly.Job<Runly.Config>.ProcessAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Job`1.ProcessAsync
+    name: ProcessAsync
+    nameWithType: Job(Of Config).ProcessAsync
+    fullName: Runly.Job(Of Runly.Config).ProcessAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase{Runly.Config}.Config
+  commentId: P:Runly.JobBase{Runly.Config}.Config
+  parent: Runly.JobBase{Runly.Config}
+  definition: Runly.JobBase`1.Config
+  name: Config
+  nameWithType: JobBase<Config>.Config
+  fullName: Runly.JobBase<Runly.Config>.Config
+  nameWithType.vb: JobBase(Of Config).Config
+  fullName.vb: Runly.JobBase(Of Runly.Config).Config
+- uid: Runly.JobBase{Runly.Config}.Options
+  commentId: P:Runly.JobBase{Runly.Config}.Options
+  parent: Runly.JobBase{Runly.Config}
+  definition: Runly.JobBase`1.Options
+  name: Options
+  nameWithType: JobBase<Config>.Options
+  fullName: Runly.JobBase<Runly.Config>.Options
+  nameWithType.vb: JobBase(Of Config).Options
+  fullName.vb: Runly.JobBase(Of Runly.Config).Options
+- uid: Runly.JobBase{Runly.Config}.CancellationToken
+  commentId: P:Runly.JobBase{Runly.Config}.CancellationToken
+  parent: Runly.JobBase{Runly.Config}
+  definition: Runly.JobBase`1.CancellationToken
+  name: CancellationToken
+  nameWithType: JobBase<Config>.CancellationToken
+  fullName: Runly.JobBase<Runly.Config>.CancellationToken
+  nameWithType.vb: JobBase(Of Config).CancellationToken
+  fullName.vb: Runly.JobBase(Of Runly.Config).CancellationToken
+- uid: Runly.JobBase{Runly.Config}.Runly#IJob#Config
+  commentId: P:Runly.JobBase{Runly.Config}.Runly#IJob#Config
+  parent: Runly.JobBase{Runly.Config}
+  definition: Runly.JobBase`1.Runly#IJob#Config
+  name: IJob.Config
+  nameWithType: JobBase<Config>.IJob.Config
+  fullName: Runly.JobBase<Runly.Config>.Runly.IJob.Config
+  nameWithType.vb: JobBase(Of Config).Runly.IJob.Config
+  fullName.vb: Runly.JobBase(Of Runly.Config).Runly.IJob.Config
+  name.vb: Runly.IJob.Config
+- uid: Runly.JobBase{Runly.Config}.Runly#IJob#GetDefaultConfig
+  commentId: M:Runly.JobBase{Runly.Config}.Runly#IJob#GetDefaultConfig
+  parent: Runly.JobBase{Runly.Config}
+  definition: Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+  name: IJob.GetDefaultConfig()
+  nameWithType: JobBase<Config>.IJob.GetDefaultConfig()
+  fullName: Runly.JobBase<Runly.Config>.Runly.IJob.GetDefaultConfig()
+  nameWithType.vb: JobBase(Of Config).Runly.IJob.GetDefaultConfig()
+  fullName.vb: Runly.JobBase(Of Runly.Config).Runly.IJob.GetDefaultConfig()
+  name.vb: Runly.IJob.GetDefaultConfig()
+  spec.csharp:
+  - uid: Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+    name: IJob.GetDefaultConfig
+    nameWithType: JobBase<Config>.IJob.GetDefaultConfig
+    fullName: Runly.JobBase<Runly.Config>.Runly.IJob.GetDefaultConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+    name: Runly.IJob.GetDefaultConfig
+    nameWithType: JobBase(Of Config).Runly.IJob.GetDefaultConfig
+    fullName: Runly.JobBase(Of Runly.Config).Runly.IJob.GetDefaultConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase{Runly.Config}.InitializeAsync
+  commentId: M:Runly.JobBase{Runly.Config}.InitializeAsync
+  parent: Runly.JobBase{Runly.Config}
+  definition: Runly.JobBase`1.InitializeAsync
+  name: InitializeAsync()
+  nameWithType: JobBase<Config>.InitializeAsync()
+  fullName: Runly.JobBase<Runly.Config>.InitializeAsync()
+  nameWithType.vb: JobBase(Of Config).InitializeAsync()
+  fullName.vb: Runly.JobBase(Of Runly.Config).InitializeAsync()
+  spec.csharp:
+  - uid: Runly.JobBase`1.InitializeAsync
+    name: InitializeAsync
+    nameWithType: JobBase<Config>.InitializeAsync
+    fullName: Runly.JobBase<Runly.Config>.InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.JobBase`1.InitializeAsync
+    name: InitializeAsync
+    nameWithType: JobBase(Of Config).InitializeAsync
+    fullName: Runly.JobBase(Of Runly.Config).InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase{Runly.Config}.FinalizeAsync(Runly.Disposition)
+  commentId: M:Runly.JobBase{Runly.Config}.FinalizeAsync(Runly.Disposition)
+  parent: Runly.JobBase{Runly.Config}
+  definition: Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
+  name: FinalizeAsync(Disposition)
+  nameWithType: JobBase<Config>.FinalizeAsync(Disposition)
+  fullName: Runly.JobBase<Runly.Config>.FinalizeAsync(Runly.Disposition)
+  nameWithType.vb: JobBase(Of Config).FinalizeAsync(Disposition)
+  fullName.vb: Runly.JobBase(Of Runly.Config).FinalizeAsync(Runly.Disposition)
+  spec.csharp:
+  - uid: Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: JobBase<Config>.FinalizeAsync
+    fullName: Runly.JobBase<Runly.Config>.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: JobBase(Of Config).FinalizeAsync
+    fullName: Runly.JobBase(Of Runly.Config).FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase`1
+  commentId: T:Runly.JobBase`1
+  name: JobBase<TConfig>
+  nameWithType: JobBase<TConfig>
+  fullName: Runly.JobBase<TConfig>
+  nameWithType.vb: JobBase(Of TConfig)
+  fullName.vb: Runly.JobBase(Of TConfig)
+  name.vb: JobBase(Of TConfig)
+  spec.csharp:
+  - uid: Runly.JobBase`1
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.JobBase`1
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`1
+  commentId: T:Runly.Job`1
+  name: Job<TConfig>
+  nameWithType: Job<TConfig>
+  fullName: Runly.Job<TConfig>
+  nameWithType.vb: Job(Of TConfig)
+  fullName.vb: Runly.Job(Of TConfig)
+  name.vb: Job(Of TConfig)
+  spec.csharp:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`1.GetExecution(IServiceProvider)
+  commentId: M:Runly.Job`1.GetExecution(IServiceProvider)
+  isExternal: true
+  name: GetExecution(IServiceProvider)
+  nameWithType: Job<TConfig>.GetExecution(IServiceProvider)
+  fullName: Runly.Job<TConfig>.GetExecution(IServiceProvider)
+  nameWithType.vb: Job(Of TConfig).GetExecution(IServiceProvider)
+  fullName.vb: Runly.Job(Of TConfig).GetExecution(IServiceProvider)
+  spec.csharp:
+  - uid: Runly.Job`1.GetExecution(IServiceProvider)
+    name: GetExecution
+    nameWithType: Job<TConfig>.GetExecution
+    fullName: Runly.Job<TConfig>.GetExecution
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Job`1.GetExecution(IServiceProvider)
+    name: GetExecution
+    nameWithType: Job(Of TConfig).GetExecution
+    fullName: Runly.Job(Of TConfig).GetExecution
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`1.ProcessAsync
+  commentId: M:Runly.Job`1.ProcessAsync
+  name: ProcessAsync()
+  nameWithType: Job<TConfig>.ProcessAsync()
+  fullName: Runly.Job<TConfig>.ProcessAsync()
+  nameWithType.vb: Job(Of TConfig).ProcessAsync()
+  fullName.vb: Runly.Job(Of TConfig).ProcessAsync()
+  spec.csharp:
+  - uid: Runly.Job`1.ProcessAsync
+    name: ProcessAsync
+    nameWithType: Job<TConfig>.ProcessAsync
+    fullName: Runly.Job<TConfig>.ProcessAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Job`1.ProcessAsync
+    name: ProcessAsync
+    nameWithType: Job(Of TConfig).ProcessAsync
+    fullName: Runly.Job(Of TConfig).ProcessAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase`1.Config
+  commentId: P:Runly.JobBase`1.Config
+  name: Config
+  nameWithType: JobBase<TConfig>.Config
+  fullName: Runly.JobBase<TConfig>.Config
+  nameWithType.vb: JobBase(Of TConfig).Config
+  fullName.vb: Runly.JobBase(Of TConfig).Config
+- uid: Runly.JobBase`1.Options
+  commentId: P:Runly.JobBase`1.Options
+  name: Options
+  nameWithType: JobBase<TConfig>.Options
+  fullName: Runly.JobBase<TConfig>.Options
+  nameWithType.vb: JobBase(Of TConfig).Options
+  fullName.vb: Runly.JobBase(Of TConfig).Options
+- uid: Runly.JobBase`1.CancellationToken
+  commentId: P:Runly.JobBase`1.CancellationToken
+  name: CancellationToken
+  nameWithType: JobBase<TConfig>.CancellationToken
+  fullName: Runly.JobBase<TConfig>.CancellationToken
+  nameWithType.vb: JobBase(Of TConfig).CancellationToken
+  fullName.vb: Runly.JobBase(Of TConfig).CancellationToken
+- uid: Runly.JobBase`1.Runly#IJob#Config
+  commentId: P:Runly.JobBase`1.Runly#IJob#Config
+  name: IJob.Config
+  nameWithType: JobBase<TConfig>.IJob.Config
+  fullName: Runly.JobBase<TConfig>.Runly.IJob.Config
+  nameWithType.vb: JobBase(Of TConfig).Runly.IJob.Config
+  fullName.vb: Runly.JobBase(Of TConfig).Runly.IJob.Config
+  name.vb: Runly.IJob.Config
+- uid: Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+  commentId: M:Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+  name: IJob.GetDefaultConfig()
+  nameWithType: JobBase<TConfig>.IJob.GetDefaultConfig()
+  fullName: Runly.JobBase<TConfig>.Runly.IJob.GetDefaultConfig()
+  nameWithType.vb: JobBase(Of TConfig).Runly.IJob.GetDefaultConfig()
+  fullName.vb: Runly.JobBase(Of TConfig).Runly.IJob.GetDefaultConfig()
+  name.vb: Runly.IJob.GetDefaultConfig()
+  spec.csharp:
+  - uid: Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+    name: IJob.GetDefaultConfig
+    nameWithType: JobBase<TConfig>.IJob.GetDefaultConfig
+    fullName: Runly.JobBase<TConfig>.Runly.IJob.GetDefaultConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+    name: Runly.IJob.GetDefaultConfig
+    nameWithType: JobBase(Of TConfig).Runly.IJob.GetDefaultConfig
+    fullName: Runly.JobBase(Of TConfig).Runly.IJob.GetDefaultConfig
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase`1.InitializeAsync
+  commentId: M:Runly.JobBase`1.InitializeAsync
+  name: InitializeAsync()
+  nameWithType: JobBase<TConfig>.InitializeAsync()
+  fullName: Runly.JobBase<TConfig>.InitializeAsync()
+  nameWithType.vb: JobBase(Of TConfig).InitializeAsync()
+  fullName.vb: Runly.JobBase(Of TConfig).InitializeAsync()
+  spec.csharp:
+  - uid: Runly.JobBase`1.InitializeAsync
+    name: InitializeAsync
+    nameWithType: JobBase<TConfig>.InitializeAsync
+    fullName: Runly.JobBase<TConfig>.InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.JobBase`1.InitializeAsync
+    name: InitializeAsync
+    nameWithType: JobBase(Of TConfig).InitializeAsync
+    fullName: Runly.JobBase(Of TConfig).InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
+  commentId: M:Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
+  name: FinalizeAsync(Disposition)
+  nameWithType: JobBase<TConfig>.FinalizeAsync(Disposition)
+  fullName: Runly.JobBase<TConfig>.FinalizeAsync(Runly.Disposition)
+  nameWithType.vb: JobBase(Of TConfig).FinalizeAsync(Disposition)
+  fullName.vb: Runly.JobBase(Of TConfig).FinalizeAsync(Runly.Disposition)
+  spec.csharp:
+  - uid: Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: JobBase<TConfig>.FinalizeAsync
+    fullName: Runly.JobBase<TConfig>.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: JobBase(Of TConfig).FinalizeAsync
+    fullName: Runly.JobBase(Of TConfig).FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job.#ctor*
+  commentId: Overload:Runly.Job.#ctor
+  name: Job
+  nameWithType: Job.Job
+  fullName: Runly.Job.Job
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config

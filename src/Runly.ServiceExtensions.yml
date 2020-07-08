@@ -1,0 +1,332 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ServiceExtensions
+  commentId: T:Runly.ServiceExtensions
+  id: ServiceExtensions
+  parent: Runly
+  children:
+  - Runly.ServiceExtensions.AddConfig(IServiceCollection,Runly.Config)
+  - Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config)
+  - Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config,Assembly[])
+  - Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[])
+  - Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[],Assembly[])
+  langs:
+  - csharp
+  - vb
+  name: ServiceExtensions
+  nameWithType: ServiceExtensions
+  fullName: Runly.ServiceExtensions
+  type: Class
+  source:
+    id: ServiceExtensions
+    path: /github/workspace/src/Job/ServiceExtensions.cs
+    startLine: 13
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public static class ServiceExtensions : object'
+    content.vb: >-
+      Public Module ServiceExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config)
+  commentId: M:Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config)
+  id: AddRunlyJobs(IServiceCollection,Runly.Config)
+  isExtensionMethod: true
+  parent: Runly.ServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRunlyJobs(IServiceCollection, Config)
+  nameWithType: ServiceExtensions.AddRunlyJobs(IServiceCollection, Config)
+  fullName: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, Runly.Config)
+  type: Method
+  source:
+    id: AddRunlyJobs
+    path: /github/workspace/src/Job/ServiceExtensions.cs
+    startLine: 17
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, Config config)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: config
+      type: Runly.Config
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddRunlyJobs(services As IServiceCollection, config As Config) As IServiceCollection
+  overload: Runly.ServiceExtensions.AddRunlyJobs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config,Assembly[])
+  commentId: M:Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config,Assembly[])
+  id: AddRunlyJobs(IServiceCollection,Runly.Config,Assembly[])
+  isExtensionMethod: true
+  parent: Runly.ServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRunlyJobs(IServiceCollection, Config, Assembly[])
+  nameWithType: ServiceExtensions.AddRunlyJobs(IServiceCollection, Config, Assembly[])
+  fullName: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, Runly.Config, Assembly[])
+  type: Method
+  source:
+    id: AddRunlyJobs
+    path: /github/workspace/src/Job/ServiceExtensions.cs
+    startLine: 22
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, Config config, params Assembly[] jobAssemblies)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: config
+      type: Runly.Config
+    - id: jobAssemblies
+      type: Assembly[]
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddRunlyJobs(services As IServiceCollection, config As Config, ParamArray jobAssemblies As Assembly()) As IServiceCollection
+  overload: Runly.ServiceExtensions.AddRunlyJobs*
+  nameWithType.vb: ServiceExtensions.AddRunlyJobs(IServiceCollection, Config, Assembly())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, Runly.Config, Assembly())
+  name.vb: AddRunlyJobs(IServiceCollection, Config, Assembly())
+- uid: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[])
+  commentId: M:Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[])
+  id: AddRunlyJobs(IServiceCollection,System.String[])
+  isExtensionMethod: true
+  parent: Runly.ServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRunlyJobs(IServiceCollection, String[])
+  nameWithType: ServiceExtensions.AddRunlyJobs(IServiceCollection, String[])
+  fullName: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, System.String[])
+  type: Method
+  source:
+    id: AddRunlyJobs
+    path: /github/workspace/src/Job/ServiceExtensions.cs
+    startLine: 31
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: args
+      type: System.String[]
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddRunlyJobs(services As IServiceCollection, args As String()) As IServiceCollection
+  overload: Runly.ServiceExtensions.AddRunlyJobs*
+  nameWithType.vb: ServiceExtensions.AddRunlyJobs(IServiceCollection, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, System.String())
+  name.vb: AddRunlyJobs(IServiceCollection, String())
+- uid: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[],Assembly[])
+  commentId: M:Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[],Assembly[])
+  id: AddRunlyJobs(IServiceCollection,System.String[],Assembly[])
+  isExtensionMethod: true
+  parent: Runly.ServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddRunlyJobs(IServiceCollection, String[], Assembly[])
+  nameWithType: ServiceExtensions.AddRunlyJobs(IServiceCollection, String[], Assembly[])
+  fullName: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, System.String[], Assembly[])
+  type: Method
+  source:
+    id: AddRunlyJobs
+    path: /github/workspace/src/Job/ServiceExtensions.cs
+    startLine: 36
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args, params Assembly[] jobAssemblies)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: args
+      type: System.String[]
+    - id: jobAssemblies
+      type: Assembly[]
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddRunlyJobs(services As IServiceCollection, args As String(), ParamArray jobAssemblies As Assembly()) As IServiceCollection
+  overload: Runly.ServiceExtensions.AddRunlyJobs*
+  nameWithType.vb: ServiceExtensions.AddRunlyJobs(IServiceCollection, String(), Assembly())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, System.String(), Assembly())
+  name.vb: AddRunlyJobs(IServiceCollection, String(), Assembly())
+- uid: Runly.ServiceExtensions.AddConfig(IServiceCollection,Runly.Config)
+  commentId: M:Runly.ServiceExtensions.AddConfig(IServiceCollection,Runly.Config)
+  id: AddConfig(IServiceCollection,Runly.Config)
+  isExtensionMethod: true
+  parent: Runly.ServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddConfig(IServiceCollection, Config)
+  nameWithType: ServiceExtensions.AddConfig(IServiceCollection, Config)
+  fullName: Runly.ServiceExtensions.AddConfig(IServiceCollection, Runly.Config)
+  type: Method
+  source:
+    id: AddConfig
+    path: /github/workspace/src/Job/ServiceExtensions.cs
+    startLine: 169
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddConfig(this IServiceCollection services, Config config)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: config
+      type: Runly.Config
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddConfig(services As IServiceCollection, config As Config) As IServiceCollection
+  overload: Runly.ServiceExtensions.AddConfig*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ServiceExtensions.AddRunlyJobs*
+  commentId: Overload:Runly.ServiceExtensions.AddRunlyJobs
+  name: AddRunlyJobs
+  nameWithType: ServiceExtensions.AddRunlyJobs
+  fullName: Runly.ServiceExtensions.AddRunlyJobs
+- uid: IServiceCollection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: IServiceCollection
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+- uid: Assembly[]
+  isExternal: true
+  name: Assembly[]
+  nameWithType: Assembly[]
+  fullName: Assembly[]
+  nameWithType.vb: Assembly()
+  fullName.vb: Assembly()
+  name.vb: Assembly()
+  spec.csharp:
+  - uid: Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: Assembly
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: Assembly
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Runly.ServiceExtensions.AddConfig*
+  commentId: Overload:Runly.ServiceExtensions.AddConfig
+  name: AddConfig
+  nameWithType: ServiceExtensions.AddConfig
+  fullName: Runly.ServiceExtensions.AddConfig

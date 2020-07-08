@@ -1,0 +1,596 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.AsyncEnumerableWrapper`1
+  commentId: T:Runly.AsyncEnumerableWrapper`1
+  id: AsyncEnumerableWrapper`1
+  parent: Runly
+  children:
+  - Runly.AsyncEnumerableWrapper`1.#ctor(IEnumerable{`0},System.Boolean)
+  - Runly.AsyncEnumerableWrapper`1.#ctor(Task{IEnumerable{`0}},System.Boolean)
+  - Runly.AsyncEnumerableWrapper`1.CanBeCounted
+  - Runly.AsyncEnumerableWrapper`1.GetAsyncEnumerator(CancellationToken)
+  - Runly.AsyncEnumerableWrapper`1.GetInnerEnumerable
+  langs:
+  - csharp
+  - vb
+  name: AsyncEnumerableWrapper<T>
+  nameWithType: AsyncEnumerableWrapper<T>
+  fullName: Runly.AsyncEnumerableWrapper<T>
+  type: Class
+  source:
+    id: AsyncEnumerableWrapper
+    path: /github/workspace/src/Job/AsyncEnumerableWrapper.cs
+    startLine: 11
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nAdapts an <see cref=\"!:IEnumerable&lt;T>\"></see> to the <see cref=\"!:IAsyncEnumerable&lt;T>\"></see> interface.\n"
+  example: []
+  syntax:
+    content: 'public class AsyncEnumerableWrapper<T> : IAsyncEnumerable<T>'
+    typeParameters:
+    - id: T
+      description: The type of item in the collection.
+    content.vb: >-
+      Public Class AsyncEnumerableWrapper(Of T)
+          Inherits IAsyncEnumerable(Of T)
+  inheritance:
+  - System.Object
+  nameWithType.vb: AsyncEnumerableWrapper(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T)
+  name.vb: AsyncEnumerableWrapper(Of T)
+- uid: Runly.AsyncEnumerableWrapper`1.CanBeCounted
+  commentId: P:Runly.AsyncEnumerableWrapper`1.CanBeCounted
+  id: CanBeCounted
+  parent: Runly.AsyncEnumerableWrapper`1
+  langs:
+  - csharp
+  - vb
+  name: CanBeCounted
+  nameWithType: AsyncEnumerableWrapper<T>.CanBeCounted
+  fullName: Runly.AsyncEnumerableWrapper<T>.CanBeCounted
+  type: Property
+  source:
+    id: CanBeCounted
+    path: /github/workspace/src/Job/AsyncEnumerableWrapper.cs
+    startLine: 16
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public bool CanBeCounted { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property CanBeCounted As Boolean
+  overload: Runly.AsyncEnumerableWrapper`1.CanBeCounted*
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).CanBeCounted
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).CanBeCounted
+- uid: Runly.AsyncEnumerableWrapper`1.#ctor(Task{IEnumerable{`0}},System.Boolean)
+  commentId: M:Runly.AsyncEnumerableWrapper`1.#ctor(Task{IEnumerable{`0}},System.Boolean)
+  id: '#ctor(Task{IEnumerable{`0}},System.Boolean)'
+  parent: Runly.AsyncEnumerableWrapper`1
+  langs:
+  - csharp
+  - vb
+  name: AsyncEnumerableWrapper(Task<IEnumerable<T>>, Boolean)
+  nameWithType: AsyncEnumerableWrapper<T>.AsyncEnumerableWrapper(Task<IEnumerable<T>>, Boolean)
+  fullName: Runly.AsyncEnumerableWrapper<T>.AsyncEnumerableWrapper(Task<IEnumerable<T>>, System.Boolean)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/AsyncEnumerableWrapper.cs
+    startLine: 23
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> with a <see cref=\"!:Task&lt;IEnumerable&lt;T>>\"></see> that will\nbe awaited when enumerated.\n"
+  example: []
+  syntax:
+    content: public AsyncEnumerableWrapper(Task<IEnumerable<T>> enumerable, bool canBeCounted)
+    parameters:
+    - id: enumerable
+      type: Task{IEnumerable{{T}}}
+      description: The <see cref="!:IEnumerable&lt;T>"></see> to wrap.
+    - id: canBeCounted
+      type: System.Boolean
+    content.vb: Public Sub New(enumerable As Task(Of IEnumerable(Of T)), canBeCounted As Boolean)
+  overload: Runly.AsyncEnumerableWrapper`1.#ctor*
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper(Task(Of IEnumerable(Of T)), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper(Task(Of IEnumerable(Of T)), System.Boolean)
+  name.vb: AsyncEnumerableWrapper(Task(Of IEnumerable(Of T)), Boolean)
+- uid: Runly.AsyncEnumerableWrapper`1.#ctor(IEnumerable{`0},System.Boolean)
+  commentId: M:Runly.AsyncEnumerableWrapper`1.#ctor(IEnumerable{`0},System.Boolean)
+  id: '#ctor(IEnumerable{`0},System.Boolean)'
+  parent: Runly.AsyncEnumerableWrapper`1
+  langs:
+  - csharp
+  - vb
+  name: AsyncEnumerableWrapper(IEnumerable<T>, Boolean)
+  nameWithType: AsyncEnumerableWrapper<T>.AsyncEnumerableWrapper(IEnumerable<T>, Boolean)
+  fullName: Runly.AsyncEnumerableWrapper<T>.AsyncEnumerableWrapper(IEnumerable<T>, System.Boolean)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/AsyncEnumerableWrapper.cs
+    startLine: 33
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> from the <see cref=\"!:Task&lt;IEnumerable&lt;T>>\"></see>.\n"
+  example: []
+  syntax:
+    content: public AsyncEnumerableWrapper(IEnumerable<T> enumerable, bool canBeCounted)
+    parameters:
+    - id: enumerable
+      type: IEnumerable{{T}}
+      description: The <see cref="!:IEnumerable&lt;T>"></see> to wrap.
+    - id: canBeCounted
+      type: System.Boolean
+    content.vb: Public Sub New(enumerable As IEnumerable(Of T), canBeCounted As Boolean)
+  overload: Runly.AsyncEnumerableWrapper`1.#ctor*
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper(IEnumerable(Of T), Boolean)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper(IEnumerable(Of T), System.Boolean)
+  name.vb: AsyncEnumerableWrapper(IEnumerable(Of T), Boolean)
+- uid: Runly.AsyncEnumerableWrapper`1.GetInnerEnumerable
+  commentId: M:Runly.AsyncEnumerableWrapper`1.GetInnerEnumerable
+  id: GetInnerEnumerable
+  parent: Runly.AsyncEnumerableWrapper`1
+  langs:
+  - csharp
+  - vb
+  name: GetInnerEnumerable()
+  nameWithType: AsyncEnumerableWrapper<T>.GetInnerEnumerable()
+  fullName: Runly.AsyncEnumerableWrapper<T>.GetInnerEnumerable()
+  type: Method
+  source:
+    id: GetInnerEnumerable
+    path: /github/workspace/src/Job/AsyncEnumerableWrapper.cs
+    startLine: 44
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nGets the inner <see cref=\"!:IEnumerable&lt;T>\"></see> being adapted to the <see cref=\"!:IAsyncEnumerable&lt;T>\"></see> interface.\n"
+  example: []
+  syntax:
+    content: public Task<IEnumerable<T>> GetInnerEnumerable()
+    return:
+      type: Task{IEnumerable{{T}}}
+    content.vb: Public Function GetInnerEnumerable As Task(Of IEnumerable(Of T))
+  overload: Runly.AsyncEnumerableWrapper`1.GetInnerEnumerable*
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).GetInnerEnumerable()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).GetInnerEnumerable()
+- uid: Runly.AsyncEnumerableWrapper`1.GetAsyncEnumerator(CancellationToken)
+  commentId: M:Runly.AsyncEnumerableWrapper`1.GetAsyncEnumerator(CancellationToken)
+  id: GetAsyncEnumerator(CancellationToken)
+  parent: Runly.AsyncEnumerableWrapper`1
+  langs:
+  - csharp
+  - vb
+  name: GetAsyncEnumerator(CancellationToken)
+  nameWithType: AsyncEnumerableWrapper<T>.GetAsyncEnumerator(CancellationToken)
+  fullName: Runly.AsyncEnumerableWrapper<T>.GetAsyncEnumerator(CancellationToken)
+  type: Method
+  source:
+    id: GetAsyncEnumerator
+    path: /github/workspace/src/Job/AsyncEnumerableWrapper.cs
+    startLine: 56
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nGets an <see cref=\"!:IAsyncEnumerator&lt;T>\"></see> to enumerate the items.\n"
+  example: []
+  syntax:
+    content: public IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = null)
+    parameters:
+    - id: cancellationToken
+      type: CancellationToken
+    return:
+      type: IAsyncEnumerator{{T}}
+      description: An <xref href="Runly.AsyncEnumeratorWrapper%601" data-throw-if-not-resolved="false"></xref> as an <see cref="!:IAsyncEnumerator&lt;T>"></see>.
+    content.vb: Public Function GetAsyncEnumerator(cancellationToken As CancellationToken = Nothing) As IAsyncEnumerator(Of T)
+  overload: Runly.AsyncEnumerableWrapper`1.GetAsyncEnumerator*
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).GetAsyncEnumerator(CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).GetAsyncEnumerator(CancellationToken)
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.AsyncEnumerableWrapper`1.CanBeCounted*
+  commentId: Overload:Runly.AsyncEnumerableWrapper`1.CanBeCounted
+  name: CanBeCounted
+  nameWithType: AsyncEnumerableWrapper<T>.CanBeCounted
+  fullName: Runly.AsyncEnumerableWrapper<T>.CanBeCounted
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).CanBeCounted
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).CanBeCounted
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.AsyncEnumerableWrapper`1
+  commentId: T:Runly.AsyncEnumerableWrapper`1
+  name: AsyncEnumerableWrapper<T>
+  nameWithType: AsyncEnumerableWrapper<T>
+  fullName: Runly.AsyncEnumerableWrapper<T>
+  nameWithType.vb: AsyncEnumerableWrapper(Of T)
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T)
+  name.vb: AsyncEnumerableWrapper(Of T)
+  spec.csharp:
+  - uid: Runly.AsyncEnumerableWrapper`1
+    name: AsyncEnumerableWrapper
+    nameWithType: AsyncEnumerableWrapper
+    fullName: Runly.AsyncEnumerableWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.AsyncEnumerableWrapper`1
+    name: AsyncEnumerableWrapper
+    nameWithType: AsyncEnumerableWrapper
+    fullName: Runly.AsyncEnumerableWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.AsyncEnumerableWrapper`1.#ctor*
+  commentId: Overload:Runly.AsyncEnumerableWrapper`1.#ctor
+  name: AsyncEnumerableWrapper
+  nameWithType: AsyncEnumerableWrapper<T>.AsyncEnumerableWrapper
+  fullName: Runly.AsyncEnumerableWrapper<T>.AsyncEnumerableWrapper
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper
+- uid: Task{IEnumerable{{T}}}
+  commentId: '!:Task{IEnumerable{``0}}'
+  definition: Task`1
+  name: Task<IEnumerable<T>>
+  nameWithType: Task<IEnumerable<T>>
+  fullName: Task<IEnumerable<T>>
+  nameWithType.vb: Task(Of IEnumerable(Of T))
+  fullName.vb: Task(Of IEnumerable(Of T))
+  name.vb: Task(Of IEnumerable(Of T))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable{{T}}
+  commentId: '!:IEnumerable{``0}'
+  definition: IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.AsyncEnumerableWrapper`1.GetInnerEnumerable*
+  commentId: Overload:Runly.AsyncEnumerableWrapper`1.GetInnerEnumerable
+  name: GetInnerEnumerable
+  nameWithType: AsyncEnumerableWrapper<T>.GetInnerEnumerable
+  fullName: Runly.AsyncEnumerableWrapper<T>.GetInnerEnumerable
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).GetInnerEnumerable
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).GetInnerEnumerable
+- uid: Runly.AsyncEnumeratorWrapper`1
+  commentId: T:Runly.AsyncEnumeratorWrapper`1
+  name: AsyncEnumeratorWrapper<T>
+  nameWithType: AsyncEnumeratorWrapper<T>
+  fullName: Runly.AsyncEnumeratorWrapper<T>
+  nameWithType.vb: AsyncEnumeratorWrapper(Of T)
+  fullName.vb: Runly.AsyncEnumeratorWrapper(Of T)
+  name.vb: AsyncEnumeratorWrapper(Of T)
+  spec.csharp:
+  - uid: Runly.AsyncEnumeratorWrapper`1
+    name: AsyncEnumeratorWrapper
+    nameWithType: AsyncEnumeratorWrapper
+    fullName: Runly.AsyncEnumeratorWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.AsyncEnumeratorWrapper`1
+    name: AsyncEnumeratorWrapper
+    nameWithType: AsyncEnumeratorWrapper
+    fullName: Runly.AsyncEnumeratorWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.AsyncEnumerableWrapper`1.GetAsyncEnumerator*
+  commentId: Overload:Runly.AsyncEnumerableWrapper`1.GetAsyncEnumerator
+  name: GetAsyncEnumerator
+  nameWithType: AsyncEnumerableWrapper<T>.GetAsyncEnumerator
+  fullName: Runly.AsyncEnumerableWrapper<T>.GetAsyncEnumerator
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).GetAsyncEnumerator
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).GetAsyncEnumerator
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: IAsyncEnumerator{{T}}
+  commentId: '!:IAsyncEnumerator{`0}'
+  definition: IAsyncEnumerator`1
+  name: IAsyncEnumerator<T>
+  nameWithType: IAsyncEnumerator<T>
+  fullName: IAsyncEnumerator<T>
+  nameWithType.vb: IAsyncEnumerator(Of T)
+  fullName.vb: IAsyncEnumerator(Of T)
+  name.vb: IAsyncEnumerator(Of T)
+  spec.csharp:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IAsyncEnumerator`1
+  isExternal: true
+  name: IAsyncEnumerator<>
+  nameWithType: IAsyncEnumerator<>
+  fullName: IAsyncEnumerator<>
+  nameWithType.vb: IAsyncEnumerator(Of )
+  fullName.vb: IAsyncEnumerator(Of )
+  name.vb: IAsyncEnumerator(Of )
+  spec.csharp:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

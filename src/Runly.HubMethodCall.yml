@@ -1,0 +1,268 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.HubMethodCall
+  commentId: T:Runly.HubMethodCall
+  id: HubMethodCall
+  parent: Runly
+  children:
+  - Runly.HubMethodCall.#ctor(System.String,System.Object[])
+  - Runly.HubMethodCall.Args
+  - Runly.HubMethodCall.Attempts
+  - Runly.HubMethodCall.MethodName
+  - Runly.HubMethodCall.ToString
+  langs:
+  - csharp
+  - vb
+  name: HubMethodCall
+  nameWithType: HubMethodCall
+  fullName: Runly.HubMethodCall
+  type: Class
+  source:
+    id: HubMethodCall
+    path: /github/workspace/src/Job/ResultsChannel.cs
+    startLine: 265
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class HubMethodCall : object'
+    content.vb: >-
+      Public Class HubMethodCall
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.HubMethodCall.Attempts
+  commentId: P:Runly.HubMethodCall.Attempts
+  id: Attempts
+  parent: Runly.HubMethodCall
+  langs:
+  - csharp
+  - vb
+  name: Attempts
+  nameWithType: HubMethodCall.Attempts
+  fullName: Runly.HubMethodCall.Attempts
+  type: Property
+  source:
+    id: Attempts
+    path: /github/workspace/src/Job/ResultsChannel.cs
+    startLine: 267
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public int Attempts { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Attempts As Integer
+  overload: Runly.HubMethodCall.Attempts*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.HubMethodCall.MethodName
+  commentId: P:Runly.HubMethodCall.MethodName
+  id: MethodName
+  parent: Runly.HubMethodCall
+  langs:
+  - csharp
+  - vb
+  name: MethodName
+  nameWithType: HubMethodCall.MethodName
+  fullName: Runly.HubMethodCall.MethodName
+  type: Property
+  source:
+    id: MethodName
+    path: /github/workspace/src/Job/ResultsChannel.cs
+    startLine: 268
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public string MethodName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property MethodName As String
+  overload: Runly.HubMethodCall.MethodName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.HubMethodCall.Args
+  commentId: P:Runly.HubMethodCall.Args
+  id: Args
+  parent: Runly.HubMethodCall
+  langs:
+  - csharp
+  - vb
+  name: Args
+  nameWithType: HubMethodCall.Args
+  fullName: Runly.HubMethodCall.Args
+  type: Property
+  source:
+    id: Args
+    path: /github/workspace/src/Job/ResultsChannel.cs
+    startLine: 269
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public object[] Args { get; }
+    parameters: []
+    return:
+      type: System.Object[]
+    content.vb: Public ReadOnly Property Args As Object()
+  overload: Runly.HubMethodCall.Args*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.HubMethodCall.#ctor(System.String,System.Object[])
+  commentId: M:Runly.HubMethodCall.#ctor(System.String,System.Object[])
+  id: '#ctor(System.String,System.Object[])'
+  parent: Runly.HubMethodCall
+  langs:
+  - csharp
+  - vb
+  name: HubMethodCall(String, Object[])
+  nameWithType: HubMethodCall.HubMethodCall(String, Object[])
+  fullName: Runly.HubMethodCall.HubMethodCall(System.String, System.Object[])
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/ResultsChannel.cs
+    startLine: 271
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public HubMethodCall(string methodName, params object[] args)
+    parameters:
+    - id: methodName
+      type: System.String
+    - id: args
+      type: System.Object[]
+    content.vb: Public Sub New(methodName As String, ParamArray args As Object())
+  overload: Runly.HubMethodCall.#ctor*
+  nameWithType.vb: HubMethodCall.HubMethodCall(String, Object())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.HubMethodCall.HubMethodCall(System.String, System.Object())
+  name.vb: HubMethodCall(String, Object())
+- uid: Runly.HubMethodCall.ToString
+  commentId: M:Runly.HubMethodCall.ToString
+  id: ToString
+  parent: Runly.HubMethodCall
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: HubMethodCall.ToString()
+  fullName: Runly.HubMethodCall.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: /github/workspace/src/Job/ResultsChannel.cs
+    startLine: 277
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: Runly.HubMethodCall.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.HubMethodCall.Attempts*
+  commentId: Overload:Runly.HubMethodCall.Attempts
+  name: Attempts
+  nameWithType: HubMethodCall.Attempts
+  fullName: Runly.HubMethodCall.Attempts
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Runly.HubMethodCall.MethodName*
+  commentId: Overload:Runly.HubMethodCall.MethodName
+  name: MethodName
+  nameWithType: HubMethodCall.MethodName
+  fullName: Runly.HubMethodCall.MethodName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.HubMethodCall.Args*
+  commentId: Overload:Runly.HubMethodCall.Args
+  name: Args
+  nameWithType: HubMethodCall.Args
+  fullName: Runly.HubMethodCall.Args
+- uid: System.Object[]
+  isExternal: true
+  name: Object[]
+  nameWithType: Object[]
+  fullName: System.Object[]
+  nameWithType.vb: Object()
+  fullName.vb: System.Object()
+  name.vb: Object()
+  spec.csharp:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Runly.HubMethodCall.#ctor*
+  commentId: Overload:Runly.HubMethodCall.#ctor
+  name: HubMethodCall
+  nameWithType: HubMethodCall.HubMethodCall
+  fullName: Runly.HubMethodCall.HubMethodCall
+- uid: Runly.HubMethodCall.ToString*
+  commentId: Overload:Runly.HubMethodCall.ToString
+  name: ToString
+  nameWithType: HubMethodCall.ToString
+  fullName: Runly.HubMethodCall.ToString

@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ConfigNullException
+  commentId: T:Runly.ConfigNullException
+  id: ConfigNullException
+  parent: Runly
+  children:
+  - Runly.ConfigNullException.#ctor(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ConfigNullException
+  nameWithType: ConfigNullException
+  fullName: Runly.ConfigNullException
+  type: Class
+  source:
+    id: ConfigNullException
+    path: /github/workspace/src/Job/ConfigNullException.cs
+    startLine: 2
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class ConfigNullException : ConfigException'
+    content.vb: >-
+      Public Class ConfigNullException
+          Inherits ConfigException
+  inheritance:
+  - System.Object
+  - Runly.ConfigException
+  inheritedMembers:
+  - Runly.ConfigException.ParamName
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.ConfigNullException.#ctor(System.String)
+  commentId: M:Runly.ConfigNullException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: Runly.ConfigNullException
+  langs:
+  - csharp
+  - vb
+  name: ConfigNullException(String)
+  nameWithType: ConfigNullException.ConfigNullException(String)
+  fullName: Runly.ConfigNullException.ConfigNullException(System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/ConfigNullException.cs
+    startLine: 4
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public ConfigNullException(string paramName)
+    parameters:
+    - id: paramName
+      type: System.String
+    content.vb: Public Sub New(paramName As String)
+  overload: Runly.ConfigNullException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ConfigException
+  commentId: T:Runly.ConfigException
+  parent: Runly
+  name: ConfigException
+  nameWithType: ConfigException
+  fullName: Runly.ConfigException
+- uid: Runly.ConfigException.ParamName
+  commentId: P:Runly.ConfigException.ParamName
+  parent: Runly.ConfigException
+  name: ParamName
+  nameWithType: ConfigException.ParamName
+  fullName: Runly.ConfigException.ParamName
+- uid: Runly.ConfigNullException.#ctor*
+  commentId: Overload:Runly.ConfigNullException.#ctor
+  name: ConfigNullException
+  nameWithType: ConfigNullException.ConfigNullException
+  fullName: Runly.ConfigNullException.ConfigNullException
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

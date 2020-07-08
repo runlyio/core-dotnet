@@ -1,0 +1,3025 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly
+  commentId: N:Runly
+  id: Runly
+  children:
+  - Runly.AsyncAutoResetEvent
+  - Runly.AsyncEnumerableExtensions
+  - Runly.AsyncEnumerableWrapper`1
+  - Runly.AsyncEnumeratorWrapper`1
+  - Runly.Config
+  - Runly.ConfigException
+  - Runly.ConfigNullException
+  - Runly.ConfigReader
+  - Runly.ConfigServiceExtensions
+  - Runly.ConfigWriter
+  - Runly.ConsoleFormat
+  - Runly.DictionaryExtensions
+  - Runly.Disposition
+  - Runly.Error
+  - Runly.ExceptionExtensions
+  - Runly.ExceptionOptions
+  - Runly.Execution
+  - Runly.ExecutionConfig
+  - Runly.ExecutionState
+  - Runly.HubConnectionWrapper
+  - Runly.HubMethodCall
+  - Runly.IJob
+  - Runly.IResultsConnection
+  - Runly.ItemCategory
+  - Runly.ItemResult
+  - Runly.ItemResultSummary
+  - Runly.Job
+  - Runly.Job`1
+  - Runly.Job`10
+  - Runly.Job`11
+  - Runly.Job`12
+  - Runly.Job`13
+  - Runly.Job`14
+  - Runly.Job`15
+  - Runly.Job`16
+  - Runly.Job`17
+  - Runly.Job`18
+  - Runly.Job`2
+  - Runly.Job`3
+  - Runly.Job`4
+  - Runly.Job`5
+  - Runly.Job`6
+  - Runly.Job`7
+  - Runly.Job`8
+  - Runly.Job`9
+  - Runly.JobBase`1
+  - Runly.JobBase`2
+  - Runly.JobCache
+  - Runly.JobConfig
+  - Runly.JobConfigConverter
+  - Runly.JobHost
+  - Runly.JobInfo
+  - Runly.JobLoadErrors
+  - Runly.JobMethod
+  - Runly.JobOptions
+  - Runly.JsonStringExtensions
+  - Runly.MethodOutcome
+  - Runly.PollingStream`1
+  - Runly.PollingStream`1.Enumerator
+  - Runly.Result
+  - Runly.ResultLog
+  - Runly.ResultsChannel
+  - Runly.ResultsChannel.Connection
+  - Runly.RunlyApiConfig
+  - Runly.ServiceExtensions
+  - Runly.TypeNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+  type: Namespace
+  assemblies:
+  - Runly.Core
+references:
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+- uid: Runly.ConfigWriter
+  commentId: T:Runly.ConfigWriter
+  name: ConfigWriter
+  nameWithType: ConfigWriter
+  fullName: Runly.ConfigWriter
+- uid: Runly.ConsoleFormat
+  commentId: T:Runly.ConsoleFormat
+  name: ConsoleFormat
+  nameWithType: ConsoleFormat
+  fullName: Runly.ConsoleFormat
+- uid: Runly.DictionaryExtensions
+  commentId: T:Runly.DictionaryExtensions
+  name: DictionaryExtensions
+  nameWithType: DictionaryExtensions
+  fullName: Runly.DictionaryExtensions
+- uid: Runly.Disposition
+  commentId: T:Runly.Disposition
+  parent: Runly
+  name: Disposition
+  nameWithType: Disposition
+  fullName: Runly.Disposition
+- uid: Runly.Error
+  commentId: T:Runly.Error
+  parent: Runly
+  name: Error
+  nameWithType: Error
+  fullName: Runly.Error
+- uid: Runly.ExceptionExtensions
+  commentId: T:Runly.ExceptionExtensions
+  name: ExceptionExtensions
+  nameWithType: ExceptionExtensions
+  fullName: Runly.ExceptionExtensions
+- uid: Runly.ExceptionOptions
+  commentId: T:Runly.ExceptionOptions
+  parent: Runly
+  name: ExceptionOptions
+  nameWithType: ExceptionOptions
+  fullName: Runly.ExceptionOptions
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: Runly.ExecutionConfig
+  commentId: T:Runly.ExecutionConfig
+  parent: Runly
+  name: ExecutionConfig
+  nameWithType: ExecutionConfig
+  fullName: Runly.ExecutionConfig
+- uid: Runly.ExecutionState
+  commentId: T:Runly.ExecutionState
+  parent: Runly
+  name: ExecutionState
+  nameWithType: ExecutionState
+  fullName: Runly.ExecutionState
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
+- uid: Runly.ItemCategory
+  commentId: T:Runly.ItemCategory
+  name: ItemCategory
+  nameWithType: ItemCategory
+  fullName: Runly.ItemCategory
+- uid: Runly.ItemResult
+  commentId: T:Runly.ItemResult
+  parent: Runly
+  name: ItemResult
+  nameWithType: ItemResult
+  fullName: Runly.ItemResult
+- uid: Runly.ItemResultSummary
+  commentId: T:Runly.ItemResultSummary
+  name: ItemResultSummary
+  nameWithType: ItemResultSummary
+  fullName: Runly.ItemResultSummary
+- uid: Runly.JobConfig
+  commentId: T:Runly.JobConfig
+  parent: Runly
+  name: JobConfig
+  nameWithType: JobConfig
+  fullName: Runly.JobConfig
+- uid: Runly.JobConfigConverter
+  commentId: T:Runly.JobConfigConverter
+  name: JobConfigConverter
+  nameWithType: JobConfigConverter
+  fullName: Runly.JobConfigConverter
+- uid: Runly.JobMethod
+  commentId: T:Runly.JobMethod
+  parent: Runly
+  name: JobMethod
+  nameWithType: JobMethod
+  fullName: Runly.JobMethod
+- uid: Runly.JobOptions
+  commentId: T:Runly.JobOptions
+  parent: Runly
+  name: JobOptions
+  nameWithType: JobOptions
+  fullName: Runly.JobOptions
+- uid: Runly.JsonStringExtensions
+  commentId: T:Runly.JsonStringExtensions
+  name: JsonStringExtensions
+  nameWithType: JsonStringExtensions
+  fullName: Runly.JsonStringExtensions
+- uid: Runly.MethodOutcome
+  commentId: T:Runly.MethodOutcome
+  parent: Runly
+  name: MethodOutcome
+  nameWithType: MethodOutcome
+  fullName: Runly.MethodOutcome
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
+- uid: Runly.ResultLog
+  commentId: T:Runly.ResultLog
+  parent: Runly
+  name: ResultLog
+  nameWithType: ResultLog
+  fullName: Runly.ResultLog
+- uid: Runly.RunlyApiConfig
+  commentId: T:Runly.RunlyApiConfig
+  parent: Runly
+  name: RunlyApiConfig
+  nameWithType: RunlyApiConfig
+  fullName: Runly.RunlyApiConfig
+- uid: Runly.AsyncAutoResetEvent
+  commentId: T:Runly.AsyncAutoResetEvent
+  name: AsyncAutoResetEvent
+  nameWithType: AsyncAutoResetEvent
+  fullName: Runly.AsyncAutoResetEvent
+- uid: Runly.AsyncEnumerableExtensions
+  commentId: T:Runly.AsyncEnumerableExtensions
+  name: AsyncEnumerableExtensions
+  nameWithType: AsyncEnumerableExtensions
+  fullName: Runly.AsyncEnumerableExtensions
+- uid: Runly.AsyncEnumerableWrapper`1
+  commentId: T:Runly.AsyncEnumerableWrapper`1
+  name: AsyncEnumerableWrapper<T>
+  nameWithType: AsyncEnumerableWrapper<T>
+  fullName: Runly.AsyncEnumerableWrapper<T>
+  nameWithType.vb: AsyncEnumerableWrapper(Of T)
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T)
+  name.vb: AsyncEnumerableWrapper(Of T)
+  spec.csharp:
+  - uid: Runly.AsyncEnumerableWrapper`1
+    name: AsyncEnumerableWrapper
+    nameWithType: AsyncEnumerableWrapper
+    fullName: Runly.AsyncEnumerableWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.AsyncEnumerableWrapper`1
+    name: AsyncEnumerableWrapper
+    nameWithType: AsyncEnumerableWrapper
+    fullName: Runly.AsyncEnumerableWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.AsyncEnumeratorWrapper`1
+  commentId: T:Runly.AsyncEnumeratorWrapper`1
+  name: AsyncEnumeratorWrapper<T>
+  nameWithType: AsyncEnumeratorWrapper<T>
+  fullName: Runly.AsyncEnumeratorWrapper<T>
+  nameWithType.vb: AsyncEnumeratorWrapper(Of T)
+  fullName.vb: Runly.AsyncEnumeratorWrapper(Of T)
+  name.vb: AsyncEnumeratorWrapper(Of T)
+  spec.csharp:
+  - uid: Runly.AsyncEnumeratorWrapper`1
+    name: AsyncEnumeratorWrapper
+    nameWithType: AsyncEnumeratorWrapper
+    fullName: Runly.AsyncEnumeratorWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.AsyncEnumeratorWrapper`1
+    name: AsyncEnumeratorWrapper
+    nameWithType: AsyncEnumeratorWrapper
+    fullName: Runly.AsyncEnumeratorWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ConfigException
+  commentId: T:Runly.ConfigException
+  parent: Runly
+  name: ConfigException
+  nameWithType: ConfigException
+  fullName: Runly.ConfigException
+- uid: Runly.ConfigNullException
+  commentId: T:Runly.ConfigNullException
+  name: ConfigNullException
+  nameWithType: ConfigNullException
+  fullName: Runly.ConfigNullException
+- uid: Runly.ConfigReader
+  commentId: T:Runly.ConfigReader
+  name: ConfigReader
+  nameWithType: ConfigReader
+  fullName: Runly.ConfigReader
+- uid: Runly.ConfigServiceExtensions
+  commentId: T:Runly.ConfigServiceExtensions
+  name: ConfigServiceExtensions
+  nameWithType: ConfigServiceExtensions
+  fullName: Runly.ConfigServiceExtensions
+- uid: Runly.Job
+  commentId: T:Runly.Job
+  name: Job
+  nameWithType: Job
+  fullName: Runly.Job
+- uid: Runly.Job`1
+  commentId: T:Runly.Job`1
+  name: Job<TConfig>
+  nameWithType: Job<TConfig>
+  fullName: Runly.Job<TConfig>
+  nameWithType.vb: Job(Of TConfig)
+  fullName.vb: Runly.Job(Of TConfig)
+  name.vb: Job(Of TConfig)
+  spec.csharp:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`2
+  commentId: T:Runly.Job`2
+  name: Job<TConfig, TItem>
+  nameWithType: Job<TConfig, TItem>
+  fullName: Runly.Job<TConfig, TItem>
+  nameWithType.vb: Job(Of TConfig, TItem)
+  fullName.vb: Runly.Job(Of TConfig, TItem)
+  name.vb: Job(Of TConfig, TItem)
+  spec.csharp:
+  - uid: Runly.Job`2
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`2
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`3
+  commentId: T:Runly.Job`3
+  name: Job<TConfig, TItem, T1>
+  nameWithType: Job<TConfig, TItem, T1>
+  fullName: Runly.Job<TConfig, TItem, T1>
+  nameWithType.vb: Job(Of TConfig, TItem, T1)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1)
+  name.vb: Job(Of TConfig, TItem, T1)
+  spec.csharp:
+  - uid: Runly.Job`3
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`3
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`4
+  commentId: T:Runly.Job`4
+  name: Job<TConfig, TItem, T1, T2>
+  nameWithType: Job<TConfig, TItem, T1, T2>
+  fullName: Runly.Job<TConfig, TItem, T1, T2>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2)
+  name.vb: Job(Of TConfig, TItem, T1, T2)
+  spec.csharp:
+  - uid: Runly.Job`4
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`4
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`5
+  commentId: T:Runly.Job`5
+  name: Job<TConfig, TItem, T1, T2, T3>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3)
+  spec.csharp:
+  - uid: Runly.Job`5
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`5
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`6
+  commentId: T:Runly.Job`6
+  name: Job<TConfig, TItem, T1, T2, T3, T4>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4)
+  spec.csharp:
+  - uid: Runly.Job`6
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`6
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`7
+  commentId: T:Runly.Job`7
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  spec.csharp:
+  - uid: Runly.Job`7
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`7
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`8
+  commentId: T:Runly.Job`8
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  spec.csharp:
+  - uid: Runly.Job`8
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`8
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`9
+  commentId: T:Runly.Job`9
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  spec.csharp:
+  - uid: Runly.Job`9
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`9
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`10
+  commentId: T:Runly.Job`10
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  spec.csharp:
+  - uid: Runly.Job`10
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`10
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`11
+  commentId: T:Runly.Job`11
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  spec.csharp:
+  - uid: Runly.Job`11
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`11
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`12
+  commentId: T:Runly.Job`12
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  spec.csharp:
+  - uid: Runly.Job`12
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`12
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`13
+  commentId: T:Runly.Job`13
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  spec.csharp:
+  - uid: Runly.Job`13
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`13
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`14
+  commentId: T:Runly.Job`14
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  spec.csharp:
+  - uid: Runly.Job`14
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`14
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`15
+  commentId: T:Runly.Job`15
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  spec.csharp:
+  - uid: Runly.Job`15
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`15
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`16
+  commentId: T:Runly.Job`16
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  spec.csharp:
+  - uid: Runly.Job`16
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`16
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`17
+  commentId: T:Runly.Job`17
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  spec.csharp:
+  - uid: Runly.Job`17
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`17
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Job`18
+  commentId: T:Runly.Job`18
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  spec.csharp:
+  - uid: Runly.Job`18
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`18
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase`2
+  commentId: T:Runly.JobBase`2
+  name: JobBase<TConfig, TItem>
+  nameWithType: JobBase<TConfig, TItem>
+  fullName: Runly.JobBase<TConfig, TItem>
+  nameWithType.vb: JobBase(Of TConfig, TItem)
+  fullName.vb: Runly.JobBase(Of TConfig, TItem)
+  name.vb: JobBase(Of TConfig, TItem)
+  spec.csharp:
+  - uid: Runly.JobBase`2
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.JobBase`2
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobBase`1
+  commentId: T:Runly.JobBase`1
+  name: JobBase<TConfig>
+  nameWithType: JobBase<TConfig>
+  fullName: Runly.JobBase<TConfig>
+  nameWithType.vb: JobBase(Of TConfig)
+  fullName.vb: Runly.JobBase(Of TConfig)
+  name.vb: JobBase(Of TConfig)
+  spec.csharp:
+  - uid: Runly.JobBase`1
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.JobBase`1
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobCache
+  commentId: T:Runly.JobCache
+  parent: Runly
+  name: JobCache
+  nameWithType: JobCache
+  fullName: Runly.JobCache
+- uid: Runly.JobHost
+  commentId: T:Runly.JobHost
+  name: JobHost
+  nameWithType: JobHost
+  fullName: Runly.JobHost
+- uid: Runly.JobInfo
+  commentId: T:Runly.JobInfo
+  parent: Runly
+  name: JobInfo
+  nameWithType: JobInfo
+  fullName: Runly.JobInfo
+- uid: Runly.JobLoadErrors
+  commentId: T:Runly.JobLoadErrors
+  parent: Runly
+  name: JobLoadErrors
+  nameWithType: JobLoadErrors
+  fullName: Runly.JobLoadErrors
+- uid: Runly.PollingStream`1
+  commentId: T:Runly.PollingStream`1
+  parent: Runly
+  name: PollingStream<T>
+  nameWithType: PollingStream<T>
+  fullName: Runly.PollingStream<T>
+  nameWithType.vb: PollingStream(Of T)
+  fullName.vb: Runly.PollingStream(Of T)
+  name.vb: PollingStream(Of T)
+  spec.csharp:
+  - uid: Runly.PollingStream`1
+    name: PollingStream
+    nameWithType: PollingStream
+    fullName: Runly.PollingStream
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.PollingStream`1
+    name: PollingStream
+    nameWithType: PollingStream
+    fullName: Runly.PollingStream
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.PollingStream`1.Enumerator
+  commentId: T:Runly.PollingStream`1.Enumerator
+  name: PollingStream.Enumerator<>
+  nameWithType: PollingStream.Enumerator<>
+  fullName: Runly.PollingStream.Enumerator<>
+  nameWithType.vb: PollingStream.Enumerator(Of )
+  fullName.vb: Runly.PollingStream.Enumerator(Of )
+  name.vb: PollingStream.Enumerator(Of )
+  spec.csharp:
+  - uid: Runly.PollingStream`1.Enumerator
+    name: PollingStream.Enumerator
+    nameWithType: PollingStream.Enumerator
+    fullName: Runly.PollingStream.Enumerator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.PollingStream`1.Enumerator
+    name: PollingStream.Enumerator
+    nameWithType: PollingStream.Enumerator
+    fullName: Runly.PollingStream.Enumerator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ResultsChannel
+  commentId: T:Runly.ResultsChannel
+  name: ResultsChannel
+  nameWithType: ResultsChannel
+  fullName: Runly.ResultsChannel
+- uid: Runly.ResultsChannel.Connection
+  commentId: T:Runly.ResultsChannel.Connection
+  name: ResultsChannel.Connection
+  nameWithType: ResultsChannel.Connection
+  fullName: Runly.ResultsChannel.Connection
+- uid: Runly.HubMethodCall
+  commentId: T:Runly.HubMethodCall
+  name: HubMethodCall
+  nameWithType: HubMethodCall
+  fullName: Runly.HubMethodCall
+- uid: Runly.IResultsConnection
+  commentId: T:Runly.IResultsConnection
+  parent: Runly
+  name: IResultsConnection
+  nameWithType: IResultsConnection
+  fullName: Runly.IResultsConnection
+- uid: Runly.HubConnectionWrapper
+  commentId: T:Runly.HubConnectionWrapper
+  name: HubConnectionWrapper
+  nameWithType: HubConnectionWrapper
+  fullName: Runly.HubConnectionWrapper
+- uid: Runly.ServiceExtensions
+  commentId: T:Runly.ServiceExtensions
+  name: ServiceExtensions
+  nameWithType: ServiceExtensions
+  fullName: Runly.ServiceExtensions
+- uid: Runly.TypeNotFoundException
+  commentId: T:Runly.TypeNotFoundException
+  name: TypeNotFoundException
+  nameWithType: TypeNotFoundException
+  fullName: Runly.TypeNotFoundException
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly

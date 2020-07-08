@@ -1,0 +1,766 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ConfigServiceExtensions
+  commentId: T:Runly.ConfigServiceExtensions
+  id: ConfigServiceExtensions
+  parent: Runly
+  children:
+  - Runly.ConfigServiceExtensions.AddScoped(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  - Runly.ConfigServiceExtensions.AddScoped``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  - Runly.ConfigServiceExtensions.AddScoped``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  - Runly.ConfigServiceExtensions.AddSingleton(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  - Runly.ConfigServiceExtensions.AddSingleton``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  - Runly.ConfigServiceExtensions.AddSingleton``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  - Runly.ConfigServiceExtensions.AddTransient(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  - Runly.ConfigServiceExtensions.AddTransient``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  - Runly.ConfigServiceExtensions.AddTransient``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  langs:
+  - csharp
+  - vb
+  name: ConfigServiceExtensions
+  nameWithType: ConfigServiceExtensions
+  fullName: Runly.ConfigServiceExtensions
+  type: Class
+  source:
+    id: ConfigServiceExtensions
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 5
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public static class ConfigServiceExtensions : object'
+    content.vb: >-
+      Public Module ConfigServiceExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.ConfigServiceExtensions.AddTransient(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  commentId: M:Runly.ConfigServiceExtensions.AddTransient(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  id: AddTransient(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddTransient(IServiceCollection, Type, Func<IServiceProvider, Config, Object>)
+  nameWithType: ConfigServiceExtensions.AddTransient(IServiceCollection, Type, Func<IServiceProvider, Config, Object>)
+  fullName: Runly.ConfigServiceExtensions.AddTransient(IServiceCollection, Type, Func<IServiceProvider, Runly.Config, System.Object>)
+  type: Method
+  source:
+    id: AddTransient
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddTransient(this IServiceCollection services, Type serviceType, Func<IServiceProvider, Config, object> implementationFactory)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: serviceType
+      type: Type
+    - id: implementationFactory
+      type: Func{IServiceProvider,Runly.Config,System.Object}
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddTransient(services As IServiceCollection, serviceType As Type, implementationFactory As Func(Of IServiceProvider, Config, Object)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddTransient*
+  nameWithType.vb: ConfigServiceExtensions.AddTransient(IServiceCollection, Type, Func(Of IServiceProvider, Config, Object))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddTransient(IServiceCollection, Type, Func(Of IServiceProvider, Runly.Config, System.Object))
+  name.vb: AddTransient(IServiceCollection, Type, Func(Of IServiceProvider, Config, Object))
+- uid: Runly.ConfigServiceExtensions.AddTransient``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  commentId: M:Runly.ConfigServiceExtensions.AddTransient``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  id: AddTransient``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddTransient<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  nameWithType: ConfigServiceExtensions.AddTransient<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  fullName: Runly.ConfigServiceExtensions.AddTransient<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  type: Method
+  source:
+    id: AddTransient
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 12
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: >-
+      public static IServiceCollection AddTransient<TService, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TService> implementationFactory)
+          where TService : class where TConfig : Config
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: implementationFactory
+      type: Func{IServiceProvider,{TConfig},{TService}}
+    typeParameters:
+    - id: TService
+    - id: TConfig
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddTransient(Of TService As Class, TConfig As Config)(services As IServiceCollection, implementationFactory As Func(Of IServiceProvider, TConfig, TService)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddTransient*
+  nameWithType.vb: ConfigServiceExtensions.AddTransient(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddTransient(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+  name.vb: AddTransient(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+- uid: Runly.ConfigServiceExtensions.AddTransient``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  commentId: M:Runly.ConfigServiceExtensions.AddTransient``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  id: AddTransient``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddTransient<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  nameWithType: ConfigServiceExtensions.AddTransient<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  fullName: Runly.ConfigServiceExtensions.AddTransient<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  type: Method
+  source:
+    id: AddTransient
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 19
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: >-
+      public static IServiceCollection AddTransient<TService, TImplementation, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TImplementation> implementationFactory)
+          where TService : class where TImplementation : class, TService where TConfig : Config
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: implementationFactory
+      type: Func{IServiceProvider,{TConfig},{TImplementation}}
+    typeParameters:
+    - id: TService
+    - id: TImplementation
+    - id: TConfig
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddTransient(Of TService As Class, TImplementation As {Class, TService}, TConfig As Config)(services As IServiceCollection, implementationFactory As Func(Of IServiceProvider, TConfig, TImplementation)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddTransient*
+  nameWithType.vb: ConfigServiceExtensions.AddTransient(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddTransient(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+  name.vb: AddTransient(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+- uid: Runly.ConfigServiceExtensions.AddScoped(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  commentId: M:Runly.ConfigServiceExtensions.AddScoped(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  id: AddScoped(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddScoped(IServiceCollection, Type, Func<IServiceProvider, Config, Object>)
+  nameWithType: ConfigServiceExtensions.AddScoped(IServiceCollection, Type, Func<IServiceProvider, Config, Object>)
+  fullName: Runly.ConfigServiceExtensions.AddScoped(IServiceCollection, Type, Func<IServiceProvider, Runly.Config, System.Object>)
+  type: Method
+  source:
+    id: AddScoped
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 27
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddScoped(this IServiceCollection services, Type serviceType, Func<IServiceProvider, Config, object> implementationFactory)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: serviceType
+      type: Type
+    - id: implementationFactory
+      type: Func{IServiceProvider,Runly.Config,System.Object}
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddScoped(services As IServiceCollection, serviceType As Type, implementationFactory As Func(Of IServiceProvider, Config, Object)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddScoped*
+  nameWithType.vb: ConfigServiceExtensions.AddScoped(IServiceCollection, Type, Func(Of IServiceProvider, Config, Object))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddScoped(IServiceCollection, Type, Func(Of IServiceProvider, Runly.Config, System.Object))
+  name.vb: AddScoped(IServiceCollection, Type, Func(Of IServiceProvider, Config, Object))
+- uid: Runly.ConfigServiceExtensions.AddScoped``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  commentId: M:Runly.ConfigServiceExtensions.AddScoped``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  id: AddScoped``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddScoped<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  nameWithType: ConfigServiceExtensions.AddScoped<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  fullName: Runly.ConfigServiceExtensions.AddScoped<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  type: Method
+  source:
+    id: AddScoped
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 32
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: >-
+      public static IServiceCollection AddScoped<TService, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TService> implementationFactory)
+          where TService : class where TConfig : Config
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: implementationFactory
+      type: Func{IServiceProvider,{TConfig},{TService}}
+    typeParameters:
+    - id: TService
+    - id: TConfig
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddScoped(Of TService As Class, TConfig As Config)(services As IServiceCollection, implementationFactory As Func(Of IServiceProvider, TConfig, TService)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddScoped*
+  nameWithType.vb: ConfigServiceExtensions.AddScoped(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddScoped(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+  name.vb: AddScoped(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+- uid: Runly.ConfigServiceExtensions.AddScoped``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  commentId: M:Runly.ConfigServiceExtensions.AddScoped``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  id: AddScoped``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddScoped<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  nameWithType: ConfigServiceExtensions.AddScoped<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  fullName: Runly.ConfigServiceExtensions.AddScoped<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  type: Method
+  source:
+    id: AddScoped
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 39
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: >-
+      public static IServiceCollection AddScoped<TService, TImplementation, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TImplementation> implementationFactory)
+          where TService : class where TImplementation : class, TService where TConfig : Config
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: implementationFactory
+      type: Func{IServiceProvider,{TConfig},{TImplementation}}
+    typeParameters:
+    - id: TService
+    - id: TImplementation
+    - id: TConfig
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddScoped(Of TService As Class, TImplementation As {Class, TService}, TConfig As Config)(services As IServiceCollection, implementationFactory As Func(Of IServiceProvider, TConfig, TImplementation)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddScoped*
+  nameWithType.vb: ConfigServiceExtensions.AddScoped(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddScoped(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+  name.vb: AddScoped(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+- uid: Runly.ConfigServiceExtensions.AddSingleton(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  commentId: M:Runly.ConfigServiceExtensions.AddSingleton(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  id: AddSingleton(IServiceCollection,Type,Func{IServiceProvider,Runly.Config,System.Object})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddSingleton(IServiceCollection, Type, Func<IServiceProvider, Config, Object>)
+  nameWithType: ConfigServiceExtensions.AddSingleton(IServiceCollection, Type, Func<IServiceProvider, Config, Object>)
+  fullName: Runly.ConfigServiceExtensions.AddSingleton(IServiceCollection, Type, Func<IServiceProvider, Runly.Config, System.Object>)
+  type: Method
+  source:
+    id: AddSingleton
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 47
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static IServiceCollection AddSingleton(this IServiceCollection services, Type serviceType, Func<IServiceProvider, Config, object> implementationFactory)
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: serviceType
+      type: Type
+    - id: implementationFactory
+      type: Func{IServiceProvider,Runly.Config,System.Object}
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddSingleton(services As IServiceCollection, serviceType As Type, implementationFactory As Func(Of IServiceProvider, Config, Object)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddSingleton*
+  nameWithType.vb: ConfigServiceExtensions.AddSingleton(IServiceCollection, Type, Func(Of IServiceProvider, Config, Object))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddSingleton(IServiceCollection, Type, Func(Of IServiceProvider, Runly.Config, System.Object))
+  name.vb: AddSingleton(IServiceCollection, Type, Func(Of IServiceProvider, Config, Object))
+- uid: Runly.ConfigServiceExtensions.AddSingleton``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  commentId: M:Runly.ConfigServiceExtensions.AddSingleton``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  id: AddSingleton``2(IServiceCollection,Func{IServiceProvider,``1,``0})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddSingleton<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  nameWithType: ConfigServiceExtensions.AddSingleton<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  fullName: Runly.ConfigServiceExtensions.AddSingleton<TService, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TService>)
+  type: Method
+  source:
+    id: AddSingleton
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 52
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: >-
+      public static IServiceCollection AddSingleton<TService, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TService> implementationFactory)
+          where TService : class where TConfig : Config
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: implementationFactory
+      type: Func{IServiceProvider,{TConfig},{TService}}
+    typeParameters:
+    - id: TService
+    - id: TConfig
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddSingleton(Of TService As Class, TConfig As Config)(services As IServiceCollection, implementationFactory As Func(Of IServiceProvider, TConfig, TService)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddSingleton*
+  nameWithType.vb: ConfigServiceExtensions.AddSingleton(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddSingleton(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+  name.vb: AddSingleton(Of TService, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TService))
+- uid: Runly.ConfigServiceExtensions.AddSingleton``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  commentId: M:Runly.ConfigServiceExtensions.AddSingleton``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  id: AddSingleton``3(IServiceCollection,Func{IServiceProvider,``2,``1})
+  isExtensionMethod: true
+  parent: Runly.ConfigServiceExtensions
+  langs:
+  - csharp
+  - vb
+  name: AddSingleton<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  nameWithType: ConfigServiceExtensions.AddSingleton<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  fullName: Runly.ConfigServiceExtensions.AddSingleton<TService, TImplementation, TConfig>(IServiceCollection, Func<IServiceProvider, TConfig, TImplementation>)
+  type: Method
+  source:
+    id: AddSingleton
+    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    startLine: 59
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: >-
+      public static IServiceCollection AddSingleton<TService, TImplementation, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TImplementation> implementationFactory)
+          where TService : class where TImplementation : class, TService where TConfig : Config
+    parameters:
+    - id: services
+      type: IServiceCollection
+    - id: implementationFactory
+      type: Func{IServiceProvider,{TConfig},{TImplementation}}
+    typeParameters:
+    - id: TService
+    - id: TImplementation
+    - id: TConfig
+    return:
+      type: IServiceCollection
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function AddSingleton(Of TService As Class, TImplementation As {Class, TService}, TConfig As Config)(services As IServiceCollection, implementationFactory As Func(Of IServiceProvider, TConfig, TImplementation)) As IServiceCollection
+  overload: Runly.ConfigServiceExtensions.AddSingleton*
+  nameWithType.vb: ConfigServiceExtensions.AddSingleton(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConfigServiceExtensions.AddSingleton(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+  name.vb: AddSingleton(Of TService, TImplementation, TConfig)(IServiceCollection, Func(Of IServiceProvider, TConfig, TImplementation))
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ConfigServiceExtensions.AddTransient*
+  commentId: Overload:Runly.ConfigServiceExtensions.AddTransient
+  name: AddTransient
+  nameWithType: ConfigServiceExtensions.AddTransient
+  fullName: Runly.ConfigServiceExtensions.AddTransient
+- uid: IServiceCollection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: IServiceCollection
+- uid: Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Func{IServiceProvider,Runly.Config,System.Object}
+  commentId: '!:Func{IServiceProvider,Runly.Config,System.Object}'
+  definition: Func`3
+  name: Func<IServiceProvider, Config, Object>
+  nameWithType: Func<IServiceProvider, Config, Object>
+  fullName: Func<IServiceProvider, Runly.Config, System.Object>
+  nameWithType.vb: Func(Of IServiceProvider, Config, Object)
+  fullName.vb: Func(Of IServiceProvider, Runly.Config, System.Object)
+  name.vb: Func(Of IServiceProvider, Config, Object)
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Runly.Config
+    name: Config
+    nameWithType: Config
+    fullName: Runly.Config
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Runly.Config
+    name: Config
+    nameWithType: Config
+    fullName: Runly.Config
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`3
+  isExternal: true
+  name: Func<, , >
+  nameWithType: Func<, , >
+  fullName: Func<, , >
+  nameWithType.vb: Func(Of , , )
+  fullName.vb: Func(Of , , )
+  name.vb: Func(Of , , )
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{IServiceProvider,{TConfig},{TService}}
+  commentId: '!:Func{IServiceProvider,``1,``0}'
+  definition: Func`3
+  name: Func<IServiceProvider, TConfig, TService>
+  nameWithType: Func<IServiceProvider, TConfig, TService>
+  fullName: Func<IServiceProvider, TConfig, TService>
+  nameWithType.vb: Func(Of IServiceProvider, TConfig, TService)
+  fullName.vb: Func(Of IServiceProvider, TConfig, TService)
+  name.vb: Func(Of IServiceProvider, TConfig, TService)
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TService
+    nameWithType: TService
+    fullName: TService
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{IServiceProvider,{TConfig},{TImplementation}}
+  commentId: '!:Func{IServiceProvider,``2,``1}'
+  definition: Func`3
+  name: Func<IServiceProvider, TConfig, TImplementation>
+  nameWithType: Func<IServiceProvider, TConfig, TImplementation>
+  fullName: Func<IServiceProvider, TConfig, TImplementation>
+  nameWithType.vb: Func(Of IServiceProvider, TConfig, TImplementation)
+  fullName.vb: Func(Of IServiceProvider, TConfig, TImplementation)
+  name.vb: Func(Of IServiceProvider, TConfig, TImplementation)
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TImplementation
+    nameWithType: TImplementation
+    fullName: TImplementation
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TImplementation
+    nameWithType: TImplementation
+    fullName: TImplementation
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ConfigServiceExtensions.AddScoped*
+  commentId: Overload:Runly.ConfigServiceExtensions.AddScoped
+  name: AddScoped
+  nameWithType: ConfigServiceExtensions.AddScoped
+  fullName: Runly.ConfigServiceExtensions.AddScoped
+- uid: Runly.ConfigServiceExtensions.AddSingleton*
+  commentId: Overload:Runly.ConfigServiceExtensions.AddSingleton
+  name: AddSingleton
+  nameWithType: ConfigServiceExtensions.AddSingleton
+  fullName: Runly.ConfigServiceExtensions.AddSingleton

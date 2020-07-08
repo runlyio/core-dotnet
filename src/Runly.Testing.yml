@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Testing
+  commentId: N:Runly.Testing
+  id: Runly.Testing
+  children:
+  - Runly.Testing.TestHost`1
+  - Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: Runly.Testing
+  nameWithType: Runly.Testing
+  fullName: Runly.Testing
+  type: Namespace
+  assemblies:
+  - Runly
+references:
+- uid: Runly.Testing.TestHost`1
+  commentId: T:Runly.Testing.TestHost`1
+  name: TestHost<TJob>
+  nameWithType: TestHost<TJob>
+  fullName: Runly.Testing.TestHost<TJob>
+  nameWithType.vb: TestHost(Of TJob)
+  fullName.vb: Runly.Testing.TestHost(Of TJob)
+  name.vb: TestHost(Of TJob)
+  spec.csharp:
+  - uid: Runly.Testing.TestHost`1
+    name: TestHost
+    nameWithType: TestHost
+    fullName: Runly.Testing.TestHost
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Testing.TestHost`1
+    name: TestHost
+    nameWithType: TestHost
+    fullName: Runly.Testing.TestHost
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Testing.TestRun`1
+  commentId: T:Runly.Testing.TestRun`1
+  name: TestRun<TJob>
+  nameWithType: TestRun<TJob>
+  fullName: Runly.Testing.TestRun<TJob>
+  nameWithType.vb: TestRun(Of TJob)
+  fullName.vb: Runly.Testing.TestRun(Of TJob)
+  name.vb: TestRun(Of TJob)
+  spec.csharp:
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: )
+    nameWithType: )
+    fullName: )

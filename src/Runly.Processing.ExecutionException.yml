@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Processing.ExecutionException
+  commentId: T:Runly.Processing.ExecutionException
+  id: ExecutionException
+  parent: Runly.Processing
+  children:
+  - Runly.Processing.ExecutionException.#ctor(Runly.JobMethod,Exception)
+  langs:
+  - csharp
+  - vb
+  name: ExecutionException
+  nameWithType: ExecutionException
+  fullName: Runly.Processing.ExecutionException
+  type: Class
+  source:
+    id: ExecutionException
+    path: /github/workspace/src/Job/Processing/ExecutionException.cs
+    startLine: 4
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: 'public class ExecutionException : Exception'
+    content.vb: >-
+      Public Class ExecutionException
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.Processing.ExecutionException.#ctor(Runly.JobMethod,Exception)
+  commentId: M:Runly.Processing.ExecutionException.#ctor(Runly.JobMethod,Exception)
+  id: '#ctor(Runly.JobMethod,Exception)'
+  parent: Runly.Processing.ExecutionException
+  langs:
+  - csharp
+  - vb
+  name: ExecutionException(JobMethod, Exception)
+  nameWithType: ExecutionException.ExecutionException(JobMethod, Exception)
+  fullName: Runly.Processing.ExecutionException.ExecutionException(Runly.JobMethod, Exception)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/Processing/ExecutionException.cs
+    startLine: 6
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: public ExecutionException(JobMethod pointOfFailure, Exception innerException)
+    parameters:
+    - id: pointOfFailure
+      type: Runly.JobMethod
+    - id: innerException
+      type: Exception
+    content.vb: Public Sub New(pointOfFailure As JobMethod, innerException As Exception)
+  overload: Runly.Processing.ExecutionException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly.Processing
+  commentId: N:Runly.Processing
+  name: Runly.Processing
+  nameWithType: Runly.Processing
+  fullName: Runly.Processing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Processing.ExecutionException.#ctor*
+  commentId: Overload:Runly.Processing.ExecutionException.#ctor
+  name: ExecutionException
+  nameWithType: ExecutionException.ExecutionException
+  fullName: Runly.Processing.ExecutionException.ExecutionException
+- uid: Runly.JobMethod
+  commentId: T:Runly.JobMethod
+  parent: Runly
+  name: JobMethod
+  nameWithType: JobMethod
+  fullName: Runly.JobMethod
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly

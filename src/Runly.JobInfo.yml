@@ -1,0 +1,344 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JobInfo
+  commentId: T:Runly.JobInfo
+  id: JobInfo
+  parent: Runly
+  children:
+  - Runly.JobInfo.#ctor(Type)
+  - Runly.JobInfo.ConfigType
+  - Runly.JobInfo.Dependencies
+  - Runly.JobInfo.Errors
+  - Runly.JobInfo.IsValid
+  - Runly.JobInfo.ItemType
+  - Runly.JobInfo.JobType
+  langs:
+  - csharp
+  - vb
+  name: JobInfo
+  nameWithType: JobInfo
+  fullName: Runly.JobInfo
+  type: Class
+  source:
+    id: JobInfo
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 5
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class JobInfo : object'
+    content.vb: >-
+      Public Class JobInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.JobInfo.JobType
+  commentId: P:Runly.JobInfo.JobType
+  id: JobType
+  parent: Runly.JobInfo
+  langs:
+  - csharp
+  - vb
+  name: JobType
+  nameWithType: JobInfo.JobType
+  fullName: Runly.JobInfo.JobType
+  type: Property
+  source:
+    id: JobType
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Type JobType { get; }
+    parameters: []
+    return:
+      type: Type
+    content.vb: Public ReadOnly Property JobType As Type
+  overload: Runly.JobInfo.JobType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.JobInfo.ItemType
+  commentId: P:Runly.JobInfo.ItemType
+  id: ItemType
+  parent: Runly.JobInfo
+  langs:
+  - csharp
+  - vb
+  name: ItemType
+  nameWithType: JobInfo.ItemType
+  fullName: Runly.JobInfo.ItemType
+  type: Property
+  source:
+    id: ItemType
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 9
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Type ItemType { get; }
+    parameters: []
+    return:
+      type: Type
+    content.vb: Public ReadOnly Property ItemType As Type
+  overload: Runly.JobInfo.ItemType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.JobInfo.ConfigType
+  commentId: P:Runly.JobInfo.ConfigType
+  id: ConfigType
+  parent: Runly.JobInfo
+  langs:
+  - csharp
+  - vb
+  name: ConfigType
+  nameWithType: JobInfo.ConfigType
+  fullName: Runly.JobInfo.ConfigType
+  type: Property
+  source:
+    id: ConfigType
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 11
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Type ConfigType { get; }
+    parameters: []
+    return:
+      type: Type
+    content.vb: Public ReadOnly Property ConfigType As Type
+  overload: Runly.JobInfo.ConfigType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.JobInfo.Dependencies
+  commentId: P:Runly.JobInfo.Dependencies
+  id: Dependencies
+  parent: Runly.JobInfo
+  langs:
+  - csharp
+  - vb
+  name: Dependencies
+  nameWithType: JobInfo.Dependencies
+  fullName: Runly.JobInfo.Dependencies
+  type: Property
+  source:
+    id: Dependencies
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 13
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Type[] Dependencies { get; }
+    parameters: []
+    return:
+      type: Type[]
+    content.vb: Public ReadOnly Property Dependencies As Type()
+  overload: Runly.JobInfo.Dependencies*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.JobInfo.Errors
+  commentId: P:Runly.JobInfo.Errors
+  id: Errors
+  parent: Runly.JobInfo
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: JobInfo.Errors
+  fullName: Runly.JobInfo.Errors
+  type: Property
+  source:
+    id: Errors
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 15
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public JobLoadErrors Errors { get; }
+    parameters: []
+    return:
+      type: Runly.JobLoadErrors
+    content.vb: Public ReadOnly Property Errors As JobLoadErrors
+  overload: Runly.JobInfo.Errors*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.JobInfo.IsValid
+  commentId: P:Runly.JobInfo.IsValid
+  id: IsValid
+  parent: Runly.JobInfo
+  langs:
+  - csharp
+  - vb
+  name: IsValid
+  nameWithType: JobInfo.IsValid
+  fullName: Runly.JobInfo.IsValid
+  type: Property
+  source:
+    id: IsValid
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 17
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public bool IsValid { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsValid As Boolean
+  overload: Runly.JobInfo.IsValid*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.JobInfo.#ctor(Type)
+  commentId: M:Runly.JobInfo.#ctor(Type)
+  id: '#ctor(Type)'
+  parent: Runly.JobInfo
+  langs:
+  - csharp
+  - vb
+  name: JobInfo(Type)
+  nameWithType: JobInfo.JobInfo(Type)
+  fullName: Runly.JobInfo.JobInfo(Type)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/JobInfo.cs
+    startLine: 19
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public JobInfo(Type jobType)
+    parameters:
+    - id: jobType
+      type: Type
+    content.vb: Public Sub New(jobType As Type)
+  overload: Runly.JobInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.JobInfo.JobType*
+  commentId: Overload:Runly.JobInfo.JobType
+  name: JobType
+  nameWithType: JobInfo.JobType
+  fullName: Runly.JobInfo.JobType
+- uid: Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Runly.JobInfo.ItemType*
+  commentId: Overload:Runly.JobInfo.ItemType
+  name: ItemType
+  nameWithType: JobInfo.ItemType
+  fullName: Runly.JobInfo.ItemType
+- uid: Runly.JobInfo.ConfigType*
+  commentId: Overload:Runly.JobInfo.ConfigType
+  name: ConfigType
+  nameWithType: JobInfo.ConfigType
+  fullName: Runly.JobInfo.ConfigType
+- uid: Runly.JobInfo.Dependencies*
+  commentId: Overload:Runly.JobInfo.Dependencies
+  name: Dependencies
+  nameWithType: JobInfo.Dependencies
+  fullName: Runly.JobInfo.Dependencies
+- uid: Type[]
+  isExternal: true
+  name: Type[]
+  nameWithType: Type[]
+  fullName: Type[]
+  nameWithType.vb: Type()
+  fullName.vb: Type()
+  name.vb: Type()
+  spec.csharp:
+  - uid: Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Type
+    name: Type
+    nameWithType: Type
+    fullName: Type
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Runly.JobInfo.Errors*
+  commentId: Overload:Runly.JobInfo.Errors
+  name: Errors
+  nameWithType: JobInfo.Errors
+  fullName: Runly.JobInfo.Errors
+- uid: Runly.JobLoadErrors
+  commentId: T:Runly.JobLoadErrors
+  parent: Runly
+  name: JobLoadErrors
+  nameWithType: JobLoadErrors
+  fullName: Runly.JobLoadErrors
+- uid: Runly.JobInfo.IsValid*
+  commentId: Overload:Runly.JobInfo.IsValid
+  name: IsValid
+  nameWithType: JobInfo.IsValid
+  fullName: Runly.JobInfo.IsValid
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.JobInfo.#ctor*
+  commentId: Overload:Runly.JobInfo.#ctor
+  name: JobInfo
+  nameWithType: JobInfo.JobInfo
+  fullName: Runly.JobInfo.JobInfo

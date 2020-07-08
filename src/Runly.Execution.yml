@@ -1,0 +1,2168 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  id: Execution
+  parent: Runly
+  children:
+  - Runly.Execution.#ctor
+  - Runly.Execution.CancelAfter(System.Int32)
+  - Runly.Execution.CanceledAt
+  - Runly.Execution.Complete(System.Object)
+  - Runly.Execution.Completed
+  - Runly.Execution.CompletedAt
+  - Runly.Execution.CompletedItemCount
+  - Runly.Execution.CompleteItem(Runly.ItemResult)
+  - Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+  - Runly.Execution.Disposition
+  - Runly.Execution.EnforceCancelAfter
+  - Runly.Execution.ExecuteAsync(CancellationToken)
+  - Runly.Execution.ExecuteInternalAsync(CancellationToken)
+  - Runly.Execution.FailedAt
+  - Runly.Execution.FailedBecauseOf
+  - Runly.Execution.FailedIn
+  - Runly.Execution.FailedItemCount
+  - Runly.Execution.IsCanceled
+  - Runly.Execution.IsComplete
+  - Runly.Execution.IsFailed
+  - Runly.Execution.ItemCategories
+  - Runly.Execution.ItemCompleted
+  - Runly.Execution.Job
+  - Runly.Execution.MethodCompleted
+  - Runly.Execution.SetState(Runly.ExecutionState)
+  - Runly.Execution.Start(System.String)
+  - Runly.Execution.Started
+  - Runly.Execution.StartedAt
+  - Runly.Execution.State
+  - Runly.Execution.StateChanged
+  - Runly.Execution.SuccessfulItemCount
+  - Runly.Execution.TotalItemCount
+  langs:
+  - csharp
+  - vb
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+  type: Class
+  source:
+    id: Execution
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 11
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nExecutes a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>, communicating with the Runly API, handling exceptions, and providing status.\n"
+  example: []
+  syntax:
+    content: 'public abstract class Execution : object'
+    content.vb: >-
+      Public MustInherit Class Execution
+          Inherits Object
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Runly.Processing.ExecutionBase`2
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: Runly.Execution.Started
+  commentId: E:Runly.Execution.Started
+  id: Started
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: Started
+  nameWithType: Execution.Started
+  fullName: Runly.Execution.Started
+  type: Event
+  source:
+    id: Started
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 16
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nEvent raised when execution of a job starts.\n"
+  example: []
+  syntax:
+    content: public event Func<string, DateTime, Task> Started
+    return:
+      type: Func{System.String,DateTime,Task}
+    content.vb: Public Event Started As Func(Of String, DateTime, Task)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Execution.StateChanged
+  commentId: E:Runly.Execution.StateChanged
+  id: StateChanged
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: StateChanged
+  nameWithType: Execution.StateChanged
+  fullName: Runly.Execution.StateChanged
+  type: Event
+  source:
+    id: StateChanged
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 21
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nEvent raised when the state of the job changes.\n"
+  example: []
+  syntax:
+    content: public event Func<ExecutionState, Task> StateChanged
+    return:
+      type: Func{Runly.ExecutionState,Task}
+    content.vb: Public Event StateChanged As Func(Of ExecutionState, Task)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Execution.ItemCompleted
+  commentId: E:Runly.Execution.ItemCompleted
+  id: ItemCompleted
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: ItemCompleted
+  nameWithType: Execution.ItemCompleted
+  fullName: Runly.Execution.ItemCompleted
+  type: Event
+  source:
+    id: ItemCompleted
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 26
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nEvent raised when an processing an item completes.\n"
+  example: []
+  syntax:
+    content: public event Func<ItemResult, Task> ItemCompleted
+    return:
+      type: Func{Runly.ItemResult,Task}
+    content.vb: Public Event ItemCompleted As Func(Of ItemResult, Task)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Execution.MethodCompleted
+  commentId: E:Runly.Execution.MethodCompleted
+  id: MethodCompleted
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: MethodCompleted
+  nameWithType: Execution.MethodCompleted
+  fullName: Runly.Execution.MethodCompleted
+  type: Event
+  source:
+    id: MethodCompleted
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 31
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nEvent raised when a method completes.\n"
+  example: []
+  syntax:
+    content: public event Func<MethodOutcome, Task> MethodCompleted
+    return:
+      type: Func{Runly.MethodOutcome,Task}
+    content.vb: Public Event MethodCompleted As Func(Of MethodOutcome, Task)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Execution.Completed
+  commentId: E:Runly.Execution.Completed
+  id: Completed
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: Completed
+  nameWithType: Execution.Completed
+  fullName: Runly.Execution.Completed
+  type: Event
+  source:
+    id: Completed
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 36
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nEvent raised when execution of a job is complete.\n"
+  example: []
+  syntax:
+    content: public event Func<object, Disposition, DateTime, Task> Completed
+    return:
+      type: Func{System.Object,Runly.Disposition,DateTime,Task}
+    content.vb: Public Event Completed As Func(Of Object, Disposition, DateTime, Task)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Execution.Job
+  commentId: P:Runly.Execution.Job
+  id: Job
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: Job
+  nameWithType: Execution.Job
+  fullName: Runly.Execution.Job
+  type: Property
+  source:
+    id: Job
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 41
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> being executed.\n"
+  example: []
+  syntax:
+    content: public abstract IJob Job { get; }
+    parameters: []
+    return:
+      type: Runly.IJob
+    content.vb: Public MustOverride ReadOnly Property Job As IJob
+  overload: Runly.Execution.Job*
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: Runly.Execution.TotalItemCount
+  commentId: P:Runly.Execution.TotalItemCount
+  id: TotalItemCount
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: TotalItemCount
+  nameWithType: Execution.TotalItemCount
+  fullName: Runly.Execution.TotalItemCount
+  type: Property
+  source:
+    id: TotalItemCount
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 51
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe total number of items to be processed.\n"
+  remarks: "\n<xref href=\"Runly.Execution.TotalItemCount\" data-throw-if-not-resolved=\"false\"></xref> will be null when a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> does not use ToAsyncEnumerable with canCountItems \nset to true. The difference between this total and the sum of <xref href=\"Runly.Execution.SuccessfulItemCount\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.Execution.FailedItemCount\" data-throw-if-not-resolved=\"false\"></xref>\nis the number of items yet to be processed or not processed in the case of a job that ended in the <xref href=\"Runly.Disposition.Failed\" data-throw-if-not-resolved=\"false\"></xref> state.\n"
+  example: []
+  syntax:
+    content: public int? TotalItemCount { get; protected set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property TotalItemCount As Integer?
+  overload: Runly.Execution.TotalItemCount*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: Runly.Execution.CompletedItemCount
+  commentId: P:Runly.Execution.CompletedItemCount
+  id: CompletedItemCount
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: CompletedItemCount
+  nameWithType: Execution.CompletedItemCount
+  fullName: Runly.Execution.CompletedItemCount
+  type: Property
+  source:
+    id: CompletedItemCount
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 56
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of items processed.\n"
+  example: []
+  syntax:
+    content: public int CompletedItemCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property CompletedItemCount As Integer
+  overload: Runly.Execution.CompletedItemCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.SuccessfulItemCount
+  commentId: P:Runly.Execution.SuccessfulItemCount
+  id: SuccessfulItemCount
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: SuccessfulItemCount
+  nameWithType: Execution.SuccessfulItemCount
+  fullName: Runly.Execution.SuccessfulItemCount
+  type: Property
+  source:
+    id: SuccessfulItemCount
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 63
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of items processed with a successful (<xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int SuccessfulItemCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SuccessfulItemCount As Integer
+  overload: Runly.Execution.SuccessfulItemCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.FailedItemCount
+  commentId: P:Runly.Execution.FailedItemCount
+  id: FailedItemCount
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: FailedItemCount
+  nameWithType: Execution.FailedItemCount
+  fullName: Runly.Execution.FailedItemCount
+  type: Property
+  source:
+    id: FailedItemCount
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 68
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of items processed with an unsuccessful (not <xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int FailedItemCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property FailedItemCount As Integer
+  overload: Runly.Execution.FailedItemCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.ItemCategories
+  commentId: P:Runly.Execution.ItemCategories
+  id: ItemCategories
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: ItemCategories
+  nameWithType: Execution.ItemCategories
+  fullName: Runly.Execution.ItemCategories
+  type: Property
+  source:
+    id: ItemCategories
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 75
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets the completed item category results.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ItemCategory> ItemCategories { get; }
+    parameters: []
+    return:
+      type: IEnumerable{Runly.ItemCategory}
+    content.vb: Public ReadOnly Property ItemCategories As IEnumerable(Of ItemCategory)
+  overload: Runly.Execution.ItemCategories*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.State
+  commentId: P:Runly.Execution.State
+  id: State
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: State
+  nameWithType: Execution.State
+  fullName: Runly.Execution.State
+  type: Property
+  source:
+    id: State
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 80
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.ExecutionState\" data-throw-if-not-resolved=\"false\"></xref> of execution.\n"
+  example: []
+  syntax:
+    content: public ExecutionState State { get; }
+    parameters: []
+    return:
+      type: Runly.ExecutionState
+    content.vb: Public ReadOnly Property State As ExecutionState
+  overload: Runly.Execution.State*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.StartedAt
+  commentId: P:Runly.Execution.StartedAt
+  id: StartedAt
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: StartedAt
+  nameWithType: Execution.StartedAt
+  fullName: Runly.Execution.StartedAt
+  type: Property
+  source:
+    id: StartedAt
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 85
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe UTC time at which the run started.\n"
+  example: []
+  syntax:
+    content: public DateTime? StartedAt { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DateTime}
+    content.vb: Public ReadOnly Property StartedAt As DateTime?
+  overload: Runly.Execution.StartedAt*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.CompletedAt
+  commentId: P:Runly.Execution.CompletedAt
+  id: CompletedAt
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: CompletedAt
+  nameWithType: Execution.CompletedAt
+  fullName: Runly.Execution.CompletedAt
+  type: Property
+  source:
+    id: CompletedAt
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 90
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe UTC time at which the run ended.\n"
+  example: []
+  syntax:
+    content: public DateTime? CompletedAt { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DateTime}
+    content.vb: Public ReadOnly Property CompletedAt As DateTime?
+  overload: Runly.Execution.CompletedAt*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.IsComplete
+  commentId: P:Runly.Execution.IsComplete
+  id: IsComplete
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: IsComplete
+  nameWithType: Execution.IsComplete
+  fullName: Runly.Execution.IsComplete
+  type: Property
+  source:
+    id: IsComplete
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 95
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nIndicates whether the execution has completed.\n"
+  example: []
+  syntax:
+    content: public bool IsComplete { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsComplete As Boolean
+  overload: Runly.Execution.IsComplete*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.Disposition
+  commentId: P:Runly.Execution.Disposition
+  id: Disposition
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: Disposition
+  nameWithType: Execution.Disposition
+  fullName: Runly.Execution.Disposition
+  type: Property
+  source:
+    id: Disposition
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 100
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe final state of the job.\n"
+  example: []
+  syntax:
+    content: public Disposition Disposition { get; }
+    parameters: []
+    return:
+      type: Runly.Disposition
+    content.vb: Public ReadOnly Property Disposition As Disposition
+  overload: Runly.Execution.Disposition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.IsCanceled
+  commentId: P:Runly.Execution.IsCanceled
+  id: IsCanceled
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: IsCanceled
+  nameWithType: Execution.IsCanceled
+  fullName: Runly.Execution.IsCanceled
+  type: Property
+  source:
+    id: IsCanceled
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 108
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nIndicates whether the job has been cancelled or is in the process of cancelling.\n"
+  example: []
+  syntax:
+    content: public bool IsCanceled { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsCanceled As Boolean
+  overload: Runly.Execution.IsCanceled*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.CanceledAt
+  commentId: P:Runly.Execution.CanceledAt
+  id: CanceledAt
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: CanceledAt
+  nameWithType: Execution.CanceledAt
+  fullName: Runly.Execution.CanceledAt
+  type: Property
+  source:
+    id: CanceledAt
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 113
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe UTC time at which execution of the job was cancelled.\n"
+  example: []
+  syntax:
+    content: public DateTime? CanceledAt { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DateTime}
+    content.vb: Public ReadOnly Property CanceledAt As DateTime?
+  overload: Runly.Execution.CanceledAt*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.IsFailed
+  commentId: P:Runly.Execution.IsFailed
+  id: IsFailed
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: IsFailed
+  nameWithType: Execution.IsFailed
+  fullName: Runly.Execution.IsFailed
+  type: Property
+  source:
+    id: IsFailed
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 118
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nIndicates whether the job has failed or in the process of failing. \n"
+  example: []
+  syntax:
+    content: public bool IsFailed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsFailed As Boolean
+  overload: Runly.Execution.IsFailed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.FailedAt
+  commentId: P:Runly.Execution.FailedAt
+  id: FailedAt
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: FailedAt
+  nameWithType: Execution.FailedAt
+  fullName: Runly.Execution.FailedAt
+  type: Property
+  source:
+    id: FailedAt
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 123
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe UTC time at which execution of the job failed.\n"
+  example: []
+  syntax:
+    content: public DateTime? FailedAt { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DateTime}
+    content.vb: Public ReadOnly Property FailedAt As DateTime?
+  overload: Runly.Execution.FailedAt*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.FailedIn
+  commentId: P:Runly.Execution.FailedIn
+  id: FailedIn
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: FailedIn
+  nameWithType: Execution.FailedIn
+  fullName: Runly.Execution.FailedIn
+  type: Property
+  source:
+    id: FailedIn
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 128
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe <xref href=\"Runly.JobMethod\" data-throw-if-not-resolved=\"false\"></xref> that was executing when the job failed.\n"
+  example: []
+  syntax:
+    content: public JobMethod? FailedIn { get; }
+    parameters: []
+    return:
+      type: System.Nullable{Runly.JobMethod}
+    content.vb: Public ReadOnly Property FailedIn As JobMethod?
+  overload: Runly.Execution.FailedIn*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.FailedBecauseOf
+  commentId: P:Runly.Execution.FailedBecauseOf
+  id: FailedBecauseOf
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: FailedBecauseOf
+  nameWithType: Execution.FailedBecauseOf
+  fullName: Runly.Execution.FailedBecauseOf
+  type: Property
+  source:
+    id: FailedBecauseOf
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 133
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe exception that caused the job to fail.\n"
+  example: []
+  syntax:
+    content: public Exception FailedBecauseOf { get; }
+    parameters: []
+    return:
+      type: Exception
+    content.vb: Public ReadOnly Property FailedBecauseOf As Exception
+  overload: Runly.Execution.FailedBecauseOf*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Execution.ExecuteAsync(CancellationToken)
+  commentId: M:Runly.Execution.ExecuteAsync(CancellationToken)
+  id: ExecuteAsync(CancellationToken)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: ExecuteAsync(CancellationToken)
+  nameWithType: Execution.ExecuteAsync(CancellationToken)
+  fullName: Runly.Execution.ExecuteAsync(CancellationToken)
+  type: Method
+  source:
+    id: ExecuteAsync
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 141
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nExecutes the <xref href=\"Runly.Execution.Job\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public Task ExecuteAsync(CancellationToken token)
+    parameters:
+    - id: token
+      type: CancellationToken
+      description: Optional <see cref="!:CancellationToken"></see>
+    return:
+      type: Task
+    content.vb: Public Function ExecuteAsync(token As CancellationToken) As Task
+  overload: Runly.Execution.ExecuteAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Execution.ExecuteInternalAsync(CancellationToken)
+  commentId: M:Runly.Execution.ExecuteInternalAsync(CancellationToken)
+  id: ExecuteInternalAsync(CancellationToken)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: ExecuteInternalAsync(CancellationToken)
+  nameWithType: Execution.ExecuteInternalAsync(CancellationToken)
+  fullName: Runly.Execution.ExecuteInternalAsync(CancellationToken)
+  type: Method
+  source:
+    id: ExecuteInternalAsync
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 164
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\n\n"
+  example: []
+  syntax:
+    content: protected abstract Task ExecuteInternalAsync(CancellationToken token)
+    parameters:
+    - id: token
+      type: CancellationToken
+      description: ''
+    return:
+      type: Task
+      description: ''
+    content.vb: Protected MustOverride Function ExecuteInternalAsync(token As CancellationToken) As Task
+  overload: Runly.Execution.ExecuteInternalAsync*
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+- uid: Runly.Execution.CancelAfter(System.Int32)
+  commentId: M:Runly.Execution.CancelAfter(System.Int32)
+  id: CancelAfter(System.Int32)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: CancelAfter(Int32)
+  nameWithType: Execution.CancelAfter(Int32)
+  fullName: Runly.Execution.CancelAfter(System.Int32)
+  type: Method
+  source:
+    id: CancelAfter
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 172
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nCauses the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> to be cancelled once the <xref href=\"Runly.Execution.CompletedItemCount\" data-throw-if-not-resolved=\"false\"></xref> reaches the <code data-dev-comment-type=\"paramref\" class=\"paramref\">numberOfItems</code> set.\n"
+  remarks: Setting <code data-dev-comment-type="paramref" class="paramref">numberOfItems</code> to zero causes the job to execute normally.
+  example: []
+  syntax:
+    content: public void CancelAfter(int numberOfItems)
+    parameters:
+    - id: numberOfItems
+      type: System.Int32
+    content.vb: Public Sub CancelAfter(numberOfItems As Integer)
+  overload: Runly.Execution.CancelAfter*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.Execution.EnforceCancelAfter
+  commentId: M:Runly.Execution.EnforceCancelAfter
+  id: EnforceCancelAfter
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: EnforceCancelAfter()
+  nameWithType: Execution.EnforceCancelAfter()
+  fullName: Runly.Execution.EnforceCancelAfter()
+  type: Method
+  source:
+    id: EnforceCancelAfter
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 180
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nCancels the execution of the job if the number of items processed has met or exceeded the cancellation threshold set by <xref href=\"Runly.Execution.CancelAfter(System.Int32)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: protected void EnforceCancelAfter()
+    content.vb: Protected Sub EnforceCancelAfter
+  overload: Runly.Execution.EnforceCancelAfter*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Runly.Execution.#ctor
+  commentId: M:Runly.Execution.#ctor
+  id: '#ctor'
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: Execution()
+  nameWithType: Execution.Execution()
+  fullName: Runly.Execution.Execution()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 189
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nInitializes the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: protected Execution()
+    content.vb: Protected Sub New
+  overload: Runly.Execution.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Runly.Execution.Start(System.String)
+  commentId: M:Runly.Execution.Start(System.String)
+  id: Start(System.String)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: Start(String)
+  nameWithType: Execution.Start(String)
+  fullName: Runly.Execution.Start(System.String)
+  type: Method
+  source:
+    id: Start
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 215
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nCalled internally to mark the start of the execution.\n"
+  example: []
+  syntax:
+    content: protected void Start(string config)
+    parameters:
+    - id: config
+      type: System.String
+      description: ''
+    content.vb: Protected Sub Start(config As String)
+  overload: Runly.Execution.Start*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Runly.Execution.SetState(Runly.ExecutionState)
+  commentId: M:Runly.Execution.SetState(Runly.ExecutionState)
+  id: SetState(Runly.ExecutionState)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: SetState(ExecutionState)
+  nameWithType: Execution.SetState(ExecutionState)
+  fullName: Runly.Execution.SetState(Runly.ExecutionState)
+  type: Method
+  source:
+    id: SetState
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 225
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nCalled internally to set the state of the execution.\n"
+  example: []
+  syntax:
+    content: protected void SetState(ExecutionState state)
+    parameters:
+    - id: state
+      type: Runly.ExecutionState
+      description: ''
+    content.vb: Protected Sub SetState(state As ExecutionState)
+  overload: Runly.Execution.SetState*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+  commentId: M:Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+  id: CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: CompleteMethod(JobMethod, TimeSpan, Exception)
+  nameWithType: Execution.CompleteMethod(JobMethod, TimeSpan, Exception)
+  fullName: Runly.Execution.CompleteMethod(Runly.JobMethod, TimeSpan, Exception)
+  type: Method
+  source:
+    id: CompleteMethod
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 237
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nCalled internally to mark the completion of a call to a job method.\n"
+  example: []
+  syntax:
+    content: protected void CompleteMethod(JobMethod method, TimeSpan duration, Exception exception)
+    parameters:
+    - id: method
+      type: Runly.JobMethod
+    - id: duration
+      type: TimeSpan
+    - id: exception
+      type: Exception
+    content.vb: Protected Sub CompleteMethod(method As JobMethod, duration As TimeSpan, exception As Exception)
+  overload: Runly.Execution.CompleteMethod*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Runly.Execution.CompleteItem(Runly.ItemResult)
+  commentId: M:Runly.Execution.CompleteItem(Runly.ItemResult)
+  id: CompleteItem(Runly.ItemResult)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: CompleteItem(ItemResult)
+  nameWithType: Execution.CompleteItem(ItemResult)
+  fullName: Runly.Execution.CompleteItem(Runly.ItemResult)
+  type: Method
+  source:
+    id: CompleteItem
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 246
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nCalled internally to mark the completion of an item being processed.\n"
+  example: []
+  syntax:
+    content: protected void CompleteItem(ItemResult result)
+    parameters:
+    - id: result
+      type: Runly.ItemResult
+      description: ''
+    content.vb: Protected Sub CompleteItem(result As ItemResult)
+  overload: Runly.Execution.CompleteItem*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: Runly.Execution.Complete(System.Object)
+  commentId: M:Runly.Execution.Complete(System.Object)
+  id: Complete(System.Object)
+  parent: Runly.Execution
+  langs:
+  - csharp
+  - vb
+  name: Complete(Object)
+  nameWithType: Execution.Complete(Object)
+  fullName: Runly.Execution.Complete(System.Object)
+  type: Method
+  source:
+    id: Complete
+    path: /github/workspace/src/Core/Execution.cs
+    startLine: 263
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nCalled internally to mark the completion of the execution.\n"
+  example: []
+  syntax:
+    content: protected void Complete(object output)
+    parameters:
+    - id: output
+      type: System.Object
+    content.vb: Protected Sub Complete(output As Object)
+  overload: Runly.Execution.Complete*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+references:
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Func{System.String,DateTime,Task}
+  commentId: '!:Func{System.String,DateTime,Task}'
+  definition: Func`3
+  name: Func<String, DateTime, Task>
+  nameWithType: Func<String, DateTime, Task>
+  fullName: Func<System.String, DateTime, Task>
+  nameWithType.vb: Func(Of String, DateTime, Task)
+  fullName.vb: Func(Of System.String, DateTime, Task)
+  name.vb: Func(Of String, DateTime, Task)
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`3
+  isExternal: true
+  name: Func<, , >
+  nameWithType: Func<, , >
+  fullName: Func<, , >
+  nameWithType.vb: Func(Of , , )
+  fullName.vb: Func(Of , , )
+  name.vb: Func(Of , , )
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{Runly.ExecutionState,Task}
+  commentId: '!:Func{Runly.ExecutionState,Task}'
+  definition: Func`2
+  name: Func<ExecutionState, Task>
+  nameWithType: Func<ExecutionState, Task>
+  fullName: Func<Runly.ExecutionState, Task>
+  nameWithType.vb: Func(Of ExecutionState, Task)
+  fullName.vb: Func(Of Runly.ExecutionState, Task)
+  name.vb: Func(Of ExecutionState, Task)
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.ExecutionState
+    name: ExecutionState
+    nameWithType: ExecutionState
+    fullName: Runly.ExecutionState
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.ExecutionState
+    name: ExecutionState
+    nameWithType: ExecutionState
+    fullName: Runly.ExecutionState
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`2
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{Runly.ItemResult,Task}
+  commentId: '!:Func{Runly.ItemResult,Task}'
+  definition: Func`2
+  name: Func<ItemResult, Task>
+  nameWithType: Func<ItemResult, Task>
+  fullName: Func<Runly.ItemResult, Task>
+  nameWithType.vb: Func(Of ItemResult, Task)
+  fullName.vb: Func(Of Runly.ItemResult, Task)
+  name.vb: Func(Of ItemResult, Task)
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.ItemResult
+    name: ItemResult
+    nameWithType: ItemResult
+    fullName: Runly.ItemResult
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.ItemResult
+    name: ItemResult
+    nameWithType: ItemResult
+    fullName: Runly.ItemResult
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{Runly.MethodOutcome,Task}
+  commentId: '!:Func{Runly.MethodOutcome,Task}'
+  definition: Func`2
+  name: Func<MethodOutcome, Task>
+  nameWithType: Func<MethodOutcome, Task>
+  fullName: Func<Runly.MethodOutcome, Task>
+  nameWithType.vb: Func(Of MethodOutcome, Task)
+  fullName.vb: Func(Of Runly.MethodOutcome, Task)
+  name.vb: Func(Of MethodOutcome, Task)
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.MethodOutcome
+    name: MethodOutcome
+    nameWithType: MethodOutcome
+    fullName: Runly.MethodOutcome
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.MethodOutcome
+    name: MethodOutcome
+    nameWithType: MethodOutcome
+    fullName: Runly.MethodOutcome
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{System.Object,Runly.Disposition,DateTime,Task}
+  commentId: '!:Func{System.Object,Runly.Disposition,DateTime,Task}'
+  definition: Func`4
+  name: Func<Object, Disposition, DateTime, Task>
+  nameWithType: Func<Object, Disposition, DateTime, Task>
+  fullName: Func<System.Object, Runly.Disposition, DateTime, Task>
+  nameWithType.vb: Func(Of Object, Disposition, DateTime, Task)
+  fullName.vb: Func(Of System.Object, Runly.Disposition, DateTime, Task)
+  name.vb: Func(Of Object, Disposition, DateTime, Task)
+  spec.csharp:
+  - uid: Func`4
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`4
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Task
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`4
+  commentId: '!:Func`4'
+  isExternal: true
+  name: Func<, , , >
+  nameWithType: Func<, , , >
+  fullName: Func<, , , >
+  nameWithType.vb: Func(Of , , , )
+  fullName.vb: Func(Of , , , )
+  name.vb: Func(Of , , , )
+  spec.csharp:
+  - uid: Func`4
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`4
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.Job*
+  commentId: Overload:Runly.Execution.Job
+  name: Job
+  nameWithType: Execution.Job
+  fullName: Runly.Execution.Job
+- uid: Runly.Execution.TotalItemCount
+  commentId: P:Runly.Execution.TotalItemCount
+  parent: Runly.Execution
+  name: TotalItemCount
+  nameWithType: Execution.TotalItemCount
+  fullName: Runly.Execution.TotalItemCount
+- uid: Runly.Execution.SuccessfulItemCount
+  commentId: P:Runly.Execution.SuccessfulItemCount
+  parent: Runly.Execution
+  name: SuccessfulItemCount
+  nameWithType: Execution.SuccessfulItemCount
+  fullName: Runly.Execution.SuccessfulItemCount
+- uid: Runly.Execution.FailedItemCount
+  commentId: P:Runly.Execution.FailedItemCount
+  parent: Runly.Execution
+  name: FailedItemCount
+  nameWithType: Execution.FailedItemCount
+  fullName: Runly.Execution.FailedItemCount
+- uid: Runly.Disposition.Failed
+  commentId: F:Runly.Disposition.Failed
+  isExternal: true
+- uid: Runly.Execution.TotalItemCount*
+  commentId: Overload:Runly.Execution.TotalItemCount
+  name: TotalItemCount
+  nameWithType: Execution.TotalItemCount
+  fullName: Runly.Execution.TotalItemCount
+- uid: System.Nullable{System.Int32}
+  commentId: '!:System.Nullable{System.Int32}'
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.CompletedItemCount*
+  commentId: Overload:Runly.Execution.CompletedItemCount
+  name: CompletedItemCount
+  nameWithType: Execution.CompletedItemCount
+  fullName: Runly.Execution.CompletedItemCount
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Runly.Result.IsSuccessful
+  commentId: P:Runly.Result.IsSuccessful
+  isExternal: true
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
+- uid: Runly.Execution.SuccessfulItemCount*
+  commentId: Overload:Runly.Execution.SuccessfulItemCount
+  name: SuccessfulItemCount
+  nameWithType: Execution.SuccessfulItemCount
+  fullName: Runly.Execution.SuccessfulItemCount
+- uid: Runly.Execution.FailedItemCount*
+  commentId: Overload:Runly.Execution.FailedItemCount
+  name: FailedItemCount
+  nameWithType: Execution.FailedItemCount
+  fullName: Runly.Execution.FailedItemCount
+- uid: Runly.Execution.ItemCategories*
+  commentId: Overload:Runly.Execution.ItemCategories
+  name: ItemCategories
+  nameWithType: Execution.ItemCategories
+  fullName: Runly.Execution.ItemCategories
+- uid: IEnumerable{Runly.ItemCategory}
+  commentId: '!:IEnumerable{Runly.ItemCategory}'
+  definition: IEnumerable`1
+  name: IEnumerable<ItemCategory>
+  nameWithType: IEnumerable<ItemCategory>
+  fullName: IEnumerable<Runly.ItemCategory>
+  nameWithType.vb: IEnumerable(Of ItemCategory)
+  fullName.vb: IEnumerable(Of Runly.ItemCategory)
+  name.vb: IEnumerable(Of ItemCategory)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: Runly.ItemCategory
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: Runly.ItemCategory
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ExecutionState
+  commentId: T:Runly.ExecutionState
+  parent: Runly
+  name: ExecutionState
+  nameWithType: ExecutionState
+  fullName: Runly.ExecutionState
+- uid: Runly.Execution.State*
+  commentId: Overload:Runly.Execution.State
+  name: State
+  nameWithType: Execution.State
+  fullName: Runly.Execution.State
+- uid: Runly.Execution.StartedAt*
+  commentId: Overload:Runly.Execution.StartedAt
+  name: StartedAt
+  nameWithType: Execution.StartedAt
+  fullName: Runly.Execution.StartedAt
+- uid: System.Nullable{DateTime}
+  commentId: '!:System.Nullable{DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.CompletedAt*
+  commentId: Overload:Runly.Execution.CompletedAt
+  name: CompletedAt
+  nameWithType: Execution.CompletedAt
+  fullName: Runly.Execution.CompletedAt
+- uid: Runly.Execution.IsComplete*
+  commentId: Overload:Runly.Execution.IsComplete
+  name: IsComplete
+  nameWithType: Execution.IsComplete
+  fullName: Runly.Execution.IsComplete
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.Execution.Disposition*
+  commentId: Overload:Runly.Execution.Disposition
+  name: Disposition
+  nameWithType: Execution.Disposition
+  fullName: Runly.Execution.Disposition
+- uid: Runly.Disposition
+  commentId: T:Runly.Disposition
+  parent: Runly
+  name: Disposition
+  nameWithType: Disposition
+  fullName: Runly.Disposition
+- uid: Runly.Execution.IsCanceled*
+  commentId: Overload:Runly.Execution.IsCanceled
+  name: IsCanceled
+  nameWithType: Execution.IsCanceled
+  fullName: Runly.Execution.IsCanceled
+- uid: Runly.Execution.CanceledAt*
+  commentId: Overload:Runly.Execution.CanceledAt
+  name: CanceledAt
+  nameWithType: Execution.CanceledAt
+  fullName: Runly.Execution.CanceledAt
+- uid: Runly.Execution.IsFailed*
+  commentId: Overload:Runly.Execution.IsFailed
+  name: IsFailed
+  nameWithType: Execution.IsFailed
+  fullName: Runly.Execution.IsFailed
+- uid: Runly.Execution.FailedAt*
+  commentId: Overload:Runly.Execution.FailedAt
+  name: FailedAt
+  nameWithType: Execution.FailedAt
+  fullName: Runly.Execution.FailedAt
+- uid: Runly.JobMethod
+  commentId: T:Runly.JobMethod
+  parent: Runly
+  name: JobMethod
+  nameWithType: JobMethod
+  fullName: Runly.JobMethod
+- uid: Runly.Execution.FailedIn*
+  commentId: Overload:Runly.Execution.FailedIn
+  name: FailedIn
+  nameWithType: Execution.FailedIn
+  fullName: Runly.Execution.FailedIn
+- uid: System.Nullable{Runly.JobMethod}
+  commentId: '!:System.Nullable{Runly.JobMethod}'
+  definition: System.Nullable`1
+  name: Nullable<JobMethod>
+  nameWithType: Nullable<JobMethod>
+  fullName: System.Nullable<Runly.JobMethod>
+  nameWithType.vb: Nullable(Of JobMethod)
+  fullName.vb: System.Nullable(Of Runly.JobMethod)
+  name.vb: Nullable(Of JobMethod)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.JobMethod
+    name: JobMethod
+    nameWithType: JobMethod
+    fullName: Runly.JobMethod
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.JobMethod
+    name: JobMethod
+    nameWithType: JobMethod
+    fullName: Runly.JobMethod
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.FailedBecauseOf*
+  commentId: Overload:Runly.Execution.FailedBecauseOf
+  name: FailedBecauseOf
+  nameWithType: Execution.FailedBecauseOf
+  fullName: Runly.Execution.FailedBecauseOf
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception
+- uid: Runly.Execution.Job
+  commentId: P:Runly.Execution.Job
+  parent: Runly.Execution
+  name: Job
+  nameWithType: Execution.Job
+  fullName: Runly.Execution.Job
+- uid: Runly.Execution.ExecuteAsync*
+  commentId: Overload:Runly.Execution.ExecuteAsync
+  name: ExecuteAsync
+  nameWithType: Execution.ExecuteAsync
+  fullName: Runly.Execution.ExecuteAsync
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Runly.Execution.ExecuteInternalAsync*
+  commentId: Overload:Runly.Execution.ExecuteInternalAsync
+  name: ExecuteInternalAsync
+  nameWithType: Execution.ExecuteInternalAsync
+  fullName: Runly.Execution.ExecuteInternalAsync
+- uid: Runly.Execution.CompletedItemCount
+  commentId: P:Runly.Execution.CompletedItemCount
+  parent: Runly.Execution
+  name: CompletedItemCount
+  nameWithType: Execution.CompletedItemCount
+  fullName: Runly.Execution.CompletedItemCount
+- uid: Runly.Execution.CancelAfter*
+  commentId: Overload:Runly.Execution.CancelAfter
+  name: CancelAfter
+  nameWithType: Execution.CancelAfter
+  fullName: Runly.Execution.CancelAfter
+- uid: Runly.Execution.CancelAfter(System.Int32)
+  commentId: M:Runly.Execution.CancelAfter(System.Int32)
+  parent: Runly.Execution
+  isExternal: true
+  name: CancelAfter(Int32)
+  nameWithType: Execution.CancelAfter(Int32)
+  fullName: Runly.Execution.CancelAfter(System.Int32)
+  spec.csharp:
+  - uid: Runly.Execution.CancelAfter(System.Int32)
+    name: CancelAfter
+    nameWithType: Execution.CancelAfter
+    fullName: Runly.Execution.CancelAfter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.CancelAfter(System.Int32)
+    name: CancelAfter
+    nameWithType: Execution.CancelAfter
+    fullName: Runly.Execution.CancelAfter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.EnforceCancelAfter*
+  commentId: Overload:Runly.Execution.EnforceCancelAfter
+  name: EnforceCancelAfter
+  nameWithType: Execution.EnforceCancelAfter
+  fullName: Runly.Execution.EnforceCancelAfter
+- uid: Runly.Execution.#ctor*
+  commentId: Overload:Runly.Execution.#ctor
+  name: Execution
+  nameWithType: Execution.Execution
+  fullName: Runly.Execution.Execution
+- uid: Runly.Execution.Start*
+  commentId: Overload:Runly.Execution.Start
+  name: Start
+  nameWithType: Execution.Start
+  fullName: Runly.Execution.Start
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.Execution.SetState*
+  commentId: Overload:Runly.Execution.SetState
+  name: SetState
+  nameWithType: Execution.SetState
+  fullName: Runly.Execution.SetState
+- uid: Runly.Execution.CompleteMethod*
+  commentId: Overload:Runly.Execution.CompleteMethod
+  name: CompleteMethod
+  nameWithType: Execution.CompleteMethod
+  fullName: Runly.Execution.CompleteMethod
+- uid: TimeSpan
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: TimeSpan
+- uid: Runly.Execution.CompleteItem*
+  commentId: Overload:Runly.Execution.CompleteItem
+  name: CompleteItem
+  nameWithType: Execution.CompleteItem
+  fullName: Runly.Execution.CompleteItem
+- uid: Runly.ItemResult
+  commentId: T:Runly.ItemResult
+  parent: Runly
+  name: ItemResult
+  nameWithType: ItemResult
+  fullName: Runly.ItemResult
+- uid: Runly.Execution.Complete*
+  commentId: Overload:Runly.Execution.Complete
+  name: Complete
+  nameWithType: Execution.Complete
+  fullName: Runly.Execution.Complete

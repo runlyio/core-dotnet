@@ -1,0 +1,223 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.DictionaryExtensions
+  commentId: T:Runly.DictionaryExtensions
+  id: DictionaryExtensions
+  parent: Runly
+  children:
+  - Runly.DictionaryExtensions.ValueOrDefault``2(Dictionary{``0,``1},``0)
+  langs:
+  - csharp
+  - vb
+  name: DictionaryExtensions
+  nameWithType: DictionaryExtensions
+  fullName: Runly.DictionaryExtensions
+  type: Class
+  source:
+    id: DictionaryExtensions
+    path: /github/workspace/src/Core/DictionaryExtensions.cs
+    startLine: 4
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public static class DictionaryExtensions : object'
+    content.vb: >-
+      Public Module DictionaryExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.DictionaryExtensions.ValueOrDefault``2(Dictionary{``0,``1},``0)
+  commentId: M:Runly.DictionaryExtensions.ValueOrDefault``2(Dictionary{``0,``1},``0)
+  id: ValueOrDefault``2(Dictionary{``0,``1},``0)
+  isExtensionMethod: true
+  parent: Runly.DictionaryExtensions
+  langs:
+  - csharp
+  - vb
+  name: ValueOrDefault<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
+  nameWithType: DictionaryExtensions.ValueOrDefault<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
+  fullName: Runly.DictionaryExtensions.ValueOrDefault<TKey, TValue>(Dictionary<TKey, TValue>, TKey)
+  type: Method
+  source:
+    id: ValueOrDefault
+    path: /github/workspace/src/Core/DictionaryExtensions.cs
+    startLine: 10
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets a value stored in a <code data-dev-comment-type=\"paramref\" class=\"paramref\">dictionary</code> or the default value if the key is not present in the dictionary.\n"
+  remarks: Returns the default value if <code data-dev-comment-type="paramref" class="paramref">dictionary</code> is null.
+  example: []
+  syntax:
+    content: public static TValue ValueOrDefault<TKey, TValue>(this Dictionary<TKey, TValue> dictionary, TKey key)
+    parameters:
+    - id: dictionary
+      type: Dictionary{{TKey},{TValue}}
+    - id: key
+      type: '{TKey}'
+    typeParameters:
+    - id: TKey
+    - id: TValue
+    return:
+      type: '{TValue}'
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ValueOrDefault(Of TKey, TValue)(dictionary As Dictionary(Of TKey, TValue), key As TKey) As TValue
+  overload: Runly.DictionaryExtensions.ValueOrDefault*
+  nameWithType.vb: DictionaryExtensions.ValueOrDefault(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.DictionaryExtensions.ValueOrDefault(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
+  name.vb: ValueOrDefault(Of TKey, TValue)(Dictionary(Of TKey, TValue), TKey)
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.DictionaryExtensions.ValueOrDefault*
+  commentId: Overload:Runly.DictionaryExtensions.ValueOrDefault
+  name: ValueOrDefault
+  nameWithType: DictionaryExtensions.ValueOrDefault
+  fullName: Runly.DictionaryExtensions.ValueOrDefault
+- uid: Dictionary{{TKey},{TValue}}
+  commentId: '!:Dictionary{``0,``1}'
+  definition: Dictionary`2
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TKey}'
+  commentId: '!:TKey'
+  definition: TKey
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: '{TValue}'
+  commentId: '!:TValue'
+  definition: TValue
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TKey
+  commentId: '!:TKey'
+  name: TKey
+  nameWithType: TKey
+  fullName: TKey
+- uid: TValue
+  commentId: '!:TValue'
+  name: TValue
+  nameWithType: TValue
+  fullName: TValue

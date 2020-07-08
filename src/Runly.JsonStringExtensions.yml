@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JsonStringExtensions
+  commentId: T:Runly.JsonStringExtensions
+  id: JsonStringExtensions
+  parent: Runly
+  children:
+  - Runly.JsonStringExtensions.ToCamelCase(System.String)
+  langs:
+  - csharp
+  - vb
+  name: JsonStringExtensions
+  nameWithType: JsonStringExtensions
+  fullName: Runly.JsonStringExtensions
+  type: Class
+  source:
+    id: JsonStringExtensions
+    path: /github/workspace/src/Core/JsonStringExtensions.cs
+    startLine: 4
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public static class JsonStringExtensions : object'
+    content.vb: >-
+      Public Module JsonStringExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.JsonStringExtensions.ToCamelCase(System.String)
+  commentId: M:Runly.JsonStringExtensions.ToCamelCase(System.String)
+  id: ToCamelCase(System.String)
+  isExtensionMethod: true
+  parent: Runly.JsonStringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToCamelCase(String)
+  nameWithType: JsonStringExtensions.ToCamelCase(String)
+  fullName: Runly.JsonStringExtensions.ToCamelCase(System.String)
+  type: Method
+  source:
+    id: ToCamelCase
+    path: /github/workspace/src/Core/JsonStringExtensions.cs
+    startLine: 6
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string ToCamelCase(this string value)
+    parameters:
+    - id: value
+      type: System.String
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToCamelCase(value As String) As String
+  overload: Runly.JsonStringExtensions.ToCamelCase*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.JsonStringExtensions.ToCamelCase*
+  commentId: Overload:Runly.JsonStringExtensions.ToCamelCase
+  name: ToCamelCase
+  nameWithType: JsonStringExtensions.ToCamelCase
+  fullName: Runly.JsonStringExtensions.ToCamelCase
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

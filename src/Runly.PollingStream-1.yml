@@ -1,0 +1,319 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.PollingStream`1
+  commentId: T:Runly.PollingStream`1
+  id: PollingStream`1
+  parent: Runly
+  children:
+  - Runly.PollingStream`1.#ctor(Func{IAsyncEnumerable{`0}},TimeSpan)
+  - Runly.PollingStream`1.GetAsyncEnumerator(CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: PollingStream<T>
+  nameWithType: PollingStream<T>
+  fullName: Runly.PollingStream<T>
+  type: Class
+  source:
+    id: PollingStream
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class PollingStream<T> : IAsyncEnumerable<T>'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class PollingStream(Of T)
+          Inherits IAsyncEnumerable(Of T)
+  inheritance:
+  - System.Object
+  nameWithType.vb: PollingStream(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Runly.PollingStream(Of T)
+  name.vb: PollingStream(Of T)
+- uid: Runly.PollingStream`1.#ctor(Func{IAsyncEnumerable{`0}},TimeSpan)
+  commentId: M:Runly.PollingStream`1.#ctor(Func{IAsyncEnumerable{`0}},TimeSpan)
+  id: '#ctor(Func{IAsyncEnumerable{`0}},TimeSpan)'
+  parent: Runly.PollingStream`1
+  langs:
+  - csharp
+  - vb
+  name: PollingStream(Func<IAsyncEnumerable<T>>, TimeSpan)
+  nameWithType: PollingStream<T>.PollingStream(Func<IAsyncEnumerable<T>>, TimeSpan)
+  fullName: Runly.PollingStream<T>.PollingStream(Func<IAsyncEnumerable<T>>, TimeSpan)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 12
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public PollingStream(Func<IAsyncEnumerable<T>> poll, TimeSpan interval)
+    parameters:
+    - id: poll
+      type: Func{IAsyncEnumerable{{T}}}
+    - id: interval
+      type: TimeSpan
+    content.vb: Public Sub New(poll As Func(Of IAsyncEnumerable(Of T)), interval As TimeSpan)
+  overload: Runly.PollingStream`1.#ctor*
+  nameWithType.vb: PollingStream(Of T).PollingStream(Func(Of IAsyncEnumerable(Of T)), TimeSpan)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.PollingStream(Of T).PollingStream(Func(Of IAsyncEnumerable(Of T)), TimeSpan)
+  name.vb: PollingStream(Func(Of IAsyncEnumerable(Of T)), TimeSpan)
+- uid: Runly.PollingStream`1.GetAsyncEnumerator(CancellationToken)
+  commentId: M:Runly.PollingStream`1.GetAsyncEnumerator(CancellationToken)
+  id: GetAsyncEnumerator(CancellationToken)
+  parent: Runly.PollingStream`1
+  langs:
+  - csharp
+  - vb
+  name: GetAsyncEnumerator(CancellationToken)
+  nameWithType: PollingStream<T>.GetAsyncEnumerator(CancellationToken)
+  fullName: Runly.PollingStream<T>.GetAsyncEnumerator(CancellationToken)
+  type: Method
+  source:
+    id: GetAsyncEnumerator
+    path: /github/workspace/src/Job/PollingStream.cs
+    startLine: 21
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = null)
+    parameters:
+    - id: cancellationToken
+      type: CancellationToken
+    return:
+      type: IAsyncEnumerator{{T}}
+    content.vb: Public Function GetAsyncEnumerator(cancellationToken As CancellationToken = Nothing) As IAsyncEnumerator(Of T)
+  overload: Runly.PollingStream`1.GetAsyncEnumerator*
+  nameWithType.vb: PollingStream(Of T).GetAsyncEnumerator(CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.PollingStream(Of T).GetAsyncEnumerator(CancellationToken)
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.PollingStream`1.#ctor*
+  commentId: Overload:Runly.PollingStream`1.#ctor
+  name: PollingStream
+  nameWithType: PollingStream<T>.PollingStream
+  fullName: Runly.PollingStream<T>.PollingStream
+  nameWithType.vb: PollingStream(Of T).PollingStream
+  fullName.vb: Runly.PollingStream(Of T).PollingStream
+- uid: Func{IAsyncEnumerable{{T}}}
+  commentId: '!:Func{IAsyncEnumerable{`0}}'
+  definition: Func`1
+  name: Func<IAsyncEnumerable<T>>
+  nameWithType: Func<IAsyncEnumerable<T>>
+  fullName: Func<IAsyncEnumerable<T>>
+  nameWithType.vb: Func(Of IAsyncEnumerable(Of T))
+  fullName.vb: Func(Of IAsyncEnumerable(Of T))
+  name.vb: Func(Of IAsyncEnumerable(Of T))
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TimeSpan
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: TimeSpan
+- uid: Func`1
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.PollingStream`1.GetAsyncEnumerator*
+  commentId: Overload:Runly.PollingStream`1.GetAsyncEnumerator
+  name: GetAsyncEnumerator
+  nameWithType: PollingStream<T>.GetAsyncEnumerator
+  fullName: Runly.PollingStream<T>.GetAsyncEnumerator
+  nameWithType.vb: PollingStream(Of T).GetAsyncEnumerator
+  fullName.vb: Runly.PollingStream(Of T).GetAsyncEnumerator
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: IAsyncEnumerator{{T}}
+  commentId: '!:IAsyncEnumerator{`0}'
+  definition: IAsyncEnumerator`1
+  name: IAsyncEnumerator<T>
+  nameWithType: IAsyncEnumerator<T>
+  fullName: IAsyncEnumerator<T>
+  nameWithType.vb: IAsyncEnumerator(Of T)
+  fullName.vb: IAsyncEnumerator(Of T)
+  name.vb: IAsyncEnumerator(Of T)
+  spec.csharp:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IAsyncEnumerator`1
+  isExternal: true
+  name: IAsyncEnumerator<>
+  nameWithType: IAsyncEnumerator<>
+  fullName: IAsyncEnumerator<>
+  nameWithType.vb: IAsyncEnumerator(Of )
+  fullName.vb: IAsyncEnumerator(Of )
+  name.vb: IAsyncEnumerator(Of )
+  spec.csharp:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

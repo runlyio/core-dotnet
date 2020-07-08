@@ -1,0 +1,216 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ExecutionState
+  commentId: T:Runly.ExecutionState
+  id: ExecutionState
+  parent: Runly
+  children:
+  - Runly.ExecutionState.Complete
+  - Runly.ExecutionState.Finalizing
+  - Runly.ExecutionState.GettingItemsToProcess
+  - Runly.ExecutionState.Initializing
+  - Runly.ExecutionState.NotStarted
+  - Runly.ExecutionState.Processing
+  langs:
+  - csharp
+  - vb
+  name: ExecutionState
+  nameWithType: ExecutionState
+  fullName: Runly.ExecutionState
+  type: Enum
+  source:
+    id: ExecutionState
+    path: /github/workspace/src/Core/ExecutionState.cs
+    startLine: 2
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public enum ExecutionState : int'
+    content.vb: Public Enum ExecutionState As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: Runly.ExecutionState.NotStarted
+  commentId: F:Runly.ExecutionState.NotStarted
+  id: NotStarted
+  parent: Runly.ExecutionState
+  langs:
+  - csharp
+  - vb
+  name: NotStarted
+  nameWithType: ExecutionState.NotStarted
+  fullName: Runly.ExecutionState.NotStarted
+  type: Field
+  source:
+    id: NotStarted
+    path: /github/workspace/src/Core/ExecutionState.cs
+    startLine: 4
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: NotStarted = 0
+    return:
+      type: Runly.ExecutionState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.ExecutionState.Initializing
+  commentId: F:Runly.ExecutionState.Initializing
+  id: Initializing
+  parent: Runly.ExecutionState
+  langs:
+  - csharp
+  - vb
+  name: Initializing
+  nameWithType: ExecutionState.Initializing
+  fullName: Runly.ExecutionState.Initializing
+  type: Field
+  source:
+    id: Initializing
+    path: /github/workspace/src/Core/ExecutionState.cs
+    startLine: 5
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Initializing = 1
+    return:
+      type: Runly.ExecutionState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.ExecutionState.GettingItemsToProcess
+  commentId: F:Runly.ExecutionState.GettingItemsToProcess
+  id: GettingItemsToProcess
+  parent: Runly.ExecutionState
+  langs:
+  - csharp
+  - vb
+  name: GettingItemsToProcess
+  nameWithType: ExecutionState.GettingItemsToProcess
+  fullName: Runly.ExecutionState.GettingItemsToProcess
+  type: Field
+  source:
+    id: GettingItemsToProcess
+    path: /github/workspace/src/Core/ExecutionState.cs
+    startLine: 6
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: GettingItemsToProcess = 2
+    return:
+      type: Runly.ExecutionState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.ExecutionState.Processing
+  commentId: F:Runly.ExecutionState.Processing
+  id: Processing
+  parent: Runly.ExecutionState
+  langs:
+  - csharp
+  - vb
+  name: Processing
+  nameWithType: ExecutionState.Processing
+  fullName: Runly.ExecutionState.Processing
+  type: Field
+  source:
+    id: Processing
+    path: /github/workspace/src/Core/ExecutionState.cs
+    startLine: 7
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Processing = 3
+    return:
+      type: Runly.ExecutionState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.ExecutionState.Finalizing
+  commentId: F:Runly.ExecutionState.Finalizing
+  id: Finalizing
+  parent: Runly.ExecutionState
+  langs:
+  - csharp
+  - vb
+  name: Finalizing
+  nameWithType: ExecutionState.Finalizing
+  fullName: Runly.ExecutionState.Finalizing
+  type: Field
+  source:
+    id: Finalizing
+    path: /github/workspace/src/Core/ExecutionState.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Finalizing = 4
+    return:
+      type: Runly.ExecutionState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.ExecutionState.Complete
+  commentId: F:Runly.ExecutionState.Complete
+  id: Complete
+  parent: Runly.ExecutionState
+  langs:
+  - csharp
+  - vb
+  name: Complete
+  nameWithType: ExecutionState.Complete
+  fullName: Runly.ExecutionState.Complete
+  type: Field
+  source:
+    id: Complete
+    path: /github/workspace/src/Core/ExecutionState.cs
+    startLine: 9
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Complete = 5
+    return:
+      type: Runly.ExecutionState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.ExecutionState
+  commentId: T:Runly.ExecutionState
+  parent: Runly
+  name: ExecutionState
+  nameWithType: ExecutionState
+  fullName: Runly.ExecutionState

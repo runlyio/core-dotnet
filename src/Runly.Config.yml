@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  id: Config
+  parent: Runly
+  children:
+  - Runly.Config.#ctor
+  - Runly.Config.Execution
+  - Runly.Config.Job
+  - Runly.Config.RunlyApi
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+  type: Class
+  source:
+    id: Config
+    path: /github/workspace/src/Core/Config.cs
+    startLine: 10
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe base config class used to configure jobs.\n"
+  remarks: Public members of this class and classes that extend it must be JSON serializable.
+  example: []
+  syntax:
+    content: 'public class Config : object'
+    content.vb: >-
+      Public Class Config
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.Config.Job
+  commentId: P:Runly.Config.Job
+  id: Job
+  parent: Runly.Config
+  langs:
+  - csharp
+  - vb
+  name: Job
+  nameWithType: Config.Job
+  fullName: Runly.Config.Job
+  type: Property
+  source:
+    id: Job
+    path: /github/workspace/src/Core/Config.cs
+    startLine: 18
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nIdentifies the job that created this config and/or the job that will run when executed.\n"
+  example: []
+  syntax:
+    content: public JobConfig Job { get; set; }
+    parameters: []
+    return:
+      type: Runly.JobConfig
+    content.vb: Public Property Job As JobConfig
+  overload: Runly.Config.Job*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.Config.Execution
+  commentId: P:Runly.Config.Execution
+  id: Execution
+  parent: Runly.Config
+  langs:
+  - csharp
+  - vb
+  name: Execution
+  nameWithType: Config.Execution
+  fullName: Runly.Config.Execution
+  type: Property
+  source:
+    id: Execution
+    path: /github/workspace/src/Core/Config.cs
+    startLine: 25
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nDetermines how the job will execute.\n"
+  example: []
+  syntax:
+    content: public ExecutionConfig Execution { get; set; }
+    parameters: []
+    return:
+      type: Runly.ExecutionConfig
+    content.vb: Public Property Execution As ExecutionConfig
+  overload: Runly.Config.Execution*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.Config.RunlyApi
+  commentId: P:Runly.Config.RunlyApi
+  id: RunlyApi
+  parent: Runly.Config
+  langs:
+  - csharp
+  - vb
+  name: RunlyApi
+  nameWithType: Config.RunlyApi
+  fullName: Runly.Config.RunlyApi
+  type: Property
+  source:
+    id: RunlyApi
+    path: /github/workspace/src/Core/Config.cs
+    startLine: 31
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nRunly API connection information used to report progress and store results of the job.\n"
+  example: []
+  syntax:
+    content: public RunlyApiConfig RunlyApi { get; set; }
+    parameters: []
+    return:
+      type: Runly.RunlyApiConfig
+    content.vb: Public Property RunlyApi As RunlyApiConfig
+  overload: Runly.Config.RunlyApi*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.Config.#ctor
+  commentId: M:Runly.Config.#ctor
+  id: '#ctor'
+  parent: Runly.Config
+  langs:
+  - csharp
+  - vb
+  name: Config()
+  nameWithType: Config.Config()
+  fullName: Runly.Config.Config()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/Config.cs
+    startLine: 34
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public Config()
+    content.vb: Public Sub New
+  overload: Runly.Config.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Config.Job*
+  commentId: Overload:Runly.Config.Job
+  name: Job
+  nameWithType: Config.Job
+  fullName: Runly.Config.Job
+- uid: Runly.JobConfig
+  commentId: T:Runly.JobConfig
+  parent: Runly
+  name: JobConfig
+  nameWithType: JobConfig
+  fullName: Runly.JobConfig
+- uid: Runly.Config.Execution*
+  commentId: Overload:Runly.Config.Execution
+  name: Execution
+  nameWithType: Config.Execution
+  fullName: Runly.Config.Execution
+- uid: Runly.ExecutionConfig
+  commentId: T:Runly.ExecutionConfig
+  parent: Runly
+  name: ExecutionConfig
+  nameWithType: ExecutionConfig
+  fullName: Runly.ExecutionConfig
+- uid: Runly.Config.RunlyApi*
+  commentId: Overload:Runly.Config.RunlyApi
+  name: RunlyApi
+  nameWithType: Config.RunlyApi
+  fullName: Runly.Config.RunlyApi
+- uid: Runly.RunlyApiConfig
+  commentId: T:Runly.RunlyApiConfig
+  parent: Runly
+  name: RunlyApiConfig
+  nameWithType: RunlyApiConfig
+  fullName: Runly.RunlyApiConfig
+- uid: Runly.Config.#ctor*
+  commentId: Overload:Runly.Config.#ctor
+  name: Config
+  nameWithType: Config.Config
+  fullName: Runly.Config.Config

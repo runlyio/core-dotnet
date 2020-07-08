@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ExceptionExtensions
+  commentId: T:Runly.ExceptionExtensions
+  id: ExceptionExtensions
+  parent: Runly
+  children:
+  - Runly.ExceptionExtensions.ToDetailedString(Exception)
+  - Runly.ExceptionExtensions.ToDetailedString(Exception,Runly.ExceptionOptions)
+  langs:
+  - csharp
+  - vb
+  name: ExceptionExtensions
+  nameWithType: ExceptionExtensions
+  fullName: Runly.ExceptionExtensions
+  type: Class
+  source:
+    id: ExceptionExtensions
+    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    startLine: 11
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public static class ExceptionExtensions : object'
+    content.vb: >-
+      Public Module ExceptionExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.ExceptionExtensions.ToDetailedString(Exception)
+  commentId: M:Runly.ExceptionExtensions.ToDetailedString(Exception)
+  id: ToDetailedString(Exception)
+  isExtensionMethod: true
+  parent: Runly.ExceptionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDetailedString(Exception)
+  nameWithType: ExceptionExtensions.ToDetailedString(Exception)
+  fullName: Runly.ExceptionExtensions.ToDetailedString(Exception)
+  type: Method
+  source:
+    id: ToDetailedString
+    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    startLine: 13
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string ToDetailedString(this Exception exception)
+    parameters:
+    - id: exception
+      type: Exception
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDetailedString(exception As Exception) As String
+  overload: Runly.ExceptionExtensions.ToDetailedString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.ExceptionExtensions.ToDetailedString(Exception,Runly.ExceptionOptions)
+  commentId: M:Runly.ExceptionExtensions.ToDetailedString(Exception,Runly.ExceptionOptions)
+  id: ToDetailedString(Exception,Runly.ExceptionOptions)
+  isExtensionMethod: true
+  parent: Runly.ExceptionExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToDetailedString(Exception, ExceptionOptions)
+  nameWithType: ExceptionExtensions.ToDetailedString(Exception, ExceptionOptions)
+  fullName: Runly.ExceptionExtensions.ToDetailedString(Exception, Runly.ExceptionOptions)
+  type: Method
+  source:
+    id: ToDetailedString
+    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    startLine: 16
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string ToDetailedString(this Exception exception, ExceptionOptions options)
+    parameters:
+    - id: exception
+      type: Exception
+    - id: options
+      type: Runly.ExceptionOptions
+    return:
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToDetailedString(exception As Exception, options As ExceptionOptions) As String
+  overload: Runly.ExceptionExtensions.ToDetailedString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ExceptionExtensions.ToDetailedString*
+  commentId: Overload:Runly.ExceptionExtensions.ToDetailedString
+  name: ToDetailedString
+  nameWithType: ExceptionExtensions.ToDetailedString
+  fullName: Runly.ExceptionExtensions.ToDetailedString
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ExceptionOptions
+  commentId: T:Runly.ExceptionOptions
+  parent: Runly
+  name: ExceptionOptions
+  nameWithType: ExceptionOptions
+  fullName: Runly.ExceptionOptions

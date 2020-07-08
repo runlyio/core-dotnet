@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ConsoleFormat
+  commentId: T:Runly.ConsoleFormat
+  id: ConsoleFormat
+  parent: Runly
+  children:
+  - Runly.ConsoleFormat.AsColumns(System.Int32,System.String[])
+  - Runly.ConsoleFormat.AsPlural(System.Int32,System.String)
+  - Runly.ConsoleFormat.DoubleLine
+  - Runly.ConsoleFormat.SingleLine
+  langs:
+  - csharp
+  - vb
+  name: ConsoleFormat
+  nameWithType: ConsoleFormat
+  fullName: Runly.ConsoleFormat
+  type: Class
+  source:
+    id: ConsoleFormat
+    path: /github/workspace/src/Core/ConsoleFormat.cs
+    startLine: 4
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public static class ConsoleFormat : object'
+    content.vb: >-
+      Public Module ConsoleFormat
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.ConsoleFormat.DoubleLine
+  commentId: P:Runly.ConsoleFormat.DoubleLine
+  id: DoubleLine
+  parent: Runly.ConsoleFormat
+  langs:
+  - csharp
+  - vb
+  name: DoubleLine
+  nameWithType: ConsoleFormat.DoubleLine
+  fullName: Runly.ConsoleFormat.DoubleLine
+  type: Property
+  source:
+    id: DoubleLine
+    path: /github/workspace/src/Core/ConsoleFormat.cs
+    startLine: 6
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string DoubleLine { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property DoubleLine As String
+  overload: Runly.ConsoleFormat.DoubleLine*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Runly.ConsoleFormat.SingleLine
+  commentId: P:Runly.ConsoleFormat.SingleLine
+  id: SingleLine
+  parent: Runly.ConsoleFormat
+  langs:
+  - csharp
+  - vb
+  name: SingleLine
+  nameWithType: ConsoleFormat.SingleLine
+  fullName: Runly.ConsoleFormat.SingleLine
+  type: Property
+  source:
+    id: SingleLine
+    path: /github/workspace/src/Core/ConsoleFormat.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string SingleLine { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Shared ReadOnly Property SingleLine As String
+  overload: Runly.ConsoleFormat.SingleLine*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Runly.ConsoleFormat.AsPlural(System.Int32,System.String)
+  commentId: M:Runly.ConsoleFormat.AsPlural(System.Int32,System.String)
+  id: AsPlural(System.Int32,System.String)
+  parent: Runly.ConsoleFormat
+  langs:
+  - csharp
+  - vb
+  name: AsPlural(Int32, String)
+  nameWithType: ConsoleFormat.AsPlural(Int32, String)
+  fullName: Runly.ConsoleFormat.AsPlural(System.Int32, System.String)
+  type: Method
+  source:
+    id: AsPlural
+    path: /github/workspace/src/Core/ConsoleFormat.cs
+    startLine: 10
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string AsPlural(int count, string ending = "s")
+    parameters:
+    - id: count
+      type: System.Int32
+    - id: ending
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function AsPlural(count As Integer, ending As String = "s") As String
+  overload: Runly.ConsoleFormat.AsPlural*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.ConsoleFormat.AsColumns(System.Int32,System.String[])
+  commentId: M:Runly.ConsoleFormat.AsColumns(System.Int32,System.String[])
+  id: AsColumns(System.Int32,System.String[])
+  parent: Runly.ConsoleFormat
+  langs:
+  - csharp
+  - vb
+  name: AsColumns(Int32, String[])
+  nameWithType: ConsoleFormat.AsColumns(Int32, String[])
+  fullName: Runly.ConsoleFormat.AsColumns(System.Int32, System.String[])
+  type: Method
+  source:
+    id: AsColumns
+    path: /github/workspace/src/Core/ConsoleFormat.cs
+    startLine: 12
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static string AsColumns(int width, params string[] data)
+    parameters:
+    - id: width
+      type: System.Int32
+    - id: data
+      type: System.String[]
+    return:
+      type: System.String
+    content.vb: Public Shared Function AsColumns(width As Integer, ParamArray data As String()) As String
+  overload: Runly.ConsoleFormat.AsColumns*
+  nameWithType.vb: ConsoleFormat.AsColumns(Int32, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.ConsoleFormat.AsColumns(System.Int32, System.String())
+  name.vb: AsColumns(Int32, String())
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ConsoleFormat.DoubleLine*
+  commentId: Overload:Runly.ConsoleFormat.DoubleLine
+  name: DoubleLine
+  nameWithType: ConsoleFormat.DoubleLine
+  fullName: Runly.ConsoleFormat.DoubleLine
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ConsoleFormat.SingleLine*
+  commentId: Overload:Runly.ConsoleFormat.SingleLine
+  name: SingleLine
+  nameWithType: ConsoleFormat.SingleLine
+  fullName: Runly.ConsoleFormat.SingleLine
+- uid: Runly.ConsoleFormat.AsPlural*
+  commentId: Overload:Runly.ConsoleFormat.AsPlural
+  name: AsPlural
+  nameWithType: ConsoleFormat.AsPlural
+  fullName: Runly.ConsoleFormat.AsPlural
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Runly.ConsoleFormat.AsColumns*
+  commentId: Overload:Runly.ConsoleFormat.AsColumns
+  name: AsColumns
+  nameWithType: ConsoleFormat.AsColumns
+  fullName: Runly.ConsoleFormat.AsColumns
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

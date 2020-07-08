@@ -1,0 +1,1306 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ResultLog
+  commentId: T:Runly.ResultLog
+  id: ResultLog
+  parent: Runly
+  children:
+  - Runly.ResultLog.#ctor(IEnumerable{Runly.ItemResult},Runly.Disposition,System.Nullable{System.Int32},Dictionary{Runly.JobMethod,Runly.MethodOutcome},System.Object)
+  - Runly.ResultLog.#ctor(Runly.Execution)
+  - Runly.ResultLog.CompletedAt
+  - Runly.ResultLog.ConfigPath
+  - Runly.ResultLog.Count
+  - Runly.ResultLog.Disposition
+  - Runly.ResultLog.FailedItemCount
+  - Runly.ResultLog.FailedItems
+  - Runly.ResultLog.FailedItemsThatThrewExceptions
+  - Runly.ResultLog.FinalizeAsync
+  - Runly.ResultLog.GetEnumerator
+  - Runly.ResultLog.GetItemsAsync
+  - Runly.ResultLog.InitializeAsync
+  - Runly.ResultLog.Items
+  - Runly.ResultLog.ItemSummary
+  - Runly.ResultLog.Methods
+  - Runly.ResultLog.Output
+  - Runly.ResultLog.StartedAt
+  - Runly.ResultLog.SuccessfulItemCount
+  - Runly.ResultLog.SuccessfulItems
+  - Runly.ResultLog.ToString
+  - Runly.ResultLog.TotalItemCount
+  langs:
+  - csharp
+  - vb
+  name: ResultLog
+  nameWithType: ResultLog
+  fullName: Runly.ResultLog
+  type: Class
+  source:
+    id: ResultLog
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 11
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public class ResultLog : object'
+    content.vb: >-
+      Public Class ResultLog
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.ResultLog.ConfigPath
+  commentId: P:Runly.ResultLog.ConfigPath
+  id: ConfigPath
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: ConfigPath
+  nameWithType: ResultLog.ConfigPath
+  fullName: Runly.ResultLog.ConfigPath
+  type: Property
+  source:
+    id: ConfigPath
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 19
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe file path of the config used by the run.\n"
+  example: []
+  syntax:
+    content: public string ConfigPath { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ConfigPath As String
+  overload: Runly.ResultLog.ConfigPath*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.StartedAt
+  commentId: P:Runly.ResultLog.StartedAt
+  id: StartedAt
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: StartedAt
+  nameWithType: ResultLog.StartedAt
+  fullName: Runly.ResultLog.StartedAt
+  type: Property
+  source:
+    id: StartedAt
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 24
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe UTC time at which the run started.\n"
+  example: []
+  syntax:
+    content: public DateTime? StartedAt { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DateTime}
+    content.vb: Public ReadOnly Property StartedAt As DateTime?
+  overload: Runly.ResultLog.StartedAt*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.CompletedAt
+  commentId: P:Runly.ResultLog.CompletedAt
+  id: CompletedAt
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: CompletedAt
+  nameWithType: ResultLog.CompletedAt
+  fullName: Runly.ResultLog.CompletedAt
+  type: Property
+  source:
+    id: CompletedAt
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 29
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe UTC time at which the run ended.\n"
+  example: []
+  syntax:
+    content: public DateTime? CompletedAt { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DateTime}
+    content.vb: Public ReadOnly Property CompletedAt As DateTime?
+  overload: Runly.ResultLog.CompletedAt*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.Disposition
+  commentId: P:Runly.ResultLog.Disposition
+  id: Disposition
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: Disposition
+  nameWithType: ResultLog.Disposition
+  fullName: Runly.ResultLog.Disposition
+  type: Property
+  source:
+    id: Disposition
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 34
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe final state of the run.\n"
+  example: []
+  syntax:
+    content: public Disposition Disposition { get; }
+    parameters: []
+    return:
+      type: Runly.Disposition
+    content.vb: Public ReadOnly Property Disposition As Disposition
+  overload: Runly.ResultLog.Disposition*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.Methods
+  commentId: P:Runly.ResultLog.Methods
+  id: Methods
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: Methods
+  nameWithType: ResultLog.Methods
+  fullName: Runly.ResultLog.Methods
+  type: Property
+  source:
+    id: Methods
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 40
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets a list of <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for each method of a job, excluding methods executed per item.\n"
+  example: []
+  syntax:
+    content: public Dictionary<JobMethod, MethodOutcome> Methods { get; }
+    parameters: []
+    return:
+      type: Dictionary{Runly.JobMethod,Runly.MethodOutcome}
+    content.vb: Public ReadOnly Property Methods As Dictionary(Of JobMethod, MethodOutcome)
+  overload: Runly.ResultLog.Methods*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.InitializeAsync
+  commentId: P:Runly.ResultLog.InitializeAsync
+  id: InitializeAsync
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: InitializeAsync
+  nameWithType: ResultLog.InitializeAsync
+  fullName: Runly.ResultLog.InitializeAsync
+  type: Property
+  source:
+    id: InitializeAsync
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 45
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for InitializeAsync.\n"
+  example: []
+  syntax:
+    content: public MethodOutcome InitializeAsync { get; }
+    parameters: []
+    return:
+      type: Runly.MethodOutcome
+    content.vb: Public ReadOnly Property InitializeAsync As MethodOutcome
+  overload: Runly.ResultLog.InitializeAsync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.GetItemsAsync
+  commentId: P:Runly.ResultLog.GetItemsAsync
+  id: GetItemsAsync
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: GetItemsAsync
+  nameWithType: ResultLog.GetItemsAsync
+  fullName: Runly.ResultLog.GetItemsAsync
+  type: Property
+  source:
+    id: GetItemsAsync
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 51
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for GetItemsAsync.\n"
+  example: []
+  syntax:
+    content: public MethodOutcome GetItemsAsync { get; }
+    parameters: []
+    return:
+      type: Runly.MethodOutcome
+    content.vb: Public ReadOnly Property GetItemsAsync As MethodOutcome
+  overload: Runly.ResultLog.GetItemsAsync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.Count
+  commentId: P:Runly.ResultLog.Count
+  id: Count
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ResultLog.Count
+  fullName: Runly.ResultLog.Count
+  type: Property
+  source:
+    id: Count
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 57
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for Count.\n"
+  example: []
+  syntax:
+    content: public MethodOutcome Count { get; }
+    parameters: []
+    return:
+      type: Runly.MethodOutcome
+    content.vb: Public ReadOnly Property Count As MethodOutcome
+  overload: Runly.ResultLog.Count*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.GetEnumerator
+  commentId: P:Runly.ResultLog.GetEnumerator
+  id: GetEnumerator
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: GetEnumerator
+  nameWithType: ResultLog.GetEnumerator
+  fullName: Runly.ResultLog.GetEnumerator
+  type: Property
+  source:
+    id: GetEnumerator
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 63
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for GetEnumerator.\n"
+  example: []
+  syntax:
+    content: public MethodOutcome GetEnumerator { get; }
+    parameters: []
+    return:
+      type: Runly.MethodOutcome
+    content.vb: Public ReadOnly Property GetEnumerator As MethodOutcome
+  overload: Runly.ResultLog.GetEnumerator*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.FinalizeAsync
+  commentId: P:Runly.ResultLog.FinalizeAsync
+  id: FinalizeAsync
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: FinalizeAsync
+  nameWithType: ResultLog.FinalizeAsync
+  fullName: Runly.ResultLog.FinalizeAsync
+  type: Property
+  source:
+    id: FinalizeAsync
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 69
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for FinalizeAsync.\n"
+  example: []
+  syntax:
+    content: public MethodOutcome FinalizeAsync { get; }
+    parameters: []
+    return:
+      type: Runly.MethodOutcome
+    content.vb: Public ReadOnly Property FinalizeAsync As MethodOutcome
+  overload: Runly.ResultLog.FinalizeAsync*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.Items
+  commentId: P:Runly.ResultLog.Items
+  id: Items
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: ResultLog.Items
+  fullName: Runly.ResultLog.Items
+  type: Property
+  source:
+    id: Items
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 75
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nIndividual items results\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ItemResult> Items { get; }
+    parameters: []
+    return:
+      type: IEnumerable{Runly.ItemResult}
+    content.vb: Public ReadOnly Property Items As IEnumerable(Of ItemResult)
+  overload: Runly.ResultLog.Items*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.ItemSummary
+  commentId: P:Runly.ResultLog.ItemSummary
+  id: ItemSummary
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: ItemSummary
+  nameWithType: ResultLog.ItemSummary
+  fullName: Runly.ResultLog.ItemSummary
+  type: Property
+  source:
+    id: ItemSummary
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 80
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets a list of item result categories and counts.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ItemResultSummary> ItemSummary { get; }
+    parameters: []
+    return:
+      type: IEnumerable{Runly.ItemResultSummary}
+    content.vb: Public ReadOnly Property ItemSummary As IEnumerable(Of ItemResultSummary)
+  overload: Runly.ResultLog.ItemSummary*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.SuccessfulItems
+  commentId: P:Runly.ResultLog.SuccessfulItems
+  id: SuccessfulItems
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: SuccessfulItems
+  nameWithType: ResultLog.SuccessfulItems
+  fullName: Runly.ResultLog.SuccessfulItems
+  type: Property
+  source:
+    id: SuccessfulItems
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 86
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets a list of items that have completed successfully.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ItemResult> SuccessfulItems { get; }
+    parameters: []
+    return:
+      type: IEnumerable{Runly.ItemResult}
+    content.vb: Public ReadOnly Property SuccessfulItems As IEnumerable(Of ItemResult)
+  overload: Runly.ResultLog.SuccessfulItems*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.FailedItems
+  commentId: P:Runly.ResultLog.FailedItems
+  id: FailedItems
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: FailedItems
+  nameWithType: ResultLog.FailedItems
+  fullName: Runly.ResultLog.FailedItems
+  type: Property
+  source:
+    id: FailedItems
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 92
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets a list of items that completed unsuccessfully.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ItemResult> FailedItems { get; }
+    parameters: []
+    return:
+      type: IEnumerable{Runly.ItemResult}
+    content.vb: Public ReadOnly Property FailedItems As IEnumerable(Of ItemResult)
+  overload: Runly.ResultLog.FailedItems*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.FailedItemsThatThrewExceptions
+  commentId: P:Runly.ResultLog.FailedItemsThatThrewExceptions
+  id: FailedItemsThatThrewExceptions
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: FailedItemsThatThrewExceptions
+  nameWithType: ResultLog.FailedItemsThatThrewExceptions
+  fullName: Runly.ResultLog.FailedItemsThatThrewExceptions
+  type: Property
+  source:
+    id: FailedItemsThatThrewExceptions
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 98
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nGets a list of <xref href=\"Runly.ResultLog.FailedItems\" data-throw-if-not-resolved=\"false\"></xref> that threw an exception instead of returning a <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ItemResult> FailedItemsThatThrewExceptions { get; }
+    parameters: []
+    return:
+      type: IEnumerable{Runly.ItemResult}
+    content.vb: Public ReadOnly Property FailedItemsThatThrewExceptions As IEnumerable(Of ItemResult)
+  overload: Runly.ResultLog.FailedItemsThatThrewExceptions*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.TotalItemCount
+  commentId: P:Runly.ResultLog.TotalItemCount
+  id: TotalItemCount
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: TotalItemCount
+  nameWithType: ResultLog.TotalItemCount
+  fullName: Runly.ResultLog.TotalItemCount
+  type: Property
+  source:
+    id: TotalItemCount
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 109
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe total number of items to be processed.\n"
+  remarks: "\n<xref href=\"Runly.ResultLog.TotalItemCount\" data-throw-if-not-resolved=\"false\"></xref> will be null when a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> sets <see cref=\"!:JobOptions.CanCountItems\"></see> to false. The difference between\nthis total and the sum of <xref href=\"Runly.ResultLog.SuccessfulItemCount\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.ResultLog.FailedItemCount\" data-throw-if-not-resolved=\"false\"></xref> is the number of items\nyet to be processed or not processed in the case of a job that ended in the <xref href=\"Runly.Disposition.Failed\" data-throw-if-not-resolved=\"false\"></xref> state.\n"
+  example: []
+  syntax:
+    content: public int? TotalItemCount { get; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public ReadOnly Property TotalItemCount As Integer?
+  overload: Runly.ResultLog.TotalItemCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.SuccessfulItemCount
+  commentId: P:Runly.ResultLog.SuccessfulItemCount
+  id: SuccessfulItemCount
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: SuccessfulItemCount
+  nameWithType: ResultLog.SuccessfulItemCount
+  fullName: Runly.ResultLog.SuccessfulItemCount
+  type: Property
+  source:
+    id: SuccessfulItemCount
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 114
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of items processed with a successful (<xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int SuccessfulItemCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property SuccessfulItemCount As Integer
+  overload: Runly.ResultLog.SuccessfulItemCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.FailedItemCount
+  commentId: P:Runly.ResultLog.FailedItemCount
+  id: FailedItemCount
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: FailedItemCount
+  nameWithType: ResultLog.FailedItemCount
+  fullName: Runly.ResultLog.FailedItemCount
+  type: Property
+  source:
+    id: FailedItemCount
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 119
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of items processed with an unsuccessful (not <xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public int FailedItemCount { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property FailedItemCount As Integer
+  overload: Runly.ResultLog.FailedItemCount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.Output
+  commentId: P:Runly.ResultLog.Output
+  id: Output
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: Output
+  nameWithType: ResultLog.Output
+  fullName: Runly.ResultLog.Output
+  type: Property
+  source:
+    id: Output
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 124
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe output from FinalizeAsync\n"
+  example: []
+  syntax:
+    content: public object Output { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property Output As Object
+  overload: Runly.ResultLog.Output*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ResultLog.#ctor(Runly.Execution)
+  commentId: M:Runly.ResultLog.#ctor(Runly.Execution)
+  id: '#ctor(Runly.Execution)'
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: ResultLog(Execution)
+  nameWithType: ResultLog.ResultLog(Execution)
+  fullName: Runly.ResultLog.ResultLog(Runly.Execution)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 126
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public ResultLog(Execution execution)
+    parameters:
+    - id: execution
+      type: Runly.Execution
+    content.vb: Public Sub New(execution As Execution)
+  overload: Runly.ResultLog.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.ResultLog.#ctor(IEnumerable{Runly.ItemResult},Runly.Disposition,System.Nullable{System.Int32},Dictionary{Runly.JobMethod,Runly.MethodOutcome},System.Object)
+  commentId: M:Runly.ResultLog.#ctor(IEnumerable{Runly.ItemResult},Runly.Disposition,System.Nullable{System.Int32},Dictionary{Runly.JobMethod,Runly.MethodOutcome},System.Object)
+  id: '#ctor(IEnumerable{Runly.ItemResult},Runly.Disposition,System.Nullable{System.Int32},Dictionary{Runly.JobMethod,Runly.MethodOutcome},System.Object)'
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: ResultLog(IEnumerable<ItemResult>, Disposition, Nullable<Int32>, Dictionary<JobMethod, MethodOutcome>, Object)
+  nameWithType: ResultLog.ResultLog(IEnumerable<ItemResult>, Disposition, Nullable<Int32>, Dictionary<JobMethod, MethodOutcome>, Object)
+  fullName: Runly.ResultLog.ResultLog(IEnumerable<Runly.ItemResult>, Runly.Disposition, System.Nullable<System.Int32>, Dictionary<Runly.JobMethod, Runly.MethodOutcome>, System.Object)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 135
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public ResultLog(IEnumerable<ItemResult> items, Disposition disposition, int? totalItemCount, Dictionary<JobMethod, MethodOutcome> methods, object output)
+    parameters:
+    - id: items
+      type: IEnumerable{Runly.ItemResult}
+    - id: disposition
+      type: Runly.Disposition
+    - id: totalItemCount
+      type: System.Nullable{System.Int32}
+    - id: methods
+      type: Dictionary{Runly.JobMethod,Runly.MethodOutcome}
+    - id: output
+      type: System.Object
+    content.vb: Public Sub New(items As IEnumerable(Of ItemResult), disposition As Disposition, totalItemCount As Integer?, methods As Dictionary(Of JobMethod, MethodOutcome), output As Object)
+  overload: Runly.ResultLog.#ctor*
+  nameWithType.vb: ResultLog.ResultLog(IEnumerable(Of ItemResult), Disposition, Nullable(Of Int32), Dictionary(Of JobMethod, MethodOutcome), Object)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.ResultLog.ResultLog(IEnumerable(Of Runly.ItemResult), Runly.Disposition, System.Nullable(Of System.Int32), Dictionary(Of Runly.JobMethod, Runly.MethodOutcome), System.Object)
+  name.vb: ResultLog(IEnumerable(Of ItemResult), Disposition, Nullable(Of Int32), Dictionary(Of JobMethod, MethodOutcome), Object)
+- uid: Runly.ResultLog.ToString
+  commentId: M:Runly.ResultLog.ToString
+  id: ToString
+  parent: Runly.ResultLog
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ResultLog.ToString()
+  fullName: Runly.ResultLog.ToString()
+  type: Method
+  source:
+    id: ToString
+    path: /github/workspace/src/Core/ResultLog.cs
+    startLine: 175
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: Runly.ResultLog.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ResultLog.ConfigPath*
+  commentId: Overload:Runly.ResultLog.ConfigPath
+  name: ConfigPath
+  nameWithType: ResultLog.ConfigPath
+  fullName: Runly.ResultLog.ConfigPath
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ResultLog.StartedAt*
+  commentId: Overload:Runly.ResultLog.StartedAt
+  name: StartedAt
+  nameWithType: ResultLog.StartedAt
+  fullName: Runly.ResultLog.StartedAt
+- uid: System.Nullable{DateTime}
+  commentId: '!:System.Nullable{DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ResultLog.CompletedAt*
+  commentId: Overload:Runly.ResultLog.CompletedAt
+  name: CompletedAt
+  nameWithType: ResultLog.CompletedAt
+  fullName: Runly.ResultLog.CompletedAt
+- uid: Runly.ResultLog.Disposition*
+  commentId: Overload:Runly.ResultLog.Disposition
+  name: Disposition
+  nameWithType: ResultLog.Disposition
+  fullName: Runly.ResultLog.Disposition
+- uid: Runly.Disposition
+  commentId: T:Runly.Disposition
+  parent: Runly
+  name: Disposition
+  nameWithType: Disposition
+  fullName: Runly.Disposition
+- uid: Runly.MethodOutcome
+  commentId: T:Runly.MethodOutcome
+  parent: Runly
+  name: MethodOutcome
+  nameWithType: MethodOutcome
+  fullName: Runly.MethodOutcome
+- uid: Runly.ResultLog.Methods*
+  commentId: Overload:Runly.ResultLog.Methods
+  name: Methods
+  nameWithType: ResultLog.Methods
+  fullName: Runly.ResultLog.Methods
+- uid: Dictionary{Runly.JobMethod,Runly.MethodOutcome}
+  commentId: '!:Dictionary{Runly.JobMethod,Runly.MethodOutcome}'
+  definition: Dictionary`2
+  name: Dictionary<JobMethod, MethodOutcome>
+  nameWithType: Dictionary<JobMethod, MethodOutcome>
+  fullName: Dictionary<Runly.JobMethod, Runly.MethodOutcome>
+  nameWithType.vb: Dictionary(Of JobMethod, MethodOutcome)
+  fullName.vb: Dictionary(Of Runly.JobMethod, Runly.MethodOutcome)
+  name.vb: Dictionary(Of JobMethod, MethodOutcome)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.JobMethod
+    name: JobMethod
+    nameWithType: JobMethod
+    fullName: Runly.JobMethod
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Runly.MethodOutcome
+    name: MethodOutcome
+    nameWithType: MethodOutcome
+    fullName: Runly.MethodOutcome
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.JobMethod
+    name: JobMethod
+    nameWithType: JobMethod
+    fullName: Runly.JobMethod
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Runly.MethodOutcome
+    name: MethodOutcome
+    nameWithType: MethodOutcome
+    fullName: Runly.MethodOutcome
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ResultLog.InitializeAsync*
+  commentId: Overload:Runly.ResultLog.InitializeAsync
+  name: InitializeAsync
+  nameWithType: ResultLog.InitializeAsync
+  fullName: Runly.ResultLog.InitializeAsync
+- uid: Runly.ResultLog.GetItemsAsync*
+  commentId: Overload:Runly.ResultLog.GetItemsAsync
+  name: GetItemsAsync
+  nameWithType: ResultLog.GetItemsAsync
+  fullName: Runly.ResultLog.GetItemsAsync
+- uid: Runly.ResultLog.Count*
+  commentId: Overload:Runly.ResultLog.Count
+  name: Count
+  nameWithType: ResultLog.Count
+  fullName: Runly.ResultLog.Count
+- uid: Runly.ResultLog.GetEnumerator*
+  commentId: Overload:Runly.ResultLog.GetEnumerator
+  name: GetEnumerator
+  nameWithType: ResultLog.GetEnumerator
+  fullName: Runly.ResultLog.GetEnumerator
+- uid: Runly.ResultLog.FinalizeAsync*
+  commentId: Overload:Runly.ResultLog.FinalizeAsync
+  name: FinalizeAsync
+  nameWithType: ResultLog.FinalizeAsync
+  fullName: Runly.ResultLog.FinalizeAsync
+- uid: Runly.ResultLog.Items*
+  commentId: Overload:Runly.ResultLog.Items
+  name: Items
+  nameWithType: ResultLog.Items
+  fullName: Runly.ResultLog.Items
+- uid: IEnumerable{Runly.ItemResult}
+  commentId: '!:IEnumerable{Runly.ItemResult}'
+  definition: IEnumerable`1
+  name: IEnumerable<ItemResult>
+  nameWithType: IEnumerable<ItemResult>
+  fullName: IEnumerable<Runly.ItemResult>
+  nameWithType.vb: IEnumerable(Of ItemResult)
+  fullName.vb: IEnumerable(Of Runly.ItemResult)
+  name.vb: IEnumerable(Of ItemResult)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.ItemResult
+    name: ItemResult
+    nameWithType: ItemResult
+    fullName: Runly.ItemResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.ItemResult
+    name: ItemResult
+    nameWithType: ItemResult
+    fullName: Runly.ItemResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ResultLog.ItemSummary*
+  commentId: Overload:Runly.ResultLog.ItemSummary
+  name: ItemSummary
+  nameWithType: ResultLog.ItemSummary
+  fullName: Runly.ResultLog.ItemSummary
+- uid: IEnumerable{Runly.ItemResultSummary}
+  commentId: '!:IEnumerable{Runly.ItemResultSummary}'
+  definition: IEnumerable`1
+  name: IEnumerable<ItemResultSummary>
+  nameWithType: IEnumerable<ItemResultSummary>
+  fullName: IEnumerable<Runly.ItemResultSummary>
+  nameWithType.vb: IEnumerable(Of ItemResultSummary)
+  fullName.vb: IEnumerable(Of Runly.ItemResultSummary)
+  name.vb: IEnumerable(Of ItemResultSummary)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.ItemResultSummary
+    name: ItemResultSummary
+    nameWithType: ItemResultSummary
+    fullName: Runly.ItemResultSummary
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.ItemResultSummary
+    name: ItemResultSummary
+    nameWithType: ItemResultSummary
+    fullName: Runly.ItemResultSummary
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ResultLog.SuccessfulItems*
+  commentId: Overload:Runly.ResultLog.SuccessfulItems
+  name: SuccessfulItems
+  nameWithType: ResultLog.SuccessfulItems
+  fullName: Runly.ResultLog.SuccessfulItems
+- uid: Runly.ResultLog.FailedItems*
+  commentId: Overload:Runly.ResultLog.FailedItems
+  name: FailedItems
+  nameWithType: ResultLog.FailedItems
+  fullName: Runly.ResultLog.FailedItems
+- uid: Runly.ResultLog.FailedItems
+  commentId: P:Runly.ResultLog.FailedItems
+  isExternal: true
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
+- uid: Runly.ResultLog.FailedItemsThatThrewExceptions*
+  commentId: Overload:Runly.ResultLog.FailedItemsThatThrewExceptions
+  name: FailedItemsThatThrewExceptions
+  nameWithType: ResultLog.FailedItemsThatThrewExceptions
+  fullName: Runly.ResultLog.FailedItemsThatThrewExceptions
+- uid: Runly.ResultLog.TotalItemCount
+  commentId: P:Runly.ResultLog.TotalItemCount
+  isExternal: true
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
+- uid: Runly.ResultLog.SuccessfulItemCount
+  commentId: P:Runly.ResultLog.SuccessfulItemCount
+  isExternal: true
+- uid: Runly.ResultLog.FailedItemCount
+  commentId: P:Runly.ResultLog.FailedItemCount
+  isExternal: true
+- uid: Runly.Disposition.Failed
+  commentId: F:Runly.Disposition.Failed
+  isExternal: true
+- uid: Runly.ResultLog.TotalItemCount*
+  commentId: Overload:Runly.ResultLog.TotalItemCount
+  name: TotalItemCount
+  nameWithType: ResultLog.TotalItemCount
+  fullName: Runly.ResultLog.TotalItemCount
+- uid: System.Nullable{System.Int32}
+  commentId: '!:System.Nullable{System.Int32}'
+  definition: System.Nullable`1
+  name: Nullable<Int32>
+  nameWithType: Nullable<Int32>
+  fullName: System.Nullable<System.Int32>
+  nameWithType.vb: Nullable(Of Int32)
+  fullName.vb: System.Nullable(Of System.Int32)
+  name.vb: Nullable(Of Int32)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Result.IsSuccessful
+  commentId: P:Runly.Result.IsSuccessful
+  isExternal: true
+- uid: Runly.ResultLog.SuccessfulItemCount*
+  commentId: Overload:Runly.ResultLog.SuccessfulItemCount
+  name: SuccessfulItemCount
+  nameWithType: ResultLog.SuccessfulItemCount
+  fullName: Runly.ResultLog.SuccessfulItemCount
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Runly.ResultLog.FailedItemCount*
+  commentId: Overload:Runly.ResultLog.FailedItemCount
+  name: FailedItemCount
+  nameWithType: ResultLog.FailedItemCount
+  fullName: Runly.ResultLog.FailedItemCount
+- uid: Runly.ResultLog.Output*
+  commentId: Overload:Runly.ResultLog.Output
+  name: Output
+  nameWithType: ResultLog.Output
+  fullName: Runly.ResultLog.Output
+- uid: Runly.ResultLog.#ctor*
+  commentId: Overload:Runly.ResultLog.#ctor
+  name: ResultLog
+  nameWithType: ResultLog.ResultLog
+  fullName: Runly.ResultLog.ResultLog
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: Runly.ResultLog.ToString*
+  commentId: Overload:Runly.ResultLog.ToString
+  name: ToString
+  nameWithType: ResultLog.ToString
+  fullName: Runly.ResultLog.ToString

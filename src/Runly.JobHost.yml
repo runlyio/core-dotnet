@@ -1,0 +1,301 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JobHost
+  commentId: T:Runly.JobHost
+  id: JobHost
+  parent: Runly
+  children:
+  - Runly.JobHost.CreateDefaultBuilder(System.String[])
+  - Runly.JobHost.CreateDefaultBuilder(System.String[],Assembly[])
+  - Runly.JobHost.RunJobAsync(IHost)
+  - Runly.JobHost.RunJobAsync(IHost,CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: JobHost
+  nameWithType: JobHost
+  fullName: Runly.JobHost
+  type: Class
+  source:
+    id: JobHost
+    path: /github/workspace/src/Job/JobHost.cs
+    startLine: 14
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nProvides convenience methods for creating instances of <see cref=\"!:IHostBuilder\"></see> with pre-configured defaults.\n"
+  example: []
+  syntax:
+    content: 'public static class JobHost : object'
+    content.vb: >-
+      Public Module JobHost
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: Runly.JobHost.CreateDefaultBuilder(System.String[])
+  commentId: M:Runly.JobHost.CreateDefaultBuilder(System.String[])
+  id: CreateDefaultBuilder(System.String[])
+  parent: Runly.JobHost
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultBuilder(String[])
+  nameWithType: JobHost.CreateDefaultBuilder(String[])
+  fullName: Runly.JobHost.CreateDefaultBuilder(System.String[])
+  type: Method
+  source:
+    id: CreateDefaultBuilder
+    path: /github/workspace/src/Job/JobHost.cs
+    startLine: 35
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nInitializes a new instance of the <see cref=\"!:HostBuilder\"></see> class with pre-configured defaults.\n"
+  remarks: "\nThe following defaults are applied to the returned <see cref=\"!:HostBuilder\"></see>:\n<ul><li>set the <see cref=\"!:IHostEnvironment.ContentRootPath\"></see> to the result of <see cref=\"!:Directory.GetCurrentDirectory()\"></see></li><li>load host <see cref=\"!:IConfiguration\"></see> from &quot;DOTNET_&quot; prefixed environment variables</li><li>load host <see cref=\"!:IConfiguration\"></see> from supplied command line args</li><li>load app <see cref=\"!:IConfiguration\"></see> from &apos;appsettings.json&apos; and &apos;appsettings.[<see cref=\"!:IHostEnvironment.EnvironmentName\"></see>].json&apos;</li><li>load app <see cref=\"!:IConfiguration\"></see> from User Secrets when <see cref=\"!:IHostEnvironment.EnvironmentName\"></see> is &apos;Development&apos; using the entry assembly</li><li>load app <see cref=\"!:IConfiguration\"></see> from environment variables</li><li>load app <see cref=\"!:IConfiguration\"></see> from supplied command line args</li><li>configure the <see cref=\"!:ILoggerFactory\"></see> to log to the console, debug, and event source output</li><li>enables scope validation on the dependency injection container when <see cref=\"!:IHostEnvironment.EnvironmentName\"></see> is &apos;Development&apos;</li></ul>\n"
+  example: []
+  syntax:
+    content: public static IHostBuilder CreateDefaultBuilder(string[] args)
+    parameters:
+    - id: args
+      type: System.String[]
+      description: The command line args.
+    return:
+      type: IHostBuilder
+      description: The initialized <see cref="!:IHostBuilder"></see>.
+    content.vb: Public Shared Function CreateDefaultBuilder(args As String()) As IHostBuilder
+  overload: Runly.JobHost.CreateDefaultBuilder*
+  nameWithType.vb: JobHost.CreateDefaultBuilder(String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.JobHost.CreateDefaultBuilder(System.String())
+  name.vb: CreateDefaultBuilder(String())
+- uid: Runly.JobHost.CreateDefaultBuilder(System.String[],Assembly[])
+  commentId: M:Runly.JobHost.CreateDefaultBuilder(System.String[],Assembly[])
+  id: CreateDefaultBuilder(System.String[],Assembly[])
+  parent: Runly.JobHost
+  langs:
+  - csharp
+  - vb
+  name: CreateDefaultBuilder(String[], Assembly[])
+  nameWithType: JobHost.CreateDefaultBuilder(String[], Assembly[])
+  fullName: Runly.JobHost.CreateDefaultBuilder(System.String[], Assembly[])
+  type: Method
+  source:
+    id: CreateDefaultBuilder
+    path: /github/workspace/src/Job/JobHost.cs
+    startLine: 60
+  assemblies:
+  - Runly
+  namespace: Runly
+  summary: "\nInitializes a new instance of the <see cref=\"!:HostBuilder\"></see> class with pre-configured defaults.\n"
+  remarks: "\nThe following defaults are applied to the returned <see cref=\"!:HostBuilder\"></see>:\n<ul><li>set the <see cref=\"!:IHostEnvironment.ContentRootPath\"></see> to the result of <see cref=\"!:Directory.GetCurrentDirectory()\"></see></li><li>load host <see cref=\"!:IConfiguration\"></see> from &quot;DOTNET_&quot; prefixed environment variables</li><li>load host <see cref=\"!:IConfiguration\"></see> from supplied command line args</li><li>load app <see cref=\"!:IConfiguration\"></see> from &apos;appsettings.json&apos; and &apos;appsettings.[<see cref=\"!:IHostEnvironment.EnvironmentName\"></see>].json&apos;</li><li>load app <see cref=\"!:IConfiguration\"></see> from User Secrets when <see cref=\"!:IHostEnvironment.EnvironmentName\"></see> is &apos;Development&apos; using the entry assembly</li><li>load app <see cref=\"!:IConfiguration\"></see> from environment variables</li><li>load app <see cref=\"!:IConfiguration\"></see> from supplied command line args</li><li>configure the <see cref=\"!:ILoggerFactory\"></see> to log to the console, debug, and event source output</li><li>enables scope validation on the dependency injection container when <see cref=\"!:IHostEnvironment.EnvironmentName\"></see> is &apos;Development&apos;</li></ul>\n"
+  example: []
+  syntax:
+    content: public static IHostBuilder CreateDefaultBuilder(string[] args, params Assembly[] jobAssemblies)
+    parameters:
+    - id: args
+      type: System.String[]
+      description: The command line args.
+    - id: jobAssemblies
+      type: Assembly[]
+      description: The assemblies in which to search for <xref href="Runly.IJob" data-throw-if-not-resolved="false"></xref>s.
+    return:
+      type: IHostBuilder
+      description: The initialized <see cref="!:IHostBuilder"></see>.
+    content.vb: Public Shared Function CreateDefaultBuilder(args As String(), ParamArray jobAssemblies As Assembly()) As IHostBuilder
+  overload: Runly.JobHost.CreateDefaultBuilder*
+  nameWithType.vb: JobHost.CreateDefaultBuilder(String(), Assembly())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: Runly.JobHost.CreateDefaultBuilder(System.String(), Assembly())
+  name.vb: CreateDefaultBuilder(String(), Assembly())
+- uid: Runly.JobHost.RunJobAsync(IHost)
+  commentId: M:Runly.JobHost.RunJobAsync(IHost)
+  id: RunJobAsync(IHost)
+  isExtensionMethod: true
+  parent: Runly.JobHost
+  langs:
+  - csharp
+  - vb
+  name: RunJobAsync(IHost)
+  nameWithType: JobHost.RunJobAsync(IHost)
+  fullName: Runly.JobHost.RunJobAsync(IHost)
+  type: Method
+  source:
+    id: RunJobAsync
+    path: /github/workspace/src/Job/JobHost.cs
+    startLine: 67
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static Task RunJobAsync(this IHost host)
+    parameters:
+    - id: host
+      type: IHost
+    return:
+      type: Task
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RunJobAsync(host As IHost) As Task
+  overload: Runly.JobHost.RunJobAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.JobHost.RunJobAsync(IHost,CancellationToken)
+  commentId: M:Runly.JobHost.RunJobAsync(IHost,CancellationToken)
+  id: RunJobAsync(IHost,CancellationToken)
+  isExtensionMethod: true
+  parent: Runly.JobHost
+  langs:
+  - csharp
+  - vb
+  name: RunJobAsync(IHost, CancellationToken)
+  nameWithType: JobHost.RunJobAsync(IHost, CancellationToken)
+  fullName: Runly.JobHost.RunJobAsync(IHost, CancellationToken)
+  type: Method
+  source:
+    id: RunJobAsync
+    path: /github/workspace/src/Job/JobHost.cs
+    startLine: 72
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public static Task RunJobAsync(this IHost host, CancellationToken cancellationToken)
+    parameters:
+    - id: host
+      type: IHost
+    - id: cancellationToken
+      type: CancellationToken
+    return:
+      type: Task
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function RunJobAsync(host As IHost, cancellationToken As CancellationToken) As Task
+  overload: Runly.JobHost.RunJobAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.JobHost.CreateDefaultBuilder*
+  commentId: Overload:Runly.JobHost.CreateDefaultBuilder
+  name: CreateDefaultBuilder
+  nameWithType: JobHost.CreateDefaultBuilder
+  fullName: Runly.JobHost.CreateDefaultBuilder
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: IHostBuilder
+  isExternal: true
+  name: IHostBuilder
+  nameWithType: IHostBuilder
+  fullName: IHostBuilder
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
+- uid: Assembly[]
+  isExternal: true
+  name: Assembly[]
+  nameWithType: Assembly[]
+  fullName: Assembly[]
+  nameWithType.vb: Assembly()
+  fullName.vb: Assembly()
+  name.vb: Assembly()
+  spec.csharp:
+  - uid: Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: Assembly
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: Assembly
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: Runly.JobHost.RunJobAsync*
+  commentId: Overload:Runly.JobHost.RunJobAsync
+  name: RunJobAsync
+  nameWithType: JobHost.RunJobAsync
+  fullName: Runly.JobHost.RunJobAsync
+- uid: IHost
+  isExternal: true
+  name: IHost
+  nameWithType: IHost
+  fullName: IHost
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken

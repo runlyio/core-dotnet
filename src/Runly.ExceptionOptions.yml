@@ -1,0 +1,158 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ExceptionOptions
+  commentId: T:Runly.ExceptionOptions
+  id: ExceptionOptions
+  parent: Runly
+  children:
+  - Runly.ExceptionOptions.Default
+  - Runly.ExceptionOptions.IndentSpaces
+  - Runly.ExceptionOptions.OmitNullProperties
+  langs:
+  - csharp
+  - vb
+  name: ExceptionOptions
+  nameWithType: ExceptionOptions
+  fullName: Runly.ExceptionOptions
+  type: Struct
+  source:
+    id: ExceptionOptions
+    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    startLine: 137
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public struct ExceptionOptions
+    content.vb: Public Structure ExceptionOptions
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: Runly.ExceptionOptions.Default
+  commentId: F:Runly.ExceptionOptions.Default
+  id: Default
+  parent: Runly.ExceptionOptions
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: ExceptionOptions.Default
+  fullName: Runly.ExceptionOptions.Default
+  type: Field
+  source:
+    id: Default
+    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    startLine: 139
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public static readonly ExceptionOptions Default
+    return:
+      type: Runly.ExceptionOptions
+    content.vb: Public Shared ReadOnly Default As ExceptionOptions
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: Runly.ExceptionOptions.IndentSpaces
+  commentId: P:Runly.ExceptionOptions.IndentSpaces
+  id: IndentSpaces
+  parent: Runly.ExceptionOptions
+  langs:
+  - csharp
+  - vb
+  name: IndentSpaces
+  nameWithType: ExceptionOptions.IndentSpaces
+  fullName: Runly.ExceptionOptions.IndentSpaces
+  type: Property
+  source:
+    id: IndentSpaces
+    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    startLine: 157
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public int IndentSpaces { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IndentSpaces As Integer
+  overload: Runly.ExceptionOptions.IndentSpaces*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExceptionOptions.OmitNullProperties
+  commentId: P:Runly.ExceptionOptions.OmitNullProperties
+  id: OmitNullProperties
+  parent: Runly.ExceptionOptions
+  langs:
+  - csharp
+  - vb
+  name: OmitNullProperties
+  nameWithType: ExceptionOptions.OmitNullProperties
+  fullName: Runly.ExceptionOptions.OmitNullProperties
+  type: Property
+  source:
+    id: OmitNullProperties
+    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    startLine: 159
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public bool OmitNullProperties { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property OmitNullProperties As Boolean
+  overload: Runly.ExceptionOptions.OmitNullProperties*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.ExceptionOptions
+  commentId: T:Runly.ExceptionOptions
+  parent: Runly
+  name: ExceptionOptions
+  nameWithType: ExceptionOptions
+  fullName: Runly.ExceptionOptions
+- uid: Runly.ExceptionOptions.IndentSpaces*
+  commentId: Overload:Runly.ExceptionOptions.IndentSpaces
+  name: IndentSpaces
+  nameWithType: ExceptionOptions.IndentSpaces
+  fullName: Runly.ExceptionOptions.IndentSpaces
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Runly.ExceptionOptions.OmitNullProperties*
+  commentId: Overload:Runly.ExceptionOptions.OmitNullProperties
+  name: OmitNullProperties
+  nameWithType: ExceptionOptions.OmitNullProperties
+  fullName: Runly.ExceptionOptions.OmitNullProperties
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

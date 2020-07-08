@@ -1,0 +1,280 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Processing.IItemSource`1
+  commentId: T:Runly.Processing.IItemSource`1
+  id: IItemSource`1
+  parent: Runly.Processing
+  children:
+  - Runly.Processing.IItemSource`1.GetItemIdAsync(`0)
+  - Runly.Processing.IItemSource`1.GetItemsAsync
+  langs:
+  - csharp
+  - vb
+  name: IItemSource<TItem>
+  nameWithType: IItemSource<TItem>
+  fullName: Runly.Processing.IItemSource<TItem>
+  type: Interface
+  source:
+    id: IItemSource
+    path: /github/workspace/src/Job/Processing/IItemSource.cs
+    startLine: 5
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: public interface IItemSource<TItem>
+    typeParameters:
+    - id: TItem
+    content.vb: Public Interface IItemSource(Of TItem)
+  nameWithType.vb: IItemSource(Of TItem)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: Runly.Processing.IItemSource(Of TItem)
+  name.vb: IItemSource(Of TItem)
+- uid: Runly.Processing.IItemSource`1.GetItemsAsync
+  commentId: M:Runly.Processing.IItemSource`1.GetItemsAsync
+  id: GetItemsAsync
+  parent: Runly.Processing.IItemSource`1
+  langs:
+  - csharp
+  - vb
+  name: GetItemsAsync()
+  nameWithType: IItemSource<TItem>.GetItemsAsync()
+  fullName: Runly.Processing.IItemSource<TItem>.GetItemsAsync()
+  type: Method
+  source:
+    id: GetItemsAsync
+    path: /github/workspace/src/Job/Processing/IItemSource.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: IAsyncEnumerable<TItem> GetItemsAsync()
+    return:
+      type: IAsyncEnumerable{{TItem}}
+    content.vb: Function GetItemsAsync As IAsyncEnumerable(Of TItem)
+  overload: Runly.Processing.IItemSource`1.GetItemsAsync*
+  nameWithType.vb: IItemSource(Of TItem).GetItemsAsync()
+  fullName.vb: Runly.Processing.IItemSource(Of TItem).GetItemsAsync()
+- uid: Runly.Processing.IItemSource`1.GetItemIdAsync(`0)
+  commentId: M:Runly.Processing.IItemSource`1.GetItemIdAsync(`0)
+  id: GetItemIdAsync(`0)
+  parent: Runly.Processing.IItemSource`1
+  langs:
+  - csharp
+  - vb
+  name: GetItemIdAsync(TItem)
+  nameWithType: IItemSource<TItem>.GetItemIdAsync(TItem)
+  fullName: Runly.Processing.IItemSource<TItem>.GetItemIdAsync(TItem)
+  type: Method
+  source:
+    id: GetItemIdAsync
+    path: /github/workspace/src/Job/Processing/IItemSource.cs
+    startLine: 9
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: Task<string> GetItemIdAsync(TItem item)
+    parameters:
+    - id: item
+      type: '{TItem}'
+    return:
+      type: Task{System.String}
+    content.vb: Function GetItemIdAsync(item As TItem) As Task(Of String)
+  overload: Runly.Processing.IItemSource`1.GetItemIdAsync*
+  nameWithType.vb: IItemSource(Of TItem).GetItemIdAsync(TItem)
+  fullName.vb: Runly.Processing.IItemSource(Of TItem).GetItemIdAsync(TItem)
+references:
+- uid: Runly.Processing
+  commentId: N:Runly.Processing
+  name: Runly.Processing
+  nameWithType: Runly.Processing
+  fullName: Runly.Processing
+- uid: Runly.Processing.IItemSource`1.GetItemsAsync*
+  commentId: Overload:Runly.Processing.IItemSource`1.GetItemsAsync
+  name: GetItemsAsync
+  nameWithType: IItemSource<TItem>.GetItemsAsync
+  fullName: Runly.Processing.IItemSource<TItem>.GetItemsAsync
+  nameWithType.vb: IItemSource(Of TItem).GetItemsAsync
+  fullName.vb: Runly.Processing.IItemSource(Of TItem).GetItemsAsync
+- uid: IAsyncEnumerable{{TItem}}
+  commentId: '!:IAsyncEnumerable{`1}'
+  definition: IAsyncEnumerable`1
+  name: IAsyncEnumerable<TItem>
+  nameWithType: IAsyncEnumerable<TItem>
+  fullName: IAsyncEnumerable<TItem>
+  nameWithType.vb: IAsyncEnumerable(Of TItem)
+  fullName.vb: IAsyncEnumerable(Of TItem)
+  name.vb: IAsyncEnumerable(Of TItem)
+  spec.csharp:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IAsyncEnumerable`1
+  isExternal: true
+  name: IAsyncEnumerable<>
+  nameWithType: IAsyncEnumerable<>
+  fullName: IAsyncEnumerable<>
+  nameWithType.vb: IAsyncEnumerable(Of )
+  fullName.vb: IAsyncEnumerable(Of )
+  name.vb: IAsyncEnumerable(Of )
+  spec.csharp:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerable`1
+    name: IAsyncEnumerable
+    nameWithType: IAsyncEnumerable
+    fullName: IAsyncEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.IItemSource`1.GetItemIdAsync*
+  commentId: Overload:Runly.Processing.IItemSource`1.GetItemIdAsync
+  name: GetItemIdAsync
+  nameWithType: IItemSource<TItem>.GetItemIdAsync
+  fullName: Runly.Processing.IItemSource<TItem>.GetItemIdAsync
+  nameWithType.vb: IItemSource(Of TItem).GetItemIdAsync
+  fullName.vb: Runly.Processing.IItemSource(Of TItem).GetItemIdAsync
+- uid: '{TItem}'
+  commentId: '!:TItem'
+  definition: TItem
+  name: TItem
+  nameWithType: TItem
+  fullName: TItem
+- uid: Task{System.String}
+  commentId: '!:Task{System.String}'
+  definition: Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TItem
+  name: TItem
+  nameWithType: TItem
+  fullName: TItem
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

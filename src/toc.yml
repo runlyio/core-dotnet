@@ -1,0 +1,241 @@
+### YamlMime:TableOfContent
+- uid: Runly
+  name: Runly
+  items:
+  - uid: Runly.AsyncAutoResetEvent
+    name: AsyncAutoResetEvent
+  - uid: Runly.AsyncEnumerableExtensions
+    name: AsyncEnumerableExtensions
+  - uid: Runly.AsyncEnumerableWrapper`1
+    name: AsyncEnumerableWrapper<T>
+    name.vb: AsyncEnumerableWrapper(Of T)
+  - uid: Runly.AsyncEnumeratorWrapper`1
+    name: AsyncEnumeratorWrapper<T>
+    name.vb: AsyncEnumeratorWrapper(Of T)
+  - uid: Runly.Config
+    name: Config
+  - uid: Runly.ConfigException
+    name: ConfigException
+  - uid: Runly.ConfigNullException
+    name: ConfigNullException
+  - uid: Runly.ConfigReader
+    name: ConfigReader
+  - uid: Runly.ConfigServiceExtensions
+    name: ConfigServiceExtensions
+  - uid: Runly.ConfigWriter
+    name: ConfigWriter
+  - uid: Runly.ConsoleFormat
+    name: ConsoleFormat
+  - uid: Runly.DictionaryExtensions
+    name: DictionaryExtensions
+  - uid: Runly.Disposition
+    name: Disposition
+  - uid: Runly.Error
+    name: Error
+  - uid: Runly.ExceptionExtensions
+    name: ExceptionExtensions
+  - uid: Runly.ExceptionOptions
+    name: ExceptionOptions
+  - uid: Runly.Execution
+    name: Execution
+  - uid: Runly.ExecutionConfig
+    name: ExecutionConfig
+  - uid: Runly.ExecutionState
+    name: ExecutionState
+  - uid: Runly.HubConnectionWrapper
+    name: HubConnectionWrapper
+  - uid: Runly.HubMethodCall
+    name: HubMethodCall
+  - uid: Runly.IJob
+    name: IJob
+  - uid: Runly.IResultsConnection
+    name: IResultsConnection
+  - uid: Runly.ItemCategory
+    name: ItemCategory
+  - uid: Runly.ItemResult
+    name: ItemResult
+  - uid: Runly.ItemResultSummary
+    name: ItemResultSummary
+  - uid: Runly.Job
+    name: Job
+  - uid: Runly.Job`18
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  - uid: Runly.Job`17
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  - uid: Runly.Job`16
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  - uid: Runly.Job`15
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  - uid: Runly.Job`14
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  - uid: Runly.Job`13
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  - uid: Runly.Job`12
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  - uid: Runly.Job`11
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  - uid: Runly.Job`10
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  - uid: Runly.Job`9
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  - uid: Runly.Job`8
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  - uid: Runly.Job`7
+    name: Job<TConfig, TItem, T1, T2, T3, T4, T5>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  - uid: Runly.Job`6
+    name: Job<TConfig, TItem, T1, T2, T3, T4>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4)
+  - uid: Runly.Job`5
+    name: Job<TConfig, TItem, T1, T2, T3>
+    name.vb: Job(Of TConfig, TItem, T1, T2, T3)
+  - uid: Runly.Job`4
+    name: Job<TConfig, TItem, T1, T2>
+    name.vb: Job(Of TConfig, TItem, T1, T2)
+  - uid: Runly.Job`3
+    name: Job<TConfig, TItem, T1>
+    name.vb: Job(Of TConfig, TItem, T1)
+  - uid: Runly.Job`2
+    name: Job<TConfig, TItem>
+    name.vb: Job(Of TConfig, TItem)
+  - uid: Runly.Job`1
+    name: Job<TConfig>
+    name.vb: Job(Of TConfig)
+  - uid: Runly.JobBase`2
+    name: JobBase<TConfig, TItem>
+    name.vb: JobBase(Of TConfig, TItem)
+  - uid: Runly.JobBase`1
+    name: JobBase<TConfig>
+    name.vb: JobBase(Of TConfig)
+  - uid: Runly.JobCache
+    name: JobCache
+  - uid: Runly.JobConfig
+    name: JobConfig
+  - uid: Runly.JobConfigConverter
+    name: JobConfigConverter
+  - uid: Runly.JobHost
+    name: JobHost
+  - uid: Runly.JobInfo
+    name: JobInfo
+  - uid: Runly.JobLoadErrors
+    name: JobLoadErrors
+  - uid: Runly.JobMethod
+    name: JobMethod
+  - uid: Runly.JobOptions
+    name: JobOptions
+  - uid: Runly.JsonStringExtensions
+    name: JsonStringExtensions
+  - uid: Runly.MethodOutcome
+    name: MethodOutcome
+  - uid: Runly.PollingStream`1
+    name: PollingStream<T>
+    name.vb: PollingStream(Of T)
+  - uid: Runly.PollingStream`1.Enumerator
+    name: PollingStream<T>.Enumerator
+    name.vb: PollingStream(Of T).Enumerator
+  - uid: Runly.Result
+    name: Result
+  - uid: Runly.ResultLog
+    name: ResultLog
+  - uid: Runly.ResultsChannel
+    name: ResultsChannel
+  - uid: Runly.ResultsChannel.Connection
+    name: ResultsChannel.Connection
+  - uid: Runly.RunlyApiConfig
+    name: RunlyApiConfig
+  - uid: Runly.ServiceExtensions
+    name: ServiceExtensions
+  - uid: Runly.TypeNotFoundException
+    name: TypeNotFoundException
+- uid: Runly.Internal
+  name: Runly.Internal
+  items:
+  - uid: Runly.Internal.JsonSchema
+    name: JsonSchema
+- uid: Runly.Processing
+  name: Runly.Processing
+  items:
+  - uid: Runly.Processing.Execution`18
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  - uid: Runly.Processing.Execution`17
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  - uid: Runly.Processing.Execution`16
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  - uid: Runly.Processing.Execution`15
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  - uid: Runly.Processing.Execution`14
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  - uid: Runly.Processing.Execution`13
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  - uid: Runly.Processing.Execution`12
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  - uid: Runly.Processing.Execution`11
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  - uid: Runly.Processing.Execution`10
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  - uid: Runly.Processing.Execution`9
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  - uid: Runly.Processing.Execution`8
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  - uid: Runly.Processing.Execution`7
+    name: Execution<TConfig, TItem, T1, T2, T3, T4, T5>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  - uid: Runly.Processing.Execution`6
+    name: Execution<TConfig, TItem, T1, T2, T3, T4>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4)
+  - uid: Runly.Processing.Execution`5
+    name: Execution<TConfig, TItem, T1, T2, T3>
+    name.vb: Execution(Of TConfig, TItem, T1, T2, T3)
+  - uid: Runly.Processing.Execution`4
+    name: Execution<TConfig, TItem, T1, T2>
+    name.vb: Execution(Of TConfig, TItem, T1, T2)
+  - uid: Runly.Processing.Execution`3
+    name: Execution<TConfig, TItem, T1>
+    name.vb: Execution(Of TConfig, TItem, T1)
+  - uid: Runly.Processing.Execution`2
+    name: Execution<TConfig, TItem>
+    name.vb: Execution(Of TConfig, TItem)
+  - uid: Runly.Processing.Execution`1
+    name: Execution<TConfig>
+    name.vb: Execution(Of TConfig)
+  - uid: Runly.Processing.ExecutionBase`2
+    name: ExecutionBase<TConfig, TItem>
+    name.vb: ExecutionBase(Of TConfig, TItem)
+  - uid: Runly.Processing.ExecutionException
+    name: ExecutionException
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource<TItem>
+    name.vb: IItemSource(Of TItem)
+  - uid: Runly.Processing.SingleItemSource
+    name: SingleItemSource
+- uid: Runly.Testing
+  name: Runly.Testing
+  items:
+  - uid: Runly.Testing.TestHost`1
+    name: TestHost<TJob>
+    name.vb: TestHost(Of TJob)
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun<TJob>
+    name.vb: TestRun(Of TJob)

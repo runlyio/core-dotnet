@@ -1,0 +1,165 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ConfigException
+  commentId: T:Runly.ConfigException
+  id: ConfigException
+  parent: Runly
+  children:
+  - Runly.ConfigException.#ctor(System.String,System.String)
+  - Runly.ConfigException.#ctor(System.String,System.String,Exception)
+  - Runly.ConfigException.ParamName
+  langs:
+  - csharp
+  - vb
+  name: ConfigException
+  nameWithType: ConfigException
+  fullName: Runly.ConfigException
+  type: Class
+  source:
+    id: ConfigException
+    path: /github/workspace/src/Job/ConfigException.cs
+    startLine: 4
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class ConfigException : ApplicationException'
+    content.vb: >-
+      Public Class ConfigException
+          Inherits ApplicationException
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - Runly.ConfigNullException
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.ConfigException.ParamName
+  commentId: P:Runly.ConfigException.ParamName
+  id: ParamName
+  parent: Runly.ConfigException
+  langs:
+  - csharp
+  - vb
+  name: ParamName
+  nameWithType: ConfigException.ParamName
+  fullName: Runly.ConfigException.ParamName
+  type: Property
+  source:
+    id: ParamName
+    path: /github/workspace/src/Job/ConfigException.cs
+    startLine: 6
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public string ParamName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property ParamName As String
+  overload: Runly.ConfigException.ParamName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ConfigException.#ctor(System.String,System.String,Exception)
+  commentId: M:Runly.ConfigException.#ctor(System.String,System.String,Exception)
+  id: '#ctor(System.String,System.String,Exception)'
+  parent: Runly.ConfigException
+  langs:
+  - csharp
+  - vb
+  name: ConfigException(String, String, Exception)
+  nameWithType: ConfigException.ConfigException(String, String, Exception)
+  fullName: Runly.ConfigException.ConfigException(System.String, System.String, Exception)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/ConfigException.cs
+    startLine: 8
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public ConfigException(string message, string paramName, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+    - id: paramName
+      type: System.String
+    - id: innerException
+      type: Exception
+    content.vb: Public Sub New(message As String, paramName As String, innerException As Exception)
+  overload: Runly.ConfigException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.ConfigException.#ctor(System.String,System.String)
+  commentId: M:Runly.ConfigException.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: Runly.ConfigException
+  langs:
+  - csharp
+  - vb
+  name: ConfigException(String, String)
+  nameWithType: ConfigException.ConfigException(String, String)
+  fullName: Runly.ConfigException.ConfigException(System.String, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/ConfigException.cs
+    startLine: 14
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public ConfigException(string message, string paramName)
+    parameters:
+    - id: message
+      type: System.String
+    - id: paramName
+      type: System.String
+    content.vb: Public Sub New(message As String, paramName As String)
+  overload: Runly.ConfigException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ConfigException.ParamName*
+  commentId: Overload:Runly.ConfigException.ParamName
+  name: ParamName
+  nameWithType: ConfigException.ParamName
+  fullName: Runly.ConfigException.ParamName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ConfigException.#ctor*
+  commentId: Overload:Runly.ConfigException.#ctor
+  name: ConfigException
+  nameWithType: ConfigException.ConfigException
+  fullName: Runly.ConfigException.ConfigException
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception

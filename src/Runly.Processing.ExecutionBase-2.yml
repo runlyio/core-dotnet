@@ -1,0 +1,1276 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Processing.ExecutionBase`2
+  commentId: T:Runly.Processing.ExecutionBase`2
+  id: ExecutionBase`2
+  parent: Runly.Processing
+  children:
+  - Runly.Processing.ExecutionBase`2.#ctor(Runly.Processing.IItemSource{`1},IServiceProvider)
+  - Runly.Processing.ExecutionBase`2.CallProcess(IServiceScope,`1)
+  - Runly.Processing.ExecutionBase`2.enumerator
+  - Runly.Processing.ExecutionBase`2.ExecuteInternalAsync(CancellationToken)
+  - Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
+  - Runly.Processing.ExecutionBase`2.logger
+  - Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
+  - Runly.Processing.ExecutionBase`2.provider
+  - Runly.Processing.ExecutionBase`2.source
+  langs:
+  - csharp
+  - vb
+  name: ExecutionBase<TConfig, TItem>
+  nameWithType: ExecutionBase<TConfig, TItem>
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>
+  type: Class
+  source:
+    id: ExecutionBase
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 11
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: 'public abstract class ExecutionBase<TConfig, TItem> : Execution where TConfig : Config'
+    typeParameters:
+    - id: TConfig
+    - id: TItem
+    content.vb: >-
+      Public MustInherit Class ExecutionBase(Of TConfig As Config, TItem)
+          Inherits Execution
+  inheritance:
+  - System.Object
+  - Runly.Execution
+  derivedClasses:
+  - Runly.Processing.Execution`1
+  - Runly.Processing.Execution`10
+  - Runly.Processing.Execution`11
+  - Runly.Processing.Execution`12
+  - Runly.Processing.Execution`13
+  - Runly.Processing.Execution`14
+  - Runly.Processing.Execution`15
+  - Runly.Processing.Execution`16
+  - Runly.Processing.Execution`17
+  - Runly.Processing.Execution`18
+  - Runly.Processing.Execution`2
+  - Runly.Processing.Execution`3
+  - Runly.Processing.Execution`4
+  - Runly.Processing.Execution`5
+  - Runly.Processing.Execution`6
+  - Runly.Processing.Execution`7
+  - Runly.Processing.Execution`8
+  - Runly.Processing.Execution`9
+  inheritedMembers:
+  - Runly.Execution.Started
+  - Runly.Execution.StateChanged
+  - Runly.Execution.ItemCompleted
+  - Runly.Execution.MethodCompleted
+  - Runly.Execution.Completed
+  - Runly.Execution.Job
+  - Runly.Execution.TotalItemCount
+  - Runly.Execution.CompletedItemCount
+  - Runly.Execution.SuccessfulItemCount
+  - Runly.Execution.FailedItemCount
+  - Runly.Execution.ItemCategories
+  - Runly.Execution.State
+  - Runly.Execution.StartedAt
+  - Runly.Execution.CompletedAt
+  - Runly.Execution.IsComplete
+  - Runly.Execution.Disposition
+  - Runly.Execution.IsCanceled
+  - Runly.Execution.CanceledAt
+  - Runly.Execution.IsFailed
+  - Runly.Execution.FailedAt
+  - Runly.Execution.FailedIn
+  - Runly.Execution.FailedBecauseOf
+  - Runly.Execution.ExecuteAsync(CancellationToken)
+  - Runly.Execution.CancelAfter(System.Int32)
+  - Runly.Execution.EnforceCancelAfter
+  - Runly.Execution.Start(System.String)
+  - Runly.Execution.SetState(Runly.ExecutionState)
+  - Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+  - Runly.Execution.CompleteItem(Runly.ItemResult)
+  - Runly.Execution.Complete(System.Object)
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem)
+  name.vb: ExecutionBase(Of TConfig, TItem)
+- uid: Runly.Processing.ExecutionBase`2.logger
+  commentId: F:Runly.Processing.ExecutionBase`2.logger
+  id: logger
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: logger
+  nameWithType: ExecutionBase<TConfig, TItem>.logger
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.logger
+  type: Field
+  source:
+    id: logger
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 14
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected readonly ILogger<ExecutionBase<TConfig, TItem>> logger
+    return:
+      type: ILogger{Runly.Processing.ExecutionBase`2}
+    content.vb: Protected ReadOnly logger As ILogger(Of ExecutionBase(Of TConfig, TItem))
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).logger
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).logger
+- uid: Runly.Processing.ExecutionBase`2.source
+  commentId: F:Runly.Processing.ExecutionBase`2.source
+  id: source
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: source
+  nameWithType: ExecutionBase<TConfig, TItem>.source
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.source
+  type: Field
+  source:
+    id: source
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 15
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected IItemSource<TItem> source
+    return:
+      type: Runly.Processing.IItemSource{{TItem}}
+    content.vb: Protected source As IItemSource(Of TItem)
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).source
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).source
+- uid: Runly.Processing.ExecutionBase`2.provider
+  commentId: F:Runly.Processing.ExecutionBase`2.provider
+  id: provider
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: provider
+  nameWithType: ExecutionBase<TConfig, TItem>.provider
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.provider
+  type: Field
+  source:
+    id: provider
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 16
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected readonly IServiceProvider provider
+    return:
+      type: IServiceProvider
+    content.vb: Protected ReadOnly provider As IServiceProvider
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).provider
+  modifiers.csharp:
+  - protected
+  - readonly
+  modifiers.vb:
+  - Protected
+  - ReadOnly
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).provider
+- uid: Runly.Processing.ExecutionBase`2.enumerator
+  commentId: F:Runly.Processing.ExecutionBase`2.enumerator
+  id: enumerator
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: enumerator
+  nameWithType: ExecutionBase<TConfig, TItem>.enumerator
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.enumerator
+  type: Field
+  source:
+    id: enumerator
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 17
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected IAsyncEnumerator<TItem> enumerator
+    return:
+      type: IAsyncEnumerator{{TItem}}
+    content.vb: Protected enumerator As IAsyncEnumerator(Of TItem)
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).enumerator
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).enumerator
+- uid: Runly.Processing.ExecutionBase`2.#ctor(Runly.Processing.IItemSource{`1},IServiceProvider)
+  commentId: M:Runly.Processing.ExecutionBase`2.#ctor(Runly.Processing.IItemSource{`1},IServiceProvider)
+  id: '#ctor(Runly.Processing.IItemSource{`1},IServiceProvider)'
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: ExecutionBase(IItemSource<TItem>, IServiceProvider)
+  nameWithType: ExecutionBase<TConfig, TItem>.ExecutionBase(IItemSource<TItem>, IServiceProvider)
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecutionBase(Runly.Processing.IItemSource<TItem>, IServiceProvider)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 20
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: public ExecutionBase(IItemSource<TItem> source, IServiceProvider provider)
+    parameters:
+    - id: source
+      type: Runly.Processing.IItemSource{{TItem}}
+    - id: provider
+      type: IServiceProvider
+    content.vb: Public Sub New(source As IItemSource(Of TItem), provider As IServiceProvider)
+  overload: Runly.Processing.ExecutionBase`2.#ctor*
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecutionBase(IItemSource(Of TItem), IServiceProvider)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecutionBase(Runly.Processing.IItemSource(Of TItem), IServiceProvider)
+  name.vb: ExecutionBase(IItemSource(Of TItem), IServiceProvider)
+- uid: Runly.Processing.ExecutionBase`2.ExecuteInternalAsync(CancellationToken)
+  commentId: M:Runly.Processing.ExecutionBase`2.ExecuteInternalAsync(CancellationToken)
+  id: ExecuteInternalAsync(CancellationToken)
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: ExecuteInternalAsync(CancellationToken)
+  nameWithType: ExecutionBase<TConfig, TItem>.ExecuteInternalAsync(CancellationToken)
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteInternalAsync(CancellationToken)
+  type: Method
+  source:
+    id: ExecuteInternalAsync
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 27
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected override Task ExecuteInternalAsync(CancellationToken token)
+    parameters:
+    - id: token
+      type: CancellationToken
+    return:
+      type: Task
+    content.vb: Protected Overrides Function ExecuteInternalAsync(token As CancellationToken) As Task
+  overload: Runly.Processing.ExecutionBase`2.ExecuteInternalAsync*
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteInternalAsync(CancellationToken)
+  modifiers.csharp:
+  - protected
+  - override
+  modifiers.vb:
+  - Protected
+  - Overrides
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteInternalAsync(CancellationToken)
+- uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
+  commentId: M:Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
+  id: ExecuteParallelTasksAsync
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: ExecuteParallelTasksAsync()
+  nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
+  type: Method
+  source:
+    id: ExecuteParallelTasksAsync
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 216
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected virtual Task ExecuteParallelTasksAsync()
+    return:
+      type: Task
+    content.vb: Protected Overridable Function ExecuteParallelTasksAsync As Task
+  overload: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync*
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
+  modifiers.csharp:
+  - protected
+  - virtual
+  modifiers.vb:
+  - Protected
+  - Overridable
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
+- uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
+  commentId: M:Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
+  id: ProcessScopeAsync(IServiceScope)
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: ProcessScopeAsync(IServiceScope)
+  nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
+  type: Method
+  source:
+    id: ProcessScopeAsync
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 253
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected Task ProcessScopeAsync(IServiceScope scopeObj)
+    parameters:
+    - id: scopeObj
+      type: IServiceScope
+    return:
+      type: Task
+    content.vb: Protected Function ProcessScopeAsync(scopeObj As IServiceScope) As Task
+  overload: Runly.Processing.ExecutionBase`2.ProcessScopeAsync*
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
+- uid: Runly.Processing.ExecutionBase`2.CallProcess(IServiceScope,`1)
+  commentId: M:Runly.Processing.ExecutionBase`2.CallProcess(IServiceScope,`1)
+  id: CallProcess(IServiceScope,`1)
+  parent: Runly.Processing.ExecutionBase`2
+  langs:
+  - csharp
+  - vb
+  name: CallProcess(IServiceScope, TItem)
+  nameWithType: ExecutionBase<TConfig, TItem>.CallProcess(IServiceScope, TItem)
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.CallProcess(IServiceScope, TItem)
+  type: Method
+  source:
+    id: CallProcess
+    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    startLine: 405
+  assemblies:
+  - Runly
+  namespace: Runly.Processing
+  syntax:
+    content: protected abstract Task<Result> CallProcess(IServiceScope scope, TItem item)
+    parameters:
+    - id: scope
+      type: IServiceScope
+    - id: item
+      type: '{TItem}'
+    return:
+      type: Task{Runly.Result}
+    content.vb: Protected MustOverride Function CallProcess(scope As IServiceScope, item As TItem) As Task(Of Result)
+  overload: Runly.Processing.ExecutionBase`2.CallProcess*
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).CallProcess(IServiceScope, TItem)
+  modifiers.csharp:
+  - protected
+  - abstract
+  modifiers.vb:
+  - Protected
+  - MustOverride
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).CallProcess(IServiceScope, TItem)
+references:
+- uid: Runly.Processing
+  commentId: N:Runly.Processing
+  name: Runly.Processing
+  nameWithType: Runly.Processing
+  fullName: Runly.Processing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: Runly.Execution.Started
+  commentId: E:Runly.Execution.Started
+  parent: Runly.Execution
+  name: Started
+  nameWithType: Execution.Started
+  fullName: Runly.Execution.Started
+- uid: Runly.Execution.StateChanged
+  commentId: E:Runly.Execution.StateChanged
+  parent: Runly.Execution
+  name: StateChanged
+  nameWithType: Execution.StateChanged
+  fullName: Runly.Execution.StateChanged
+- uid: Runly.Execution.ItemCompleted
+  commentId: E:Runly.Execution.ItemCompleted
+  parent: Runly.Execution
+  name: ItemCompleted
+  nameWithType: Execution.ItemCompleted
+  fullName: Runly.Execution.ItemCompleted
+- uid: Runly.Execution.MethodCompleted
+  commentId: E:Runly.Execution.MethodCompleted
+  parent: Runly.Execution
+  name: MethodCompleted
+  nameWithType: Execution.MethodCompleted
+  fullName: Runly.Execution.MethodCompleted
+- uid: Runly.Execution.Completed
+  commentId: E:Runly.Execution.Completed
+  parent: Runly.Execution
+  name: Completed
+  nameWithType: Execution.Completed
+  fullName: Runly.Execution.Completed
+- uid: Runly.Execution.Job
+  commentId: P:Runly.Execution.Job
+  parent: Runly.Execution
+  name: Job
+  nameWithType: Execution.Job
+  fullName: Runly.Execution.Job
+- uid: Runly.Execution.TotalItemCount
+  commentId: P:Runly.Execution.TotalItemCount
+  parent: Runly.Execution
+  name: TotalItemCount
+  nameWithType: Execution.TotalItemCount
+  fullName: Runly.Execution.TotalItemCount
+- uid: Runly.Execution.CompletedItemCount
+  commentId: P:Runly.Execution.CompletedItemCount
+  parent: Runly.Execution
+  name: CompletedItemCount
+  nameWithType: Execution.CompletedItemCount
+  fullName: Runly.Execution.CompletedItemCount
+- uid: Runly.Execution.SuccessfulItemCount
+  commentId: P:Runly.Execution.SuccessfulItemCount
+  parent: Runly.Execution
+  name: SuccessfulItemCount
+  nameWithType: Execution.SuccessfulItemCount
+  fullName: Runly.Execution.SuccessfulItemCount
+- uid: Runly.Execution.FailedItemCount
+  commentId: P:Runly.Execution.FailedItemCount
+  parent: Runly.Execution
+  name: FailedItemCount
+  nameWithType: Execution.FailedItemCount
+  fullName: Runly.Execution.FailedItemCount
+- uid: Runly.Execution.ItemCategories
+  commentId: P:Runly.Execution.ItemCategories
+  parent: Runly.Execution
+  name: ItemCategories
+  nameWithType: Execution.ItemCategories
+  fullName: Runly.Execution.ItemCategories
+- uid: Runly.Execution.State
+  commentId: P:Runly.Execution.State
+  parent: Runly.Execution
+  name: State
+  nameWithType: Execution.State
+  fullName: Runly.Execution.State
+- uid: Runly.Execution.StartedAt
+  commentId: P:Runly.Execution.StartedAt
+  parent: Runly.Execution
+  name: StartedAt
+  nameWithType: Execution.StartedAt
+  fullName: Runly.Execution.StartedAt
+- uid: Runly.Execution.CompletedAt
+  commentId: P:Runly.Execution.CompletedAt
+  parent: Runly.Execution
+  name: CompletedAt
+  nameWithType: Execution.CompletedAt
+  fullName: Runly.Execution.CompletedAt
+- uid: Runly.Execution.IsComplete
+  commentId: P:Runly.Execution.IsComplete
+  parent: Runly.Execution
+  name: IsComplete
+  nameWithType: Execution.IsComplete
+  fullName: Runly.Execution.IsComplete
+- uid: Runly.Execution.Disposition
+  commentId: P:Runly.Execution.Disposition
+  parent: Runly.Execution
+  name: Disposition
+  nameWithType: Execution.Disposition
+  fullName: Runly.Execution.Disposition
+- uid: Runly.Execution.IsCanceled
+  commentId: P:Runly.Execution.IsCanceled
+  parent: Runly.Execution
+  name: IsCanceled
+  nameWithType: Execution.IsCanceled
+  fullName: Runly.Execution.IsCanceled
+- uid: Runly.Execution.CanceledAt
+  commentId: P:Runly.Execution.CanceledAt
+  parent: Runly.Execution
+  name: CanceledAt
+  nameWithType: Execution.CanceledAt
+  fullName: Runly.Execution.CanceledAt
+- uid: Runly.Execution.IsFailed
+  commentId: P:Runly.Execution.IsFailed
+  parent: Runly.Execution
+  name: IsFailed
+  nameWithType: Execution.IsFailed
+  fullName: Runly.Execution.IsFailed
+- uid: Runly.Execution.FailedAt
+  commentId: P:Runly.Execution.FailedAt
+  parent: Runly.Execution
+  name: FailedAt
+  nameWithType: Execution.FailedAt
+  fullName: Runly.Execution.FailedAt
+- uid: Runly.Execution.FailedIn
+  commentId: P:Runly.Execution.FailedIn
+  parent: Runly.Execution
+  name: FailedIn
+  nameWithType: Execution.FailedIn
+  fullName: Runly.Execution.FailedIn
+- uid: Runly.Execution.FailedBecauseOf
+  commentId: P:Runly.Execution.FailedBecauseOf
+  parent: Runly.Execution
+  name: FailedBecauseOf
+  nameWithType: Execution.FailedBecauseOf
+  fullName: Runly.Execution.FailedBecauseOf
+- uid: Runly.Execution.ExecuteAsync(CancellationToken)
+  commentId: M:Runly.Execution.ExecuteAsync(CancellationToken)
+  parent: Runly.Execution
+  isExternal: true
+  name: ExecuteAsync(CancellationToken)
+  nameWithType: Execution.ExecuteAsync(CancellationToken)
+  fullName: Runly.Execution.ExecuteAsync(CancellationToken)
+  spec.csharp:
+  - uid: Runly.Execution.ExecuteAsync(CancellationToken)
+    name: ExecuteAsync
+    nameWithType: Execution.ExecuteAsync
+    fullName: Runly.Execution.ExecuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.ExecuteAsync(CancellationToken)
+    name: ExecuteAsync
+    nameWithType: Execution.ExecuteAsync
+    fullName: Runly.Execution.ExecuteAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.CancelAfter(System.Int32)
+  commentId: M:Runly.Execution.CancelAfter(System.Int32)
+  parent: Runly.Execution
+  isExternal: true
+  name: CancelAfter(Int32)
+  nameWithType: Execution.CancelAfter(Int32)
+  fullName: Runly.Execution.CancelAfter(System.Int32)
+  spec.csharp:
+  - uid: Runly.Execution.CancelAfter(System.Int32)
+    name: CancelAfter
+    nameWithType: Execution.CancelAfter
+    fullName: Runly.Execution.CancelAfter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.CancelAfter(System.Int32)
+    name: CancelAfter
+    nameWithType: Execution.CancelAfter
+    fullName: Runly.Execution.CancelAfter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.EnforceCancelAfter
+  commentId: M:Runly.Execution.EnforceCancelAfter
+  parent: Runly.Execution
+  name: EnforceCancelAfter()
+  nameWithType: Execution.EnforceCancelAfter()
+  fullName: Runly.Execution.EnforceCancelAfter()
+  spec.csharp:
+  - uid: Runly.Execution.EnforceCancelAfter
+    name: EnforceCancelAfter
+    nameWithType: Execution.EnforceCancelAfter
+    fullName: Runly.Execution.EnforceCancelAfter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.EnforceCancelAfter
+    name: EnforceCancelAfter
+    nameWithType: Execution.EnforceCancelAfter
+    fullName: Runly.Execution.EnforceCancelAfter
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.Start(System.String)
+  commentId: M:Runly.Execution.Start(System.String)
+  parent: Runly.Execution
+  isExternal: true
+  name: Start(String)
+  nameWithType: Execution.Start(String)
+  fullName: Runly.Execution.Start(System.String)
+  spec.csharp:
+  - uid: Runly.Execution.Start(System.String)
+    name: Start
+    nameWithType: Execution.Start
+    fullName: Runly.Execution.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.Start(System.String)
+    name: Start
+    nameWithType: Execution.Start
+    fullName: Runly.Execution.Start
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.SetState(Runly.ExecutionState)
+  commentId: M:Runly.Execution.SetState(Runly.ExecutionState)
+  parent: Runly.Execution
+  name: SetState(ExecutionState)
+  nameWithType: Execution.SetState(ExecutionState)
+  fullName: Runly.Execution.SetState(Runly.ExecutionState)
+  spec.csharp:
+  - uid: Runly.Execution.SetState(Runly.ExecutionState)
+    name: SetState
+    nameWithType: Execution.SetState
+    fullName: Runly.Execution.SetState
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.ExecutionState
+    name: ExecutionState
+    nameWithType: ExecutionState
+    fullName: Runly.ExecutionState
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.SetState(Runly.ExecutionState)
+    name: SetState
+    nameWithType: Execution.SetState
+    fullName: Runly.Execution.SetState
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.ExecutionState
+    name: ExecutionState
+    nameWithType: ExecutionState
+    fullName: Runly.ExecutionState
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+  commentId: M:Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+  parent: Runly.Execution
+  isExternal: true
+  name: CompleteMethod(JobMethod, TimeSpan, Exception)
+  nameWithType: Execution.CompleteMethod(JobMethod, TimeSpan, Exception)
+  fullName: Runly.Execution.CompleteMethod(Runly.JobMethod, TimeSpan, Exception)
+  spec.csharp:
+  - uid: Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+    name: CompleteMethod
+    nameWithType: Execution.CompleteMethod
+    fullName: Runly.Execution.CompleteMethod
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.JobMethod
+    name: JobMethod
+    nameWithType: JobMethod
+    fullName: Runly.JobMethod
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: TimeSpan
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.CompleteMethod(Runly.JobMethod,TimeSpan,Exception)
+    name: CompleteMethod
+    nameWithType: Execution.CompleteMethod
+    fullName: Runly.Execution.CompleteMethod
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.JobMethod
+    name: JobMethod
+    nameWithType: JobMethod
+    fullName: Runly.JobMethod
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: TimeSpan
+    name: TimeSpan
+    nameWithType: TimeSpan
+    fullName: TimeSpan
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: Exception
+    name: Exception
+    nameWithType: Exception
+    fullName: Exception
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.CompleteItem(Runly.ItemResult)
+  commentId: M:Runly.Execution.CompleteItem(Runly.ItemResult)
+  parent: Runly.Execution
+  name: CompleteItem(ItemResult)
+  nameWithType: Execution.CompleteItem(ItemResult)
+  fullName: Runly.Execution.CompleteItem(Runly.ItemResult)
+  spec.csharp:
+  - uid: Runly.Execution.CompleteItem(Runly.ItemResult)
+    name: CompleteItem
+    nameWithType: Execution.CompleteItem
+    fullName: Runly.Execution.CompleteItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.ItemResult
+    name: ItemResult
+    nameWithType: ItemResult
+    fullName: Runly.ItemResult
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.CompleteItem(Runly.ItemResult)
+    name: CompleteItem
+    nameWithType: Execution.CompleteItem
+    fullName: Runly.Execution.CompleteItem
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.ItemResult
+    name: ItemResult
+    nameWithType: ItemResult
+    fullName: Runly.ItemResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Execution.Complete(System.Object)
+  commentId: M:Runly.Execution.Complete(System.Object)
+  parent: Runly.Execution
+  isExternal: true
+  name: Complete(Object)
+  nameWithType: Execution.Complete(Object)
+  fullName: Runly.Execution.Complete(System.Object)
+  spec.csharp:
+  - uid: Runly.Execution.Complete(System.Object)
+    name: Complete
+    nameWithType: Execution.Complete
+    fullName: Runly.Execution.Complete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.Complete(System.Object)
+    name: Complete
+    nameWithType: Execution.Complete
+    fullName: Runly.Execution.Complete
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: ILogger{Runly.Processing.ExecutionBase`2}
+  commentId: '!:ILogger{Runly.Processing.ExecutionBase`2}'
+  definition: ILogger`1
+  name: ILogger<ExecutionBase<TConfig, TItem>>
+  nameWithType: ILogger<ExecutionBase<TConfig, TItem>>
+  fullName: ILogger<Runly.Processing.ExecutionBase<TConfig, TItem>>
+  nameWithType.vb: ILogger(Of ExecutionBase(Of TConfig, TItem))
+  fullName.vb: ILogger(Of Runly.Processing.ExecutionBase(Of TConfig, TItem))
+  name.vb: ILogger(Of ExecutionBase(Of TConfig, TItem))
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.Processing.ExecutionBase`2
+    name: ExecutionBase
+    nameWithType: ExecutionBase
+    fullName: Runly.Processing.ExecutionBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.Processing.ExecutionBase`2
+    name: ExecutionBase
+    nameWithType: ExecutionBase
+    fullName: Runly.Processing.ExecutionBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.IItemSource{{TItem}}
+  commentId: T:Runly.Processing.IItemSource{`1}
+  parent: Runly.Processing
+  definition: Runly.Processing.IItemSource`1
+  name: IItemSource<TItem>
+  nameWithType: IItemSource<TItem>
+  fullName: Runly.Processing.IItemSource<TItem>
+  nameWithType.vb: IItemSource(Of TItem)
+  fullName.vb: Runly.Processing.IItemSource(Of TItem)
+  name.vb: IItemSource(Of TItem)
+  spec.csharp:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.IItemSource`1
+  commentId: T:Runly.Processing.IItemSource`1
+  name: IItemSource<TItem>
+  nameWithType: IItemSource<TItem>
+  fullName: Runly.Processing.IItemSource<TItem>
+  nameWithType.vb: IItemSource(Of TItem)
+  fullName.vb: Runly.Processing.IItemSource(Of TItem)
+  name.vb: IItemSource(Of TItem)
+  spec.csharp:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IServiceProvider
+  isExternal: true
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: IServiceProvider
+- uid: IAsyncEnumerator{{TItem}}
+  commentId: '!:IAsyncEnumerator{`1}'
+  definition: IAsyncEnumerator`1
+  name: IAsyncEnumerator<TItem>
+  nameWithType: IAsyncEnumerator<TItem>
+  fullName: IAsyncEnumerator<TItem>
+  nameWithType.vb: IAsyncEnumerator(Of TItem)
+  fullName.vb: IAsyncEnumerator(Of TItem)
+  name.vb: IAsyncEnumerator(Of TItem)
+  spec.csharp:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IAsyncEnumerator`1
+  isExternal: true
+  name: IAsyncEnumerator<>
+  nameWithType: IAsyncEnumerator<>
+  fullName: IAsyncEnumerator<>
+  nameWithType.vb: IAsyncEnumerator(Of )
+  fullName.vb: IAsyncEnumerator(Of )
+  name.vb: IAsyncEnumerator(Of )
+  spec.csharp:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IAsyncEnumerator`1
+    name: IAsyncEnumerator
+    nameWithType: IAsyncEnumerator
+    fullName: IAsyncEnumerator
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.ExecutionBase`2.#ctor*
+  commentId: Overload:Runly.Processing.ExecutionBase`2.#ctor
+  name: ExecutionBase
+  nameWithType: ExecutionBase<TConfig, TItem>.ExecutionBase
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecutionBase
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecutionBase
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecutionBase
+- uid: Runly.Processing.ExecutionBase`2.ExecuteInternalAsync*
+  commentId: Overload:Runly.Processing.ExecutionBase`2.ExecuteInternalAsync
+  name: ExecuteInternalAsync
+  nameWithType: ExecutionBase<TConfig, TItem>.ExecuteInternalAsync
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteInternalAsync
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteInternalAsync
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteInternalAsync
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync*
+  commentId: Overload:Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
+  name: ExecuteParallelTasksAsync
+  nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
+- uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync*
+  commentId: Overload:Runly.Processing.ExecutionBase`2.ProcessScopeAsync
+  name: ProcessScopeAsync
+  nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
+- uid: IServiceScope
+  isExternal: true
+  name: IServiceScope
+  nameWithType: IServiceScope
+  fullName: IServiceScope
+- uid: Runly.Processing.ExecutionBase`2.CallProcess*
+  commentId: Overload:Runly.Processing.ExecutionBase`2.CallProcess
+  name: CallProcess
+  nameWithType: ExecutionBase<TConfig, TItem>.CallProcess
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.CallProcess
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem).CallProcess
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).CallProcess
+- uid: '{TItem}'
+  commentId: '!:TItem'
+  definition: TItem
+  name: TItem
+  nameWithType: TItem
+  fullName: TItem
+- uid: Task{Runly.Result}
+  commentId: '!:Task{Runly.Result}'
+  definition: Task`1
+  name: Task<Result>
+  nameWithType: Task<Result>
+  fullName: Task<Runly.Result>
+  nameWithType.vb: Task(Of Result)
+  fullName.vb: Task(Of Runly.Result)
+  name.vb: Task(Of Result)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.Result
+    name: Result
+    nameWithType: Result
+    fullName: Runly.Result
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.Result
+    name: Result
+    nameWithType: Result
+    fullName: Runly.Result
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TItem
+  name: TItem
+  nameWithType: TItem
+  fullName: TItem
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

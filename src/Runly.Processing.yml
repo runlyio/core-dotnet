@@ -1,0 +1,2616 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Processing
+  commentId: N:Runly.Processing
+  id: Runly.Processing
+  children:
+  - Runly.Processing.Execution`1
+  - Runly.Processing.Execution`10
+  - Runly.Processing.Execution`11
+  - Runly.Processing.Execution`12
+  - Runly.Processing.Execution`13
+  - Runly.Processing.Execution`14
+  - Runly.Processing.Execution`15
+  - Runly.Processing.Execution`16
+  - Runly.Processing.Execution`17
+  - Runly.Processing.Execution`18
+  - Runly.Processing.Execution`2
+  - Runly.Processing.Execution`3
+  - Runly.Processing.Execution`4
+  - Runly.Processing.Execution`5
+  - Runly.Processing.Execution`6
+  - Runly.Processing.Execution`7
+  - Runly.Processing.Execution`8
+  - Runly.Processing.Execution`9
+  - Runly.Processing.ExecutionBase`2
+  - Runly.Processing.ExecutionException
+  - Runly.Processing.IItemSource`1
+  - Runly.Processing.SingleItemSource
+  langs:
+  - csharp
+  - vb
+  name: Runly.Processing
+  nameWithType: Runly.Processing
+  fullName: Runly.Processing
+  type: Namespace
+  assemblies:
+  - Runly
+references:
+- uid: Runly.Processing.Execution`1
+  commentId: T:Runly.Processing.Execution`1
+  name: Execution<TConfig>
+  nameWithType: Execution<TConfig>
+  fullName: Runly.Processing.Execution<TConfig>
+  nameWithType.vb: Execution(Of TConfig)
+  fullName.vb: Runly.Processing.Execution(Of TConfig)
+  name.vb: Execution(Of TConfig)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`1
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`1
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`2
+  commentId: T:Runly.Processing.Execution`2
+  name: Execution<TConfig, TItem>
+  nameWithType: Execution<TConfig, TItem>
+  fullName: Runly.Processing.Execution<TConfig, TItem>
+  nameWithType.vb: Execution(Of TConfig, TItem)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem)
+  name.vb: Execution(Of TConfig, TItem)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`2
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`2
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`3
+  commentId: T:Runly.Processing.Execution`3
+  name: Execution<TConfig, TItem, T1>
+  nameWithType: Execution<TConfig, TItem, T1>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1)
+  name.vb: Execution(Of TConfig, TItem, T1)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`3
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`3
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`4
+  commentId: T:Runly.Processing.Execution`4
+  name: Execution<TConfig, TItem, T1, T2>
+  nameWithType: Execution<TConfig, TItem, T1, T2>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2)
+  name.vb: Execution(Of TConfig, TItem, T1, T2)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`4
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`4
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`5
+  commentId: T:Runly.Processing.Execution`5
+  name: Execution<TConfig, TItem, T1, T2, T3>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`5
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`5
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`6
+  commentId: T:Runly.Processing.Execution`6
+  name: Execution<TConfig, TItem, T1, T2, T3, T4>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`6
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`6
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`7
+  commentId: T:Runly.Processing.Execution`7
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`7
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`7
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`8
+  commentId: T:Runly.Processing.Execution`8
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`8
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`8
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`9
+  commentId: T:Runly.Processing.Execution`9
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`9
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`9
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`10
+  commentId: T:Runly.Processing.Execution`10
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`10
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`10
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`11
+  commentId: T:Runly.Processing.Execution`11
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`11
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`11
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`12
+  commentId: T:Runly.Processing.Execution`12
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`12
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`12
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`13
+  commentId: T:Runly.Processing.Execution`13
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`13
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`13
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`14
+  commentId: T:Runly.Processing.Execution`14
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`14
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`14
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`15
+  commentId: T:Runly.Processing.Execution`15
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`15
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`15
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`16
+  commentId: T:Runly.Processing.Execution`16
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`16
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`16
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`17
+  commentId: T:Runly.Processing.Execution`17
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`17
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`17
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.Execution`18
+  commentId: T:Runly.Processing.Execution`18
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`18
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`18
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.ExecutionBase`2
+  commentId: T:Runly.Processing.ExecutionBase`2
+  name: ExecutionBase<TConfig, TItem>
+  nameWithType: ExecutionBase<TConfig, TItem>
+  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>
+  nameWithType.vb: ExecutionBase(Of TConfig, TItem)
+  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem)
+  name.vb: ExecutionBase(Of TConfig, TItem)
+  spec.csharp:
+  - uid: Runly.Processing.ExecutionBase`2
+    name: ExecutionBase
+    nameWithType: ExecutionBase
+    fullName: Runly.Processing.ExecutionBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.ExecutionBase`2
+    name: ExecutionBase
+    nameWithType: ExecutionBase
+    fullName: Runly.Processing.ExecutionBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.ExecutionException
+  commentId: T:Runly.Processing.ExecutionException
+  name: ExecutionException
+  nameWithType: ExecutionException
+  fullName: Runly.Processing.ExecutionException
+- uid: Runly.Processing.IItemSource`1
+  commentId: T:Runly.Processing.IItemSource`1
+  name: IItemSource<TItem>
+  nameWithType: IItemSource<TItem>
+  fullName: Runly.Processing.IItemSource<TItem>
+  nameWithType.vb: IItemSource(Of TItem)
+  fullName.vb: Runly.Processing.IItemSource(Of TItem)
+  name.vb: IItemSource(Of TItem)
+  spec.csharp:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.SingleItemSource
+  commentId: T:Runly.Processing.SingleItemSource
+  name: SingleItemSource
+  nameWithType: SingleItemSource
+  fullName: Runly.Processing.SingleItemSource

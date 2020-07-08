@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ConfigReader
+  commentId: T:Runly.ConfigReader
+  id: ConfigReader
+  parent: Runly
+  children:
+  - Runly.ConfigReader.#ctor(Runly.JobCache)
+  - Runly.ConfigReader.FromFile(System.String)
+  - Runly.ConfigReader.FromJson(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ConfigReader
+  nameWithType: ConfigReader
+  fullName: Runly.ConfigReader
+  type: Class
+  source:
+    id: ConfigReader
+    path: /github/workspace/src/Job/ConfigReader.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class ConfigReader : object'
+    content.vb: >-
+      Public Class ConfigReader
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.ConfigReader.#ctor(Runly.JobCache)
+  commentId: M:Runly.ConfigReader.#ctor(Runly.JobCache)
+  id: '#ctor(Runly.JobCache)'
+  parent: Runly.ConfigReader
+  langs:
+  - csharp
+  - vb
+  name: ConfigReader(JobCache)
+  nameWithType: ConfigReader.ConfigReader(JobCache)
+  fullName: Runly.ConfigReader.ConfigReader(Runly.JobCache)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/ConfigReader.cs
+    startLine: 11
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public ConfigReader(JobCache cache)
+    parameters:
+    - id: cache
+      type: Runly.JobCache
+    content.vb: Public Sub New(cache As JobCache)
+  overload: Runly.ConfigReader.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.ConfigReader.FromFile(System.String)
+  commentId: M:Runly.ConfigReader.FromFile(System.String)
+  id: FromFile(System.String)
+  parent: Runly.ConfigReader
+  langs:
+  - csharp
+  - vb
+  name: FromFile(String)
+  nameWithType: ConfigReader.FromFile(String)
+  fullName: Runly.ConfigReader.FromFile(System.String)
+  type: Method
+  source:
+    id: FromFile
+    path: /github/workspace/src/Job/ConfigReader.cs
+    startLine: 16
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Config FromFile(string path)
+    parameters:
+    - id: path
+      type: System.String
+    return:
+      type: Runly.Config
+    content.vb: Public Function FromFile(path As String) As Config
+  overload: Runly.ConfigReader.FromFile*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.ConfigReader.FromJson(System.String)
+  commentId: M:Runly.ConfigReader.FromJson(System.String)
+  id: FromJson(System.String)
+  parent: Runly.ConfigReader
+  langs:
+  - csharp
+  - vb
+  name: FromJson(String)
+  nameWithType: ConfigReader.FromJson(String)
+  fullName: Runly.ConfigReader.FromJson(System.String)
+  type: Method
+  source:
+    id: FromJson
+    path: /github/workspace/src/Job/ConfigReader.cs
+    startLine: 34
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Config FromJson(string json)
+    parameters:
+    - id: json
+      type: System.String
+    return:
+      type: Runly.Config
+    content.vb: Public Function FromJson(json As String) As Config
+  overload: Runly.ConfigReader.FromJson*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ConfigReader.#ctor*
+  commentId: Overload:Runly.ConfigReader.#ctor
+  name: ConfigReader
+  nameWithType: ConfigReader.ConfigReader
+  fullName: Runly.ConfigReader.ConfigReader
+- uid: Runly.JobCache
+  commentId: T:Runly.JobCache
+  parent: Runly
+  name: JobCache
+  nameWithType: JobCache
+  fullName: Runly.JobCache
+- uid: Runly.ConfigReader.FromFile*
+  commentId: Overload:Runly.ConfigReader.FromFile
+  name: FromFile
+  nameWithType: ConfigReader.FromFile
+  fullName: Runly.ConfigReader.FromFile
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+- uid: Runly.ConfigReader.FromJson*
+  commentId: Overload:Runly.ConfigReader.FromJson
+  name: FromJson
+  nameWithType: ConfigReader.FromJson
+  fullName: Runly.ConfigReader.FromJson

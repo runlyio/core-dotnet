@@ -1,0 +1,391 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Testing.TestRun`1
+  commentId: T:Runly.Testing.TestRun`1
+  id: TestRun`1
+  parent: Runly.Testing
+  children:
+  - Runly.Testing.TestRun`1.Cancel
+  - Runly.Testing.TestRun`1.Execution
+  - Runly.Testing.TestRun`1.Job
+  - Runly.Testing.TestRun`1.Results
+  - Runly.Testing.TestRun`1.RunAsync(CancellationToken,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: TestRun<TJob>
+  nameWithType: TestRun<TJob>
+  fullName: Runly.Testing.TestRun<TJob>
+  type: Class
+  source:
+    id: TestRun
+    path: /github/workspace/src/Job/Testing/TestRun.cs
+    startLine: 6
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: 'public class TestRun<TJob> : object where TJob : IJob'
+    typeParameters:
+    - id: TJob
+    content.vb: >-
+      Public Class TestRun(Of TJob As IJob)
+          Inherits Object
+  inheritance:
+  - System.Object
+  nameWithType.vb: TestRun(Of TJob)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Runly.Testing.TestRun(Of TJob)
+  name.vb: TestRun(Of TJob)
+- uid: Runly.Testing.TestRun`1.Job
+  commentId: P:Runly.Testing.TestRun`1.Job
+  id: Job
+  parent: Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: Job
+  nameWithType: TestRun<TJob>.Job
+  fullName: Runly.Testing.TestRun<TJob>.Job
+  type: Property
+  source:
+    id: Job
+    path: /github/workspace/src/Job/Testing/TestRun.cs
+    startLine: 11
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public TJob Job { get; }
+    parameters: []
+    return:
+      type: '{TJob}'
+    content.vb: Public ReadOnly Property Job As TJob
+  overload: Runly.Testing.TestRun`1.Job*
+  nameWithType.vb: TestRun(Of TJob).Job
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Job
+- uid: Runly.Testing.TestRun`1.Execution
+  commentId: P:Runly.Testing.TestRun`1.Execution
+  id: Execution
+  parent: Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: Execution
+  nameWithType: TestRun<TJob>.Execution
+  fullName: Runly.Testing.TestRun<TJob>.Execution
+  type: Property
+  source:
+    id: Execution
+    path: /github/workspace/src/Job/Testing/TestRun.cs
+    startLine: 12
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public Execution Execution { get; }
+    parameters: []
+    return:
+      type: Runly.Execution
+    content.vb: Public ReadOnly Property Execution As Execution
+  overload: Runly.Testing.TestRun`1.Execution*
+  nameWithType.vb: TestRun(Of TJob).Execution
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Execution
+- uid: Runly.Testing.TestRun`1.Results
+  commentId: P:Runly.Testing.TestRun`1.Results
+  id: Results
+  parent: Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: Results
+  nameWithType: TestRun<TJob>.Results
+  fullName: Runly.Testing.TestRun<TJob>.Results
+  type: Property
+  source:
+    id: Results
+    path: /github/workspace/src/Job/Testing/TestRun.cs
+    startLine: 13
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public ResultLog Results { get; }
+    parameters: []
+    return:
+      type: Runly.ResultLog
+    content.vb: Public ReadOnly Property Results As ResultLog
+  overload: Runly.Testing.TestRun`1.Results*
+  nameWithType.vb: TestRun(Of TJob).Results
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Results
+- uid: Runly.Testing.TestRun`1.Cancel
+  commentId: M:Runly.Testing.TestRun`1.Cancel
+  id: Cancel
+  parent: Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: Cancel()
+  nameWithType: TestRun<TJob>.Cancel()
+  fullName: Runly.Testing.TestRun<TJob>.Cancel()
+  type: Method
+  source:
+    id: Cancel
+    path: /github/workspace/src/Job/Testing/TestRun.cs
+    startLine: 17
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public void Cancel()
+    content.vb: Public Sub Cancel
+  overload: Runly.Testing.TestRun`1.Cancel*
+  nameWithType.vb: TestRun(Of TJob).Cancel()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Cancel()
+- uid: Runly.Testing.TestRun`1.RunAsync(CancellationToken,System.Int32)
+  commentId: M:Runly.Testing.TestRun`1.RunAsync(CancellationToken,System.Int32)
+  id: RunAsync(CancellationToken,System.Int32)
+  parent: Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: RunAsync(CancellationToken, Int32)
+  nameWithType: TestRun<TJob>.RunAsync(CancellationToken, Int32)
+  fullName: Runly.Testing.TestRun<TJob>.RunAsync(CancellationToken, System.Int32)
+  type: Method
+  source:
+    id: RunAsync
+    path: /github/workspace/src/Job/Testing/TestRun.cs
+    startLine: 30
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  summary: "\nRuns the job\n"
+  example: []
+  syntax:
+    content: public Task<TestRun<TJob>> RunAsync(CancellationToken cancellationToken = null, int cancelAfter = 0)
+    parameters:
+    - id: cancellationToken
+      type: CancellationToken
+      description: The <see cref="!:CancellationToken"></see> to use
+    - id: cancelAfter
+      type: System.Int32
+      description: When a positive value is given, cancels the job after that many items have been processed. This is useful to stop a service after an expected number of items have been processed in a unit test.
+    return:
+      type: Task{Runly.Testing.TestRun`1}
+    content.vb: Public Function RunAsync(cancellationToken As CancellationToken = Nothing, cancelAfter As Integer = 0) As Task(Of TestRun(Of TJob))
+  overload: Runly.Testing.TestRun`1.RunAsync*
+  nameWithType.vb: TestRun(Of TJob).RunAsync(CancellationToken, Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Testing.TestRun(Of TJob).RunAsync(CancellationToken, System.Int32)
+references:
+- uid: Runly.Testing
+  commentId: N:Runly.Testing
+  name: Runly.Testing
+  nameWithType: Runly.Testing
+  fullName: Runly.Testing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Testing.TestRun`1.Job*
+  commentId: Overload:Runly.Testing.TestRun`1.Job
+  name: Job
+  nameWithType: TestRun<TJob>.Job
+  fullName: Runly.Testing.TestRun<TJob>.Job
+  nameWithType.vb: TestRun(Of TJob).Job
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Job
+- uid: '{TJob}'
+  commentId: '!:TJob'
+  definition: TJob
+  name: TJob
+  nameWithType: TJob
+  fullName: TJob
+- uid: TJob
+  commentId: '!:TJob'
+  name: TJob
+  nameWithType: TJob
+  fullName: TJob
+- uid: Runly.Testing.TestRun`1.Execution*
+  commentId: Overload:Runly.Testing.TestRun`1.Execution
+  name: Execution
+  nameWithType: TestRun<TJob>.Execution
+  fullName: Runly.Testing.TestRun<TJob>.Execution
+  nameWithType.vb: TestRun(Of TJob).Execution
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Execution
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Testing.TestRun`1.Results*
+  commentId: Overload:Runly.Testing.TestRun`1.Results
+  name: Results
+  nameWithType: TestRun<TJob>.Results
+  fullName: Runly.Testing.TestRun<TJob>.Results
+  nameWithType.vb: TestRun(Of TJob).Results
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Results
+- uid: Runly.ResultLog
+  commentId: T:Runly.ResultLog
+  parent: Runly
+  name: ResultLog
+  nameWithType: ResultLog
+  fullName: Runly.ResultLog
+- uid: Runly.Testing.TestRun`1.Cancel*
+  commentId: Overload:Runly.Testing.TestRun`1.Cancel
+  name: Cancel
+  nameWithType: TestRun<TJob>.Cancel
+  fullName: Runly.Testing.TestRun<TJob>.Cancel
+  nameWithType.vb: TestRun(Of TJob).Cancel
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Cancel
+- uid: Runly.Testing.TestRun`1.RunAsync*
+  commentId: Overload:Runly.Testing.TestRun`1.RunAsync
+  name: RunAsync
+  nameWithType: TestRun<TJob>.RunAsync
+  fullName: Runly.Testing.TestRun<TJob>.RunAsync
+  nameWithType.vb: TestRun(Of TJob).RunAsync
+  fullName.vb: Runly.Testing.TestRun(Of TJob).RunAsync
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Task{Runly.Testing.TestRun`1}
+  commentId: '!:Task{Runly.Testing.TestRun`1}'
+  definition: Task`1
+  name: Task<TestRun<TJob>>
+  nameWithType: Task<TestRun<TJob>>
+  fullName: Task<Runly.Testing.TestRun<TJob>>
+  nameWithType.vb: Task(Of TestRun(Of TJob))
+  fullName.vb: Task(Of Runly.Testing.TestRun(Of TJob))
+  name.vb: Task(Of TestRun(Of TJob))
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

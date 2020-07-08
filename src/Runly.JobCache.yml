@@ -1,0 +1,402 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JobCache
+  commentId: T:Runly.JobCache
+  id: JobCache
+  parent: Runly
+  children:
+  - Runly.JobCache.#ctor(IEnumerable{Assembly})
+  - Runly.JobCache.Get(System.String)
+  - Runly.JobCache.Get(Type)
+  - Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
+  - Runly.JobCache.GetDefaultConfig(System.String)
+  - Runly.JobCache.Jobs
+  langs:
+  - csharp
+  - vb
+  name: JobCache
+  nameWithType: JobCache
+  fullName: Runly.JobCache
+  type: Class
+  source:
+    id: JobCache
+    path: /github/workspace/src/Job/JobCache.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class JobCache : object'
+    content.vb: >-
+      Public Class JobCache
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.JobCache.Jobs
+  commentId: P:Runly.JobCache.Jobs
+  id: Jobs
+  parent: Runly.JobCache
+  langs:
+  - csharp
+  - vb
+  name: Jobs
+  nameWithType: JobCache.Jobs
+  fullName: Runly.JobCache.Jobs
+  type: Property
+  source:
+    id: Jobs
+    path: /github/workspace/src/Job/JobCache.cs
+    startLine: 9
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public IEnumerable<JobInfo> Jobs { get; }
+    parameters: []
+    return:
+      type: IEnumerable{Runly.JobInfo}
+    content.vb: Public ReadOnly Property Jobs As IEnumerable(Of JobInfo)
+  overload: Runly.JobCache.Jobs*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.JobCache.#ctor(IEnumerable{Assembly})
+  commentId: M:Runly.JobCache.#ctor(IEnumerable{Assembly})
+  id: '#ctor(IEnumerable{Assembly})'
+  parent: Runly.JobCache
+  langs:
+  - csharp
+  - vb
+  name: JobCache(IEnumerable<Assembly>)
+  nameWithType: JobCache.JobCache(IEnumerable<Assembly>)
+  fullName: Runly.JobCache.JobCache(IEnumerable<Assembly>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/JobCache.cs
+    startLine: 11
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public JobCache(IEnumerable<Assembly> jobAssemblies)
+    parameters:
+    - id: jobAssemblies
+      type: IEnumerable{Assembly}
+    content.vb: Public Sub New(jobAssemblies As IEnumerable(Of Assembly))
+  overload: Runly.JobCache.#ctor*
+  nameWithType.vb: JobCache.JobCache(IEnumerable(Of Assembly))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.JobCache.JobCache(IEnumerable(Of Assembly))
+  name.vb: JobCache(IEnumerable(Of Assembly))
+- uid: Runly.JobCache.Get(Type)
+  commentId: M:Runly.JobCache.Get(Type)
+  id: Get(Type)
+  parent: Runly.JobCache
+  langs:
+  - csharp
+  - vb
+  name: Get(Type)
+  nameWithType: JobCache.Get(Type)
+  fullName: Runly.JobCache.Get(Type)
+  type: Method
+  source:
+    id: Get
+    path: /github/workspace/src/Job/JobCache.cs
+    startLine: 30
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public JobInfo Get(Type type)
+    parameters:
+    - id: type
+      type: Type
+    return:
+      type: Runly.JobInfo
+    content.vb: Public Function Get(type As Type) As JobInfo
+  overload: Runly.JobCache.Get*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.JobCache.Get(System.String)
+  commentId: M:Runly.JobCache.Get(System.String)
+  id: Get(System.String)
+  parent: Runly.JobCache
+  langs:
+  - csharp
+  - vb
+  name: Get(String)
+  nameWithType: JobCache.Get(String)
+  fullName: Runly.JobCache.Get(System.String)
+  type: Method
+  source:
+    id: Get
+    path: /github/workspace/src/Job/JobCache.cs
+    startLine: 35
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public JobInfo Get(string type)
+    parameters:
+    - id: type
+      type: System.String
+    return:
+      type: Runly.JobInfo
+    content.vb: Public Function Get(type As String) As JobInfo
+  overload: Runly.JobCache.Get*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.JobCache.GetDefaultConfig(System.String)
+  commentId: M:Runly.JobCache.GetDefaultConfig(System.String)
+  id: GetDefaultConfig(System.String)
+  parent: Runly.JobCache
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultConfig(String)
+  nameWithType: JobCache.GetDefaultConfig(String)
+  fullName: Runly.JobCache.GetDefaultConfig(System.String)
+  type: Method
+  source:
+    id: GetDefaultConfig
+    path: /github/workspace/src/Job/JobCache.cs
+    startLine: 40
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Config GetDefaultConfig(string processType)
+    parameters:
+    - id: processType
+      type: System.String
+    return:
+      type: Runly.Config
+    content.vb: Public Function GetDefaultConfig(processType As String) As Config
+  overload: Runly.JobCache.GetDefaultConfig*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
+  commentId: M:Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
+  id: GetDefaultConfig(Runly.JobInfo)
+  parent: Runly.JobCache
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultConfig(JobInfo)
+  nameWithType: JobCache.GetDefaultConfig(JobInfo)
+  fullName: Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
+  type: Method
+  source:
+    id: GetDefaultConfig
+    path: /github/workspace/src/Job/JobCache.cs
+    startLine: 45
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Config GetDefaultConfig(JobInfo pi)
+    parameters:
+    - id: pi
+      type: Runly.JobInfo
+    return:
+      type: Runly.Config
+    content.vb: Public Function GetDefaultConfig(pi As JobInfo) As Config
+  overload: Runly.JobCache.GetDefaultConfig*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.JobCache.Jobs*
+  commentId: Overload:Runly.JobCache.Jobs
+  name: Jobs
+  nameWithType: JobCache.Jobs
+  fullName: Runly.JobCache.Jobs
+- uid: IEnumerable{Runly.JobInfo}
+  commentId: '!:IEnumerable{Runly.JobInfo}'
+  definition: IEnumerable`1
+  name: IEnumerable<JobInfo>
+  nameWithType: IEnumerable<JobInfo>
+  fullName: IEnumerable<Runly.JobInfo>
+  nameWithType.vb: IEnumerable(Of JobInfo)
+  fullName.vb: IEnumerable(Of Runly.JobInfo)
+  name.vb: IEnumerable(Of JobInfo)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.JobInfo
+    name: JobInfo
+    nameWithType: JobInfo
+    fullName: Runly.JobInfo
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.JobInfo
+    name: JobInfo
+    nameWithType: JobInfo
+    fullName: Runly.JobInfo
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobCache.#ctor*
+  commentId: Overload:Runly.JobCache.#ctor
+  name: JobCache
+  nameWithType: JobCache.JobCache
+  fullName: Runly.JobCache.JobCache
+- uid: IEnumerable{Assembly}
+  commentId: '!:IEnumerable{Assembly}'
+  definition: IEnumerable`1
+  name: IEnumerable<Assembly>
+  nameWithType: IEnumerable<Assembly>
+  fullName: IEnumerable<Assembly>
+  nameWithType.vb: IEnumerable(Of Assembly)
+  fullName.vb: IEnumerable(Of Assembly)
+  name.vb: IEnumerable(Of Assembly)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: Assembly
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Assembly
+    name: Assembly
+    nameWithType: Assembly
+    fullName: Assembly
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.JobCache.Get*
+  commentId: Overload:Runly.JobCache.Get
+  name: Get
+  nameWithType: JobCache.Get
+  fullName: Runly.JobCache.Get
+- uid: Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: Runly.JobInfo
+  commentId: T:Runly.JobInfo
+  parent: Runly
+  name: JobInfo
+  nameWithType: JobInfo
+  fullName: Runly.JobInfo
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.JobCache.GetDefaultConfig*
+  commentId: Overload:Runly.JobCache.GetDefaultConfig
+  name: GetDefaultConfig
+  nameWithType: JobCache.GetDefaultConfig
+  fullName: Runly.JobCache.GetDefaultConfig
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config

@@ -1,0 +1,180 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.JobConfig
+  commentId: T:Runly.JobConfig
+  id: JobConfig
+  parent: Runly
+  children:
+  - Runly.JobConfig.Package
+  - Runly.JobConfig.Type
+  - Runly.JobConfig.Version
+  langs:
+  - csharp
+  - vb
+  name: JobConfig
+  nameWithType: JobConfig
+  fullName: Runly.JobConfig
+  type: Class
+  source:
+    id: JobConfig
+    path: /github/workspace/src/Core/JobConfig.cs
+    startLine: 9
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nIdentifies the job that created the <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> and/or the job that will run when executed.\n"
+  remarks: The data in this class is used by the Runly API, node and/or job host. This class should not be extended.
+  example: []
+  syntax:
+    content: 'public class JobConfig : object'
+    content.vb: >-
+      Public Class JobConfig
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.JobConfig.Package
+  commentId: P:Runly.JobConfig.Package
+  id: Package
+  parent: Runly.JobConfig
+  langs:
+  - csharp
+  - vb
+  name: Package
+  nameWithType: JobConfig.Package
+  fullName: Runly.JobConfig.Package
+  type: Property
+  source:
+    id: Package
+    path: /github/workspace/src/Core/JobConfig.cs
+    startLine: 14
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe ID of the package that contains the <xref href=\"Runly.JobConfig.Type\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string Package { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Package As String
+  overload: Runly.JobConfig.Package*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.JobConfig.Version
+  commentId: P:Runly.JobConfig.Version
+  id: Version
+  parent: Runly.JobConfig
+  langs:
+  - csharp
+  - vb
+  name: Version
+  nameWithType: JobConfig.Version
+  fullName: Runly.JobConfig.Version
+  type: Property
+  source:
+    id: Version
+    path: /github/workspace/src/Core/JobConfig.cs
+    startLine: 21
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe version of the package that contains the <xref href=\"Runly.JobConfig.Type\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public string Version { get; set; }
+    parameters: []
+    return:
+      type: System.String
+      description: A valid semver.org version in the format MAJOR.MINOR.PATCH.
+    content.vb: Public Property Version As String
+  overload: Runly.JobConfig.Version*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.JobConfig.Type
+  commentId: P:Runly.JobConfig.Type
+  id: Type
+  parent: Runly.JobConfig
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: JobConfig.Type
+  fullName: Runly.JobConfig.Type
+  type: Property
+  source:
+    id: Type
+    path: /github/workspace/src/Core/JobConfig.cs
+    startLine: 27
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe full name of the type of job.\n"
+  example: []
+  syntax:
+    content: public string Type { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Type As String
+  overload: Runly.JobConfig.Type*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.JobConfig.Type
+  commentId: P:Runly.JobConfig.Type
+  isExternal: true
+- uid: Runly.JobConfig.Package*
+  commentId: Overload:Runly.JobConfig.Package
+  name: Package
+  nameWithType: JobConfig.Package
+  fullName: Runly.JobConfig.Package
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.JobConfig.Version*
+  commentId: Overload:Runly.JobConfig.Version
+  name: Version
+  nameWithType: JobConfig.Version
+  fullName: Runly.JobConfig.Version
+- uid: Runly.JobConfig.Type*
+  commentId: Overload:Runly.JobConfig.Type
+  name: Type
+  nameWithType: JobConfig.Type
+  fullName: Runly.JobConfig.Type

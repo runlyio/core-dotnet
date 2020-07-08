@@ -1,0 +1,329 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.RunlyApiConfig
+  commentId: T:Runly.RunlyApiConfig
+  id: RunlyApiConfig
+  parent: Runly
+  children:
+  - Runly.RunlyApiConfig.#ctor
+  - Runly.RunlyApiConfig.EnvironmentId
+  - Runly.RunlyApiConfig.InstanceId
+  - Runly.RunlyApiConfig.LogSuccessfulItemResults
+  - Runly.RunlyApiConfig.OrganizationId
+  - Runly.RunlyApiConfig.Token
+  - Runly.RunlyApiConfig.Uri
+  langs:
+  - csharp
+  - vb
+  name: RunlyApiConfig
+  nameWithType: RunlyApiConfig
+  fullName: Runly.RunlyApiConfig
+  type: Class
+  source:
+    id: RunlyApiConfig
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nRunly API connection information used to report progress and store results of the job.\n"
+  remarks: The data in this class is used by the Runly API, node and/or job host. This class should not be extended.
+  example: []
+  syntax:
+    content: 'public class RunlyApiConfig : object'
+    content.vb: >-
+      Public Class RunlyApiConfig
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.RunlyApiConfig.Uri
+  commentId: P:Runly.RunlyApiConfig.Uri
+  id: Uri
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: Uri
+  nameWithType: RunlyApiConfig.Uri
+  fullName: Runly.RunlyApiConfig.Uri
+  type: Property
+  source:
+    id: Uri
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 13
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe URI of the Runly API, https://api.runly.io/ by default.\n"
+  example: []
+  syntax:
+    content: public string Uri { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Uri As String
+  overload: Runly.RunlyApiConfig.Uri*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.RunlyApiConfig.Token
+  commentId: P:Runly.RunlyApiConfig.Token
+  id: Token
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: Token
+  nameWithType: RunlyApiConfig.Token
+  fullName: Runly.RunlyApiConfig.Token
+  type: Property
+  source:
+    id: Token
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 18
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe auth token used to grant the job access to the API.\n"
+  example: []
+  syntax:
+    content: public string Token { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Token As String
+  overload: Runly.RunlyApiConfig.Token*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.RunlyApiConfig.OrganizationId
+  commentId: P:Runly.RunlyApiConfig.OrganizationId
+  id: OrganizationId
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: OrganizationId
+  nameWithType: RunlyApiConfig.OrganizationId
+  fullName: Runly.RunlyApiConfig.OrganizationId
+  type: Property
+  source:
+    id: OrganizationId
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 23
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe org that the run is queued or executing in.\n"
+  example: []
+  syntax:
+    content: public string OrganizationId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property OrganizationId As String
+  overload: Runly.RunlyApiConfig.OrganizationId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.RunlyApiConfig.EnvironmentId
+  commentId: P:Runly.RunlyApiConfig.EnvironmentId
+  id: EnvironmentId
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: EnvironmentId
+  nameWithType: RunlyApiConfig.EnvironmentId
+  fullName: Runly.RunlyApiConfig.EnvironmentId
+  type: Property
+  source:
+    id: EnvironmentId
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 28
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe environment that the run is queued or executing in.\n"
+  example: []
+  syntax:
+    content: public string EnvironmentId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property EnvironmentId As String
+  overload: Runly.RunlyApiConfig.EnvironmentId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.RunlyApiConfig.InstanceId
+  commentId: P:Runly.RunlyApiConfig.InstanceId
+  id: InstanceId
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: InstanceId
+  nameWithType: RunlyApiConfig.InstanceId
+  fullName: Runly.RunlyApiConfig.InstanceId
+  type: Property
+  source:
+    id: InstanceId
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 33
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe ID of the instance assigned by the API.\n"
+  example: []
+  syntax:
+    content: public Guid InstanceId { get; set; }
+    parameters: []
+    return:
+      type: Guid
+    content.vb: Public Property InstanceId As Guid
+  overload: Runly.RunlyApiConfig.InstanceId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.RunlyApiConfig.LogSuccessfulItemResults
+  commentId: P:Runly.RunlyApiConfig.LogSuccessfulItemResults
+  id: LogSuccessfulItemResults
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: LogSuccessfulItemResults
+  nameWithType: RunlyApiConfig.LogSuccessfulItemResults
+  fullName: Runly.RunlyApiConfig.LogSuccessfulItemResults
+  type: Property
+  source:
+    id: LogSuccessfulItemResults
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 38
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nWhen true, successful item results will be sent to the API. This is similar to turning on debug logging, it may severely impact the performance of jobs.\n"
+  example: []
+  syntax:
+    content: public bool LogSuccessfulItemResults { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property LogSuccessfulItemResults As Boolean
+  overload: Runly.RunlyApiConfig.LogSuccessfulItemResults*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.RunlyApiConfig.#ctor
+  commentId: M:Runly.RunlyApiConfig.#ctor
+  id: '#ctor'
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: RunlyApiConfig()
+  nameWithType: RunlyApiConfig.RunlyApiConfig()
+  fullName: Runly.RunlyApiConfig.RunlyApiConfig()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 40
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public RunlyApiConfig()
+    content.vb: Public Sub New
+  overload: Runly.RunlyApiConfig.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.RunlyApiConfig.Uri*
+  commentId: Overload:Runly.RunlyApiConfig.Uri
+  name: Uri
+  nameWithType: RunlyApiConfig.Uri
+  fullName: Runly.RunlyApiConfig.Uri
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.RunlyApiConfig.Token*
+  commentId: Overload:Runly.RunlyApiConfig.Token
+  name: Token
+  nameWithType: RunlyApiConfig.Token
+  fullName: Runly.RunlyApiConfig.Token
+- uid: Runly.RunlyApiConfig.OrganizationId*
+  commentId: Overload:Runly.RunlyApiConfig.OrganizationId
+  name: OrganizationId
+  nameWithType: RunlyApiConfig.OrganizationId
+  fullName: Runly.RunlyApiConfig.OrganizationId
+- uid: Runly.RunlyApiConfig.EnvironmentId*
+  commentId: Overload:Runly.RunlyApiConfig.EnvironmentId
+  name: EnvironmentId
+  nameWithType: RunlyApiConfig.EnvironmentId
+  fullName: Runly.RunlyApiConfig.EnvironmentId
+- uid: Runly.RunlyApiConfig.InstanceId*
+  commentId: Overload:Runly.RunlyApiConfig.InstanceId
+  name: InstanceId
+  nameWithType: RunlyApiConfig.InstanceId
+  fullName: Runly.RunlyApiConfig.InstanceId
+- uid: Guid
+  isExternal: true
+  name: Guid
+  nameWithType: Guid
+  fullName: Guid
+- uid: Runly.RunlyApiConfig.LogSuccessfulItemResults*
+  commentId: Overload:Runly.RunlyApiConfig.LogSuccessfulItemResults
+  name: LogSuccessfulItemResults
+  nameWithType: RunlyApiConfig.LogSuccessfulItemResults
+  fullName: Runly.RunlyApiConfig.LogSuccessfulItemResults
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.RunlyApiConfig.#ctor*
+  commentId: Overload:Runly.RunlyApiConfig.#ctor
+  name: RunlyApiConfig
+  nameWithType: RunlyApiConfig.RunlyApiConfig
+  fullName: Runly.RunlyApiConfig.RunlyApiConfig

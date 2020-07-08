@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Internal
+  commentId: N:Runly.Internal
+  id: Runly.Internal
+  children:
+  - Runly.Internal.JsonSchema
+  langs:
+  - csharp
+  - vb
+  name: Runly.Internal
+  nameWithType: Runly.Internal
+  fullName: Runly.Internal
+  type: Namespace
+  assemblies:
+  - Runly
+references:
+- uid: Runly.Internal.JsonSchema
+  commentId: T:Runly.Internal.JsonSchema
+  name: JsonSchema
+  nameWithType: JsonSchema
+  fullName: Runly.Internal.JsonSchema

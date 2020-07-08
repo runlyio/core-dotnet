@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Internal.JsonSchema
+  commentId: T:Runly.Internal.JsonSchema
+  id: JsonSchema
+  parent: Runly.Internal
+  children:
+  - Runly.Internal.JsonSchema.#ctor(ILogger{Runly.Internal.JsonSchema})
+  - Runly.Internal.JsonSchema.Generate(Type)
+  langs:
+  - csharp
+  - vb
+  name: JsonSchema
+  nameWithType: JsonSchema
+  fullName: Runly.Internal.JsonSchema
+  type: Class
+  source:
+    id: JsonSchema
+    path: /github/workspace/src/Job/Internal/JsonSchema.cs
+    startLine: 8
+  assemblies:
+  - Runly
+  namespace: Runly.Internal
+  syntax:
+    content: 'public class JsonSchema : object'
+    content.vb: >-
+      Public Class JsonSchema
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.Internal.JsonSchema.#ctor(ILogger{Runly.Internal.JsonSchema})
+  commentId: M:Runly.Internal.JsonSchema.#ctor(ILogger{Runly.Internal.JsonSchema})
+  id: '#ctor(ILogger{Runly.Internal.JsonSchema})'
+  parent: Runly.Internal.JsonSchema
+  langs:
+  - csharp
+  - vb
+  name: JsonSchema(ILogger<JsonSchema>)
+  nameWithType: JsonSchema.JsonSchema(ILogger<JsonSchema>)
+  fullName: Runly.Internal.JsonSchema.JsonSchema(ILogger<Runly.Internal.JsonSchema>)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/Internal/JsonSchema.cs
+    startLine: 13
+  assemblies:
+  - Runly
+  namespace: Runly.Internal
+  syntax:
+    content: public JsonSchema(ILogger<JsonSchema> logger)
+    parameters:
+    - id: logger
+      type: ILogger{Runly.Internal.JsonSchema}
+    content.vb: Public Sub New(logger As ILogger(Of JsonSchema))
+  overload: Runly.Internal.JsonSchema.#ctor*
+  nameWithType.vb: JsonSchema.JsonSchema(ILogger(Of JsonSchema))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Internal.JsonSchema.JsonSchema(ILogger(Of Runly.Internal.JsonSchema))
+  name.vb: JsonSchema(ILogger(Of JsonSchema))
+- uid: Runly.Internal.JsonSchema.Generate(Type)
+  commentId: M:Runly.Internal.JsonSchema.Generate(Type)
+  id: Generate(Type)
+  parent: Runly.Internal.JsonSchema
+  langs:
+  - csharp
+  - vb
+  name: Generate(Type)
+  nameWithType: JsonSchema.Generate(Type)
+  fullName: Runly.Internal.JsonSchema.Generate(Type)
+  type: Method
+  source:
+    id: Generate
+    path: /github/workspace/src/Job/Internal/JsonSchema.cs
+    startLine: 24
+  assemblies:
+  - Runly
+  namespace: Runly.Internal
+  syntax:
+    content: public JObject Generate(Type configType)
+    parameters:
+    - id: configType
+      type: Type
+    return:
+      type: JObject
+    content.vb: Public Function Generate(configType As Type) As JObject
+  overload: Runly.Internal.JsonSchema.Generate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly.Internal
+  commentId: N:Runly.Internal
+  name: Runly.Internal
+  nameWithType: Runly.Internal
+  fullName: Runly.Internal
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Internal.JsonSchema.#ctor*
+  commentId: Overload:Runly.Internal.JsonSchema.#ctor
+  name: JsonSchema
+  nameWithType: JsonSchema.JsonSchema
+  fullName: Runly.Internal.JsonSchema.JsonSchema
+- uid: ILogger{Runly.Internal.JsonSchema}
+  commentId: '!:ILogger{Runly.Internal.JsonSchema}'
+  definition: ILogger`1
+  name: ILogger<JsonSchema>
+  nameWithType: ILogger<JsonSchema>
+  fullName: ILogger<Runly.Internal.JsonSchema>
+  nameWithType.vb: ILogger(Of JsonSchema)
+  fullName.vb: ILogger(Of Runly.Internal.JsonSchema)
+  name.vb: ILogger(Of JsonSchema)
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Runly.Internal.JsonSchema
+    name: JsonSchema
+    nameWithType: JsonSchema
+    fullName: Runly.Internal.JsonSchema
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Runly.Internal.JsonSchema
+    name: JsonSchema
+    nameWithType: JsonSchema
+    fullName: Runly.Internal.JsonSchema
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: ILogger`1
+  isExternal: true
+  name: ILogger<>
+  nameWithType: ILogger<>
+  fullName: ILogger<>
+  nameWithType.vb: ILogger(Of )
+  fullName.vb: ILogger(Of )
+  name.vb: ILogger(Of )
+  spec.csharp:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: ILogger`1
+    name: ILogger
+    nameWithType: ILogger
+    fullName: ILogger
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Internal.JsonSchema.Generate*
+  commentId: Overload:Runly.Internal.JsonSchema.Generate
+  name: Generate
+  nameWithType: JsonSchema.Generate
+  fullName: Runly.Internal.JsonSchema.Generate
+- uid: Type
+  isExternal: true
+  name: Type
+  nameWithType: Type
+  fullName: Type
+- uid: JObject
+  commentId: '!:JObject'
+  isExternal: true
+  name: JObject
+  nameWithType: JObject
+  fullName: JObject

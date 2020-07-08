@@ -1,0 +1,116 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.AsyncAutoResetEvent
+  commentId: T:Runly.AsyncAutoResetEvent
+  id: AsyncAutoResetEvent
+  parent: Runly
+  children:
+  - Runly.AsyncAutoResetEvent.Set
+  - Runly.AsyncAutoResetEvent.WaitAsync
+  langs:
+  - csharp
+  - vb
+  name: AsyncAutoResetEvent
+  nameWithType: AsyncAutoResetEvent
+  fullName: Runly.AsyncAutoResetEvent
+  type: Class
+  source:
+    id: AsyncAutoResetEvent
+    path: /github/workspace/src/Job/AsyncAutoResetEvent.cs
+    startLine: 6
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: 'public class AsyncAutoResetEvent : object'
+    content.vb: >-
+      Public Class AsyncAutoResetEvent
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.AsyncAutoResetEvent.WaitAsync
+  commentId: M:Runly.AsyncAutoResetEvent.WaitAsync
+  id: WaitAsync
+  parent: Runly.AsyncAutoResetEvent
+  langs:
+  - csharp
+  - vb
+  name: WaitAsync()
+  nameWithType: AsyncAutoResetEvent.WaitAsync()
+  fullName: Runly.AsyncAutoResetEvent.WaitAsync()
+  type: Method
+  source:
+    id: WaitAsync
+    path: /github/workspace/src/Job/AsyncAutoResetEvent.cs
+    startLine: 12
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public Task WaitAsync()
+    return:
+      type: Task
+    content.vb: Public Function WaitAsync As Task
+  overload: Runly.AsyncAutoResetEvent.WaitAsync*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: Runly.AsyncAutoResetEvent.Set
+  commentId: M:Runly.AsyncAutoResetEvent.Set
+  id: Set
+  parent: Runly.AsyncAutoResetEvent
+  langs:
+  - csharp
+  - vb
+  name: Set()
+  nameWithType: AsyncAutoResetEvent.Set()
+  fullName: Runly.AsyncAutoResetEvent.Set()
+  type: Method
+  source:
+    id: Set
+    path: /github/workspace/src/Job/AsyncAutoResetEvent.cs
+    startLine: 30
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: public void Set()
+    content.vb: Public Sub Set
+  overload: Runly.AsyncAutoResetEvent.Set*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.AsyncAutoResetEvent.WaitAsync*
+  commentId: Overload:Runly.AsyncAutoResetEvent.WaitAsync
+  name: WaitAsync
+  nameWithType: AsyncAutoResetEvent.WaitAsync
+  fullName: Runly.AsyncAutoResetEvent.WaitAsync
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Runly.AsyncAutoResetEvent.Set*
+  commentId: Overload:Runly.AsyncAutoResetEvent.Set
+  name: Set
+  nameWithType: AsyncAutoResetEvent.Set
+  fullName: Runly.AsyncAutoResetEvent.Set

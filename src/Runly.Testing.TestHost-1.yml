@@ -1,0 +1,294 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Testing.TestHost`1
+  commentId: T:Runly.Testing.TestHost`1
+  id: TestHost`1
+  parent: Runly.Testing
+  children:
+  - Runly.Testing.TestHost`1.#ctor(Runly.Config)
+  - Runly.Testing.TestHost`1.#ctor(Runly.Config,IServiceCollection)
+  - Runly.Testing.TestHost`1.CreateRun
+  - Runly.Testing.TestHost`1.Services
+  langs:
+  - csharp
+  - vb
+  name: TestHost<TJob>
+  nameWithType: TestHost<TJob>
+  fullName: Runly.Testing.TestHost<TJob>
+  type: Class
+  source:
+    id: TestHost
+    path: /github/workspace/src/Job/Testing/TestHost.cs
+    startLine: 7
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: 'public class TestHost<TJob> : object where TJob : IJob'
+    typeParameters:
+    - id: TJob
+    content.vb: >-
+      Public Class TestHost(Of TJob As IJob)
+          Inherits Object
+  inheritance:
+  - System.Object
+  nameWithType.vb: TestHost(Of TJob)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: Runly.Testing.TestHost(Of TJob)
+  name.vb: TestHost(Of TJob)
+- uid: Runly.Testing.TestHost`1.Services
+  commentId: P:Runly.Testing.TestHost`1.Services
+  id: Services
+  parent: Runly.Testing.TestHost`1
+  langs:
+  - csharp
+  - vb
+  name: Services
+  nameWithType: TestHost<TJob>.Services
+  fullName: Runly.Testing.TestHost<TJob>.Services
+  type: Property
+  source:
+    id: Services
+    path: /github/workspace/src/Job/Testing/TestHost.cs
+    startLine: 10
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public IServiceCollection Services { get; }
+    parameters: []
+    return:
+      type: IServiceCollection
+    content.vb: Public ReadOnly Property Services As IServiceCollection
+  overload: Runly.Testing.TestHost`1.Services*
+  nameWithType.vb: TestHost(Of TJob).Services
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Runly.Testing.TestHost(Of TJob).Services
+- uid: Runly.Testing.TestHost`1.#ctor(Runly.Config)
+  commentId: M:Runly.Testing.TestHost`1.#ctor(Runly.Config)
+  id: '#ctor(Runly.Config)'
+  parent: Runly.Testing.TestHost`1
+  langs:
+  - csharp
+  - vb
+  name: TestHost(Config)
+  nameWithType: TestHost<TJob>.TestHost(Config)
+  fullName: Runly.Testing.TestHost<TJob>.TestHost(Runly.Config)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/Testing/TestHost.cs
+    startLine: 12
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public TestHost(Config config)
+    parameters:
+    - id: config
+      type: Runly.Config
+    content.vb: Public Sub New(config As Config)
+  overload: Runly.Testing.TestHost`1.#ctor*
+  nameWithType.vb: TestHost(Of TJob).TestHost(Config)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Testing.TestHost(Of TJob).TestHost(Runly.Config)
+- uid: Runly.Testing.TestHost`1.#ctor(Runly.Config,IServiceCollection)
+  commentId: M:Runly.Testing.TestHost`1.#ctor(Runly.Config,IServiceCollection)
+  id: '#ctor(Runly.Config,IServiceCollection)'
+  parent: Runly.Testing.TestHost`1
+  langs:
+  - csharp
+  - vb
+  name: TestHost(Config, IServiceCollection)
+  nameWithType: TestHost<TJob>.TestHost(Config, IServiceCollection)
+  fullName: Runly.Testing.TestHost<TJob>.TestHost(Runly.Config, IServiceCollection)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Job/Testing/TestHost.cs
+    startLine: 15
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public TestHost(Config config, IServiceCollection services)
+    parameters:
+    - id: config
+      type: Runly.Config
+    - id: services
+      type: IServiceCollection
+    content.vb: Public Sub New(config As Config, services As IServiceCollection)
+  overload: Runly.Testing.TestHost`1.#ctor*
+  nameWithType.vb: TestHost(Of TJob).TestHost(Config, IServiceCollection)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Testing.TestHost(Of TJob).TestHost(Runly.Config, IServiceCollection)
+- uid: Runly.Testing.TestHost`1.CreateRun
+  commentId: M:Runly.Testing.TestHost`1.CreateRun
+  id: CreateRun
+  parent: Runly.Testing.TestHost`1
+  langs:
+  - csharp
+  - vb
+  name: CreateRun()
+  nameWithType: TestHost<TJob>.CreateRun()
+  fullName: Runly.Testing.TestHost<TJob>.CreateRun()
+  type: Method
+  source:
+    id: CreateRun
+    path: /github/workspace/src/Job/Testing/TestHost.cs
+    startLine: 29
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  summary: "\nCreates a <xref href=\"Runly.Testing.TestRun%601\" data-throw-if-not-resolved=\"false\"></xref> using the <see cref=\"!:ServicesCollection\"></see>\n"
+  example: []
+  syntax:
+    content: public TestRun<TJob> CreateRun()
+    return:
+      type: Runly.Testing.TestRun{{TJob}}
+    content.vb: Public Function CreateRun As TestRun(Of TJob)
+  overload: Runly.Testing.TestHost`1.CreateRun*
+  nameWithType.vb: TestHost(Of TJob).CreateRun()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Testing.TestHost(Of TJob).CreateRun()
+references:
+- uid: Runly.Testing
+  commentId: N:Runly.Testing
+  name: Runly.Testing
+  nameWithType: Runly.Testing
+  fullName: Runly.Testing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Testing.TestHost`1.Services*
+  commentId: Overload:Runly.Testing.TestHost`1.Services
+  name: Services
+  nameWithType: TestHost<TJob>.Services
+  fullName: Runly.Testing.TestHost<TJob>.Services
+  nameWithType.vb: TestHost(Of TJob).Services
+  fullName.vb: Runly.Testing.TestHost(Of TJob).Services
+- uid: IServiceCollection
+  isExternal: true
+  name: IServiceCollection
+  nameWithType: IServiceCollection
+  fullName: IServiceCollection
+- uid: Runly.Testing.TestHost`1.#ctor*
+  commentId: Overload:Runly.Testing.TestHost`1.#ctor
+  name: TestHost
+  nameWithType: TestHost<TJob>.TestHost
+  fullName: Runly.Testing.TestHost<TJob>.TestHost
+  nameWithType.vb: TestHost(Of TJob).TestHost
+  fullName.vb: Runly.Testing.TestHost(Of TJob).TestHost
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Testing.TestRun`1
+  commentId: T:Runly.Testing.TestRun`1
+  name: TestRun<TJob>
+  nameWithType: TestRun<TJob>
+  fullName: Runly.Testing.TestRun<TJob>
+  nameWithType.vb: TestRun(Of TJob)
+  fullName.vb: Runly.Testing.TestRun(Of TJob)
+  name.vb: TestRun(Of TJob)
+  spec.csharp:
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Testing.TestHost`1.CreateRun*
+  commentId: Overload:Runly.Testing.TestHost`1.CreateRun
+  name: CreateRun
+  nameWithType: TestHost<TJob>.CreateRun
+  fullName: Runly.Testing.TestHost<TJob>.CreateRun
+  nameWithType.vb: TestHost(Of TJob).CreateRun
+  fullName.vb: Runly.Testing.TestHost(Of TJob).CreateRun
+- uid: Runly.Testing.TestRun{{TJob}}
+  commentId: T:Runly.Testing.TestRun{`0}
+  parent: Runly.Testing
+  definition: Runly.Testing.TestRun`1
+  name: TestRun<TJob>
+  nameWithType: TestRun<TJob>
+  fullName: Runly.Testing.TestRun<TJob>
+  nameWithType.vb: TestRun(Of TJob)
+  fullName.vb: Runly.Testing.TestRun(Of TJob)
+  name.vb: TestRun(Of TJob)
+  spec.csharp:
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Testing.TestRun`1
+    name: TestRun
+    nameWithType: TestRun
+    fullName: Runly.Testing.TestRun
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,618 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  id: Result
+  parent: Runly
+  children:
+  - Runly.Result.Cancelled
+  - Runly.Result.Category
+  - Runly.Result.Failed
+  - Runly.Result.Failure
+  - Runly.Result.Failure(System.Object)
+  - Runly.Result.Failure(System.String)
+  - Runly.Result.Failure(System.String,System.Object)
+  - Runly.Result.IsSuccessful
+  - Runly.Result.Output
+  - Runly.Result.Success
+  - Runly.Result.Success(System.Object)
+  - Runly.Result.Success(System.String)
+  - Runly.Result.Success(System.String,System.Object)
+  - Runly.Result.Successful
+  - Runly.Result.SuccessOrCancelled(CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
+  type: Class
+  source:
+    id: Result
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 7
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe value returned from ProcessAsync to indicate the result of processing an item.\n"
+  example: []
+  syntax:
+    content: 'public class Result : object'
+    content.vb: >-
+      Public Class Result
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.Result.SuccessOrCancelled(CancellationToken)
+  commentId: M:Runly.Result.SuccessOrCancelled(CancellationToken)
+  id: SuccessOrCancelled(CancellationToken)
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: SuccessOrCancelled(CancellationToken)
+  nameWithType: Result.SuccessOrCancelled(CancellationToken)
+  fullName: Runly.Result.SuccessOrCancelled(CancellationToken)
+  type: Method
+  source:
+    id: SuccessOrCancelled
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 12
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nA successful result in the &quot;Successful&quot; category, except when cancellation has been requested, changing the category to &quot;Cancelled&quot;.\n"
+  example: []
+  syntax:
+    content: public static Result SuccessOrCancelled(CancellationToken cancellation)
+    parameters:
+    - id: cancellation
+      type: CancellationToken
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function SuccessOrCancelled(cancellation As CancellationToken) As Result
+  overload: Runly.Result.SuccessOrCancelled*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Success
+  commentId: M:Runly.Result.Success
+  id: Success
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Success()
+  nameWithType: Result.Success()
+  fullName: Runly.Result.Success()
+  type: Method
+  source:
+    id: Success
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 17
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nA successful result.\n"
+  example: []
+  syntax:
+    content: public static Result Success()
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Success As Result
+  overload: Runly.Result.Success*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Success(System.String)
+  commentId: M:Runly.Result.Success(System.String)
+  id: Success(System.String)
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Success(String)
+  nameWithType: Result.Success(String)
+  fullName: Runly.Result.Success(System.String)
+  type: Method
+  source:
+    id: Success
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 22
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nA successful result in a user-defined category.\n"
+  example: []
+  syntax:
+    content: public static Result Success(string category)
+    parameters:
+    - id: category
+      type: System.String
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Success(category As String) As Result
+  overload: Runly.Result.Success*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Success(System.Object)
+  commentId: M:Runly.Result.Success(System.Object)
+  id: Success(System.Object)
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Success(Object)
+  nameWithType: Result.Success(Object)
+  fullName: Runly.Result.Success(System.Object)
+  type: Method
+  source:
+    id: Success
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 27
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nA successful result with output.\n"
+  example: []
+  syntax:
+    content: public static Result Success(object output)
+    parameters:
+    - id: output
+      type: System.Object
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Success(output As Object) As Result
+  overload: Runly.Result.Success*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Success(System.String,System.Object)
+  commentId: M:Runly.Result.Success(System.String,System.Object)
+  id: Success(System.String,System.Object)
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Success(String, Object)
+  nameWithType: Result.Success(String, Object)
+  fullName: Runly.Result.Success(System.String, System.Object)
+  type: Method
+  source:
+    id: Success
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 32
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nA successful result in a user-defined category with output.\n"
+  example: []
+  syntax:
+    content: public static Result Success(string category, object output)
+    parameters:
+    - id: category
+      type: System.String
+    - id: output
+      type: System.Object
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Success(category As String, output As Object) As Result
+  overload: Runly.Result.Success*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Failure
+  commentId: M:Runly.Result.Failure
+  id: Failure
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Failure()
+  nameWithType: Result.Failure()
+  fullName: Runly.Result.Failure()
+  type: Method
+  source:
+    id: Failure
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 37
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nAn unsuccessful result.\n"
+  example: []
+  syntax:
+    content: public static Result Failure()
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Failure As Result
+  overload: Runly.Result.Failure*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Failure(System.String)
+  commentId: M:Runly.Result.Failure(System.String)
+  id: Failure(System.String)
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Failure(String)
+  nameWithType: Result.Failure(String)
+  fullName: Runly.Result.Failure(System.String)
+  type: Method
+  source:
+    id: Failure
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 42
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nAn unsuccessful result in a user-defined category.\n"
+  example: []
+  syntax:
+    content: public static Result Failure(string category)
+    parameters:
+    - id: category
+      type: System.String
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Failure(category As String) As Result
+  overload: Runly.Result.Failure*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Failure(System.Object)
+  commentId: M:Runly.Result.Failure(System.Object)
+  id: Failure(System.Object)
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Failure(Object)
+  nameWithType: Result.Failure(Object)
+  fullName: Runly.Result.Failure(System.Object)
+  type: Method
+  source:
+    id: Failure
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 47
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nAn unsuccessful result with output.\n"
+  example: []
+  syntax:
+    content: public static Result Failure(object output)
+    parameters:
+    - id: output
+      type: System.Object
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Failure(output As Object) As Result
+  overload: Runly.Result.Failure*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Failure(System.String,System.Object)
+  commentId: M:Runly.Result.Failure(System.String,System.Object)
+  id: Failure(System.String,System.Object)
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Failure(String, Object)
+  nameWithType: Result.Failure(String, Object)
+  fullName: Runly.Result.Failure(System.String, System.Object)
+  type: Method
+  source:
+    id: Failure
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 52
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nAn unsuccessful result in a user-defined category with output.\n"
+  example: []
+  syntax:
+    content: public static Result Failure(string category, object output)
+    parameters:
+    - id: category
+      type: System.String
+    - id: output
+      type: System.Object
+    return:
+      type: Runly.Result
+    content.vb: Public Shared Function Failure(category As String, output As Object) As Result
+  overload: Runly.Result.Failure*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: Runly.Result.Successful
+  commentId: F:Runly.Result.Successful
+  id: Successful
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Successful
+  nameWithType: Result.Successful
+  fullName: Runly.Result.Successful
+  type: Field
+  source:
+    id: Successful
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 57
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe default category for successful results.\n"
+  example: []
+  syntax:
+    content: public const string Successful = null
+    return:
+      type: System.String
+    content.vb: Public Const Successful As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.Result.Failed
+  commentId: F:Runly.Result.Failed
+  id: Failed
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: Result.Failed
+  fullName: Runly.Result.Failed
+  type: Field
+  source:
+    id: Failed
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 62
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe default category for failed results.\n"
+  example: []
+  syntax:
+    content: public const string Failed = null
+    return:
+      type: System.String
+    content.vb: Public Const Failed As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.Result.Cancelled
+  commentId: F:Runly.Result.Cancelled
+  id: Cancelled
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Cancelled
+  nameWithType: Result.Cancelled
+  fullName: Runly.Result.Cancelled
+  type: Field
+  source:
+    id: Cancelled
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 67
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe default category for cancelled results.\n"
+  example: []
+  syntax:
+    content: public const string Cancelled = null
+    return:
+      type: System.String
+    content.vb: Public Const Cancelled As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: Runly.Result.IsSuccessful
+  commentId: P:Runly.Result.IsSuccessful
+  id: IsSuccessful
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: IsSuccessful
+  nameWithType: Result.IsSuccessful
+  fullName: Runly.Result.IsSuccessful
+  type: Property
+  source:
+    id: IsSuccessful
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 72
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nTrue when processing was completed successfully.\n"
+  example: []
+  syntax:
+    content: public bool IsSuccessful { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccessful As Boolean
+  overload: Runly.Result.IsSuccessful*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Result.Category
+  commentId: P:Runly.Result.Category
+  id: Category
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: Result.Category
+  fullName: Runly.Result.Category
+  type: Property
+  source:
+    id: Category
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 77
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe category to group this result into.\n"
+  example: []
+  syntax:
+    content: public string Category { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Category As String
+  overload: Runly.Result.Category*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.Result.Output
+  commentId: P:Runly.Result.Output
+  id: Output
+  parent: Runly.Result
+  langs:
+  - csharp
+  - vb
+  name: Output
+  nameWithType: Result.Output
+  fullName: Runly.Result.Output
+  type: Property
+  source:
+    id: Output
+    path: /github/workspace/src/Core/Result.cs
+    startLine: 82
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nOutput from processing the item.\n"
+  example: []
+  syntax:
+    content: public object Output { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property Output As Object
+  overload: Runly.Result.Output*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.Result.SuccessOrCancelled*
+  commentId: Overload:Runly.Result.SuccessOrCancelled
+  name: SuccessOrCancelled
+  nameWithType: Result.SuccessOrCancelled
+  fullName: Runly.Result.SuccessOrCancelled
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
+- uid: Runly.Result.Success*
+  commentId: Overload:Runly.Result.Success
+  name: Success
+  nameWithType: Result.Success
+  fullName: Runly.Result.Success
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.Result.Failure*
+  commentId: Overload:Runly.Result.Failure
+  name: Failure
+  nameWithType: Result.Failure
+  fullName: Runly.Result.Failure
+- uid: Runly.Result.IsSuccessful*
+  commentId: Overload:Runly.Result.IsSuccessful
+  name: IsSuccessful
+  nameWithType: Result.IsSuccessful
+  fullName: Runly.Result.IsSuccessful
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.Result.Category*
+  commentId: Overload:Runly.Result.Category
+  name: Category
+  nameWithType: Result.Category
+  fullName: Runly.Result.Category
+- uid: Runly.Result.Output*
+  commentId: Overload:Runly.Result.Output
+  name: Output
+  nameWithType: Result.Output
+  fullName: Runly.Result.Output

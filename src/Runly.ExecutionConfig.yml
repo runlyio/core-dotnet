@@ -1,0 +1,599 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ExecutionConfig
+  commentId: T:Runly.ExecutionConfig
+  id: ExecutionConfig
+  parent: Runly
+  children:
+  - Runly.ExecutionConfig.#ctor
+  - Runly.ExecutionConfig.Delay
+  - Runly.ExecutionConfig.HandleExceptions
+  - Runly.ExecutionConfig.ItemFailureCountToStopJob
+  - Runly.ExecutionConfig.ItemFailureRetryCount
+  - Runly.ExecutionConfig.LaunchDebugger
+  - Runly.ExecutionConfig.ParallelTaskCount
+  - Runly.ExecutionConfig.ResultsFilePath
+  - Runly.ExecutionConfig.ResultsToConsole
+  - Runly.ExecutionConfig.ResultsToFile
+  - Runly.ExecutionConfig.RunAfterId
+  langs:
+  - csharp
+  - vb
+  name: ExecutionConfig
+  nameWithType: ExecutionConfig
+  fullName: Runly.ExecutionConfig
+  type: Class
+  source:
+    id: ExecutionConfig
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nDetermines how a job will execute.\n"
+  remarks: The data in this class is used by the Runly API, node and/or job host. This class should not be extended.
+  example: []
+  syntax:
+    content: 'public class ExecutionConfig : object'
+    content.vb: >-
+      Public Class ExecutionConfig
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.ExecutionConfig.ParallelTaskCount
+  commentId: P:Runly.ExecutionConfig.ParallelTaskCount
+  id: ParallelTaskCount
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: ParallelTaskCount
+  nameWithType: ExecutionConfig.ParallelTaskCount
+  fullName: Runly.ExecutionConfig.ParallelTaskCount
+  type: Property
+  source:
+    id: ParallelTaskCount
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 14
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of tasks created to call in parallel the ProcessAsync method of the job.\n"
+  example: []
+  syntax:
+    content: public int ParallelTaskCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: 1 by default
+    content.vb: Public Property ParallelTaskCount As Integer
+  overload: Runly.ExecutionConfig.ParallelTaskCount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.ItemFailureRetryCount
+  commentId: P:Runly.ExecutionConfig.ItemFailureRetryCount
+  id: ItemFailureRetryCount
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: ItemFailureRetryCount
+  nameWithType: ExecutionConfig.ItemFailureRetryCount
+  fullName: Runly.ExecutionConfig.ItemFailureRetryCount
+  type: Property
+  source:
+    id: ItemFailureRetryCount
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 20
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of times, after the first attempt, to reprocess an item when an unhandled exception occurs or a failed result is returned.\n"
+  example: []
+  syntax:
+    content: public int ItemFailureRetryCount { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: 0 by default
+    content.vb: Public Property ItemFailureRetryCount As Integer
+  overload: Runly.ExecutionConfig.ItemFailureRetryCount*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.ItemFailureCountToStopJob
+  commentId: P:Runly.ExecutionConfig.ItemFailureCountToStopJob
+  id: ItemFailureCountToStopJob
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: ItemFailureCountToStopJob
+  nameWithType: ExecutionConfig.ItemFailureCountToStopJob
+  fullName: Runly.ExecutionConfig.ItemFailureCountToStopJob
+  type: Property
+  source:
+    id: ItemFailureCountToStopJob
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 27
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe number of items which must fail before the job is stopped, ending in a failure state.\n"
+  remarks: When a job is executed using parallel tasks, the results for the job may indicate more items failed than is specified in this property because items are allowed to complete when the job is failing. For example, if <xref href="Runly.ExecutionConfig.ItemFailureCountToStopJob" data-throw-if-not-resolved="false"></xref> is set to 1 and <xref href="Runly.ExecutionConfig.ParallelTaskCount" data-throw-if-not-resolved="false"></xref> is set to 5 and the job tries to connect to a mis-typed URL, the first task that fails will trigger a job failure but the remaining four tasks will run to completion, ultimately resulting in five failed items.
+  example: []
+  syntax:
+    content: public int ItemFailureCountToStopJob { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+      description: 1 by default
+    content.vb: Public Property ItemFailureCountToStopJob As Integer
+  overload: Runly.ExecutionConfig.ItemFailureCountToStopJob*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.HandleExceptions
+  commentId: P:Runly.ExecutionConfig.HandleExceptions
+  id: HandleExceptions
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: HandleExceptions
+  nameWithType: ExecutionConfig.HandleExceptions
+  fullName: Runly.ExecutionConfig.HandleExceptions
+  type: Property
+  source:
+    id: HandleExceptions
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 34
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nWhen true, will catch exceptions that occur within the job and write the exception to the results and/or API. \n"
+  remarks: This setting is true by default and should only be set to false for debugging purposes. Setting this to false will cause the application to stop when an exception occurs and FinalizeAsync is not guaranteed to execute.
+  example: []
+  syntax:
+    content: public bool HandleExceptions { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: true by default
+    content.vb: Public Property HandleExceptions As Boolean
+  overload: Runly.ExecutionConfig.HandleExceptions*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.ResultsToFile
+  commentId: P:Runly.ExecutionConfig.ResultsToFile
+  id: ResultsToFile
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: ResultsToFile
+  nameWithType: ExecutionConfig.ResultsToFile
+  fullName: Runly.ExecutionConfig.ResultsToFile
+  type: Property
+  source:
+    id: ResultsToFile
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 41
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nWhen true, writes the results to the path specified in <xref href=\"Runly.ExecutionConfig.ResultsFilePath\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  remarks: If <xref href="Runly.ExecutionConfig.ResultsFilePath" data-throw-if-not-resolved="false"></xref> is not specified the results are written to a file named results.json in the same location as the config file.
+  example: []
+  syntax:
+    content: public bool ResultsToFile { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: false by default
+    content.vb: Public Property ResultsToFile As Boolean
+  overload: Runly.ExecutionConfig.ResultsToFile*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.ResultsFilePath
+  commentId: P:Runly.ExecutionConfig.ResultsFilePath
+  id: ResultsFilePath
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: ResultsFilePath
+  nameWithType: ExecutionConfig.ResultsFilePath
+  fullName: Runly.ExecutionConfig.ResultsFilePath
+  type: Property
+  source:
+    id: ResultsFilePath
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 47
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe file path to write the results to. Used only when <xref href=\"Runly.ExecutionConfig.ResultsToFile\" data-throw-if-not-resolved=\"false\"></xref> is true.\n"
+  remarks: This path is relative to the directory containing the config file.
+  example: []
+  syntax:
+    content: public string ResultsFilePath { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ResultsFilePath As String
+  overload: Runly.ExecutionConfig.ResultsFilePath*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.ResultsToConsole
+  commentId: P:Runly.ExecutionConfig.ResultsToConsole
+  id: ResultsToConsole
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: ResultsToConsole
+  nameWithType: ExecutionConfig.ResultsToConsole
+  fullName: Runly.ExecutionConfig.ResultsToConsole
+  type: Property
+  source:
+    id: ResultsToConsole
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 53
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nWhen true, writes the results to the console (stdout).\n"
+  example: []
+  syntax:
+    content: public bool ResultsToConsole { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+      description: false by default
+    content.vb: Public Property ResultsToConsole As Boolean
+  overload: Runly.ExecutionConfig.ResultsToConsole*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.LaunchDebugger
+  commentId: P:Runly.ExecutionConfig.LaunchDebugger
+  id: LaunchDebugger
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: LaunchDebugger
+  nameWithType: ExecutionConfig.LaunchDebugger
+  fullName: Runly.ExecutionConfig.LaunchDebugger
+  type: Property
+  source:
+    id: LaunchDebugger
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 59
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nWhen true, causes the job to prompt the user to attach a debugger.\n"
+  remarks: Ignored when the job does not run in an interactive session.
+  example: []
+  syntax:
+    content: public bool LaunchDebugger { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property LaunchDebugger As Boolean
+  overload: Runly.ExecutionConfig.LaunchDebugger*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.Delay
+  commentId: P:Runly.ExecutionConfig.Delay
+  id: Delay
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: Delay
+  nameWithType: ExecutionConfig.Delay
+  fullName: Runly.ExecutionConfig.Delay
+  type: Property
+  source:
+    id: Delay
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 65
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe amount of time, in seconds, to wait before allowing the job to execute after being queued.\n"
+  remarks: This setting is used by the Runly API to delay the assignment of the run to a node. It has no effect when running locally.
+  example: []
+  syntax:
+    content: public int Delay { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Delay As Integer
+  overload: Runly.ExecutionConfig.Delay*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.RunAfterId
+  commentId: P:Runly.ExecutionConfig.RunAfterId
+  id: RunAfterId
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: RunAfterId
+  nameWithType: ExecutionConfig.RunAfterId
+  fullName: Runly.ExecutionConfig.RunAfterId
+  type: Property
+  source:
+    id: RunAfterId
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 71
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nBlocks the execution of the job until the job identified by the Run ID has completed.\n"
+  remarks: This setting is used by the Runly API to block the assignment of the run to a node until the other run has completed. It has no effect when running locally.
+  example: []
+  syntax:
+    content: public Guid? RunAfterId { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{Guid}
+    content.vb: Public Property RunAfterId As Guid?
+  overload: Runly.ExecutionConfig.RunAfterId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.ExecutionConfig.#ctor
+  commentId: M:Runly.ExecutionConfig.#ctor
+  id: '#ctor'
+  parent: Runly.ExecutionConfig
+  langs:
+  - csharp
+  - vb
+  name: ExecutionConfig()
+  nameWithType: ExecutionConfig.ExecutionConfig()
+  fullName: Runly.ExecutionConfig.ExecutionConfig()
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/ExecutionConfig.cs
+    startLine: 76
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nInitializes a new instance of <xref href=\"Runly.ExecutionConfig\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public ExecutionConfig()
+    content.vb: Public Sub New
+  overload: Runly.ExecutionConfig.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ExecutionConfig.ParallelTaskCount*
+  commentId: Overload:Runly.ExecutionConfig.ParallelTaskCount
+  name: ParallelTaskCount
+  nameWithType: ExecutionConfig.ParallelTaskCount
+  fullName: Runly.ExecutionConfig.ParallelTaskCount
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Runly.ExecutionConfig.ItemFailureRetryCount*
+  commentId: Overload:Runly.ExecutionConfig.ItemFailureRetryCount
+  name: ItemFailureRetryCount
+  nameWithType: ExecutionConfig.ItemFailureRetryCount
+  fullName: Runly.ExecutionConfig.ItemFailureRetryCount
+- uid: Runly.ExecutionConfig.ItemFailureCountToStopJob
+  commentId: P:Runly.ExecutionConfig.ItemFailureCountToStopJob
+  isExternal: true
+- uid: Runly.ExecutionConfig.ParallelTaskCount
+  commentId: P:Runly.ExecutionConfig.ParallelTaskCount
+  isExternal: true
+- uid: Runly.ExecutionConfig.ItemFailureCountToStopJob*
+  commentId: Overload:Runly.ExecutionConfig.ItemFailureCountToStopJob
+  name: ItemFailureCountToStopJob
+  nameWithType: ExecutionConfig.ItemFailureCountToStopJob
+  fullName: Runly.ExecutionConfig.ItemFailureCountToStopJob
+- uid: Runly.ExecutionConfig.HandleExceptions*
+  commentId: Overload:Runly.ExecutionConfig.HandleExceptions
+  name: HandleExceptions
+  nameWithType: ExecutionConfig.HandleExceptions
+  fullName: Runly.ExecutionConfig.HandleExceptions
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.ExecutionConfig.ResultsFilePath
+  commentId: P:Runly.ExecutionConfig.ResultsFilePath
+  isExternal: true
+- uid: Runly.ExecutionConfig.ResultsToFile*
+  commentId: Overload:Runly.ExecutionConfig.ResultsToFile
+  name: ResultsToFile
+  nameWithType: ExecutionConfig.ResultsToFile
+  fullName: Runly.ExecutionConfig.ResultsToFile
+- uid: Runly.ExecutionConfig.ResultsToFile
+  commentId: P:Runly.ExecutionConfig.ResultsToFile
+  isExternal: true
+- uid: Runly.ExecutionConfig.ResultsFilePath*
+  commentId: Overload:Runly.ExecutionConfig.ResultsFilePath
+  name: ResultsFilePath
+  nameWithType: ExecutionConfig.ResultsFilePath
+  fullName: Runly.ExecutionConfig.ResultsFilePath
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ExecutionConfig.ResultsToConsole*
+  commentId: Overload:Runly.ExecutionConfig.ResultsToConsole
+  name: ResultsToConsole
+  nameWithType: ExecutionConfig.ResultsToConsole
+  fullName: Runly.ExecutionConfig.ResultsToConsole
+- uid: Runly.ExecutionConfig.LaunchDebugger*
+  commentId: Overload:Runly.ExecutionConfig.LaunchDebugger
+  name: LaunchDebugger
+  nameWithType: ExecutionConfig.LaunchDebugger
+  fullName: Runly.ExecutionConfig.LaunchDebugger
+- uid: Runly.ExecutionConfig.Delay*
+  commentId: Overload:Runly.ExecutionConfig.Delay
+  name: Delay
+  nameWithType: ExecutionConfig.Delay
+  fullName: Runly.ExecutionConfig.Delay
+- uid: Runly.ExecutionConfig.RunAfterId*
+  commentId: Overload:Runly.ExecutionConfig.RunAfterId
+  name: RunAfterId
+  nameWithType: ExecutionConfig.RunAfterId
+  fullName: Runly.ExecutionConfig.RunAfterId
+- uid: System.Nullable{Guid}
+  commentId: '!:System.Nullable{Guid}'
+  definition: System.Nullable`1
+  name: Nullable<Guid>
+  nameWithType: Nullable<Guid>
+  fullName: System.Nullable<Guid>
+  nameWithType.vb: Nullable(Of Guid)
+  fullName.vb: System.Nullable(Of Guid)
+  name.vb: Nullable(Of Guid)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: Guid
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: Guid
+    name: Guid
+    nameWithType: Guid
+    fullName: Guid
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.ExecutionConfig
+  commentId: T:Runly.ExecutionConfig
+  parent: Runly
+  name: ExecutionConfig
+  nameWithType: ExecutionConfig
+  fullName: Runly.ExecutionConfig
+- uid: Runly.ExecutionConfig.#ctor*
+  commentId: Overload:Runly.ExecutionConfig.#ctor
+  name: ExecutionConfig
+  nameWithType: ExecutionConfig.ExecutionConfig
+  fullName: Runly.ExecutionConfig.ExecutionConfig

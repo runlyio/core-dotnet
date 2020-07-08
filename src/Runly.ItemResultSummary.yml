@@ -1,0 +1,210 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.ItemResultSummary
+  commentId: T:Runly.ItemResultSummary
+  id: ItemResultSummary
+  parent: Runly
+  children:
+  - Runly.ItemResultSummary.#ctor(System.Int32,System.Boolean,System.String)
+  - Runly.ItemResultSummary.Category
+  - Runly.ItemResultSummary.Count
+  - Runly.ItemResultSummary.IsSuccessful
+  langs:
+  - csharp
+  - vb
+  name: ItemResultSummary
+  nameWithType: ItemResultSummary
+  fullName: Runly.ItemResultSummary
+  type: Class
+  source:
+    id: ItemResultSummary
+    path: /github/workspace/src/Core/ItemResultSummary.cs
+    startLine: 2
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: 'public class ItemResultSummary : object'
+    content.vb: >-
+      Public Class ItemResultSummary
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: Runly.ItemResultSummary.Count
+  commentId: P:Runly.ItemResultSummary.Count
+  id: Count
+  parent: Runly.ItemResultSummary
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: ItemResultSummary.Count
+  fullName: Runly.ItemResultSummary.Count
+  type: Property
+  source:
+    id: Count
+    path: /github/workspace/src/Core/ItemResultSummary.cs
+    startLine: 4
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: Runly.ItemResultSummary.Count*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ItemResultSummary.IsSuccessful
+  commentId: P:Runly.ItemResultSummary.IsSuccessful
+  id: IsSuccessful
+  parent: Runly.ItemResultSummary
+  langs:
+  - csharp
+  - vb
+  name: IsSuccessful
+  nameWithType: ItemResultSummary.IsSuccessful
+  fullName: Runly.ItemResultSummary.IsSuccessful
+  type: Property
+  source:
+    id: IsSuccessful
+    path: /github/workspace/src/Core/ItemResultSummary.cs
+    startLine: 5
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public bool IsSuccessful { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSuccessful As Boolean
+  overload: Runly.ItemResultSummary.IsSuccessful*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ItemResultSummary.Category
+  commentId: P:Runly.ItemResultSummary.Category
+  id: Category
+  parent: Runly.ItemResultSummary
+  langs:
+  - csharp
+  - vb
+  name: Category
+  nameWithType: ItemResultSummary.Category
+  fullName: Runly.ItemResultSummary.Category
+  type: Property
+  source:
+    id: Category
+    path: /github/workspace/src/Core/ItemResultSummary.cs
+    startLine: 6
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public string Category { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Category As String
+  overload: Runly.ItemResultSummary.Category*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: Runly.ItemResultSummary.#ctor(System.Int32,System.Boolean,System.String)
+  commentId: M:Runly.ItemResultSummary.#ctor(System.Int32,System.Boolean,System.String)
+  id: '#ctor(System.Int32,System.Boolean,System.String)'
+  parent: Runly.ItemResultSummary
+  langs:
+  - csharp
+  - vb
+  name: ItemResultSummary(Int32, Boolean, String)
+  nameWithType: ItemResultSummary.ItemResultSummary(Int32, Boolean, String)
+  fullName: Runly.ItemResultSummary.ItemResultSummary(System.Int32, System.Boolean, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/ItemResultSummary.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public ItemResultSummary(int count, bool isSuccessful, string category)
+    parameters:
+    - id: count
+      type: System.Int32
+    - id: isSuccessful
+      type: System.Boolean
+    - id: category
+      type: System.String
+    content.vb: Public Sub New(count As Integer, isSuccessful As Boolean, category As String)
+  overload: Runly.ItemResultSummary.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.ItemResultSummary.Count*
+  commentId: Overload:Runly.ItemResultSummary.Count
+  name: Count
+  nameWithType: ItemResultSummary.Count
+  fullName: Runly.ItemResultSummary.Count
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: Runly.ItemResultSummary.IsSuccessful*
+  commentId: Overload:Runly.ItemResultSummary.IsSuccessful
+  name: IsSuccessful
+  nameWithType: ItemResultSummary.IsSuccessful
+  fullName: Runly.ItemResultSummary.IsSuccessful
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: Runly.ItemResultSummary.Category*
+  commentId: Overload:Runly.ItemResultSummary.Category
+  name: Category
+  nameWithType: ItemResultSummary.Category
+  fullName: Runly.ItemResultSummary.Category
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Runly.ItemResultSummary.#ctor*
+  commentId: Overload:Runly.ItemResultSummary.#ctor
+  name: ItemResultSummary
+  nameWithType: ItemResultSummary.ItemResultSummary
+  fullName: Runly.ItemResultSummary.ItemResultSummary

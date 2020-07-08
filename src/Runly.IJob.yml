@@ -1,0 +1,386 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  id: IJob
+  parent: Runly
+  children:
+  - Runly.IJob.CancellationToken
+  - Runly.IJob.Config
+  - Runly.IJob.FinalizeAsync(Runly.Disposition)
+  - Runly.IJob.GetDefaultConfig
+  - Runly.IJob.GetExecution(IServiceProvider)
+  - Runly.IJob.InitializeAsync
+  - Runly.IJob.Options
+  langs:
+  - csharp
+  - vb
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
+  type: Interface
+  source:
+    id: IJob
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 6
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: public interface IJob
+    content.vb: Public Interface IJob
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: Runly.IJob.Config
+  commentId: P:Runly.IJob.Config
+  id: Config
+  parent: Runly.IJob
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: IJob.Config
+  fullName: Runly.IJob.Config
+  type: Property
+  source:
+    id: Config
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 8
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Config Config { get; }
+    parameters: []
+    return:
+      type: Runly.Config
+    content.vb: ReadOnly Property Config As Config
+  overload: Runly.IJob.Config*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Runly.IJob.Options
+  commentId: P:Runly.IJob.Options
+  id: Options
+  parent: Runly.IJob
+  langs:
+  - csharp
+  - vb
+  name: Options
+  nameWithType: IJob.Options
+  fullName: Runly.IJob.Options
+  type: Property
+  source:
+    id: Options
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 9
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: JobOptions Options { get; }
+    parameters: []
+    return:
+      type: Runly.JobOptions
+    content.vb: ReadOnly Property Options As JobOptions
+  overload: Runly.IJob.Options*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: Runly.IJob.CancellationToken
+  commentId: P:Runly.IJob.CancellationToken
+  id: CancellationToken
+  parent: Runly.IJob
+  langs:
+  - csharp
+  - vb
+  name: CancellationToken
+  nameWithType: IJob.CancellationToken
+  fullName: Runly.IJob.CancellationToken
+  type: Property
+  source:
+    id: CancellationToken
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 10
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: CancellationToken CancellationToken { get; set; }
+    parameters: []
+    return:
+      type: CancellationToken
+    content.vb: Property CancellationToken As CancellationToken
+  overload: Runly.IJob.CancellationToken*
+  modifiers.csharp:
+  - get
+  - set
+- uid: Runly.IJob.GetExecution(IServiceProvider)
+  commentId: M:Runly.IJob.GetExecution(IServiceProvider)
+  id: GetExecution(IServiceProvider)
+  parent: Runly.IJob
+  langs:
+  - csharp
+  - vb
+  name: GetExecution(IServiceProvider)
+  nameWithType: IJob.GetExecution(IServiceProvider)
+  fullName: Runly.IJob.GetExecution(IServiceProvider)
+  type: Method
+  source:
+    id: GetExecution
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 11
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Execution GetExecution(IServiceProvider provider)
+    parameters:
+    - id: provider
+      type: IServiceProvider
+    return:
+      type: Runly.Execution
+    content.vb: Function GetExecution(provider As IServiceProvider) As Execution
+  overload: Runly.IJob.GetExecution*
+- uid: Runly.IJob.GetDefaultConfig
+  commentId: M:Runly.IJob.GetDefaultConfig
+  id: GetDefaultConfig
+  parent: Runly.IJob
+  langs:
+  - csharp
+  - vb
+  name: GetDefaultConfig()
+  nameWithType: IJob.GetDefaultConfig()
+  fullName: Runly.IJob.GetDefaultConfig()
+  type: Method
+  source:
+    id: GetDefaultConfig
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 12
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Config GetDefaultConfig()
+    return:
+      type: Runly.Config
+    content.vb: Function GetDefaultConfig As Config
+  overload: Runly.IJob.GetDefaultConfig*
+- uid: Runly.IJob.InitializeAsync
+  commentId: M:Runly.IJob.InitializeAsync
+  id: InitializeAsync
+  parent: Runly.IJob
+  langs:
+  - csharp
+  - vb
+  name: InitializeAsync()
+  nameWithType: IJob.InitializeAsync()
+  fullName: Runly.IJob.InitializeAsync()
+  type: Method
+  source:
+    id: InitializeAsync
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 13
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Task InitializeAsync()
+    return:
+      type: Task
+    content.vb: Function InitializeAsync As Task
+  overload: Runly.IJob.InitializeAsync*
+- uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+  commentId: M:Runly.IJob.FinalizeAsync(Runly.Disposition)
+  id: FinalizeAsync(Runly.Disposition)
+  parent: Runly.IJob
+  langs:
+  - csharp
+  - vb
+  name: FinalizeAsync(Disposition)
+  nameWithType: IJob.FinalizeAsync(Disposition)
+  fullName: Runly.IJob.FinalizeAsync(Runly.Disposition)
+  type: Method
+  source:
+    id: FinalizeAsync
+    path: /github/workspace/src/Core/IJob.cs
+    startLine: 14
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  syntax:
+    content: Task<object> FinalizeAsync(Disposition dispotion)
+    parameters:
+    - id: dispotion
+      type: Runly.Disposition
+    return:
+      type: Task{System.Object}
+    content.vb: Function FinalizeAsync(dispotion As Disposition) As Task(Of Object)
+  overload: Runly.IJob.FinalizeAsync*
+references:
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.IJob.Config*
+  commentId: Overload:Runly.IJob.Config
+  name: Config
+  nameWithType: IJob.Config
+  fullName: Runly.IJob.Config
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
+- uid: Runly.IJob.Options*
+  commentId: Overload:Runly.IJob.Options
+  name: Options
+  nameWithType: IJob.Options
+  fullName: Runly.IJob.Options
+- uid: Runly.JobOptions
+  commentId: T:Runly.JobOptions
+  parent: Runly
+  name: JobOptions
+  nameWithType: JobOptions
+  fullName: Runly.JobOptions
+- uid: Runly.IJob.CancellationToken*
+  commentId: Overload:Runly.IJob.CancellationToken
+  name: CancellationToken
+  nameWithType: IJob.CancellationToken
+  fullName: Runly.IJob.CancellationToken
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Runly.IJob.GetExecution*
+  commentId: Overload:Runly.IJob.GetExecution
+  name: GetExecution
+  nameWithType: IJob.GetExecution
+  fullName: Runly.IJob.GetExecution
+- uid: IServiceProvider
+  isExternal: true
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: IServiceProvider
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: Runly.IJob.GetDefaultConfig*
+  commentId: Overload:Runly.IJob.GetDefaultConfig
+  name: GetDefaultConfig
+  nameWithType: IJob.GetDefaultConfig
+  fullName: Runly.IJob.GetDefaultConfig
+- uid: Runly.IJob.InitializeAsync*
+  commentId: Overload:Runly.IJob.InitializeAsync
+  name: InitializeAsync
+  nameWithType: IJob.InitializeAsync
+  fullName: Runly.IJob.InitializeAsync
+- uid: Task
+  isExternal: true
+  name: Task
+  nameWithType: Task
+  fullName: Task
+- uid: Runly.IJob.FinalizeAsync*
+  commentId: Overload:Runly.IJob.FinalizeAsync
+  name: FinalizeAsync
+  nameWithType: IJob.FinalizeAsync
+  fullName: Runly.IJob.FinalizeAsync
+- uid: Runly.Disposition
+  commentId: T:Runly.Disposition
+  parent: Runly
+  name: Disposition
+  nameWithType: Disposition
+  fullName: Runly.Disposition
+- uid: Task{System.Object}
+  commentId: '!:Task{System.Object}'
+  definition: Task`1
+  name: Task<Object>
+  nameWithType: Task<Object>
+  fullName: Task<System.Object>
+  nameWithType.vb: Task(Of Object)
+  fullName.vb: Task(Of System.Object)
+  name.vb: Task(Of Object)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
