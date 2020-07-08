@@ -1,0 +1,30 @@
+{
+	"$schema": "http://json.schemastore.org/template",
+	"author": "Runly",
+	"classifications": [ "Common", "Console" ],
+	"identity": "Runly.Templates.App",
+	"name": "Runly Application",
+	"shortName": "runly-app",
+	"tags": {
+		"language": "C#",
+		"type": "project"
+	},
+	"symbols": {
+		"jobname": {
+			"type": "parameter",
+			"datatype": "string",
+			"description": "Renames files containing 'NewJob'",
+			"replaces": "NewJob",
+			"FileRename": "NewJob",
+			"defaultValue": "NewJob"
+		},
+		"appname": {
+			"type": "parameter",
+			"datatype": "string",
+			"description": "Renames files containing 'NewRunlyApp'",
+			"replaces": "NewRunlyApp",
+			"FileRename": "NewRunlyApp",
+			"defaultValue": "NewRunlyApp"
+		}
+	}
+}

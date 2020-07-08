@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    
+    <PackageId>Runly.Templates</PackageId>
+
+    <Title>Runly Job Templates</Title>
+    <Authors>Chad Lee;William Sossamon</Authors>
+    <Company>Runly LLC</Company>
+
+    <Description>Template for creating runly jobs.</Description>
+    <PackageTags>runly;runly.io;background;worker;job;batch</PackageTags>
+
+    <Copyright>Copyright © Runly LLC 2020</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+
+    <PackageProjectUrl>https://www.runly.io/</PackageProjectUrl>
+    <PackageReleaseNotes>https://github.com/runlyio/core/releases</PackageReleaseNotes>
+
+    <RepositoryUrl>https://github.com/runlyio/core.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <PackageIcon>logo.png</PackageIcon>
+
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\logo.png" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

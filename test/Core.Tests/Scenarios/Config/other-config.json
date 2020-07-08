@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "OtherConfig",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "job"
+  ],
+  "properties": {
+    "job": {
+      "oneOf": [
+        {
+          "$ref": "#/definitions/JobConfig"
+        },
+        {
+          "type": "string",
+          "description": "The short or full name of the type of job. The package and version will be inferred."
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "JobConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "package": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

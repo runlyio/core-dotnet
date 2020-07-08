@@ -1,0 +1,62 @@
+{
+   // Use IntelliSense to find out which attributes exist for C# debugging
+   // Use hover for the description of the existing attributes
+   // For further information visit https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md
+   "version": "0.2.0",
+   "configurations": [
+        {
+            "name": "Launch API",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build API",
+            "program": "${workspaceFolder}/src/Api/bin/Debug/netcoreapp3.1/Runly.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Api",
+            "stopAtEntry": false,
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            }
+        },
+        {
+            "name": "Launch Node",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build Node",
+            "program": "${workspaceFolder}/src/Cli/bin/Debug/netcoreapp3.1/Runly.Cli.dll",
+            "args": [
+                "start-node",
+                "-u",
+                "http://localhost:5000/"
+            ],
+            "cwd": "${workspaceFolder}/src/Cli/bin/Debug/netcoreapp3.1",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Launch System Job",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build System Jobs",
+            "program": "${workspaceFolder}/src/System/bin/Debug/netcoreapp3.1/Runly.System.dll",
+            "args": [
+                "run",
+                "/home/chad/dev/runly/inspect.json"
+            ],
+            "cwd": "${workspaceFolder}/src/System/bin/Debug/netcoreapp3.1",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Launch Init Tool",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "Build Init Tool",
+            "program": "${workspaceFolder}/src/Init/bin/Debug/netcoreapp3.1/runlyinit.dll",
+            "args": [
+                "database",
+                "server=.;database=runly;user=sa;pwd=Password123",
+                "-m"
+            ],
+            "cwd": "${workspaceFolder}/src/Init",
+            "stopAtEntry": false
+        }
+    ]
+}

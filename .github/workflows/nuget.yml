@@ -1,0 +1,36 @@
+name: Nuget Push
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    name: Publish Packages
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.100'
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # avoid shallow clone so nbgv can do its work
+
+      - uses: aarnott/nbgv@v0.3
+        id: nbgv
+
+      - name: Package Core
+        run: dotnet pack src/Core/Core.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+
+      - name: Package Client
+        run: dotnet pack src/Client/Client.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+
+      - name: Package Job
+        run: dotnet pack src/Job/Job.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+
+      - name: Package Templates
+        run: dotnet pack src/Templates/Templates.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+
+      - name: Push to Nuget
+        run: find . -name 'Runly*.nupkg' | xargs -i dotnet nuget push {} -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_KEY }}

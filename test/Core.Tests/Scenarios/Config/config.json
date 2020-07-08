@@ -1,0 +1,115 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Config",
+  "type": "object",
+  "description": "The base config class used to configure jobs.",
+  "additionalProperties": false,
+  "required": [
+    "job"
+  ],
+  "properties": {
+    "job": {
+      "description": "Identifies the job that created this config and/or the job that will run when executed.",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/JobConfig"
+        },
+        {
+          "type": "string",
+          "description": "The short or full name of the type of job. The package and version will be inferred."
+        }
+      ]
+    },
+    "execution": {
+      "description": "Determines how the job will execute.",
+      "oneOf": [
+        {
+          "$ref": "#/definitions/ExecutionConfig"
+        }
+      ]
+    }
+  },
+  "definitions": {
+    "JobConfig": {
+      "type": "object",
+      "description": "Identifies the job that created the Config and/or the job that will run when executed.",
+      "additionalProperties": false,
+      "required": [
+        "type"
+      ],
+      "properties": {
+        "package": {
+          "type": "string",
+          "description": "The ID of the package that contains the Type."
+        },
+        "version": {
+          "type": "string",
+          "description": "The version of the package that contains the Type."
+        },
+        "type": {
+          "type": "string",
+          "description": "The full name of the type of job.",
+          "minLength": 1
+        }
+      }
+    },
+    "ExecutionConfig": {
+      "type": "object",
+      "description": "Determines how a job will execute.",
+      "additionalProperties": false,
+      "properties": {
+        "parallelTaskCount": {
+          "type": "integer",
+          "description": "The number of tasks created to call in parallel the ProcessAsync method of the job.",
+          "format": "int32"
+        },
+        "itemFailureRetryCount": {
+          "type": "integer",
+          "description": "The number of times, after the first attempt, to reprocess an item when an unhandled exception occurs or a failed result is returned.",
+          "format": "int32"
+        },
+        "itemFailureCountToStopJob": {
+          "type": "integer",
+          "description": "The number of items which must fail before the job is stopped, ending in a failure state.",
+          "format": "int32"
+        },
+        "handleExceptions": {
+          "type": "boolean",
+          "description": "When true, will catch exceptions that occur within the job and write the exception to the results and/or API. "
+        },
+        "resultsToFile": {
+          "type": "boolean",
+          "description": "When true, writes the results to the path specified in ResultsFilePath."
+        },
+        "resultsFilePath": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "The file path to write the results to. Used only when ResultsToFile is true."
+        },
+        "resultsToConsole": {
+          "type": "boolean",
+          "description": "When true, writes the results to the console (stdout)."
+        },
+        "launchDebugger": {
+          "type": "boolean",
+          "description": "When true, causes the job to prompt the user to attach a debugger."
+        },
+        "delay": {
+          "type": "integer",
+          "description": "The amount of time, in seconds, to wait before allowing the job to execute after being queued.",
+          "format": "int32"
+        },
+        "runAfterId": {
+          "type": [
+            "null",
+            "string"
+          ],
+          "description": "Blocks the execution of the job until the job identified by the Run ID has completed.",
+          "format": "guid"
+        }
+      }
+    }
+  }
+}

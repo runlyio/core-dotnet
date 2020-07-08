@@ -1,0 +1,13 @@
+# Auto detect text files and perform LF normalization
+*				text=auto
+
+# C# code is explicitly text, and diffs in a well-defined manner
+*.cs			text		diff=csharp
+
+# VS is militant about project files using CRLF. If they're allowed to be LF in the repository, then any
+# auto-merges (within GitHub) will default to using LF, which will increase the number of spurious conlicts.
+*.csproj		text		diff=html	eol=crlf
+
+# NPM creates package.json with LF endings independently of platform. Allowing git to create the file
+# with CRLF only makes it show an annoying, un-stageable, EOL-only diff.
+package.json	text					eol=lf
