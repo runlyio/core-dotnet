@@ -1,0 +1,48 @@
+name: Documentation
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  docfx:
+    name: DocFX
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Main Branch
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+
+    - name: Version
+      uses: aarnott/nbgv@v0.3
+      id: nbgv
+
+    - name: Build Documentation Metadata
+      uses: nikeee/docfx-action@v0.1.0
+      with:
+        args: metadata
+
+    - name: Checkout docfx Branch
+      uses: actions/checkout@v2
+      with:
+        ref: docfx
+        path: docfx
+        fetch-depth: 0
+
+    - name: Stage files for commit
+      working-directory: docfx
+      run: |
+        rm -rf src/
+        cp -r ../docs/_meta src/
+        mv src/.manifest src/manifest.json
+
+    - name: Commit doc assets
+      working-directory: docfx
+      run: |
+        git config user.name "${GITHUB_ACTOR}"
+        git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+        git add src
+        git diff-index --quiet HEAD || git commit -m "Documentation v${{ steps.nbgv.outputs.SemVer2 }}"
+        git push
