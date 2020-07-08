@@ -1,4 +1,4 @@
-# Runly.NET
+<img src="logo.svg" width="350" alt="Runly.NET" />
 
 > Multi-threaded batch processing and background jobs for .NET Core
 
