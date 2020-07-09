@@ -79,10 +79,11 @@ namespace Runly
 		public IEnumerable<ItemResult> Items => items;
 
 		/// <summary>
-		/// Gets a list of item result categories and counts.
+		/// Gets a list of item categories and counts.
 		/// </summary>
 		[JsonIgnore]
-		public IEnumerable<CategoryResult> Categories => Items.GroupBy(r => new { r.IsSuccessful, r.Category }).Select(g => new CategoryResult(g.Count(), g.Key.IsSuccessful, g.Key.Category)).OrderBy(s => s.IsSuccessful).ThenBy(s => s.Category);
+		public IEnumerable<ItemCategory> Categories => Items.GroupBy(r => new { r.IsSuccessful, r.Category }).Select(g => new ItemCategory(g.Count(), g.Key.IsSuccessful, g.Key.Category)).OrderBy(s => s.IsSuccessful).ThenBy(s => s.Category);
+
 
 		/// <summary>
 		/// Gets a list of items that have completed successfully.

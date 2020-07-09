@@ -251,7 +251,7 @@ namespace Runly
 			else
 				Interlocked.Increment(ref failedItemCount);
 
-			var cat = categories.GetOrAdd((result.Category, result.IsSuccessful), new ItemCategory() { Category = result.Category, IsSuccessful = result.IsSuccessful });
+			var cat = categories.GetOrAdd((result.Category, result.IsSuccessful), new ItemCategory(0, result.IsSuccessful, result.Category));
 
 			Interlocked.Increment(ref cat.count);
 

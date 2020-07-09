@@ -4,14 +4,32 @@ using System.Collections.Generic;
 
 namespace Runly
 {
+	/// <summary>
+	/// The result of a single item being processed by a job.
+	/// </summary>
 	public class ItemResult
 	{
+		/// <summary>
+		/// Gets the ID of the item.
+		/// </summary>
 		public string Id { get; private set; }
+
+		/// <summary>
+		/// Indicates whether the job successfully processed the item.
+		/// </summary>
 		public bool IsSuccessful { get; private set; }
+
+		/// <summary>
+		/// Indicates whether the item failed because an exception was thrown from ProcessAsync.
+		/// </summary>
 		[IgnoreMember]
 		public bool FailedDueToException => (ProcessAsync?.Exception != null || GetItemIdAsync?.Exception != null || EnumeratorCurrent?.Exception != null || EnumeratorMoveNext?.Exception != null);
 
 		private string category;
+
+		/// <summary>
+		/// The category this result is grouped into. If the item <see cref="FailedDueToException"/>, this will be the type name of the exception.
+		/// </summary>
 		public string Category
 		{
 			get
@@ -33,17 +51,32 @@ namespace Runly
 
 		public object Output { get; private set; }
 
+		/// <summary>
+		/// Gets the individual <see cref="MethodOutcome"/> for each <see cref="JobMethod"/> that was called for this item.
+		/// </summary>
 		public Dictionary<JobMethod, MethodOutcome> Methods { get; } = new Dictionary<JobMethod, MethodOutcome>();
 
+		/// <summary>
+		/// Gets the <see cref="MethodOutcome"/> for the call to <see cref="MoveNextAsync"/> on the enumerator.
+		/// </summary>
 		[IgnoreMember]
 		public MethodOutcome EnumeratorMoveNext => Methods.ValueOrDefault(JobMethod.EnumeratorMoveNext);
 
+		/// <summary>
+		/// Gets the <see cref="MethodOutcome"/> for the call to <see cref="Current"/> on the enumerator.
+		/// </summary>
 		[IgnoreMember]
 		public MethodOutcome EnumeratorCurrent => Methods.ValueOrDefault(JobMethod.EnumeratorCurrent);
 
+		/// <summary>
+		/// Gets the <see cref="MethodOutcome"/> for the call to GetItemIdAsync.
+		/// </summary>
 		[IgnoreMember]
 		public MethodOutcome GetItemIdAsync => Methods.ValueOrDefault(JobMethod.GetItemIdAsync);
 
+		/// <summary>
+		/// Gets the <see cref="MethodOutcome"/> for the call to ProcessAsync.
+		/// </summary>
 		[IgnoreMember]
 		public MethodOutcome ProcessAsync => Methods.ValueOrDefault(JobMethod.ProcessAsync);
 
@@ -52,12 +85,17 @@ namespace Runly
 			this.Id = "Unknown";
 		}
 
+		/// <summary>
+		/// Initializes a new <see cref="ItemResult"/>.
+		/// </summary>
 		public ItemResult(string id, bool isSuccessful, string category)
 			: this(id, isSuccessful, category, null, null) { }
 
+		/// <summary>
+		/// Initializes a new <see cref="ItemResult"/>.
+		/// </summary>
 		[SerializationConstructor]
 		public ItemResult(string id, bool isSuccessful, string category, object output, Dictionary<JobMethod, MethodOutcome> methods)
-
 		{
 			Id = id;
 			IsSuccessful = isSuccessful;

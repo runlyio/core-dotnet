@@ -40,12 +40,12 @@ namespace Runly.Tests.Scenarios.Results
 			var run = testHost.CreateRun();
 			await run.RunAsync();
 
-			run.Execution.ItemCategories.Should().BeEquivalentTo(new []
+			run.Execution.ItemCategories.Should().BeEquivalentTo(new[]
 			{
-				new ItemCategory() { IsSuccessful = true, count = 5, Category = "Good" },
-				new ItemCategory() { IsSuccessful = true, count = 4, Category = "Great" },
-				new ItemCategory() { IsSuccessful = false, count = 3, Category = "Nah" },
-				new ItemCategory() { IsSuccessful = false, count = 2, Category = "Bruh" },
+				new ItemCategory(5, true, "Good"),
+				new ItemCategory(4, true, "Great"),
+				new ItemCategory(3, false, "Nah"),
+				new ItemCategory(2, false, "Bruh")
 			}, o => o.WithoutStrictOrdering());
 		}
 	}
