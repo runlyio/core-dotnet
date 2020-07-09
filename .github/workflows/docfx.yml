@@ -1,8 +1,7 @@
 name: Documentation
 on:
-  push:
-    branches:
-    - master
+  release:
+    types: [published]
 
 jobs:
   docfx:
@@ -16,8 +15,10 @@ jobs:
         fetch-depth: 0
 
     - name: Version
-      uses: aarnott/nbgv@v0.3
-      id: nbgv
+      id: version
+      uses: thefringeninja/action-minver@2.0.0-preview1
+      with:
+        tag-prefix: v
 
     - name: Build Documentation Metadata
       uses: nikeee/docfx-action@v0.1.0
@@ -44,5 +45,5 @@ jobs:
         git config user.name "${GITHUB_ACTOR}"
         git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
         git add src
-        git diff-index --quiet HEAD || git commit -m "Documentation v${{ steps.nbgv.outputs.SemVer2 }}"
+        git diff-index --quiet HEAD || git commit -m "Documentation v${{ steps.version.outputs.version }}"
         git push

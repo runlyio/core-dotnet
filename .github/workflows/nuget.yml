@@ -1,4 +1,4 @@
-name: Nuget Push
+name: Nuget
 on:
   release:
     types: [published]
@@ -15,22 +15,19 @@ jobs:
 
       - uses: actions/checkout@v2
         with:
-          fetch-depth: 0 # avoid shallow clone so nbgv can do its work
-
-      - uses: aarnott/nbgv@v0.3
-        id: nbgv
+          fetch-depth: 0
 
       - name: Package Core
-        run: dotnet pack src/Core/Core.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+        run: dotnet pack src/Core/Core.csproj -c Release -o .
 
       - name: Package Client
-        run: dotnet pack src/Client/Client.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+        run: dotnet pack src/Client/Client.csproj -c Release -o .
 
       - name: Package Job
-        run: dotnet pack src/Job/Job.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+        run: dotnet pack src/Job/Job.csproj -c Release -o .
 
       - name: Package Templates
-        run: dotnet pack src/Templates/Templates.csproj -c Release -p:Version=${{ steps.nbgv.outputs.SemVer2 }} -o .
+        run: dotnet pack src/Templates/Templates.csproj -c Release -o .
 
       - name: Push to Nuget
         run: find . -name 'Runly*.nupkg' | xargs -i dotnet nuget push {} -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_KEY }}
