@@ -22,7 +22,7 @@ items:
   type: Interface
   source:
     id: IResultsConnection
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 281
   assemblies:
   - Runly
@@ -51,7 +51,7 @@ items:
   type: Event
   source:
     id: Closed
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 283
   assemblies:
   - Runly
@@ -74,7 +74,7 @@ items:
   type: Event
   source:
     id: Reconnected
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 284
   assemblies:
   - Runly
@@ -97,7 +97,7 @@ items:
   type: Event
   source:
     id: Reconnecting
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 285
   assemblies:
   - Runly
@@ -120,7 +120,7 @@ items:
   type: Property
   source:
     id: State
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 287
   assemblies:
   - Runly
@@ -149,7 +149,7 @@ items:
   type: Method
   source:
     id: StartAsync
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 289
   assemblies:
   - Runly
@@ -173,7 +173,7 @@ items:
   type: Method
   source:
     id: InvokeCoreAsync
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 290
   assemblies:
   - Runly
@@ -205,7 +205,7 @@ items:
   type: Method
   source:
     id: SendCoreAsync
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 291
   assemblies:
   - Runly
@@ -237,7 +237,7 @@ items:
   type: Method
   source:
     id: On
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 292
   assemblies:
   - Runly

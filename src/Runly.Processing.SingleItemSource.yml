@@ -17,7 +17,7 @@ items:
   type: Class
   source:
     id: SingleItemSource
-    path: /github/workspace/src/Job/Processing/SingleItemSource.cs
+    path: /github/workspace/src/Runly/Processing/SingleItemSource.cs
     startLine: 6
   assemblies:
   - Runly
@@ -51,7 +51,7 @@ items:
   type: Property
   source:
     id: CanCountItems
-    path: /github/workspace/src/Job/Processing/SingleItemSource.cs
+    path: /github/workspace/src/Runly/Processing/SingleItemSource.cs
     startLine: 8
   assemblies:
   - Runly
@@ -82,7 +82,7 @@ items:
   type: Method
   source:
     id: GetItemIdAsync
-    path: /github/workspace/src/Job/Processing/SingleItemSource.cs
+    path: /github/workspace/src/Runly/Processing/SingleItemSource.cs
     startLine: 10
   assemblies:
   - Runly
@@ -115,7 +115,7 @@ items:
   type: Method
   source:
     id: GetItemsAsync
-    path: /github/workspace/src/Job/Processing/SingleItemSource.cs
+    path: /github/workspace/src/Runly/Processing/SingleItemSource.cs
     startLine: 12
   assemblies:
   - Runly

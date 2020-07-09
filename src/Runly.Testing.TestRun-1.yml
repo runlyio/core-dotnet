@@ -19,7 +19,7 @@ items:
   type: Class
   source:
     id: TestRun
-    path: /github/workspace/src/Job/Testing/TestRun.cs
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
     startLine: 6
   assemblies:
   - Runly
@@ -55,7 +55,7 @@ items:
   type: Property
   source:
     id: Job
-    path: /github/workspace/src/Job/Testing/TestRun.cs
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
     startLine: 11
   assemblies:
   - Runly
@@ -88,7 +88,7 @@ items:
   type: Property
   source:
     id: Execution
-    path: /github/workspace/src/Job/Testing/TestRun.cs
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
     startLine: 12
   assemblies:
   - Runly
@@ -121,7 +121,7 @@ items:
   type: Property
   source:
     id: Results
-    path: /github/workspace/src/Job/Testing/TestRun.cs
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
     startLine: 13
   assemblies:
   - Runly
@@ -154,7 +154,7 @@ items:
   type: Method
   source:
     id: Cancel
-    path: /github/workspace/src/Job/Testing/TestRun.cs
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
     startLine: 17
   assemblies:
   - Runly
@@ -182,7 +182,7 @@ items:
   type: Method
   source:
     id: RunAsync
-    path: /github/workspace/src/Job/Testing/TestRun.cs
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
     startLine: 30
   assemblies:
   - Runly

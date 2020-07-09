@@ -17,7 +17,7 @@ items:
   type: Class
   source:
     id: ConfigReader
-    path: /github/workspace/src/Job/ConfigReader.cs
+    path: /github/workspace/src/Runly/ConfigReader.cs
     startLine: 7
   assemblies:
   - Runly
@@ -48,7 +48,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/ConfigReader.cs
+    path: /github/workspace/src/Runly/ConfigReader.cs
     startLine: 11
   assemblies:
   - Runly
@@ -77,7 +77,7 @@ items:
   type: Method
   source:
     id: FromFile
-    path: /github/workspace/src/Job/ConfigReader.cs
+    path: /github/workspace/src/Runly/ConfigReader.cs
     startLine: 16
   assemblies:
   - Runly
@@ -108,7 +108,7 @@ items:
   type: Method
   source:
     id: FromJson
-    path: /github/workspace/src/Job/ConfigReader.cs
+    path: /github/workspace/src/Runly/ConfigReader.cs
     startLine: 34
   assemblies:
   - Runly

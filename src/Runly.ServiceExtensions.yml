@@ -19,7 +19,7 @@ items:
   type: Class
   source:
     id: ServiceExtensions
-    path: /github/workspace/src/Job/ServiceExtensions.cs
+    path: /github/workspace/src/Runly/ServiceExtensions.cs
     startLine: 13
   assemblies:
   - Runly
@@ -52,7 +52,7 @@ items:
   type: Method
   source:
     id: AddRunlyJobs
-    path: /github/workspace/src/Job/ServiceExtensions.cs
+    path: /github/workspace/src/Runly/ServiceExtensions.cs
     startLine: 17
   assemblies:
   - Runly
@@ -91,7 +91,7 @@ items:
   type: Method
   source:
     id: AddRunlyJobs
-    path: /github/workspace/src/Job/ServiceExtensions.cs
+    path: /github/workspace/src/Runly/ServiceExtensions.cs
     startLine: 22
   assemblies:
   - Runly
@@ -135,7 +135,7 @@ items:
   type: Method
   source:
     id: AddRunlyJobs
-    path: /github/workspace/src/Job/ServiceExtensions.cs
+    path: /github/workspace/src/Runly/ServiceExtensions.cs
     startLine: 31
   assemblies:
   - Runly
@@ -177,7 +177,7 @@ items:
   type: Method
   source:
     id: AddRunlyJobs
-    path: /github/workspace/src/Job/ServiceExtensions.cs
+    path: /github/workspace/src/Runly/ServiceExtensions.cs
     startLine: 36
   assemblies:
   - Runly
@@ -221,7 +221,7 @@ items:
   type: Method
   source:
     id: AddConfig
-    path: /github/workspace/src/Job/ServiceExtensions.cs
+    path: /github/workspace/src/Runly/ServiceExtensions.cs
     startLine: 169
   assemblies:
   - Runly

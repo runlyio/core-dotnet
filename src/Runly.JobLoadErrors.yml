@@ -18,7 +18,7 @@ items:
   type: Enum
   source:
     id: JobLoadErrors
-    path: /github/workspace/src/Job/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/JobLoadErrors.cs
     startLine: 4
   assemblies:
   - Runly
@@ -45,7 +45,7 @@ items:
   type: Field
   source:
     id: None
-    path: /github/workspace/src/Job/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/JobLoadErrors.cs
     startLine: 7
   assemblies:
   - Runly
@@ -74,7 +74,7 @@ items:
   type: Field
   source:
     id: IsInterface
-    path: /github/workspace/src/Job/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/JobLoadErrors.cs
     startLine: 8
   assemblies:
   - Runly
@@ -103,7 +103,7 @@ items:
   type: Field
   source:
     id: IsAbstract
-    path: /github/workspace/src/Job/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/JobLoadErrors.cs
     startLine: 9
   assemblies:
   - Runly
@@ -132,7 +132,7 @@ items:
   type: Field
   source:
     id: IsGenericTypeDefinition
-    path: /github/workspace/src/Job/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/JobLoadErrors.cs
     startLine: 10
   assemblies:
   - Runly

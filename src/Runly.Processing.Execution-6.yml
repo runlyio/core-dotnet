@@ -17,7 +17,7 @@ items:
   type: Class
   source:
     id: Execution
-    path: /github/workspace/src/Job/Processing/Execution.cs
+    path: /github/workspace/src/Runly/Processing/Execution.cs
     startLine: 110
   assemblies:
   - Runly
@@ -99,7 +99,7 @@ items:
   type: Property
   source:
     id: Job
-    path: /github/workspace/src/Job/Processing/Execution.cs
+    path: /github/workspace/src/Runly/Processing/Execution.cs
     startLine: 115
   assemblies:
   - Runly
@@ -135,7 +135,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/Processing/Execution.cs
+    path: /github/workspace/src/Runly/Processing/Execution.cs
     startLine: 117
   assemblies:
   - Runly
@@ -171,7 +171,7 @@ items:
   type: Method
   source:
     id: CallProcess
-    path: /github/workspace/src/Job/Processing/Execution.cs
+    path: /github/workspace/src/Runly/Processing/Execution.cs
     startLine: 123
   assemblies:
   - Runly

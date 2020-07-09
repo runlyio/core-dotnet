@@ -19,7 +19,7 @@ items:
   type: Class
   source:
     id: HubMethodCall
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 265
   assemblies:
   - Runly
@@ -50,7 +50,7 @@ items:
   type: Property
   source:
     id: Attempts
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 267
   assemblies:
   - Runly
@@ -81,7 +81,7 @@ items:
   type: Property
   source:
     id: MethodName
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 268
   assemblies:
   - Runly
@@ -112,7 +112,7 @@ items:
   type: Property
   source:
     id: Args
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 269
   assemblies:
   - Runly
@@ -143,7 +143,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 271
   assemblies:
   - Runly
@@ -177,7 +177,7 @@ items:
   type: Method
   source:
     id: ToString
-    path: /github/workspace/src/Job/ResultsChannel.cs
+    path: /github/workspace/src/Runly/ResultsChannel.cs
     startLine: 277
   assemblies:
   - Runly

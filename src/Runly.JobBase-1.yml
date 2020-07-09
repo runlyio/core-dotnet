@@ -23,7 +23,7 @@ items:
   type: Class
   source:
     id: JobBase
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 36
   assemblies:
   - Runly
@@ -70,7 +70,7 @@ items:
   type: Property
   source:
     id: Config
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 42
   assemblies:
   - Runly
@@ -105,7 +105,7 @@ items:
   type: Property
   source:
     id: Options
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 47
   assemblies:
   - Runly
@@ -142,7 +142,7 @@ items:
   type: Property
   source:
     id: CancellationToken
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 52
   assemblies:
   - Runly
@@ -178,7 +178,7 @@ items:
   type: Property
   source:
     id: Runly.IJob.Config
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 54
   assemblies:
   - Runly
@@ -212,7 +212,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 56
   assemblies:
   - Runly
@@ -244,7 +244,7 @@ items:
   type: Method
   source:
     id: Runly.IJob.GetDefaultConfig
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 61
   assemblies:
   - Runly
@@ -273,7 +273,7 @@ items:
   type: Method
   source:
     id: GetExecution
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 65
   assemblies:
   - Runly
@@ -308,7 +308,7 @@ items:
   type: Method
   source:
     id: InitializeAsync
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 70
   assemblies:
   - Runly
@@ -342,7 +342,7 @@ items:
   type: Method
   source:
     id: FinalizeAsync
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 77
   assemblies:
   - Runly

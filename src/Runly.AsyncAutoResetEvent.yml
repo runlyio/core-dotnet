@@ -16,7 +16,7 @@ items:
   type: Class
   source:
     id: AsyncAutoResetEvent
-    path: /github/workspace/src/Job/AsyncAutoResetEvent.cs
+    path: /github/workspace/src/Runly/AsyncAutoResetEvent.cs
     startLine: 6
   assemblies:
   - Runly
@@ -47,7 +47,7 @@ items:
   type: Method
   source:
     id: WaitAsync
-    path: /github/workspace/src/Job/AsyncAutoResetEvent.cs
+    path: /github/workspace/src/Runly/AsyncAutoResetEvent.cs
     startLine: 12
   assemblies:
   - Runly
@@ -75,7 +75,7 @@ items:
   type: Method
   source:
     id: Set
-    path: /github/workspace/src/Job/AsyncAutoResetEvent.cs
+    path: /github/workspace/src/Runly/AsyncAutoResetEvent.cs
     startLine: 30
   assemblies:
   - Runly

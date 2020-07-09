@@ -15,7 +15,7 @@ items:
   type: Class
   source:
     id: ExecutionException
-    path: /github/workspace/src/Job/Processing/ExecutionException.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionException.cs
     startLine: 4
   assemblies:
   - Runly
@@ -46,7 +46,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/Processing/ExecutionException.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionException.cs
     startLine: 6
   assemblies:
   - Runly

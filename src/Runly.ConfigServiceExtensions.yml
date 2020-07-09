@@ -23,7 +23,7 @@ items:
   type: Class
   source:
     id: ConfigServiceExtensions
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 5
   assemblies:
   - Runly
@@ -56,7 +56,7 @@ items:
   type: Method
   source:
     id: AddTransient
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 7
   assemblies:
   - Runly
@@ -100,7 +100,7 @@ items:
   type: Method
   source:
     id: AddTransient
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 12
   assemblies:
   - Runly
@@ -147,7 +147,7 @@ items:
   type: Method
   source:
     id: AddTransient
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 19
   assemblies:
   - Runly
@@ -195,7 +195,7 @@ items:
   type: Method
   source:
     id: AddScoped
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 27
   assemblies:
   - Runly
@@ -239,7 +239,7 @@ items:
   type: Method
   source:
     id: AddScoped
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 32
   assemblies:
   - Runly
@@ -286,7 +286,7 @@ items:
   type: Method
   source:
     id: AddScoped
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 39
   assemblies:
   - Runly
@@ -334,7 +334,7 @@ items:
   type: Method
   source:
     id: AddSingleton
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 47
   assemblies:
   - Runly
@@ -378,7 +378,7 @@ items:
   type: Method
   source:
     id: AddSingleton
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 52
   assemblies:
   - Runly
@@ -425,7 +425,7 @@ items:
   type: Method
   source:
     id: AddSingleton
-    path: /github/workspace/src/Job/ConfigServiceExtensions.cs
+    path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
     startLine: 59
   assemblies:
   - Runly

@@ -23,7 +23,7 @@ items:
   type: Class
   source:
     id: ExecutionBase
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 11
   assemblies:
   - Runly
@@ -113,7 +113,7 @@ items:
   type: Field
   source:
     id: logger
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 14
   assemblies:
   - Runly
@@ -144,7 +144,7 @@ items:
   type: Field
   source:
     id: source
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 15
   assemblies:
   - Runly
@@ -173,7 +173,7 @@ items:
   type: Field
   source:
     id: provider
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 16
   assemblies:
   - Runly
@@ -204,7 +204,7 @@ items:
   type: Field
   source:
     id: enumerator
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 17
   assemblies:
   - Runly
@@ -233,7 +233,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 20
   assemblies:
   - Runly
@@ -267,7 +267,7 @@ items:
   type: Method
   source:
     id: ExecuteInternalAsync
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 27
   assemblies:
   - Runly
@@ -302,7 +302,7 @@ items:
   type: Method
   source:
     id: ExecuteParallelTasksAsync
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 216
   assemblies:
   - Runly
@@ -334,7 +334,7 @@ items:
   type: Method
   source:
     id: ProcessScopeAsync
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 253
   assemblies:
   - Runly
@@ -367,7 +367,7 @@ items:
   type: Method
   source:
     id: CallProcess
-    path: /github/workspace/src/Job/Processing/ExecutionBase.cs
+    path: /github/workspace/src/Runly/Processing/ExecutionBase.cs
     startLine: 405
   assemblies:
   - Runly

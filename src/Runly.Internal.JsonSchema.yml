@@ -16,7 +16,7 @@ items:
   type: Class
   source:
     id: JsonSchema
-    path: /github/workspace/src/Job/Internal/JsonSchema.cs
+    path: /github/workspace/src/Runly/Internal/JsonSchema.cs
     startLine: 8
   assemblies:
   - Runly
@@ -47,7 +47,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/Internal/JsonSchema.cs
+    path: /github/workspace/src/Runly/Internal/JsonSchema.cs
     startLine: 13
   assemblies:
   - Runly
@@ -79,7 +79,7 @@ items:
   type: Method
   source:
     id: Generate
-    path: /github/workspace/src/Job/Internal/JsonSchema.cs
+    path: /github/workspace/src/Runly/Internal/JsonSchema.cs
     startLine: 24
   assemblies:
   - Runly

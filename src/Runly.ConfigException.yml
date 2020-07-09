@@ -17,7 +17,7 @@ items:
   type: Class
   source:
     id: ConfigException
-    path: /github/workspace/src/Job/ConfigException.cs
+    path: /github/workspace/src/Runly/ConfigException.cs
     startLine: 4
   assemblies:
   - Runly
@@ -50,7 +50,7 @@ items:
   type: Property
   source:
     id: ParamName
-    path: /github/workspace/src/Job/ConfigException.cs
+    path: /github/workspace/src/Runly/ConfigException.cs
     startLine: 6
   assemblies:
   - Runly
@@ -81,7 +81,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/ConfigException.cs
+    path: /github/workspace/src/Runly/ConfigException.cs
     startLine: 8
   assemblies:
   - Runly
@@ -114,7 +114,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/ConfigException.cs
+    path: /github/workspace/src/Runly/ConfigException.cs
     startLine: 14
   assemblies:
   - Runly

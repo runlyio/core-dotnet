@@ -15,7 +15,7 @@ items:
   type: Class
   source:
     id: Job
-    path: /github/workspace/src/Job/Job.cs
+    path: /github/workspace/src/Runly/Job.cs
     startLine: 9
   assemblies:
   - Runly
@@ -65,7 +65,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/Job.cs
+    path: /github/workspace/src/Runly/Job.cs
     startLine: 11
   assemblies:
   - Runly

@@ -16,7 +16,7 @@ items:
   type: Interface
   source:
     id: IItemSource
-    path: /github/workspace/src/Job/Processing/IItemSource.cs
+    path: /github/workspace/src/Runly/Processing/IItemSource.cs
     startLine: 5
   assemblies:
   - Runly
@@ -48,7 +48,7 @@ items:
   type: Method
   source:
     id: GetItemsAsync
-    path: /github/workspace/src/Job/Processing/IItemSource.cs
+    path: /github/workspace/src/Runly/Processing/IItemSource.cs
     startLine: 7
   assemblies:
   - Runly
@@ -74,7 +74,7 @@ items:
   type: Method
   source:
     id: GetItemIdAsync
-    path: /github/workspace/src/Job/Processing/IItemSource.cs
+    path: /github/workspace/src/Runly/Processing/IItemSource.cs
     startLine: 9
   assemblies:
   - Runly

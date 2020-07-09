@@ -15,7 +15,7 @@ items:
   type: Class
   source:
     id: TypeNotFoundException
-    path: /github/workspace/src/Job/TypeNotFoundException.cs
+    path: /github/workspace/src/Runly/TypeNotFoundException.cs
     startLine: 4
   assemblies:
   - Runly
@@ -46,7 +46,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/TypeNotFoundException.cs
+    path: /github/workspace/src/Runly/TypeNotFoundException.cs
     startLine: 6
   assemblies:
   - Runly

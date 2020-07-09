@@ -16,7 +16,7 @@ items:
   type: Class
   source:
     id: AsyncEnumerableExtensions
-    path: /github/workspace/src/Job/AsyncEnumerableExtensions.cs
+    path: /github/workspace/src/Runly/AsyncEnumerableExtensions.cs
     startLine: 6
   assemblies:
   - Runly
@@ -49,7 +49,7 @@ items:
   type: Method
   source:
     id: ToAsyncEnumerable
-    path: /github/workspace/src/Job/AsyncEnumerableExtensions.cs
+    path: /github/workspace/src/Runly/AsyncEnumerableExtensions.cs
     startLine: 17
   assemblies:
   - Runly
@@ -100,7 +100,7 @@ items:
   type: Method
   source:
     id: ToAsyncEnumerable
-    path: /github/workspace/src/Job/AsyncEnumerableExtensions.cs
+    path: /github/workspace/src/Runly/AsyncEnumerableExtensions.cs
     startLine: 30
   assemblies:
   - Runly

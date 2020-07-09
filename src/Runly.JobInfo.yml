@@ -21,7 +21,7 @@ items:
   type: Class
   source:
     id: JobInfo
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 5
   assemblies:
   - Runly
@@ -52,7 +52,7 @@ items:
   type: Property
   source:
     id: JobType
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 7
   assemblies:
   - Runly
@@ -83,7 +83,7 @@ items:
   type: Property
   source:
     id: ItemType
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 9
   assemblies:
   - Runly
@@ -114,7 +114,7 @@ items:
   type: Property
   source:
     id: ConfigType
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 11
   assemblies:
   - Runly
@@ -145,7 +145,7 @@ items:
   type: Property
   source:
     id: Dependencies
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 13
   assemblies:
   - Runly
@@ -176,7 +176,7 @@ items:
   type: Property
   source:
     id: Errors
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 15
   assemblies:
   - Runly
@@ -207,7 +207,7 @@ items:
   type: Property
   source:
     id: IsValid
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 17
   assemblies:
   - Runly
@@ -238,7 +238,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/JobInfo.cs
+    path: /github/workspace/src/Runly/JobInfo.cs
     startLine: 19
   assemblies:
   - Runly

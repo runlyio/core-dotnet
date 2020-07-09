@@ -17,7 +17,7 @@ items:
   type: Class
   source:
     id: JobBase
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 12
   assemblies:
   - Runly
@@ -91,7 +91,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 15
   assemblies:
   - Runly
@@ -122,7 +122,7 @@ items:
   type: Method
   source:
     id: GetItemsAsync
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 23
   assemblies:
   - Runly
@@ -159,7 +159,7 @@ items:
   type: Method
   source:
     id: GetItemIdAsync
-    path: /github/workspace/src/Job/JobBase.cs
+    path: /github/workspace/src/Runly/JobBase.cs
     startLine: 29
   assemblies:
   - Runly

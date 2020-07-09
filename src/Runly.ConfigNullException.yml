@@ -15,7 +15,7 @@ items:
   type: Class
   source:
     id: ConfigNullException
-    path: /github/workspace/src/Job/ConfigNullException.cs
+    path: /github/workspace/src/Runly/ConfigNullException.cs
     startLine: 2
   assemblies:
   - Runly
@@ -49,7 +49,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/ConfigNullException.cs
+    path: /github/workspace/src/Runly/ConfigNullException.cs
     startLine: 4
   assemblies:
   - Runly

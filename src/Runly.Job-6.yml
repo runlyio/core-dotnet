@@ -17,7 +17,7 @@ items:
   type: Class
   source:
     id: Job
-    path: /github/workspace/src/Job/Job.cs
+    path: /github/workspace/src/Runly/Job.cs
     startLine: 109
   assemblies:
   - Runly
@@ -84,7 +84,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/Job.cs
+    path: /github/workspace/src/Runly/Job.cs
     startLine: 112
   assemblies:
   - Runly
@@ -115,7 +115,7 @@ items:
   type: Method
   source:
     id: GetExecution
-    path: /github/workspace/src/Job/Job.cs
+    path: /github/workspace/src/Runly/Job.cs
     startLine: 115
   assemblies:
   - Runly
@@ -151,7 +151,7 @@ items:
   type: Method
   source:
     id: ProcessAsync
-    path: /github/workspace/src/Job/Job.cs
+    path: /github/workspace/src/Runly/Job.cs
     startLine: 117
   assemblies:
   - Runly

@@ -16,7 +16,7 @@ items:
   type: Class
   source:
     id: PollingStream
-    path: /github/workspace/src/Job/PollingStream.cs
+    path: /github/workspace/src/Runly/PollingStream.cs
     startLine: 7
   assemblies:
   - Runly
@@ -52,7 +52,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Job/PollingStream.cs
+    path: /github/workspace/src/Runly/PollingStream.cs
     startLine: 12
   assemblies:
   - Runly
@@ -86,7 +86,7 @@ items:
   type: Method
   source:
     id: GetAsyncEnumerator
-    path: /github/workspace/src/Job/PollingStream.cs
+    path: /github/workspace/src/Runly/PollingStream.cs
     startLine: 21
   assemblies:
   - Runly
