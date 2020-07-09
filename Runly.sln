@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "src\Core\Core.cspro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Templates", "src\Templates\Templates.csproj", "{260BBF1A-C525-4662-9B8C-BEB48CA77AEE}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{D5DB7646-288F-4A29-8BBB-8EED9D1EC43C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core Libs", "Core Libs", "{D5DB7646-288F-4A29-8BBB-8EED9D1EC43C}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client.Tests", "test\Client.Tests\Client.Tests.csproj", "{30C362AB-8DBE-48AC-A8B4-6D9CE89643C9}"
 EndProject
