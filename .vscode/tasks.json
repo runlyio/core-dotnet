@@ -2,45 +2,12 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build API",
+            "label": "Build",
             "command": "dotnet",
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/src/Api/Api.csproj"
-            ],
-            "problemMatcher": "$tsc",
-            "group": "build"
-        },
-        {
-            "label": "Build Node",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/src/Cli/Cli.csproj"
-            ],
-            "problemMatcher": "$tsc",
-            "group": "build"
-        },
-        {
-            "label": "Build System Jobs",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/src/System/System.csproj"
-            ],
-            "problemMatcher": "$tsc",
-            "group": "build"
-        },
-        {
-            "label": "Build Init Tool",
-            "command": "dotnet",
-            "type": "process",
-            "args": [
-                "build",
-                "${workspaceFolder}/src/Init/Init.csproj"
+                "${workspaceFolder}/src/Runly/Runly.csproj"
             ],
             "problemMatcher": "$tsc",
             "group": "build"
