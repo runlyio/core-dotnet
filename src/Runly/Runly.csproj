@@ -15,9 +15,9 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
 
     <PackageProjectUrl>https://www.runly.io/</PackageProjectUrl>
-    <PackageReleaseNotes>https://github.com/runlyio/core/releases</PackageReleaseNotes>
+    <PackageReleaseNotes>https://github.com/runlyio/netcore/releases</PackageReleaseNotes>
 
-    <RepositoryUrl>https://github.com/runlyio/core.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/runlyio/netcore.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
 
     <PackageIcon>logo.png</PackageIcon>
