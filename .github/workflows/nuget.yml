@@ -23,8 +23,8 @@ jobs:
       - name: Package Client
         run: dotnet pack src/Client/Client.csproj -c Release -o .
 
-      - name: Package Job
-        run: dotnet pack src/Job/Job.csproj -c Release -o .
+      - name: Package Runly
+        run: dotnet pack src/Runly/Runly.csproj -c Release -o .
 
       - name: Package Templates
         run: dotnet pack src/Templates/Templates.csproj -c Release -o .

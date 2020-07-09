@@ -5,7 +5,7 @@
         {
           "files": [
             "src/Core/Core.csproj",
-            "src/Job/Runly.csproj"
+            "src/Runly/Runly.csproj"
           ]
         }
       ],

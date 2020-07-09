@@ -27,7 +27,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\src\Core\Core.csproj" />
     <ProjectReference Include="..\..\src\Diagnostics\Diagnostics.csproj" />
-    <ProjectReference Include="..\..\src\Job\Runly.csproj" />
+    <ProjectReference Include="..\..\src\Runly\Runly.csproj" />
   </ItemGroup>
 
 </Project>

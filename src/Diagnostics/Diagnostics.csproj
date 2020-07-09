@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Job\Runly.csproj" />
+    <ProjectReference Include="..\Runly\Runly.csproj" />
   </ItemGroup>
 
   <ItemGroup>
