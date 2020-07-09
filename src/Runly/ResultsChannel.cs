@@ -278,7 +278,6 @@ namespace Runly
 		public override string ToString() => MethodName;
 	}
 
-	// ugh, this is a fucking pain in my ass
 	public interface IResultsConnection : IAsyncDisposable
 	{
 		event Func<Exception, Task> Closed;
