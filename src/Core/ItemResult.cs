@@ -49,6 +49,9 @@ namespace Runly
 			}
 		}
 
+		/// <summary>
+		/// Gets the output from FinalizeAsync.
+		/// </summary>
 		public object Output { get; private set; }
 
 		/// <summary>
@@ -57,13 +60,13 @@ namespace Runly
 		public Dictionary<JobMethod, MethodOutcome> Methods { get; } = new Dictionary<JobMethod, MethodOutcome>();
 
 		/// <summary>
-		/// Gets the <see cref="MethodOutcome"/> for the call to <see cref="MoveNextAsync"/> on the enumerator.
+		/// Gets the <see cref="MethodOutcome"/> for the call to MoveNextAsync on the enumerator.
 		/// </summary>
 		[IgnoreMember]
 		public MethodOutcome EnumeratorMoveNext => Methods.ValueOrDefault(JobMethod.EnumeratorMoveNext);
 
 		/// <summary>
-		/// Gets the <see cref="MethodOutcome"/> for the call to <see cref="Current"/> on the enumerator.
+		/// Gets the <see cref="MethodOutcome"/> for the call to Current on the enumerator.
 		/// </summary>
 		[IgnoreMember]
 		public MethodOutcome EnumeratorCurrent => Methods.ValueOrDefault(JobMethod.EnumeratorCurrent);

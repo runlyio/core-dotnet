@@ -2,8 +2,14 @@ using System;
 
 namespace Runly
 {
-	public static class JsonStringExtensions
+	/// <summary>
+	/// Extension methods for strings.
+	/// </summary>
+	public static class StringExtensions
 	{
+		/// <summary>
+		/// Trims the string and converts the first character to lower case.
+		/// </summary>
 		public static string ToCamelCase(this string value)
 		{
 			if (String.IsNullOrWhiteSpace(value))

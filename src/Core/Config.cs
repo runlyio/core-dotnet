@@ -32,6 +32,9 @@ namespace Runly
 		[JsonSchemaIgnore]
 		public RunlyApiConfig RunlyApi { get; set; }
 
+		/// <summary>
+		/// Initializes a new <see cref="Config"/>.
+		/// </summary>
 		public Config()
 		{
 			Job = new JobConfig();

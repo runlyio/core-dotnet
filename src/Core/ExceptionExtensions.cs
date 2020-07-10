@@ -7,13 +7,23 @@ using System.Text;
 
 namespace Runly
 {
-	// https://stackoverflow.com/a/34001508/316108
-
+	/// <summary>
+	/// Extension methods for converting an <see cref="Exception"/> to a string.
+	/// </summary>
+	/// <remarks>
+	/// Based on the solution for converting an entire exception to a string found at https://stackoverflow.com/a/34001508/316108
+	/// </remarks>
 	public static class ExceptionExtensions
 	{
+		/// <summary>
+		/// Converts the <paramref name="exception"/> to a string.
+		/// </summary>
 		public static string ToDetailedString(this Exception exception) =>
 			ToDetailedString(exception, ExceptionOptions.Default);
 
+		/// <summary>
+		/// Converts the <paramref name="exception"/> to a string.
+		/// </summary>
 		public static string ToDetailedString(this Exception exception, ExceptionOptions options)
 		{
 			if (exception == null)
@@ -135,8 +145,14 @@ namespace Runly
 		}
 	}
 
+	/// <summary>
+	/// Options for converting an <see cref="Exception"/> to a string.
+	/// </summary>
 	public struct ExceptionOptions
 	{
+		/// <summary>
+		/// Gets the default <see cref="ExceptionOptions"/>.
+		/// </summary>
 		public static readonly ExceptionOptions Default = new ExceptionOptions()
 		{
 			CurrentIndentLevel = 0,
@@ -155,8 +171,8 @@ namespace Runly
 
 		internal int CurrentIndentLevel { get; set; }
 
-		public int IndentSpaces { get; set; }
+		internal int IndentSpaces { get; set; }
 
-		public bool OmitNullProperties { get; set; }
+		internal bool OmitNullProperties { get; set; }
 	}
 }

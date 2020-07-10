@@ -102,12 +102,12 @@ namespace Runly
 		/// </summary>
 		[JsonIgnore]
 		public IEnumerable<ItemResult> FailedItemsThatThrewExceptions => FailedItems.Where(r => r.FailedDueToException);
-		
+
 		/// <summary>
 		/// The total number of items to be processed.
 		/// </summary>
 		/// <remarks>
-		/// <see cref="TotalItemCount"/> will be null when a <see cref="IJob"/> sets <see cref="JobOptions.CanCountItems"/> to false. The difference between
+		/// <see cref="TotalItemCount"/> will be null when a <see cref="IJob"/> sets canBeCounted to false when using ToAsyncEnumerable. The difference between
 		/// this total and the sum of <see cref="SuccessfulItemCount"/> and <see cref="FailedItemCount"/> is the number of items
 		/// yet to be processed or not processed in the case of a job that ended in the <see cref="Disposition.Failed"/> state.
 		/// </remarks>
@@ -128,6 +128,9 @@ namespace Runly
 		/// </summary>
 		public object Output { get; internal set; }
 
+		/// <summary>
+		/// Initializes a new <see cref="ResultLog"/>.
+		/// </summary>
 		public ResultLog(Execution execution)
 		{
 			this.execution = execution ?? throw new ArgumentNullException(nameof(execution));
@@ -137,6 +140,9 @@ namespace Runly
 			this.execution.Completed += Completed;
 		}
 
+		/// <summary>
+		/// Initializes a new <see cref="ResultLog"/>.
+		/// </summary>
 		public ResultLog(IEnumerable<ItemResult> items, Disposition disposition, int? totalItemCount, Dictionary<JobMethod, MethodOutcome> methods, object output)
 		{
 			this.items = new ConcurrentBag<ItemResult>(items ?? new ItemResult[0]);
@@ -177,6 +183,9 @@ namespace Runly
 			return Task.CompletedTask;
 		}
 
+		/// <summary>
+		/// Produces a report of this job for the console.
+		/// </summary>
 		public override string ToString()
 		{
 			var report = new StringBuilder();

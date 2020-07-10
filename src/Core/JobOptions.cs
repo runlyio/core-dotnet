@@ -1,5 +1,8 @@
 ﻿namespace Runly
 {
+	/// <summary>
+	/// Options that determine how a job is executed.
+	/// </summary>
 	public class JobOptions
 	{
 		/// <summary>

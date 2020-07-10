@@ -17,8 +17,14 @@ namespace Runly
 	/// </remarks>
 	public class JobConfigConverter : JsonConverter
 	{
+		/// <summary>
+		/// Determines whether this instance can convert the specified object type.
+		/// </summary>
 		public override bool CanConvert(Type objectType) => objectType == typeof(JobConfig);
 
+		/// <summary>
+		/// Writes the JSON representation of the object.
+		/// </summary>
 		public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
 		{
 			var cfg = value as JobConfig;
@@ -41,6 +47,9 @@ namespace Runly
 			}
 		}
 
+		/// <summary>
+		/// Reads the JSON representation of the object.
+		/// </summary>
 		public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
 		{
 			if (reader.TokenType == JsonToken.Null)

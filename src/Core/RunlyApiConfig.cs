@@ -38,6 +38,9 @@ namespace Runly
 		/// </summary>
 		public bool LogSuccessfulItemResults { get; set; }
 
+		/// <summary>
+		/// Initializes a new <see cref="RunlyApiConfig"/>.
+		/// </summary>
 		public RunlyApiConfig()
 		{
 			Uri = "https://api.runly.io/";

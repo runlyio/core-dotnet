@@ -45,6 +45,9 @@ namespace Runly
 		/// </summary>
 		public TimeSpan Duration { get; private set; }
 
+		/// <summary>
+		/// Initializes a new <see cref="MethodOutcome"/>.
+		/// </summary>
 		public MethodOutcome(JobMethod method, TimeSpan duration, Exception ex)
 		{
 			Method = method;
@@ -52,6 +55,9 @@ namespace Runly
 			Duration = duration;
 		}
 
+		/// <summary>
+		/// Initializes a new <see cref="MethodOutcome"/>.
+		/// </summary>
 		[SerializationConstructor]
 		public MethodOutcome(JobMethod method, TimeSpan duration, Error error)
 		{
@@ -60,6 +66,9 @@ namespace Runly
 			Duration = duration;
 		}
 
+		/// <summary>
+		/// Returns a string description of this <see cref="MethodOutcome"/>.
+		/// </summary>
 		public override string ToString()
 		{
 			if (IsSuccessful)
