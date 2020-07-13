@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using Microsoft.Extensions.DependencyInjection;
 using Runly.Diagnostics;
 using Runly.Testing;
 using System.Threading.Tasks;
@@ -21,8 +20,6 @@ namespace Runly.Tests.Scenarios.Cancel
 			};
 
 			testHost = new TestHost<DiagnosticJob>(config);
-
-			testHost.Services.AddLogging();
 		}
 
 		[Fact]
@@ -31,7 +28,7 @@ namespace Runly.Tests.Scenarios.Cancel
 			// Hold the job on the first item in ProcessAsync until Signal is called
 			config.WaitForSignalInProcessAsync = true;
 
-			var run = testHost.CreateRun();
+			using var run = testHost.BuildRunner();
 			var running = run.RunAsync();
 
 			run.Cancel();
@@ -54,7 +51,7 @@ namespace Runly.Tests.Scenarios.Cancel
 		{
 			config.WaitForSignalInProcessAsync = true;
 
-			var run = testHost.CreateRun();
+			using var run = testHost.BuildRunner();
 			var running = run.RunAsync();
 
 			run.Cancel();
@@ -79,7 +76,7 @@ namespace Runly.Tests.Scenarios.Cancel
 		{
 			config.ThrowExceptionInInitializeAsync = true;
 
-			var run = testHost.CreateRun();
+			using var run = testHost.BuildRunner();
 			await run.RunAsync();
 
 			// Should do nothing
@@ -98,7 +95,7 @@ namespace Runly.Tests.Scenarios.Cancel
 			config.NumberOfItems = 1;
 			config.MillisecondDelayPerItem = 10;
 
-			var run = testHost.CreateRun();
+			using var run = testHost.BuildRunner();
 			await run.RunAsync();
 
 			// Should do nothing
