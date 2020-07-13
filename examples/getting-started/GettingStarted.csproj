@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Version>0.1.0</Version>
+
+    <AssemblyName>Examples.GettingStarted</AssemblyName>
+    <RootNamespace>Examples.GettingStarted</RootNamespace>
+
+    <PackAsTool>true</PackAsTool>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CsvHelper" Version="15.0.5" />
+    <PackageReference Include="Runly" Version="0.11.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

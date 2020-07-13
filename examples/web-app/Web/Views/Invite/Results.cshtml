@@ -1,0 +1,42 @@
+@using Microsoft.Extensions.Options
+
+@inject IOptionsSnapshot<RunlyOptions> opts
+@model RunResultsModel
+
+@{
+	ViewData["Title"] = "Invitation Results";
+}
+
+@section Scripts {
+	<script type="text/javascript" src="https://cdn.runly.io/v0.2.1/runly.js"></script>
+}
+
+<h1>Sending Invitations</h1>
+
+<p>
+	Thanks for inviting all those users! We're sending the invitations now.
+	You can watch the progress here or safely leave this page and return to your life.
+	The email invitations will be sent either way.
+</p>
+
+<div
+	data-runly-component="RunProgress"
+	data-runly-token="@opts.Value.PublishableKey"
+	data-runly-org="@opts.Value.Org"
+	data-runly-run-id="@Model.RunId">Loading run results...</div>
+
+<hr/>
+
+<div class="alert alert-secondary" role="alert">
+	<h4 class="alert-heading">Implementation Note</h4>
+
+	<p>
+		The example <code>InvitationEmailer</code> job is set to fail for every 100th email that it sends.
+		This gives you an opportunity to try out the <em>retry</em> functionality built-in to the runly.js components.
+		On second run, the <code>InvitationEmailer</code> will only process the failed items and succeed.
+	</p>
+
+	<p>
+		See what this <a href="https://www.runly.io/dashboard/@opts.Value.Org/env/@opts.Value.Env/runs/@Model.RunId" target="_blank">run looks like in your runly dashboard</a>.
+	</p>
+</div>

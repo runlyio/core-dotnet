@@ -1,0 +1,40 @@
+﻿@{
+	ViewData["Title"] = "Runly Example Web App";
+}
+
+<h1>Runly Example Web App</h1>
+
+<p>
+	This is an example MVC web application rendered with razor pages. It is intended to show how you can integrate
+	a Runly job into a web application workflow. After clicking the action button, a long-running, asynchronous
+	job will be queued while providing real-time feedback to the user.
+</p>
+
+<div class="alert alert-warning" role="alert">
+	Be sure to <a href="https://www.runly.io/docs/examples/web/" class="alert-link">read the documentation</a> for instructions on how to setup & configure this example.
+</div>
+
+<hr />
+
+<p>
+	Clicking this button simulates sending email to a large number of users. In the example below:
+</p>
+
+<ul>
+	<li>the user clicks the action button</li>
+	<li>a long-running job to "send" emails is queued</li>
+	<li>the web request returns immediately</li>
+	<li>the user is provided real-time feedback on the state of their action</li>
+</ul>
+
+<form method="POST" action="@Url.Action("InviteUsers")">
+	<div class="form-group">
+		<label for="emails">Email Addresses of Users to Invite to My Awesome Product</label>
+		<textarea class="form-control" id="emails" name="emails" rows="8"><partial name="Emails.cshtml" /></textarea>
+		<small class="form-text text-muted">
+			Don't worry. The default list of emails is fake and we won't <em>actually</em> send any emails.
+		</small>
+	</div>
+
+	<button type="submit" class="btn btn-primary btn-lg">Send Invites</button>
+</form>
