@@ -9,11 +9,7 @@ namespace Runly.Testing
 		readonly Config config;
 		Action<IServiceCollection> configureDelegate;
 
-		public TestHost(Config config)
-			: this(config, new ServiceCollection()) { }
-
-		public TestHost(Config config, IServiceCollection services)
-		{
+		public TestHost(Config config){
 			this.config = config ?? throw new ArgumentNullException(nameof(config));
 
 			if (string.IsNullOrWhiteSpace(config.Job.Type))
