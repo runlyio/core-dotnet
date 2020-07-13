@@ -2,9 +2,43 @@
 
 > Multi-threaded batch processing and background jobs for .NET Core
 
+Runly is an opinionated framework for writing jobs ⁠— background or otherwise. You focus on writing your business logic as a job. Runly gives you a CLI, multi-threading, retries, and more out-of-the-box.
+
+```c#
+public class HelloWorld : Job<HelloWorldConfig, string>
+{
+  readonly ILogger<HelloWorld> logger;
+
+  public HelloWorld(HelloWorldConfig config, ILogger<HelloWorld> logger)
+    : base(config)
+  {
+    this.logger = logger;
+  }
+
+  public override IAsyncEnumerable<string> GetItemsAsync()
+  {
+    // Return a collection of items for your job to process.
+    return Config.Names.ToAsyncEnumerable();
+  }
+
+  public override Task<Result> ProcessAsync(string name)
+  {
+    // Do the work to process each item.
+    logger.LogInformation("Hello, {name}", name);
+    return Task.FromResult(Result.Success());
+  }
+}
+
+public class HelloWorldConfig : Config
+{
+  public string[] Names { get; set; }
+    = new string[] { "Rick", "Morty" };
+}
+```
+
 ## :rocket: Get Started
 
-Install the application template:
+Create a new job app from the [GitHub template](https://github.com/runlyio/net-template) or via the dotnet tool template:
 
 ```
 dotnet new -i Runly.Templates
