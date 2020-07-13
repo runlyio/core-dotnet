@@ -38,6 +38,6 @@ jobs:
           $count = 0;
           do { 
               ++$count;
-              dotnet nuget push .\*.nupkg --source GitHub --skip-duplicate;
+              dotnet nuget push .\*.nupkg --skip-duplicate;
           } 
           while ($count -lt 30 -and $LastExitCode -ne 0)
