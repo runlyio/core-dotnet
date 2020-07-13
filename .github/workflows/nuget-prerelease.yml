@@ -7,7 +7,7 @@ on:
 jobs:
   publish:
     name: Publish Packages
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
       - uses: actions/setup-dotnet@v1
@@ -30,11 +30,11 @@ jobs:
       - name: Package Templates
         run: dotnet pack src/Templates/Templates.csproj -c Release -o .
 
-      # ugh https://github.com/NuGet/Home/issues/8580	
       - name: Push to GitHub Feed	
-        run: |	
-          for f in ./*.nupkg
-          do	
-            dotnet nuget push $f --skip-duplicate --no-symbols true -s https://nuget.pkg.github.com/runlyio/index.json -k ${{secrets.GITHUB_TOKEN}}
-            sleep 2
-          done
+        run: |
+          $count = 0;
+          do { 
+              ++$count;
+              dotnet nuget push .\*.nupkg --source GitHub --skip-duplicate -s https://nuget.pkg.github.com/runlyio/index.json -k ${{secrets.GITHUB_TOKEN}};
+          } 
+          while ($count -lt 30 -and $LastExitCode -ne 0)
