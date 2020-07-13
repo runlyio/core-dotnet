@@ -9,7 +9,8 @@ namespace Runly.Testing
 		readonly Config config;
 		Action<IServiceCollection> configureDelegate;
 
-		public TestHost(Config config){
+		public TestHost(Config config)
+		{
 			this.config = config ?? throw new ArgumentNullException(nameof(config));
 
 			if (string.IsNullOrWhiteSpace(config.Job.Type))
@@ -29,6 +30,7 @@ namespace Runly.Testing
 		{
 			var services = new ServiceCollection();
 			services.AddRunlyJobs(config, typeof(TJob).Assembly);
+			services.AddLogging();
 
 			if (configureDelegate != null)
 				configureDelegate(services);
