@@ -1,5 +1,4 @@
 ﻿using FluentAssertions;
-using Microsoft.Extensions.DependencyInjection;
 using Runly.Diagnostics;
 using Runly.Testing;
 using System.Threading.Tasks;
@@ -21,8 +20,6 @@ namespace Runly.Tests.Scenarios.Results
 			};
 
 			testHost = new TestHost<DiagnosticJob>(config);
-
-			testHost.Services.AddLogging();
 		}
 
 		[Fact]
@@ -37,7 +34,7 @@ namespace Runly.Tests.Scenarios.Results
 				new DiagnosticConfig.Category() { IsSuccessful = false, Count = 2, Name = "Bruh" }
 			};
 
-			var run = testHost.BuildRunner();
+			using var run = testHost.BuildRunner();
 			await run.RunAsync();
 
 			run.Execution.ItemCategories.Should().BeEquivalentTo(new[]
