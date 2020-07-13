@@ -5,6 +5,7 @@ items:
   id: ItemCategory
   parent: Runly
   children:
+  - Runly.ItemCategory.#ctor(System.Int32,System.Boolean,System.String)
   - Runly.ItemCategory.Category
   - Runly.ItemCategory.Count
   - Runly.ItemCategory.IsSuccessful
@@ -18,10 +19,12 @@ items:
   source:
     id: ItemCategory
     path: /github/workspace/src/Core/ItemCategory.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nThe summary of <xref href=\"Runly.ItemResult\" data-throw-if-not-resolved=\"false\"></xref> for a given category.\n"
+  example: []
   syntax:
     content: 'public class ItemCategory : object'
     content.vb: >-
@@ -49,10 +52,12 @@ items:
   source:
     id: IsSuccessful
     path: /github/workspace/src/Core/ItemCategory.cs
-    startLine: 6
+    startLine: 12
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates whether the results in this category were successfully processed.\n"
+  example: []
   syntax:
     content: public bool IsSuccessful { get; set; }
     parameters: []
@@ -80,10 +85,12 @@ items:
   source:
     id: Category
     path: /github/workspace/src/Core/ItemCategory.cs
-    startLine: 7
+    startLine: 17
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the name of the category.\n"
+  example: []
   syntax:
     content: public string Category { get; set; }
     parameters: []
@@ -111,10 +118,12 @@ items:
   source:
     id: Count
     path: /github/workspace/src/Core/ItemCategory.cs
-    startLine: 8
+    startLine: 22
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the number of items in this category of results.\n"
+  example: []
   syntax:
     content: public int Count { get; }
     parameters: []
@@ -128,7 +137,48 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
+- uid: Runly.ItemCategory.#ctor(System.Int32,System.Boolean,System.String)
+  commentId: M:Runly.ItemCategory.#ctor(System.Int32,System.Boolean,System.String)
+  id: '#ctor(System.Int32,System.Boolean,System.String)'
+  parent: Runly.ItemCategory
+  langs:
+  - csharp
+  - vb
+  name: ItemCategory(Int32, Boolean, String)
+  nameWithType: ItemCategory.ItemCategory(Int32, Boolean, String)
+  fullName: Runly.ItemCategory.ItemCategory(System.Int32, System.Boolean, System.String)
+  type: Constructor
+  source:
+    id: .ctor
+    path: /github/workspace/src/Core/ItemCategory.cs
+    startLine: 27
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ItemCategory\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public ItemCategory(int count, bool isSuccessful, string category)
+    parameters:
+    - id: count
+      type: System.Int32
+    - id: isSuccessful
+      type: System.Boolean
+    - id: category
+      type: System.String
+    content.vb: Public Sub New(count As Integer, isSuccessful As Boolean, category As String)
+  overload: Runly.ItemCategory.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
+- uid: Runly.ItemResult
+  commentId: T:Runly.ItemResult
+  parent: Runly
+  name: ItemResult
+  nameWithType: ItemResult
+  fullName: Runly.ItemResult
 - uid: Runly
   commentId: N:Runly
   name: Runly
@@ -169,3 +219,13 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
+- uid: Runly.ItemCategory
+  commentId: T:Runly.ItemCategory
+  name: ItemCategory
+  nameWithType: ItemCategory
+  fullName: Runly.ItemCategory
+- uid: Runly.ItemCategory.#ctor*
+  commentId: Overload:Runly.ItemCategory.#ctor
+  name: ItemCategory
+  nameWithType: ItemCategory.ItemCategory
+  fullName: Runly.ItemCategory.ItemCategory

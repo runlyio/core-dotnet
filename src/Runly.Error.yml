@@ -20,10 +20,12 @@ items:
   source:
     id: Error
     path: /github/workspace/src/Core/Error.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nA serializable representation an <see cref=\"!:Exception\"></see>. \n"
+  example: []
   syntax:
     content: 'public class Error : object'
     content.vb: >-
@@ -51,10 +53,12 @@ items:
   source:
     id: Message
     path: /github/workspace/src/Core/Error.cs
-    startLine: 7
+    startLine: 13
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets a message describing the exception.\n"
+  example: []
   syntax:
     content: public string Message { get; }
     parameters: []
@@ -82,10 +86,12 @@ items:
   source:
     id: Trace
     path: /github/workspace/src/Core/Error.cs
-    startLine: 8
+    startLine: 18
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets a detailed description of the exception.\n"
+  example: []
   syntax:
     content: public string Trace { get; }
     parameters: []
@@ -113,10 +119,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/Error.cs
-    startLine: 10
+    startLine: 23
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.Error\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public Error(string message, string trace)
     parameters:
@@ -144,15 +152,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/Error.cs
-    startLine: 17
+    startLine: 34
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.Error\" data-throw-if-not-resolved=\"false\"></xref> from an <see cref=\"!:Exception\"></see>.\n"
+  example: []
   syntax:
     content: public Error(Exception ex)
     parameters:
     - id: ex
       type: Exception
+      description: ''
     content.vb: Public Sub New(ex As Exception)
   overload: Runly.Error.#ctor*
   modifiers.csharp:
@@ -173,10 +184,12 @@ items:
   source:
     id: ToString
     path: /github/workspace/src/Core/Error.cs
-    startLine: 30
+    startLine: 50
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nReturns the <xref href=\"Runly.Error.Message\" data-throw-if-not-resolved=\"false\"></xref>, which describes the <xref href=\"Runly.Error\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public override string ToString()
     return:
@@ -215,6 +228,12 @@ references:
   name: Trace
   nameWithType: Error.Trace
   fullName: Runly.Error.Trace
+- uid: Runly.Error
+  commentId: T:Runly.Error
+  parent: Runly
+  name: Error
+  nameWithType: Error
+  fullName: Runly.Error
 - uid: Runly.Error.#ctor*
   commentId: Overload:Runly.Error.#ctor
   name: Error
@@ -225,6 +244,9 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: Exception
+- uid: Runly.Error.Message
+  commentId: P:Runly.Error.Message
+  isExternal: true
 - uid: Runly.Error.ToString*
   commentId: Overload:Runly.Error.ToString
   name: ToString

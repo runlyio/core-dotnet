@@ -27,10 +27,12 @@ items:
   source:
     id: ItemResult
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nThe result of a single item being processed by a job.\n"
+  example: []
   syntax:
     content: 'public class ItemResult : object'
     content.vb: >-
@@ -58,10 +60,12 @@ items:
   source:
     id: Id
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 8
+    startLine: 14
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the ID of the item.\n"
+  example: []
   syntax:
     content: public string Id { get; }
     parameters: []
@@ -89,10 +93,12 @@ items:
   source:
     id: IsSuccessful
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 9
+    startLine: 19
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates whether the job successfully processed the item.\n"
+  example: []
   syntax:
     content: public bool IsSuccessful { get; }
     parameters: []
@@ -120,10 +126,12 @@ items:
   source:
     id: FailedDueToException
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 10
+    startLine: 24
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates whether the item failed because an exception was thrown from ProcessAsync.\n"
+  example: []
   syntax:
     content: public bool FailedDueToException { get; }
     parameters: []
@@ -151,10 +159,12 @@ items:
   source:
     id: Category
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 14
+    startLine: 32
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nThe category this result is grouped into. If the item <xref href=\"Runly.ItemResult.FailedDueToException\" data-throw-if-not-resolved=\"false\"></xref>, this will be the type name of the exception.\n"
+  example: []
   syntax:
     content: public string Category { get; }
     parameters: []
@@ -182,10 +192,12 @@ items:
   source:
     id: Output
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 33
+    startLine: 54
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the output from FinalizeAsync.\n"
+  example: []
   syntax:
     content: public object Output { get; }
     parameters: []
@@ -213,10 +225,12 @@ items:
   source:
     id: Methods
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 35
+    startLine: 59
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the individual <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for each <xref href=\"Runly.JobMethod\" data-throw-if-not-resolved=\"false\"></xref> that was called for this item.\n"
+  example: []
   syntax:
     content: public Dictionary<JobMethod, MethodOutcome> Methods { get; }
     parameters: []
@@ -244,10 +258,12 @@ items:
   source:
     id: EnumeratorMoveNext
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 37
+    startLine: 64
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to MoveNextAsync on the enumerator.\n"
+  example: []
   syntax:
     content: public MethodOutcome EnumeratorMoveNext { get; }
     parameters: []
@@ -275,10 +291,12 @@ items:
   source:
     id: EnumeratorCurrent
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 40
+    startLine: 70
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to Current on the enumerator.\n"
+  example: []
   syntax:
     content: public MethodOutcome EnumeratorCurrent { get; }
     parameters: []
@@ -306,10 +324,12 @@ items:
   source:
     id: GetItemIdAsync
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 43
+    startLine: 76
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to GetItemIdAsync.\n"
+  example: []
   syntax:
     content: public MethodOutcome GetItemIdAsync { get; }
     parameters: []
@@ -337,10 +357,12 @@ items:
   source:
     id: ProcessAsync
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 46
+    startLine: 82
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to ProcessAsync.\n"
+  example: []
   syntax:
     content: public MethodOutcome ProcessAsync { get; }
     parameters: []
@@ -368,10 +390,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 54
+    startLine: 93
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ItemResult\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ItemResult(string id, bool isSuccessful, string category)
     parameters:
@@ -401,10 +425,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/ItemResult.cs
-    startLine: 57
+    startLine: 99
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ItemResult\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ItemResult(string id, bool isSuccessful, string category, object output, Dictionary<JobMethod, MethodOutcome> methods)
     parameters:
@@ -463,6 +489,9 @@ references:
   name: FailedDueToException
   nameWithType: ItemResult.FailedDueToException
   fullName: Runly.ItemResult.FailedDueToException
+- uid: Runly.ItemResult.FailedDueToException
+  commentId: P:Runly.ItemResult.FailedDueToException
+  isExternal: true
 - uid: Runly.ItemResult.Category*
   commentId: Overload:Runly.ItemResult.Category
   name: Category
@@ -473,6 +502,18 @@ references:
   name: Output
   nameWithType: ItemResult.Output
   fullName: Runly.ItemResult.Output
+- uid: Runly.MethodOutcome
+  commentId: T:Runly.MethodOutcome
+  parent: Runly
+  name: MethodOutcome
+  nameWithType: MethodOutcome
+  fullName: Runly.MethodOutcome
+- uid: Runly.JobMethod
+  commentId: T:Runly.JobMethod
+  parent: Runly
+  name: JobMethod
+  nameWithType: JobMethod
+  fullName: Runly.JobMethod
 - uid: Runly.ItemResult.Methods*
   commentId: Overload:Runly.ItemResult.Methods
   name: Methods
@@ -588,12 +629,6 @@ references:
   name: EnumeratorMoveNext
   nameWithType: ItemResult.EnumeratorMoveNext
   fullName: Runly.ItemResult.EnumeratorMoveNext
-- uid: Runly.MethodOutcome
-  commentId: T:Runly.MethodOutcome
-  parent: Runly
-  name: MethodOutcome
-  nameWithType: MethodOutcome
-  fullName: Runly.MethodOutcome
 - uid: Runly.ItemResult.EnumeratorCurrent*
   commentId: Overload:Runly.ItemResult.EnumeratorCurrent
   name: EnumeratorCurrent
@@ -609,6 +644,12 @@ references:
   name: ProcessAsync
   nameWithType: ItemResult.ProcessAsync
   fullName: Runly.ItemResult.ProcessAsync
+- uid: Runly.ItemResult
+  commentId: T:Runly.ItemResult
+  parent: Runly
+  name: ItemResult
+  nameWithType: ItemResult
+  fullName: Runly.ItemResult
 - uid: Runly.ItemResult.#ctor*
   commentId: Overload:Runly.ItemResult.#ctor
   name: ItemResult

@@ -18,11 +18,11 @@ items:
   source:
     id: Job
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 35
+    startLine: 50
   assemblies:
   - Runly
   namespace: Runly
-  summary: "\nA <see cref=\"!:Task\"></see>-based asynchronous job.\n"
+  summary: "\nA job that provides a list of items and an action to perform on each item.\n"
   example: []
   syntax:
     content: 'public abstract class Job<TConfig, TItem> : JobBase<TConfig, TItem>, IJob, IItemSource<TItem> where TConfig : Config'
@@ -77,15 +77,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 38
+    startLine: 57
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new Job.\n"
+  example: []
   syntax:
     content: protected Job(TConfig config)
     parameters:
     - id: config
       type: '{TConfig}'
+      description: The config for the job.
     content.vb: Protected Sub New(config As TConfig)
   overload: Runly.Job`2.#ctor*
   nameWithType.vb: Job(Of TConfig, TItem).Job(TConfig)
@@ -108,10 +111,12 @@ items:
   source:
     id: GetExecution
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 41
+    startLine: 63
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> implementation to execute this job. You should not override this method.\n"
+  example: []
   syntax:
     content: protected override Execution GetExecution(IServiceProvider provider)
     parameters:
@@ -144,17 +149,21 @@ items:
   source:
     id: ProcessAsync
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 43
+    startLine: 70
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nProcesses the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">item</code>.\n"
+  example: []
   syntax:
     content: public abstract Task<Result> ProcessAsync(TItem item)
     parameters:
     - id: item
       type: '{TItem}'
+      description: The item to process.
     return:
       type: Task{Runly.Result}
+      description: A <xref href="Runly.Result" data-throw-if-not-resolved="false"></xref> indicating success or failure.
     content.vb: Public MustOverride Function ProcessAsync(item As TItem) As Task(Of Result)
   overload: Runly.Job`2.ProcessAsync*
   nameWithType.vb: Job(Of TConfig, TItem).ProcessAsync(TItem)
@@ -846,6 +855,12 @@ references:
   name: TConfig
   nameWithType: TConfig
   fullName: TConfig
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
 - uid: Runly.JobBase{{TConfig}}.GetExecution(IServiceProvider)
   commentId: M:Runly.JobBase{`0}.GetExecution(IServiceProvider)
   parent: Runly.JobBase{{TConfig}}
@@ -899,12 +914,6 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: IServiceProvider
-- uid: Runly.Execution
-  commentId: T:Runly.Execution
-  parent: Runly
-  name: Execution
-  nameWithType: Execution
-  fullName: Runly.Execution
 - uid: Runly.JobBase`1.GetExecution(IServiceProvider)
   commentId: M:Runly.JobBase`1.GetExecution(IServiceProvider)
   isExternal: true
@@ -945,6 +954,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
 - uid: Runly.Job`2.ProcessAsync*
   commentId: Overload:Runly.Job`2.ProcessAsync
   name: ProcessAsync

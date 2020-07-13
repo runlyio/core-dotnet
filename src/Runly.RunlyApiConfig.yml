@@ -254,10 +254,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/RunlyApiConfig.cs
-    startLine: 40
+    startLine: 43
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.RunlyApiConfig\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public RunlyApiConfig()
     content.vb: Public Sub New
@@ -322,6 +324,12 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: Runly.RunlyApiConfig
+  commentId: T:Runly.RunlyApiConfig
+  parent: Runly
+  name: RunlyApiConfig
+  nameWithType: RunlyApiConfig
+  fullName: Runly.RunlyApiConfig
 - uid: Runly.RunlyApiConfig.#ctor*
   commentId: Overload:Runly.RunlyApiConfig.#ctor
   name: RunlyApiConfig

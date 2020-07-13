@@ -1,29 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.JsonStringExtensions
-  commentId: T:Runly.JsonStringExtensions
-  id: JsonStringExtensions
+- uid: Runly.StringExtensions
+  commentId: T:Runly.StringExtensions
+  id: StringExtensions
   parent: Runly
   children:
-  - Runly.JsonStringExtensions.ToCamelCase(System.String)
+  - Runly.StringExtensions.ToCamelCase(System.String)
   langs:
   - csharp
   - vb
-  name: JsonStringExtensions
-  nameWithType: JsonStringExtensions
-  fullName: Runly.JsonStringExtensions
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Runly.StringExtensions
   type: Class
   source:
-    id: JsonStringExtensions
-    path: /github/workspace/src/Core/JsonStringExtensions.cs
-    startLine: 4
+    id: StringExtensions
+    path: /github/workspace/src/Core/StringExtensions.cs
+    startLine: 7
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nExtension methods for strings.\n"
+  example: []
   syntax:
-    content: 'public static class JsonStringExtensions : object'
+    content: 'public static class StringExtensions : object'
     content.vb: >-
-      Public Module JsonStringExtensions
+      Public Module StringExtensions
           Inherits Object
   inheritance:
   - System.Object
@@ -34,25 +36,27 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Runly.JsonStringExtensions.ToCamelCase(System.String)
-  commentId: M:Runly.JsonStringExtensions.ToCamelCase(System.String)
+- uid: Runly.StringExtensions.ToCamelCase(System.String)
+  commentId: M:Runly.StringExtensions.ToCamelCase(System.String)
   id: ToCamelCase(System.String)
   isExtensionMethod: true
-  parent: Runly.JsonStringExtensions
+  parent: Runly.StringExtensions
   langs:
   - csharp
   - vb
   name: ToCamelCase(String)
-  nameWithType: JsonStringExtensions.ToCamelCase(String)
-  fullName: Runly.JsonStringExtensions.ToCamelCase(System.String)
+  nameWithType: StringExtensions.ToCamelCase(String)
+  fullName: Runly.StringExtensions.ToCamelCase(System.String)
   type: Method
   source:
     id: ToCamelCase
-    path: /github/workspace/src/Core/JsonStringExtensions.cs
-    startLine: 6
+    path: /github/workspace/src/Core/StringExtensions.cs
+    startLine: 12
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nTrims the string and converts the first character to lower case.\n"
+  example: []
   syntax:
     content: public static string ToCamelCase(this string value)
     parameters:
@@ -64,7 +68,7 @@ items:
       <ExtensionAttribute>
 
       Public Shared Function ToCamelCase(value As String) As String
-  overload: Runly.JsonStringExtensions.ToCamelCase*
+  overload: Runly.StringExtensions.ToCamelCase*
   modifiers.csharp:
   - public
   - static
@@ -82,11 +86,11 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.JsonStringExtensions.ToCamelCase*
-  commentId: Overload:Runly.JsonStringExtensions.ToCamelCase
+- uid: Runly.StringExtensions.ToCamelCase*
+  commentId: Overload:Runly.StringExtensions.ToCamelCase
   name: ToCamelCase
-  nameWithType: JsonStringExtensions.ToCamelCase
-  fullName: Runly.JsonStringExtensions.ToCamelCase
+  nameWithType: StringExtensions.ToCamelCase
+  fullName: Runly.StringExtensions.ToCamelCase
 - uid: System.String
   isExternal: true
   name: String

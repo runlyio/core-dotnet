@@ -152,10 +152,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/Config.cs
-    startLine: 34
+    startLine: 37
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public Config()
     content.vb: Public Sub New
@@ -208,6 +210,12 @@ references:
   name: RunlyApiConfig
   nameWithType: RunlyApiConfig
   fullName: Runly.RunlyApiConfig
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly.Config.#ctor*
   commentId: Overload:Runly.Config.#ctor
   name: Config

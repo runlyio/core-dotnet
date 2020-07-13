@@ -12,8 +12,6 @@
   - uid: Runly.AsyncEnumeratorWrapper`1
     name: AsyncEnumeratorWrapper<T>
     name.vb: AsyncEnumeratorWrapper(Of T)
-  - uid: Runly.CategoryResult
-    name: CategoryResult
   - uid: Runly.Config
     name: Config
   - uid: Runly.ConfigException
@@ -134,8 +132,6 @@
     name: JobMethod
   - uid: Runly.JobOptions
     name: JobOptions
-  - uid: Runly.JsonStringExtensions
-    name: JsonStringExtensions
   - uid: Runly.MethodOutcome
     name: MethodOutcome
   - uid: Runly.PollingStream`1
@@ -156,6 +152,8 @@
     name: RunlyApiConfig
   - uid: Runly.ServiceExtensions
     name: ServiceExtensions
+  - uid: Runly.StringExtensions
+    name: StringExtensions
   - uid: Runly.TypeNotFoundException
     name: TypeNotFoundException
 - uid: Runly.Internal

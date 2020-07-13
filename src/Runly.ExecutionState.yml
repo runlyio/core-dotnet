@@ -21,10 +21,12 @@ items:
   source:
     id: ExecutionState
     path: /github/workspace/src/Core/ExecutionState.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nThe state of <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public enum ExecutionState : int'
     content.vb: Public Enum ExecutionState As Integer
@@ -48,10 +50,12 @@ items:
   source:
     id: NotStarted
     path: /github/workspace/src/Core/ExecutionState.cs
-    startLine: 4
+    startLine: 10
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the execution has not started.\n"
+  example: []
   syntax:
     content: NotStarted = 0
     return:
@@ -76,10 +80,12 @@ items:
   source:
     id: Initializing
     path: /github/workspace/src/Core/ExecutionState.cs
-    startLine: 5
+    startLine: 15
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the execution is calling InitializeAsync.\n"
+  example: []
   syntax:
     content: Initializing = 1
     return:
@@ -104,10 +110,12 @@ items:
   source:
     id: GettingItemsToProcess
     path: /github/workspace/src/Core/ExecutionState.cs
-    startLine: 6
+    startLine: 20
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the execution is calling GetItemsAsync and preparing to enumerate the items.\n"
+  example: []
   syntax:
     content: GettingItemsToProcess = 2
     return:
@@ -132,10 +140,12 @@ items:
   source:
     id: Processing
     path: /github/workspace/src/Core/ExecutionState.cs
-    startLine: 7
+    startLine: 25
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the execution is calling ProcessAsync with the items.\n"
+  example: []
   syntax:
     content: Processing = 3
     return:
@@ -160,10 +170,12 @@ items:
   source:
     id: Finalizing
     path: /github/workspace/src/Core/ExecutionState.cs
-    startLine: 8
+    startLine: 30
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the execution is calling FinalizeAsync.\n"
+  example: []
   syntax:
     content: Finalizing = 4
     return:
@@ -188,10 +200,12 @@ items:
   source:
     id: Complete
     path: /github/workspace/src/Core/ExecutionState.cs
-    startLine: 9
+    startLine: 35
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the execution has completed.\n"
+  example: []
   syntax:
     content: Complete = 5
     return:
@@ -203,6 +217,12 @@ items:
   - Public
   - Const
 references:
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
 - uid: Runly
   commentId: N:Runly
   name: Runly

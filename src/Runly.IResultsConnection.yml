@@ -23,7 +23,7 @@ items:
   source:
     id: IResultsConnection
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 281
+    startLine: 280
   assemblies:
   - Runly
   namespace: Runly
@@ -52,7 +52,7 @@ items:
   source:
     id: Closed
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 283
+    startLine: 282
   assemblies:
   - Runly
   namespace: Runly
@@ -75,7 +75,7 @@ items:
   source:
     id: Reconnected
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 284
+    startLine: 283
   assemblies:
   - Runly
   namespace: Runly
@@ -98,7 +98,7 @@ items:
   source:
     id: Reconnecting
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 285
+    startLine: 284
   assemblies:
   - Runly
   namespace: Runly
@@ -121,7 +121,7 @@ items:
   source:
     id: State
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 287
+    startLine: 286
   assemblies:
   - Runly
   namespace: Runly
@@ -150,7 +150,7 @@ items:
   source:
     id: StartAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 289
+    startLine: 288
   assemblies:
   - Runly
   namespace: Runly
@@ -174,7 +174,7 @@ items:
   source:
     id: InvokeCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 290
+    startLine: 289
   assemblies:
   - Runly
   namespace: Runly
@@ -206,7 +206,7 @@ items:
   source:
     id: SendCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 291
+    startLine: 290
   assemblies:
   - Runly
   namespace: Runly
@@ -238,7 +238,7 @@ items:
   source:
     id: On
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 292
+    startLine: 291
   assemblies:
   - Runly
   namespace: Runly

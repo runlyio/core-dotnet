@@ -48,10 +48,12 @@ items:
   source:
     id: NotComplete
     path: /github/workspace/src/Core/Disposition.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the run has not completed, so there is no <xref href=\"Runly.Disposition\" data-throw-if-not-resolved=\"false\"></xref> yet.\n"
+  example: []
   syntax:
     content: NotComplete = 0
     return:
@@ -76,10 +78,12 @@ items:
   source:
     id: Successful
     path: /github/workspace/src/Core/Disposition.cs
-    startLine: 8
+    startLine: 15
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the run completed successfully.\n"
+  example: []
   syntax:
     content: Successful = null
     return:
@@ -105,10 +109,12 @@ items:
   source:
     id: Failed
     path: /github/workspace/src/Core/Disposition.cs
-    startLine: 9
+    startLine: 20
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the run exceeded the item failure threshold and stopped running, terminating in a failed state.\n"
+  example: []
   syntax:
     content: Failed = null
     return:
@@ -134,10 +140,12 @@ items:
   source:
     id: Cancelled
     path: /github/workspace/src/Core/Disposition.cs
-    startLine: 10
+    startLine: 25
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nIndicates the run was cancelled by a user and stopped running.\n"
+  example: []
   syntax:
     content: Cancelled = null
     return:

@@ -437,14 +437,14 @@ items:
   assemblies:
   - Runly.Core
   namespace: Runly
-  summary: "\nGets a list of item result categories and counts.\n"
+  summary: "\nGets a list of item categories and counts.\n"
   example: []
   syntax:
-    content: public IEnumerable<CategoryResult> Categories { get; }
+    content: public IEnumerable<ItemCategory> Categories { get; }
     parameters: []
     return:
-      type: IEnumerable{Runly.CategoryResult}
-    content.vb: Public ReadOnly Property Categories As IEnumerable(Of CategoryResult)
+      type: IEnumerable{Runly.ItemCategory}
+    content.vb: Public ReadOnly Property Categories As IEnumerable(Of ItemCategory)
   overload: Runly.ResultLog.Categories*
   modifiers.csharp:
   - public
@@ -466,7 +466,7 @@ items:
   source:
     id: SuccessfulItems
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 89
+    startLine: 90
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -499,7 +499,7 @@ items:
   source:
     id: FailedItems
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 95
+    startLine: 96
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -532,7 +532,7 @@ items:
   source:
     id: FailedItemsThatThrewExceptions
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 101
+    startLine: 102
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -565,12 +565,12 @@ items:
   source:
     id: TotalItemCount
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 112
+    startLine: 113
   assemblies:
   - Runly.Core
   namespace: Runly
   summary: "\nThe total number of items to be processed.\n"
-  remarks: "\n<xref href=\"Runly.ResultLog.TotalItemCount\" data-throw-if-not-resolved=\"false\"></xref> will be null when a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> sets <see cref=\"!:JobOptions.CanCountItems\"></see> to false. The difference between\nthis total and the sum of <xref href=\"Runly.ResultLog.SuccessfulItemCount\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.ResultLog.FailedItemCount\" data-throw-if-not-resolved=\"false\"></xref> is the number of items\nyet to be processed or not processed in the case of a job that ended in the <xref href=\"Runly.Disposition.Failed\" data-throw-if-not-resolved=\"false\"></xref> state.\n"
+  remarks: "\n<xref href=\"Runly.ResultLog.TotalItemCount\" data-throw-if-not-resolved=\"false\"></xref> will be null when a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> sets canBeCounted to false when using ToAsyncEnumerable. The difference between\nthis total and the sum of <xref href=\"Runly.ResultLog.SuccessfulItemCount\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.ResultLog.FailedItemCount\" data-throw-if-not-resolved=\"false\"></xref> is the number of items\nyet to be processed or not processed in the case of a job that ended in the <xref href=\"Runly.Disposition.Failed\" data-throw-if-not-resolved=\"false\"></xref> state.\n"
   example: []
   syntax:
     content: public int? TotalItemCount { get; }
@@ -599,7 +599,7 @@ items:
   source:
     id: SuccessfulItemCount
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 117
+    startLine: 118
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -632,7 +632,7 @@ items:
   source:
     id: FailedItemCount
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 122
+    startLine: 123
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -665,7 +665,7 @@ items:
   source:
     id: Output
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 127
+    startLine: 128
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -698,10 +698,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 129
+    startLine: 133
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ResultLog\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ResultLog(Execution execution)
     parameters:
@@ -727,10 +729,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 138
+    startLine: 145
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ResultLog\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ResultLog(IEnumerable<ItemResult> items, Disposition disposition, int? totalItemCount, Dictionary<JobMethod, MethodOutcome> methods, object output)
     parameters:
@@ -767,10 +771,12 @@ items:
   source:
     id: ToString
     path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 178
+    startLine: 188
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nProduces a report of this job for the console.\n"
+  example: []
   syntax:
     content: public override string ToString()
     return:
@@ -1142,15 +1148,15 @@ references:
   name: Categories
   nameWithType: ResultLog.Categories
   fullName: Runly.ResultLog.Categories
-- uid: IEnumerable{Runly.CategoryResult}
-  commentId: '!:IEnumerable{Runly.CategoryResult}'
+- uid: IEnumerable{Runly.ItemCategory}
+  commentId: '!:IEnumerable{Runly.ItemCategory}'
   definition: IEnumerable`1
-  name: IEnumerable<CategoryResult>
-  nameWithType: IEnumerable<CategoryResult>
-  fullName: IEnumerable<Runly.CategoryResult>
-  nameWithType.vb: IEnumerable(Of CategoryResult)
-  fullName.vb: IEnumerable(Of Runly.CategoryResult)
-  name.vb: IEnumerable(Of CategoryResult)
+  name: IEnumerable<ItemCategory>
+  nameWithType: IEnumerable<ItemCategory>
+  fullName: IEnumerable<Runly.ItemCategory>
+  nameWithType.vb: IEnumerable(Of ItemCategory)
+  fullName.vb: IEnumerable(Of Runly.ItemCategory)
+  name.vb: IEnumerable(Of ItemCategory)
   spec.csharp:
   - uid: IEnumerable`1
     name: IEnumerable
@@ -1160,10 +1166,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Runly.CategoryResult
-    name: CategoryResult
-    nameWithType: CategoryResult
-    fullName: Runly.CategoryResult
+  - uid: Runly.ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: Runly.ItemCategory
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1176,10 +1182,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Runly.CategoryResult
-    name: CategoryResult
-    nameWithType: CategoryResult
-    fullName: Runly.CategoryResult
+  - uid: Runly.ItemCategory
+    name: ItemCategory
+    nameWithType: ItemCategory
+    fullName: Runly.ItemCategory
   - name: )
     nameWithType: )
     fullName: )
@@ -1290,6 +1296,12 @@ references:
   name: Output
   nameWithType: ResultLog.Output
   fullName: Runly.ResultLog.Output
+- uid: Runly.ResultLog
+  commentId: T:Runly.ResultLog
+  parent: Runly
+  name: ResultLog
+  nameWithType: ResultLog
+  fullName: Runly.ResultLog
 - uid: Runly.ResultLog.#ctor*
   commentId: Overload:Runly.ResultLog.#ctor
   name: ResultLog

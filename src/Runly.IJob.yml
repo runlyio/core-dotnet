@@ -22,10 +22,13 @@ items:
   source:
     id: IJob
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 6
+    startLine: 12
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nThe interface that all Runly jobs must implement.\n"
+  remarks: "\nDo not implement this interface directly, instead you should extend one of the Runly.Job classes in the Runly library.\n"
+  example: []
   syntax:
     content: public interface IJob
     content.vb: Public Interface IJob
@@ -49,10 +52,12 @@ items:
   source:
     id: Config
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 8
+    startLine: 17
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the job&apos;s config.\n"
+  example: []
   syntax:
     content: Config Config { get; }
     parameters: []
@@ -78,10 +83,12 @@ items:
   source:
     id: Options
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 9
+    startLine: 22
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the options for the job, determining how the job can be run.\n"
+  example: []
   syntax:
     content: JobOptions Options { get; }
     parameters: []
@@ -107,10 +114,12 @@ items:
   source:
     id: CancellationToken
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 10
+    startLine: 27
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.IJob.CancellationToken\" data-throw-if-not-resolved=\"false\"></xref> that the job should use when running.\n"
+  example: []
   syntax:
     content: CancellationToken CancellationToken { get; set; }
     parameters: []
@@ -135,17 +144,21 @@ items:
   source:
     id: GetExecution
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 11
+    startLine: 34
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> implementation that can run the job.\n"
+  example: []
   syntax:
     content: Execution GetExecution(IServiceProvider provider)
     parameters:
     - id: provider
       type: IServiceProvider
+      description: ''
     return:
       type: Runly.Execution
+      description: ''
     content.vb: Function GetExecution(provider As IServiceProvider) As Execution
   overload: Runly.IJob.GetExecution*
 - uid: Runly.IJob.GetDefaultConfig
@@ -162,14 +175,17 @@ items:
   source:
     id: GetDefaultConfig
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 12
+    startLine: 40
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the default config for the job.\n"
+  example: []
   syntax:
     content: Config GetDefaultConfig()
     return:
       type: Runly.Config
+      description: ''
     content.vb: Function GetDefaultConfig As Config
   overload: Runly.IJob.GetDefaultConfig*
 - uid: Runly.IJob.InitializeAsync
@@ -186,14 +202,17 @@ items:
   source:
     id: InitializeAsync
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 13
+    startLine: 46
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes the job, being called before any items are processed.\n"
+  example: []
   syntax:
     content: Task InitializeAsync()
     return:
       type: Task
+      description: ''
     content.vb: Function InitializeAsync As Task
   overload: Runly.IJob.InitializeAsync*
 - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
@@ -210,17 +229,21 @@ items:
   source:
     id: FinalizeAsync
     path: /github/workspace/src/Core/IJob.cs
-    startLine: 14
+    startLine: 53
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nFinalizes the job, being called after all items have been processed.\n"
+  example: []
   syntax:
     content: Task<object> FinalizeAsync(Disposition dispotion)
     parameters:
     - id: dispotion
       type: Runly.Disposition
+      description: ''
     return:
       type: Task{System.Object}
+      description: ''
     content.vb: Function FinalizeAsync(dispotion As Disposition) As Task(Of Object)
   overload: Runly.IJob.FinalizeAsync*
 references:
@@ -251,6 +274,9 @@ references:
   name: JobOptions
   nameWithType: JobOptions
   fullName: Runly.JobOptions
+- uid: Runly.IJob.CancellationToken
+  commentId: P:Runly.IJob.CancellationToken
+  isExternal: true
 - uid: Runly.IJob.CancellationToken*
   commentId: Overload:Runly.IJob.CancellationToken
   name: CancellationToken
@@ -261,6 +287,12 @@ references:
   name: CancellationToken
   nameWithType: CancellationToken
   fullName: CancellationToken
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
 - uid: Runly.IJob.GetExecution*
   commentId: Overload:Runly.IJob.GetExecution
   name: GetExecution
@@ -271,12 +303,6 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: IServiceProvider
-- uid: Runly.Execution
-  commentId: T:Runly.Execution
-  parent: Runly
-  name: Execution
-  nameWithType: Execution
-  fullName: Runly.Execution
 - uid: Runly.IJob.GetDefaultConfig*
   commentId: Overload:Runly.IJob.GetDefaultConfig
   name: GetDefaultConfig

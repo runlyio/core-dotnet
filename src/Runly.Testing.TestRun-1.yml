@@ -6,10 +6,12 @@ items:
   parent: Runly.Testing
   children:
   - Runly.Testing.TestRun`1.Cancel
+  - Runly.Testing.TestRun`1.Dispose
   - Runly.Testing.TestRun`1.Execution
   - Runly.Testing.TestRun`1.Job
   - Runly.Testing.TestRun`1.Results
   - Runly.Testing.TestRun`1.RunAsync(CancellationToken,System.Int32)
+  - Runly.Testing.TestRun`1.Services
   langs:
   - csharp
   - vb
@@ -20,17 +22,17 @@ items:
   source:
     id: TestRun
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 6
+    startLine: 7
   assemblies:
   - Runly
   namespace: Runly.Testing
   syntax:
-    content: 'public class TestRun<TJob> : object where TJob : IJob'
+    content: 'public class TestRun<TJob> : IDisposable where TJob : IJob'
     typeParameters:
     - id: TJob
     content.vb: >-
       Public Class TestRun(Of TJob As IJob)
-          Inherits Object
+          Inherits IDisposable
   inheritance:
   - System.Object
   nameWithType.vb: TestRun(Of TJob)
@@ -42,6 +44,39 @@ items:
   - Class
   fullName.vb: Runly.Testing.TestRun(Of TJob)
   name.vb: TestRun(Of TJob)
+- uid: Runly.Testing.TestRun`1.Services
+  commentId: P:Runly.Testing.TestRun`1.Services
+  id: Services
+  parent: Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: Services
+  nameWithType: TestRun<TJob>.Services
+  fullName: Runly.Testing.TestRun<TJob>.Services
+  type: Property
+  source:
+    id: Services
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
+    startLine: 12
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public IServiceProvider Services { get; }
+    parameters: []
+    return:
+      type: IServiceProvider
+    content.vb: Public ReadOnly Property Services As IServiceProvider
+  overload: Runly.Testing.TestRun`1.Services*
+  nameWithType.vb: TestRun(Of TJob).Services
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Services
 - uid: Runly.Testing.TestRun`1.Job
   commentId: P:Runly.Testing.TestRun`1.Job
   id: Job
@@ -56,7 +91,7 @@ items:
   source:
     id: Job
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 11
+    startLine: 13
   assemblies:
   - Runly
   namespace: Runly.Testing
@@ -89,7 +124,7 @@ items:
   source:
     id: Execution
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - Runly
   namespace: Runly.Testing
@@ -122,7 +157,7 @@ items:
   source:
     id: Results
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 13
+    startLine: 15
   assemblies:
   - Runly
   namespace: Runly.Testing
@@ -141,6 +176,34 @@ items:
   - Public
   - ReadOnly
   fullName.vb: Runly.Testing.TestRun(Of TJob).Results
+- uid: Runly.Testing.TestRun`1.Dispose
+  commentId: M:Runly.Testing.TestRun`1.Dispose
+  id: Dispose
+  parent: Runly.Testing.TestRun`1
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: TestRun<TJob>.Dispose()
+  fullName: Runly.Testing.TestRun<TJob>.Dispose()
+  type: Method
+  source:
+    id: Dispose
+    path: /github/workspace/src/Runly/Testing/TestRun.cs
+    startLine: 19
+  assemblies:
+  - Runly
+  namespace: Runly.Testing
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: Runly.Testing.TestRun`1.Dispose*
+  nameWithType.vb: TestRun(Of TJob).Dispose()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Dispose()
 - uid: Runly.Testing.TestRun`1.Cancel
   commentId: M:Runly.Testing.TestRun`1.Cancel
   id: Cancel
@@ -155,7 +218,7 @@ items:
   source:
     id: Cancel
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 17
+    startLine: 21
   assemblies:
   - Runly
   namespace: Runly.Testing
@@ -183,7 +246,7 @@ items:
   source:
     id: RunAsync
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 30
+    startLine: 34
   assemblies:
   - Runly
   namespace: Runly.Testing
@@ -219,6 +282,18 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Runly.Testing.TestRun`1.Services*
+  commentId: Overload:Runly.Testing.TestRun`1.Services
+  name: Services
+  nameWithType: TestRun<TJob>.Services
+  fullName: Runly.Testing.TestRun<TJob>.Services
+  nameWithType.vb: TestRun(Of TJob).Services
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Services
+- uid: IServiceProvider
+  isExternal: true
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: IServiceProvider
 - uid: Runly.Testing.TestRun`1.Job*
   commentId: Overload:Runly.Testing.TestRun`1.Job
   name: Job
@@ -268,6 +343,13 @@ references:
   name: ResultLog
   nameWithType: ResultLog
   fullName: Runly.ResultLog
+- uid: Runly.Testing.TestRun`1.Dispose*
+  commentId: Overload:Runly.Testing.TestRun`1.Dispose
+  name: Dispose
+  nameWithType: TestRun<TJob>.Dispose
+  fullName: Runly.Testing.TestRun<TJob>.Dispose
+  nameWithType.vb: TestRun(Of TJob).Dispose
+  fullName.vb: Runly.Testing.TestRun(Of TJob).Dispose
 - uid: Runly.Testing.TestRun`1.Cancel*
   commentId: Overload:Runly.Testing.TestRun`1.Cancel
   name: Cancel

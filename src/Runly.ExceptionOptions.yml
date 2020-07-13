@@ -6,8 +6,6 @@ items:
   parent: Runly
   children:
   - Runly.ExceptionOptions.Default
-  - Runly.ExceptionOptions.IndentSpaces
-  - Runly.ExceptionOptions.OmitNullProperties
   langs:
   - csharp
   - vb
@@ -18,10 +16,12 @@ items:
   source:
     id: ExceptionOptions
     path: /github/workspace/src/Core/ExceptionExtensions.cs
-    startLine: 137
+    startLine: 150
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nOptions for converting an <see cref=\"!:Exception\"></see> to a string.\n"
+  example: []
   syntax:
     content: public struct ExceptionOptions
     content.vb: Public Structure ExceptionOptions
@@ -45,10 +45,12 @@ items:
   source:
     id: Default
     path: /github/workspace/src/Core/ExceptionExtensions.cs
-    startLine: 139
+    startLine: 155
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nGets the default <xref href=\"Runly.ExceptionOptions\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public static readonly ExceptionOptions Default
     return:
@@ -62,68 +64,6 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Runly.ExceptionOptions.IndentSpaces
-  commentId: P:Runly.ExceptionOptions.IndentSpaces
-  id: IndentSpaces
-  parent: Runly.ExceptionOptions
-  langs:
-  - csharp
-  - vb
-  name: IndentSpaces
-  nameWithType: ExceptionOptions.IndentSpaces
-  fullName: Runly.ExceptionOptions.IndentSpaces
-  type: Property
-  source:
-    id: IndentSpaces
-    path: /github/workspace/src/Core/ExceptionExtensions.cs
-    startLine: 157
-  assemblies:
-  - Runly.Core
-  namespace: Runly
-  syntax:
-    content: public int IndentSpaces { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public Property IndentSpaces As Integer
-  overload: Runly.ExceptionOptions.IndentSpaces*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
-- uid: Runly.ExceptionOptions.OmitNullProperties
-  commentId: P:Runly.ExceptionOptions.OmitNullProperties
-  id: OmitNullProperties
-  parent: Runly.ExceptionOptions
-  langs:
-  - csharp
-  - vb
-  name: OmitNullProperties
-  nameWithType: ExceptionOptions.OmitNullProperties
-  fullName: Runly.ExceptionOptions.OmitNullProperties
-  type: Property
-  source:
-    id: OmitNullProperties
-    path: /github/workspace/src/Core/ExceptionExtensions.cs
-    startLine: 159
-  assemblies:
-  - Runly.Core
-  namespace: Runly
-  syntax:
-    content: public bool OmitNullProperties { get; set; }
-    parameters: []
-    return:
-      type: System.Boolean
-    content.vb: Public Property OmitNullProperties As Boolean
-  overload: Runly.ExceptionOptions.OmitNullProperties*
-  modifiers.csharp:
-  - public
-  - get
-  - set
-  modifiers.vb:
-  - Public
 references:
 - uid: Runly
   commentId: N:Runly
@@ -136,23 +76,3 @@ references:
   name: ExceptionOptions
   nameWithType: ExceptionOptions
   fullName: Runly.ExceptionOptions
-- uid: Runly.ExceptionOptions.IndentSpaces*
-  commentId: Overload:Runly.ExceptionOptions.IndentSpaces
-  name: IndentSpaces
-  nameWithType: ExceptionOptions.IndentSpaces
-  fullName: Runly.ExceptionOptions.IndentSpaces
-- uid: System.Int32
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
-- uid: Runly.ExceptionOptions.OmitNullProperties*
-  commentId: Overload:Runly.ExceptionOptions.OmitNullProperties
-  name: OmitNullProperties
-  nameWithType: ExceptionOptions.OmitNullProperties
-  fullName: Runly.ExceptionOptions.OmitNullProperties
-- uid: System.Boolean
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean

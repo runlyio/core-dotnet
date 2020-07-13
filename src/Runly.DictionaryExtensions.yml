@@ -16,10 +16,12 @@ items:
   source:
     id: DictionaryExtensions
     path: /github/workspace/src/Core/DictionaryExtensions.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nExtension methods for <see cref=\"!:Dictionary&lt;TKey, TValue>\"></see>.\n"
+  example: []
   syntax:
     content: 'public static class DictionaryExtensions : object'
     content.vb: >-
@@ -49,7 +51,7 @@ items:
   source:
     id: ValueOrDefault
     path: /github/workspace/src/Core/DictionaryExtensions.cs
-    startLine: 10
+    startLine: 13
   assemblies:
   - Runly.Core
   namespace: Runly

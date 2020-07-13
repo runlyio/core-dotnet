@@ -221,10 +221,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/MethodOutcome.cs
-    startLine: 47
+    startLine: 50
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public MethodOutcome(JobMethod method, TimeSpan duration, Exception ex)
     parameters:
@@ -254,10 +256,12 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/MethodOutcome.cs
-    startLine: 54
+    startLine: 60
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public MethodOutcome(JobMethod method, TimeSpan duration, Error error)
     parameters:
@@ -287,10 +291,12 @@ items:
   source:
     id: ToString
     path: /github/workspace/src/Core/MethodOutcome.cs
-    startLine: 62
+    startLine: 71
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nReturns a string description of this <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public override string ToString()
     return:

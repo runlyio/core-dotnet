@@ -18,11 +18,11 @@ items:
   source:
     id: Job
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 175
+    startLine: 295
   assemblies:
   - Runly
   namespace: Runly
-  summary: "\nA <see cref=\"!:Task\"></see>-based asynchronous job with seven dependencies.\n"
+  summary: "\nA job with seven dependencies that provides a list of items and an action to perform on each item.\n"
   example: []
   syntax:
     content: 'public abstract class Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7> : JobBase<TConfig, TItem>, IJob, IItemSource<TItem> where TConfig : Config'
@@ -91,15 +91,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 178
+    startLine: 302
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new Job.\n"
+  example: []
   syntax:
     content: protected Job(TConfig config)
     parameters:
     - id: config
       type: '{TConfig}'
+      description: The config for the job.
     content.vb: Protected Sub New(config As TConfig)
   overload: Runly.Job`9.#ctor*
   nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7).Job(TConfig)
@@ -122,10 +125,12 @@ items:
   source:
     id: GetExecution
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 181
+    startLine: 308
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> implementation to execute this job. You should not override this method.\n"
+  example: []
   syntax:
     content: protected override Execution GetExecution(IServiceProvider provider)
     parameters:
@@ -158,31 +163,42 @@ items:
   source:
     id: ProcessAsync
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 183
+    startLine: 322
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nProcesses the specified <code data-dev-comment-type=\"paramref\" class=\"paramref\">item</code>.\n"
+  example: []
   syntax:
     content: public abstract Task<Result> ProcessAsync(TItem item, T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7)
     parameters:
     - id: item
       type: '{TItem}'
+      description: The item to process.
     - id: arg1
       type: '{T1}'
+      description: A dependency required to process the item.
     - id: arg2
       type: '{T2}'
+      description: A dependency required to process the item.
     - id: arg3
       type: '{T3}'
+      description: A dependency required to process the item.
     - id: arg4
       type: '{T4}'
+      description: A dependency required to process the item.
     - id: arg5
       type: '{T5}'
+      description: A dependency required to process the item.
     - id: arg6
       type: '{T6}'
+      description: A dependency required to process the item.
     - id: arg7
       type: '{T7}'
+      description: A dependency required to process the item.
     return:
       type: Task{Runly.Result}
+      description: A <xref href="Runly.Result" data-throw-if-not-resolved="false"></xref> indicating success or failure.
     content.vb: Public MustOverride Function ProcessAsync(item As TItem, arg1 As T1, arg2 As T2, arg3 As T3, arg4 As T4, arg5 As T5, arg6 As T6, arg7 As T7) As Task(Of Result)
   overload: Runly.Job`9.ProcessAsync*
   nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7).ProcessAsync(TItem, T1, T2, T3, T4, T5, T6, T7)
@@ -874,6 +890,12 @@ references:
   name: TConfig
   nameWithType: TConfig
   fullName: TConfig
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
 - uid: Runly.JobBase{{TConfig}}.GetExecution(IServiceProvider)
   commentId: M:Runly.JobBase{`0}.GetExecution(IServiceProvider)
   parent: Runly.JobBase{{TConfig}}
@@ -927,12 +949,6 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: IServiceProvider
-- uid: Runly.Execution
-  commentId: T:Runly.Execution
-  parent: Runly
-  name: Execution
-  nameWithType: Execution
-  fullName: Runly.Execution
 - uid: Runly.JobBase`1.GetExecution(IServiceProvider)
   commentId: M:Runly.JobBase`1.GetExecution(IServiceProvider)
   isExternal: true
@@ -973,6 +989,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
 - uid: Runly.Job`9.ProcessAsync*
   commentId: Overload:Runly.Job`9.ProcessAsync
   name: ProcessAsync

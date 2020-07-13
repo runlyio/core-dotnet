@@ -17,10 +17,13 @@ items:
   source:
     id: ExceptionExtensions
     path: /github/workspace/src/Core/ExceptionExtensions.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nExtension methods for converting an <see cref=\"!:Exception\"></see> to a string.\n"
+  remarks: "\nBased on the solution for converting an entire exception to a string found at https://stackoverflow.com/a/34001508/316108\n"
+  example: []
   syntax:
     content: 'public static class ExceptionExtensions : object'
     content.vb: >-
@@ -50,10 +53,12 @@ items:
   source:
     id: ToDetailedString
     path: /github/workspace/src/Core/ExceptionExtensions.cs
-    startLine: 13
+    startLine: 20
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nConverts the <code data-dev-comment-type=\"paramref\" class=\"paramref\">exception</code> to a string.\n"
+  example: []
   syntax:
     content: public static string ToDetailedString(this Exception exception)
     parameters:
@@ -87,10 +92,12 @@ items:
   source:
     id: ToDetailedString
     path: /github/workspace/src/Core/ExceptionExtensions.cs
-    startLine: 16
+    startLine: 26
   assemblies:
   - Runly.Core
   namespace: Runly
+  summary: "\nConverts the <code data-dev-comment-type=\"paramref\" class=\"paramref\">exception</code> to a string.\n"
+  example: []
   syntax:
     content: public static string ToDetailedString(this Exception exception, ExceptionOptions options)
     parameters:

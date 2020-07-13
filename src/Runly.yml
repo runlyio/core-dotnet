@@ -8,7 +8,6 @@ items:
   - Runly.AsyncEnumerableExtensions
   - Runly.AsyncEnumerableWrapper`1
   - Runly.AsyncEnumeratorWrapper`1
-  - Runly.CategoryResult
   - Runly.Config
   - Runly.ConfigException
   - Runly.ConfigNullException
@@ -59,7 +58,6 @@ items:
   - Runly.JobLoadErrors
   - Runly.JobMethod
   - Runly.JobOptions
-  - Runly.JsonStringExtensions
   - Runly.MethodOutcome
   - Runly.PollingStream`1
   - Runly.PollingStream`1.Enumerator
@@ -69,6 +67,7 @@ items:
   - Runly.ResultsChannel.Connection
   - Runly.RunlyApiConfig
   - Runly.ServiceExtensions
+  - Runly.StringExtensions
   - Runly.TypeNotFoundException
   langs:
   - csharp
@@ -80,11 +79,6 @@ items:
   assemblies:
   - Runly.Core
 references:
-- uid: Runly.CategoryResult
-  commentId: T:Runly.CategoryResult
-  name: CategoryResult
-  nameWithType: CategoryResult
-  fullName: Runly.CategoryResult
 - uid: Runly.Config
   commentId: T:Runly.Config
   parent: Runly
@@ -187,11 +181,6 @@ references:
   name: JobOptions
   nameWithType: JobOptions
   fullName: Runly.JobOptions
-- uid: Runly.JsonStringExtensions
-  commentId: T:Runly.JsonStringExtensions
-  name: JsonStringExtensions
-  nameWithType: JsonStringExtensions
-  fullName: Runly.JsonStringExtensions
 - uid: Runly.MethodOutcome
   commentId: T:Runly.MethodOutcome
   parent: Runly
@@ -216,6 +205,11 @@ references:
   name: RunlyApiConfig
   nameWithType: RunlyApiConfig
   fullName: Runly.RunlyApiConfig
+- uid: Runly.StringExtensions
+  commentId: T:Runly.StringExtensions
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Runly.StringExtensions
 - uid: Runly.AsyncAutoResetEvent
   commentId: T:Runly.AsyncAutoResetEvent
   name: AsyncAutoResetEvent

@@ -336,7 +336,6 @@ references:
     nameWithType: )
     fullName: )
 - uid: Action`1
-  commentId: '!:Action`1'
   isExternal: true
   name: Action<>
   nameWithType: Action<>

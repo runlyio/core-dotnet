@@ -20,7 +20,7 @@ items:
   assemblies:
   - Runly
   namespace: Runly
-  summary: "\nA configurationless, single-action <see cref=\"!:Task\"></see>-based asynchronous job.\n"
+  summary: "\nA configurationless, single-action asynchronous job.\n"
   example: []
   syntax:
     content: 'public abstract class Job : Job<Config>, IJob'
@@ -66,15 +66,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/Job.cs
-    startLine: 11
+    startLine: 15
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new Job.\n"
+  example: []
   syntax:
     content: protected Job(Config config)
     parameters:
     - id: config
       type: Runly.Config
+      description: The config for the job.
     content.vb: Protected Sub New(config As Config)
   overload: Runly.Job.#ctor*
   modifiers.csharp:
