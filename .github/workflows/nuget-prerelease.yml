@@ -7,12 +7,15 @@ on:
 jobs:
   publish:
     name: Publish Packages
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '3.1.100'
+          source-url: https://nuget.pkg.github.com/runlyio/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       - uses: actions/checkout@v2
         with:
@@ -35,6 +38,6 @@ jobs:
           $count = 0;
           do { 
               ++$count;
-              dotnet nuget push .\*.nupkg --source GitHub --skip-duplicate -s https://nuget.pkg.github.com/runlyio/index.json -k ${{secrets.GITHUB_TOKEN}};
+              dotnet nuget push .\*.nupkg --source GitHub --skip-duplicate;
           } 
           while ($count -lt 30 -and $LastExitCode -ne 0)
