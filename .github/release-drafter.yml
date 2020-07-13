@@ -4,7 +4,7 @@
 # 'minor' or 'patch' to determine which number in the version to increment.
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
-change-template: '- $TITLE by @$AUTHOR (#$NUMBER)'
+change-template: '- $TITLE (#$NUMBER)'
 no-changes-template: '- No changes'
 categories:
   - title: '🚀 New Features'
@@ -27,9 +27,4 @@ version-resolver:
     labels:
       - 'patch'
   default: patch
-template: |
-  $CHANGES
-
-  ## 👨🏼‍💻 Contributors
-
-  $CONTRIBUTORS
+template: $CHANGES
