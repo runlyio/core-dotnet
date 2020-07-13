@@ -31,7 +31,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInInitializeAsync = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().BeNull();
@@ -52,7 +52,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInGetItemsAsync = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();
@@ -73,7 +73,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInGetEnumerator = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();
@@ -95,7 +95,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInEnumeratorMoveNext = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();
@@ -126,7 +126,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInEnumeratorCurrent = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();
@@ -157,7 +157,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInGetItemIdAsync = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();
@@ -190,7 +190,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInProcessAsync = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();
@@ -228,7 +228,7 @@ namespace Runly.Tests.Scenarios.Execution
 				}
 			};
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();
@@ -259,7 +259,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInFinalizeAsync = true;
 
-			var run = await testHost.CreateRun().RunAsync();
+			var run = await testHost.BuildRunner().RunAsync();
 
 			run.Job.InitializedAt.Should().NotBeNull();
 			run.Job.ItemsRetrievedAt.Should().NotBeNull();

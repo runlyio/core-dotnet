@@ -37,7 +37,7 @@ namespace Runly.Tests.Scenarios.Results
 				new DiagnosticConfig.Category() { IsSuccessful = false, Count = 2, Name = "Bruh" }
 			};
 
-			var run = testHost.CreateRun();
+			var run = testHost.BuildRunner();
 			await run.RunAsync();
 
 			run.Execution.ItemCategories.Should().BeEquivalentTo(new[]

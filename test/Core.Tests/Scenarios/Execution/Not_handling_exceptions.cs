@@ -32,7 +32,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInInitializeAsync = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.InitializeAsync);
 		}
@@ -42,7 +42,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInGetItemsAsync = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.GetItemsAsync);
 		}
@@ -52,7 +52,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInGetEnumerator = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.GetEnumerator);
 		}
@@ -62,7 +62,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInEnumeratorMoveNext = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.EnumeratorMoveNext);
 		}
@@ -73,7 +73,7 @@ namespace Runly.Tests.Scenarios.Execution
 			config.CanCountItems = false;
 			config.ThrowExceptionInEnumeratorCurrent = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.EnumeratorCurrent);
 		}
@@ -83,7 +83,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInGetItemIdAsync = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.GetItemIdAsync);
 		}
@@ -93,7 +93,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInProcessAsync = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.ProcessAsync);
 		}
@@ -103,7 +103,7 @@ namespace Runly.Tests.Scenarios.Execution
 		{
 			config.ThrowExceptionInFinalizeAsync = true;
 
-			(await testHost.CreateRun().Invoking(a => a.RunAsync())
+			(await testHost.BuildRunner().Invoking(a => a.RunAsync())
 				.Should().ThrowAsync<DiagnosticJobException>())
 				.And.Location.Should().Be(JobMethod.FinalizeAsync);
 		}

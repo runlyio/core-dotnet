@@ -25,7 +25,7 @@ namespace Runly.Testing
 		/// <summary>
 		/// Creates a <see cref="TestRun{TJob}"/> using the <see cref="ServicesCollection"/>
 		/// </summary>
-		public TestRun<TJob> CreateRun()
+		public TestRun<TJob> BuildRunner()
 		{
 			var services = new ServiceCollection();
 			services.AddRunlyJobs(config, typeof(TJob).Assembly);

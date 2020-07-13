@@ -31,7 +31,7 @@ namespace Runly.Tests.Scenarios.Cancel
 			// Hold the job on the first item in ProcessAsync until Signal is called
 			config.WaitForSignalInProcessAsync = true;
 
-			var run = testHost.CreateRun();
+			var run = testHost.BuildRunner();
 			var running = run.RunAsync();
 
 			run.Cancel();
@@ -54,7 +54,7 @@ namespace Runly.Tests.Scenarios.Cancel
 		{
 			config.WaitForSignalInProcessAsync = true;
 
-			var run = testHost.CreateRun();
+			var run = testHost.BuildRunner();
 			var running = run.RunAsync();
 
 			run.Cancel();
@@ -79,7 +79,7 @@ namespace Runly.Tests.Scenarios.Cancel
 		{
 			config.ThrowExceptionInInitializeAsync = true;
 
-			var run = testHost.CreateRun();
+			var run = testHost.BuildRunner();
 			await run.RunAsync();
 
 			// Should do nothing
@@ -98,7 +98,7 @@ namespace Runly.Tests.Scenarios.Cancel
 			config.NumberOfItems = 1;
 			config.MillisecondDelayPerItem = 10;
 
-			var run = testHost.CreateRun();
+			var run = testHost.BuildRunner();
 			await run.RunAsync();
 
 			// Should do nothing
