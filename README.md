@@ -5,20 +5,16 @@
 Runly is an opinionated framework for writing jobs ⁠— background or otherwise. You focus on writing your business logic as a job. Runly gives you a CLI, multi-threading, retries, and more out-of-the-box.
 
 ```c#
-public class HelloWorld : Job<HelloWorldConfig, string>
+public class CsvParser : Job<Config, string>
 {
-  readonly ILogger<HelloWorld> logger;
-
-  public HelloWorld(HelloWorldConfig config, ILogger<HelloWorld> logger)
-    : base(config)
-  {
-    this.logger = logger;
-  }
+  public HelloWorld(Config config)
+    : base(config) { }
 
   public override IAsyncEnumerable<string> GetItemsAsync()
   {
     // Return a collection of items for your job to process.
-    return Config.Names.ToAsyncEnumerable();
+    string[] names = new[] { "Rick", "Morty" };
+    return names.ToAsyncEnumerable();
   }
 
   public override Task<Result> ProcessAsync(string name)
@@ -28,13 +24,9 @@ public class HelloWorld : Job<HelloWorldConfig, string>
     return Task.FromResult(Result.Success());
   }
 }
-
-public class HelloWorldConfig : Config
-{
-  public string[] Names { get; set; }
-    = new string[] { "Rick", "Morty" };
-}
 ```
+
+See [more in-depth examples](./examples).
 
 ## :rocket: Get Started
 
