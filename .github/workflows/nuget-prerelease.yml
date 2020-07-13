@@ -1,0 +1,40 @@
+name: Nuget Dev
+on:
+  push:
+    branches:
+    - testing
+
+jobs:
+  publish:
+    name: Publish Packages
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '3.1.100'
+
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Package Core
+        run: dotnet pack src/Core/Core.csproj -c Release -o .
+
+      - name: Package Client
+        run: dotnet pack src/Client/Client.csproj -c Release -o .
+
+      - name: Package Runly
+        run: dotnet pack src/Runly/Runly.csproj -c Release -o .
+
+      - name: Package Templates
+        run: dotnet pack src/Templates/Templates.csproj -c Release -o .
+
+      # ugh https://github.com/NuGet/Home/issues/8580	
+      - name: Push to GitHub Feed	
+        run: |	
+          for f in ./*.nupkg
+          do	
+            dotnet nuget push $f --skip-duplicate --no-symbols true -s https://nuget.pkg.github.com/runlyio/index.json -k ${{secrets.GITHUB_TOKEN}}
+            sleep 2
+          done
