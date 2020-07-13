@@ -1,19 +1,23 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Runly.Testing
 {
-	public class TestRun<TJob>
+	public class TestRun<TJob> : IDisposable
 		where TJob : IJob
 	{
 		CancellationTokenSource cts;
 
+		public IServiceProvider Services { get; }
 		public TJob Job { get; }
 		public Execution Execution { get; }
 		public ResultLog Results { get; }
 
-		internal TestRun(TJob job, Execution execution, ResultLog results) => (Job, Execution, Results) = (job, execution, results);
+		internal TestRun(TJob job, Execution execution, ResultLog results, ServiceProvider services) => (Job, Execution, Results, Services) = (job, execution, results, services);
+
+		public void Dispose() => (Services as IDisposable)?.Dispose();
 
 		public void Cancel()
 		{
