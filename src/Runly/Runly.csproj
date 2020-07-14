@@ -8,8 +8,8 @@
     <Authors>Chad Lee;William Sossamon</Authors>
     <Company>Runly LLC</Company>
 
-    <Description>Build &amp; scale jobs in the cloud while still running on your own infrastrucure.</Description>
-    <PackageTags>batch;processing;background jobs;cloud;scale</PackageTags>
+    <Description>Multi-threaded batch processing and background jobs for .NET Core</Description>
+    <PackageTags>batch;processing;background jobs;cloud;scale;job scheduler;job queue</PackageTags>
 
     <Copyright>Copyright © Runly LLC 2020</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>

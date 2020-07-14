@@ -2,14 +2,13 @@
 
   <PropertyGroup>
     <PackageType>Template</PackageType>
-    
     <PackageId>Runly.Templates</PackageId>
 
     <Title>Runly Job Templates</Title>
     <Authors>Chad Lee;William Sossamon</Authors>
     <Company>Runly LLC</Company>
 
-    <Description>Template for creating runly jobs.</Description>
+    <Description>Templates for creating Runly jobs for .NET Core</Description>
     <PackageTags>runly;runly.io;background;worker;job;batch</PackageTags>
 
     <Copyright>Copyright © Runly LLC 2020</Copyright>
