@@ -13,6 +13,10 @@ namespace Runly
 	public abstract class JobBase<TConfig, TItem> : JobBase<TConfig>, IItemSource<TItem>
 		where TConfig : Config
 	{
+		/// <summary>
+		/// Initializes the <see cref="JobBase{TConfig, TItem}"/>.
+		/// </summary>
+		/// <param name="config">The job's config.</param>
 		protected JobBase(TConfig config)
 			: base(config) { }
 
@@ -20,7 +24,7 @@ namespace Runly
 		/// Gets the items that will be processed by the <see cref="Job"/>
 		/// </summary>
 		/// <remarks>When the items are an <see cref="IEnumerable{T}"/> wrapped in an <see cref="AsyncEnumerableWrapper{T}"/> a count is done before processing. This 
-		/// may have an adverse effect on some list of items. Set <see cref="JobOptions.CanCountItems"/> to false in the job's constructor to disable this behavior.</remarks>
+		/// may have an adverse effect on some lists of items. Set canBeCounted on <see cref="AsyncEnumerableExtensions.ToAsyncEnumerable{T}(IEnumerable{T}, bool)"/> to false to disable this behavior.</remarks>
 		public abstract IAsyncEnumerable<TItem> GetItemsAsync();
 
 		/// <summary>
@@ -54,6 +58,10 @@ namespace Runly
 
 		Config IJob.Config => this.Config;
 
+		/// <summary>
+		/// Initializes the <see cref="JobBase{TConfig}"/>.
+		/// </summary>
+		/// <param name="config">The job's config.</param>
 		protected JobBase(TConfig config)
 		{
 			this.Config = config ?? throw new ArgumentNullException(nameof(config));
@@ -63,6 +71,11 @@ namespace Runly
 
 		Execution IJob.GetExecution(IServiceProvider provider) => GetExecution(provider);
 
+		/// <summary>
+		/// Gets the <see cref="Execution"/> implementation for this job.
+		/// </summary>
+		/// <param name="provider">The <see cref="IServiceProvider"/> used to get depdendencies.</param>
+		/// <returns>An <see cref="Execution"/>.</returns>
 		protected internal abstract Execution GetExecution(IServiceProvider provider);
 
 		/// <summary>
@@ -89,10 +102,19 @@ namespace Runly
 			};
 		}
 
+		/// <summary>
+		/// Called from <see cref="JobBase{TConfig}.FinalizeAsync(Disposition)"/> when the disposition is <see cref="Disposition.Successful"/>.
+		/// </summary>
 		public virtual Task<object> OnCompletedAsync() => Task.FromResult<object>(null);
-
+		
+		/// <summary>
+		/// Called from <see cref="JobBase{TConfig}.FinalizeAsync(Disposition)"/> when the disposition is <see cref="Disposition.Cancelled"/>.
+		/// </summary>
 		public virtual Task<object> OnCancelledAsync() => Task.FromResult<object>(null);
 
+		/// <summary>
+		/// Called from <see cref="JobBase{TConfig}.FinalizeAsync(Disposition)"/> when the disposition is <see cref="Disposition.Failed"/>.
+		/// </summary>
 		public virtual Task<object> OnFailedAsync() => Task.FromResult<object>(null);
 	}
 }
