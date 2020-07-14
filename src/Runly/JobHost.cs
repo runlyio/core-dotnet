@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Runly.Internal;
 
 namespace Runly
@@ -65,11 +66,22 @@ namespace Runly
 				.ConfigureServices(services => services.AddRunlyJobs(args, jobAssemblies));
 		}
 
+		/// <summary>
+		/// Runs the job.
+		/// </summary>
+		/// <param name="host">The <see cref="IHost"/> to run.</param>
+		/// <returns>The <see cref="Task"/> that represents the asynchronous operation.</returns>
 		public static Task RunJobAsync(this IHost host)
 		{
 			return host.RunJobAsync(new CancellationTokenSource().Token);
 		}
 
+		/// <summary>
+		/// Runs the job.
+		/// </summary>
+		/// <param name="host">The <see cref="IHost"/> to run.</param>
+		/// <param name="cancellationToken">The token to trigger cancellation.</param>
+		/// <returns>The <see cref="Task"/> that represents the asynchronous operation.</returns>
 		public static Task RunJobAsync(this IHost host, CancellationToken cancellationToken)
 		{
 			var action = host.Services.GetRequiredService<IHostAction>();
