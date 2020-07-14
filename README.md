@@ -60,7 +60,7 @@ See [more in-depth examples](./examples) or [start reading the docs](https://www
 
 ## Consuming Pre-release Packages
 
-Pre-release packages are published to this project's [GitHub Packages Feed](https://github.com/runlyio/netcore/packages). If you want to consume one of these pre-release packages for testing purposes, you can add a `NuGet.config` file to the root of your project:
+Pre-release packages are published to this project's [GitHub Packages Feed](https://github.com/runlyio/core-dotnet/packages). If you want to consume one of these pre-release packages for testing purposes, you can add a `NuGet.config` file to the root of your project:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
