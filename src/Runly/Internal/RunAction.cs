@@ -157,7 +157,7 @@ namespace Runly.Internal
 		}
 
 		/// <summary>
-		/// Calls <see cref="ResultsChannel.Connection.UpdateState(InstanceState, int, int, System.Collections.Generic.IEnumerable{ItemProgress})"/>
+		/// Calls <see cref="ResultsChannel.Connection.UpdateState(InstanceState, IEnumerable{ItemProgress})"/>
 		/// every 1 to 30 seconds, depending on whether new data is available.
 		/// </summary>
 		private async Task PingApi(ResultsChannel.Connection channel, CancellationToken cancellationToken)
