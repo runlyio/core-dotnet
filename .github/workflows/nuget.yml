@@ -1,11 +1,11 @@
-name: Nuget
+name: Deploy Production Packages
 on:
   release:
     types: [published]
 
 jobs:
   publish:
-    name: Publish Packages
+    name: Pack and Publish
     runs-on: ubuntu-latest
 
     steps:

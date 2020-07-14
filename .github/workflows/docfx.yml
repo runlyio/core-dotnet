@@ -5,7 +5,7 @@ on:
 
 jobs:
   docfx:
-    name: DocFX
+    name: Deploy DocFX
     runs-on: ubuntu-latest
 
     steps:

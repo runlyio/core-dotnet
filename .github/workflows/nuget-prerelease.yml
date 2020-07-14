@@ -1,9 +1,9 @@
-name: Nuget Dev
+name: Deploy Prerelease Packages
 on: workflow_dispatch
 
 jobs:
   publish:
-    name: Publish Packages
+    name: Pack and Publish
     runs-on: ubuntu-latest
 
     steps:
