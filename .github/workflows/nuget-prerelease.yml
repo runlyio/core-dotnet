@@ -1,8 +1,5 @@
 name: Nuget Dev
-on:
-  push:
-    branches:
-    - testing
+on: workflow_dispatch
 
 jobs:
   publish:
