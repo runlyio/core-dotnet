@@ -9,15 +9,25 @@ using System.Threading.Tasks;
 
 namespace Runly.Processing
 {
+	/// <summary>
+	/// An internal base class for <see cref="Execution"/> implementations. This class should not be extended.
+	/// </summary>
+	/// <typeparam name="TConfig">The job's <see cref="Config"/> type.</typeparam>
+	/// <typeparam name="TItem">The job's item type.</typeparam>
 	public abstract class ExecutionBase<TConfig, TItem> : Execution
 		where TConfig : Config
 	{
-		protected readonly ILogger<ExecutionBase<TConfig, TItem>> logger;
-		protected IItemSource<TItem> source;
-		protected readonly IServiceProvider provider;
-		protected IAsyncEnumerator<TItem> enumerator;
+		readonly IItemSource<TItem> source;
+		readonly IServiceProvider provider;
+		readonly ILogger<ExecutionBase<TConfig, TItem>> logger;
 		readonly SemaphoreSlim moveNextLock = new SemaphoreSlim(1, 1);
+		IAsyncEnumerator<TItem> enumerator;
 
+		/// <summary>
+		/// Initializes a new <see cref="ExecutionBase{TConfig, TItem}"/>.
+		/// </summary>
+		/// <param name="source">The source of items to process.</param>
+		/// <param name="provider">The <see cref="IServiceProvider"/> to get services from.</param>
 		public ExecutionBase(IItemSource<TItem> source, IServiceProvider provider)
 		{
 			this.source = source ?? throw new ArgumentNullException(nameof(source));
@@ -25,6 +35,11 @@ namespace Runly.Processing
 			this.logger = provider.GetRequiredService<ILogger<ExecutionBase<TConfig, TItem>>>();
 		}
 
+		/// <summary>
+		/// Executes an <see cref="IJob"/>.
+		/// </summary>
+		/// <param name="token">The token to trigger cancellation.</param>
+		/// <returns>A <see cref="Task"/> representing the asynchronous execution of this method.</returns>
 		protected override async Task ExecuteInternalAsync(CancellationToken token)
 		{
 			Start(Job.Config.__filePath);
@@ -214,7 +229,11 @@ namespace Runly.Processing
 			}
 		}
 
-		protected virtual async Task ExecuteParallelTasksAsync()
+		/// <summary>
+		/// Performs the parallel execution of items.
+		/// </summary>
+		/// <returns>A <see cref="Task"/> representing the asynchronous execution of this method.</returns>
+		async Task ExecuteParallelTasksAsync()
 		{
 			int parallelTaskCount = Job.Config.Execution.ParallelTaskCount;
 			
@@ -251,9 +270,13 @@ namespace Runly.Processing
 			logger.LogDebug($"All tasks calling {nameof(ExecutionBase<TConfig, TItem>.ProcessScopeAsync)} completed successfully");
 		}
 
-		protected async Task ProcessScopeAsync(IServiceScope scopeObj)
+		/// <summary>
+		/// The entry point for a single thread processing items.
+		/// </summary>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
+		/// <returns>A <see cref="Task"/> representing the asynchronous execution of this method.</returns>
+		async Task ProcessScopeAsync(IServiceScope scope)
 		{
-			var scope = (IServiceScope)scopeObj;
 			bool @continue = true;
 			var stopwatch = new Stopwatch();
 			int maxProcessAttempts = Job.Config.Execution.ItemFailureRetryCount + 1;
@@ -403,6 +426,12 @@ namespace Runly.Processing
 			stopwatch.Stop();
 		}
 
+		/// <summary>
+		/// Calls the ProcessAsync method whose signature is unique to the <see cref="Execution"/> and <see cref="IJob"/>.
+		/// </summary>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
+		/// <param name="item">The item to be processed.</param>
+		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected abstract Task<Result> CallProcess(IServiceScope scope, TItem item);
 	}
 }

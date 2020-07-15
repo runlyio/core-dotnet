@@ -32,7 +32,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, string item)
@@ -71,7 +71,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -111,7 +111,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -154,7 +154,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -199,7 +199,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -246,7 +246,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -295,7 +295,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -346,7 +346,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -399,7 +399,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -454,7 +454,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -511,7 +511,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -570,7 +570,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -631,7 +631,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -694,7 +694,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -759,7 +759,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -826,7 +826,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -895,7 +895,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
@@ -966,7 +966,7 @@ namespace Runly.Processing
 		/// <summary>
 		/// Calls the ProcessAsync method whose signature is unique to this <see cref="Execution"/> and <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="scope">The <see cref="IServiceScope"/> to get arguments from.</param>
+		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <param name="item">The item to be processed.</param>
 		/// <returns>The <see cref="Result"/> returned from ProcessAsync.</returns>
 		protected async override Task<Result> CallProcess(IServiceScope scope, TItem item)
