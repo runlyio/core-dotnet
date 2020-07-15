@@ -1,25 +1,39 @@
 using CommandLine;
-using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Runly.Internal;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Net.Http;
 using System.Reflection;
 
 namespace Runly
 {
+	/// <summary>
+	/// Extension methods for <see cref="IServiceCollection"/> to add services for Runly jobs.
+	/// </summary>
 	public static class ServiceExtensions
 	{
 		const int INVALID_ARGS = -1;
 
+		/// <summary>
+		/// Adds the services required to execute the job specified in <paramref name="config"/>. The job type must be found in the calling assembly.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="config">The <see cref="Config"/> that determines the job that will be executed.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddRunlyJobs(this IServiceCollection services, Config config)
 		{
 			return services.AddRunlyJobs(config, Assembly.GetCallingAssembly());
 		}
 
+		/// <summary>
+		/// Adds the services required to execute the job specified in <paramref name="config"/>. The job type must be found in the <paramref name="jobAssemblies"/>.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="config">The <see cref="Config"/> that determines the job that will be executed.</param>
+		/// <param name="jobAssemblies">The assemblies where the job specified in <paramref name="config"/> can be found.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddRunlyJobs(this IServiceCollection services, Config config, params Assembly[] jobAssemblies)
 		{
 			services.AddJobCache(jobAssemblies);
@@ -29,11 +43,24 @@ namespace Runly
 			return services;
 		}
 
+		/// <summary>
+		/// Adds the services required to perform the action specified in <paramref name="args"/> given the jobs found in the calling assembly.
+		/// </summary>
+		/// <param name="args">The command line arguments that determine what action the <see cref="JobHost"/> will perform.</param>
+		/// <param name="services">The service collection being modified.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args)
 		{
 			return services.AddRunlyJobs(args, Assembly.GetCallingAssembly());
 		}
 
+		/// <summary>
+		/// Adds the services required to perform the action specified in <paramref name="args"/> given the jobs found in the <paramref name="jobAssemblies"/>.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="args">The command line arguments that determine what action the <see cref="JobHost"/> will perform.</param>
+		/// <param name="jobAssemblies">The assemblies where jobs can be found.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args, params Assembly[] jobAssemblies)
 		{
 			var cfgReader = services.AddJobCache(jobAssemblies);
@@ -47,6 +74,12 @@ namespace Runly
 			return services;
 		}
 
+		/// <summary>
+		/// Discovers and caches job types from the <paramref name="jobAssemblies"/>, creating a singleton service <see cref="JobCache"/>.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="jobAssemblies">The assemblies where jobs can be found.</param>
+		/// <returns>A <see cref="ConfigReader"/> that can read JSON configs for the job types in the <see cref="JobCache"/>.</returns>
 		static ConfigReader AddJobCache(this IServiceCollection services, IEnumerable<Assembly> jobAssemblies)
 		{
 			// need to use this stuff now; create it then register it
@@ -89,6 +122,12 @@ namespace Runly
 			));
 		}
 
+		/// <summary>
+		/// Adds a transient <see cref="RunAction"/> to the <see cref="IServiceCollection"/>.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="verb">The command line verb to that specifies the location of the config and other modifiers.</param>
+		/// <param name="cfgReader">A <see cref="ConfigReader"/> that can read the JSON config file specified in <paramref name="verb"/>.</param>
 		static void AddRunAction(this IServiceCollection services, RunVerb verb, ConfigReader cfgReader)
 		{
 			if (verb.Debug)
@@ -114,6 +153,11 @@ namespace Runly
 			services.AddRunAction(config);
 		}
 
+		/// <summary>
+		/// Adds a transient <see cref="RunAction"/> to the <see cref="IServiceCollection"/>.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="config">The <see cref="Config"/> for the job.</param>
 		static void AddRunAction(this IServiceCollection services, Config config)
 		{
 			services.AddConfig(config);
@@ -167,6 +211,12 @@ namespace Runly
 			));
 		}
 
+		/// <summary>
+		/// Adds the <paramref name="config"/> to the <see cref="IServiceCollection"/> as a singleton service using the class itself, each base class, and each interface.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="config">The <see cref="Config"/> to add to the service collection.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddConfig(this IServiceCollection services, Config config)
 		{
 			var type = config.GetType();
