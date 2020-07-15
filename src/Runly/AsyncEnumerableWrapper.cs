@@ -14,6 +14,9 @@ namespace Runly
 		readonly Task<IEnumerable<T>> enumerable;
 		IEnumerable<T> innerEnumerable;
 
+		/// <summary>
+		/// Indicates whether the <see cref="AsyncEnumerableWrapper{T}"/> can be enumerated more than once.
+		/// </summary>
 		public bool CanBeCounted { get; }
 
 		/// <summary>
