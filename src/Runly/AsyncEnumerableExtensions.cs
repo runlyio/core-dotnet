@@ -4,6 +4,9 @@ using System.Threading.Tasks;
 
 namespace Runly
 {
+	/// <summary>
+	/// Extension methods for <see cref="IEnumerable{T}"/> to adapt to the <see cref="IAsyncEnumerable{T}"/> interface.
+	/// </summary>
 	public static class AsyncEnumerableExtensions
 	{
 		/// <summary>
