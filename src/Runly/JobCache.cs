@@ -5,10 +5,20 @@ using System.Reflection;
 
 namespace Runly
 {
+	/// <summary>
+	/// A cache of <see cref="JobInfo">JobInfos</see> for the job types found in the assemblies provided.
+	/// </summary>
 	public class JobCache
 	{
+		/// <summary>
+		/// Gets the jobs found in the assemblies provided.
+		/// </summary>
 		public IEnumerable<JobInfo> Jobs { get; }
 
+		/// <summary>
+		/// Initializes a new <see cref="JobCache"/>.
+		/// </summary>
+		/// <param name="jobAssemblies">The assemblies to search for jobs.</param>
 		public JobCache(IEnumerable<Assembly> jobAssemblies)
 		{
 			Jobs = FindJobTypes(jobAssemblies);
@@ -28,28 +38,58 @@ namespace Runly
 			return result;
 		}
 
+		/// <summary>
+		/// Gets the <see cref="JobInfo"/> for the job type specified.
+		/// </summary>
+		/// <param name="type">The type to get the <see cref="JobInfo"/> for.</param>
+		/// <returns>A <see cref="JobInfo"/> or null if the type cannot be found.</returns>
 		public JobInfo Get(Type type)
 		{
 			return Jobs.FirstOrDefault(pi => pi.JobType == type);
 		}
 
-		public JobInfo Get(string type)
+		/// <summary>
+		/// Gets the <see cref="JobInfo"/> for the job type specified.
+		/// </summary>
+		/// <param name="jobType">The type to get the <see cref="JobInfo"/> for.</param>
+		/// <returns>A <see cref="JobInfo"/> or null if the type cannot be found.</returns>
+		/// <remarks>
+		/// An exact case match is attempted first for either the type <see cref="MemberInfo.Name"/>
+		/// or <see cref="Type.FullName"/>. If no matches are found a case insensitive match is attempted.
+		/// If zero or more than one job type matches, a <see cref="TypeNotFoundException"/> will be thrown.
+		/// </remarks>
+		public JobInfo Get(string jobType)
 		{
-			return ResolveJobInfo(type);
+			return ResolveJobInfo(jobType);
 		}
 
-		public Config GetDefaultConfig(string processType)
+		/// <summary>
+		/// Gets the default <see cref="Config"/> for the job type specified.
+		/// </summary>
+		/// <param name="jobType">The type to get the default config for.</param>
+		/// <remarks>
+		/// An exact case match is attempted first for either the type <see cref="MemberInfo.Name"/>
+		/// or <see cref="Type.FullName"/> of the job type. If no matches are found a case insensitive 
+		/// match is attempted. If zero or more than one job type matches, a <see cref="TypeNotFoundException"/>
+		/// will be thrown.
+		/// </remarks>
+		public Config GetDefaultConfig(string jobType)
 		{
-			return GetDefaultConfig(ResolveJobInfo(processType));
+			return GetDefaultConfig(ResolveJobInfo(jobType));
 		}
 
-		public Config GetDefaultConfig(JobInfo pi)
+		/// <summary>
+		/// Gets the default <see cref="Config"/> for the <paramref name="jobInfo"/>.
+		/// </summary>
+		/// <param name="jobInfo">The <see cref="JobInfo"/> to get the default config for.</param>
+		/// <returns>The default config for the job.</returns>
+		public Config GetDefaultConfig(JobInfo jobInfo)
 		{
-			var config = (Config)Activator.CreateInstance(pi.ConfigType);
+			var config = (Config)Activator.CreateInstance(jobInfo.ConfigType);
 
-			config.Job.Type = pi.JobType.FullName;
-			config.Job.Package = pi.JobType.Assembly.GetName().Name;
-			config.Job.Version = pi.JobType.Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
+			config.Job.Type = jobInfo.JobType.FullName;
+			config.Job.Package = jobInfo.JobType.Assembly.GetName().Name;
+			config.Job.Version = jobInfo.JobType.Assembly.GetCustomAttribute<AssemblyInformationalVersionAttribute>().InformationalVersion;
 
 			return config;
 		}

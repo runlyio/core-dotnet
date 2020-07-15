@@ -24,18 +24,18 @@ namespace Runly
 		}
 
 		/// <summary>
-		/// Creates a new <see cref="AsyncEnumeratorWrapper{T}"/> from the <see cref="Task{IEnumerator{T}}"/>.
+		/// Creates a new <see cref="AsyncEnumeratorWrapper{T}"/> from the <see cref="IEnumerator{T}"/>.
 		/// </summary>
-		/// <param name="enumerable">The <see cref="IEnumerator{T}"/> to wrap.</param>
+		/// <param name="enumerator">The <see cref="IEnumerator{T}"/> to wrap.</param>
 		public AsyncEnumeratorWrapper(Task<IEnumerator<T>> enumerator)
 		{
 			this.getEnumerator = enumerator ?? throw new ArgumentNullException(nameof(enumerator));
 		}
 
 		/// <summary>
-		/// Creates a new <see cref="AsyncEnumeratorWrapper{T}"/> from the <see cref="Task{IEnumerator{T}}"/>.
+		/// Creates a new <see cref="AsyncEnumeratorWrapper{T}"/> from the <see cref="IEnumerator{T}"/>.
 		/// </summary>
-		/// <param name="enumerable">The <see cref="IEnumerator{T}"/> to wrap.</param>
+		/// <param name="enumerator">The <see cref="IEnumerator{T}"/> to wrap.</param>
 		public AsyncEnumeratorWrapper(IEnumerator<T> enumerator)
 		{
 			this.enumerator = enumerator ?? throw new ArgumentNullException(nameof(enumerator));

@@ -6,11 +6,18 @@ using System;
 
 namespace Runly.Internal
 {
+	/// <summary>
+	/// Generates a JSON schema for a <see cref="Config"/>.
+	/// </summary>
 	public class JsonSchema
 	{
 		readonly JsonSchemaGenerator schema;
 		readonly ILogger<JsonSchema> logger;
 
+		/// <summary>
+		/// Initializes a new <see cref="JsonSchema"/>.
+		/// </summary>
+		/// <param name="logger">A <see cref="ILogger"/>.</param>
 		public JsonSchema(ILogger<JsonSchema> logger)
 		{
 			this.logger = logger;
@@ -22,6 +29,11 @@ namespace Runly.Internal
 			});
 		}
 
+		/// <summary>
+		/// Generates a JSON schema for the <paramref name="configType"/>.
+		/// </summary>
+		/// <param name="configType">The <see cref="Config"/> to generate the JSON schema for.</param>
+		/// <returns>A <see cref="JObject"/> containing the schema.</returns>
 		public JObject Generate(Type configType)
 		{
 			// We have to serialize and then deserialize the JsonSchema again in order

@@ -3,20 +3,45 @@ using System.Collections.Generic;
 
 namespace Runly
 {
+	/// <summary>
+	/// Stores the information required to use and run jobs.
+	/// </summary>
 	public class JobInfo
 	{
+		/// <summary>
+		/// The <see cref="Type"/> of the job.
+		/// </summary>
 		public Type JobType { get; private set; }
 
+		/// <summary>
+		/// The <see cref="Type"/> of the item the job works with.
+		/// </summary>
 		public Type ItemType { get; private set; }
 
+		/// <summary>
+		/// The <see cref="Type"/> of <see cref="Config"/> the job uses.
+		/// </summary>
 		public Type ConfigType { get; private set; }
 
+		/// <summary>
+		/// The <see cref="Type">Types</see> of the parameters for ProcessAsync.
+		/// </summary>
 		public Type[] Dependencies { get; private set; }
 
+		/// <summary>
+		/// The reasons why the <see cref="JobType"/> cannot be used as a job.
+		/// </summary>
 		public JobLoadErrors Errors { get; private set; }
 
+		/// <summary>
+		/// Indicates whether there are any errors with the <see cref="JobType"/>.
+		/// </summary>
 		public bool IsValid => Errors == JobLoadErrors.None;
 
+		/// <summary>
+		/// Initializes a new <see cref="JobInfo"/>.
+		/// </summary>
+		/// <param name="jobType">The <see cref="Type"/> of the job.</param>
 		public JobInfo(Type jobType)
 		{
 			this.JobType = jobType ?? throw new ArgumentNullException(nameof(jobType));
