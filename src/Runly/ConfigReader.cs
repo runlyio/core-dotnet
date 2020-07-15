@@ -5,15 +5,27 @@ using Newtonsoft.Json.Linq;
 
 namespace Runly
 {
+	/// <summary>
+	/// Deserializes JSON config files into instances of <see cref="Config"/>.
+	/// </summary>
 	public class ConfigReader
 	{
 		readonly JobCache cache;
 
+		/// <summary>
+		/// Initializes a new <see cref="ConfigReader"/>.
+		/// </summary>
+		/// <param name="cache">The <see cref="JobCache"/> containing the config types that can be read.</param>
 		public ConfigReader(JobCache cache)
 		{
 			this.cache = cache ?? throw new ArgumentNullException(nameof(cache));
 		}
 
+		/// <summary>
+		/// Creates an instance of a <see cref="Config"/> from the JSON file found at <paramref name="path"/>.
+		/// </summary>
+		/// <param name="path">A file path contianing a JSON config.</param>
+		/// <returns>An instance of <see cref="Config"/> from the deserialized file.</returns>
 		public Config FromFile(string path)
 		{
 			if (string.IsNullOrWhiteSpace(path))
@@ -32,6 +44,11 @@ namespace Runly
 			return FromJson(configJson);
 		}
 
+		/// <summary>
+		/// Creates an instance of a <see cref="Config"/> from the JSON string.
+		/// </summary>
+		/// <param name="json">A string containing a JSON config.</param>
+		/// <returns>An instance of <see cref="Config"/> from the deserialized string.</returns>
 		public Config FromJson(string json)
 		{
 			var jobj = JObject.Parse(json);
@@ -65,10 +82,7 @@ namespace Runly
 			return config;
 		}
 
-		private bool IsReducedForm(JObject job)
-		{
-			return GetJob(job).Type == JTokenType.String;
-		}
+		private bool IsReducedForm(JObject job) => GetJob(job).Type == JTokenType.String;
 
 		private JToken GetJob(JObject job) => job.GetValue(nameof(Job), StringComparison.OrdinalIgnoreCase);
 	}
