@@ -158,10 +158,10 @@ namespace Runly
 		}
 
 		/// <summary>
-		/// 
+		/// Executes an <see cref="IJob"/>.
 		/// </summary>
-		/// <param name="token"></param>
-		/// <returns></returns>
+		/// <param name="token">The token to trigger cancellation.</param>
+		/// <returns>A <see cref="Task"/> representing the asynchronous execution of this method.</returns>
 		protected abstract Task ExecuteInternalAsync(CancellationToken token);
 
 		int cancelAfter;
