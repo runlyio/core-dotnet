@@ -4,7 +4,13 @@ using Microsoft.Extensions.Logging;
 using Runly.Internal;
 using System;
 using System.Collections.Generic;
+using System.CommandLine;
+using System.CommandLine.Builder;
+using System.CommandLine.Invocation;
+using System.CommandLine.Parsing;
+using System.ComponentModel;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace Runly
@@ -65,13 +71,147 @@ namespace Runly
 		{
 			(var cache, var cfgReader) = services.AddJobCache(jobAssemblies);
 
-			var parseResults = Parser.Default.ParseArguments<ListVerb, GetVerb, RunVerb>(args)
-				.WithParsed<ListVerb>(services.AddListAction)
-				.WithParsed<GetVerb>(services.AddGetAction)
-				.WithParsed<RunVerb>(v => services.AddRunAction(v, cache, cfgReader))
-				.WithNotParsed(errors => Environment.Exit(INVALID_ARGS));
+			var root = new RootCommand();
+
+			var run = new Command("run", "Runs a job.");
+			run.Handler = CommandHandler.Create<string, string>((run, job) =>
+			{
+
+			});
+			root.AddCommand(run);
+
+			foreach (var job in cache.Jobs)
+			{
+				var jobCmd = new Command(job.JobType.Name);
+				jobCmd.AddAlias(job.JobType.FullName);
+				AddConfigParams(jobCmd, job.ConfigType, null);
+				jobCmd.Handler = CommandHandler.Create<int>(n =>
+				{
+					
+				});
+				run.AddCommand(jobCmd);
+			}
+
+			void AddConfigParams(Command command, Type type, string prefix)
+			{
+				foreach (var prop in type.GetProperties())
+				{
+					var name = prefix == null ? $"--{prop.Name}" : $"{prefix}.{prop.Name}";
+
+					if (prop.PropertyType.IsValueType)
+					{
+						if (prop.CanWrite)
+						{
+							var option = new Option(name)
+							{
+								Argument = new Argument()
+								{
+									Arity = prop.PropertyType == typeof(bool) ? ArgumentArity.ZeroOrOne : ArgumentArity.ExactlyOne,
+									ArgumentType = prop.PropertyType
+								}
+							};
+							command.AddOption(option);
+						}
+					}
+					else
+					{
+						if (!prop.PropertyType.IsArray)
+							AddConfigParams(command, prop.PropertyType, name);
+					}
+				}
+			}
+
+			new CommandLineBuilder(root)
+				.UseMiddleware(async (context, next) =>
+				{
+					var runCmdResult = context.ParseResult.RootCommandResult.Children["run"];
+
+					if (runCmdResult != null)
+					{
+						var jobCmdResult = runCmdResult.Children.FirstOrDefault() as CommandResult;
+
+						if (jobCmdResult != null)
+						{
+							var config = cache.GetDefaultConfig(jobCmdResult.Command.Name);
+
+							ApplyOverrides(config, jobCmdResult.Children);
+
+							AddRunAction(services, config);
+						}
+					}
+					else
+					{
+						await next(context);
+					}
+				})
+				.Build()
+				.Invoke(args);
+
+			//var parseResults = Parser.Default.ParseArguments<ListVerb, GetVerb, RunVerb>(args)
+			//	.WithParsed<ListVerb>(services.AddListAction)
+			//	.WithParsed<GetVerb>(services.AddGetAction)
+			//	.WithParsed<RunVerb>(v => services.AddRunAction(v, cache, cfgReader))
+			//	.WithNotParsed(errors => Environment.Exit(INVALID_ARGS));
 
 			return services;
+		}
+
+		/// <summary>
+		/// Applies command line config overrides to <paramref name="config"/>.
+		/// </summary>
+		/// <param name="config">The <see cref="Config"/> to override.</param>
+		/// <param name="symbols">A list of overrides to apply to the config.</param>
+		static void ApplyOverrides(Config config, SymbolResultSet symbols)
+		{
+			foreach (var symbol in symbols)
+			{
+				var optr = symbol as OptionResult;
+
+				var path = optr.Option.Name;
+
+				var argr = optr.Children.FirstOrDefault() as ArgumentResult;
+
+				var arg = argr.GetValueOrDefault();
+
+				//if (parts.Length != 2)
+				//	throw new FormatException($"Config override '{string.Join(' ', parts)}' must be in the format '--property value'.");
+
+				var prop = path.Split('.');
+
+				object cfg = null;
+				PropertyInfo pi = null;
+				var type = config.GetType();
+
+				for (int i = 0; i < prop.Length; i++)
+				{
+					cfg = pi?.GetValue(cfg) ?? config;
+					pi = type.GetProperty(prop[i]);
+
+					if (pi == null)
+						throw new ArgumentException($"Could not find '{prop[i]}' in the config path '{path}'");
+
+					type = pi.PropertyType;
+				}
+
+				//if (type != typeof(string))
+				//{
+				//	var converter = TypeDescriptor.GetConverter(type);
+
+				//	if (converter == null)
+				//		throw new ArgumentException($"Could not find a type converter for the type '{type.FullName}' for the config path '{path}'.");
+
+				//	try
+				//	{
+				//		arg = converter.ConvertFromInvariantString(arg);
+				//	}
+				//	catch (NotSupportedException ex)
+				//	{
+				//		throw new ArgumentException($"Could not convert '{arg}' to the type '{type.FullName}' for the config path '{path}'.", ex);
+				//	}
+				//}
+
+				pi.SetValue(cfg, arg);
+			}
 		}
 
 		/// <summary>
@@ -151,8 +291,6 @@ namespace Runly
 				// the path or job type specified could not be found.
 				config = cache.GetDefaultConfig(verb.JobOrConfigPath);
 			}
-
-			cfgReader.ApplyOverrides(config, verb.Props);
 
 			if (verb.Silent)
 				config.Execution.ResultsToConsole = false;

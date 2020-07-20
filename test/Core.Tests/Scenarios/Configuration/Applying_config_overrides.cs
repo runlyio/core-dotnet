@@ -17,10 +17,14 @@ namespace Runly.Tests.Scenarios.Configuration
 			
 			reader.ApplyOverrides(config, new[]
 			{
-				"NumberOfItems=10",
-				"WaitForSignalInInitializeAsync=true",
-				"RunlyApi.Token=1234asdf",
-				"Execution.RunAfterId=6B165086-E24D-49B5-A57D-57EBB080C0C1"
+				"--NumberOfItems",
+				"10",
+				"--WaitForSignalInInitializeAsync",
+				"true",
+				"--RunlyApi.Token",
+				"1234asdf",
+				"--Execution.RunAfterId","" +
+				"6B165086-E24D-49B5-A57D-57EBB080C0C1"
 			});
 
 			config.NumberOfItems.Should().Be(10);
