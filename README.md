@@ -109,11 +109,13 @@ There are plenty of job platforms out there which are completely OSS. We are try
 
 We are fiercely independent and not going anywhere. [Read more about our philosophy](https://www.runly.io/about/).
 
-Our goal is to focus on the developer experience making it trivial to build and scale jobs. We have plenty of ideas on how to this but we need your support to continue working on this project.
+Our mission is to create great developer experiences making it trivial to build and scale jobs while providing a great user experience in your app. We have plenty of ideas on how to do this but we need your support to continue working on this project.
 
-You can support us by building a Runly job and letting us know what you think. If you find value in writing jobs this way, you can [give the Runly Platform a try](https://www.runly.io/platform). Or, just give us a GitHub star while you are here. It allows us to brag about all the internet points we are getting when our family asks what we are doing all day :wink:.
+You can support us by building a Runly job and letting us know what you think ([tweet at us](https://twitter.com/runlyio) or [open an issue](https://github.com/runlyio/core-dotnet/issues/new)). If you find value in building Runly jobs, you can [give the Runly Platform a try](https://www.runly.io/platform).
 
-Keep up with the things we are working on by [following us on Twitter](https://twitter.com/runlyio).
+Or, just give us a GitHub star while you are here. It allows us to brag about all the internet points we are getting when our family asks what we are doing all day :wink:.
+
+You can keep up with what we are working on by [following us on Twitter](https://twitter.com/runlyio).
 
 --------------------------------------------------------
 
