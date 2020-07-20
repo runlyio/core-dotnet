@@ -1,4 +1,5 @@
 ﻿using CommandLine;
+using System.Collections.Generic;
 
 namespace Runly.Internal
 {
@@ -28,13 +29,13 @@ namespace Runly.Internal
 	[Verb("run", HelpText = "Runs the job using the supplied config file.")]
 	class RunVerb
 	{
-		[Value(0, MetaName = "Config Path", Required = true, HelpText = "The config file containing the job configuration to run.")]
-		public string ConfigPath { get; set; }
+		[Value(0, MetaName = "Job Type or Config Path", Required = true, HelpText = "The job type or config file to run.")]
+		public string JobOrConfigPath { get; set; }
 
-		[Value(1, MetaName = "Results Path", Required = false, Default = null, HelpText = "The file path to write the results of the job to. Overrides Execution.ResultsFilePath and sets Execution.ResultsToFile to true.")]
-		public string ResultsPath { get; set; }
+		[Value(1, MetaName = "Config Arguments", Required = false, HelpText = "Zero or more config arguments separated by a space in the format 'property.subproperty=value'. These arguments override the values set in the default config or config file.")]
+		public IEnumerable<string> Props { get; set; }
 
-		[Option('d', HelpText = "Prompts the user to attach a debugger when the job starts.")]
+		[Option('d', HelpText = "Prompts the user to attach a debugger when the job starts. Overrides Config.Execution.LaunchDebugger, setting it to true.")]
 		public bool Debug { get; set; }
 
 		[Option('s', HelpText = "Silences console output. Overrides Config.Execution.OutputToConsole, setting it to false.")]

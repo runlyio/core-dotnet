@@ -63,12 +63,12 @@ namespace Runly
 		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args, params Assembly[] jobAssemblies)
 		{
-			var cfgReader = services.AddJobCache(jobAssemblies);
+			(var cache, var cfgReader) = services.AddJobCache(jobAssemblies);
 
 			var parseResults = Parser.Default.ParseArguments<ListVerb, GetVerb, RunVerb>(args)
 				.WithParsed<ListVerb>(services.AddListAction)
 				.WithParsed<GetVerb>(services.AddGetAction)
-				.WithParsed<RunVerb>(v => services.AddRunAction(v, cfgReader))
+				.WithParsed<RunVerb>(v => services.AddRunAction(v, cache, cfgReader))
 				.WithNotParsed(errors => Environment.Exit(INVALID_ARGS));
 
 			return services;
@@ -80,7 +80,7 @@ namespace Runly
 		/// <param name="services">The service collection being modified.</param>
 		/// <param name="jobAssemblies">The assemblies where jobs can be found.</param>
 		/// <returns>A <see cref="ConfigReader"/> that can read JSON configs for the job types in the <see cref="JobCache"/>.</returns>
-		static ConfigReader AddJobCache(this IServiceCollection services, IEnumerable<Assembly> jobAssemblies)
+		static (JobCache, ConfigReader) AddJobCache(this IServiceCollection services, IEnumerable<Assembly> jobAssemblies)
 		{
 			// need to use this stuff now; create it then register it
 			var cache = new JobCache(jobAssemblies);
@@ -97,7 +97,7 @@ namespace Runly
 				}
 			}
 
-			return cfgReader;
+			return (cache, cfgReader);
 		}
 
 		static void AddListAction(this IServiceCollection services, ListVerb verb)
@@ -128,23 +128,28 @@ namespace Runly
 		/// <param name="services">The service collection being modified.</param>
 		/// <param name="verb">The command line verb to that specifies the location of the config and other modifiers.</param>
 		/// <param name="cfgReader">A <see cref="ConfigReader"/> that can read the JSON config file specified in <paramref name="verb"/>.</param>
-		static void AddRunAction(this IServiceCollection services, RunVerb verb, ConfigReader cfgReader)
+		static void AddRunAction(this IServiceCollection services, RunVerb verb, JobCache cache, ConfigReader cfgReader)
 		{
 			if (verb.Debug)
 				services.AddSingleton(new Debug() { AttachDebugger = true });
 
-			var config = cfgReader.FromFile(verb.ConfigPath);
+			Config config;
 
-			config.__filePath = verb.ConfigPath;
-
-			string dir = Path.GetDirectoryName(verb.ConfigPath);
-			if (!String.IsNullOrWhiteSpace(dir))
-				Directory.SetCurrentDirectory(dir);
-
-			if (!string.IsNullOrWhiteSpace(verb.ResultsPath))
+			if (File.Exists(verb.JobOrConfigPath))
 			{
-				config.Execution.ResultsToFile = true;
-				config.Execution.ResultsFilePath = verb.ResultsPath;
+				config = cfgReader.FromFile(verb.JobOrConfigPath);
+
+				config.__filePath = verb.JobOrConfigPath;
+
+				string dir = Path.GetDirectoryName(verb.JobOrConfigPath);
+				if (!String.IsNullOrWhiteSpace(dir))
+					Directory.SetCurrentDirectory(dir);
+			}
+			else
+			{
+				// TODO: Catch TypeNotFoundException and output message saying
+				// the path or job type specified could not be found.
+				config = cache.GetDefaultConfig(verb.JobOrConfigPath);
 			}
 
 			if (verb.Silent)
