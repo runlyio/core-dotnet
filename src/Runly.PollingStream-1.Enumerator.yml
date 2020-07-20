@@ -19,10 +19,12 @@ items:
   source:
     id: Enumerator
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 26
+    startLine: 43
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAn enumerator that calls the poll function of <xref href=\"Runly.PollingStream%601\" data-throw-if-not-resolved=\"false\"></xref> on an interval.\n"
+  example: []
   syntax:
     content: 'public class Enumerator : IAsyncEnumerator<T>'
     content.vb: >-
@@ -53,17 +55,21 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 33
+    startLine: 55
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.PollingStream%601.Enumerator\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public Enumerator(PollingStream<T> pollingStream, CancellationToken cancellationToken)
     parameters:
     - id: pollingStream
       type: Runly.PollingStream`1
+      description: The <xref href="Runly.PollingStream%601" data-throw-if-not-resolved="false"></xref> to enumerate.
     - id: cancellationToken
       type: CancellationToken
+      description: The token to trigger cancellation.
     content.vb: Public Sub New(pollingStream As PollingStream(Of T), cancellationToken As CancellationToken)
   overload: Runly.PollingStream`1.Enumerator.#ctor*
   nameWithType.vb: PollingStream(Of T).Enumerator.Enumerator(PollingStream(Of T), CancellationToken)
@@ -87,10 +93,12 @@ items:
   source:
     id: Current
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 39
+    startLine: 64
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the element in the collection at the current position of the enumerator.\n"
+  example: []
   syntax:
     content: public T Current { get; }
     parameters: []
@@ -120,14 +128,17 @@ items:
   source:
     id: MoveNextAsync
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 41
+    startLine: 70
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdvances the enumerator asynchronously to the next element of the collection.\n"
+  example: []
   syntax:
     content: public ValueTask<bool> MoveNextAsync()
     return:
       type: ValueTask{System.Boolean}
+      description: True if the enumerator advanced.
     content.vb: Public Function MoveNextAsync As ValueTask(Of Boolean)
   overload: Runly.PollingStream`1.Enumerator.MoveNextAsync*
   nameWithType.vb: PollingStream(Of T).Enumerator.MoveNextAsync()
@@ -150,10 +161,12 @@ items:
   source:
     id: DisposeAsync
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 74
+    startLine: 106
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nDisposes of resources.\n"
+  example: []
   syntax:
     content: public ValueTask DisposeAsync()
     return:
@@ -167,23 +180,6 @@ items:
   - Public
   fullName.vb: Runly.PollingStream(Of T).Enumerator.DisposeAsync()
 references:
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
-- uid: System.Object
-  isExternal: true
-  name: Object
-  nameWithType: Object
-  fullName: System.Object
-- uid: Runly.PollingStream`1.Enumerator.#ctor*
-  commentId: Overload:Runly.PollingStream`1.Enumerator.#ctor
-  name: Enumerator
-  nameWithType: PollingStream<T>.Enumerator.Enumerator
-  fullName: Runly.PollingStream<T>.Enumerator.Enumerator
-  nameWithType.vb: PollingStream(Of T).Enumerator.Enumerator
-  fullName.vb: Runly.PollingStream(Of T).Enumerator.Enumerator
 - uid: Runly.PollingStream`1
   commentId: T:Runly.PollingStream`1
   parent: Runly
@@ -221,6 +217,53 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: Runly.PollingStream`1.Enumerator
+  commentId: T:Runly.PollingStream`1.Enumerator
+  name: PollingStream.Enumerator<>
+  nameWithType: PollingStream.Enumerator<>
+  fullName: Runly.PollingStream.Enumerator<>
+  nameWithType.vb: PollingStream.Enumerator(Of )
+  fullName.vb: Runly.PollingStream.Enumerator(Of )
+  name.vb: PollingStream.Enumerator(Of )
+  spec.csharp:
+  - uid: Runly.PollingStream`1.Enumerator
+    name: PollingStream.Enumerator
+    nameWithType: PollingStream.Enumerator
+    fullName: Runly.PollingStream.Enumerator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.PollingStream`1.Enumerator
+    name: PollingStream.Enumerator
+    nameWithType: PollingStream.Enumerator
+    fullName: Runly.PollingStream.Enumerator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.PollingStream`1.Enumerator.#ctor*
+  commentId: Overload:Runly.PollingStream`1.Enumerator.#ctor
+  name: Enumerator
+  nameWithType: PollingStream<T>.Enumerator.Enumerator
+  fullName: Runly.PollingStream<T>.Enumerator.Enumerator
+  nameWithType.vb: PollingStream(Of T).Enumerator.Enumerator
+  fullName.vb: Runly.PollingStream(Of T).Enumerator.Enumerator
 - uid: CancellationToken
   isExternal: true
   name: CancellationToken

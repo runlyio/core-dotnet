@@ -92,15 +92,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/JobBase.cs
-    startLine: 15
+    startLine: 19
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes the <xref href=\"Runly.JobBase%602\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: protected JobBase(TConfig config)
     parameters:
     - id: config
       type: '{TConfig}'
+      description: The job&apos;s config.
     content.vb: Protected Sub New(config As TConfig)
   overload: Runly.JobBase`2.#ctor*
   nameWithType.vb: JobBase(Of TConfig, TItem).JobBase(TConfig)
@@ -123,12 +126,12 @@ items:
   source:
     id: GetItemsAsync
     path: /github/workspace/src/Runly/JobBase.cs
-    startLine: 23
+    startLine: 27
   assemblies:
   - Runly
   namespace: Runly
   summary: "\nGets the items that will be processed by the <xref href=\"Runly.Job\" data-throw-if-not-resolved=\"false\"></xref>\n"
-  remarks: "When the items are an <see cref=\"!:IEnumerable&lt;T>\"></see> wrapped in an <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> a count is done before processing. This \nmay have an adverse effect on some list of items. Set <see cref=\"!:JobOptions.CanCountItems\"></see> to false in the job&apos;s constructor to disable this behavior."
+  remarks: "When the items are an <see cref=\"!:IEnumerable&lt;T>\"></see> wrapped in an <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> a count is done before processing. This \nmay have an adverse effect on some lists of items. Set canBeCounted on <xref href=\"Runly.AsyncEnumerableExtensions.ToAsyncEnumerable%60%601(IEnumerable%7b%60%600%7d%2cSystem.Boolean)\" data-throw-if-not-resolved=\"false\"></xref> to false to disable this behavior."
   example: []
   syntax:
     content: public abstract IAsyncEnumerable<TItem> GetItemsAsync()
@@ -160,7 +163,7 @@ items:
   source:
     id: GetItemIdAsync
     path: /github/workspace/src/Runly/JobBase.cs
-    startLine: 29
+    startLine: 33
   assemblies:
   - Runly
   namespace: Runly
@@ -701,6 +704,54 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.JobBase`2
+  commentId: T:Runly.JobBase`2
+  name: JobBase<TConfig, TItem>
+  nameWithType: JobBase<TConfig, TItem>
+  fullName: Runly.JobBase<TConfig, TItem>
+  nameWithType.vb: JobBase(Of TConfig, TItem)
+  fullName.vb: Runly.JobBase(Of TConfig, TItem)
+  name.vb: JobBase(Of TConfig, TItem)
+  spec.csharp:
+  - uid: Runly.JobBase`2
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.JobBase`2
+    name: JobBase
+    nameWithType: JobBase
+    fullName: Runly.JobBase
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Runly.JobBase`2.#ctor*
   commentId: Overload:Runly.JobBase`2.#ctor
   name: JobBase
@@ -759,6 +810,9 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.AsyncEnumerableExtensions.ToAsyncEnumerable``1(IEnumerable{``0},System.Boolean)
+  commentId: M:Runly.AsyncEnumerableExtensions.ToAsyncEnumerable``1(IEnumerable{``0},System.Boolean)
+  isExternal: true
 - uid: Runly.JobBase`2.GetItemsAsync*
   commentId: Overload:Runly.JobBase`2.GetItemsAsync
   name: GetItemsAsync

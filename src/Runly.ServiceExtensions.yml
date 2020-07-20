@@ -20,10 +20,12 @@ items:
   source:
     id: ServiceExtensions
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 13
+    startLine: 14
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nExtension methods for <see cref=\"!:IServiceCollection\"></see> to add services for Runly jobs.\n"
+  example: []
   syntax:
     content: 'public static class ServiceExtensions : object'
     content.vb: >-
@@ -53,19 +55,24 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 17
+    startLine: 24
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds the services required to execute the job specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">config</code>. The job type must be found in the calling assembly.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, Config config)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The service collection being modified.
     - id: config
       type: Runly.Config
+      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that determines the job that will be executed.
     return:
       type: IServiceCollection
+      description: The same <see cref="!:IServiceCollection"></see> passed in for chaining.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -92,21 +99,27 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 22
+    startLine: 36
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds the services required to execute the job specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">config</code>. The job type must be found in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">jobAssemblies</code>.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, Config config, params Assembly[] jobAssemblies)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The service collection being modified.
     - id: config
       type: Runly.Config
+      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that determines the job that will be executed.
     - id: jobAssemblies
       type: Assembly[]
+      description: The assemblies where the job specified in <code data-dev-comment-type="paramref" class="paramref">config</code> can be found.
     return:
       type: IServiceCollection
+      description: The same <see cref="!:IServiceCollection"></see> passed in for chaining.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -136,19 +149,24 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 31
+    startLine: 51
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds the services required to perform the action specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">args</code> given the jobs found in the calling assembly.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The service collection being modified.
     - id: args
       type: System.String[]
+      description: The command line arguments that determine what action the <xref href="Runly.JobHost" data-throw-if-not-resolved="false"></xref> will perform.
     return:
       type: IServiceCollection
+      description: The same <see cref="!:IServiceCollection"></see> passed in for chaining.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -178,21 +196,27 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 36
+    startLine: 63
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds the services required to perform the action specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">args</code> given the jobs found in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">jobAssemblies</code>.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args, params Assembly[] jobAssemblies)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The service collection being modified.
     - id: args
       type: System.String[]
+      description: The command line arguments that determine what action the <xref href="Runly.JobHost" data-throw-if-not-resolved="false"></xref> will perform.
     - id: jobAssemblies
       type: Assembly[]
+      description: The assemblies where jobs can be found.
     return:
       type: IServiceCollection
+      description: The same <see cref="!:IServiceCollection"></see> passed in for chaining.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -222,19 +246,24 @@ items:
   source:
     id: AddConfig
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 169
+    startLine: 219
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds the <code data-dev-comment-type=\"paramref\" class=\"paramref\">config</code> to the <see cref=\"!:IServiceCollection\"></see> as a singleton service using the class itself, each base class, and each interface.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddConfig(this IServiceCollection services, Config config)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The service collection being modified.
     - id: config
       type: Runly.Config
+      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> to add to the service collection.
     return:
       type: IServiceCollection
+      description: The same <see cref="!:IServiceCollection"></see> passed in for chaining.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -257,6 +286,12 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly.ServiceExtensions.AddRunlyJobs*
   commentId: Overload:Runly.ServiceExtensions.AddRunlyJobs
   name: AddRunlyJobs
@@ -267,12 +302,6 @@ references:
   name: IServiceCollection
   nameWithType: IServiceCollection
   fullName: IServiceCollection
-- uid: Runly.Config
-  commentId: T:Runly.Config
-  parent: Runly
-  name: Config
-  nameWithType: Config
-  fullName: Runly.Config
 - uid: Assembly[]
   isExternal: true
   name: Assembly[]
@@ -299,6 +328,11 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: Runly.JobHost
+  commentId: T:Runly.JobHost
+  name: JobHost
+  nameWithType: JobHost
+  fullName: Runly.JobHost
 - uid: System.String[]
   isExternal: true
   name: String[]

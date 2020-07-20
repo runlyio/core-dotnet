@@ -16,10 +16,12 @@ items:
   source:
     id: ExecutionException
     path: /github/workspace/src/Runly/Processing/ExecutionException.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nAn exception used internally in <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class ExecutionException : Exception'
     content.vb: >-
@@ -47,17 +49,21 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/Processing/ExecutionException.cs
-    startLine: 6
+    startLine: 14
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nInitializes a new <xref href=\"Runly.Processing.ExecutionException\" data-throw-if-not-resolved=\"false\"></xref>..\n"
+  example: []
   syntax:
     content: public ExecutionException(JobMethod pointOfFailure, Exception innerException)
     parameters:
     - id: pointOfFailure
       type: Runly.JobMethod
+      description: The location where a failure occured.
     - id: innerException
       type: Exception
+      description: The underlying cause of this exception.
     content.vb: Public Sub New(pointOfFailure As JobMethod, innerException As Exception)
   overload: Runly.Processing.ExecutionException.#ctor*
   modifiers.csharp:
@@ -65,6 +71,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
 - uid: Runly.Processing
   commentId: N:Runly.Processing
   name: Runly.Processing
@@ -75,6 +87,16 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Processing.ExecutionException
+  commentId: T:Runly.Processing.ExecutionException
+  name: ExecutionException
+  nameWithType: ExecutionException
+  fullName: Runly.Processing.ExecutionException
 - uid: Runly.Processing.ExecutionException.#ctor*
   commentId: Overload:Runly.Processing.ExecutionException.#ctor
   name: ExecutionException
@@ -91,8 +113,3 @@ references:
   name: Exception
   nameWithType: Exception
   fullName: Exception
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly

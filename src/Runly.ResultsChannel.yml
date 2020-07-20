@@ -19,10 +19,12 @@ items:
   source:
     id: ResultsChannel
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 14
+    startLine: 17
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nA SignalR channel for communicating job results to the Runly API.\n"
+  example: []
   syntax:
     content: 'public class ResultsChannel : object'
     content.vb: >-
@@ -50,7 +52,7 @@ items:
   source:
     id: RequireSendConfirmation
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 26
+    startLine: 29
   assemblies:
   - Runly
   namespace: Runly
@@ -83,19 +85,24 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 28
+    startLine: 37
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ResultsChannel\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ResultsChannel(Uri baseUri, IAuthenticationProvider auth, ILogger<ResultsChannel> logger)
     parameters:
     - id: baseUri
       type: Uri
+      description: The <see cref="!:Uri"></see> to the results hub.
     - id: auth
       type: Runly.IAuthenticationProvider
+      description: The <xref href="Runly.IAuthenticationProvider" data-throw-if-not-resolved="false"></xref> to use.
     - id: logger
       type: ILogger{Runly.ResultsChannel}
+      description: A <see cref="!:ILogger"></see> to use.
     content.vb: Public Sub New(baseUri As Uri, auth As IAuthenticationProvider, logger As ILogger(Of ResultsChannel))
   overload: Runly.ResultsChannel.#ctor*
   nameWithType.vb: ResultsChannel.ResultsChannel(Uri, IAuthenticationProvider, ILogger(Of ResultsChannel))
@@ -119,21 +126,27 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 31
+    startLine: 47
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ResultsChannel\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ResultsChannel(Uri baseUri, IAuthenticationProvider auth, ILogger<ResultsChannel> logger, Action<HttpConnectionOptions> opts)
     parameters:
     - id: baseUri
       type: Uri
+      description: The <see cref="!:Uri"></see> to the results hub.
     - id: auth
       type: Runly.IAuthenticationProvider
+      description: The <xref href="Runly.IAuthenticationProvider" data-throw-if-not-resolved="false"></xref> to use.
     - id: logger
       type: ILogger{Runly.ResultsChannel}
+      description: A <see cref="!:ILogger"></see> to use.
     - id: opts
       type: Action{HttpConnectionOptions}
+      description: Action to modify <see cref="!:HttpConnectionOptions"></see>.
     content.vb: Public Sub New(baseUri As Uri, auth As IAuthenticationProvider, logger As ILogger(Of ResultsChannel), opts As Action(Of HttpConnectionOptions))
   overload: Runly.ResultsChannel.#ctor*
   nameWithType.vb: ResultsChannel.ResultsChannel(Uri, IAuthenticationProvider, ILogger(Of ResultsChannel), Action(Of HttpConnectionOptions))
@@ -157,19 +170,24 @@ items:
   source:
     id: ConnectAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 39
+    startLine: 61
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCreates a connection to the results hub.\n"
+  example: []
   syntax:
     content: public Task<ResultsChannel.Connection> ConnectAsync(Guid instanceId, CancellationToken token = null)
     parameters:
     - id: instanceId
       type: Guid
+      description: The run&apos;s instance ID.
     - id: token
       type: CancellationToken
+      description: The token to trigger cancellation.
     return:
       type: Task{Runly.ResultsChannel.Connection}
+      description: A <xref href="Runly.ResultsChannel.Connection" data-throw-if-not-resolved="false"></xref> to the results hub.
     content.vb: Public Function ConnectAsync(instanceId As Guid, token As CancellationToken = Nothing) As Task(Of ResultsChannel.Connection)
   overload: Runly.ResultsChannel.ConnectAsync*
   modifiers.csharp:
@@ -197,6 +215,17 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: Runly.ResultsChannel
+  commentId: T:Runly.ResultsChannel
+  name: ResultsChannel
+  nameWithType: ResultsChannel
+  fullName: Runly.ResultsChannel
+- uid: Runly.IAuthenticationProvider
+  commentId: T:Runly.IAuthenticationProvider
+  parent: Runly
+  name: IAuthenticationProvider
+  nameWithType: IAuthenticationProvider
+  fullName: Runly.IAuthenticationProvider
 - uid: Runly.ResultsChannel.#ctor*
   commentId: Overload:Runly.ResultsChannel.#ctor
   name: ResultsChannel
@@ -207,12 +236,6 @@ references:
   name: Uri
   nameWithType: Uri
   fullName: Uri
-- uid: Runly.IAuthenticationProvider
-  commentId: T:Runly.IAuthenticationProvider
-  parent: Runly
-  name: IAuthenticationProvider
-  nameWithType: IAuthenticationProvider
-  fullName: Runly.IAuthenticationProvider
 - uid: ILogger{Runly.ResultsChannel}
   commentId: '!:ILogger{Runly.ResultsChannel}'
   definition: ILogger`1
@@ -373,6 +396,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.ResultsChannel.Connection
+  commentId: T:Runly.ResultsChannel.Connection
+  name: ResultsChannel.Connection
+  nameWithType: ResultsChannel.Connection
+  fullName: Runly.ResultsChannel.Connection
 - uid: Runly.ResultsChannel.ConnectAsync*
   commentId: Overload:Runly.ResultsChannel.ConnectAsync
   name: ConnectAsync

@@ -17,9 +17,7 @@ items:
   - Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
   - Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Models.ItemProgress})
   - Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,Runly.Models.ItemProgress[])
-  - Runly.ResultsChannel.Connection.MaxDelay
   - Runly.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
-  - Runly.ResultsChannel.Connection.MinDelay
   - Runly.ResultsChannel.Connection.RequireSendConfirmation
   - Runly.ResultsChannel.Connection.SetTotal(System.Int32)
   - Runly.ResultsChannel.Connection.StartApp(System.Int32)
@@ -35,11 +33,11 @@ items:
   source:
     id: Connection
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 63
+    startLine: 83
   assemblies:
   - Runly
   namespace: Runly
-  remarks: "\nThe underlying HubConnection is not thread-safe.\nWe need to synchronize access to InvokeCoreAsync\n"
+  summary: "\nConnection to the results hub.\n"
   example: []
   syntax:
     content: 'public class Connection : IAsyncDisposable'
@@ -54,64 +52,6 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.ResultsChannel.Connection.MinDelay
-  commentId: F:Runly.ResultsChannel.Connection.MinDelay
-  id: MinDelay
-  parent: Runly.ResultsChannel.Connection
-  langs:
-  - csharp
-  - vb
-  name: MinDelay
-  nameWithType: ResultsChannel.Connection.MinDelay
-  fullName: Runly.ResultsChannel.Connection.MinDelay
-  type: Field
-  source:
-    id: MinDelay
-    path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 65
-  assemblies:
-  - Runly
-  namespace: Runly
-  syntax:
-    content: public const int MinDelay = null
-    return:
-      type: System.Int32
-    content.vb: Public Const MinDelay As Integer = Nothing
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
-- uid: Runly.ResultsChannel.Connection.MaxDelay
-  commentId: F:Runly.ResultsChannel.Connection.MaxDelay
-  id: MaxDelay
-  parent: Runly.ResultsChannel.Connection
-  langs:
-  - csharp
-  - vb
-  name: MaxDelay
-  nameWithType: ResultsChannel.Connection.MaxDelay
-  fullName: Runly.ResultsChannel.Connection.MaxDelay
-  type: Field
-  source:
-    id: MaxDelay
-    path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 65
-  assemblies:
-  - Runly
-  namespace: Runly
-  syntax:
-    content: public const int MaxDelay = null
-    return:
-      type: System.Int32
-    content.vb: Public Const MaxDelay As Integer = Nothing
-  modifiers.csharp:
-  - public
-  - const
-  modifiers.vb:
-  - Public
-  - Const
 - uid: Runly.ResultsChannel.Connection.CancellationRequested
   commentId: E:Runly.ResultsChannel.Connection.CancellationRequested
   id: CancellationRequested
@@ -126,10 +66,12 @@ items:
   source:
     id: CancellationRequested
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 70
+    startLine: 93
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nEvent raises when cancellation is triggered.\n"
+  example: []
   syntax:
     content: public event Func<Task> CancellationRequested
     return:
@@ -153,7 +95,7 @@ items:
   source:
     id: RequireSendConfirmation
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 83
+    startLine: 106
   assemblies:
   - Runly
   namespace: Runly
@@ -186,17 +128,21 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 85
+    startLine: 113
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ResultsChannel.Connection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public Connection(IResultsConnection conn, ILogger<ResultsChannel> logger)
     parameters:
     - id: conn
       type: Runly.IResultsConnection
+      description: ''
     - id: logger
       type: ILogger{Runly.ResultsChannel}
+      description: ''
     content.vb: Public Sub New(conn As IResultsConnection, logger As ILogger(Of ResultsChannel))
   overload: Runly.ResultsChannel.Connection.#ctor*
   nameWithType.vb: ResultsChannel.Connection.Connection(IResultsConnection, ILogger(Of ResultsChannel))
@@ -220,7 +166,7 @@ items:
   source:
     id: FlushAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 124
+    startLine: 152
   assemblies:
   - Runly
   namespace: Runly
@@ -250,15 +196,18 @@ items:
   source:
     id: StartApp
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 220
+    startLine: 252
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made when the node observes the job app starting.\n"
+  example: []
   syntax:
     content: public Task StartApp(int pid)
     parameters:
     - id: pid
       type: System.Int32
+      description: The local process ID of the job app.
     return:
       type: Task
     content.vb: Public Function StartApp(pid As Integer) As Task
@@ -281,14 +230,17 @@ items:
   source:
     id: Abort
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 222
+    startLine: 258
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made when the node aborts the starting of a job because of a user-requested cancellation during acquisition.\n"
+  example: []
   syntax:
     content: public Task Abort()
     return:
       type: Task
+      description: ''
     content.vb: Public Function Abort As Task
   overload: Runly.ResultsChannel.Connection.Abort*
   modifiers.csharp:
@@ -309,19 +261,24 @@ items:
   source:
     id: ExitApp
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 224
+    startLine: 266
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made when the node observes the job app exiting.\n"
+  example: []
   syntax:
     content: public Task ExitApp(int exitCode, bool timedOut, long duration)
     parameters:
     - id: exitCode
       type: System.Int32
+      description: The exit code of the job app process.
     - id: timedOut
       type: System.Boolean
+      description: Indicates whether the process timed out.
     - id: duration
       type: System.Int64
+      description: The amount of time the job app was running.
     return:
       type: Task
     content.vb: Public Function ExitApp(exitCode As Integer, timedOut As Boolean, duration As Long) As Task
@@ -344,15 +301,18 @@ items:
   source:
     id: FailApp
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 227
+    startLine: 273
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made when an unexpected error happens on the node while running a job.\n"
+  example: []
   syntax:
     content: public Task FailApp(object details)
     parameters:
     - id: details
       type: System.Object
+      description: The details of the error.
     return:
       type: Task
     content.vb: Public Function FailApp(details As Object) As Task
@@ -375,15 +335,18 @@ items:
   source:
     id: SetTotal
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 229
+    startLine: 279
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution to set the expected total number of items.\n"
+  example: []
   syntax:
     content: public Task SetTotal(int total)
     parameters:
     - id: total
       type: System.Int32
+      description: The expected total number of items.
     return:
       type: Task
     content.vb: Public Function SetTotal(total As Integer) As Task
@@ -406,17 +369,21 @@ items:
   source:
     id: UpdateState
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 231
+    startLine: 286
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution to broadcast an update of state and item progress.\n"
+  example: []
   syntax:
     content: public Task UpdateState(InstanceState state, params ItemProgress[] categories)
     parameters:
     - id: state
       type: Runly.Models.InstanceState
+      description: The state of the job.
     - id: categories
       type: Runly.Models.ItemProgress[]
+      description: The progress of the job.
     return:
       type: Task
     content.vb: Public Function UpdateState(state As InstanceState, ParamArray categories As ItemProgress()) As Task
@@ -442,17 +409,21 @@ items:
   source:
     id: UpdateState
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 234
+    startLine: 294
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution to broadcast an update of state and item progress.\n"
+  example: []
   syntax:
     content: public Task UpdateState(InstanceState state, IEnumerable<ItemProgress> categories)
     parameters:
     - id: state
       type: Runly.Models.InstanceState
+      description: The state of the job.
     - id: categories
       type: IEnumerable{Runly.Models.ItemProgress}
+      description: The progress of the job.
     return:
       type: Task
     content.vb: Public Function UpdateState(state As InstanceState, categories As IEnumerable(Of ItemProgress)) As Task
@@ -478,15 +449,18 @@ items:
   source:
     id: MethodResult
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 237
+    startLine: 301
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution when a job method has been invoked.\n"
+  example: []
   syntax:
     content: public Task MethodResult(MethodOutcome outcome)
     parameters:
     - id: outcome
       type: Runly.MethodOutcome
+      description: The outcome of invoking the job method.
     return:
       type: Task
     content.vb: Public Function MethodResult(outcome As MethodOutcome) As Task
@@ -509,15 +483,18 @@ items:
   source:
     id: ItemResult
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 239
+    startLine: 307
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution when an item has been processed.\n"
+  example: []
   syntax:
     content: public Task ItemResult(ItemResult result)
     parameters:
     - id: result
       type: Runly.ItemResult
+      description: The result of processing the item.
     return:
       type: Task
     content.vb: Public Function ItemResult(result As ItemResult) As Task
@@ -540,19 +517,24 @@ items:
   source:
     id: Log
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 241
+    startLine: 315
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the node when data is read from the standard output or error of the job app.\n"
+  example: []
   syntax:
     content: public Task Log(RunLogType type, int index, string log)
     parameters:
     - id: type
       type: Runly.Models.RunLogType
+      description: Indicates whether the data is from the standard output or error.
     - id: index
       type: System.Int32
+      description: Sequencing index for this message.
     - id: log
       type: System.String
+      description: The data to log.
     return:
       type: Task
     content.vb: Public Function Log(type As RunLogType, index As Integer, log As String) As Task
@@ -575,15 +557,18 @@ items:
   source:
     id: MarkComplete
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 243
+    startLine: 321
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution when the job is complete.\n"
+  example: []
   syntax:
     content: public Task MarkComplete(Disposition disposition)
     parameters:
     - id: disposition
       type: Runly.Disposition
+      description: The <xref href="Runly.Disposition" data-throw-if-not-resolved="false"></xref> of the job execution.
     return:
       type: Task
     content.vb: Public Function MarkComplete(disposition As Disposition) As Task
@@ -606,19 +591,24 @@ items:
   source:
     id: MarkComplete
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 246
+    startLine: 330
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution when the job is complete.\n"
+  example: []
   syntax:
     content: public Task MarkComplete(Disposition disposition, object output, params ItemProgress[] categories)
     parameters:
     - id: disposition
       type: Runly.Disposition
+      description: The <xref href="Runly.Disposition" data-throw-if-not-resolved="false"></xref> of the job execution.
     - id: output
       type: System.Object
+      description: The output from <xref href="Runly.IJob.FinalizeAsync(Runly.Disposition)" data-throw-if-not-resolved="false"></xref>.
     - id: categories
       type: Runly.Models.ItemProgress[]
+      description: The final item progress.
     return:
       type: Task
     content.vb: Public Function MarkComplete(disposition As Disposition, output As Object, ParamArray categories As ItemProgress()) As Task
@@ -644,19 +634,24 @@ items:
   source:
     id: MarkComplete
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 249
+    startLine: 339
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCall made by the job execution when the job is complete.\n"
+  example: []
   syntax:
     content: public Task MarkComplete(Disposition disposition, object output, IEnumerable<ItemProgress> categories)
     parameters:
     - id: disposition
       type: Runly.Disposition
+      description: The <xref href="Runly.Disposition" data-throw-if-not-resolved="false"></xref> of the job execution.
     - id: output
       type: System.Object
+      description: The output from <xref href="Runly.IJob.FinalizeAsync(Runly.Disposition)" data-throw-if-not-resolved="false"></xref>.
     - id: categories
       type: IEnumerable{Runly.Models.ItemProgress}
+      description: The final item progress.
     return:
       type: Task
     content.vb: Public Function MarkComplete(disposition As Disposition, output As Object, categories As IEnumerable(Of ItemProgress)) As Task
@@ -682,10 +677,12 @@ items:
   source:
     id: DisposeAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 252
+    startLine: 345
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nDisposes the <xref href=\"Runly.ResultsChannel.Connection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ValueTask DisposeAsync()
     return:
@@ -707,11 +704,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Int32
-  isExternal: true
-  name: Int32
-  nameWithType: Int32
-  fullName: System.Int32
 - uid: Func{Task}
   commentId: '!:Func{Task}'
   definition: Func`1
@@ -803,6 +795,11 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: Runly.ResultsChannel.Connection
+  commentId: T:Runly.ResultsChannel.Connection
+  name: ResultsChannel.Connection
+  nameWithType: ResultsChannel.Connection
+  fullName: Runly.ResultsChannel.Connection
 - uid: Runly.ResultsChannel.Connection.#ctor*
   commentId: Overload:Runly.ResultsChannel.Connection.#ctor
   name: Connection
@@ -908,6 +905,11 @@ references:
   name: StartApp
   nameWithType: ResultsChannel.Connection.StartApp
   fullName: Runly.ResultsChannel.Connection.StartApp
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: Runly.ResultsChannel.Connection.Abort*
   commentId: Overload:Runly.ResultsChannel.Connection.Abort
   name: Abort
@@ -1091,17 +1093,20 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Runly.ResultsChannel.Connection.MarkComplete*
-  commentId: Overload:Runly.ResultsChannel.Connection.MarkComplete
-  name: MarkComplete
-  nameWithType: ResultsChannel.Connection.MarkComplete
-  fullName: Runly.ResultsChannel.Connection.MarkComplete
 - uid: Runly.Disposition
   commentId: T:Runly.Disposition
   parent: Runly
   name: Disposition
   nameWithType: Disposition
   fullName: Runly.Disposition
+- uid: Runly.ResultsChannel.Connection.MarkComplete*
+  commentId: Overload:Runly.ResultsChannel.Connection.MarkComplete
+  name: MarkComplete
+  nameWithType: ResultsChannel.Connection.MarkComplete
+  fullName: Runly.ResultsChannel.Connection.MarkComplete
+- uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+  commentId: M:Runly.IJob.FinalizeAsync(Runly.Disposition)
+  isExternal: true
 - uid: Runly.ResultsChannel.Connection.DisposeAsync*
   commentId: Overload:Runly.ResultsChannel.Connection.DisposeAsync
   name: DisposeAsync

@@ -22,14 +22,17 @@ items:
   source:
     id: TestRun
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Runly
   namespace: Runly.Testing
+  summary: "\nA test run of a job, built by a <xref href=\"Runly.Testing.TestHost%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class TestRun<TJob> : IDisposable where TJob : IJob'
     typeParameters:
     - id: TJob
+      description: The type of <xref href="Runly.IJob" data-throw-if-not-resolved="false"></xref> being tested.
     content.vb: >-
       Public Class TestRun(Of TJob As IJob)
           Inherits IDisposable
@@ -58,10 +61,12 @@ items:
   source:
     id: Services
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 12
+    startLine: 19
   assemblies:
   - Runly
   namespace: Runly.Testing
+  summary: "\nThe <see cref=\"!:IServiceProvider\"></see> used to run the <xref href=\"Runly.Testing.TestRun%601.Job\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public IServiceProvider Services { get; }
     parameters: []
@@ -91,10 +96,12 @@ items:
   source:
     id: Job
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 13
+    startLine: 24
   assemblies:
   - Runly
   namespace: Runly.Testing
+  summary: "\nThe job being tested.\n"
+  example: []
   syntax:
     content: public TJob Job { get; }
     parameters: []
@@ -124,10 +131,12 @@ items:
   source:
     id: Execution
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 14
+    startLine: 29
   assemblies:
   - Runly
   namespace: Runly.Testing
+  summary: "\nThe <xref href=\"Runly.Testing.TestRun%601.Execution\" data-throw-if-not-resolved=\"false\"></xref> implementation that ran the job.\n"
+  example: []
   syntax:
     content: public Execution Execution { get; }
     parameters: []
@@ -157,10 +166,12 @@ items:
   source:
     id: Results
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 15
+    startLine: 34
   assemblies:
   - Runly
   namespace: Runly.Testing
+  summary: "\nA log of results emitted from the job during execution.\n"
+  example: []
   syntax:
     content: public ResultLog Results { get; }
     parameters: []
@@ -190,10 +201,12 @@ items:
   source:
     id: Dispose
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 19
+    startLine: 41
   assemblies:
   - Runly
   namespace: Runly.Testing
+  summary: "\nPerforms clean up.\n"
+  example: []
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose
@@ -218,10 +231,12 @@ items:
   source:
     id: Cancel
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 21
+    startLine: 46
   assemblies:
   - Runly
   namespace: Runly.Testing
+  summary: "\nTriggers cancellation of a running job.\n"
+  example: []
   syntax:
     content: public void Cancel()
     content.vb: Public Sub Cancel
@@ -246,18 +261,18 @@ items:
   source:
     id: RunAsync
     path: /github/workspace/src/Runly/Testing/TestRun.cs
-    startLine: 34
+    startLine: 59
   assemblies:
   - Runly
   namespace: Runly.Testing
-  summary: "\nRuns the job\n"
+  summary: "\nRuns the job.\n"
   example: []
   syntax:
     content: public Task<TestRun<TJob>> RunAsync(CancellationToken cancellationToken = null, int cancelAfter = 0)
     parameters:
     - id: cancellationToken
       type: CancellationToken
-      description: The <see cref="!:CancellationToken"></see> to use
+      description: The <see cref="!:CancellationToken"></see> to trigger cancellation.
     - id: cancelAfter
       type: System.Int32
       description: When a positive value is given, cancels the job after that many items have been processed. This is useful to stop a service after an expected number of items have been processed in a unit test.
@@ -272,6 +287,49 @@ items:
   - Public
   fullName.vb: Runly.Testing.TestRun(Of TJob).RunAsync(CancellationToken, System.Int32)
 references:
+- uid: Runly.Testing.TestHost`1
+  commentId: T:Runly.Testing.TestHost`1
+  parent: Runly.Testing
+  name: TestHost<TJob>
+  nameWithType: TestHost<TJob>
+  fullName: Runly.Testing.TestHost<TJob>
+  nameWithType.vb: TestHost(Of TJob)
+  fullName.vb: Runly.Testing.TestHost(Of TJob)
+  name.vb: TestHost(Of TJob)
+  spec.csharp:
+  - uid: Runly.Testing.TestHost`1
+    name: TestHost
+    nameWithType: TestHost
+    fullName: Runly.Testing.TestHost
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Testing.TestHost`1
+    name: TestHost
+    nameWithType: TestHost
+    fullName: Runly.Testing.TestHost
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TJob
+    nameWithType: TJob
+    fullName: TJob
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
 - uid: Runly.Testing
   commentId: N:Runly.Testing
   name: Runly.Testing
@@ -282,6 +340,14 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Testing.TestRun`1.Job
+  commentId: P:Runly.Testing.TestRun`1.Job
+  isExternal: true
 - uid: Runly.Testing.TestRun`1.Services*
   commentId: Overload:Runly.Testing.TestRun`1.Services
   name: Services
@@ -312,6 +378,9 @@ references:
   name: TJob
   nameWithType: TJob
   fullName: TJob
+- uid: Runly.Testing.TestRun`1.Execution
+  commentId: P:Runly.Testing.TestRun`1.Execution
+  isExternal: true
 - uid: Runly.Testing.TestRun`1.Execution*
   commentId: Overload:Runly.Testing.TestRun`1.Execution
   name: Execution
@@ -325,11 +394,6 @@ references:
   name: Execution
   nameWithType: Execution
   fullName: Runly.Execution
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
 - uid: Runly.Testing.TestRun`1.Results*
   commentId: Overload:Runly.Testing.TestRun`1.Results
   name: Results

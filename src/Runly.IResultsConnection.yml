@@ -23,10 +23,12 @@ items:
   source:
     id: IResultsConnection
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 280
+    startLine: 398
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAn interface to make the SignalR <see cref=\"!:HubConnection\"></see> testable.\n"
+  example: []
   syntax:
     content: 'public interface IResultsConnection : IAsyncDisposable'
     content.vb: >-
@@ -52,10 +54,13 @@ items:
   source:
     id: Closed
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 282
+    startLine: 411
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nOccurs when the connection is closed. The connection could be closed due to an\nerror or due to either the server or client intentionally closing the connection\nwithout error.\n"
+  remarks: "\nIf this event was triggered from a connection error, the System.Exception that\noccurred will be passed in as the sole argument to this handler.If this event\nwas triggered intentionally by either the client or server, then the argument\nwill be null.\n"
+  example: []
   syntax:
     content: event Func<Exception, Task> Closed
     return:
@@ -75,10 +80,13 @@ items:
   source:
     id: Reconnected
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 283
+    startLine: 421
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nOccurs when the Microsoft.AspNetCore.SignalR.Client.HubConnection starts reconnecting\nafter losing its underlying connection.\n"
+  remarks: "\nThe System.Exception that occurred will be passed in as the sole argument to\nthis handler.\n"
+  example: []
   syntax:
     content: event Func<string, Task> Reconnected
     return:
@@ -98,10 +106,13 @@ items:
   source:
     id: Reconnecting
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 284
+    startLine: 431
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nOccurs when the Microsoft.AspNetCore.SignalR.Client.HubConnection starts reconnecting\nafter losing its underlying connection.\n"
+  remarks: "\nThe System.Exception that occurred will be passed in as the sole argument to\nthis handler.\n"
+  example: []
   syntax:
     content: event Func<Exception, Task> Reconnecting
     return:
@@ -121,10 +132,12 @@ items:
   source:
     id: State
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 286
+    startLine: 436
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nIndicates the state of the <see cref=\"!:HubConnection\"></see> to the server.\n"
+  example: []
   syntax:
     content: HubConnectionState State { get; }
     parameters: []
@@ -150,10 +163,12 @@ items:
   source:
     id: StartAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 288
+    startLine: 441
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nStarts a connetion to the server.\n"
+  example: []
   syntax:
     content: Task StartAsync()
     return:
@@ -174,17 +189,21 @@ items:
   source:
     id: InvokeCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 289
+    startLine: 448
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInvokes a hub method on the server.\n"
+  example: []
   syntax:
     content: Task InvokeCoreAsync(string method, object[] args)
     parameters:
     - id: method
       type: System.String
+      description: The name of the server method to invoke.
     - id: args
       type: System.Object[]
+      description: The arguments used to invoke the server method.
     return:
       type: Task
     content.vb: Function InvokeCoreAsync(method As String, args As Object()) As Task
@@ -206,17 +225,21 @@ items:
   source:
     id: SendCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 290
+    startLine: 455
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInvokes a hub method on the server. Does not wait to a response from the receiver.\n"
+  example: []
   syntax:
     content: Task SendCoreAsync(string method, object[] args)
     parameters:
     - id: method
       type: System.String
+      description: The name of the server method to invoke.
     - id: args
       type: System.Object[]
+      description: The arguments used to invoke the server method.
     return:
       type: Task
     content.vb: Function SendCoreAsync(method As String, args As Object()) As Task
@@ -238,17 +261,21 @@ items:
   source:
     id: On
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 291
+    startLine: 462
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nRegisters a handler that will be invoked when the hub method with the specified name is invoked.\n"
+  example: []
   syntax:
     content: IDisposable On(string methodName, Action handler)
     parameters:
     - id: methodName
       type: System.String
+      description: The name of the hub method to define.
     - id: handler
       type: Action
+      description: The handler that will be raised when the hub method is invoked.
     return:
       type: IDisposable
     content.vb: Function On(methodName As String, handler As Action) As IDisposable

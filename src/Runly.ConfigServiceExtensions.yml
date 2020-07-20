@@ -24,10 +24,12 @@ items:
   source:
     id: ConfigServiceExtensions
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nExtension methods for <see cref=\"!:IServiceCollection\"></see> to add services for Runly jobs with config.\n"
+  example: []
   syntax:
     content: 'public static class ConfigServiceExtensions : object'
     content.vb: >-
@@ -57,21 +59,27 @@ items:
   source:
     id: AddTransient
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 7
+    startLine: 20
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a transient service of the type specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">serviceType</code> with a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddTransient(this IServiceCollection services, Type serviceType, Func<IServiceProvider, Config, object> implementationFactory)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: serviceType
       type: Type
+      description: The type of the service to register.
     - id: implementationFactory
       type: Func{IServiceProvider,Runly.Config,System.Object}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -101,10 +109,12 @@ items:
   source:
     id: AddTransient
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 12
+    startLine: 36
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a transient service of the type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TService</code> with a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: >-
       public static IServiceCollection AddTransient<TService, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TService> implementationFactory)
@@ -112,13 +122,18 @@ items:
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: implementationFactory
       type: Func{IServiceProvider,{TConfig},{TService}}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     typeParameters:
     - id: TService
+      description: The type of the service to add.
     - id: TConfig
+      description: The type of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that the job uses.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -148,10 +163,12 @@ items:
   source:
     id: AddTransient
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 19
+    startLine: 56
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a transient service of the type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TService</code> with an\nimplementation type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TImplementation</code> and a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: >-
       public static IServiceCollection AddTransient<TService, TImplementation, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TImplementation> implementationFactory)
@@ -159,14 +176,20 @@ items:
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: implementationFactory
       type: Func{IServiceProvider,{TConfig},{TImplementation}}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     typeParameters:
     - id: TService
+      description: The type of the service to add.
     - id: TImplementation
+      description: The type of the implementation to use.
     - id: TConfig
+      description: The type of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that the job uses.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -196,21 +219,27 @@ items:
   source:
     id: AddScoped
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 27
+    startLine: 74
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a scoped service of the type specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">serviceType</code> with a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddScoped(this IServiceCollection services, Type serviceType, Func<IServiceProvider, Config, object> implementationFactory)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: serviceType
       type: Type
+      description: The type of the service to register.
     - id: implementationFactory
       type: Func{IServiceProvider,Runly.Config,System.Object}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -240,10 +269,12 @@ items:
   source:
     id: AddScoped
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 32
+    startLine: 90
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a scoped service of the type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TService</code> with a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: >-
       public static IServiceCollection AddScoped<TService, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TService> implementationFactory)
@@ -251,13 +282,18 @@ items:
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: implementationFactory
       type: Func{IServiceProvider,{TConfig},{TService}}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     typeParameters:
     - id: TService
+      description: The type of the service to add.
     - id: TConfig
+      description: The type of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that the job uses.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -287,10 +323,12 @@ items:
   source:
     id: AddScoped
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 39
+    startLine: 110
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a scoped service of the type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TService</code> with an\nimplementation type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TImplementation</code> and a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: >-
       public static IServiceCollection AddScoped<TService, TImplementation, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TImplementation> implementationFactory)
@@ -298,14 +336,20 @@ items:
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: implementationFactory
       type: Func{IServiceProvider,{TConfig},{TImplementation}}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     typeParameters:
     - id: TService
+      description: The type of the service to add.
     - id: TImplementation
+      description: The type of the implementation to use.
     - id: TConfig
+      description: The type of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that the job uses.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -335,21 +379,27 @@ items:
   source:
     id: AddSingleton
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 47
+    startLine: 128
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a singleton service of the type specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">serviceType</code> with a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: public static IServiceCollection AddSingleton(this IServiceCollection services, Type serviceType, Func<IServiceProvider, Config, object> implementationFactory)
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: serviceType
       type: Type
+      description: The type of the service to register.
     - id: implementationFactory
       type: Func{IServiceProvider,Runly.Config,System.Object}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -379,10 +429,12 @@ items:
   source:
     id: AddSingleton
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 52
+    startLine: 144
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a singleton service of the type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TService</code> with a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: >-
       public static IServiceCollection AddSingleton<TService, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TService> implementationFactory)
@@ -390,13 +442,18 @@ items:
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: implementationFactory
       type: Func{IServiceProvider,{TConfig},{TService}}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     typeParameters:
     - id: TService
+      description: The type of the service to add.
     - id: TConfig
+      description: The type of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that the job uses.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -426,10 +483,12 @@ items:
   source:
     id: AddSingleton
     path: /github/workspace/src/Runly/ConfigServiceExtensions.cs
-    startLine: 59
+    startLine: 164
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAdds a singleton service of the type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TService</code> with an\nimplementation type specified in <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TImplementation</code> and a\nfactory specified in <code data-dev-comment-type=\"paramref\" class=\"paramref\">implementationFactory</code> to the\nspecified <see cref=\"!:IServiceCollection\"></see>.\n"
+  example: []
   syntax:
     content: >-
       public static IServiceCollection AddSingleton<TService, TImplementation, TConfig>(this IServiceCollection services, Func<IServiceProvider, TConfig, TImplementation> implementationFactory)
@@ -437,14 +496,20 @@ items:
     parameters:
     - id: services
       type: IServiceCollection
+      description: The <see cref="!:IServiceCollection"></see> to add the service to.
     - id: implementationFactory
       type: Func{IServiceProvider,{TConfig},{TImplementation}}
+      description: The factory that creates the service that takes the job&apos;s config as a parameter.
     typeParameters:
     - id: TService
+      description: The type of the service to add.
     - id: TImplementation
+      description: The type of the implementation to use.
     - id: TConfig
+      description: The type of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> that the job uses.
     return:
       type: IServiceCollection
+      description: A reference to this instance after the operation has completed.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -620,6 +685,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Func{IServiceProvider,{TConfig},{TService}}
   commentId: '!:Func{IServiceProvider,``1,``0}'
   definition: Func`3

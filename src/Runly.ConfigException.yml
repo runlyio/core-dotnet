@@ -18,15 +18,17 @@ items:
   source:
     id: ConfigException
     path: /github/workspace/src/Runly/ConfigException.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nException thrown when there is a problem reading or validating a <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
-    content: 'public class ConfigException : ApplicationException'
+    content: 'public class ConfigException : Exception'
     content.vb: >-
       Public Class ConfigException
-          Inherits ApplicationException
+          Inherits Exception
   inheritance:
   - System.Object
   derivedClasses:
@@ -51,10 +53,12 @@ items:
   source:
     id: ParamName
     path: /github/workspace/src/Runly/ConfigException.cs
-    startLine: 6
+    startLine: 12
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe config parameter that caused the exception.\n"
+  example: []
   syntax:
     content: public string ParamName { get; }
     parameters: []
@@ -82,19 +86,24 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ConfigException.cs
-    startLine: 8
+    startLine: 20
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ConfigException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ConfigException(string message, string paramName, Exception innerException)
     parameters:
     - id: message
       type: System.String
+      description: The error message that explains the reason for the exception.
     - id: paramName
       type: System.String
+      description: The config parameter that caused the exception.
     - id: innerException
       type: Exception
+      description: The exception that is the cause of the current exception.
     content.vb: Public Sub New(message As String, paramName As String, innerException As Exception)
   overload: Runly.ConfigException.#ctor*
   modifiers.csharp:
@@ -115,17 +124,21 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ConfigException.cs
-    startLine: 14
+    startLine: 31
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ConfigException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ConfigException(string message, string paramName)
     parameters:
     - id: message
       type: System.String
+      description: The error message that explains the reason for the exception.
     - id: paramName
       type: System.String
+      description: The config parameter that caused the exception.
     content.vb: Public Sub New(message As String, paramName As String)
   overload: Runly.ConfigException.#ctor*
   modifiers.csharp:
@@ -133,6 +146,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly
   commentId: N:Runly
   name: Runly
@@ -153,6 +172,12 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: Runly.ConfigException
+  commentId: T:Runly.ConfigException
+  parent: Runly
+  name: ConfigException
+  nameWithType: ConfigException
+  fullName: Runly.ConfigException
 - uid: Runly.ConfigException.#ctor*
   commentId: Overload:Runly.ConfigException.#ctor
   name: ConfigException

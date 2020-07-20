@@ -59,10 +59,12 @@ items:
   source:
     id: CanBeCounted
     path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
-    startLine: 16
+    startLine: 19
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nIndicates whether the <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> can be enumerated more than once.\n"
+  example: []
   syntax:
     content: public bool CanBeCounted { get; }
     parameters: []
@@ -92,11 +94,11 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
-    startLine: 23
+    startLine: 28
   assemblies:
   - Runly
   namespace: Runly
-  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> with a <see cref=\"!:Task&lt;IEnumerable&lt;T>>\"></see> that will\nbe awaited when enumerated.\n"
+  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> with an <code data-dev-comment-type=\"paramref\" class=\"paramref\">enumerable</code> that will\nbe awaited when the wrapper is enumerated.\n"
   example: []
   syntax:
     content: public AsyncEnumerableWrapper(Task<IEnumerable<T>> enumerable, bool canBeCounted)
@@ -106,6 +108,10 @@ items:
       description: The <see cref="!:IEnumerable&lt;T>"></see> to wrap.
     - id: canBeCounted
       type: System.Boolean
+      description: >-
+        Indicates whether the <code data-dev-comment-type="paramref" class="paramref">enumerable</code> can be enumerated
+
+        in order to count the items, then enumerated a second time to process the items.
     content.vb: Public Sub New(enumerable As Task(Of IEnumerable(Of T)), canBeCounted As Boolean)
   overload: Runly.AsyncEnumerableWrapper`1.#ctor*
   nameWithType.vb: AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper(Task(Of IEnumerable(Of T)), Boolean)
@@ -129,11 +135,11 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
-    startLine: 33
+    startLine: 40
   assemblies:
   - Runly
   namespace: Runly
-  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> from the <see cref=\"!:Task&lt;IEnumerable&lt;T>>\"></see>.\n"
+  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumerableWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> from the <code data-dev-comment-type=\"paramref\" class=\"paramref\">enumerable</code>.\n"
   example: []
   syntax:
     content: public AsyncEnumerableWrapper(IEnumerable<T> enumerable, bool canBeCounted)
@@ -143,6 +149,7 @@ items:
       description: The <see cref="!:IEnumerable&lt;T>"></see> to wrap.
     - id: canBeCounted
       type: System.Boolean
+      description: "Indicates whether the <code data-dev-comment-type=\"paramref\" class=\"paramref\">enumerable</code> can be enumerated \nin order to count the items, then enumerated a second time to process the items."
     content.vb: Public Sub New(enumerable As IEnumerable(Of T), canBeCounted As Boolean)
   overload: Runly.AsyncEnumerableWrapper`1.#ctor*
   nameWithType.vb: AsyncEnumerableWrapper(Of T).AsyncEnumerableWrapper(IEnumerable(Of T), Boolean)
@@ -166,7 +173,7 @@ items:
   source:
     id: GetInnerEnumerable
     path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
-    startLine: 44
+    startLine: 51
   assemblies:
   - Runly
   namespace: Runly
@@ -198,7 +205,7 @@ items:
   source:
     id: GetAsyncEnumerator
     path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
-    startLine: 56
+    startLine: 63
   assemblies:
   - Runly
   namespace: Runly
@@ -231,18 +238,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.AsyncEnumerableWrapper`1.CanBeCounted*
-  commentId: Overload:Runly.AsyncEnumerableWrapper`1.CanBeCounted
-  name: CanBeCounted
-  nameWithType: AsyncEnumerableWrapper<T>.CanBeCounted
-  fullName: Runly.AsyncEnumerableWrapper<T>.CanBeCounted
-  nameWithType.vb: AsyncEnumerableWrapper(Of T).CanBeCounted
-  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).CanBeCounted
-- uid: System.Boolean
-  isExternal: true
-  name: Boolean
-  nameWithType: Boolean
-  fullName: System.Boolean
 - uid: Runly.AsyncEnumerableWrapper`1
   commentId: T:Runly.AsyncEnumerableWrapper`1
   name: AsyncEnumerableWrapper<T>
@@ -279,6 +274,18 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.AsyncEnumerableWrapper`1.CanBeCounted*
+  commentId: Overload:Runly.AsyncEnumerableWrapper`1.CanBeCounted
+  name: CanBeCounted
+  nameWithType: AsyncEnumerableWrapper<T>.CanBeCounted
+  fullName: Runly.AsyncEnumerableWrapper<T>.CanBeCounted
+  nameWithType.vb: AsyncEnumerableWrapper(Of T).CanBeCounted
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T).CanBeCounted
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
 - uid: Runly.AsyncEnumerableWrapper`1.#ctor*
   commentId: Overload:Runly.AsyncEnumerableWrapper`1.#ctor
   name: AsyncEnumerableWrapper

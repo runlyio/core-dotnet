@@ -4,7 +4,6 @@ items:
   commentId: N:Runly
   id: Runly
   children:
-  - Runly.AsyncAutoResetEvent
   - Runly.AsyncEnumerableExtensions
   - Runly.AsyncEnumerableWrapper`1
   - Runly.AsyncEnumeratorWrapper`1
@@ -210,11 +209,6 @@ references:
   name: StringExtensions
   nameWithType: StringExtensions
   fullName: Runly.StringExtensions
-- uid: Runly.AsyncAutoResetEvent
-  commentId: T:Runly.AsyncAutoResetEvent
-  name: AsyncAutoResetEvent
-  nameWithType: AsyncAutoResetEvent
-  fullName: Runly.AsyncAutoResetEvent
 - uid: Runly.AsyncEnumerableExtensions
   commentId: T:Runly.AsyncEnumerableExtensions
   name: AsyncEnumerableExtensions

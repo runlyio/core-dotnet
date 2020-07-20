@@ -2,8 +2,6 @@
 - uid: Runly
   name: Runly
   items:
-  - uid: Runly.AsyncAutoResetEvent
-    name: AsyncAutoResetEvent
   - uid: Runly.AsyncEnumerableExtensions
     name: AsyncEnumerableExtensions
   - uid: Runly.AsyncEnumerableWrapper`1
@@ -226,8 +224,6 @@
   - uid: Runly.Processing.IItemSource`1
     name: IItemSource<TItem>
     name.vb: IItemSource(Of TItem)
-  - uid: Runly.Processing.SingleItemSource
-    name: SingleItemSource
 - uid: Runly.Testing
   name: Runly.Testing
   items:

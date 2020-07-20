@@ -25,7 +25,6 @@ items:
   - Runly.Processing.ExecutionBase`2
   - Runly.Processing.ExecutionException
   - Runly.Processing.IItemSource`1
-  - Runly.Processing.SingleItemSource
   langs:
   - csharp
   - vb
@@ -2609,8 +2608,3 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.Processing.SingleItemSource
-  commentId: T:Runly.Processing.SingleItemSource
-  name: SingleItemSource
-  nameWithType: SingleItemSource
-  fullName: Runly.Processing.SingleItemSource

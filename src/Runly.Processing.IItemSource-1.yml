@@ -17,14 +17,17 @@ items:
   source:
     id: IItemSource
     path: /github/workspace/src/Runly/Processing/IItemSource.cs
-    startLine: 5
+    startLine: 9
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nThe source of items for a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public interface IItemSource<TItem>
     typeParameters:
     - id: TItem
+      description: The type of item.
     content.vb: Public Interface IItemSource(Of TItem)
   nameWithType.vb: IItemSource(Of TItem)
   modifiers.csharp:
@@ -49,14 +52,18 @@ items:
   source:
     id: GetItemsAsync
     path: /github/workspace/src/Runly/Processing/IItemSource.cs
-    startLine: 7
+    startLine: 19
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nGets the items to process.\n"
+  remarks: "\nWhen implementing this method, if the underlying data source returns an IEnumerable,\nuse the extension method <xref href=\"Runly.AsyncEnumerableExtensions.ToAsyncEnumerable%60%601(IEnumerable%7b%60%600%7d%2cSystem.Boolean)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: IAsyncEnumerable<TItem> GetItemsAsync()
     return:
       type: IAsyncEnumerable{{TItem}}
+      description: An <see cref="!:IAsyncEnumerable&lt;T>"></see> of items.
     content.vb: Function GetItemsAsync As IAsyncEnumerable(Of TItem)
   overload: Runly.Processing.IItemSource`1.GetItemsAsync*
   nameWithType.vb: IItemSource(Of TItem).GetItemsAsync()
@@ -75,27 +82,45 @@ items:
   source:
     id: GetItemIdAsync
     path: /github/workspace/src/Runly/Processing/IItemSource.cs
-    startLine: 9
+    startLine: 26
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nGets a human readable identifier for the item. The default implementation uses <see cref=\"!:object.ToString\"></see>.\n"
+  example: []
   syntax:
     content: Task<string> GetItemIdAsync(TItem item)
     parameters:
     - id: item
       type: '{TItem}'
+      description: The item to get an identifier for.
     return:
       type: Task{System.String}
+      description: A human readable identifier.
     content.vb: Function GetItemIdAsync(item As TItem) As Task(Of String)
   overload: Runly.Processing.IItemSource`1.GetItemIdAsync*
   nameWithType.vb: IItemSource(Of TItem).GetItemIdAsync(TItem)
   fullName.vb: Runly.Processing.IItemSource(Of TItem).GetItemIdAsync(TItem)
 references:
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
 - uid: Runly.Processing
   commentId: N:Runly.Processing
   name: Runly.Processing
   nameWithType: Runly.Processing
   fullName: Runly.Processing
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.AsyncEnumerableExtensions.ToAsyncEnumerable``1(IEnumerable{``0},System.Boolean)
+  commentId: M:Runly.AsyncEnumerableExtensions.ToAsyncEnumerable``1(IEnumerable{``0},System.Boolean)
+  isExternal: true
 - uid: Runly.Processing.IItemSource`1.GetItemsAsync*
   commentId: Overload:Runly.Processing.IItemSource`1.GetItemsAsync
   name: GetItemsAsync

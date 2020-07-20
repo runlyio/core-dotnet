@@ -17,14 +17,17 @@ items:
   source:
     id: PollingStream
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 7
+    startLine: 11
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCalls a function that returns an enumerable collection on an interval, resulting in a stream of data.\n"
+  example: []
   syntax:
     content: 'public class PollingStream<T> : IAsyncEnumerable<T>'
     typeParameters:
     - id: T
+      description: The type of element in the collection.
     content.vb: >-
       Public Class PollingStream(Of T)
           Inherits IAsyncEnumerable(Of T)
@@ -53,17 +56,21 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 12
+    startLine: 21
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.PollingStream%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public PollingStream(Func<IAsyncEnumerable<T>> poll, TimeSpan interval)
     parameters:
     - id: poll
       type: Func{IAsyncEnumerable{{T}}}
+      description: The poll function to call.
     - id: interval
       type: TimeSpan
+      description: The interval on which to call the poll function.
     content.vb: Public Sub New(poll As Func(Of IAsyncEnumerable(Of T)), interval As TimeSpan)
   overload: Runly.PollingStream`1.#ctor*
   nameWithType.vb: PollingStream(Of T).PollingStream(Func(Of IAsyncEnumerable(Of T)), TimeSpan)
@@ -87,17 +94,21 @@ items:
   source:
     id: GetAsyncEnumerator
     path: /github/workspace/src/Runly/PollingStream.cs
-    startLine: 21
+    startLine: 35
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nReturns an enumerator that iterates asynchronously through the collection.\n"
+  example: []
   syntax:
     content: public IAsyncEnumerator<T> GetAsyncEnumerator(CancellationToken cancellationToken = null)
     parameters:
     - id: cancellationToken
       type: CancellationToken
+      description: The token to trigger cancellation.
     return:
       type: IAsyncEnumerator{{T}}
+      description: An <see cref="!:IAsyncEnumerator&lt;T>"></see>.
     content.vb: Public Function GetAsyncEnumerator(cancellationToken As CancellationToken = Nothing) As IAsyncEnumerator(Of T)
   overload: Runly.PollingStream`1.GetAsyncEnumerator*
   nameWithType.vb: PollingStream(Of T).GetAsyncEnumerator(CancellationToken)
@@ -117,6 +128,43 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Runly.PollingStream`1
+  commentId: T:Runly.PollingStream`1
+  parent: Runly
+  name: PollingStream<T>
+  nameWithType: PollingStream<T>
+  fullName: Runly.PollingStream<T>
+  nameWithType.vb: PollingStream(Of T)
+  fullName.vb: Runly.PollingStream(Of T)
+  name.vb: PollingStream(Of T)
+  spec.csharp:
+  - uid: Runly.PollingStream`1
+    name: PollingStream
+    nameWithType: PollingStream
+    fullName: Runly.PollingStream
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.PollingStream`1
+    name: PollingStream
+    nameWithType: PollingStream
+    fullName: Runly.PollingStream
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Runly.PollingStream`1.#ctor*
   commentId: Overload:Runly.PollingStream`1.#ctor
   name: PollingStream

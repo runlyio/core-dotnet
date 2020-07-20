@@ -16,15 +16,17 @@ items:
   source:
     id: TypeNotFoundException
     path: /github/workspace/src/Runly/TypeNotFoundException.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nAn exception thrown when the job type cannot be resolved.\n"
+  example: []
   syntax:
-    content: 'public class TypeNotFoundException : ApplicationException'
+    content: 'public class TypeNotFoundException : Exception'
     content.vb: >-
       Public Class TypeNotFoundException
-          Inherits ApplicationException
+          Inherits Exception
   inheritance:
   - System.Object
   modifiers.csharp:
@@ -47,15 +49,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/TypeNotFoundException.cs
-    startLine: 6
+    startLine: 13
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public TypeNotFoundException(string typeName)
     parameters:
     - id: typeName
       type: System.String
+      description: ''
     content.vb: Public Sub New(typeName As String)
   overload: Runly.TypeNotFoundException.#ctor*
   modifiers.csharp:
@@ -73,6 +78,11 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Runly.TypeNotFoundException
+  commentId: T:Runly.TypeNotFoundException
+  name: TypeNotFoundException
+  nameWithType: TypeNotFoundException
+  fullName: Runly.TypeNotFoundException
 - uid: Runly.TypeNotFoundException.#ctor*
   commentId: Overload:Runly.TypeNotFoundException.#ctor
   name: TypeNotFoundException

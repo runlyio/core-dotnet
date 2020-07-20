@@ -16,10 +16,12 @@ items:
   source:
     id: ConfigNullException
     path: /github/workspace/src/Runly/ConfigNullException.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nException thrown when there is a null config parameter that cannot be null.\n"
+  example: []
   syntax:
     content: 'public class ConfigNullException : ConfigException'
     content.vb: >-
@@ -50,15 +52,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ConfigNullException.cs
-    startLine: 4
+    startLine: 11
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ConfigNullException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ConfigNullException(string paramName)
     parameters:
     - id: paramName
       type: System.String
+      description: The config parameter that caused the exception.
     content.vb: Public Sub New(paramName As String)
   overload: Runly.ConfigNullException.#ctor*
   modifiers.csharp:
@@ -88,6 +93,11 @@ references:
   name: ParamName
   nameWithType: ConfigException.ParamName
   fullName: Runly.ConfigException.ParamName
+- uid: Runly.ConfigNullException
+  commentId: T:Runly.ConfigNullException
+  name: ConfigNullException
+  nameWithType: ConfigNullException
+  fullName: Runly.ConfigNullException
 - uid: Runly.ConfigNullException.#ctor*
   commentId: Overload:Runly.ConfigNullException.#ctor
   name: ConfigNullException

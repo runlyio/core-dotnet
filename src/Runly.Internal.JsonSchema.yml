@@ -17,10 +17,12 @@ items:
   source:
     id: JsonSchema
     path: /github/workspace/src/Runly/Internal/JsonSchema.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - Runly
   namespace: Runly.Internal
+  summary: "\nGenerates a JSON schema for a <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class JsonSchema : object'
     content.vb: >-
@@ -48,15 +50,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/Internal/JsonSchema.cs
-    startLine: 13
+    startLine: 20
   assemblies:
   - Runly
   namespace: Runly.Internal
+  summary: "\nInitializes a new <xref href=\"Runly.Internal.JsonSchema\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public JsonSchema(ILogger<JsonSchema> logger)
     parameters:
     - id: logger
       type: ILogger{Runly.Internal.JsonSchema}
+      description: A <see cref="!:ILogger"></see>.
     content.vb: Public Sub New(logger As ILogger(Of JsonSchema))
   overload: Runly.Internal.JsonSchema.#ctor*
   nameWithType.vb: JsonSchema.JsonSchema(ILogger(Of JsonSchema))
@@ -80,17 +85,21 @@ items:
   source:
     id: Generate
     path: /github/workspace/src/Runly/Internal/JsonSchema.cs
-    startLine: 24
+    startLine: 36
   assemblies:
   - Runly
   namespace: Runly.Internal
+  summary: "\nGenerates a JSON schema for the <code data-dev-comment-type=\"paramref\" class=\"paramref\">configType</code>.\n"
+  example: []
   syntax:
     content: public JObject Generate(Type configType)
     parameters:
     - id: configType
       type: Type
+      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> to generate the JSON schema for.
     return:
       type: JObject
+      description: A <see cref="!:JObject"></see> containing the schema.
     content.vb: Public Function Generate(configType As Type) As JObject
   overload: Runly.Internal.JsonSchema.Generate*
   modifiers.csharp:
@@ -98,6 +107,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly.Internal
   commentId: N:Runly.Internal
   name: Runly.Internal
@@ -108,6 +123,16 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Internal.JsonSchema
+  commentId: T:Runly.Internal.JsonSchema
+  name: JsonSchema
+  nameWithType: JsonSchema
+  fullName: Runly.Internal.JsonSchema
 - uid: Runly.Internal.JsonSchema.#ctor*
   commentId: Overload:Runly.Internal.JsonSchema.#ctor
   name: JsonSchema

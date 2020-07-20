@@ -19,7 +19,7 @@ items:
   source:
     id: JobHost
     path: /github/workspace/src/Runly/JobHost.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Runly
   namespace: Runly
@@ -53,7 +53,7 @@ items:
   source:
     id: CreateDefaultBuilder
     path: /github/workspace/src/Runly/JobHost.cs
-    startLine: 35
+    startLine: 36
   assemblies:
   - Runly
   namespace: Runly
@@ -94,7 +94,7 @@ items:
   source:
     id: CreateDefaultBuilder
     path: /github/workspace/src/Runly/JobHost.cs
-    startLine: 60
+    startLine: 61
   assemblies:
   - Runly
   namespace: Runly
@@ -139,17 +139,21 @@ items:
   source:
     id: RunJobAsync
     path: /github/workspace/src/Runly/JobHost.cs
-    startLine: 67
+    startLine: 73
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nRuns the job.\n"
+  example: []
   syntax:
     content: public static Task RunJobAsync(this IHost host)
     parameters:
     - id: host
       type: IHost
+      description: The <see cref="!:IHost"></see> to run.
     return:
       type: Task
+      description: The <see cref="!:Task"></see> that represents the asynchronous operation.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -176,19 +180,24 @@ items:
   source:
     id: RunJobAsync
     path: /github/workspace/src/Runly/JobHost.cs
-    startLine: 72
+    startLine: 84
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nRuns the job.\n"
+  example: []
   syntax:
     content: public static Task RunJobAsync(this IHost host, CancellationToken cancellationToken)
     parameters:
     - id: host
       type: IHost
+      description: The <see cref="!:IHost"></see> to run.
     - id: cancellationToken
       type: CancellationToken
+      description: The token to trigger cancellation.
     return:
       type: Task
+      description: The <see cref="!:Task"></see> that represents the asynchronous operation.
     content.vb: >-
       <ExtensionAttribute>
 

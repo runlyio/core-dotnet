@@ -25,10 +25,12 @@ items:
   source:
     id: HubConnectionWrapper
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 294
+    startLine: 468
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nWraps a SignalR <see cref=\"!:HubConnection\"></see> in the testable interface <xref href=\"Runly.IResultsConnection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class HubConnectionWrapper : object, IResultsConnection, IAsyncDisposable'
     content.vb: >-
@@ -60,15 +62,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 298
+    startLine: 476
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.HubConnectionWrapper\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public HubConnectionWrapper(HubConnection connection)
     parameters:
     - id: connection
       type: HubConnection
+      description: ''
     content.vb: Public Sub New(connection As HubConnection)
   overload: Runly.HubConnectionWrapper.#ctor*
   modifiers.csharp:
@@ -89,10 +94,13 @@ items:
   source:
     id: Closed
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 303
+    startLine: 492
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nOccurs when the connection is closed. The connection could be closed due to an\nerror or due to either the server or client intentionally closing the connection\nwithout error.\n"
+  remarks: "\nIf this event was triggered from a connection error, the System.Exception that\noccurred will be passed in as the sole argument to this handler.If this event\nwas triggered intentionally by either the client or server, then the argument\nwill be null.\n"
+  example: []
   syntax:
     content: public event Func<Exception, Task> Closed
     return:
@@ -118,10 +126,13 @@ items:
   source:
     id: Reconnected
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 309
+    startLine: 506
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nOccurs when the Microsoft.AspNetCore.SignalR.Client.HubConnection successfully\nreconnects after losing its underlying connection.\n"
+  remarks: "\nThe System.String parameter will be the Microsoft.AspNetCore.SignalR.Client.HubConnection&apos;s\nnew ConnectionId or null if negotiation was skipped.\n"
+  example: []
   syntax:
     content: public event Func<string, Task> Reconnected
     return:
@@ -147,10 +158,13 @@ items:
   source:
     id: Reconnecting
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 315
+    startLine: 520
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nOccurs when the Microsoft.AspNetCore.SignalR.Client.HubConnection starts reconnecting\nafter losing its underlying connection.\n"
+  remarks: "\nThe System.Exception that occurred will be passed in as the sole argument to\nthis handler.\n"
+  example: []
   syntax:
     content: public event Func<Exception, Task> Reconnecting
     return:
@@ -176,10 +190,12 @@ items:
   source:
     id: State
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 321
+    startLine: 529
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nIndicates the state of the <see cref=\"!:HubConnection\"></see> to the server.\n"
+  example: []
   syntax:
     content: public HubConnectionState State { get; }
     parameters: []
@@ -209,10 +225,12 @@ items:
   source:
     id: DisposeAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 323
+    startLine: 534
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nDisposes the <xref href=\"Runly.HubConnectionWrapper\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ValueTask DisposeAsync()
     return:
@@ -237,10 +255,12 @@ items:
   source:
     id: StartAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 329
+    startLine: 543
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nStarts a connetion to the server.\n"
+  example: []
   syntax:
     content: public Task StartAsync()
     return:
@@ -267,17 +287,21 @@ items:
   source:
     id: InvokeCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 330
+    startLine: 550
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInvokes a hub method on the server.\n"
+  example: []
   syntax:
     content: public Task InvokeCoreAsync(string methodName, object[] args)
     parameters:
     - id: methodName
       type: System.String
+      description: The name of the server method to invoke.
     - id: args
       type: System.Object[]
+      description: The arguments used to invoke the server method.
     return:
       type: Task
     content.vb: Public Function InvokeCoreAsync(methodName As String, args As Object()) As Task
@@ -305,17 +329,21 @@ items:
   source:
     id: SendCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 331
+    startLine: 557
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInvokes a hub method on the server. Does not wait to a response from the receiver.\n"
+  example: []
   syntax:
     content: public Task SendCoreAsync(string methodName, object[] args)
     parameters:
     - id: methodName
       type: System.String
+      description: The name of the server method to invoke.
     - id: args
       type: System.Object[]
+      description: The arguments used to invoke the server method.
     return:
       type: Task
     content.vb: Public Function SendCoreAsync(methodName As String, args As Object()) As Task
@@ -343,17 +371,21 @@ items:
   source:
     id: On
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 332
+    startLine: 564
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nRegisters a handler that will be invoked when the hub method with the specified name is invoked.\n"
+  example: []
   syntax:
     content: public IDisposable On(string methodName, Action handler)
     parameters:
     - id: methodName
       type: System.String
+      description: The name of the hub method to define.
     - id: handler
       type: Action
+      description: The handler that will be raised when the hub method is invoked.
     return:
       type: IDisposable
     content.vb: Public Function On(methodName As String, handler As Action) As IDisposable
@@ -365,6 +397,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: Runly.IResultsConnection
+  commentId: T:Runly.IResultsConnection
+  parent: Runly
+  name: IResultsConnection
+  nameWithType: IResultsConnection
+  fullName: Runly.IResultsConnection
 - uid: Runly
   commentId: N:Runly
   name: Runly
@@ -375,18 +413,17 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.IResultsConnection
-  commentId: T:Runly.IResultsConnection
-  parent: Runly
-  name: IResultsConnection
-  nameWithType: IResultsConnection
-  fullName: Runly.IResultsConnection
 - uid: IAsyncDisposable
   commentId: '!:IAsyncDisposable'
   isExternal: true
   name: IAsyncDisposable
   nameWithType: IAsyncDisposable
   fullName: IAsyncDisposable
+- uid: Runly.HubConnectionWrapper
+  commentId: T:Runly.HubConnectionWrapper
+  name: HubConnectionWrapper
+  nameWithType: HubConnectionWrapper
+  fullName: Runly.HubConnectionWrapper
 - uid: Runly.HubConnectionWrapper.#ctor*
   commentId: Overload:Runly.HubConnectionWrapper.#ctor
   name: HubConnectionWrapper

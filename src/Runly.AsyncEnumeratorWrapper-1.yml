@@ -100,13 +100,14 @@ items:
   assemblies:
   - Runly
   namespace: Runly
-  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumeratorWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> from the <see cref=\"!:Task&lt;IEnumerator&lt;T>>\"></see>.\n"
+  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumeratorWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> from the <see cref=\"!:IEnumerator&lt;T>\"></see>.\n"
   example: []
   syntax:
     content: public AsyncEnumeratorWrapper(Task<IEnumerator<T>> enumerator)
     parameters:
     - id: enumerator
       type: Task{IEnumerator{{T}}}
+      description: The <see cref="!:IEnumerator&lt;T>"></see> to wrap.
     content.vb: Public Sub New(enumerator As Task(Of IEnumerator(Of T)))
   overload: Runly.AsyncEnumeratorWrapper`1.#ctor*
   nameWithType.vb: AsyncEnumeratorWrapper(Of T).AsyncEnumeratorWrapper(Task(Of IEnumerator(Of T)))
@@ -134,13 +135,14 @@ items:
   assemblies:
   - Runly
   namespace: Runly
-  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumeratorWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> from the <see cref=\"!:Task&lt;IEnumerator&lt;T>>\"></see>.\n"
+  summary: "\nCreates a new <xref href=\"Runly.AsyncEnumeratorWrapper%601\" data-throw-if-not-resolved=\"false\"></xref> from the <see cref=\"!:IEnumerator&lt;T>\"></see>.\n"
   example: []
   syntax:
     content: public AsyncEnumeratorWrapper(IEnumerator<T> enumerator)
     parameters:
     - id: enumerator
       type: IEnumerator{{T}}
+      description: The <see cref="!:IEnumerator&lt;T>"></see> to wrap.
     content.vb: Public Sub New(enumerator As IEnumerator(Of T))
   overload: Runly.AsyncEnumeratorWrapper`1.#ctor*
   nameWithType.vb: AsyncEnumeratorWrapper(Of T).AsyncEnumeratorWrapper(IEnumerator(Of T))

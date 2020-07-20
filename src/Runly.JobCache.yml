@@ -21,10 +21,12 @@ items:
   source:
     id: JobCache
     path: /github/workspace/src/Runly/JobCache.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nA cache of <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job types found in the assemblies provided.\n"
+  example: []
   syntax:
     content: 'public class JobCache : object'
     content.vb: >-
@@ -52,10 +54,12 @@ items:
   source:
     id: Jobs
     path: /github/workspace/src/Runly/JobCache.cs
-    startLine: 9
+    startLine: 15
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the jobs found in the assemblies provided.\n"
+  example: []
   syntax:
     content: public IEnumerable<JobInfo> Jobs { get; }
     parameters: []
@@ -83,15 +87,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/JobCache.cs
-    startLine: 11
+    startLine: 21
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.JobCache\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public JobCache(IEnumerable<Assembly> jobAssemblies)
     parameters:
     - id: jobAssemblies
       type: IEnumerable{Assembly}
+      description: The assemblies to search for jobs.
     content.vb: Public Sub New(jobAssemblies As IEnumerable(Of Assembly))
   overload: Runly.JobCache.#ctor*
   nameWithType.vb: JobCache.JobCache(IEnumerable(Of Assembly))
@@ -115,17 +122,21 @@ items:
   source:
     id: Get
     path: /github/workspace/src/Runly/JobCache.cs
-    startLine: 30
+    startLine: 45
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
+  example: []
   syntax:
     content: public JobInfo Get(Type type)
     parameters:
     - id: type
       type: Type
+      description: The type to get the <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> for.
     return:
       type: Runly.JobInfo
+      description: A <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> or null if the type cannot be found.
     content.vb: Public Function Get(type As Type) As JobInfo
   overload: Runly.JobCache.Get*
   modifiers.csharp:
@@ -146,18 +157,23 @@ items:
   source:
     id: Get
     path: /github/workspace/src/Runly/JobCache.cs
-    startLine: 35
+    startLine: 60
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
+  remarks: "\nAn exact case match is attempted first for either the type <see cref=\"!:MemberInfo.Name\"></see>\nor <see cref=\"!:Type.FullName\"></see>. If no matches are found a case insensitive match is attempted.\nIf zero or more than one job type matches, a <xref href=\"Runly.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref> will be thrown.\n"
+  example: []
   syntax:
-    content: public JobInfo Get(string type)
+    content: public JobInfo Get(string jobType)
     parameters:
-    - id: type
+    - id: jobType
       type: System.String
+      description: The type to get the <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> for.
     return:
       type: Runly.JobInfo
-    content.vb: Public Function Get(type As String) As JobInfo
+      description: A <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> or null if the type cannot be found.
+    content.vb: Public Function Get(jobType As String) As JobInfo
   overload: Runly.JobCache.Get*
   modifiers.csharp:
   - public
@@ -177,18 +193,22 @@ items:
   source:
     id: GetDefaultConfig
     path: /github/workspace/src/Runly/JobCache.cs
-    startLine: 40
+    startLine: 75
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the default <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
+  remarks: "\nAn exact case match is attempted first for either the type <see cref=\"!:MemberInfo.Name\"></see>\nor <see cref=\"!:Type.FullName\"></see> of the job type. If no matches are found a case insensitive \nmatch is attempted. If zero or more than one job type matches, a <xref href=\"Runly.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref>\nwill be thrown.\n"
+  example: []
   syntax:
-    content: public Config GetDefaultConfig(string processType)
+    content: public Config GetDefaultConfig(string jobType)
     parameters:
-    - id: processType
+    - id: jobType
       type: System.String
+      description: The type to get the default config for.
     return:
       type: Runly.Config
-    content.vb: Public Function GetDefaultConfig(processType As String) As Config
+    content.vb: Public Function GetDefaultConfig(jobType As String) As Config
   overload: Runly.JobCache.GetDefaultConfig*
   modifiers.csharp:
   - public
@@ -208,24 +228,34 @@ items:
   source:
     id: GetDefaultConfig
     path: /github/workspace/src/Runly/JobCache.cs
-    startLine: 45
+    startLine: 85
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nGets the default <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> for the <code data-dev-comment-type=\"paramref\" class=\"paramref\">jobInfo</code>.\n"
+  example: []
   syntax:
-    content: public Config GetDefaultConfig(JobInfo pi)
+    content: public Config GetDefaultConfig(JobInfo jobInfo)
     parameters:
-    - id: pi
+    - id: jobInfo
       type: Runly.JobInfo
+      description: The <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> to get the default config for.
     return:
       type: Runly.Config
-    content.vb: Public Function GetDefaultConfig(pi As JobInfo) As Config
+      description: The default config for the job.
+    content.vb: Public Function GetDefaultConfig(jobInfo As JobInfo) As Config
   overload: Runly.JobCache.GetDefaultConfig*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
+- uid: Runly.JobInfo
+  commentId: T:Runly.JobInfo
+  parent: Runly
+  name: JobInfo
+  nameWithType: JobInfo
+  fullName: Runly.JobInfo
 - uid: Runly
   commentId: N:Runly
   name: Runly
@@ -320,6 +350,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.JobCache
+  commentId: T:Runly.JobCache
+  parent: Runly
+  name: JobCache
+  nameWithType: JobCache
+  fullName: Runly.JobCache
 - uid: Runly.JobCache.#ctor*
   commentId: Overload:Runly.JobCache.#ctor
   name: JobCache
@@ -378,25 +414,24 @@ references:
   name: Type
   nameWithType: Type
   fullName: Type
-- uid: Runly.JobInfo
-  commentId: T:Runly.JobInfo
-  parent: Runly
-  name: JobInfo
-  nameWithType: JobInfo
-  fullName: Runly.JobInfo
+- uid: Runly.TypeNotFoundException
+  commentId: T:Runly.TypeNotFoundException
+  name: TypeNotFoundException
+  nameWithType: TypeNotFoundException
+  fullName: Runly.TypeNotFoundException
 - uid: System.String
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Runly.JobCache.GetDefaultConfig*
-  commentId: Overload:Runly.JobCache.GetDefaultConfig
-  name: GetDefaultConfig
-  nameWithType: JobCache.GetDefaultConfig
-  fullName: Runly.JobCache.GetDefaultConfig
 - uid: Runly.Config
   commentId: T:Runly.Config
   parent: Runly
   name: Config
   nameWithType: Config
   fullName: Runly.Config
+- uid: Runly.JobCache.GetDefaultConfig*
+  commentId: Overload:Runly.JobCache.GetDefaultConfig
+  name: GetDefaultConfig
+  nameWithType: JobCache.GetDefaultConfig
+  fullName: Runly.JobCache.GetDefaultConfig

@@ -18,14 +18,17 @@ items:
   source:
     id: Execution
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 6
+    startLine: 10
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nThe <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> implementation for <xref href=\"Runly.Job%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class Execution<TConfig> : ExecutionBase<TConfig, string> where TConfig : Config'
     typeParameters:
     - id: TConfig
+      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> type of the job.
     content.vb: >-
       Public Class Execution(Of TConfig As Config)
           Inherits ExecutionBase(Of TConfig, String)
@@ -34,13 +37,7 @@ items:
   - Runly.Execution
   - Runly.Processing.ExecutionBase{{TConfig},System.String}
   inheritedMembers:
-  - Runly.Processing.ExecutionBase{{TConfig},System.String}.logger
-  - Runly.Processing.ExecutionBase{{TConfig},System.String}.source
-  - Runly.Processing.ExecutionBase{{TConfig},System.String}.provider
-  - Runly.Processing.ExecutionBase{{TConfig},System.String}.enumerator
   - Runly.Processing.ExecutionBase{{TConfig},System.String}.ExecuteInternalAsync(CancellationToken)
-  - Runly.Processing.ExecutionBase{{TConfig},System.String}.ExecuteParallelTasksAsync
-  - Runly.Processing.ExecutionBase{{TConfig},System.String}.ProcessScopeAsync(IServiceScope)
   - Runly.Processing.ExecutionBase{{TConfig},System.String}.CallProcess(IServiceScope,System.String)
   - Runly.Execution.Started
   - Runly.Execution.StateChanged
@@ -95,10 +92,12 @@ items:
   source:
     id: Job
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 11
+    startLine: 18
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nThe <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> being executed.\n"
+  example: []
   syntax:
     content: public override IJob Job { get; }
     parameters: []
@@ -131,17 +130,21 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 13
+    startLine: 25
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nInitializes a new <xref href=\"Runly.Processing.Execution%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public Execution(Job<TConfig> job, IServiceProvider provider)
     parameters:
     - id: job
       type: Runly.Job{{TConfig}}
+      description: The job to execute.
     - id: provider
       type: IServiceProvider
+      description: The <see cref="!:IServiceProvider"></see> used to get ProcessAsync arguments.
     content.vb: Public Sub New(job As Job(Of TConfig), provider As IServiceProvider)
   overload: Runly.Processing.Execution`1.#ctor*
   nameWithType.vb: Execution(Of TConfig).Execution(Job(Of TConfig), IServiceProvider)
@@ -165,19 +168,24 @@ items:
   source:
     id: CallProcess
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 19
+    startLine: 37
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nCalls the ProcessAsync method whose signature is unique to this <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: protected override Task<Result> CallProcess(IServiceScope scope, string item)
     parameters:
     - id: scope
       type: IServiceScope
+      description: The <see cref="!:IServiceScope"></see> containing a scoped <see cref="!:IServiceProvider"></see> to get services from.
     - id: item
       type: System.String
+      description: The item to be processed.
     return:
       type: Task{Runly.Result}
+      description: The <xref href="Runly.Result" data-throw-if-not-resolved="false"></xref> returned from ProcessAsync.
     content.vb: Protected Overrides Function CallProcess(scope As IServiceScope, item As String) As Task(Of Result)
   overridden: Runly.Processing.ExecutionBase{{TConfig},System.String}.CallProcess(IServiceScope,System.String)
   overload: Runly.Processing.Execution`1.CallProcess*
@@ -190,6 +198,54 @@ items:
   - Overrides
   fullName.vb: Runly.Processing.Execution(Of TConfig).CallProcess(IServiceScope, System.String)
 references:
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: Runly.Job`1
+  commentId: T:Runly.Job`1
+  name: Job<TConfig>
+  nameWithType: Job<TConfig>
+  fullName: Runly.Job<TConfig>
+  nameWithType.vb: Job(Of TConfig)
+  fullName.vb: Runly.Job(Of TConfig)
+  name.vb: Job(Of TConfig)
+  spec.csharp:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`1
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly.Processing
   commentId: N:Runly.Processing
   name: Runly.Processing
@@ -200,12 +256,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.Execution
-  commentId: T:Runly.Execution
-  parent: Runly
-  name: Execution
-  nameWithType: Execution
-  fullName: Runly.Execution
 - uid: Runly.Processing.ExecutionBase{{TConfig},System.String}
   commentId: T:Runly.Processing.ExecutionBase{`0,System.String}
   parent: Runly.Processing
@@ -260,42 +310,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.Processing.ExecutionBase{{TConfig},System.String}.logger
-  commentId: F:Runly.Processing.ExecutionBase{`0,System.String}.logger
-  parent: Runly.Processing.ExecutionBase{{TConfig},System.String}
-  definition: Runly.Processing.ExecutionBase`2.logger
-  name: logger
-  nameWithType: ExecutionBase<TConfig, String>.logger
-  fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.logger
-  nameWithType.vb: ExecutionBase(Of TConfig, String).logger
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, System.String).logger
-- uid: Runly.Processing.ExecutionBase{{TConfig},System.String}.source
-  commentId: F:Runly.Processing.ExecutionBase{`0,System.String}.source
-  parent: Runly.Processing.ExecutionBase{{TConfig},System.String}
-  definition: Runly.Processing.ExecutionBase`2.source
-  name: source
-  nameWithType: ExecutionBase<TConfig, String>.source
-  fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.source
-  nameWithType.vb: ExecutionBase(Of TConfig, String).source
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, System.String).source
-- uid: Runly.Processing.ExecutionBase{{TConfig},System.String}.provider
-  commentId: F:Runly.Processing.ExecutionBase{`0,System.String}.provider
-  parent: Runly.Processing.ExecutionBase{{TConfig},System.String}
-  definition: Runly.Processing.ExecutionBase`2.provider
-  name: provider
-  nameWithType: ExecutionBase<TConfig, String>.provider
-  fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.provider
-  nameWithType.vb: ExecutionBase(Of TConfig, String).provider
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, System.String).provider
-- uid: Runly.Processing.ExecutionBase{{TConfig},System.String}.enumerator
-  commentId: F:Runly.Processing.ExecutionBase{`0,System.String}.enumerator
-  parent: Runly.Processing.ExecutionBase{{TConfig},System.String}
-  definition: Runly.Processing.ExecutionBase`2.enumerator
-  name: enumerator
-  nameWithType: ExecutionBase<TConfig, String>.enumerator
-  fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.enumerator
-  nameWithType.vb: ExecutionBase(Of TConfig, String).enumerator
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, System.String).enumerator
 - uid: Runly.Processing.ExecutionBase{{TConfig},System.String}.ExecuteInternalAsync(CancellationToken)
   commentId: M:Runly.Processing.ExecutionBase{`0,System.String}.ExecuteInternalAsync(CancellationToken)
   parent: Runly.Processing.ExecutionBase{{TConfig},System.String}
@@ -333,78 +347,6 @@ references:
     name: CancellationToken
     nameWithType: CancellationToken
     fullName: CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase{{TConfig},System.String}.ExecuteParallelTasksAsync
-  commentId: M:Runly.Processing.ExecutionBase{`0,System.String}.ExecuteParallelTasksAsync
-  parent: Runly.Processing.ExecutionBase{{TConfig},System.String}
-  definition: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-  name: ExecuteParallelTasksAsync()
-  nameWithType: ExecutionBase<TConfig, String>.ExecuteParallelTasksAsync()
-  fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.ExecuteParallelTasksAsync()
-  nameWithType.vb: ExecutionBase(Of TConfig, String).ExecuteParallelTasksAsync()
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, System.String).ExecuteParallelTasksAsync()
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase<TConfig, String>.ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase(Of TConfig, String).ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, System.String).ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase{{TConfig},System.String}.ProcessScopeAsync(IServiceScope)
-  commentId: M:Runly.Processing.ExecutionBase{`0,System.String}.ProcessScopeAsync(IServiceScope)
-  parent: Runly.Processing.ExecutionBase{{TConfig},System.String}
-  definition: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-  name: ProcessScopeAsync(IServiceScope)
-  nameWithType: ExecutionBase<TConfig, String>.ProcessScopeAsync(IServiceScope)
-  fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.ProcessScopeAsync(IServiceScope)
-  nameWithType.vb: ExecutionBase(Of TConfig, String).ProcessScopeAsync(IServiceScope)
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, System.String).ProcessScopeAsync(IServiceScope)
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase<TConfig, String>.ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, System.String>.ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase(Of TConfig, String).ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, System.String).ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
     isExternal: true
   - name: )
     nameWithType: )
@@ -1009,34 +951,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.Processing.ExecutionBase`2.logger
-  commentId: F:Runly.Processing.ExecutionBase`2.logger
-  name: logger
-  nameWithType: ExecutionBase<TConfig, TItem>.logger
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.logger
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).logger
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).logger
-- uid: Runly.Processing.ExecutionBase`2.source
-  commentId: F:Runly.Processing.ExecutionBase`2.source
-  name: source
-  nameWithType: ExecutionBase<TConfig, TItem>.source
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.source
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).source
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).source
-- uid: Runly.Processing.ExecutionBase`2.provider
-  commentId: F:Runly.Processing.ExecutionBase`2.provider
-  name: provider
-  nameWithType: ExecutionBase<TConfig, TItem>.provider
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.provider
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).provider
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).provider
-- uid: Runly.Processing.ExecutionBase`2.enumerator
-  commentId: F:Runly.Processing.ExecutionBase`2.enumerator
-  name: enumerator
-  nameWithType: ExecutionBase<TConfig, TItem>.enumerator
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.enumerator
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).enumerator
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).enumerator
 - uid: Runly.Processing.ExecutionBase`2.ExecuteInternalAsync(CancellationToken)
   commentId: M:Runly.Processing.ExecutionBase`2.ExecuteInternalAsync(CancellationToken)
   isExternal: true
@@ -1073,75 +987,6 @@ references:
     name: CancellationToken
     nameWithType: CancellationToken
     fullName: CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-  commentId: M:Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-  name: ExecuteParallelTasksAsync()
-  nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-  commentId: M:Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-  isExternal: true
-  name: ProcessScopeAsync(IServiceScope)
-  nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
     isExternal: true
   - name: )
     nameWithType: )
@@ -1198,6 +1043,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
 - uid: Runly.Execution.Job
   commentId: P:Runly.Execution.Job
   parent: Runly.Execution
@@ -1211,12 +1062,42 @@ references:
   fullName: Runly.Processing.Execution<TConfig>.Job
   nameWithType.vb: Execution(Of TConfig).Job
   fullName.vb: Runly.Processing.Execution(Of TConfig).Job
-- uid: Runly.IJob
-  commentId: T:Runly.IJob
-  parent: Runly
-  name: IJob
-  nameWithType: IJob
-  fullName: Runly.IJob
+- uid: Runly.Processing.Execution`1
+  commentId: T:Runly.Processing.Execution`1
+  name: Execution<TConfig>
+  nameWithType: Execution<TConfig>
+  fullName: Runly.Processing.Execution<TConfig>
+  nameWithType.vb: Execution(Of TConfig)
+  fullName.vb: Runly.Processing.Execution(Of TConfig)
+  name.vb: Execution(Of TConfig)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`1
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`1
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Runly.Processing.Execution`1.#ctor*
   commentId: Overload:Runly.Processing.Execution`1.#ctor
   name: Execution
@@ -1267,42 +1148,12 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: IServiceProvider
-- uid: Runly.Job`1
-  commentId: T:Runly.Job`1
-  name: Job<TConfig>
-  nameWithType: Job<TConfig>
-  fullName: Runly.Job<TConfig>
-  nameWithType.vb: Job(Of TConfig)
-  fullName.vb: Runly.Job(Of TConfig)
-  name.vb: Job(Of TConfig)
-  spec.csharp:
-  - uid: Runly.Job`1
-    name: Job
-    nameWithType: Job
-    fullName: Runly.Job
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: TConfig
-    nameWithType: TConfig
-    fullName: TConfig
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Runly.Job`1
-    name: Job
-    nameWithType: Job
-    fullName: Runly.Job
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: TConfig
-    nameWithType: TConfig
-    fullName: TConfig
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
 - uid: Runly.Processing.Execution`1.CallProcess*
   commentId: Overload:Runly.Processing.Execution`1.CallProcess
   name: CallProcess

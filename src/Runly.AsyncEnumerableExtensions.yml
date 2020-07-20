@@ -17,10 +17,12 @@ items:
   source:
     id: AsyncEnumerableExtensions
     path: /github/workspace/src/Runly/AsyncEnumerableExtensions.cs
-    startLine: 6
+    startLine: 9
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nExtension methods for <see cref=\"!:IEnumerable&lt;T>\"></see> to adapt to the <see cref=\"!:IAsyncEnumerable&lt;T>\"></see> interface.\n"
+  example: []
   syntax:
     content: 'public static class AsyncEnumerableExtensions : object'
     content.vb: >-
@@ -50,7 +52,7 @@ items:
   source:
     id: ToAsyncEnumerable
     path: /github/workspace/src/Runly/AsyncEnumerableExtensions.cs
-    startLine: 17
+    startLine: 20
   assemblies:
   - Runly
   namespace: Runly
@@ -101,7 +103,7 @@ items:
   source:
     id: ToAsyncEnumerable
     path: /github/workspace/src/Runly/AsyncEnumerableExtensions.cs
-    startLine: 30
+    startLine: 33
   assemblies:
   - Runly
   namespace: Runly

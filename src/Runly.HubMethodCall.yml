@@ -20,10 +20,12 @@ items:
   source:
     id: HubMethodCall
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 265
+    startLine: 361
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nRepresents a SignalR hub method call.\n"
+  example: []
   syntax:
     content: 'public class HubMethodCall : object'
     content.vb: >-
@@ -51,10 +53,12 @@ items:
   source:
     id: Attempts
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 267
+    startLine: 366
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe number of attempts made to call this method.\n"
+  example: []
   syntax:
     content: public int Attempts { get; set; }
     parameters: []
@@ -82,10 +86,12 @@ items:
   source:
     id: MethodName
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 268
+    startLine: 371
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe server method to be invoked.\n"
+  example: []
   syntax:
     content: public string MethodName { get; }
     parameters: []
@@ -113,10 +119,12 @@ items:
   source:
     id: Args
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 269
+    startLine: 376
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe arguments to be supplied to the server method.\n"
+  example: []
   syntax:
     content: public object[] Args { get; }
     parameters: []
@@ -144,17 +152,21 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 271
+    startLine: 383
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.HubMethodCall\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public HubMethodCall(string methodName, params object[] args)
     parameters:
     - id: methodName
       type: System.String
+      description: The server method to be invoked.
     - id: args
       type: System.Object[]
+      description: The arguments to be supplied to the server method.
     content.vb: Public Sub New(methodName As String, ParamArray args As Object())
   overload: Runly.HubMethodCall.#ctor*
   nameWithType.vb: HubMethodCall.HubMethodCall(String, Object())
@@ -178,10 +190,12 @@ items:
   source:
     id: ToString
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 277
+    startLine: 392
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nReturns the <xref href=\"Runly.HubMethodCall.MethodName\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public override string ToString()
     return:
@@ -256,11 +270,19 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: Runly.HubMethodCall
+  commentId: T:Runly.HubMethodCall
+  name: HubMethodCall
+  nameWithType: HubMethodCall
+  fullName: Runly.HubMethodCall
 - uid: Runly.HubMethodCall.#ctor*
   commentId: Overload:Runly.HubMethodCall.#ctor
   name: HubMethodCall
   nameWithType: HubMethodCall.HubMethodCall
   fullName: Runly.HubMethodCall.HubMethodCall
+- uid: Runly.HubMethodCall.MethodName
+  commentId: P:Runly.HubMethodCall.MethodName
+  isExternal: true
 - uid: Runly.HubMethodCall.ToString*
   commentId: Overload:Runly.HubMethodCall.ToString
   name: ToString

@@ -833,17 +833,17 @@ items:
   assemblies:
   - Runly.Core
   namespace: Runly
-  summary: "\n\n"
+  summary: "\nExecutes an <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: protected abstract Task ExecuteInternalAsync(CancellationToken token)
     parameters:
     - id: token
       type: CancellationToken
-      description: ''
+      description: The token to trigger cancellation.
     return:
       type: Task
-      description: ''
+      description: A <see cref="!:Task"></see> representing the asynchronous execution of this method.
     content.vb: Protected MustOverride Function ExecuteInternalAsync(token As CancellationToken) As Task
   overload: Runly.Execution.ExecuteInternalAsync*
   modifiers.csharp:

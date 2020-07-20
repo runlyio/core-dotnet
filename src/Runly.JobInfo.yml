@@ -22,10 +22,12 @@ items:
   source:
     id: JobInfo
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nStores the information required to use and run jobs.\n"
+  example: []
   syntax:
     content: 'public class JobInfo : object'
     content.vb: >-
@@ -53,10 +55,12 @@ items:
   source:
     id: JobType
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 7
+    startLine: 13
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe <see cref=\"!:Type\"></see> of the job.\n"
+  example: []
   syntax:
     content: public Type JobType { get; }
     parameters: []
@@ -84,10 +88,12 @@ items:
   source:
     id: ItemType
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 9
+    startLine: 18
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe <see cref=\"!:Type\"></see> of the item the job works with.\n"
+  example: []
   syntax:
     content: public Type ItemType { get; }
     parameters: []
@@ -115,10 +121,12 @@ items:
   source:
     id: ConfigType
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 11
+    startLine: 23
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe <see cref=\"!:Type\"></see> of <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> the job uses.\n"
+  example: []
   syntax:
     content: public Type ConfigType { get; }
     parameters: []
@@ -146,10 +154,12 @@ items:
   source:
     id: Dependencies
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 13
+    startLine: 28
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe <see cref=\"!:Type\">Types</see> of the parameters for ProcessAsync.\n"
+  example: []
   syntax:
     content: public Type[] Dependencies { get; }
     parameters: []
@@ -177,10 +187,12 @@ items:
   source:
     id: Errors
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 15
+    startLine: 33
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nThe reasons why the <xref href=\"Runly.JobInfo.JobType\" data-throw-if-not-resolved=\"false\"></xref> cannot be used as a job.\n"
+  example: []
   syntax:
     content: public JobLoadErrors Errors { get; }
     parameters: []
@@ -208,10 +220,12 @@ items:
   source:
     id: IsValid
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 17
+    startLine: 38
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nIndicates whether there are any errors with the <xref href=\"Runly.JobInfo.JobType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public bool IsValid { get; }
     parameters: []
@@ -239,15 +253,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/JobInfo.cs
-    startLine: 19
+    startLine: 44
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public JobInfo(Type jobType)
     parameters:
     - id: jobType
       type: Type
+      description: The <see cref="!:Type"></see> of the job.
     content.vb: Public Sub New(jobType As Type)
   overload: Runly.JobInfo.#ctor*
   modifiers.csharp:
@@ -280,6 +297,12 @@ references:
   name: ItemType
   nameWithType: JobInfo.ItemType
   fullName: Runly.JobInfo.ItemType
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly.JobInfo.ConfigType*
   commentId: Overload:Runly.JobInfo.ConfigType
   name: ConfigType
@@ -316,6 +339,9 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
+- uid: Runly.JobInfo.JobType
+  commentId: P:Runly.JobInfo.JobType
+  isExternal: true
 - uid: Runly.JobInfo.Errors*
   commentId: Overload:Runly.JobInfo.Errors
   name: Errors
@@ -337,6 +363,12 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
+- uid: Runly.JobInfo
+  commentId: T:Runly.JobInfo
+  parent: Runly
+  name: JobInfo
+  nameWithType: JobInfo
+  fullName: Runly.JobInfo
 - uid: Runly.JobInfo.#ctor*
   commentId: Overload:Runly.JobInfo.#ctor
   name: JobInfo

@@ -18,10 +18,12 @@ items:
   source:
     id: ConfigReader
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 7
+    startLine: 10
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nDeserializes JSON config files into instances of <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class ConfigReader : object'
     content.vb: >-
@@ -49,15 +51,18 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 11
+    startLine: 18
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nInitializes a new <xref href=\"Runly.ConfigReader\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public ConfigReader(JobCache cache)
     parameters:
     - id: cache
       type: Runly.JobCache
+      description: The <xref href="Runly.JobCache" data-throw-if-not-resolved="false"></xref> containing the config types that can be read.
     content.vb: Public Sub New(cache As JobCache)
   overload: Runly.ConfigReader.#ctor*
   modifiers.csharp:
@@ -78,17 +83,21 @@ items:
   source:
     id: FromFile
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 16
+    startLine: 28
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCreates an instance of a <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> from the JSON file found at <code data-dev-comment-type=\"paramref\" class=\"paramref\">path</code>.\n"
+  example: []
   syntax:
     content: public Config FromFile(string path)
     parameters:
     - id: path
       type: System.String
+      description: A file path contianing a JSON config.
     return:
       type: Runly.Config
+      description: An instance of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> from the deserialized file.
     content.vb: Public Function FromFile(path As String) As Config
   overload: Runly.ConfigReader.FromFile*
   modifiers.csharp:
@@ -109,17 +118,21 @@ items:
   source:
     id: FromJson
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 34
+    startLine: 51
   assemblies:
   - Runly
   namespace: Runly
+  summary: "\nCreates an instance of a <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> from the JSON string.\n"
+  example: []
   syntax:
     content: public Config FromJson(string json)
     parameters:
     - id: json
       type: System.String
+      description: A string containing a JSON config.
     return:
       type: Runly.Config
+      description: An instance of <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> from the deserialized string.
     content.vb: Public Function FromJson(json As String) As Config
   overload: Runly.ConfigReader.FromJson*
   modifiers.csharp:
@@ -127,6 +140,12 @@ items:
   modifiers.vb:
   - Public
 references:
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly
   commentId: N:Runly
   name: Runly
@@ -137,17 +156,22 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.ConfigReader.#ctor*
-  commentId: Overload:Runly.ConfigReader.#ctor
+- uid: Runly.ConfigReader
+  commentId: T:Runly.ConfigReader
   name: ConfigReader
-  nameWithType: ConfigReader.ConfigReader
-  fullName: Runly.ConfigReader.ConfigReader
+  nameWithType: ConfigReader
+  fullName: Runly.ConfigReader
 - uid: Runly.JobCache
   commentId: T:Runly.JobCache
   parent: Runly
   name: JobCache
   nameWithType: JobCache
   fullName: Runly.JobCache
+- uid: Runly.ConfigReader.#ctor*
+  commentId: Overload:Runly.ConfigReader.#ctor
+  name: ConfigReader
+  nameWithType: ConfigReader.ConfigReader
+  fullName: Runly.ConfigReader.ConfigReader
 - uid: Runly.ConfigReader.FromFile*
   commentId: Overload:Runly.ConfigReader.FromFile
   name: FromFile
@@ -158,12 +182,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Runly.Config
-  commentId: T:Runly.Config
-  parent: Runly
-  name: Config
-  nameWithType: Config
-  fullName: Runly.Config
 - uid: Runly.ConfigReader.FromJson*
   commentId: Overload:Runly.ConfigReader.FromJson
   name: FromJson

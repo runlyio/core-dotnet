@@ -18,31 +18,51 @@ items:
   source:
     id: Execution
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 464
+    startLine: 943
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nThe <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> implementation for <xref href=\"Runly.Job%6018\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: 'public class Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> : ExecutionBase<TConfig, TItem> where TConfig : Config'
     typeParameters:
     - id: TConfig
+      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> type of the job.
     - id: TItem
+      description: The item type of the job.
     - id: T1
+      description: The first dependency type of the job.
     - id: T2
+      description: The second dependency type of the job.
     - id: T3
+      description: The third dependency type of the job.
     - id: T4
+      description: The fourth dependency type of the job.
     - id: T5
+      description: The fifth dependency type of the job.
     - id: T6
+      description: The sixth dependency type of the job.
     - id: T7
+      description: The seventh dependency type of the job.
     - id: T8
+      description: The eighth dependency type of the job.
     - id: T9
+      description: The ninth dependency type of the job.
     - id: T10
+      description: The tenth dependency type of the job.
     - id: T11
+      description: The eleventh dependency type of the job.
     - id: T12
+      description: The twelfth dependency type of the job.
     - id: T13
+      description: The thirteenth dependency type of the job.
     - id: T14
+      description: The fourteenth dependency type of the job.
     - id: T15
+      description: The fifteenth dependency type of the job.
     - id: T16
+      description: The sixteenth dependency type of the job.
     content.vb: >-
       Public Class Execution(Of TConfig As Config, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
           Inherits ExecutionBase(Of TConfig, TItem)
@@ -51,13 +71,7 @@ items:
   - Runly.Execution
   - Runly.Processing.ExecutionBase{{TConfig},{TItem}}
   inheritedMembers:
-  - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.logger
-  - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.source
-  - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.provider
-  - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.enumerator
   - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.ExecuteInternalAsync(CancellationToken)
-  - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.ExecuteParallelTasksAsync
-  - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.ProcessScopeAsync(IServiceScope)
   - Runly.Processing.ExecutionBase{{TConfig},{TItem}}.CallProcess(IServiceScope,{TItem})
   - Runly.Execution.Started
   - Runly.Execution.StateChanged
@@ -112,10 +126,12 @@ items:
   source:
     id: Job
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 469
+    startLine: 951
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nThe <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> being executed.\n"
+  example: []
   syntax:
     content: public override IJob Job { get; }
     parameters: []
@@ -148,19 +164,24 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 471
+    startLine: 959
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nInitializes a new <xref href=\"Runly.Processing.Execution%6018\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: public Execution(Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16> job, IItemSource<TItem> source, IServiceProvider provider)
     parameters:
     - id: job
       type: Runly.Job{{TConfig},{TItem},{T1},{T2},{T3},{T4},{T5},{T6},{T7},{T8},{T9},{T10},{T11},{T12},{T13},{T14},{T15},{T16}}
+      description: The job to execute.
     - id: source
       type: Runly.Processing.IItemSource{{TItem}}
+      description: The <xref href="Runly.Processing.IItemSource%601" data-throw-if-not-resolved="false"></xref> used to get the items to process.
     - id: provider
       type: IServiceProvider
+      description: The <see cref="!:IServiceProvider"></see> used to get ProcessAsync arguments.
     content.vb: Public Sub New(job As Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16), source As IItemSource(Of TItem), provider As IServiceProvider)
   overload: Runly.Processing.Execution`18.#ctor*
   nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16).Execution(Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16), IItemSource(Of TItem), IServiceProvider)
@@ -184,19 +205,24 @@ items:
   source:
     id: CallProcess
     path: /github/workspace/src/Runly/Processing/Execution.cs
-    startLine: 477
+    startLine: 971
   assemblies:
   - Runly
   namespace: Runly.Processing
+  summary: "\nCalls the ProcessAsync method whose signature is unique to this <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
   syntax:
     content: protected override Task<Result> CallProcess(IServiceScope scope, TItem item)
     parameters:
     - id: scope
       type: IServiceScope
+      description: The <see cref="!:IServiceScope"></see> containing a scoped <see cref="!:IServiceProvider"></see> to get services from.
     - id: item
       type: '{TItem}'
+      description: The item to be processed.
     return:
       type: Task{Runly.Result}
+      description: The <xref href="Runly.Result" data-throw-if-not-resolved="false"></xref> returned from ProcessAsync.
     content.vb: Protected Overrides Function CallProcess(scope As IServiceScope, item As TItem) As Task(Of Result)
   overridden: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.CallProcess(IServiceScope,{TItem})
   overload: Runly.Processing.Execution`18.CallProcess*
@@ -209,6 +235,258 @@ items:
   - Overrides
   fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16).CallProcess(IServiceScope, TItem)
 references:
+- uid: Runly.Execution
+  commentId: T:Runly.Execution
+  parent: Runly
+  name: Execution
+  nameWithType: Execution
+  fullName: Runly.Execution
+- uid: Runly.Job`18
+  commentId: T:Runly.Job`18
+  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  spec.csharp:
+  - uid: Runly.Job`18
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Job`18
+    name: Job
+    nameWithType: Job
+    fullName: Runly.Job
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Config
+  commentId: T:Runly.Config
+  parent: Runly
+  name: Config
+  nameWithType: Config
+  fullName: Runly.Config
 - uid: Runly.Processing
   commentId: N:Runly.Processing
   name: Runly.Processing
@@ -219,12 +497,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.Execution
-  commentId: T:Runly.Execution
-  parent: Runly
-  name: Execution
-  nameWithType: Execution
-  fullName: Runly.Execution
 - uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
   commentId: T:Runly.Processing.ExecutionBase{`0,`1}
   parent: Runly.Processing
@@ -275,42 +547,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.logger
-  commentId: F:Runly.Processing.ExecutionBase{`0,`1}.logger
-  parent: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
-  definition: Runly.Processing.ExecutionBase`2.logger
-  name: logger
-  nameWithType: ExecutionBase<TConfig, TItem>.logger
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.logger
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).logger
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).logger
-- uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.source
-  commentId: F:Runly.Processing.ExecutionBase{`0,`1}.source
-  parent: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
-  definition: Runly.Processing.ExecutionBase`2.source
-  name: source
-  nameWithType: ExecutionBase<TConfig, TItem>.source
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.source
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).source
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).source
-- uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.provider
-  commentId: F:Runly.Processing.ExecutionBase{`0,`1}.provider
-  parent: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
-  definition: Runly.Processing.ExecutionBase`2.provider
-  name: provider
-  nameWithType: ExecutionBase<TConfig, TItem>.provider
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.provider
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).provider
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).provider
-- uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.enumerator
-  commentId: F:Runly.Processing.ExecutionBase{`0,`1}.enumerator
-  parent: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
-  definition: Runly.Processing.ExecutionBase`2.enumerator
-  name: enumerator
-  nameWithType: ExecutionBase<TConfig, TItem>.enumerator
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.enumerator
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).enumerator
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).enumerator
 - uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.ExecuteInternalAsync(CancellationToken)
   commentId: M:Runly.Processing.ExecutionBase{`0,`1}.ExecuteInternalAsync(CancellationToken)
   parent: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
@@ -348,78 +584,6 @@ references:
     name: CancellationToken
     nameWithType: CancellationToken
     fullName: CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.ExecuteParallelTasksAsync
-  commentId: M:Runly.Processing.ExecutionBase{`0,`1}.ExecuteParallelTasksAsync
-  parent: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
-  definition: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-  name: ExecuteParallelTasksAsync()
-  nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase{{TConfig},{TItem}}.ProcessScopeAsync(IServiceScope)
-  commentId: M:Runly.Processing.ExecutionBase{`0,`1}.ProcessScopeAsync(IServiceScope)
-  parent: Runly.Processing.ExecutionBase{{TConfig},{TItem}}
-  definition: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-  name: ProcessScopeAsync(IServiceScope)
-  nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
     isExternal: true
   - name: )
     nameWithType: )
@@ -1020,34 +1184,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.Processing.ExecutionBase`2.logger
-  commentId: F:Runly.Processing.ExecutionBase`2.logger
-  name: logger
-  nameWithType: ExecutionBase<TConfig, TItem>.logger
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.logger
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).logger
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).logger
-- uid: Runly.Processing.ExecutionBase`2.source
-  commentId: F:Runly.Processing.ExecutionBase`2.source
-  name: source
-  nameWithType: ExecutionBase<TConfig, TItem>.source
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.source
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).source
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).source
-- uid: Runly.Processing.ExecutionBase`2.provider
-  commentId: F:Runly.Processing.ExecutionBase`2.provider
-  name: provider
-  nameWithType: ExecutionBase<TConfig, TItem>.provider
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.provider
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).provider
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).provider
-- uid: Runly.Processing.ExecutionBase`2.enumerator
-  commentId: F:Runly.Processing.ExecutionBase`2.enumerator
-  name: enumerator
-  nameWithType: ExecutionBase<TConfig, TItem>.enumerator
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.enumerator
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).enumerator
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).enumerator
 - uid: Runly.Processing.ExecutionBase`2.ExecuteInternalAsync(CancellationToken)
   commentId: M:Runly.Processing.ExecutionBase`2.ExecuteInternalAsync(CancellationToken)
   isExternal: true
@@ -1084,75 +1220,6 @@ references:
     name: CancellationToken
     nameWithType: CancellationToken
     fullName: CancellationToken
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-  commentId: M:Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-  name: ExecuteParallelTasksAsync()
-  nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync()
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync()
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ExecuteParallelTasksAsync
-    name: ExecuteParallelTasksAsync
-    nameWithType: ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, TItem).ExecuteParallelTasksAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-  commentId: M:Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-  isExternal: true
-  name: ProcessScopeAsync(IServiceScope)
-  nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
-  fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync(IServiceScope)
-  nameWithType.vb: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
-  fullName.vb: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync(IServiceScope)
-  spec.csharp:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase<TConfig, TItem>.ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase<TConfig, TItem>.ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: Runly.Processing.ExecutionBase`2.ProcessScopeAsync(IServiceScope)
-    name: ProcessScopeAsync
-    nameWithType: ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
-    fullName: Runly.Processing.ExecutionBase(Of TConfig, TItem).ProcessScopeAsync
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: IServiceScope
-    name: IServiceScope
-    nameWithType: IServiceScope
-    fullName: IServiceScope
     isExternal: true
   - name: )
     nameWithType: )
@@ -1209,6 +1276,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
 - uid: Runly.Execution.Job
   commentId: P:Runly.Execution.Job
   parent: Runly.Execution
@@ -1222,12 +1295,282 @@ references:
   fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>.Job
   nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16).Job
   fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16).Job
-- uid: Runly.IJob
-  commentId: T:Runly.IJob
-  parent: Runly
-  name: IJob
-  nameWithType: IJob
-  fullName: Runly.IJob
+- uid: Runly.Processing.Execution`18
+  commentId: T:Runly.Processing.Execution`18
+  name: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType: Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  fullName: Runly.Processing.Execution<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
+  nameWithType.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  fullName.vb: Runly.Processing.Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  name.vb: Execution(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
+  spec.csharp:
+  - uid: Runly.Processing.Execution`18
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.Execution`18
+    name: Execution
+    nameWithType: Execution
+    fullName: Runly.Processing.Execution
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TConfig
+    nameWithType: TConfig
+    fullName: TConfig
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T4
+    nameWithType: T4
+    fullName: T4
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T5
+    nameWithType: T5
+    fullName: T5
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T6
+    nameWithType: T6
+    fullName: T6
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T7
+    nameWithType: T7
+    fullName: T7
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T8
+    nameWithType: T8
+    fullName: T8
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T9
+    nameWithType: T9
+    fullName: T9
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T10
+    nameWithType: T10
+    fullName: T10
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T11
+    nameWithType: T11
+    fullName: T11
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T12
+    nameWithType: T12
+    fullName: T12
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T13
+    nameWithType: T13
+    fullName: T13
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T14
+    nameWithType: T14
+    fullName: T14
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T15
+    nameWithType: T15
+    fullName: T15
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T16
+    nameWithType: T16
+    fullName: T16
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.Processing.IItemSource`1
+  commentId: T:Runly.Processing.IItemSource`1
+  name: IItemSource<TItem>
+  nameWithType: IItemSource<TItem>
+  fullName: Runly.Processing.IItemSource<TItem>
+  nameWithType.vb: IItemSource(Of TItem)
+  fullName.vb: Runly.Processing.IItemSource(Of TItem)
+  name.vb: IItemSource(Of TItem)
+  spec.csharp:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.Processing.IItemSource`1
+    name: IItemSource
+    nameWithType: IItemSource
+    fullName: Runly.Processing.IItemSource
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TItem
+    nameWithType: TItem
+    fullName: TItem
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Runly.Processing.Execution`18.#ctor*
   commentId: Overload:Runly.Processing.Execution`18.#ctor
   name: Execution
@@ -1520,282 +1863,12 @@ references:
   name: IServiceProvider
   nameWithType: IServiceProvider
   fullName: IServiceProvider
-- uid: Runly.Job`18
-  commentId: T:Runly.Job`18
-  name: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
-  nameWithType: Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
-  fullName: Runly.Job<TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16>
-  nameWithType.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
-  fullName.vb: Runly.Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
-  name.vb: Job(Of TConfig, TItem, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16)
-  spec.csharp:
-  - uid: Runly.Job`18
-    name: Job
-    nameWithType: Job
-    fullName: Runly.Job
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: TConfig
-    nameWithType: TConfig
-    fullName: TConfig
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: TItem
-    nameWithType: TItem
-    fullName: TItem
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T1
-    nameWithType: T1
-    fullName: T1
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T2
-    nameWithType: T2
-    fullName: T2
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T3
-    nameWithType: T3
-    fullName: T3
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T4
-    nameWithType: T4
-    fullName: T4
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T5
-    nameWithType: T5
-    fullName: T5
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T6
-    nameWithType: T6
-    fullName: T6
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T7
-    nameWithType: T7
-    fullName: T7
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T8
-    nameWithType: T8
-    fullName: T8
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T9
-    nameWithType: T9
-    fullName: T9
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T10
-    nameWithType: T10
-    fullName: T10
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T11
-    nameWithType: T11
-    fullName: T11
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T12
-    nameWithType: T12
-    fullName: T12
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T13
-    nameWithType: T13
-    fullName: T13
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T14
-    nameWithType: T14
-    fullName: T14
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T15
-    nameWithType: T15
-    fullName: T15
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T16
-    nameWithType: T16
-    fullName: T16
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Runly.Job`18
-    name: Job
-    nameWithType: Job
-    fullName: Runly.Job
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: TConfig
-    nameWithType: TConfig
-    fullName: TConfig
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: TItem
-    nameWithType: TItem
-    fullName: TItem
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T1
-    nameWithType: T1
-    fullName: T1
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T2
-    nameWithType: T2
-    fullName: T2
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T3
-    nameWithType: T3
-    fullName: T3
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T4
-    nameWithType: T4
-    fullName: T4
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T5
-    nameWithType: T5
-    fullName: T5
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T6
-    nameWithType: T6
-    fullName: T6
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T7
-    nameWithType: T7
-    fullName: T7
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T8
-    nameWithType: T8
-    fullName: T8
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T9
-    nameWithType: T9
-    fullName: T9
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T10
-    nameWithType: T10
-    fullName: T10
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T11
-    nameWithType: T11
-    fullName: T11
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T12
-    nameWithType: T12
-    fullName: T12
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T13
-    nameWithType: T13
-    fullName: T13
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T14
-    nameWithType: T14
-    fullName: T14
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T15
-    nameWithType: T15
-    fullName: T15
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - name: T16
-    nameWithType: T16
-    fullName: T16
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.Processing.IItemSource`1
-  commentId: T:Runly.Processing.IItemSource`1
-  name: IItemSource<TItem>
-  nameWithType: IItemSource<TItem>
-  fullName: Runly.Processing.IItemSource<TItem>
-  nameWithType.vb: IItemSource(Of TItem)
-  fullName.vb: Runly.Processing.IItemSource(Of TItem)
-  name.vb: IItemSource(Of TItem)
-  spec.csharp:
-  - uid: Runly.Processing.IItemSource`1
-    name: IItemSource
-    nameWithType: IItemSource
-    fullName: Runly.Processing.IItemSource
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: TItem
-    nameWithType: TItem
-    fullName: TItem
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Runly.Processing.IItemSource`1
-    name: IItemSource
-    nameWithType: IItemSource
-    fullName: Runly.Processing.IItemSource
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: TItem
-    nameWithType: TItem
-    fullName: TItem
-  - name: )
-    nameWithType: )
-    fullName: )
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
 - uid: Runly.Processing.Execution`18.CallProcess*
   commentId: Overload:Runly.Processing.Execution`18.CallProcess
   name: CallProcess
