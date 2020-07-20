@@ -19,7 +19,7 @@ namespace Runly.Tests.Scenarios.Configuration
 		Task<string> LoadExpectedSchema(string name)
 		{
 			var ass = Assembly.GetExecutingAssembly();
-			using var str = ass.GetManifestResourceStream($"{GetType().Namespace.Replace("Configuration", "Config")}.{name}.json");
+			using var str = ass.GetManifestResourceStream($"{GetType().Namespace}.{name}.json");
 			using var reader = new StreamReader(str);
 			return reader.ReadToEndAsync();
 		}
