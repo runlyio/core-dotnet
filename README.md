@@ -76,11 +76,11 @@ See [more in-depth examples](./examples) or [start reading the docs](https://www
 
 ## The Runly Platform
 
-You can turbocharge your job apps using the [Runly Platform](https://www.runly.io/platform/). The Runly Platform is a <abbr title="software as a service">SaaS</abbr> which helps shepard your jobs from deployment to monitoring and scaling in production.
+You can turbocharge your job apps using the [Runly Platform](https://www.runly.io/platform/). The Runly Platform is a SaaS which helps shepard your jobs from deployment to monitoring and scaling in production.
 
-* Deploy your jobs as nuget packages using tools you already know and love.
+* Deploy your jobs as NuGet packages using tools you already know and love.
 * Use familiar REST concepts to queue and schedule background jobs from your web or mobile app.
-* Use CRON expressions for fine-grained control of job scheduling
+* Use CRON expressions for fine-grained control of job scheduling.
 * Get insights into job failures and performance issues before your users notice.
 * Run and scale your jobs in the cloud or on your own hardware.
 
@@ -88,9 +88,9 @@ You can get started on a [generous free tier](https://www.runly.io/pricing/) wit
 
 ### The Runly Platform sounds cool. Why isn't it OSS too?
 
-There are plenty of job platforms out there which are completely OSS. We are trying a different model. Sustainability in OSS is a problem. We are trying to work on this project full-time and in order to do that, we have to feed our families. We think providing value via a paid service is the best way to do that while still solving problems for people with the core OSS offering.
+There are plenty of job platforms out there which are completely OSS. We are trying a different model. [Sustainability in OSS is a problem](https://twitter.com/UdiDahan/status/1279773678494978053). We are trying to work on this project full-time and in order to do that, we have to feed our families. We think providing value via a paid service is the best way to do that while still solving problems for people with the core OSS offering. We are fiercely independent and not going anywhere. [Read more about our philosophy](https://www.runly.io/about/).
 
-We have plenty of ideas on how to make background jobs easy to build and easy to scale. We need your support to continue working on this project. You can support us by building a Runly job and letting us know what you think. If you find value in writing jobs this way, you can [give the Runly Platform a try](https://www.runly.io/platform). Or, just give us a GitHub star while you are here. It allows us to brag about all the internet points we are getting when our mothers and spouses ask what we are doing all day :wink:.
+We have plenty of ideas on how to make jobs easy to build and easy to scale. We need your support to continue working on this project. You can support us by building a Runly job and letting us know what you think. If you find value in writing jobs this way, you can [give the Runly Platform a try](https://www.runly.io/platform). Or, just give us a GitHub star while you are here. It allows us to brag about all the internet points we are getting when our mothers and spouses ask what we are doing all day :wink:.
 
 Keep up with the things we are working on by [following us on Twitter](https://twitter.com/runlyio).
 
