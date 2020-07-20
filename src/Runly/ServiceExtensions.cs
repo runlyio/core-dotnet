@@ -99,7 +99,10 @@ namespace Runly
 					if (name == "--Job")
 						continue;
 
-					if (prop.PropertyType.IsValueType || prop.PropertyType == typeof(string))
+					bool isArray = prop.PropertyType.IsArray;
+					Type propType = isArray ? prop.PropertyType.GetElementType() : prop.PropertyType;
+
+					if (propType.IsValueType || propType == typeof(string))
 					{
 						if (prop.CanWrite)
 						{
@@ -107,7 +110,12 @@ namespace Runly
 							{
 								Argument = new Argument()
 								{
-									Arity = prop.PropertyType == typeof(bool) ? ArgumentArity.ZeroOrOne : ArgumentArity.ExactlyOne,
+									Arity = (propType == typeof(bool), isArray) switch
+									{
+										(true, false) => ArgumentArity.ZeroOrOne,
+										(_, true) => ArgumentArity.ZeroOrMore,
+										(_, _) => ArgumentArity.ExactlyOne
+									},
 									ArgumentType = prop.PropertyType
 								}
 							};

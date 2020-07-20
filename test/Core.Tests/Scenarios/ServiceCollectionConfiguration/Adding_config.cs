@@ -17,7 +17,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 
 		public override Task<Result> ProcessAsync() => throw new NotImplementedException();
 	}
-
+	
 	public class Adding_config : UnitTest
 	{
 		readonly ServiceProvider sp;

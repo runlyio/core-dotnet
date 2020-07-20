@@ -14,7 +14,7 @@ namespace Runly.Tests.Scenarios.Configuration
 		[Fact]
 		public void Should_apply_overrides()
 		{
-			var args = "run DiagnosticJob --NumberOfItems 10 --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".Split(' ');
+			var args = "run DiagnosticJob --NumberOfItems 10 --Names will chad --JobMethod ProcessAsync --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".Split(' ');
 
 			var services = new ServiceCollection();
 			services.AddRunlyJobs(args, typeof(DiagnosticJob).Assembly);
@@ -25,6 +25,8 @@ namespace Runly.Tests.Scenarios.Configuration
 			_ = provider.GetRequiredService<IHostAction>();
 
 			config.NumberOfItems.Should().Be(10);
+			config.Names.Should().BeEquivalentTo(new[] { "will", "chad" });
+			config.JobMethod.Should().Be(JobMethod.ProcessAsync);
 			config.WaitForSignalInInitializeAsync.Should().BeTrue();
 			config.RunlyApi.Token = "1234asdf";
 			config.Execution.RunAfterId.Should().Be(Guid.Parse("6B165086-E24D-49B5-A57D-57EBB080C0C1"));
