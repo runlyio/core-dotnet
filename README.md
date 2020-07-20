@@ -43,7 +43,7 @@ public class CsvEmailer : Job<CsvConfig, Person>
 {
     readonly MyEmailService emails;
 
-    public CsvEmailer(Config config, MyEmailService emails)
+    public CsvEmailer(CsvConfig config, MyEmailService emails)
         : base(config)
     {
         this.emails = emails;
@@ -84,7 +84,7 @@ A lot of problems that us software developers are tasked with solving everyday b
 * generating PDFs from a list of records in a database
 * handling ETL scenarios
 
-A Runly job takes this pattern and standardizes it into a base `Job` class. Making jobs run in a predictable way processing a list of items allows us to build lots of goodies on top of your core jobs. Things like multi-threading, scaling work across different machines, and resiliency and fault-tolerance become almost trivial for you to implement.
+A Runly job takes this pattern and standardizes it into a base `Job` class. Building and running jobs in a predictable way like this allows us to build lots of goodies on top of your core jobs. Things like multi-threading, scaling work across different machines, and resiliency and fault-tolerance become almost trivial for you to implement.
 
 In fact, we have done exactly that and built a whole platform on top of this core OSS project.
 
