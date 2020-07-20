@@ -1,5 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
 using System.IO;
+using System.Reflection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -8,7 +12,7 @@ namespace Runly
 	/// <summary>
 	/// Deserializes JSON config files into instances of <see cref="Config"/>.
 	/// </summary>
-	public class ConfigReader
+	public  class ConfigReader
 	{
 		readonly JobCache cache;
 
@@ -85,5 +89,62 @@ namespace Runly
 		private bool IsReducedForm(JObject job) => GetJob(job).Type == JTokenType.String;
 
 		private JToken GetJob(JObject job) => job.GetValue(nameof(Job), StringComparison.OrdinalIgnoreCase);
+
+		/// <summary>
+		/// Applies command line config overrides to <paramref name="config"/>.
+		/// </summary>
+		/// <param name="config">The <see cref="Config"/> to override.</param>
+		/// <param name="overrides">A list of overrides in the format 'property=value'.</param>
+		internal void ApplyOverrides(Config config, IEnumerable<string> overrides)
+		{
+			foreach (var ovr in overrides)
+			{
+				if (!ovr.Contains('='))
+					throw new FormatException($"Config override '{ovr}' must be in the format 'property=value'.");
+
+				var parts = ovr.Split('=');
+
+				if (parts.Length != 2)
+					throw new FormatException($"Config override '{ovr}' must be in the format 'property=value'.");
+
+				var prop = parts[0].Split('.');
+
+				object cfg = null;
+				PropertyInfo pi = null;
+				var type = config.GetType();
+
+				for (int i = 0; i < prop.Length; i++)
+				{
+					cfg = pi?.GetValue(cfg) ?? config;
+					pi = type.GetProperty(prop[i]);
+
+					if (pi == null)
+						throw new ArgumentException($"Could not find '{prop[i]}' in the config path '{parts[0]}'");
+					
+					type = pi.PropertyType;
+				}
+
+				object val = parts[1];
+
+				if (type != typeof(string))
+				{
+					var converter = TypeDescriptor.GetConverter(type);
+
+					if (converter == null)
+						throw new ArgumentException($"Could not find a type converter for the type '{type.FullName}' for the config path '{parts[0]}'.");
+
+					try
+					{
+						val = converter.ConvertFromInvariantString(parts[1]);
+					}
+					catch (NotSupportedException ex)
+					{
+						throw new ArgumentException($"Could not convert the string '{parts[1]}' to the type '{type.FullName}' for the config path '{parts[0]}'.", ex);
+					}
+				}
+
+				pi.SetValue(cfg, val);
+			}
+		}
 	}
 }

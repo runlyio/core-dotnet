@@ -152,6 +152,8 @@ namespace Runly
 				config = cache.GetDefaultConfig(verb.JobOrConfigPath);
 			}
 
+			cfgReader.ApplyOverrides(config, verb.Props);
+
 			if (verb.Silent)
 				config.Execution.ResultsToConsole = false;
 
