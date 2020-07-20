@@ -1,6 +1,7 @@
 using CommandLine;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using Runly.Internal;
 using System;
 using System.Collections.Generic;
@@ -83,7 +84,9 @@ namespace Runly
 			foreach (var job in cache.Jobs)
 			{
 				var jobCmd = new Command(job.JobType.Name);
+				jobCmd.AddAlias(job.JobType.Name.ToLowerInvariant());
 				jobCmd.AddAlias(job.JobType.FullName);
+				jobCmd.AddAlias(job.JobType.FullName.ToLowerInvariant());
 				AddConfigParams(jobCmd, job.ConfigType, null);
 				jobCmd.Handler = CommandHandler.Create<int>(n =>
 				{
@@ -110,6 +113,7 @@ namespace Runly
 									ArgumentType = prop.PropertyType
 								}
 							};
+							option.AddAlias(name.ToLowerInvariant());
 							command.AddOption(option);
 						}
 					}
@@ -186,6 +190,9 @@ namespace Runly
 				{
 					cfg = pi?.GetValue(cfg) ?? config;
 					pi = type.GetProperty(prop[i]);
+
+					if (pi == null)
+						pi = type.GetProperties().SingleOrDefault(p => p.Name.Equals(prop[i], StringComparison.InvariantCultureIgnoreCase));
 
 					if (pi == null)
 						throw new ArgumentException($"Could not find '{prop[i]}' in the config path '{path}'");
