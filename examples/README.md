@@ -1,6 +1,6 @@
 # Runly Examples
 
-This folder contains a number of example projects that can be run on the [Runly platform](https://www.runly.io/). See the README of each example for more information:
+This folder contains a number of example projects that can be run on their own or on the [Runly platform](https://www.runly.io/). See the README of each example for more information:
 
 * [Getting Started](./getting-started/)
 * [Web Application](./web-app/)
