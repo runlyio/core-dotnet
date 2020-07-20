@@ -73,25 +73,19 @@ namespace Runly
 			(var cache, var cfgReader) = services.AddJobCache(jobAssemblies);
 
 			var root = new RootCommand();
-
 			var run = new Command("run", "Runs a job.");
-			run.Handler = CommandHandler.Create<string, string>((run, job) =>
-			{
-
-			});
 			root.AddCommand(run);
 
 			foreach (var job in cache.Jobs)
 			{
 				var jobCmd = new Command(job.JobType.Name);
+
 				jobCmd.AddAlias(job.JobType.Name.ToLowerInvariant());
 				jobCmd.AddAlias(job.JobType.FullName);
 				jobCmd.AddAlias(job.JobType.FullName.ToLowerInvariant());
+
 				AddConfigParams(jobCmd, job.ConfigType, null);
-				jobCmd.Handler = CommandHandler.Create<int>(n =>
-				{
-					
-				});
+				
 				run.AddCommand(jobCmd);
 			}
 
@@ -101,7 +95,11 @@ namespace Runly
 				{
 					var name = prefix == null ? $"--{prop.Name}" : $"{prefix}.{prop.Name}";
 
-					if (prop.PropertyType.IsValueType)
+					// The job type comes from the command and the package/version cannot be set (it's whatever's executing)
+					if (name == "--Job")
+						continue;
+
+					if (prop.PropertyType.IsValueType || prop.PropertyType == typeof(string))
 					{
 						if (prop.CanWrite)
 						{
@@ -130,7 +128,7 @@ namespace Runly
 				{
 					var runCmdResult = context.ParseResult.RootCommandResult.Children["run"];
 
-					if (runCmdResult != null)
+					if (runCmdResult != null && context.ParseResult.UnmatchedTokens.Count == 0)
 					{
 						var jobCmdResult = runCmdResult.Children.FirstOrDefault() as CommandResult;
 
@@ -148,6 +146,7 @@ namespace Runly
 						await next(context);
 					}
 				})
+				.UseParseErrorReporting()
 				.Build()
 				.Invoke(args);
 

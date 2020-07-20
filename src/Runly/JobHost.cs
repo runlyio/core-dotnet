@@ -84,8 +84,8 @@ namespace Runly
 		/// <returns>The <see cref="Task"/> that represents the asynchronous operation.</returns>
 		public static Task RunJobAsync(this IHost host, CancellationToken cancellationToken)
 		{
-			var action = host.Services.GetRequiredService<IHostAction>();
-			return action.RunAsync(cancellationToken);
+			var action = host.Services.GetService<IHostAction>();
+			return action?.RunAsync(cancellationToken) ?? Task.CompletedTask;
 		}
 	}
 }
