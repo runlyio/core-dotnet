@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Scenarios\Config\*.json" />
+    <EmbeddedResource Include="Scenarios\Configuration\*.json" />
   </ItemGroup>
 
   <ItemGroup>
