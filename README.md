@@ -90,7 +90,7 @@ In fact, we have done exactly that and built a whole platform on top of this cor
 
 ## The Runly Platform
 
-You can turbocharge your job apps using the [Runly Platform](https://www.runly.io/platform/). The Runly Platform is a SaaS which helps shepard your jobs from deployment to monitoring and scaling in production.
+You can turbocharge your job apps using the [Runly Platform](https://www.runly.io/platform/). The Runly Platform is a SaaS which helps shepherd your jobs from deployment to monitoring and scaling in production.
 
 * Deploy your jobs as NuGet packages using tools you already know and love.
 * Use familiar REST concepts to queue and schedule background jobs from your web or mobile app.
