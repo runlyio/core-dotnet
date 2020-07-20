@@ -99,7 +99,7 @@ You can turbocharge your job apps using the [Runly Platform](https://www.runly.i
 * Get insights into job failures and performance issues before your users notice.
 * Run and scale your jobs in the cloud or on your own hardware.
 
-You can get started on a [generous free tier](https://www.runly.io/pricing/) with no commitment and no credit card. [Get started for free using your GitHub account](https://www.runly.io/dashboard/)!
+You can get started on a [generous free tier](https://www.runly.io/pricing/) with no commitment and no credit card. [Get started for free using your GitHub account](https://www.runly.io/dashboard/) or learn more about [how it works](https://www.runly.io/docs/).
 
 ### The Runly Platform sounds cool. Why isn't it OSS too?
 
