@@ -111,7 +111,7 @@ We are fiercely independent and not going anywhere. [Read more about our philoso
 
 Our mission is to create great developer experiences making it trivial to build and scale jobs while providing a great user experience in your app. We have plenty of ideas on how to do this but we need your support to continue working on this project.
 
-You can support us by building a Runly job and letting us know what you think ([tweet at us](https://twitter.com/runlyio) or [open an issue](https://github.com/runlyio/core-dotnet/issues/new)). If you find value in building Runly jobs, you can [give the Runly Platform a try](https://www.runly.io/platform).
+You can support us by building a Runly job and letting us know what you think ([tweet @ us](https://twitter.com/runlyio) or [open an issue](https://github.com/runlyio/core-dotnet/issues/new)). If you find value in building Runly jobs, you can [give the Runly Platform a try](https://www.runly.io/platform).
 
 Or, just give us a GitHub star while you are here. It allows us to brag about all the internet points we are getting when our family asks what we are doing all day :wink:.
 
