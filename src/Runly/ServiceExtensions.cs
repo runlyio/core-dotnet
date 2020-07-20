@@ -73,6 +73,32 @@ namespace Runly
 			(var cache, var cfgReader) = services.AddJobCache(jobAssemblies);
 
 			var root = new RootCommand();
+
+			var get = new Command("get")
+			{
+				new Argument("type")
+				{
+					Arity = ArgumentArity.ExactlyOne,
+					ArgumentType = typeof(string)
+				},
+				new Argument("filePath")
+				{
+					Arity = ArgumentArity.ExactlyOne,
+					ArgumentType = typeof(string)
+				},
+				new Option(new[] { "--verbose", "-v" })
+			};
+			get.Handler = CommandHandler.Create<string, string, bool>((type, filePath, verbose) => AddGetAction(services, type, filePath, verbose));
+			root.AddCommand(get);
+
+			var list = new Command("list")
+			{
+				new Option(new[] { "--verbose", "-v" }),
+				new Option(new[] { "--json", "-j" })
+			};
+			list.Handler = CommandHandler.Create<bool, bool>((verbose, json) => AddListAction(services, verbose, json));
+			root.AddCommand(list);
+
 			var run = new Command("run", "Runs a job.");
 			root.AddCommand(run);
 
@@ -132,37 +158,31 @@ namespace Runly
 			}
 
 			new CommandLineBuilder(root)
-				.UseMiddleware(async (context, next) =>
+			.UseMiddleware(async (context, next) =>
+			{
+				var runCmdResult = context.ParseResult.RootCommandResult.Children["run"];
+
+				if (runCmdResult != null && context.ParseResult.UnmatchedTokens.Count == 0)
 				{
-					var runCmdResult = context.ParseResult.RootCommandResult.Children["run"];
+					var jobCmdResult = runCmdResult.Children.FirstOrDefault() as CommandResult;
 
-					if (runCmdResult != null && context.ParseResult.UnmatchedTokens.Count == 0)
+					if (jobCmdResult != null)
 					{
-						var jobCmdResult = runCmdResult.Children.FirstOrDefault() as CommandResult;
+						var config = cache.GetDefaultConfig(jobCmdResult.Command.Name);
 
-						if (jobCmdResult != null)
-						{
-							var config = cache.GetDefaultConfig(jobCmdResult.Command.Name);
+						ApplyOverrides(config, jobCmdResult.Children);
 
-							ApplyOverrides(config, jobCmdResult.Children);
-
-							AddRunAction(services, config);
-						}
+						AddRunAction(services, config);
 					}
-					else
-					{
-						await next(context);
-					}
-				})
-				.UseParseErrorReporting()
-				.Build()
-				.Invoke(args);
-
-			//var parseResults = Parser.Default.ParseArguments<ListVerb, GetVerb, RunVerb>(args)
-			//	.WithParsed<ListVerb>(services.AddListAction)
-			//	.WithParsed<GetVerb>(services.AddGetAction)
-			//	.WithParsed<RunVerb>(v => services.AddRunAction(v, cache, cfgReader))
-			//	.WithNotParsed(errors => Environment.Exit(INVALID_ARGS));
+				}
+				else
+				{
+					await next(context);
+				}
+			})
+			.UseParseErrorReporting()
+			.Build()
+			.Invoke(args);
 
 			return services;
 		}
@@ -254,24 +274,24 @@ namespace Runly
 			return (cache, cfgReader);
 		}
 
-		static void AddListAction(this IServiceCollection services, ListVerb verb)
+		static void AddListAction(this IServiceCollection services, bool verbose, bool json)
 		{
 			services.AddTransient<JsonSchema>();
 
 			services.AddTransient<IHostAction>(s => new ListAction(
-				verb.Verbose,
-				verb.Json,
+				verbose,
+				json,
 				s.GetRequiredService<JobCache>(),
 				s.GetRequiredService<JsonSchema>()
 			));
 		}
 
-		static void AddGetAction(this IServiceCollection services, GetVerb verb)
+		static void AddGetAction(this IServiceCollection services, string type, string filePath, bool verbose)
 		{
 			services.AddTransient<IHostAction>(s => new GetAction(
-				verb.Verbose,
-				verb.Type,
-				string.IsNullOrWhiteSpace(verb.FilePath) ? null : verb.FilePath,
+				verbose,
+				type,
+				string.IsNullOrWhiteSpace(filePath) ? null : filePath,
 				s.GetRequiredService<JobCache>()
 			));
 		}
