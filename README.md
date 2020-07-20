@@ -101,7 +101,7 @@ You can turbocharge your job apps using the [Runly Platform](https://www.runly.i
 
 You can get started on a [generous free tier](https://www.runly.io/pricing/) with no commitment and no credit card. [Get started for free using your GitHub account](https://www.runly.io/dashboard/) or learn more about [how it works](https://www.runly.io/docs/).
 
-### Is this project sustainable?
+## Is this project sustainable?
 
 [Sustainability in OSS is a problem](https://twitter.com/UdiDahan/status/1282925432166285312). We are trying to work on this project full-time and in order to do that, we have to feed our families. We think providing value via a paid service is the best way to do that while still solving problems for people with the core OSS offering.
 
