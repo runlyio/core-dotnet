@@ -92,12 +92,11 @@ In fact, we have done exactly that and built a whole platform on top of this cor
 
 You can turbocharge your job apps using the [Runly Platform](https://www.runly.io/platform/). The Runly Platform is a SaaS which helps shepherd your jobs from deployment to monitoring and scaling in production.
 
-* Deploy your jobs as NuGet packages using tools you already know and love.
+* Automatically deploy your jobs to your machines or the cloud as NuGet packages using tools you already know and love.
 * Use familiar REST concepts to queue and schedule background jobs from your web or mobile app.
 * Easily integrate progress bars and job status into your app using [Runly UI](https://www.runly.io/ux/).
 * Use CRON expressions for fine-grained control of job scheduling.
 * Get insights into job failures and performance issues before your users notice.
-* Run and scale your jobs in the cloud or on your own hardware.
 
 You can get started on a [generous free tier](https://www.runly.io/pricing/) with no commitment and no credit card. [Get started for free using your GitHub account](https://www.runly.io/dashboard/) or learn more about [how it works](https://www.runly.io/docs/).
 
