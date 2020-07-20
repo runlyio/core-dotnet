@@ -14,7 +14,7 @@ namespace Runly.Tests.Scenarios.Configuration
 		[Fact]
 		public void Should_apply_overrides()
 		{
-			var args = "run DiagnosticJob --NumberOfItems 10 --Names will chad --JobMethod ProcessAsync --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".Split(' ');
+			var args = "DiagnosticJob --NumberOfItems 10 --Names will chad --JobMethod ProcessAsync --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".Split(' ');
 
 			var services = new ServiceCollection();
 			services.AddRunlyJobs(args, typeof(DiagnosticJob).Assembly);
@@ -35,7 +35,7 @@ namespace Runly.Tests.Scenarios.Configuration
 		[Fact]
 		public void Should_apply_lowercase_overrides()
 		{
-			var args = "run DiagnosticJob --NumberOfItems 10 --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
+			var args = "DiagnosticJob --NumberOfItems 10 --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
 
 			var services = new ServiceCollection();
 			services.AddRunlyJobs(args, typeof(DiagnosticJob).Assembly);
@@ -54,7 +54,7 @@ namespace Runly.Tests.Scenarios.Configuration
 		[Fact]
 		public void Should_fail_on_invalid_config_properties()
 		{
-			var args = "run DiagnosticJob --ZumberOfItems 10 --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
+			var args = "DiagnosticJob --ZumberOfItems 10 --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
 
 			var services = new ServiceCollection();
 			services.AddRunlyJobs(args, typeof(DiagnosticJob).Assembly);

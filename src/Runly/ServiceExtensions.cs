@@ -2,6 +2,7 @@ using CommandLine;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Namotion.Reflection;
 using Runly.Internal;
 using System;
 using System.Collections.Generic;
@@ -21,7 +22,10 @@ namespace Runly
 	/// </summary>
 	public static class ServiceExtensions
 	{
-		const int INVALID_ARGS = -1;
+		const string ListCommand = "list";
+		const string GetCommand = "get";
+		const string RunCommand = "run";
+		const string ConfigPathArgument = "configPath";
 
 		/// <summary>
 		/// Adds the services required to execute the job specified in <paramref name="config"/>. The job type must be found in the calling assembly.
@@ -70,38 +74,94 @@ namespace Runly
 		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddRunlyJobs(this IServiceCollection services, string[] args, params Assembly[] jobAssemblies)
 		{
-			(var cache, var cfgReader) = services.AddJobCache(jobAssemblies);
+			(var cache, var reader) = services.AddJobCache(jobAssemblies);
 
+			GetCommandLineBuilder(services, cache, reader)
+			.UseMiddleware(async (context, next) =>
+			{
+				var result = context.ParseResult.RootCommandResult.Children.FirstOrDefault() as CommandResult;
+
+				if (result?.Command.Name == ListCommand || result?.Command.Name == GetCommand || result?.Command.Name == RunCommand ||  context.ParseResult.UnmatchedTokens.Count > 0)
+				{
+					await next(context);
+				}
+				else if (result != null) // Job command
+				{
+					var config = cache.GetDefaultConfig(result.Command.Name);
+
+					ApplyCommandLineOverrides(config, result.Children);
+
+					services.AddRunAction(config);
+				}
+				else
+				{
+					await next(context);
+				}
+			})
+			.UseParseErrorReporting()
+			.Build()
+			.Invoke(args);
+
+			return services;
+		}
+		
+		/// <summary>
+		/// Discovers and caches job types from the <paramref name="jobAssemblies"/>, creating a singleton service <see cref="JobCache"/>.
+		/// </summary>
+		/// <param name="services">The service collection being modified.</param>
+		/// <param name="jobAssemblies">The assemblies where jobs can be found.</param>
+		/// <returns>A <see cref="ConfigReader"/> that can read JSON configs for the job types in the <see cref="JobCache"/>.</returns>
+		static (JobCache, ConfigReader) AddJobCache(this IServiceCollection services, IEnumerable<Assembly> jobAssemblies)
+		{
+			// need to use this stuff now; create it then register it
+			var cache = new JobCache(jobAssemblies);
+			var cfgReader = new ConfigReader(cache);
+
+			services.AddSingleton(cache);
+			services.AddSingleton(cfgReader);
+
+			foreach (var job in cache.Jobs)
+			{
+				if (job.IsValid)
+				{
+					services.AddTransient(job.JobType);
+				}
+			}
+
+			return (cache, cfgReader);
+		}
+
+		static CommandLineBuilder GetCommandLineBuilder(IServiceCollection services, JobCache cache, ConfigReader reader)
+		{
 			var root = new RootCommand();
 
-			var get = new Command("get")
+			var list = new Command(ListCommand, "Lists the jobs discovered by the job host.")
 			{
-				new Argument("type")
-				{
-					Arity = ArgumentArity.ExactlyOne,
-					ArgumentType = typeof(string)
-				},
-				new Argument("filePath")
-				{
-					Arity = ArgumentArity.ExactlyOne,
-					ArgumentType = typeof(string)
-				},
-				new Option(new[] { "--verbose", "-v" })
+				new Option<bool>(new[] { "--verbose", "-v" }),
+				new Option<bool>(new[] { "--json", "-j" })
 			};
-			get.Handler = CommandHandler.Create<string, string, bool>((type, filePath, verbose) => AddGetAction(services, type, filePath, verbose));
-			root.AddCommand(get);
-
-			var list = new Command("list")
-			{
-				new Option(new[] { "--verbose", "-v" }),
-				new Option(new[] { "--json", "-j" })
-			};
-			list.Handler = CommandHandler.Create<bool, bool>((verbose, json) => AddListAction(services, verbose, json));
+			list.Handler = CommandHandler.Create<bool, bool>((verbose, json) => services.AddListAction(verbose, json));
 			root.AddCommand(list);
 
-			var run = new Command("run", "Runs a job.");
+			var get = new Command(GetCommand, "Gets a config file for the specified type.")
+			{
+				new Argument<string>("type"),
+				new Argument<FileInfo>("filePath"),
+				new Option<bool>(new[] { "--verbose", "-v" })
+			};
+			get.Handler = CommandHandler.Create<string, string, bool>((type, filePath, verbose) => services.AddGetAction(type, filePath, verbose));
+			root.AddCommand(get);
+
+			var run = new Command(RunCommand, "Runs a job from a JSON config file.")
+			{
+				new Argument<FileInfo>(ConfigPathArgument).ExistingOnly(),
+				new Option<bool>(new[] { "--debug", "-d" }),
+				new Option<bool>(new[] { "--silent", "-s" })
+			};
+			run.Handler = CommandHandler.Create<FileInfo, bool, bool>((configPath, debug, silent) => services.AddRunAction(reader, configPath, debug, silent));
 			root.AddCommand(run);
 
+			// Add a command for each job, with each config path as an option
 			foreach (var job in cache.Jobs)
 			{
 				var jobCmd = new Command(job.JobType.Name);
@@ -110,12 +170,12 @@ namespace Runly
 				jobCmd.AddAlias(job.JobType.FullName);
 				jobCmd.AddAlias(job.JobType.FullName.ToLowerInvariant());
 
-				AddConfigParams(jobCmd, job.ConfigType, null);
-				
-				run.AddCommand(jobCmd);
+				AddConfigOptions(jobCmd, job.ConfigType, null);
+
+				root.AddCommand(jobCmd);
 			}
 
-			void AddConfigParams(Command command, Type type, string prefix)
+			void AddConfigOptions(Command command, Type type, string prefix)
 			{
 				foreach (var prop in type.GetProperties())
 				{
@@ -152,39 +212,12 @@ namespace Runly
 					else
 					{
 						if (!prop.PropertyType.IsArray)
-							AddConfigParams(command, prop.PropertyType, name);
+							AddConfigOptions(command, prop.PropertyType, name);
 					}
 				}
 			}
 
-			new CommandLineBuilder(root)
-			.UseMiddleware(async (context, next) =>
-			{
-				var runCmdResult = context.ParseResult.RootCommandResult.Children["run"];
-
-				if (runCmdResult != null && context.ParseResult.UnmatchedTokens.Count == 0)
-				{
-					var jobCmdResult = runCmdResult.Children.FirstOrDefault() as CommandResult;
-
-					if (jobCmdResult != null)
-					{
-						var config = cache.GetDefaultConfig(jobCmdResult.Command.Name);
-
-						ApplyOverrides(config, jobCmdResult.Children);
-
-						AddRunAction(services, config);
-					}
-				}
-				else
-				{
-					await next(context);
-				}
-			})
-			.UseParseErrorReporting()
-			.Build()
-			.Invoke(args);
-
-			return services;
+			return new CommandLineBuilder(root);
 		}
 
 		/// <summary>
@@ -192,21 +225,14 @@ namespace Runly
 		/// </summary>
 		/// <param name="config">The <see cref="Config"/> to override.</param>
 		/// <param name="symbols">A list of overrides to apply to the config.</param>
-		static void ApplyOverrides(Config config, SymbolResultSet symbols)
+		static void ApplyCommandLineOverrides(Config config, SymbolResultSet symbols)
 		{
 			foreach (var symbol in symbols)
 			{
 				var optr = symbol as OptionResult;
 
 				var path = optr.Option.Name;
-
 				var argr = optr.Children.FirstOrDefault() as ArgumentResult;
-
-				var arg = argr.GetValueOrDefault();
-
-				//if (parts.Length != 2)
-				//	throw new FormatException($"Config override '{string.Join(' ', parts)}' must be in the format '--property value'.");
-
 				var prop = path.Split('.');
 
 				object cfg = null;
@@ -227,51 +253,8 @@ namespace Runly
 					type = pi.PropertyType;
 				}
 
-				//if (type != typeof(string))
-				//{
-				//	var converter = TypeDescriptor.GetConverter(type);
-
-				//	if (converter == null)
-				//		throw new ArgumentException($"Could not find a type converter for the type '{type.FullName}' for the config path '{path}'.");
-
-				//	try
-				//	{
-				//		arg = converter.ConvertFromInvariantString(arg);
-				//	}
-				//	catch (NotSupportedException ex)
-				//	{
-				//		throw new ArgumentException($"Could not convert '{arg}' to the type '{type.FullName}' for the config path '{path}'.", ex);
-				//	}
-				//}
-
-				pi.SetValue(cfg, arg);
+				pi.SetValue(cfg, argr.GetValueOrDefault());
 			}
-		}
-
-		/// <summary>
-		/// Discovers and caches job types from the <paramref name="jobAssemblies"/>, creating a singleton service <see cref="JobCache"/>.
-		/// </summary>
-		/// <param name="services">The service collection being modified.</param>
-		/// <param name="jobAssemblies">The assemblies where jobs can be found.</param>
-		/// <returns>A <see cref="ConfigReader"/> that can read JSON configs for the job types in the <see cref="JobCache"/>.</returns>
-		static (JobCache, ConfigReader) AddJobCache(this IServiceCollection services, IEnumerable<Assembly> jobAssemblies)
-		{
-			// need to use this stuff now; create it then register it
-			var cache = new JobCache(jobAssemblies);
-			var cfgReader = new ConfigReader(cache);
-
-			services.AddSingleton(cache);
-			services.AddSingleton(cfgReader);
-
-			foreach (var job in cache.Jobs)
-			{
-				if (job.IsValid)
-				{
-					services.AddTransient(job.JobType);
-				}
-			}
-
-			return (cache, cfgReader);
 		}
 
 		static void AddListAction(this IServiceCollection services, bool verbose, bool json)
@@ -300,33 +283,22 @@ namespace Runly
 		/// Adds a transient <see cref="RunAction"/> to the <see cref="IServiceCollection"/>.
 		/// </summary>
 		/// <param name="services">The service collection being modified.</param>
-		/// <param name="verb">The command line verb to that specifies the location of the config and other modifiers.</param>
-		/// <param name="cfgReader">A <see cref="ConfigReader"/> that can read the JSON config file specified in <paramref name="verb"/>.</param>
-		static void AddRunAction(this IServiceCollection services, RunVerb verb, JobCache cache, ConfigReader cfgReader)
+		/// <param name="reader">A <see cref="ConfigReader"/> that can read the JSON config file specified in <paramref name="configPath"/>.</param>
+		/// <param name="configPath">The location of the JSON config to run.</param>
+		/// <param name="debug">Indicates whether to attach a debugger.</param>
+		/// <param name="silent">Indicates whether to output results to the console.</param>
+		static void AddRunAction(this IServiceCollection services, ConfigReader reader, FileInfo configPath, bool debug, bool silent)
 		{
-			if (verb.Debug)
+			if (debug)
 				services.AddSingleton(new Debug() { AttachDebugger = true });
 
-			Config config;
+			var config = reader.FromFile(configPath.FullName);
+			config.__filePath = configPath.FullName;
 
-			if (File.Exists(verb.JobOrConfigPath))
-			{
-				config = cfgReader.FromFile(verb.JobOrConfigPath);
+			if (!string.IsNullOrWhiteSpace(configPath.Directory.FullName))
+				Directory.SetCurrentDirectory(configPath.Directory.FullName);
 
-				config.__filePath = verb.JobOrConfigPath;
-
-				string dir = Path.GetDirectoryName(verb.JobOrConfigPath);
-				if (!String.IsNullOrWhiteSpace(dir))
-					Directory.SetCurrentDirectory(dir);
-			}
-			else
-			{
-				// TODO: Catch TypeNotFoundException and output message saying
-				// the path or job type specified could not be found.
-				config = cache.GetDefaultConfig(verb.JobOrConfigPath);
-			}
-
-			if (verb.Silent)
+			if (silent)
 				config.Execution.ResultsToConsole = false;
 
 			services.AddRunAction(config);
