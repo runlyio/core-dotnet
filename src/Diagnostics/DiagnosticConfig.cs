@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace Runly.Diagnostics
 {
 	public class DiagnosticConfig : Config
 	{
+		[Description("The number of items to process.")]
 		public int NumberOfItems { get; set; }
 		/// <summary>
 		/// When supplied, overrides NumberOfItems and produces a list of items according to the categories and counts provided.

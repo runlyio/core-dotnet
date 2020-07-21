@@ -7,6 +7,7 @@ using System.CommandLine;
 using System.CommandLine.Builder;
 using System.CommandLine.Invocation;
 using System.CommandLine.Parsing;
+using System.ComponentModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -187,9 +188,11 @@ namespace Runly
 					{
 						if (prop.CanWrite)
 						{
-							var option = new Option(name.ToLowerInvariant())
+							var desc = prop.GetCustomAttributes<DescriptionAttribute>().FirstOrDefault()?.Description;
+
+							var option = new Option(name.ToLowerInvariant(), desc)
 							{
-								Argument = new Argument()
+								Argument = new Argument(propType.Name)
 								{
 									Arity = (propType == typeof(bool), isArray) switch
 									{
