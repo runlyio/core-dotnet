@@ -4,7 +4,7 @@
 
 Runly is an opinionated framework for writing multi-threaded jobs. You focus on writing your business logic and Runly gives you a CLI, multi-threading, retries, and more out-of-the-box.
 
-TODO: awesome animated SVG of CLI in action goes here
+![terminal](hello.svg)
 
 ## How Does It Work?
 
