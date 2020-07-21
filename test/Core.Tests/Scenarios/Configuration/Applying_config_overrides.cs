@@ -14,20 +14,20 @@ namespace Runly.Tests.Scenarios.Configuration
 		[Fact]
 		public void Should_apply_overrides()
 		{
-			var args = "DiagnosticJob --NumberOfItems 10 --Names will chad --JobMethod ProcessAsync --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".Split(' ');
+			var args = "CliTestJob --Int32 10 --StringArray will chad --Enum ProcessAsync --IsBool --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".Split(' ');
 
 			var services = new ServiceCollection();
-			services.AddRunlyJobs(args, typeof(DiagnosticJob).Assembly);
+			services.AddRunlyJobs(args, typeof(CliTestJob).Assembly);
 
 			var provider = services.BuildServiceProvider();
 
-			var config = provider.GetRequiredService<DiagnosticConfig>();
-			_ = provider.GetRequiredService<IHostAction>();
+			var config = provider.GetRequiredService<CliTestJobConfig>();
+			provider.GetRequiredService<IHostAction>().Should().BeOfType<RunAction>();
 
-			config.NumberOfItems.Should().Be(10);
-			config.Names.Should().BeEquivalentTo(new[] { "will", "chad" });
-			config.JobMethod.Should().Be(JobMethod.ProcessAsync);
-			config.WaitForSignalInInitializeAsync.Should().BeTrue();
+			config.Int32.Should().Be(10);
+			config.StringArray.Should().BeEquivalentTo(new[] { "will", "chad" });
+			config.Enum.Should().Be(JobMethod.ProcessAsync);
+			config.IsBool.Should().BeTrue();
 			config.RunlyApi.Token = "1234asdf";
 			config.Execution.RunAfterId.Should().Be(Guid.Parse("6B165086-E24D-49B5-A57D-57EBB080C0C1"));
 		}
@@ -35,18 +35,18 @@ namespace Runly.Tests.Scenarios.Configuration
 		[Fact]
 		public void Should_apply_lowercase_overrides()
 		{
-			var args = "DiagnosticJob --NumberOfItems 10 --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
+			var args = "CliTestJob --Int32 10 --IsBool --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
 
 			var services = new ServiceCollection();
-			services.AddRunlyJobs(args, typeof(DiagnosticJob).Assembly);
+			services.AddRunlyJobs(args, typeof(CliTestJob).Assembly);
 
 			var provider = services.BuildServiceProvider();
 
-			var config = provider.GetRequiredService<DiagnosticConfig>();
-			_ = provider.GetRequiredService<IHostAction>();
+			var config = provider.GetRequiredService<CliTestJobConfig>();
+			provider.GetRequiredService<IHostAction>().Should().BeOfType<RunAction>();
 
-			config.NumberOfItems.Should().Be(10);
-			config.WaitForSignalInInitializeAsync.Should().BeTrue();
+			config.Int32.Should().Be(10);
+			config.IsBool.Should().BeTrue();
 			config.RunlyApi.Token = "1234asdf";
 			config.Execution.RunAfterId.Should().Be(Guid.Parse("6B165086-E24D-49B5-A57D-57EBB080C0C1"));
 		}
@@ -54,14 +54,14 @@ namespace Runly.Tests.Scenarios.Configuration
 		[Fact]
 		public void Should_fail_on_invalid_config_properties()
 		{
-			var args = "DiagnosticJob --ZumberOfItems 10 --WaitForSignalInInitializeAsync --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
+			var args = "CliTestJob --NumberOfItems 10 --isbool --RunlyApi.Token 1234asdf --Execution.RunAfterId 6B165086-E24D-49B5-A57D-57EBB080C0C1".ToLowerInvariant().Split(' ');
 
 			var services = new ServiceCollection();
-			services.AddRunlyJobs(args, typeof(DiagnosticJob).Assembly);
+			services.AddRunlyJobs(args, typeof(CliTestJob).Assembly);
 
 			var provider = services.BuildServiceProvider();
 
-			var config = provider.GetService<DiagnosticConfig>();
+			var config = provider.GetService<CliTestJobConfig>();
 			var host = provider.GetService<IHostAction>();
 
 			config.Should().BeNull();

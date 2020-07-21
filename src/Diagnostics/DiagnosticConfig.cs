@@ -25,11 +25,6 @@ namespace Runly.Diagnostics
 		public bool ThrowExceptionInProcessAsync { get; set; }
 		public bool ThrowExceptionInFinalizeAsync { get; set; }
 		public string MessageToLogInProcessAsync { get; set; }
-		/// <summary>
-		/// Does not affect job. Used in unit tests to validate parameter binding with an enum.
-		/// </summary>
-		public JobMethod JobMethod { get; set; }
-		public string[] Names { get; set; }
 
 		public DiagnosticConfig()
 		{
