@@ -131,40 +131,39 @@ namespace Runly
 		{
 			var root = new RootCommand();
 
-			var list = new Command(ListCommand, "Lists the jobs discovered by the job host.")
+			var list = new Command(ListCommand, "Lists the jobs available to run.")
 			{
-				new Option<bool>(new[] { "--verbose", "-v" }),
-				new Option<bool>(new[] { "--json", "-j" })
+				new Option<bool>(new[] { "--verbose", "-v" }, "Optional. Changes the config serialization to include all properties."),
+				new Option<bool>(new[] { "--json", "-j" }, "Optional. Changes the output format to JSON.")
 			};
 			list.Handler = CommandHandler.Create<bool, bool>((verbose, json) => services.AddListAction(verbose, json));
 			root.AddCommand(list);
 
-			var get = new Command(GetCommand, "Gets a config file for the specified type.")
+			var get = new Command(GetCommand, "Writes the default config for the specified type to the file path.")
 			{
-				new Argument<string>("type"),
-				new Argument<FileInfo>("filePath"),
-				new Option<bool>(new[] { "--verbose", "-v" })
+				new Argument<string>("type", "The type of job to get the default config for."),
+				new Argument<string>("filePath", () => "", "Optional. The file path to write the config to."),
+				new Option<bool>(new[] { "--verbose", "-v" }, "Optional. Changes the config serialization to include all properties.")
 			};
 			get.Handler = CommandHandler.Create<string, string, bool>((type, filePath, verbose) => services.AddGetAction(type, filePath, verbose));
 			root.AddCommand(get);
 
 			var run = new Command(RunCommand, "Runs a job from a JSON config file.")
 			{
-				new Argument<FileInfo>(ConfigPathArgument).ExistingOnly(),
-				new Option<bool>(new[] { "--debug", "-d" }),
-				new Option<bool>(new[] { "--silent", "-s" })
+				new Argument<FileInfo>(ConfigPathArgument, "The JSON serialized config for the job to run.").ExistingOnly(),
+				new Argument<FileInfo>("resultsPath", () => null, "Optional. The file path to write the results of the job to."),
+				new Option<bool>(new[] { "--debug", "-d" }, "Optional. Prompts the user to attach a debugger when the job starts."),
+				new Option<bool>(new[] { "--silent", "-s" }, "Optional. Silences console output.")
 			};
-			run.Handler = CommandHandler.Create<FileInfo, bool, bool>((configPath, debug, silent) => services.AddRunAction(reader, configPath, debug, silent));
+			run.Handler = CommandHandler.Create<FileInfo, FileInfo, bool, bool>((configPath, resultsPath, debug, silent) => services.AddRunAction(reader, configPath, resultsPath, debug, silent));
 			root.AddCommand(run);
 
 			// Add a command for each job, with each config path as an option
 			foreach (var job in cache.Jobs)
 			{
-				var jobCmd = new Command(job.JobType.Name);
+				var jobCmd = new Command(job.JobType.Name.ToLowerInvariant(), $"Runs the job {job.JobType.FullName}.");
 
-				jobCmd.AddAlias(job.JobType.Name.ToLowerInvariant());
-				jobCmd.AddAlias(job.JobType.FullName);
-				jobCmd.AddAlias(job.JobType.FullName.ToLowerInvariant());
+				jobCmd.AddAlias(job.JobType.Name);
 
 				AddConfigOptions(jobCmd, job.ConfigType, null);
 
@@ -188,7 +187,7 @@ namespace Runly
 					{
 						if (prop.CanWrite)
 						{
-							var option = new Option(name)
+							var option = new Option(name.ToLowerInvariant())
 							{
 								Argument = new Argument()
 								{
@@ -201,7 +200,7 @@ namespace Runly
 									ArgumentType = prop.PropertyType
 								}
 							};
-							option.AddAlias(name.ToLowerInvariant());
+							option.AddAlias(name);
 							command.AddOption(option);
 						}
 					}
@@ -283,7 +282,7 @@ namespace Runly
 		/// <param name="configPath">The location of the JSON config to run.</param>
 		/// <param name="debug">Indicates whether to attach a debugger.</param>
 		/// <param name="silent">Indicates whether to output results to the console.</param>
-		static void AddRunAction(this IServiceCollection services, ConfigReader reader, FileInfo configPath, bool debug, bool silent)
+		static void AddRunAction(this IServiceCollection services, ConfigReader reader, FileInfo configPath, FileInfo resultsPath,bool debug, bool silent)
 		{
 			if (debug)
 				services.AddSingleton(new Debug() { AttachDebugger = true });
@@ -293,6 +292,12 @@ namespace Runly
 
 			if (!string.IsNullOrWhiteSpace(configPath.Directory.FullName))
 				Directory.SetCurrentDirectory(configPath.Directory.FullName);
+
+			if (resultsPath != null)
+			{
+				config.Execution.ResultsFilePath = resultsPath.FullName;
+				config.Execution.ResultsToFile = true;
+			}
 
 			if (silent)
 				config.Execution.ResultsToConsole = false;

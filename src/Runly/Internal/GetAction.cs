@@ -23,7 +23,18 @@ namespace Runly.Internal
 		public async Task RunAsync(CancellationToken cancel)
 		{
 			TextWriter writer = null;
-			var job = cache.Get(jobType);
+			JobInfo job;
+
+			try
+			{
+				job = cache.Get(jobType);
+			}
+			catch (TypeNotFoundException)
+			{
+				Console.WriteLine($"Could not find the job type '{jobType}'.");
+				return;
+			}
+
 			var config = cache.GetDefaultConfig(job);
 
 			try
