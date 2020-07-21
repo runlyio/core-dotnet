@@ -12,7 +12,7 @@ namespace Runly
 	/// <summary>
 	/// Deserializes JSON config files into instances of <see cref="Config"/>.
 	/// </summary>
-	public  class ConfigReader
+	public class ConfigReader
 	{
 		readonly JobCache cache;
 
