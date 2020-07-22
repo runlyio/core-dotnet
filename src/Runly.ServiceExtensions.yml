@@ -5,7 +5,6 @@ items:
   id: ServiceExtensions
   parent: Runly
   children:
-  - Runly.ServiceExtensions.AddConfig(IServiceCollection,Runly.Config)
   - Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config)
   - Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config,Assembly[])
   - Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[])
@@ -20,7 +19,7 @@ items:
   source:
     id: ServiceExtensions
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 14
+    startLine: 19
   assemblies:
   - Runly
   namespace: Runly
@@ -55,7 +54,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 24
+    startLine: 32
   assemblies:
   - Runly
   namespace: Runly
@@ -99,7 +98,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 36
+    startLine: 44
   assemblies:
   - Runly
   namespace: Runly
@@ -149,7 +148,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 51
+    startLine: 59
   assemblies:
   - Runly
   namespace: Runly
@@ -196,7 +195,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 63
+    startLine: 71
   assemblies:
   - Runly
   namespace: Runly
@@ -231,50 +230,6 @@ items:
   - Shared
   fullName.vb: Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection, System.String(), Assembly())
   name.vb: AddRunlyJobs(IServiceCollection, String(), Assembly())
-- uid: Runly.ServiceExtensions.AddConfig(IServiceCollection,Runly.Config)
-  commentId: M:Runly.ServiceExtensions.AddConfig(IServiceCollection,Runly.Config)
-  id: AddConfig(IServiceCollection,Runly.Config)
-  isExtensionMethod: true
-  parent: Runly.ServiceExtensions
-  langs:
-  - csharp
-  - vb
-  name: AddConfig(IServiceCollection, Config)
-  nameWithType: ServiceExtensions.AddConfig(IServiceCollection, Config)
-  fullName: Runly.ServiceExtensions.AddConfig(IServiceCollection, Runly.Config)
-  type: Method
-  source:
-    id: AddConfig
-    path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 219
-  assemblies:
-  - Runly
-  namespace: Runly
-  summary: "\nAdds the <code data-dev-comment-type=\"paramref\" class=\"paramref\">config</code> to the <see cref=\"!:IServiceCollection\"></see> as a singleton service using the class itself, each base class, and each interface.\n"
-  example: []
-  syntax:
-    content: public static IServiceCollection AddConfig(this IServiceCollection services, Config config)
-    parameters:
-    - id: services
-      type: IServiceCollection
-      description: The service collection being modified.
-    - id: config
-      type: Runly.Config
-      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> to add to the service collection.
-    return:
-      type: IServiceCollection
-      description: The same <see cref="!:IServiceCollection"></see> passed in for chaining.
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function AddConfig(services As IServiceCollection, config As Config) As IServiceCollection
-  overload: Runly.ServiceExtensions.AddConfig*
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
 references:
 - uid: Runly
   commentId: N:Runly
@@ -359,8 +314,3 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Runly.ServiceExtensions.AddConfig*
-  commentId: Overload:Runly.ServiceExtensions.AddConfig
-  name: AddConfig
-  nameWithType: ServiceExtensions.AddConfig
-  fullName: Runly.ServiceExtensions.AddConfig

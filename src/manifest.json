@@ -482,7 +482,6 @@
   "Runly.RunlyApiConfig.Token": "Runly.RunlyApiConfig.yml",
   "Runly.RunlyApiConfig.Uri": "Runly.RunlyApiConfig.yml",
   "Runly.ServiceExtensions": "Runly.ServiceExtensions.yml",
-  "Runly.ServiceExtensions.AddConfig(IServiceCollection,Runly.Config)": "Runly.ServiceExtensions.yml",
   "Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config)": "Runly.ServiceExtensions.yml",
   "Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,Runly.Config,Assembly[])": "Runly.ServiceExtensions.yml",
   "Runly.ServiceExtensions.AddRunlyJobs(IServiceCollection,System.String[])": "Runly.ServiceExtensions.yml",

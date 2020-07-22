@@ -18,7 +18,7 @@ items:
   source:
     id: ConfigReader
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 10
+    startLine: 14
   assemblies:
   - Runly
   namespace: Runly
@@ -51,7 +51,7 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 18
+    startLine: 22
   assemblies:
   - Runly
   namespace: Runly
@@ -83,7 +83,7 @@ items:
   source:
     id: FromFile
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 28
+    startLine: 32
   assemblies:
   - Runly
   namespace: Runly
@@ -118,7 +118,7 @@ items:
   source:
     id: FromJson
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 51
+    startLine: 55
   assemblies:
   - Runly
   namespace: Runly
