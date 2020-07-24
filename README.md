@@ -2,7 +2,7 @@
 
 > Multi-threaded batch processing and background jobs for .NET Core
 
-Runly is an opinionated framework for simplifying complex applications by writing compartmentalized, testable code. You focus on writing your business logic and Runly gives you a CLI, multi-threading, retries, and more out-of-the-box.
+Runly is an framework for simplifying complex applications by writing compartmentalized, testable code. You focus on writing your business logic and Runly gives you a CLI, multi-threading, retries, and more out-of-the-box.
 
 ![terminal](cli.svg)
 
