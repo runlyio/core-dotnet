@@ -32,7 +32,7 @@ cd myproject
 dotnet new runly-app
 ```
 
-That's it - you can now start running! Learn more about how to build jobs in the [Runly Quickstart](https://www.runly.io/docs/building/).
+That's it - you can now start running! Learn more about how to build jobs in the [Runly Quickstart](https://www.runly.io/docs/net/start/).
 
 ## Example
 
@@ -72,7 +72,7 @@ public class CsvEmailer : Job<CsvConfig, Person>
 
 Using command line flags or JSON config, this can then easily be multi-threaded to send multiple emails at a time and allow for retries to deal with intermittent errors while sending the email.
 
-See [more in-depth examples](./examples) or [start reading the docs](https://www.runly.io/docs/).
+See [more in-depth examples](./examples) or [start reading the docs](https://www.runly.io/docs/net/).
 
 ## Why Write Code Like This?
 
@@ -94,11 +94,11 @@ You can turbocharge your job apps using the [Runly Platform](https://www.runly.i
 
 * Automatically deploy your jobs to your existing machines or the cloud as NuGet packages using tools you already know and love.
 * Use familiar REST concepts to queue and schedule background jobs from your web or mobile app.
-* Easily integrate progress bars and job status into your app using [Runly UI](https://www.runly.io/ux/).
+* Easily integrate progress bars and job status into your app using [Runly UI](https://www.runly.io/ui/).
 * Use CRON expressions for fine-grained control of job scheduling.
 * Get insights into job failures and performance issues before your users notice.
 
-You can get started on a [generous free tier](https://www.runly.io/pricing/) with no commitment and no credit card. [Get started for free using your GitHub account](https://www.runly.io/dashboard/) or learn more about [how it works](https://www.runly.io/docs/).
+You can get started on a [generous free tier](https://www.runly.io/pricing/) with no commitment and no credit card. [Get started for free using your GitHub account](https://www.runly.io/dashboard/) or learn more about [how it works](https://www.runly.io/docs/platform/).
 
 ## Is this project sustainable?
 
@@ -108,7 +108,7 @@ We are fiercely independent and not going anywhere. [Read more about our philoso
 
 Our mission is to create great developer experiences by making it trivial to build and scale jobs in order to provide a great user experience in your app. We have plenty of ideas on how to do this but we need your support to continue working on this project.
 
-You can support us by building a Runly job and letting us know what you think ([tweet @ us](https://twitter.com/runlyio) or [open an issue](https://github.com/runlyio/core-dotnet/issues/new)). If you find value in building Runly jobs, you can [give the Runly Platform a try](https://www.runly.io/platform).
+You can support us by building a Runly job and letting us know what you think ([tweet @ us](https://twitter.com/runlyio) or [open an issue](https://github.com/runlyio/core-dotnet/issues/new)). If you find value in building Runly jobs, you can [give the Runly Platform a try](https://www.runly.io/platform/).
 
 Or, just give us a GitHub star while you are here. It allows us to brag about all the internet points we are getting when our family asks what we are doing all day :wink:.
 
