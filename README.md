@@ -2,7 +2,7 @@
 
 > Multi-threaded batch processing and background jobs for .NET Core
 
-Runly is an opinionated framework for writing multi-threaded jobs. You focus on writing your business logic and Runly gives you a CLI, multi-threading, retries, and more out-of-the-box.
+Runly is an opinionated framework for simplifying complex applications by writing compartmentalized, testable code. You focus on writing your business logic and Runly gives you a CLI, multi-threading, retries, and more out-of-the-box.
 
 ![terminal](cli.svg)
 
@@ -36,7 +36,7 @@ That's it - you can now start running! Learn more about how to build jobs in the
 
 ## Example
 
-Here is a potential job that can read a CSV file (using [CsvHelper](https://joshclose.github.io/CsvHelper/)) and then send an email to each person in the file.
+Here is a job that reads a CSV file (using [CsvHelper](https://joshclose.github.io/CsvHelper/)) and sends an email to each person in the file.
 
 ```c#
 public class CsvEmailer : Job<CsvConfig, Person>
@@ -76,10 +76,10 @@ See [more in-depth examples](./examples) or [start reading the docs](https://www
 
 ## Why Write Code Like This?
 
-A lot of problems that us software developers are tasked with solving everyday boil down to processing lists of items. Some examples could be:
+A lot of problems that developers are tasked with solving everyday boil down to processing lists of items. Some examples could be:
 
-* importing and processing records from large uploaded CSV files into a database
-* downloading or uploading import/export files automatically on a schedule
+* importing and processing records from large files into a database
+* downloading or uploading import/export files on a schedule automatically
 * queueing and sending large amounts of transactional emails
 * generating PDFs from a list of records in a database
 * handling ETL scenarios
@@ -90,9 +90,9 @@ In fact, we have done exactly that and built a whole platform on top of this cor
 
 ## The Runly Platform
 
-You can turbocharge your job apps using the [Runly Platform](https://www.runly.io/platform/). The Runly Platform is a SaaS which helps shepherd your jobs from deployment to monitoring and scaling in production.
+You can turbocharge your job apps using the [Runly Platform](https://www.runly.io/platform/). The Runly Platform is SaaS which helps shepherd your jobs from deployment to monitoring and scaling in production.
 
-* Automatically deploy your jobs to your machines or the cloud as NuGet packages using tools you already know and love.
+* Automatically deploy your jobs to your existing machines or the cloud as NuGet packages using tools you already know and love.
 * Use familiar REST concepts to queue and schedule background jobs from your web or mobile app.
 * Easily integrate progress bars and job status into your app using [Runly UI](https://www.runly.io/ux/).
 * Use CRON expressions for fine-grained control of job scheduling.
@@ -102,11 +102,11 @@ You can get started on a [generous free tier](https://www.runly.io/pricing/) wit
 
 ## Is this project sustainable?
 
-[Sustainability in OSS is a problem](https://twitter.com/UdiDahan/status/1282925432166285312). We are trying to work on this project full-time and in order to do that, we have to feed our families. We think providing value via a paid service is the best way to do that while still solving problems for people with the core OSS offering.
+[Sustainability in OSS is a problem](https://twitter.com/UdiDahan/status/1282925432166285312). We are working on this project full-time and in order to keep doing that, we have to feed our families. We think providing value via a paid service is the best way to do that while still solving problems for people with the core OSS offering.
 
 We are fiercely independent and not going anywhere. [Read more about our philosophy](https://www.runly.io/about/).
 
-Our mission is to create great developer experiences making it trivial to build and scale jobs while providing a great user experience in your app. We have plenty of ideas on how to do this but we need your support to continue working on this project.
+Our mission is to create great developer experiences by making it trivial to build and scale jobs in order to provide a great user experience in your app. We have plenty of ideas on how to do this but we need your support to continue working on this project.
 
 You can support us by building a Runly job and letting us know what you think ([tweet @ us](https://twitter.com/runlyio) or [open an issue](https://github.com/runlyio/core-dotnet/issues/new)). If you find value in building Runly jobs, you can [give the Runly Platform a try](https://www.runly.io/platform).
 
