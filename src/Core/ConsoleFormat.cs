@@ -18,9 +18,9 @@ namespace Runly
 		public static string SingleLine => new string('-', 60);
 
 		/// <summary>
-		/// Returns the line ending to pluralize a word when the count is greater than one.
+		/// Returns the line ending to pluralize a word when the count is not equal to one.
 		/// </summary>
-		public static string AsPlural(int count, string ending = "s") => count > 1 ? ending : string.Empty;
+		public static string AsPlural(int count, string ending = "s") => count != 1 ? ending : string.Empty;
 
 		/// <summary>
 		/// Creates a single line string from the <paramref name="data"/>, appending space or truncating text to fit it into columns.
