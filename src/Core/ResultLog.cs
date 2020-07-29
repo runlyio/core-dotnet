@@ -198,7 +198,9 @@ namespace Runly
 			report.AppendLine();
 			report.AppendLine(ConsoleFormat.AsColumns(20, nameof(InitializeAsync), InitializeAsync.IsSuccessful ? "Successful" : "Unsuccessful"));
 			report.AppendLine(ConsoleFormat.AsColumns(20, nameof(GetItemsAsync), GetItemsAsync.IsSuccessful ? "Successful" : "Unsuccessful"));
-			report.AppendLine(ConsoleFormat.AsColumns(20, nameof(GetEnumerator), GetEnumerator.IsSuccessful ? "Successful" : "Unsuccessful"));
+			if (!Count?.IsSuccessful ?? false) report.AppendLine(ConsoleFormat.AsColumns(20, nameof(Count), Count.IsSuccessful ? "Successful" : "Unsuccessful"));
+			if (!GetEnumerator?.IsSuccessful ?? false) report.AppendLine(ConsoleFormat.AsColumns(20, nameof(GetEnumerator), GetEnumerator.IsSuccessful ? "Successful" : "Unsuccessful"));
+			report.AppendLine(ConsoleFormat.AsColumns(20, "ProcessAsync", FailedItemCount == 0 ? "Successful" : "Unsuccessful"));
 			report.AppendLine(ConsoleFormat.AsColumns(20, nameof(FinalizeAsync), FinalizeAsync.IsSuccessful ? "Successful" : "Unsuccessful"));
 			report.AppendLine();
 
@@ -207,37 +209,21 @@ namespace Runly
 
 			report.AppendLine();
 
-			report.AppendLine(ConsoleFormat.DoubleLine);
-			report.AppendLine("RESULTS");
-			report.AppendLine(ConsoleFormat.DoubleLine);
-			report.AppendLine();
-
-			foreach (var summary in Categories)
-			{
-				report.AppendLine(ConsoleFormat.SingleLine);
-				report.AppendLine($"{summary.Category}");
-				report.AppendLine(ConsoleFormat.SingleLine);
-
-				foreach (var item in Items.Where(i => i.Category == summary.Category).OrderBy(i => i.Id).Take(100))
-					report.AppendLine(item.Id);
-
-				report.AppendLine();
-			}
-
-			report.AppendLine(ConsoleFormat.DoubleLine);
-			report.AppendLine("OUTPUT");
-			report.AppendLine(ConsoleFormat.DoubleLine);
-			report.AppendLine();
-
-			report.AppendLine(Output != null ? JsonConvert.SerializeObject(Output) : "-- No Output --");
-			report.AppendLine();
-
-			if (FailedItemsThatThrewExceptions.Count() > 0)
+			if (FailedItemsThatThrewExceptions.Count() > 0 || Methods.Values.Any(m => !m.IsSuccessful))
 			{
 				report.AppendLine(ConsoleFormat.DoubleLine);
 				report.AppendLine("UNHANDLED EXCEPTIONS");
 				report.AppendLine(ConsoleFormat.DoubleLine);
 				report.AppendLine();
+
+				foreach (var method in Methods.Values.Where(m => !m.IsSuccessful))
+				{
+					report.AppendLine(ConsoleFormat.SingleLine);
+					report.AppendLine(method.Method.ToString());
+					report.AppendLine(ConsoleFormat.SingleLine);
+					report.AppendLine(method.Exception.ToString());
+					report.AppendLine();
+				}
 
 				foreach (var failure in FailedItemsThatThrewExceptions.Take(10))
 				{
