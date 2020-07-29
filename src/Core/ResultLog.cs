@@ -209,31 +209,6 @@ namespace Runly
 
 			report.AppendLine();
 
-			//report.AppendLine(ConsoleFormat.DoubleLine);
-			//report.AppendLine("RESULTS");
-			//report.AppendLine(ConsoleFormat.DoubleLine);
-			//report.AppendLine();
-
-			//foreach (var summary in Categories)
-			//{
-			//	report.AppendLine(ConsoleFormat.SingleLine);
-			//	report.AppendLine($"{summary.Category}");
-			//	report.AppendLine(ConsoleFormat.SingleLine);
-
-			//	foreach (var item in Items.Where(i => i.Category == summary.Category).OrderBy(i => i.Id).Take(100))
-			//		report.AppendLine(item.Id);
-
-			//	report.AppendLine();
-			//}
-
-			//report.AppendLine(ConsoleFormat.DoubleLine);
-			//report.AppendLine("OUTPUT");
-			//report.AppendLine(ConsoleFormat.DoubleLine);
-			//report.AppendLine();
-
-			//report.AppendLine(Output != null ? JsonConvert.SerializeObject(Output) : "-- No Output --");
-			//report.AppendLine();
-
 			if (FailedItemsThatThrewExceptions.Count() > 0 || Methods.Values.Any(m => !m.IsSuccessful))
 			{
 				report.AppendLine(ConsoleFormat.DoubleLine);
