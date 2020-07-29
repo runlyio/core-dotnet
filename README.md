@@ -118,17 +118,25 @@ You can keep up with what we are working on by [following us on Twitter](https:/
 
 ## Consuming Pre-release Packages
 
-Pre-release packages are published to this project's [GitHub Packages Feed](https://github.com/runlyio/core-dotnet/packages). If you want to consume one of these pre-release packages for testing purposes, you can add a `NuGet.config` file to the root of your project:
+Pre-release packages are published to this project's [GitHub Packages Feed](https://github.com/runlyio/core-dotnet/packages). If you want to consume one of these pre-release packages for testing purposes, you can add a `nuget.config` file to the root of your project:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <configuration>
   <packageSources>
     <clear />
-    <add key="runly-github" value="https://nuget.pkg.github.com/runlyio/index.json" />
+    <add key="github" value="https://nuget.pkg.github.com/runlyio/index.json" />
     <add key="NuGet.org" value="https://api.nuget.org/v3/index.json" />
   </packageSources>
+  <packageSourceCredentials>
+    <github>
+      <add key="Username" value="USERNAME" />
+      <add key="ClearTextPassword" value="PERSONAL_ACCESS_TOKEN" />
+    </github>
+  </packageSourceCredentials>
 </configuration>
 ```
 
-This will instruct your nuget client to look for packages via Runly's pre-release feed first and then the official NuGet feed.
+This config file will instruct your nuget client to look for packages via Runly's pre-release feed first and then the official NuGet feed.
+
+You will need to authenticate to the GitHub feed using a [personal access token](https://github.com/settings/tokens/new). Generate a new token with the `read:packages` scope and replace `USERNAME` and `PERSONAL_ACCESS_TOKEN` in `nuget.config` with your values.
