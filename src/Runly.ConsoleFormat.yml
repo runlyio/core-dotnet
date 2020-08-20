@@ -127,7 +127,7 @@ items:
   assemblies:
   - Runly.Core
   namespace: Runly
-  summary: "\nReturns the line ending to pluralize a word when the count is greater than one.\n"
+  summary: "\nReturns the line ending to pluralize a word when the count is not equal to one.\n"
   example: []
   syntax:
     content: public static string AsPlural(int count, string ending = "s")

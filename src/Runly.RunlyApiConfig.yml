@@ -6,9 +6,11 @@ items:
   parent: Runly
   children:
   - Runly.RunlyApiConfig.#ctor
+  - Runly.RunlyApiConfig.Cluster
   - Runly.RunlyApiConfig.EnvironmentId
   - Runly.RunlyApiConfig.InstanceId
   - Runly.RunlyApiConfig.LogSuccessfulItemResults
+  - Runly.RunlyApiConfig.Node
   - Runly.RunlyApiConfig.OrganizationId
   - Runly.RunlyApiConfig.Token
   - Runly.RunlyApiConfig.Uri
@@ -207,6 +209,74 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: Runly.RunlyApiConfig.Cluster
+  commentId: P:Runly.RunlyApiConfig.Cluster
+  id: Cluster
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: Cluster
+  nameWithType: RunlyApiConfig.Cluster
+  fullName: Runly.RunlyApiConfig.Cluster
+  type: Property
+  source:
+    id: Cluster
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 42
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe name of the cluster that the run is assigned to.\n"
+  remarks: "If a value is provided when queued, the run with be assigned to\nthe node specified. If the cluster does not exist the HTTP response will \nbe 409 Conflict. If no nodes are connected to the cluster the HTTP response\nwill be 202 Accepted."
+  example: []
+  syntax:
+    content: public string Cluster { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Cluster As String
+  overload: Runly.RunlyApiConfig.Cluster*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: Runly.RunlyApiConfig.Node
+  commentId: P:Runly.RunlyApiConfig.Node
+  id: Node
+  parent: Runly.RunlyApiConfig
+  langs:
+  - csharp
+  - vb
+  name: Node
+  nameWithType: RunlyApiConfig.Node
+  fullName: Runly.RunlyApiConfig.Node
+  type: Property
+  source:
+    id: Node
+    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    startLine: 50
+  assemblies:
+  - Runly.Core
+  namespace: Runly
+  summary: "\nThe name of the cluster that the run is assigned to.\n"
+  remarks: "If a value is provided when queued, the run with be assigned to\nthe cluster specified. If the node does not exist or is not connected the HTTP \nresponse will be 409 Conflict."
+  example: []
+  syntax:
+    content: public string Node { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Node As String
+  overload: Runly.RunlyApiConfig.Node*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: Runly.RunlyApiConfig.LogSuccessfulItemResults
   commentId: P:Runly.RunlyApiConfig.LogSuccessfulItemResults
   id: LogSuccessfulItemResults
@@ -221,7 +291,7 @@ items:
   source:
     id: LogSuccessfulItemResults
     path: /github/workspace/src/Core/RunlyApiConfig.cs
-    startLine: 38
+    startLine: 55
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -254,7 +324,7 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Core/RunlyApiConfig.cs
-    startLine: 43
+    startLine: 60
   assemblies:
   - Runly.Core
   namespace: Runly
@@ -314,6 +384,16 @@ references:
   name: Guid
   nameWithType: Guid
   fullName: Guid
+- uid: Runly.RunlyApiConfig.Cluster*
+  commentId: Overload:Runly.RunlyApiConfig.Cluster
+  name: Cluster
+  nameWithType: RunlyApiConfig.Cluster
+  fullName: Runly.RunlyApiConfig.Cluster
+- uid: Runly.RunlyApiConfig.Node*
+  commentId: Overload:Runly.RunlyApiConfig.Node
+  name: Node
+  nameWithType: RunlyApiConfig.Node
+  fullName: Runly.RunlyApiConfig.Node
 - uid: Runly.RunlyApiConfig.LogSuccessfulItemResults*
   commentId: Overload:Runly.RunlyApiConfig.LogSuccessfulItemResults
   name: LogSuccessfulItemResults
