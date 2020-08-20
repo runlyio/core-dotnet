@@ -34,6 +34,23 @@ namespace Runly
 		public Guid InstanceId { get; set; }
 
 		/// <summary>
+		/// The name of the cluster that the run is assigned to.
+		/// </summary>
+		/// <remarks>If a value is provided when queued, the run with be assigned to
+		/// the node specified. If the cluster does not exist the HTTP response will 
+		/// be 409 Conflict. If no nodes are connected to the cluster the HTTP response
+		/// will be 202 Accepted.</remarks>
+		public string Cluster { get; set; }
+
+		/// <summary>
+		/// The name of the cluster that the run is assigned to.
+		/// </summary>
+		/// <remarks>If a value is provided when queued, the run with be assigned to
+		/// the cluster specified. If the node does not exist or is not connected the HTTP 
+		/// response will be 409 Conflict.</remarks>
+		public string Node { get; set; }
+
+		/// <summary>
 		/// When true, successful item results will be sent to the API. This is similar to turning on debug logging, it may severely impact the performance of jobs.
 		/// </summary>
 		public bool LogSuccessfulItemResults { get; set; }
