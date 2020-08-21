@@ -340,10 +340,6 @@ namespace Runly
 			public Task MarkComplete(Disposition disposition, object output, IEnumerable<ItemProgress> categories) =>
 				SendPriorityAsync(nameof(MarkComplete), disposition, output, categories.ToArray());
 
-			/// <summary>
-			/// Call made by integration tests to signal the end of a series of messages.
-			/// </summary>
-			public Task Sync() => SendAsync(nameof(Sync));
 
 			/// <summary>
 			/// Disposes the <see cref="Connection"/>.
