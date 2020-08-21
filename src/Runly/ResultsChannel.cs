@@ -341,6 +341,11 @@ namespace Runly
 				SendPriorityAsync(nameof(MarkComplete), disposition, output, categories.ToArray());
 
 			/// <summary>
+			/// Call made by integration tests to signal the end of a series of messages.
+			/// </summary>
+			public Task Sync() => SendAsync(nameof(Sync));
+
+			/// <summary>
 			/// Disposes the <see cref="Connection"/>.
 			/// </summary>
 			public async ValueTask DisposeAsync()
