@@ -340,7 +340,6 @@ namespace Runly
 			public Task MarkComplete(Disposition disposition, object output, IEnumerable<ItemProgress> categories) =>
 				SendPriorityAsync(nameof(MarkComplete), disposition, output, categories.ToArray());
 
-
 			/// <summary>
 			/// Disposes the <see cref="Connection"/>.
 			/// </summary>
