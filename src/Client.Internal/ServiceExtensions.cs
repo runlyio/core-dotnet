@@ -45,6 +45,24 @@ namespace Runly
 
 			services.AddHttpClient("runly", (s, client) => client.BaseAddress = new Uri(getUrl(s)));
 
+			services.AddTransient<IOrgClient>(s =>
+			{
+				var factory = s.GetRequiredService<IHttpClientFactory>();
+				return new HttpOrgClient(factory.CreateClient("runly"), s.GetRequiredService<IAuthenticationProvider>());
+			});
+
+			services.AddTransient<IAccountClient>(s =>
+			{
+				var factory = s.GetRequiredService<IHttpClientFactory>();
+				return new HttpAccountClient(factory.CreateClient("runly"), s.GetRequiredService<IAuthenticationProvider>());
+			});
+
+			services.AddTransient<IInfrastructureClient>(s =>
+			{
+				var factory = s.GetRequiredService<IHttpClientFactory>();
+				return new HttpInfrastructureClient(factory.CreateClient("runly"), s.GetRequiredService<IAuthenticationProvider>());
+			});
+
 			services.AddTransient<IRunClient>(s =>
 			{
 				var factory = s.GetRequiredService<IHttpClientFactory>();
