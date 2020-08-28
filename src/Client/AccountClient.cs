@@ -15,16 +15,8 @@ namespace Runly
 		Task<OrgAccount> UpdateOrganizationAccount(string org, string email);
 
 		Task<IEnumerable<Application>> GetApplications();
-		Task<Application> AddApplication(string name, bool isPublic);
+		Task<Application> AddApplication(string name);
 		Task RevokeApplication(int id);
-	}
-
-	public static class AccountClientExtensions
-	{
-		public static Task<Application> AddApplication(this IAccountClient client, string name)
-		{
-			return client.AddApplication(name, false);
-		}
 	}
 
 	public class HttpAccountClient : IAccountClient
@@ -99,9 +91,9 @@ namespace Runly
 			return await response.Content.ReadAsAsync<IEnumerable<Application>>();
 		}
 
-		public async Task<Application> AddApplication(string name, bool isPublic)
+		public async Task<Application> AddApplication(string name)
 		{
-			var req = new HttpRequestMessage(HttpMethod.Post, "/apps/").WithJsonContent(new { name, isPublic });
+			var req = new HttpRequestMessage(HttpMethod.Post, "/apps/").WithJsonContent(new { name });
 			req.Headers.Authorization = await tokenProvider.AcquireAuthHeader();
 
 			var response = await api.SendAsync(req);
