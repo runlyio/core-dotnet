@@ -61,10 +61,12 @@ namespace Runly
 		/// <returns>A <see cref="Connection"/> to the results hub.</returns>
 		public async Task<Connection> ConnectAsync(Guid instanceId, CancellationToken token = default(CancellationToken))
 		{
+			var authToken = await auth.AcquireToken();
+
 			var connection = new HubConnectionBuilder()
 				.WithUrl(new Uri(baseUri, $"/nodes/results/{instanceId}"), o =>
 				{
-					o.AccessTokenProvider = auth.AcquireToken;
+					o.AccessTokenProvider = () => Task.FromResult(authToken);
 
 					opts?.Invoke(o);
 				})
