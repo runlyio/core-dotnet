@@ -33,7 +33,7 @@ items:
   source:
     id: Connection
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 83
+    startLine: 85
   assemblies:
   - Runly
   namespace: Runly
@@ -66,7 +66,7 @@ items:
   source:
     id: CancellationRequested
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 93
+    startLine: 95
   assemblies:
   - Runly
   namespace: Runly
@@ -95,7 +95,7 @@ items:
   source:
     id: RequireSendConfirmation
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 106
+    startLine: 108
   assemblies:
   - Runly
   namespace: Runly
@@ -128,7 +128,7 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 113
+    startLine: 115
   assemblies:
   - Runly
   namespace: Runly
@@ -166,7 +166,7 @@ items:
   source:
     id: FlushAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 152
+    startLine: 154
   assemblies:
   - Runly
   namespace: Runly
@@ -196,7 +196,7 @@ items:
   source:
     id: StartApp
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 252
+    startLine: 254
   assemblies:
   - Runly
   namespace: Runly
@@ -230,7 +230,7 @@ items:
   source:
     id: Abort
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 258
+    startLine: 260
   assemblies:
   - Runly
   namespace: Runly
@@ -261,7 +261,7 @@ items:
   source:
     id: ExitApp
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 266
+    startLine: 268
   assemblies:
   - Runly
   namespace: Runly
@@ -301,7 +301,7 @@ items:
   source:
     id: FailApp
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 273
+    startLine: 275
   assemblies:
   - Runly
   namespace: Runly
@@ -335,7 +335,7 @@ items:
   source:
     id: SetTotal
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 279
+    startLine: 281
   assemblies:
   - Runly
   namespace: Runly
@@ -369,7 +369,7 @@ items:
   source:
     id: UpdateState
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 286
+    startLine: 288
   assemblies:
   - Runly
   namespace: Runly
@@ -409,7 +409,7 @@ items:
   source:
     id: UpdateState
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 294
+    startLine: 296
   assemblies:
   - Runly
   namespace: Runly
@@ -449,7 +449,7 @@ items:
   source:
     id: MethodResult
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 301
+    startLine: 303
   assemblies:
   - Runly
   namespace: Runly
@@ -483,7 +483,7 @@ items:
   source:
     id: ItemResult
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 307
+    startLine: 309
   assemblies:
   - Runly
   namespace: Runly
@@ -517,7 +517,7 @@ items:
   source:
     id: Log
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 315
+    startLine: 317
   assemblies:
   - Runly
   namespace: Runly
@@ -557,7 +557,7 @@ items:
   source:
     id: MarkComplete
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 321
+    startLine: 323
   assemblies:
   - Runly
   namespace: Runly
@@ -591,7 +591,7 @@ items:
   source:
     id: MarkComplete
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 330
+    startLine: 332
   assemblies:
   - Runly
   namespace: Runly
@@ -634,7 +634,7 @@ items:
   source:
     id: MarkComplete
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 339
+    startLine: 341
   assemblies:
   - Runly
   namespace: Runly
@@ -677,7 +677,7 @@ items:
   source:
     id: DisposeAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 345
+    startLine: 347
   assemblies:
   - Runly
   namespace: Runly

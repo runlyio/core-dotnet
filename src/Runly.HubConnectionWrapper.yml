@@ -25,7 +25,7 @@ items:
   source:
     id: HubConnectionWrapper
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 468
+    startLine: 470
   assemblies:
   - Runly
   namespace: Runly
@@ -62,7 +62,7 @@ items:
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 476
+    startLine: 478
   assemblies:
   - Runly
   namespace: Runly
@@ -94,7 +94,7 @@ items:
   source:
     id: Closed
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 492
+    startLine: 494
   assemblies:
   - Runly
   namespace: Runly
@@ -126,7 +126,7 @@ items:
   source:
     id: Reconnected
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 506
+    startLine: 508
   assemblies:
   - Runly
   namespace: Runly
@@ -158,7 +158,7 @@ items:
   source:
     id: Reconnecting
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 520
+    startLine: 522
   assemblies:
   - Runly
   namespace: Runly
@@ -190,7 +190,7 @@ items:
   source:
     id: State
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 529
+    startLine: 531
   assemblies:
   - Runly
   namespace: Runly
@@ -225,7 +225,7 @@ items:
   source:
     id: DisposeAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 534
+    startLine: 536
   assemblies:
   - Runly
   namespace: Runly
@@ -255,7 +255,7 @@ items:
   source:
     id: StartAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 543
+    startLine: 545
   assemblies:
   - Runly
   namespace: Runly
@@ -287,7 +287,7 @@ items:
   source:
     id: InvokeCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 550
+    startLine: 552
   assemblies:
   - Runly
   namespace: Runly
@@ -329,7 +329,7 @@ items:
   source:
     id: SendCoreAsync
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 557
+    startLine: 559
   assemblies:
   - Runly
   namespace: Runly
@@ -371,7 +371,7 @@ items:
   source:
     id: On
     path: /github/workspace/src/Runly/ResultsChannel.cs
-    startLine: 564
+    startLine: 566
   assemblies:
   - Runly
   namespace: Runly
