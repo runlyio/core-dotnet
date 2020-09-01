@@ -1,42 +1,42 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.ResultsChannel.Connection
-  commentId: T:Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection
+  commentId: T:Runly.Client.ResultsChannel.Connection
   id: ResultsChannel.Connection
-  parent: Runly
+  parent: Runly.Client
   children:
-  - Runly.ResultsChannel.Connection.#ctor(Runly.IResultsConnection,ILogger{Runly.ResultsChannel})
-  - Runly.ResultsChannel.Connection.Abort
-  - Runly.ResultsChannel.Connection.CancellationRequested
-  - Runly.ResultsChannel.Connection.DisposeAsync
-  - Runly.ResultsChannel.Connection.ExitApp(System.Int32,System.Boolean,System.Int64)
-  - Runly.ResultsChannel.Connection.FailApp(System.Object)
-  - Runly.ResultsChannel.Connection.FlushAsync
-  - Runly.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
-  - Runly.ResultsChannel.Connection.Log(Runly.Models.RunLogType,System.Int32,System.String)
-  - Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
-  - Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Models.ItemProgress})
-  - Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,Runly.Models.ItemProgress[])
-  - Runly.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
-  - Runly.ResultsChannel.Connection.RequireSendConfirmation
-  - Runly.ResultsChannel.Connection.SetTotal(System.Int32)
-  - Runly.ResultsChannel.Connection.StartApp(System.Int32)
-  - Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState,IEnumerable{Runly.Models.ItemProgress})
-  - Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState,Runly.Models.ItemProgress[])
+  - Runly.Client.ResultsChannel.Connection.#ctor(Runly.Client.IResultsConnection,ILogger{Runly.Client.ResultsChannel})
+  - Runly.Client.ResultsChannel.Connection.Abort
+  - Runly.Client.ResultsChannel.Connection.CancellationRequested
+  - Runly.Client.ResultsChannel.Connection.DisposeAsync
+  - Runly.Client.ResultsChannel.Connection.ExitApp(System.Int32,System.Boolean,System.Int64)
+  - Runly.Client.ResultsChannel.Connection.FailApp(System.Object)
+  - Runly.Client.ResultsChannel.Connection.FlushAsync
+  - Runly.Client.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
+  - Runly.Client.ResultsChannel.Connection.Log(Runly.Client.Models.RunLogType,System.Int32,System.String)
+  - Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
+  - Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Client.Models.ItemProgress})
+  - Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,Runly.Client.Models.ItemProgress[])
+  - Runly.Client.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
+  - Runly.Client.ResultsChannel.Connection.RequireSendConfirmation
+  - Runly.Client.ResultsChannel.Connection.SetTotal(System.Int32)
+  - Runly.Client.ResultsChannel.Connection.StartApp(System.Int32)
+  - Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState,IEnumerable{Runly.Client.Models.ItemProgress})
+  - Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState,Runly.Client.Models.ItemProgress[])
   langs:
   - csharp
   - vb
   name: ResultsChannel.Connection
   nameWithType: ResultsChannel.Connection
-  fullName: Runly.ResultsChannel.Connection
+  fullName: Runly.Client.ResultsChannel.Connection
   type: Class
   source:
     id: Connection
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 85
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nConnection to the results hub.\n"
   example: []
   syntax:
@@ -52,24 +52,24 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.ResultsChannel.Connection.CancellationRequested
-  commentId: E:Runly.ResultsChannel.Connection.CancellationRequested
+- uid: Runly.Client.ResultsChannel.Connection.CancellationRequested
+  commentId: E:Runly.Client.ResultsChannel.Connection.CancellationRequested
   id: CancellationRequested
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: CancellationRequested
   nameWithType: ResultsChannel.Connection.CancellationRequested
-  fullName: Runly.ResultsChannel.Connection.CancellationRequested
+  fullName: Runly.Client.ResultsChannel.Connection.CancellationRequested
   type: Event
   source:
     id: CancellationRequested
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 95
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nEvent raises when cancellation is triggered.\n"
   example: []
   syntax:
@@ -81,24 +81,24 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.RequireSendConfirmation
-  commentId: P:Runly.ResultsChannel.Connection.RequireSendConfirmation
+- uid: Runly.Client.ResultsChannel.Connection.RequireSendConfirmation
+  commentId: P:Runly.Client.ResultsChannel.Connection.RequireSendConfirmation
   id: RequireSendConfirmation
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: RequireSendConfirmation
   nameWithType: ResultsChannel.Connection.RequireSendConfirmation
-  fullName: Runly.ResultsChannel.Connection.RequireSendConfirmation
+  fullName: Runly.Client.ResultsChannel.Connection.RequireSendConfirmation
   type: Property
   source:
     id: RequireSendConfirmation
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 108
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nWhen true, every message sent to the server will require a confirmation when \nit has been processed. Enabling this feature will create a performance hit but\neliminate race conditions that may occur when making unit test assertions.\n"
   example: []
   syntax:
@@ -107,69 +107,69 @@ items:
     return:
       type: System.Boolean
     content.vb: Public Property RequireSendConfirmation As Boolean
-  overload: Runly.ResultsChannel.Connection.RequireSendConfirmation*
+  overload: Runly.Client.ResultsChannel.Connection.RequireSendConfirmation*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.#ctor(Runly.IResultsConnection,ILogger{Runly.ResultsChannel})
-  commentId: M:Runly.ResultsChannel.Connection.#ctor(Runly.IResultsConnection,ILogger{Runly.ResultsChannel})
-  id: '#ctor(Runly.IResultsConnection,ILogger{Runly.ResultsChannel})'
-  parent: Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection.#ctor(Runly.Client.IResultsConnection,ILogger{Runly.Client.ResultsChannel})
+  commentId: M:Runly.Client.ResultsChannel.Connection.#ctor(Runly.Client.IResultsConnection,ILogger{Runly.Client.ResultsChannel})
+  id: '#ctor(Runly.Client.IResultsConnection,ILogger{Runly.Client.ResultsChannel})'
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: Connection(IResultsConnection, ILogger<ResultsChannel>)
   nameWithType: ResultsChannel.Connection.Connection(IResultsConnection, ILogger<ResultsChannel>)
-  fullName: Runly.ResultsChannel.Connection.Connection(Runly.IResultsConnection, ILogger<Runly.ResultsChannel>)
+  fullName: Runly.Client.ResultsChannel.Connection.Connection(Runly.Client.IResultsConnection, ILogger<Runly.Client.ResultsChannel>)
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 115
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nInitializes a new <xref href=\"Runly.ResultsChannel.Connection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Client
+  summary: "\nInitializes a new <xref href=\"Runly.Client.ResultsChannel.Connection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public Connection(IResultsConnection conn, ILogger<ResultsChannel> logger)
     parameters:
     - id: conn
-      type: Runly.IResultsConnection
+      type: Runly.Client.IResultsConnection
       description: ''
     - id: logger
-      type: ILogger{Runly.ResultsChannel}
+      type: ILogger{Runly.Client.ResultsChannel}
       description: ''
     content.vb: Public Sub New(conn As IResultsConnection, logger As ILogger(Of ResultsChannel))
-  overload: Runly.ResultsChannel.Connection.#ctor*
+  overload: Runly.Client.ResultsChannel.Connection.#ctor*
   nameWithType.vb: ResultsChannel.Connection.Connection(IResultsConnection, ILogger(Of ResultsChannel))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.ResultsChannel.Connection.Connection(Runly.IResultsConnection, ILogger(Of Runly.ResultsChannel))
+  fullName.vb: Runly.Client.ResultsChannel.Connection.Connection(Runly.Client.IResultsConnection, ILogger(Of Runly.Client.ResultsChannel))
   name.vb: Connection(IResultsConnection, ILogger(Of ResultsChannel))
-- uid: Runly.ResultsChannel.Connection.FlushAsync
-  commentId: M:Runly.ResultsChannel.Connection.FlushAsync
+- uid: Runly.Client.ResultsChannel.Connection.FlushAsync
+  commentId: M:Runly.Client.ResultsChannel.Connection.FlushAsync
   id: FlushAsync
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: FlushAsync()
   nameWithType: ResultsChannel.Connection.FlushAsync()
-  fullName: Runly.ResultsChannel.Connection.FlushAsync()
+  fullName: Runly.Client.ResultsChannel.Connection.FlushAsync()
   type: Method
   source:
     id: FlushAsync
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 154
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nBlocks the caller until all messages in the queue have been sent\n"
   example: []
   syntax:
@@ -177,29 +177,29 @@ items:
     return:
       type: Task
     content.vb: Public Function FlushAsync As Task
-  overload: Runly.ResultsChannel.Connection.FlushAsync*
+  overload: Runly.Client.ResultsChannel.Connection.FlushAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.StartApp(System.Int32)
-  commentId: M:Runly.ResultsChannel.Connection.StartApp(System.Int32)
+- uid: Runly.Client.ResultsChannel.Connection.StartApp(System.Int32)
+  commentId: M:Runly.Client.ResultsChannel.Connection.StartApp(System.Int32)
   id: StartApp(System.Int32)
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: StartApp(Int32)
   nameWithType: ResultsChannel.Connection.StartApp(Int32)
-  fullName: Runly.ResultsChannel.Connection.StartApp(System.Int32)
+  fullName: Runly.Client.ResultsChannel.Connection.StartApp(System.Int32)
   type: Method
   source:
     id: StartApp
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 254
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made when the node observes the job app starting.\n"
   example: []
   syntax:
@@ -211,29 +211,29 @@ items:
     return:
       type: Task
     content.vb: Public Function StartApp(pid As Integer) As Task
-  overload: Runly.ResultsChannel.Connection.StartApp*
+  overload: Runly.Client.ResultsChannel.Connection.StartApp*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.Abort
-  commentId: M:Runly.ResultsChannel.Connection.Abort
+- uid: Runly.Client.ResultsChannel.Connection.Abort
+  commentId: M:Runly.Client.ResultsChannel.Connection.Abort
   id: Abort
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: Abort()
   nameWithType: ResultsChannel.Connection.Abort()
-  fullName: Runly.ResultsChannel.Connection.Abort()
+  fullName: Runly.Client.ResultsChannel.Connection.Abort()
   type: Method
   source:
     id: Abort
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 260
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made when the node aborts the starting of a job because of a user-requested cancellation during acquisition.\n"
   example: []
   syntax:
@@ -242,29 +242,29 @@ items:
       type: Task
       description: ''
     content.vb: Public Function Abort As Task
-  overload: Runly.ResultsChannel.Connection.Abort*
+  overload: Runly.Client.ResultsChannel.Connection.Abort*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.ExitApp(System.Int32,System.Boolean,System.Int64)
-  commentId: M:Runly.ResultsChannel.Connection.ExitApp(System.Int32,System.Boolean,System.Int64)
+- uid: Runly.Client.ResultsChannel.Connection.ExitApp(System.Int32,System.Boolean,System.Int64)
+  commentId: M:Runly.Client.ResultsChannel.Connection.ExitApp(System.Int32,System.Boolean,System.Int64)
   id: ExitApp(System.Int32,System.Boolean,System.Int64)
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: ExitApp(Int32, Boolean, Int64)
   nameWithType: ResultsChannel.Connection.ExitApp(Int32, Boolean, Int64)
-  fullName: Runly.ResultsChannel.Connection.ExitApp(System.Int32, System.Boolean, System.Int64)
+  fullName: Runly.Client.ResultsChannel.Connection.ExitApp(System.Int32, System.Boolean, System.Int64)
   type: Method
   source:
     id: ExitApp
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 268
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made when the node observes the job app exiting.\n"
   example: []
   syntax:
@@ -282,29 +282,29 @@ items:
     return:
       type: Task
     content.vb: Public Function ExitApp(exitCode As Integer, timedOut As Boolean, duration As Long) As Task
-  overload: Runly.ResultsChannel.Connection.ExitApp*
+  overload: Runly.Client.ResultsChannel.Connection.ExitApp*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.FailApp(System.Object)
-  commentId: M:Runly.ResultsChannel.Connection.FailApp(System.Object)
+- uid: Runly.Client.ResultsChannel.Connection.FailApp(System.Object)
+  commentId: M:Runly.Client.ResultsChannel.Connection.FailApp(System.Object)
   id: FailApp(System.Object)
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: FailApp(Object)
   nameWithType: ResultsChannel.Connection.FailApp(Object)
-  fullName: Runly.ResultsChannel.Connection.FailApp(System.Object)
+  fullName: Runly.Client.ResultsChannel.Connection.FailApp(System.Object)
   type: Method
   source:
     id: FailApp
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 275
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made when an unexpected error happens on the node while running a job.\n"
   example: []
   syntax:
@@ -316,29 +316,29 @@ items:
     return:
       type: Task
     content.vb: Public Function FailApp(details As Object) As Task
-  overload: Runly.ResultsChannel.Connection.FailApp*
+  overload: Runly.Client.ResultsChannel.Connection.FailApp*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.SetTotal(System.Int32)
-  commentId: M:Runly.ResultsChannel.Connection.SetTotal(System.Int32)
+- uid: Runly.Client.ResultsChannel.Connection.SetTotal(System.Int32)
+  commentId: M:Runly.Client.ResultsChannel.Connection.SetTotal(System.Int32)
   id: SetTotal(System.Int32)
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: SetTotal(Int32)
   nameWithType: ResultsChannel.Connection.SetTotal(Int32)
-  fullName: Runly.ResultsChannel.Connection.SetTotal(System.Int32)
+  fullName: Runly.Client.ResultsChannel.Connection.SetTotal(System.Int32)
   type: Method
   source:
     id: SetTotal
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 281
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution to set the expected total number of items.\n"
   example: []
   syntax:
@@ -350,109 +350,109 @@ items:
     return:
       type: Task
     content.vb: Public Function SetTotal(total As Integer) As Task
-  overload: Runly.ResultsChannel.Connection.SetTotal*
+  overload: Runly.Client.ResultsChannel.Connection.SetTotal*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState,Runly.Models.ItemProgress[])
-  commentId: M:Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState,Runly.Models.ItemProgress[])
-  id: UpdateState(Runly.Models.InstanceState,Runly.Models.ItemProgress[])
-  parent: Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState,Runly.Client.Models.ItemProgress[])
+  commentId: M:Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState,Runly.Client.Models.ItemProgress[])
+  id: UpdateState(Runly.Client.Models.InstanceState,Runly.Client.Models.ItemProgress[])
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: UpdateState(InstanceState, ItemProgress[])
   nameWithType: ResultsChannel.Connection.UpdateState(InstanceState, ItemProgress[])
-  fullName: Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState, Runly.Models.ItemProgress[])
+  fullName: Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState, Runly.Client.Models.ItemProgress[])
   type: Method
   source:
     id: UpdateState
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 288
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution to broadcast an update of state and item progress.\n"
   example: []
   syntax:
     content: public Task UpdateState(InstanceState state, params ItemProgress[] categories)
     parameters:
     - id: state
-      type: Runly.Models.InstanceState
+      type: Runly.Client.Models.InstanceState
       description: The state of the job.
     - id: categories
-      type: Runly.Models.ItemProgress[]
+      type: Runly.Client.Models.ItemProgress[]
       description: The progress of the job.
     return:
       type: Task
     content.vb: Public Function UpdateState(state As InstanceState, ParamArray categories As ItemProgress()) As Task
-  overload: Runly.ResultsChannel.Connection.UpdateState*
+  overload: Runly.Client.ResultsChannel.Connection.UpdateState*
   nameWithType.vb: ResultsChannel.Connection.UpdateState(InstanceState, ItemProgress())
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState, Runly.Models.ItemProgress())
+  fullName.vb: Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState, Runly.Client.Models.ItemProgress())
   name.vb: UpdateState(InstanceState, ItemProgress())
-- uid: Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState,IEnumerable{Runly.Models.ItemProgress})
-  commentId: M:Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState,IEnumerable{Runly.Models.ItemProgress})
-  id: UpdateState(Runly.Models.InstanceState,IEnumerable{Runly.Models.ItemProgress})
-  parent: Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState,IEnumerable{Runly.Client.Models.ItemProgress})
+  commentId: M:Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState,IEnumerable{Runly.Client.Models.ItemProgress})
+  id: UpdateState(Runly.Client.Models.InstanceState,IEnumerable{Runly.Client.Models.ItemProgress})
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: UpdateState(InstanceState, IEnumerable<ItemProgress>)
   nameWithType: ResultsChannel.Connection.UpdateState(InstanceState, IEnumerable<ItemProgress>)
-  fullName: Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState, IEnumerable<Runly.Models.ItemProgress>)
+  fullName: Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState, IEnumerable<Runly.Client.Models.ItemProgress>)
   type: Method
   source:
     id: UpdateState
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 296
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution to broadcast an update of state and item progress.\n"
   example: []
   syntax:
     content: public Task UpdateState(InstanceState state, IEnumerable<ItemProgress> categories)
     parameters:
     - id: state
-      type: Runly.Models.InstanceState
+      type: Runly.Client.Models.InstanceState
       description: The state of the job.
     - id: categories
-      type: IEnumerable{Runly.Models.ItemProgress}
+      type: IEnumerable{Runly.Client.Models.ItemProgress}
       description: The progress of the job.
     return:
       type: Task
     content.vb: Public Function UpdateState(state As InstanceState, categories As IEnumerable(Of ItemProgress)) As Task
-  overload: Runly.ResultsChannel.Connection.UpdateState*
+  overload: Runly.Client.ResultsChannel.Connection.UpdateState*
   nameWithType.vb: ResultsChannel.Connection.UpdateState(InstanceState, IEnumerable(Of ItemProgress))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.ResultsChannel.Connection.UpdateState(Runly.Models.InstanceState, IEnumerable(Of Runly.Models.ItemProgress))
+  fullName.vb: Runly.Client.ResultsChannel.Connection.UpdateState(Runly.Client.Models.InstanceState, IEnumerable(Of Runly.Client.Models.ItemProgress))
   name.vb: UpdateState(InstanceState, IEnumerable(Of ItemProgress))
-- uid: Runly.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
-  commentId: M:Runly.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
+- uid: Runly.Client.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
+  commentId: M:Runly.Client.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
   id: MethodResult(Runly.MethodOutcome)
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: MethodResult(MethodOutcome)
   nameWithType: ResultsChannel.Connection.MethodResult(MethodOutcome)
-  fullName: Runly.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
+  fullName: Runly.Client.ResultsChannel.Connection.MethodResult(Runly.MethodOutcome)
   type: Method
   source:
     id: MethodResult
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 303
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution when a job method has been invoked.\n"
   example: []
   syntax:
@@ -464,29 +464,29 @@ items:
     return:
       type: Task
     content.vb: Public Function MethodResult(outcome As MethodOutcome) As Task
-  overload: Runly.ResultsChannel.Connection.MethodResult*
+  overload: Runly.Client.ResultsChannel.Connection.MethodResult*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
-  commentId: M:Runly.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
+- uid: Runly.Client.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
+  commentId: M:Runly.Client.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
   id: ItemResult(Runly.ItemResult)
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: ItemResult(ItemResult)
   nameWithType: ResultsChannel.Connection.ItemResult(ItemResult)
-  fullName: Runly.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
+  fullName: Runly.Client.ResultsChannel.Connection.ItemResult(Runly.ItemResult)
   type: Method
   source:
     id: ItemResult
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 309
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution when an item has been processed.\n"
   example: []
   syntax:
@@ -498,36 +498,36 @@ items:
     return:
       type: Task
     content.vb: Public Function ItemResult(result As ItemResult) As Task
-  overload: Runly.ResultsChannel.Connection.ItemResult*
+  overload: Runly.Client.ResultsChannel.Connection.ItemResult*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.Log(Runly.Models.RunLogType,System.Int32,System.String)
-  commentId: M:Runly.ResultsChannel.Connection.Log(Runly.Models.RunLogType,System.Int32,System.String)
-  id: Log(Runly.Models.RunLogType,System.Int32,System.String)
-  parent: Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection.Log(Runly.Client.Models.RunLogType,System.Int32,System.String)
+  commentId: M:Runly.Client.ResultsChannel.Connection.Log(Runly.Client.Models.RunLogType,System.Int32,System.String)
+  id: Log(Runly.Client.Models.RunLogType,System.Int32,System.String)
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: Log(RunLogType, Int32, String)
   nameWithType: ResultsChannel.Connection.Log(RunLogType, Int32, String)
-  fullName: Runly.ResultsChannel.Connection.Log(Runly.Models.RunLogType, System.Int32, System.String)
+  fullName: Runly.Client.ResultsChannel.Connection.Log(Runly.Client.Models.RunLogType, System.Int32, System.String)
   type: Method
   source:
     id: Log
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 317
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the node when data is read from the standard output or error of the job app.\n"
   example: []
   syntax:
     content: public Task Log(RunLogType type, int index, string log)
     parameters:
     - id: type
-      type: Runly.Models.RunLogType
+      type: Runly.Client.Models.RunLogType
       description: Indicates whether the data is from the standard output or error.
     - id: index
       type: System.Int32
@@ -538,29 +538,29 @@ items:
     return:
       type: Task
     content.vb: Public Function Log(type As RunLogType, index As Integer, log As String) As Task
-  overload: Runly.ResultsChannel.Connection.Log*
+  overload: Runly.Client.ResultsChannel.Connection.Log*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
-  commentId: M:Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
+- uid: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
+  commentId: M:Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
   id: MarkComplete(Runly.Disposition)
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: MarkComplete(Disposition)
   nameWithType: ResultsChannel.Connection.MarkComplete(Disposition)
-  fullName: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
+  fullName: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition)
   type: Method
   source:
     id: MarkComplete
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 323
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution when the job is complete.\n"
   example: []
   syntax:
@@ -572,29 +572,29 @@ items:
     return:
       type: Task
     content.vb: Public Function MarkComplete(disposition As Disposition) As Task
-  overload: Runly.ResultsChannel.Connection.MarkComplete*
+  overload: Runly.Client.ResultsChannel.Connection.MarkComplete*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,Runly.Models.ItemProgress[])
-  commentId: M:Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,Runly.Models.ItemProgress[])
-  id: MarkComplete(Runly.Disposition,System.Object,Runly.Models.ItemProgress[])
-  parent: Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,Runly.Client.Models.ItemProgress[])
+  commentId: M:Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,Runly.Client.Models.ItemProgress[])
+  id: MarkComplete(Runly.Disposition,System.Object,Runly.Client.Models.ItemProgress[])
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: MarkComplete(Disposition, Object, ItemProgress[])
   nameWithType: ResultsChannel.Connection.MarkComplete(Disposition, Object, ItemProgress[])
-  fullName: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, Runly.Models.ItemProgress[])
+  fullName: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, Runly.Client.Models.ItemProgress[])
   type: Method
   source:
     id: MarkComplete
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 332
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution when the job is complete.\n"
   example: []
   syntax:
@@ -607,37 +607,37 @@ items:
       type: System.Object
       description: The output from <xref href="Runly.IJob.FinalizeAsync(Runly.Disposition)" data-throw-if-not-resolved="false"></xref>.
     - id: categories
-      type: Runly.Models.ItemProgress[]
+      type: Runly.Client.Models.ItemProgress[]
       description: The final item progress.
     return:
       type: Task
     content.vb: Public Function MarkComplete(disposition As Disposition, output As Object, ParamArray categories As ItemProgress()) As Task
-  overload: Runly.ResultsChannel.Connection.MarkComplete*
+  overload: Runly.Client.ResultsChannel.Connection.MarkComplete*
   nameWithType.vb: ResultsChannel.Connection.MarkComplete(Disposition, Object, ItemProgress())
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, Runly.Models.ItemProgress())
+  fullName.vb: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, Runly.Client.Models.ItemProgress())
   name.vb: MarkComplete(Disposition, Object, ItemProgress())
-- uid: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Models.ItemProgress})
-  commentId: M:Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Models.ItemProgress})
-  id: MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Models.ItemProgress})
-  parent: Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Client.Models.ItemProgress})
+  commentId: M:Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Client.Models.ItemProgress})
+  id: MarkComplete(Runly.Disposition,System.Object,IEnumerable{Runly.Client.Models.ItemProgress})
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: MarkComplete(Disposition, Object, IEnumerable<ItemProgress>)
   nameWithType: ResultsChannel.Connection.MarkComplete(Disposition, Object, IEnumerable<ItemProgress>)
-  fullName: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, IEnumerable<Runly.Models.ItemProgress>)
+  fullName: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, IEnumerable<Runly.Client.Models.ItemProgress>)
   type: Method
   source:
     id: MarkComplete
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 341
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nCall made by the job execution when the job is complete.\n"
   example: []
   syntax:
@@ -650,55 +650,55 @@ items:
       type: System.Object
       description: The output from <xref href="Runly.IJob.FinalizeAsync(Runly.Disposition)" data-throw-if-not-resolved="false"></xref>.
     - id: categories
-      type: IEnumerable{Runly.Models.ItemProgress}
+      type: IEnumerable{Runly.Client.Models.ItemProgress}
       description: The final item progress.
     return:
       type: Task
     content.vb: Public Function MarkComplete(disposition As Disposition, output As Object, categories As IEnumerable(Of ItemProgress)) As Task
-  overload: Runly.ResultsChannel.Connection.MarkComplete*
+  overload: Runly.Client.ResultsChannel.Connection.MarkComplete*
   nameWithType.vb: ResultsChannel.Connection.MarkComplete(Disposition, Object, IEnumerable(Of ItemProgress))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, IEnumerable(Of Runly.Models.ItemProgress))
+  fullName.vb: Runly.Client.ResultsChannel.Connection.MarkComplete(Runly.Disposition, System.Object, IEnumerable(Of Runly.Client.Models.ItemProgress))
   name.vb: MarkComplete(Disposition, Object, IEnumerable(Of ItemProgress))
-- uid: Runly.ResultsChannel.Connection.DisposeAsync
-  commentId: M:Runly.ResultsChannel.Connection.DisposeAsync
+- uid: Runly.Client.ResultsChannel.Connection.DisposeAsync
+  commentId: M:Runly.Client.ResultsChannel.Connection.DisposeAsync
   id: DisposeAsync
-  parent: Runly.ResultsChannel.Connection
+  parent: Runly.Client.ResultsChannel.Connection
   langs:
   - csharp
   - vb
   name: DisposeAsync()
   nameWithType: ResultsChannel.Connection.DisposeAsync()
-  fullName: Runly.ResultsChannel.Connection.DisposeAsync()
+  fullName: Runly.Client.ResultsChannel.Connection.DisposeAsync()
   type: Method
   source:
     id: DisposeAsync
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 347
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nDisposes the <xref href=\"Runly.ResultsChannel.Connection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Client
+  summary: "\nDisposes the <xref href=\"Runly.Client.ResultsChannel.Connection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public ValueTask DisposeAsync()
     return:
       type: ValueTask
     content.vb: Public Function DisposeAsync As ValueTask
-  overload: Runly.ResultsChannel.Connection.DisposeAsync*
+  overload: Runly.Client.ResultsChannel.Connection.DisposeAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
+- uid: Runly.Client
+  commentId: N:Runly.Client
+  name: Runly.Client
+  nameWithType: Runly.Client
+  fullName: Runly.Client
 - uid: System.Object
   isExternal: true
   name: Object
@@ -785,40 +785,40 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.ResultsChannel.Connection.RequireSendConfirmation*
-  commentId: Overload:Runly.ResultsChannel.Connection.RequireSendConfirmation
+- uid: Runly.Client.ResultsChannel.Connection.RequireSendConfirmation*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.RequireSendConfirmation
   name: RequireSendConfirmation
   nameWithType: ResultsChannel.Connection.RequireSendConfirmation
-  fullName: Runly.ResultsChannel.Connection.RequireSendConfirmation
+  fullName: Runly.Client.ResultsChannel.Connection.RequireSendConfirmation
 - uid: System.Boolean
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: Runly.ResultsChannel.Connection
-  commentId: T:Runly.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection
+  commentId: T:Runly.Client.ResultsChannel.Connection
   name: ResultsChannel.Connection
   nameWithType: ResultsChannel.Connection
-  fullName: Runly.ResultsChannel.Connection
-- uid: Runly.ResultsChannel.Connection.#ctor*
-  commentId: Overload:Runly.ResultsChannel.Connection.#ctor
+  fullName: Runly.Client.ResultsChannel.Connection
+- uid: Runly.Client.ResultsChannel.Connection.#ctor*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.#ctor
   name: Connection
   nameWithType: ResultsChannel.Connection.Connection
-  fullName: Runly.ResultsChannel.Connection.Connection
-- uid: Runly.IResultsConnection
-  commentId: T:Runly.IResultsConnection
-  parent: Runly
+  fullName: Runly.Client.ResultsChannel.Connection.Connection
+- uid: Runly.Client.IResultsConnection
+  commentId: T:Runly.Client.IResultsConnection
+  parent: Runly.Client
   name: IResultsConnection
   nameWithType: IResultsConnection
-  fullName: Runly.IResultsConnection
-- uid: ILogger{Runly.ResultsChannel}
-  commentId: '!:ILogger{Runly.ResultsChannel}'
+  fullName: Runly.Client.IResultsConnection
+- uid: ILogger{Runly.Client.ResultsChannel}
+  commentId: '!:ILogger{Runly.Client.ResultsChannel}'
   definition: ILogger`1
   name: ILogger<ResultsChannel>
   nameWithType: ILogger<ResultsChannel>
-  fullName: ILogger<Runly.ResultsChannel>
+  fullName: ILogger<Runly.Client.ResultsChannel>
   nameWithType.vb: ILogger(Of ResultsChannel)
-  fullName.vb: ILogger(Of Runly.ResultsChannel)
+  fullName.vb: ILogger(Of Runly.Client.ResultsChannel)
   name.vb: ILogger(Of ResultsChannel)
   spec.csharp:
   - uid: ILogger`1
@@ -829,10 +829,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Runly.ResultsChannel
+  - uid: Runly.Client.ResultsChannel
     name: ResultsChannel
     nameWithType: ResultsChannel
-    fullName: Runly.ResultsChannel
+    fullName: Runly.Client.ResultsChannel
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -845,10 +845,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Runly.ResultsChannel
+  - uid: Runly.Client.ResultsChannel
     name: ResultsChannel
     nameWithType: ResultsChannel
-    fullName: Runly.ResultsChannel
+    fullName: Runly.Client.ResultsChannel
   - name: )
     nameWithType: )
     fullName: )
@@ -890,100 +890,100 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.ResultsChannel.Connection.FlushAsync*
-  commentId: Overload:Runly.ResultsChannel.Connection.FlushAsync
+- uid: Runly.Client.ResultsChannel.Connection.FlushAsync*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.FlushAsync
   name: FlushAsync
   nameWithType: ResultsChannel.Connection.FlushAsync
-  fullName: Runly.ResultsChannel.Connection.FlushAsync
+  fullName: Runly.Client.ResultsChannel.Connection.FlushAsync
 - uid: Task
   isExternal: true
   name: Task
   nameWithType: Task
   fullName: Task
-- uid: Runly.ResultsChannel.Connection.StartApp*
-  commentId: Overload:Runly.ResultsChannel.Connection.StartApp
+- uid: Runly.Client.ResultsChannel.Connection.StartApp*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.StartApp
   name: StartApp
   nameWithType: ResultsChannel.Connection.StartApp
-  fullName: Runly.ResultsChannel.Connection.StartApp
+  fullName: Runly.Client.ResultsChannel.Connection.StartApp
 - uid: System.Int32
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Runly.ResultsChannel.Connection.Abort*
-  commentId: Overload:Runly.ResultsChannel.Connection.Abort
+- uid: Runly.Client.ResultsChannel.Connection.Abort*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.Abort
   name: Abort
   nameWithType: ResultsChannel.Connection.Abort
-  fullName: Runly.ResultsChannel.Connection.Abort
-- uid: Runly.ResultsChannel.Connection.ExitApp*
-  commentId: Overload:Runly.ResultsChannel.Connection.ExitApp
+  fullName: Runly.Client.ResultsChannel.Connection.Abort
+- uid: Runly.Client.ResultsChannel.Connection.ExitApp*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.ExitApp
   name: ExitApp
   nameWithType: ResultsChannel.Connection.ExitApp
-  fullName: Runly.ResultsChannel.Connection.ExitApp
+  fullName: Runly.Client.ResultsChannel.Connection.ExitApp
 - uid: System.Int64
   commentId: '!:System.Int64'
   isExternal: true
   name: Int64
   nameWithType: Int64
   fullName: System.Int64
-- uid: Runly.ResultsChannel.Connection.FailApp*
-  commentId: Overload:Runly.ResultsChannel.Connection.FailApp
+- uid: Runly.Client.ResultsChannel.Connection.FailApp*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.FailApp
   name: FailApp
   nameWithType: ResultsChannel.Connection.FailApp
-  fullName: Runly.ResultsChannel.Connection.FailApp
-- uid: Runly.ResultsChannel.Connection.SetTotal*
-  commentId: Overload:Runly.ResultsChannel.Connection.SetTotal
+  fullName: Runly.Client.ResultsChannel.Connection.FailApp
+- uid: Runly.Client.ResultsChannel.Connection.SetTotal*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.SetTotal
   name: SetTotal
   nameWithType: ResultsChannel.Connection.SetTotal
-  fullName: Runly.ResultsChannel.Connection.SetTotal
-- uid: Runly.ResultsChannel.Connection.UpdateState*
-  commentId: Overload:Runly.ResultsChannel.Connection.UpdateState
+  fullName: Runly.Client.ResultsChannel.Connection.SetTotal
+- uid: Runly.Client.ResultsChannel.Connection.UpdateState*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.UpdateState
   name: UpdateState
   nameWithType: ResultsChannel.Connection.UpdateState
-  fullName: Runly.ResultsChannel.Connection.UpdateState
-- uid: Runly.Models.InstanceState
-  commentId: T:Runly.Models.InstanceState
-  parent: Runly.Models
+  fullName: Runly.Client.ResultsChannel.Connection.UpdateState
+- uid: Runly.Client.Models.InstanceState
+  commentId: T:Runly.Client.Models.InstanceState
+  parent: Runly.Client.Models
   name: InstanceState
   nameWithType: InstanceState
-  fullName: Runly.Models.InstanceState
-- uid: Runly.Models.ItemProgress[]
+  fullName: Runly.Client.Models.InstanceState
+- uid: Runly.Client.Models.ItemProgress[]
   isExternal: true
   name: ItemProgress[]
   nameWithType: ItemProgress[]
-  fullName: Runly.Models.ItemProgress[]
+  fullName: Runly.Client.Models.ItemProgress[]
   nameWithType.vb: ItemProgress()
-  fullName.vb: Runly.Models.ItemProgress()
+  fullName.vb: Runly.Client.Models.ItemProgress()
   name.vb: ItemProgress()
   spec.csharp:
-  - uid: Runly.Models.ItemProgress
+  - uid: Runly.Client.Models.ItemProgress
     name: ItemProgress
     nameWithType: ItemProgress
-    fullName: Runly.Models.ItemProgress
+    fullName: Runly.Client.Models.ItemProgress
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: Runly.Models.ItemProgress
+  - uid: Runly.Client.Models.ItemProgress
     name: ItemProgress
     nameWithType: ItemProgress
-    fullName: Runly.Models.ItemProgress
+    fullName: Runly.Client.Models.ItemProgress
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Runly.Models
-  commentId: N:Runly.Models
-  name: Runly.Models
-  nameWithType: Runly.Models
-  fullName: Runly.Models
-- uid: IEnumerable{Runly.Models.ItemProgress}
-  commentId: '!:IEnumerable{Runly.Models.ItemProgress}'
+- uid: Runly.Client.Models
+  commentId: N:Runly.Client.Models
+  name: Runly.Client.Models
+  nameWithType: Runly.Client.Models
+  fullName: Runly.Client.Models
+- uid: IEnumerable{Runly.Client.Models.ItemProgress}
+  commentId: '!:IEnumerable{Runly.Client.Models.ItemProgress}'
   definition: IEnumerable`1
   name: IEnumerable<ItemProgress>
   nameWithType: IEnumerable<ItemProgress>
-  fullName: IEnumerable<Runly.Models.ItemProgress>
+  fullName: IEnumerable<Runly.Client.Models.ItemProgress>
   nameWithType.vb: IEnumerable(Of ItemProgress)
-  fullName.vb: IEnumerable(Of Runly.Models.ItemProgress)
+  fullName.vb: IEnumerable(Of Runly.Client.Models.ItemProgress)
   name.vb: IEnumerable(Of ItemProgress)
   spec.csharp:
   - uid: IEnumerable`1
@@ -994,10 +994,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Runly.Models.ItemProgress
+  - uid: Runly.Client.Models.ItemProgress
     name: ItemProgress
     nameWithType: ItemProgress
-    fullName: Runly.Models.ItemProgress
+    fullName: Runly.Client.Models.ItemProgress
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -1010,10 +1010,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Runly.Models.ItemProgress
+  - uid: Runly.Client.Models.ItemProgress
     name: ItemProgress
     nameWithType: ItemProgress
-    fullName: Runly.Models.ItemProgress
+    fullName: Runly.Client.Models.ItemProgress
   - name: )
     nameWithType: )
     fullName: )
@@ -1055,39 +1055,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.ResultsChannel.Connection.MethodResult*
-  commentId: Overload:Runly.ResultsChannel.Connection.MethodResult
+- uid: Runly.Client.ResultsChannel.Connection.MethodResult*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.MethodResult
   name: MethodResult
   nameWithType: ResultsChannel.Connection.MethodResult
-  fullName: Runly.ResultsChannel.Connection.MethodResult
+  fullName: Runly.Client.ResultsChannel.Connection.MethodResult
 - uid: Runly.MethodOutcome
   commentId: T:Runly.MethodOutcome
   parent: Runly
   name: MethodOutcome
   nameWithType: MethodOutcome
   fullName: Runly.MethodOutcome
-- uid: Runly.ResultsChannel.Connection.ItemResult*
-  commentId: Overload:Runly.ResultsChannel.Connection.ItemResult
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Client.ResultsChannel.Connection.ItemResult*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.ItemResult
   name: ItemResult
   nameWithType: ResultsChannel.Connection.ItemResult
-  fullName: Runly.ResultsChannel.Connection.ItemResult
+  fullName: Runly.Client.ResultsChannel.Connection.ItemResult
 - uid: Runly.ItemResult
   commentId: T:Runly.ItemResult
   parent: Runly
   name: ItemResult
   nameWithType: ItemResult
   fullName: Runly.ItemResult
-- uid: Runly.ResultsChannel.Connection.Log*
-  commentId: Overload:Runly.ResultsChannel.Connection.Log
+- uid: Runly.Client.ResultsChannel.Connection.Log*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.Log
   name: Log
   nameWithType: ResultsChannel.Connection.Log
-  fullName: Runly.ResultsChannel.Connection.Log
-- uid: Runly.Models.RunLogType
-  commentId: T:Runly.Models.RunLogType
-  parent: Runly.Models
+  fullName: Runly.Client.ResultsChannel.Connection.Log
+- uid: Runly.Client.Models.RunLogType
+  commentId: T:Runly.Client.Models.RunLogType
+  parent: Runly.Client.Models
   name: RunLogType
   nameWithType: RunLogType
-  fullName: Runly.Models.RunLogType
+  fullName: Runly.Client.Models.RunLogType
 - uid: System.String
   isExternal: true
   name: String
@@ -1099,19 +1104,58 @@ references:
   name: Disposition
   nameWithType: Disposition
   fullName: Runly.Disposition
-- uid: Runly.ResultsChannel.Connection.MarkComplete*
-  commentId: Overload:Runly.ResultsChannel.Connection.MarkComplete
+- uid: Runly.Client.ResultsChannel.Connection.MarkComplete*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.MarkComplete
   name: MarkComplete
   nameWithType: ResultsChannel.Connection.MarkComplete
-  fullName: Runly.ResultsChannel.Connection.MarkComplete
+  fullName: Runly.Client.ResultsChannel.Connection.MarkComplete
 - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
   commentId: M:Runly.IJob.FinalizeAsync(Runly.Disposition)
-  isExternal: true
-- uid: Runly.ResultsChannel.Connection.DisposeAsync*
-  commentId: Overload:Runly.ResultsChannel.Connection.DisposeAsync
+  parent: Runly.IJob
+  name: FinalizeAsync(Disposition)
+  nameWithType: IJob.FinalizeAsync(Disposition)
+  fullName: Runly.IJob.FinalizeAsync(Runly.Disposition)
+  spec.csharp:
+  - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: IJob.FinalizeAsync
+    fullName: Runly.IJob.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: IJob.FinalizeAsync
+    fullName: Runly.IJob.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
+- uid: Runly.Client.ResultsChannel.Connection.DisposeAsync*
+  commentId: Overload:Runly.Client.ResultsChannel.Connection.DisposeAsync
   name: DisposeAsync
   nameWithType: ResultsChannel.Connection.DisposeAsync
-  fullName: Runly.ResultsChannel.Connection.DisposeAsync
+  fullName: Runly.Client.ResultsChannel.Connection.DisposeAsync
 - uid: ValueTask
   isExternal: true
   name: ValueTask

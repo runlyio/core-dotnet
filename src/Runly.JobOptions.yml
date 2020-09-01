@@ -15,10 +15,10 @@ items:
   type: Class
   source:
     id: JobOptions
-    path: /github/workspace/src/Core/JobOptions.cs
+    path: /github/workspace/src/Runly/JobOptions.cs
     startLine: 5
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nOptions that determine how a job is executed.\n"
   example: []
@@ -48,10 +48,10 @@ items:
   type: Property
   source:
     id: CanProcessInParallel
-    path: /github/workspace/src/Core/JobOptions.cs
+    path: /github/workspace/src/Runly/JobOptions.cs
     startLine: 13
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nWhen true, allows the execution of ProcessAsync on multiple concurrent threads. When false each item will be processed\nserially on one thread in the order returned from the enumerator.\n"
   remarks: When set to false, <xref href="Runly.ExecutionConfig.ParallelTaskCount" data-throw-if-not-resolved="false"></xref> is ignored.

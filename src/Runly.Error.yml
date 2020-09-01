@@ -19,10 +19,10 @@ items:
   type: Class
   source:
     id: Error
-    path: /github/workspace/src/Core/Error.cs
+    path: /github/workspace/src/Runly/Error.cs
     startLine: 8
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA serializable representation an <see cref=\"!:Exception\"></see>. \n"
   example: []
@@ -52,10 +52,10 @@ items:
   type: Property
   source:
     id: Message
-    path: /github/workspace/src/Core/Error.cs
+    path: /github/workspace/src/Runly/Error.cs
     startLine: 13
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a message describing the exception.\n"
   example: []
@@ -85,10 +85,10 @@ items:
   type: Property
   source:
     id: Trace
-    path: /github/workspace/src/Core/Error.cs
+    path: /github/workspace/src/Runly/Error.cs
     startLine: 18
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a detailed description of the exception.\n"
   example: []
@@ -118,10 +118,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/Error.cs
+    path: /github/workspace/src/Runly/Error.cs
     startLine: 23
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.Error\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -151,10 +151,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/Error.cs
+    path: /github/workspace/src/Runly/Error.cs
     startLine: 34
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.Error\" data-throw-if-not-resolved=\"false\"></xref> from an <see cref=\"!:Exception\"></see>.\n"
   example: []
@@ -183,10 +183,10 @@ items:
   type: Method
   source:
     id: ToString
-    path: /github/workspace/src/Core/Error.cs
+    path: /github/workspace/src/Runly/Error.cs
     startLine: 50
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nReturns the <xref href=\"Runly.Error.Message\" data-throw-if-not-resolved=\"false\"></xref>, which describes the <xref href=\"Runly.Error\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []

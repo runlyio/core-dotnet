@@ -18,10 +18,10 @@ items:
   type: Class
   source:
     id: ItemCategory
-    path: /github/workspace/src/Core/ItemCategory.cs
+    path: /github/workspace/src/Runly/ItemCategory.cs
     startLine: 5
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe summary of <xref href=\"Runly.ItemResult\" data-throw-if-not-resolved=\"false\"></xref> for a given category.\n"
   example: []
@@ -51,10 +51,10 @@ items:
   type: Property
   source:
     id: IsSuccessful
-    path: /github/workspace/src/Core/ItemCategory.cs
+    path: /github/workspace/src/Runly/ItemCategory.cs
     startLine: 12
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates whether the results in this category were successfully processed.\n"
   example: []
@@ -84,10 +84,10 @@ items:
   type: Property
   source:
     id: Category
-    path: /github/workspace/src/Core/ItemCategory.cs
+    path: /github/workspace/src/Runly/ItemCategory.cs
     startLine: 17
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the name of the category.\n"
   example: []
@@ -117,10 +117,10 @@ items:
   type: Property
   source:
     id: Count
-    path: /github/workspace/src/Core/ItemCategory.cs
+    path: /github/workspace/src/Runly/ItemCategory.cs
     startLine: 22
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the number of items in this category of results.\n"
   example: []
@@ -150,10 +150,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/ItemCategory.cs
+    path: /github/workspace/src/Runly/ItemCategory.cs
     startLine: 27
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.ItemCategory\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []

@@ -5,7 +5,7 @@ items:
   id: ConfigReader
   parent: Runly
   children:
-  - Runly.ConfigReader.#ctor(Runly.JobCache)
+  - Runly.ConfigReader.#ctor(Runly.Hosting.JobCache)
   - Runly.ConfigReader.FromFile(System.String)
   - Runly.ConfigReader.FromJson(System.String)
   langs:
@@ -18,7 +18,7 @@ items:
   source:
     id: ConfigReader
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - Runly
   namespace: Runly
@@ -37,21 +37,21 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.ConfigReader.#ctor(Runly.JobCache)
-  commentId: M:Runly.ConfigReader.#ctor(Runly.JobCache)
-  id: '#ctor(Runly.JobCache)'
+- uid: Runly.ConfigReader.#ctor(Runly.Hosting.JobCache)
+  commentId: M:Runly.ConfigReader.#ctor(Runly.Hosting.JobCache)
+  id: '#ctor(Runly.Hosting.JobCache)'
   parent: Runly.ConfigReader
   langs:
   - csharp
   - vb
   name: ConfigReader(JobCache)
   nameWithType: ConfigReader.ConfigReader(JobCache)
-  fullName: Runly.ConfigReader.ConfigReader(Runly.JobCache)
+  fullName: Runly.ConfigReader.ConfigReader(Runly.Hosting.JobCache)
   type: Constructor
   source:
     id: .ctor
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 22
+    startLine: 23
   assemblies:
   - Runly
   namespace: Runly
@@ -61,8 +61,8 @@ items:
     content: public ConfigReader(JobCache cache)
     parameters:
     - id: cache
-      type: Runly.JobCache
-      description: The <xref href="Runly.JobCache" data-throw-if-not-resolved="false"></xref> containing the config types that can be read.
+      type: Runly.Hosting.JobCache
+      description: The <xref href="Runly.Hosting.JobCache" data-throw-if-not-resolved="false"></xref> containing the config types that can be read.
     content.vb: Public Sub New(cache As JobCache)
   overload: Runly.ConfigReader.#ctor*
   modifiers.csharp:
@@ -83,7 +83,7 @@ items:
   source:
     id: FromFile
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 32
+    startLine: 33
   assemblies:
   - Runly
   namespace: Runly
@@ -118,7 +118,7 @@ items:
   source:
     id: FromJson
     path: /github/workspace/src/Runly/ConfigReader.cs
-    startLine: 55
+    startLine: 56
   assemblies:
   - Runly
   namespace: Runly
@@ -161,17 +161,22 @@ references:
   name: ConfigReader
   nameWithType: ConfigReader
   fullName: Runly.ConfigReader
-- uid: Runly.JobCache
-  commentId: T:Runly.JobCache
-  parent: Runly
+- uid: Runly.Hosting.JobCache
+  commentId: T:Runly.Hosting.JobCache
+  parent: Runly.Hosting
   name: JobCache
   nameWithType: JobCache
-  fullName: Runly.JobCache
+  fullName: Runly.Hosting.JobCache
 - uid: Runly.ConfigReader.#ctor*
   commentId: Overload:Runly.ConfigReader.#ctor
   name: ConfigReader
   nameWithType: ConfigReader.ConfigReader
   fullName: Runly.ConfigReader.ConfigReader
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
 - uid: Runly.ConfigReader.FromFile*
   commentId: Overload:Runly.ConfigReader.FromFile
   name: FromFile

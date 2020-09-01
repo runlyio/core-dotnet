@@ -18,10 +18,10 @@ items:
   type: Class
   source:
     id: Config
-    path: /github/workspace/src/Core/Config.cs
+    path: /github/workspace/src/Runly/Config.cs
     startLine: 10
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe base config class used to configure jobs.\n"
   remarks: Public members of this class and classes that extend it must be JSON serializable.
@@ -52,10 +52,10 @@ items:
   type: Property
   source:
     id: Job
-    path: /github/workspace/src/Core/Config.cs
+    path: /github/workspace/src/Runly/Config.cs
     startLine: 18
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIdentifies the job that created this config and/or the job that will run when executed.\n"
   example: []
@@ -85,10 +85,10 @@ items:
   type: Property
   source:
     id: Execution
-    path: /github/workspace/src/Core/Config.cs
+    path: /github/workspace/src/Runly/Config.cs
     startLine: 25
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nDetermines how the job will execute.\n"
   example: []
@@ -118,10 +118,10 @@ items:
   type: Property
   source:
     id: RunlyApi
-    path: /github/workspace/src/Core/Config.cs
+    path: /github/workspace/src/Runly/Config.cs
     startLine: 31
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nRunly API connection information used to report progress and store results of the job.\n"
   example: []
@@ -151,10 +151,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/Config.cs
+    path: /github/workspace/src/Runly/Config.cs
     startLine: 37
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []

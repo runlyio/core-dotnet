@@ -1,31 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.JobCache
-  commentId: T:Runly.JobCache
+- uid: Runly.Hosting.JobCache
+  commentId: T:Runly.Hosting.JobCache
   id: JobCache
-  parent: Runly
+  parent: Runly.Hosting
   children:
-  - Runly.JobCache.#ctor(IEnumerable{Assembly})
-  - Runly.JobCache.Get(System.String)
-  - Runly.JobCache.Get(Type)
-  - Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
-  - Runly.JobCache.GetDefaultConfig(System.String)
-  - Runly.JobCache.Jobs
+  - Runly.Hosting.JobCache.#ctor(IEnumerable{Assembly})
+  - Runly.Hosting.JobCache.Get(System.String)
+  - Runly.Hosting.JobCache.Get(Type)
+  - Runly.Hosting.JobCache.GetDefaultConfig(Runly.Hosting.JobInfo)
+  - Runly.Hosting.JobCache.GetDefaultConfig(System.String)
+  - Runly.Hosting.JobCache.Jobs
   langs:
   - csharp
   - vb
   name: JobCache
   nameWithType: JobCache
-  fullName: Runly.JobCache
+  fullName: Runly.Hosting.JobCache
   type: Class
   source:
     id: JobCache
-    path: /github/workspace/src/Runly/JobCache.cs
+    path: /github/workspace/src/Runly/Hosting/JobCache.cs
     startLine: 10
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nA cache of <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job types found in the assemblies provided.\n"
+  namespace: Runly.Hosting
+  summary: "\nA cache of <xref href=\"Runly.Hosting.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job types found in the assemblies provided.\n"
   example: []
   syntax:
     content: 'public class JobCache : object'
@@ -40,58 +40,58 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.JobCache.Jobs
-  commentId: P:Runly.JobCache.Jobs
+- uid: Runly.Hosting.JobCache.Jobs
+  commentId: P:Runly.Hosting.JobCache.Jobs
   id: Jobs
-  parent: Runly.JobCache
+  parent: Runly.Hosting.JobCache
   langs:
   - csharp
   - vb
   name: Jobs
   nameWithType: JobCache.Jobs
-  fullName: Runly.JobCache.Jobs
+  fullName: Runly.Hosting.JobCache.Jobs
   type: Property
   source:
     id: Jobs
-    path: /github/workspace/src/Runly/JobCache.cs
+    path: /github/workspace/src/Runly/Hosting/JobCache.cs
     startLine: 15
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nGets the jobs found in the assemblies provided.\n"
   example: []
   syntax:
     content: public IEnumerable<JobInfo> Jobs { get; }
     parameters: []
     return:
-      type: IEnumerable{Runly.JobInfo}
+      type: IEnumerable{Runly.Hosting.JobInfo}
     content.vb: Public ReadOnly Property Jobs As IEnumerable(Of JobInfo)
-  overload: Runly.JobCache.Jobs*
+  overload: Runly.Hosting.JobCache.Jobs*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.JobCache.#ctor(IEnumerable{Assembly})
-  commentId: M:Runly.JobCache.#ctor(IEnumerable{Assembly})
+- uid: Runly.Hosting.JobCache.#ctor(IEnumerable{Assembly})
+  commentId: M:Runly.Hosting.JobCache.#ctor(IEnumerable{Assembly})
   id: '#ctor(IEnumerable{Assembly})'
-  parent: Runly.JobCache
+  parent: Runly.Hosting.JobCache
   langs:
   - csharp
   - vb
   name: JobCache(IEnumerable<Assembly>)
   nameWithType: JobCache.JobCache(IEnumerable<Assembly>)
-  fullName: Runly.JobCache.JobCache(IEnumerable<Assembly>)
+  fullName: Runly.Hosting.JobCache.JobCache(IEnumerable<Assembly>)
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/JobCache.cs
+    path: /github/workspace/src/Runly/Hosting/JobCache.cs
     startLine: 21
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nInitializes a new <xref href=\"Runly.JobCache\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Hosting
+  summary: "\nInitializes a new <xref href=\"Runly.Hosting.JobCache\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public JobCache(IEnumerable<Assembly> jobAssemblies)
@@ -100,105 +100,105 @@ items:
       type: IEnumerable{Assembly}
       description: The assemblies to search for jobs.
     content.vb: Public Sub New(jobAssemblies As IEnumerable(Of Assembly))
-  overload: Runly.JobCache.#ctor*
+  overload: Runly.Hosting.JobCache.#ctor*
   nameWithType.vb: JobCache.JobCache(IEnumerable(Of Assembly))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.JobCache.JobCache(IEnumerable(Of Assembly))
+  fullName.vb: Runly.Hosting.JobCache.JobCache(IEnumerable(Of Assembly))
   name.vb: JobCache(IEnumerable(Of Assembly))
-- uid: Runly.JobCache.Get(Type)
-  commentId: M:Runly.JobCache.Get(Type)
+- uid: Runly.Hosting.JobCache.Get(Type)
+  commentId: M:Runly.Hosting.JobCache.Get(Type)
   id: Get(Type)
-  parent: Runly.JobCache
+  parent: Runly.Hosting.JobCache
   langs:
   - csharp
   - vb
   name: Get(Type)
   nameWithType: JobCache.Get(Type)
-  fullName: Runly.JobCache.Get(Type)
+  fullName: Runly.Hosting.JobCache.Get(Type)
   type: Method
   source:
     id: Get
-    path: /github/workspace/src/Runly/JobCache.cs
+    path: /github/workspace/src/Runly/Hosting/JobCache.cs
     startLine: 45
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nGets the <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
+  namespace: Runly.Hosting
+  summary: "\nGets the <xref href=\"Runly.Hosting.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
   example: []
   syntax:
     content: public JobInfo Get(Type type)
     parameters:
     - id: type
       type: Type
-      description: The type to get the <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> for.
+      description: The type to get the <xref href="Runly.Hosting.JobInfo" data-throw-if-not-resolved="false"></xref> for.
     return:
-      type: Runly.JobInfo
-      description: A <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> or null if the type cannot be found.
+      type: Runly.Hosting.JobInfo
+      description: A <xref href="Runly.Hosting.JobInfo" data-throw-if-not-resolved="false"></xref> or null if the type cannot be found.
     content.vb: Public Function Get(type As Type) As JobInfo
-  overload: Runly.JobCache.Get*
+  overload: Runly.Hosting.JobCache.Get*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.JobCache.Get(System.String)
-  commentId: M:Runly.JobCache.Get(System.String)
+- uid: Runly.Hosting.JobCache.Get(System.String)
+  commentId: M:Runly.Hosting.JobCache.Get(System.String)
   id: Get(System.String)
-  parent: Runly.JobCache
+  parent: Runly.Hosting.JobCache
   langs:
   - csharp
   - vb
   name: Get(String)
   nameWithType: JobCache.Get(String)
-  fullName: Runly.JobCache.Get(System.String)
+  fullName: Runly.Hosting.JobCache.Get(System.String)
   type: Method
   source:
     id: Get
-    path: /github/workspace/src/Runly/JobCache.cs
+    path: /github/workspace/src/Runly/Hosting/JobCache.cs
     startLine: 60
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nGets the <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
-  remarks: "\nAn exact case match is attempted first for either the type <see cref=\"!:MemberInfo.Name\"></see>\nor <see cref=\"!:Type.FullName\"></see>. If no matches are found a case insensitive match is attempted.\nIf zero or more than one job type matches, a <xref href=\"Runly.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref> will be thrown.\n"
+  namespace: Runly.Hosting
+  summary: "\nGets the <xref href=\"Runly.Hosting.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
+  remarks: "\nAn exact case match is attempted first for either the type <see cref=\"!:MemberInfo.Name\"></see>\nor <see cref=\"!:Type.FullName\"></see>. If no matches are found a case insensitive match is attempted.\nIf zero or more than one job type matches, a <xref href=\"Runly.Hosting.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref> will be thrown.\n"
   example: []
   syntax:
     content: public JobInfo Get(string jobType)
     parameters:
     - id: jobType
       type: System.String
-      description: The type to get the <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> for.
+      description: The type to get the <xref href="Runly.Hosting.JobInfo" data-throw-if-not-resolved="false"></xref> for.
     return:
-      type: Runly.JobInfo
-      description: A <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> or null if the type cannot be found.
+      type: Runly.Hosting.JobInfo
+      description: A <xref href="Runly.Hosting.JobInfo" data-throw-if-not-resolved="false"></xref> or null if the type cannot be found.
     content.vb: Public Function Get(jobType As String) As JobInfo
-  overload: Runly.JobCache.Get*
+  overload: Runly.Hosting.JobCache.Get*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.JobCache.GetDefaultConfig(System.String)
-  commentId: M:Runly.JobCache.GetDefaultConfig(System.String)
+- uid: Runly.Hosting.JobCache.GetDefaultConfig(System.String)
+  commentId: M:Runly.Hosting.JobCache.GetDefaultConfig(System.String)
   id: GetDefaultConfig(System.String)
-  parent: Runly.JobCache
+  parent: Runly.Hosting.JobCache
   langs:
   - csharp
   - vb
   name: GetDefaultConfig(String)
   nameWithType: JobCache.GetDefaultConfig(String)
-  fullName: Runly.JobCache.GetDefaultConfig(System.String)
+  fullName: Runly.Hosting.JobCache.GetDefaultConfig(System.String)
   type: Method
   source:
     id: GetDefaultConfig
-    path: /github/workspace/src/Runly/JobCache.cs
+    path: /github/workspace/src/Runly/Hosting/JobCache.cs
     startLine: 75
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nGets the default <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> for the job type specified.\n"
-  remarks: "\nAn exact case match is attempted first for either the type <see cref=\"!:MemberInfo.Name\"></see>\nor <see cref=\"!:Type.FullName\"></see> of the job type. If no matches are found a case insensitive \nmatch is attempted. If zero or more than one job type matches, a <xref href=\"Runly.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref>\nwill be thrown.\n"
+  remarks: "\nAn exact case match is attempted first for either the type <see cref=\"!:MemberInfo.Name\"></see>\nor <see cref=\"!:Type.FullName\"></see> of the job type. If no matches are found a case insensitive \nmatch is attempted. If zero or more than one job type matches, a <xref href=\"Runly.Hosting.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref>\nwill be thrown.\n"
   example: []
   syntax:
     content: public Config GetDefaultConfig(string jobType)
@@ -209,76 +209,76 @@ items:
     return:
       type: Runly.Config
     content.vb: Public Function GetDefaultConfig(jobType As String) As Config
-  overload: Runly.JobCache.GetDefaultConfig*
+  overload: Runly.Hosting.JobCache.GetDefaultConfig*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
-  commentId: M:Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
-  id: GetDefaultConfig(Runly.JobInfo)
-  parent: Runly.JobCache
+- uid: Runly.Hosting.JobCache.GetDefaultConfig(Runly.Hosting.JobInfo)
+  commentId: M:Runly.Hosting.JobCache.GetDefaultConfig(Runly.Hosting.JobInfo)
+  id: GetDefaultConfig(Runly.Hosting.JobInfo)
+  parent: Runly.Hosting.JobCache
   langs:
   - csharp
   - vb
   name: GetDefaultConfig(JobInfo)
   nameWithType: JobCache.GetDefaultConfig(JobInfo)
-  fullName: Runly.JobCache.GetDefaultConfig(Runly.JobInfo)
+  fullName: Runly.Hosting.JobCache.GetDefaultConfig(Runly.Hosting.JobInfo)
   type: Method
   source:
     id: GetDefaultConfig
-    path: /github/workspace/src/Runly/JobCache.cs
+    path: /github/workspace/src/Runly/Hosting/JobCache.cs
     startLine: 85
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nGets the default <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> for the <code data-dev-comment-type=\"paramref\" class=\"paramref\">jobInfo</code>.\n"
   example: []
   syntax:
     content: public Config GetDefaultConfig(JobInfo jobInfo)
     parameters:
     - id: jobInfo
-      type: Runly.JobInfo
-      description: The <xref href="Runly.JobInfo" data-throw-if-not-resolved="false"></xref> to get the default config for.
+      type: Runly.Hosting.JobInfo
+      description: The <xref href="Runly.Hosting.JobInfo" data-throw-if-not-resolved="false"></xref> to get the default config for.
     return:
       type: Runly.Config
       description: The default config for the job.
     content.vb: Public Function GetDefaultConfig(jobInfo As JobInfo) As Config
-  overload: Runly.JobCache.GetDefaultConfig*
+  overload: Runly.Hosting.JobCache.GetDefaultConfig*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Runly.JobInfo
-  commentId: T:Runly.JobInfo
-  parent: Runly
+- uid: Runly.Hosting.JobInfo
+  commentId: T:Runly.Hosting.JobInfo
+  parent: Runly.Hosting
   name: JobInfo
   nameWithType: JobInfo
-  fullName: Runly.JobInfo
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
+  fullName: Runly.Hosting.JobInfo
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
 - uid: System.Object
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.JobCache.Jobs*
-  commentId: Overload:Runly.JobCache.Jobs
+- uid: Runly.Hosting.JobCache.Jobs*
+  commentId: Overload:Runly.Hosting.JobCache.Jobs
   name: Jobs
   nameWithType: JobCache.Jobs
-  fullName: Runly.JobCache.Jobs
-- uid: IEnumerable{Runly.JobInfo}
-  commentId: '!:IEnumerable{Runly.JobInfo}'
+  fullName: Runly.Hosting.JobCache.Jobs
+- uid: IEnumerable{Runly.Hosting.JobInfo}
+  commentId: '!:IEnumerable{Runly.Hosting.JobInfo}'
   definition: IEnumerable`1
   name: IEnumerable<JobInfo>
   nameWithType: IEnumerable<JobInfo>
-  fullName: IEnumerable<Runly.JobInfo>
+  fullName: IEnumerable<Runly.Hosting.JobInfo>
   nameWithType.vb: IEnumerable(Of JobInfo)
-  fullName.vb: IEnumerable(Of Runly.JobInfo)
+  fullName.vb: IEnumerable(Of Runly.Hosting.JobInfo)
   name.vb: IEnumerable(Of JobInfo)
   spec.csharp:
   - uid: IEnumerable`1
@@ -289,10 +289,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Runly.JobInfo
+  - uid: Runly.Hosting.JobInfo
     name: JobInfo
     nameWithType: JobInfo
-    fullName: Runly.JobInfo
+    fullName: Runly.Hosting.JobInfo
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -305,10 +305,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Runly.JobInfo
+  - uid: Runly.Hosting.JobInfo
     name: JobInfo
     nameWithType: JobInfo
-    fullName: Runly.JobInfo
+    fullName: Runly.Hosting.JobInfo
   - name: )
     nameWithType: )
     fullName: )
@@ -350,17 +350,17 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.JobCache
-  commentId: T:Runly.JobCache
-  parent: Runly
+- uid: Runly.Hosting.JobCache
+  commentId: T:Runly.Hosting.JobCache
+  parent: Runly.Hosting
   name: JobCache
   nameWithType: JobCache
-  fullName: Runly.JobCache
-- uid: Runly.JobCache.#ctor*
-  commentId: Overload:Runly.JobCache.#ctor
+  fullName: Runly.Hosting.JobCache
+- uid: Runly.Hosting.JobCache.#ctor*
+  commentId: Overload:Runly.Hosting.JobCache.#ctor
   name: JobCache
   nameWithType: JobCache.JobCache
-  fullName: Runly.JobCache.JobCache
+  fullName: Runly.Hosting.JobCache.JobCache
 - uid: IEnumerable{Assembly}
   commentId: '!:IEnumerable{Assembly}'
   definition: IEnumerable`1
@@ -404,21 +404,21 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.JobCache.Get*
-  commentId: Overload:Runly.JobCache.Get
+- uid: Runly.Hosting.JobCache.Get*
+  commentId: Overload:Runly.Hosting.JobCache.Get
   name: Get
   nameWithType: JobCache.Get
-  fullName: Runly.JobCache.Get
+  fullName: Runly.Hosting.JobCache.Get
 - uid: Type
   isExternal: true
   name: Type
   nameWithType: Type
   fullName: Type
-- uid: Runly.TypeNotFoundException
-  commentId: T:Runly.TypeNotFoundException
+- uid: Runly.Hosting.TypeNotFoundException
+  commentId: T:Runly.Hosting.TypeNotFoundException
   name: TypeNotFoundException
   nameWithType: TypeNotFoundException
-  fullName: Runly.TypeNotFoundException
+  fullName: Runly.Hosting.TypeNotFoundException
 - uid: System.String
   isExternal: true
   name: String
@@ -430,8 +430,13 @@ references:
   name: Config
   nameWithType: Config
   fullName: Runly.Config
-- uid: Runly.JobCache.GetDefaultConfig*
-  commentId: Overload:Runly.JobCache.GetDefaultConfig
+- uid: Runly.Hosting.JobCache.GetDefaultConfig*
+  commentId: Overload:Runly.Hosting.JobCache.GetDefaultConfig
   name: GetDefaultConfig
   nameWithType: JobCache.GetDefaultConfig
-  fullName: Runly.JobCache.GetDefaultConfig
+  fullName: Runly.Hosting.JobCache.GetDefaultConfig
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly

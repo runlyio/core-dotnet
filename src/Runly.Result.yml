@@ -29,10 +29,10 @@ items:
   type: Class
   source:
     id: Result
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 7
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe value returned from ProcessAsync to indicate the result of processing an item.\n"
   example: []
@@ -62,10 +62,10 @@ items:
   type: Method
   source:
     id: SuccessOrCancelled
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 12
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA successful result in the &quot;Successful&quot; category, except when cancellation has been requested, changing the category to &quot;Cancelled&quot;.\n"
   example: []
@@ -97,10 +97,10 @@ items:
   type: Method
   source:
     id: Success
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 17
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA successful result.\n"
   example: []
@@ -129,10 +129,10 @@ items:
   type: Method
   source:
     id: Success
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 22
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA successful result in a user-defined category.\n"
   example: []
@@ -164,10 +164,10 @@ items:
   type: Method
   source:
     id: Success
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 27
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA successful result with output.\n"
   example: []
@@ -199,10 +199,10 @@ items:
   type: Method
   source:
     id: Success
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 32
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA successful result in a user-defined category with output.\n"
   example: []
@@ -236,10 +236,10 @@ items:
   type: Method
   source:
     id: Failure
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 37
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nAn unsuccessful result.\n"
   example: []
@@ -268,10 +268,10 @@ items:
   type: Method
   source:
     id: Failure
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 42
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nAn unsuccessful result in a user-defined category.\n"
   example: []
@@ -303,10 +303,10 @@ items:
   type: Method
   source:
     id: Failure
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 47
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nAn unsuccessful result with output.\n"
   example: []
@@ -338,10 +338,10 @@ items:
   type: Method
   source:
     id: Failure
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 52
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nAn unsuccessful result in a user-defined category with output.\n"
   example: []
@@ -375,10 +375,10 @@ items:
   type: Field
   source:
     id: Successful
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 57
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe default category for successful results.\n"
   example: []
@@ -406,10 +406,10 @@ items:
   type: Field
   source:
     id: Failed
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 62
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe default category for failed results.\n"
   example: []
@@ -437,10 +437,10 @@ items:
   type: Field
   source:
     id: Cancelled
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 67
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe default category for cancelled results.\n"
   example: []
@@ -468,10 +468,10 @@ items:
   type: Property
   source:
     id: IsSuccessful
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 72
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nTrue when processing was completed successfully.\n"
   example: []
@@ -501,10 +501,10 @@ items:
   type: Property
   source:
     id: Category
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 77
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe category to group this result into.\n"
   example: []
@@ -534,10 +534,10 @@ items:
   type: Property
   source:
     id: Output
-    path: /github/workspace/src/Core/Result.cs
+    path: /github/workspace/src/Runly/Result.cs
     startLine: 82
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nOutput from processing the item.\n"
   example: []

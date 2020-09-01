@@ -15,10 +15,10 @@ items:
   type: Class
   source:
     id: DictionaryExtensions
-    path: /github/workspace/src/Core/DictionaryExtensions.cs
+    path: /github/workspace/src/Runly/Util/DictionaryExtensions.cs
     startLine: 7
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nExtension methods for <see cref=\"!:Dictionary&lt;TKey, TValue>\"></see>.\n"
   example: []
@@ -50,10 +50,10 @@ items:
   type: Method
   source:
     id: ValueOrDefault
-    path: /github/workspace/src/Core/DictionaryExtensions.cs
+    path: /github/workspace/src/Runly/Util/DictionaryExtensions.cs
     startLine: 13
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a value stored in a <code data-dev-comment-type=\"paramref\" class=\"paramref\">dictionary</code> or the default value if the key is not present in the dictionary.\n"
   remarks: Returns the default value if <code data-dev-comment-type="paramref" class="paramref">dictionary</code> is null.

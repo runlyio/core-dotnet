@@ -166,6 +166,7 @@ items:
       type: Task
       description: A <see cref="!:Task"></see> representing the asynchronous execution of this method.
     content.vb: Protected Overrides Function ExecuteInternalAsync(token As CancellationToken) As Task
+  overridden: Runly.Execution.ExecuteInternalAsync(CancellationToken)
   overload: Runly.Processing.ExecutionBase`2.ExecuteInternalAsync*
   nameWithType.vb: ExecutionBase(Of TConfig, TItem).ExecuteInternalAsync(CancellationToken)
   modifiers.csharp:
@@ -842,6 +843,45 @@ references:
   name: IJob
   nameWithType: IJob
   fullName: Runly.IJob
+- uid: Runly.Execution.ExecuteInternalAsync(CancellationToken)
+  commentId: M:Runly.Execution.ExecuteInternalAsync(CancellationToken)
+  parent: Runly.Execution
+  isExternal: true
+  name: ExecuteInternalAsync(CancellationToken)
+  nameWithType: Execution.ExecuteInternalAsync(CancellationToken)
+  fullName: Runly.Execution.ExecuteInternalAsync(CancellationToken)
+  spec.csharp:
+  - uid: Runly.Execution.ExecuteInternalAsync(CancellationToken)
+    name: ExecuteInternalAsync
+    nameWithType: Execution.ExecuteInternalAsync
+    fullName: Runly.Execution.ExecuteInternalAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.Execution.ExecuteInternalAsync(CancellationToken)
+    name: ExecuteInternalAsync
+    nameWithType: Execution.ExecuteInternalAsync
+    fullName: Runly.Execution.ExecuteInternalAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Runly.Processing.ExecutionBase`2.ExecuteInternalAsync*
   commentId: Overload:Runly.Processing.ExecutionBase`2.ExecuteInternalAsync
   name: ExecuteInternalAsync

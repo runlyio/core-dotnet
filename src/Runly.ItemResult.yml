@@ -26,10 +26,10 @@ items:
   type: Class
   source:
     id: ItemResult
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 9
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe result of a single item being processed by a job.\n"
   example: []
@@ -59,10 +59,10 @@ items:
   type: Property
   source:
     id: Id
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 14
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the ID of the item.\n"
   example: []
@@ -92,10 +92,10 @@ items:
   type: Property
   source:
     id: IsSuccessful
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 19
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates whether the job successfully processed the item.\n"
   example: []
@@ -125,10 +125,10 @@ items:
   type: Property
   source:
     id: FailedDueToException
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 24
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates whether the item failed because an exception was thrown from ProcessAsync.\n"
   example: []
@@ -158,10 +158,10 @@ items:
   type: Property
   source:
     id: Category
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 32
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe category this result is grouped into. If the item <xref href=\"Runly.ItemResult.FailedDueToException\" data-throw-if-not-resolved=\"false\"></xref>, this will be the type name of the exception.\n"
   example: []
@@ -191,10 +191,10 @@ items:
   type: Property
   source:
     id: Output
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 54
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the output from FinalizeAsync.\n"
   example: []
@@ -224,10 +224,10 @@ items:
   type: Property
   source:
     id: Methods
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 59
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the individual <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for each <xref href=\"Runly.JobMethod\" data-throw-if-not-resolved=\"false\"></xref> that was called for this item.\n"
   example: []
@@ -257,10 +257,10 @@ items:
   type: Property
   source:
     id: EnumeratorMoveNext
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 64
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to MoveNextAsync on the enumerator.\n"
   example: []
@@ -290,10 +290,10 @@ items:
   type: Property
   source:
     id: EnumeratorCurrent
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 70
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to Current on the enumerator.\n"
   example: []
@@ -323,10 +323,10 @@ items:
   type: Property
   source:
     id: GetItemIdAsync
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 76
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to GetItemIdAsync.\n"
   example: []
@@ -356,10 +356,10 @@ items:
   type: Property
   source:
     id: ProcessAsync
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 82
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for the call to ProcessAsync.\n"
   example: []
@@ -389,10 +389,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 93
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.ItemResult\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -424,10 +424,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/ItemResult.cs
+    path: /github/workspace/src/Runly/ItemResult.cs
     startLine: 99
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.ItemResult\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []

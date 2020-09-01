@@ -1,29 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.JobLoadErrors
-  commentId: T:Runly.JobLoadErrors
+- uid: Runly.Hosting.JobLoadErrors
+  commentId: T:Runly.Hosting.JobLoadErrors
   id: JobLoadErrors
-  parent: Runly
+  parent: Runly.Hosting
   children:
-  - Runly.JobLoadErrors.IsAbstract
-  - Runly.JobLoadErrors.IsGenericTypeDefinition
-  - Runly.JobLoadErrors.IsInterface
-  - Runly.JobLoadErrors.None
+  - Runly.Hosting.JobLoadErrors.IsAbstract
+  - Runly.Hosting.JobLoadErrors.IsGenericTypeDefinition
+  - Runly.Hosting.JobLoadErrors.IsInterface
+  - Runly.Hosting.JobLoadErrors.None
   langs:
   - csharp
   - vb
   name: JobLoadErrors
   nameWithType: JobLoadErrors
-  fullName: Runly.JobLoadErrors
+  fullName: Runly.Hosting.JobLoadErrors
   type: Enum
   source:
     id: JobLoadErrors
-    path: /github/workspace/src/Runly/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/Hosting/JobLoadErrors.cs
     startLine: 7
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nError reasons that <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> may encounter when loading a job.\n"
+  namespace: Runly.Hosting
+  summary: "\nError reasons that <xref href=\"Runly.Hosting.JobInfo\" data-throw-if-not-resolved=\"false\"></xref> may encounter when loading a job.\n"
   example: []
   syntax:
     content: 'public enum JobLoadErrors : int'
@@ -34,30 +34,30 @@ items:
   modifiers.vb:
   - Public
   - Enum
-- uid: Runly.JobLoadErrors.None
-  commentId: F:Runly.JobLoadErrors.None
+- uid: Runly.Hosting.JobLoadErrors.None
+  commentId: F:Runly.Hosting.JobLoadErrors.None
   id: None
-  parent: Runly.JobLoadErrors
+  parent: Runly.Hosting.JobLoadErrors
   langs:
   - csharp
   - vb
   name: None
   nameWithType: JobLoadErrors.None
-  fullName: Runly.JobLoadErrors.None
+  fullName: Runly.Hosting.JobLoadErrors.None
   type: Field
   source:
     id: None
-    path: /github/workspace/src/Runly/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/Hosting/JobLoadErrors.cs
     startLine: 13
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nNo errors loading the job.\n"
   example: []
   syntax:
     content: None = null
     return:
-      type: Runly.JobLoadErrors
+      type: Runly.Hosting.JobLoadErrors
     content.vb: None = Nothing
   modifiers.csharp:
   - public
@@ -65,30 +65,30 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Runly.JobLoadErrors.IsInterface
-  commentId: F:Runly.JobLoadErrors.IsInterface
+- uid: Runly.Hosting.JobLoadErrors.IsInterface
+  commentId: F:Runly.Hosting.JobLoadErrors.IsInterface
   id: IsInterface
-  parent: Runly.JobLoadErrors
+  parent: Runly.Hosting.JobLoadErrors
   langs:
   - csharp
   - vb
   name: IsInterface
   nameWithType: JobLoadErrors.IsInterface
-  fullName: Runly.JobLoadErrors.IsInterface
+  fullName: Runly.Hosting.JobLoadErrors.IsInterface
   type: Field
   source:
     id: IsInterface
-    path: /github/workspace/src/Runly/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/Hosting/JobLoadErrors.cs
     startLine: 18
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nThe job type is an interface and cannot be instantiated.\n"
   example: []
   syntax:
     content: IsInterface = null
     return:
-      type: Runly.JobLoadErrors
+      type: Runly.Hosting.JobLoadErrors
     content.vb: IsInterface = Nothing
   modifiers.csharp:
   - public
@@ -96,30 +96,30 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Runly.JobLoadErrors.IsAbstract
-  commentId: F:Runly.JobLoadErrors.IsAbstract
+- uid: Runly.Hosting.JobLoadErrors.IsAbstract
+  commentId: F:Runly.Hosting.JobLoadErrors.IsAbstract
   id: IsAbstract
-  parent: Runly.JobLoadErrors
+  parent: Runly.Hosting.JobLoadErrors
   langs:
   - csharp
   - vb
   name: IsAbstract
   nameWithType: JobLoadErrors.IsAbstract
-  fullName: Runly.JobLoadErrors.IsAbstract
+  fullName: Runly.Hosting.JobLoadErrors.IsAbstract
   type: Field
   source:
     id: IsAbstract
-    path: /github/workspace/src/Runly/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/Hosting/JobLoadErrors.cs
     startLine: 23
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nThe job type is an abstract class and cannot be instantiated.\n"
   example: []
   syntax:
     content: IsAbstract = null
     return:
-      type: Runly.JobLoadErrors
+      type: Runly.Hosting.JobLoadErrors
     content.vb: IsAbstract = Nothing
   modifiers.csharp:
   - public
@@ -127,30 +127,30 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: Runly.JobLoadErrors.IsGenericTypeDefinition
-  commentId: F:Runly.JobLoadErrors.IsGenericTypeDefinition
+- uid: Runly.Hosting.JobLoadErrors.IsGenericTypeDefinition
+  commentId: F:Runly.Hosting.JobLoadErrors.IsGenericTypeDefinition
   id: IsGenericTypeDefinition
-  parent: Runly.JobLoadErrors
+  parent: Runly.Hosting.JobLoadErrors
   langs:
   - csharp
   - vb
   name: IsGenericTypeDefinition
   nameWithType: JobLoadErrors.IsGenericTypeDefinition
-  fullName: Runly.JobLoadErrors.IsGenericTypeDefinition
+  fullName: Runly.Hosting.JobLoadErrors.IsGenericTypeDefinition
   type: Field
   source:
     id: IsGenericTypeDefinition
-    path: /github/workspace/src/Runly/JobLoadErrors.cs
+    path: /github/workspace/src/Runly/Hosting/JobLoadErrors.cs
     startLine: 28
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nThe job type is a generic type definition and cannot be instantiated.\n"
   example: []
   syntax:
     content: IsGenericTypeDefinition = null
     return:
-      type: Runly.JobLoadErrors
+      type: Runly.Hosting.JobLoadErrors
     content.vb: IsGenericTypeDefinition = Nothing
   modifiers.csharp:
   - public
@@ -159,20 +159,20 @@ items:
   - Public
   - Const
 references:
-- uid: Runly.JobInfo
-  commentId: T:Runly.JobInfo
-  parent: Runly
+- uid: Runly.Hosting.JobInfo
+  commentId: T:Runly.Hosting.JobInfo
+  parent: Runly.Hosting
   name: JobInfo
   nameWithType: JobInfo
-  fullName: Runly.JobInfo
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
-- uid: Runly.JobLoadErrors
-  commentId: T:Runly.JobLoadErrors
-  parent: Runly
+  fullName: Runly.Hosting.JobInfo
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
+- uid: Runly.Hosting.JobLoadErrors
+  commentId: T:Runly.Hosting.JobLoadErrors
+  parent: Runly.Hosting
   name: JobLoadErrors
   nameWithType: JobLoadErrors
-  fullName: Runly.JobLoadErrors
+  fullName: Runly.Hosting.JobLoadErrors

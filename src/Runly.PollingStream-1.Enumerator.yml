@@ -18,7 +18,7 @@ items:
   type: Class
   source:
     id: Enumerator
-    path: /github/workspace/src/Runly/PollingStream.cs
+    path: /github/workspace/src/Runly/Util/PollingStream.cs
     startLine: 43
   assemblies:
   - Runly
@@ -54,7 +54,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/PollingStream.cs
+    path: /github/workspace/src/Runly/Util/PollingStream.cs
     startLine: 55
   assemblies:
   - Runly
@@ -92,7 +92,7 @@ items:
   type: Property
   source:
     id: Current
-    path: /github/workspace/src/Runly/PollingStream.cs
+    path: /github/workspace/src/Runly/Util/PollingStream.cs
     startLine: 64
   assemblies:
   - Runly
@@ -127,7 +127,7 @@ items:
   type: Method
   source:
     id: MoveNextAsync
-    path: /github/workspace/src/Runly/PollingStream.cs
+    path: /github/workspace/src/Runly/Util/PollingStream.cs
     startLine: 70
   assemblies:
   - Runly
@@ -160,7 +160,7 @@ items:
   type: Method
   source:
     id: DisposeAsync
-    path: /github/workspace/src/Runly/PollingStream.cs
+    path: /github/workspace/src/Runly/Util/PollingStream.cs
     startLine: 106
   assemblies:
   - Runly

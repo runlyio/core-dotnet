@@ -18,10 +18,10 @@ items:
   type: Enum
   source:
     id: Disposition
-    path: /github/workspace/src/Core/Disposition.cs
+    path: /github/workspace/src/Runly/Disposition.cs
     startLine: 5
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe final state of a job run.\n"
   example: []
@@ -47,10 +47,10 @@ items:
   type: Field
   source:
     id: NotComplete
-    path: /github/workspace/src/Core/Disposition.cs
+    path: /github/workspace/src/Runly/Disposition.cs
     startLine: 10
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the run has not completed, so there is no <xref href=\"Runly.Disposition\" data-throw-if-not-resolved=\"false\"></xref> yet.\n"
   example: []
@@ -77,10 +77,10 @@ items:
   type: Field
   source:
     id: Successful
-    path: /github/workspace/src/Core/Disposition.cs
+    path: /github/workspace/src/Runly/Disposition.cs
     startLine: 15
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the run completed successfully.\n"
   example: []
@@ -108,10 +108,10 @@ items:
   type: Field
   source:
     id: Failed
-    path: /github/workspace/src/Core/Disposition.cs
+    path: /github/workspace/src/Runly/Disposition.cs
     startLine: 20
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the run exceeded the item failure threshold and stopped running, terminating in a failed state.\n"
   example: []
@@ -139,10 +139,10 @@ items:
   type: Field
   source:
     id: Cancelled
-    path: /github/workspace/src/Core/Disposition.cs
+    path: /github/workspace/src/Runly/Disposition.cs
     startLine: 25
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the run was cancelled by a user and stopped running.\n"
   example: []

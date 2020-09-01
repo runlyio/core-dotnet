@@ -18,10 +18,10 @@ items:
   type: Class
   source:
     id: ConfigWriter
-    path: /github/workspace/src/Core/ConfigWriter.cs
+    path: /github/workspace/src/Runly/ConfigWriter.cs
     startLine: 10
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nMethods for serializing <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -52,10 +52,10 @@ items:
   type: Field
   source:
     id: Settings
-    path: /github/workspace/src/Core/ConfigWriter.cs
+    path: /github/workspace/src/Runly/ConfigWriter.cs
     startLine: 15
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nSettings used for the <see cref=\"!:JsonSerializer\"></see>.\n"
   example: []
@@ -85,10 +85,10 @@ items:
   type: Field
   source:
     id: Serializer
-    path: /github/workspace/src/Core/ConfigWriter.cs
+    path: /github/workspace/src/Runly/ConfigWriter.cs
     startLine: 30
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA <see cref=\"!:JsonSerializer\"></see> created using the <xref href=\"Runly.ConfigWriter.Settings\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -118,10 +118,10 @@ items:
   type: Method
   source:
     id: ToJson
-    path: /github/workspace/src/Core/ConfigWriter.cs
+    path: /github/workspace/src/Runly/ConfigWriter.cs
     startLine: 35
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nSerializes a <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> to JSON.\n"
   example: []
@@ -153,10 +153,10 @@ items:
   type: Method
   source:
     id: ToReducedJson
-    path: /github/workspace/src/Core/ConfigWriter.cs
+    path: /github/workspace/src/Runly/ConfigWriter.cs
     startLine: 40
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nSerializes a <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> to JSON, removing the <xref href=\"Runly.Config.Execution\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.Config.RunlyApi\" data-throw-if-not-resolved=\"false\"></xref> sections for brevity.\n"
   example: []

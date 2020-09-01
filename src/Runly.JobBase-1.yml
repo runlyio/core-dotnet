@@ -14,6 +14,7 @@ items:
   - Runly.JobBase`1.Options
   - Runly.JobBase`1.Runly#IJob#Config
   - Runly.JobBase`1.Runly#IJob#GetDefaultConfig
+  - Runly.JobBase`1.Runly#IJob#GetExecution(IServiceProvider)
   langs:
   - csharp
   - vb
@@ -156,6 +157,8 @@ items:
       type: CancellationToken
     content.vb: Public Property CancellationToken As CancellationToken
   overload: Runly.JobBase`1.CancellationToken*
+  implements:
+  - Runly.IJob.CancellationToken
   nameWithType.vb: JobBase(Of TConfig).CancellationToken
   modifiers.csharp:
   - public
@@ -263,6 +266,39 @@ items:
   nameWithType.vb: JobBase(Of TConfig).Runly.IJob.GetDefaultConfig()
   fullName.vb: Runly.JobBase(Of TConfig).Runly.IJob.GetDefaultConfig()
   name.vb: Runly.IJob.GetDefaultConfig()
+- uid: Runly.JobBase`1.Runly#IJob#GetExecution(IServiceProvider)
+  commentId: M:Runly.JobBase`1.Runly#IJob#GetExecution(IServiceProvider)
+  id: Runly#IJob#GetExecution(IServiceProvider)
+  isEii: true
+  parent: Runly.JobBase`1
+  langs:
+  - csharp
+  - vb
+  name: IJob.GetExecution(IServiceProvider)
+  nameWithType: JobBase<TConfig>.IJob.GetExecution(IServiceProvider)
+  fullName: Runly.JobBase<TConfig>.Runly.IJob.GetExecution(IServiceProvider)
+  type: Method
+  source:
+    id: Runly.IJob.GetExecution
+    path: /github/workspace/src/Runly/JobBase.cs
+    startLine: 71
+  assemblies:
+  - Runly
+  namespace: Runly
+  syntax:
+    content: Execution IJob.GetExecution(IServiceProvider provider)
+    parameters:
+    - id: provider
+      type: IServiceProvider
+    return:
+      type: Runly.Execution
+    content.vb: Function Runly.IJob.GetExecution(provider As IServiceProvider) As Execution Implements IJob.GetExecution
+  overload: Runly.JobBase`1.Runly#IJob#GetExecution*
+  implements:
+  - Runly.IJob.GetExecution(IServiceProvider)
+  nameWithType.vb: JobBase(Of TConfig).Runly.IJob.GetExecution(IServiceProvider)
+  fullName.vb: Runly.JobBase(Of TConfig).Runly.IJob.GetExecution(IServiceProvider)
+  name.vb: Runly.IJob.GetExecution(IServiceProvider)
 - uid: Runly.JobBase`1.GetExecution(IServiceProvider)
   commentId: M:Runly.JobBase`1.GetExecution(IServiceProvider)
   id: GetExecution(IServiceProvider)
@@ -328,6 +364,8 @@ items:
       type: Task
     content.vb: Public Overridable Function InitializeAsync As Task
   overload: Runly.JobBase`1.InitializeAsync*
+  implements:
+  - Runly.IJob.InitializeAsync
   nameWithType.vb: JobBase(Of TConfig).InitializeAsync()
   modifiers.csharp:
   - public
@@ -367,6 +405,8 @@ items:
       type: Task{System.Object}
     content.vb: Public Overridable Function FinalizeAsync(disposition As Disposition) As Task(Of Object)
   overload: Runly.JobBase`1.FinalizeAsync*
+  implements:
+  - Runly.IJob.FinalizeAsync(Runly.Disposition)
   nameWithType.vb: JobBase(Of TConfig).FinalizeAsync(Disposition)
   modifiers.csharp:
   - public
@@ -471,6 +511,12 @@ references:
   fullName: Runly.JobBase<TConfig>.CancellationToken
   nameWithType.vb: JobBase(Of TConfig).CancellationToken
   fullName.vb: Runly.JobBase(Of TConfig).CancellationToken
+- uid: Runly.IJob.CancellationToken
+  commentId: P:Runly.IJob.CancellationToken
+  parent: Runly.IJob
+  name: CancellationToken
+  nameWithType: IJob.CancellationToken
+  fullName: Runly.IJob.CancellationToken
 - uid: CancellationToken
   isExternal: true
   name: CancellationToken
@@ -575,6 +621,58 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: Runly.JobBase`1.Runly#IJob#GetExecution*
+  commentId: Overload:Runly.JobBase`1.Runly#IJob#GetExecution
+  name: IJob.GetExecution
+  nameWithType: JobBase<TConfig>.IJob.GetExecution
+  fullName: Runly.JobBase<TConfig>.Runly.IJob.GetExecution
+  nameWithType.vb: JobBase(Of TConfig).Runly.IJob.GetExecution
+  fullName.vb: Runly.JobBase(Of TConfig).Runly.IJob.GetExecution
+  name.vb: Runly.IJob.GetExecution
+- uid: Runly.IJob.GetExecution(IServiceProvider)
+  commentId: M:Runly.IJob.GetExecution(IServiceProvider)
+  parent: Runly.IJob
+  isExternal: true
+  name: GetExecution(IServiceProvider)
+  nameWithType: IJob.GetExecution(IServiceProvider)
+  fullName: Runly.IJob.GetExecution(IServiceProvider)
+  spec.csharp:
+  - uid: Runly.IJob.GetExecution(IServiceProvider)
+    name: GetExecution
+    nameWithType: IJob.GetExecution
+    fullName: Runly.IJob.GetExecution
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.IJob.GetExecution(IServiceProvider)
+    name: GetExecution
+    nameWithType: IJob.GetExecution
+    fullName: Runly.IJob.GetExecution
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: IServiceProvider
+    name: IServiceProvider
+    nameWithType: IServiceProvider
+    fullName: IServiceProvider
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IServiceProvider
+  isExternal: true
+  name: IServiceProvider
+  nameWithType: IServiceProvider
+  fullName: IServiceProvider
 - uid: Runly.Execution
   commentId: T:Runly.Execution
   parent: Runly
@@ -588,11 +686,6 @@ references:
   fullName: Runly.JobBase<TConfig>.GetExecution
   nameWithType.vb: JobBase(Of TConfig).GetExecution
   fullName.vb: Runly.JobBase(Of TConfig).GetExecution
-- uid: IServiceProvider
-  isExternal: true
-  name: IServiceProvider
-  nameWithType: IServiceProvider
-  fullName: IServiceProvider
 - uid: Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
   commentId: M:Runly.JobBase`1.FinalizeAsync(Runly.Disposition)
   name: FinalizeAsync(Disposition)
@@ -637,6 +730,34 @@ references:
   fullName: Runly.JobBase<TConfig>.InitializeAsync
   nameWithType.vb: JobBase(Of TConfig).InitializeAsync
   fullName.vb: Runly.JobBase(Of TConfig).InitializeAsync
+- uid: Runly.IJob.InitializeAsync
+  commentId: M:Runly.IJob.InitializeAsync
+  parent: Runly.IJob
+  name: InitializeAsync()
+  nameWithType: IJob.InitializeAsync()
+  fullName: Runly.IJob.InitializeAsync()
+  spec.csharp:
+  - uid: Runly.IJob.InitializeAsync
+    name: InitializeAsync
+    nameWithType: IJob.InitializeAsync
+    fullName: Runly.IJob.InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.IJob.InitializeAsync
+    name: InitializeAsync
+    nameWithType: IJob.InitializeAsync
+    fullName: Runly.IJob.InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Task
   isExternal: true
   name: Task
@@ -649,6 +770,42 @@ references:
   fullName: Runly.JobBase<TConfig>.FinalizeAsync
   nameWithType.vb: JobBase(Of TConfig).FinalizeAsync
   fullName.vb: Runly.JobBase(Of TConfig).FinalizeAsync
+- uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+  commentId: M:Runly.IJob.FinalizeAsync(Runly.Disposition)
+  parent: Runly.IJob
+  name: FinalizeAsync(Disposition)
+  nameWithType: IJob.FinalizeAsync(Disposition)
+  fullName: Runly.IJob.FinalizeAsync(Runly.Disposition)
+  spec.csharp:
+  - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: IJob.FinalizeAsync
+    fullName: Runly.IJob.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: IJob.FinalizeAsync
+    fullName: Runly.IJob.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Runly.Disposition
   commentId: T:Runly.Disposition
   parent: Runly

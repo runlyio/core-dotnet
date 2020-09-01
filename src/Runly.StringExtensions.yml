@@ -15,10 +15,10 @@ items:
   type: Class
   source:
     id: StringExtensions
-    path: /github/workspace/src/Core/StringExtensions.cs
+    path: /github/workspace/src/Runly/Util/StringExtensions.cs
     startLine: 7
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nExtension methods for strings.\n"
   example: []
@@ -50,10 +50,10 @@ items:
   type: Method
   source:
     id: ToCamelCase
-    path: /github/workspace/src/Core/StringExtensions.cs
+    path: /github/workspace/src/Runly/Util/StringExtensions.cs
     startLine: 12
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nTrims the string and converts the first character to lower case.\n"
   example: []

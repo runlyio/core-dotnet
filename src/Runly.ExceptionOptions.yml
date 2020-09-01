@@ -15,10 +15,10 @@ items:
   type: Struct
   source:
     id: ExceptionOptions
-    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    path: /github/workspace/src/Runly/Util/ExceptionExtensions.cs
     startLine: 150
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nOptions for converting an <see cref=\"!:Exception\"></see> to a string.\n"
   example: []
@@ -44,10 +44,10 @@ items:
   type: Field
   source:
     id: Default
-    path: /github/workspace/src/Core/ExceptionExtensions.cs
+    path: /github/workspace/src/Runly/Util/ExceptionExtensions.cs
     startLine: 155
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the default <xref href=\"Runly.ExceptionOptions\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []

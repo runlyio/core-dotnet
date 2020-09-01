@@ -11,9 +11,7 @@ items:
   - Runly.ConfigException
   - Runly.ConfigNullException
   - Runly.ConfigReader
-  - Runly.ConfigServiceExtensions
   - Runly.ConfigWriter
-  - Runly.ConsoleFormat
   - Runly.DictionaryExtensions
   - Runly.Disposition
   - Runly.Error
@@ -22,10 +20,7 @@ items:
   - Runly.Execution
   - Runly.ExecutionConfig
   - Runly.ExecutionState
-  - Runly.HubConnectionWrapper
-  - Runly.HubMethodCall
   - Runly.IJob
-  - Runly.IResultsConnection
   - Runly.ItemCategory
   - Runly.ItemResult
   - Runly.Job
@@ -49,12 +44,9 @@ items:
   - Runly.Job`9
   - Runly.JobBase`1
   - Runly.JobBase`2
-  - Runly.JobCache
   - Runly.JobConfig
   - Runly.JobConfigConverter
   - Runly.JobHost
-  - Runly.JobInfo
-  - Runly.JobLoadErrors
   - Runly.JobMethod
   - Runly.JobOptions
   - Runly.MethodOutcome
@@ -62,12 +54,9 @@ items:
   - Runly.PollingStream`1.Enumerator
   - Runly.Result
   - Runly.ResultLog
-  - Runly.ResultsChannel
-  - Runly.ResultsChannel.Connection
   - Runly.RunlyApiConfig
   - Runly.ServiceExtensions
   - Runly.StringExtensions
-  - Runly.TypeNotFoundException
   langs:
   - csharp
   - vb
@@ -76,7 +65,7 @@ items:
   fullName: Runly
   type: Namespace
   assemblies:
-  - Runly.Core
+  - Runly
 references:
 - uid: Runly.Config
   commentId: T:Runly.Config
@@ -84,21 +73,27 @@ references:
   name: Config
   nameWithType: Config
   fullName: Runly.Config
+- uid: Runly.ConfigException
+  commentId: T:Runly.ConfigException
+  parent: Runly
+  name: ConfigException
+  nameWithType: ConfigException
+  fullName: Runly.ConfigException
+- uid: Runly.ConfigNullException
+  commentId: T:Runly.ConfigNullException
+  name: ConfigNullException
+  nameWithType: ConfigNullException
+  fullName: Runly.ConfigNullException
+- uid: Runly.ConfigReader
+  commentId: T:Runly.ConfigReader
+  name: ConfigReader
+  nameWithType: ConfigReader
+  fullName: Runly.ConfigReader
 - uid: Runly.ConfigWriter
   commentId: T:Runly.ConfigWriter
   name: ConfigWriter
   nameWithType: ConfigWriter
   fullName: Runly.ConfigWriter
-- uid: Runly.ConsoleFormat
-  commentId: T:Runly.ConsoleFormat
-  name: ConsoleFormat
-  nameWithType: ConsoleFormat
-  fullName: Runly.ConsoleFormat
-- uid: Runly.DictionaryExtensions
-  commentId: T:Runly.DictionaryExtensions
-  name: DictionaryExtensions
-  nameWithType: DictionaryExtensions
-  fullName: Runly.DictionaryExtensions
 - uid: Runly.Disposition
   commentId: T:Runly.Disposition
   parent: Runly
@@ -111,17 +106,6 @@ references:
   name: Error
   nameWithType: Error
   fullName: Runly.Error
-- uid: Runly.ExceptionExtensions
-  commentId: T:Runly.ExceptionExtensions
-  name: ExceptionExtensions
-  nameWithType: ExceptionExtensions
-  fullName: Runly.ExceptionExtensions
-- uid: Runly.ExceptionOptions
-  commentId: T:Runly.ExceptionOptions
-  parent: Runly
-  name: ExceptionOptions
-  nameWithType: ExceptionOptions
-  fullName: Runly.ExceptionOptions
 - uid: Runly.Execution
   commentId: T:Runly.Execution
   parent: Runly
@@ -157,156 +141,6 @@ references:
   name: ItemResult
   nameWithType: ItemResult
   fullName: Runly.ItemResult
-- uid: Runly.JobConfig
-  commentId: T:Runly.JobConfig
-  parent: Runly
-  name: JobConfig
-  nameWithType: JobConfig
-  fullName: Runly.JobConfig
-- uid: Runly.JobConfigConverter
-  commentId: T:Runly.JobConfigConverter
-  name: JobConfigConverter
-  nameWithType: JobConfigConverter
-  fullName: Runly.JobConfigConverter
-- uid: Runly.JobMethod
-  commentId: T:Runly.JobMethod
-  parent: Runly
-  name: JobMethod
-  nameWithType: JobMethod
-  fullName: Runly.JobMethod
-- uid: Runly.JobOptions
-  commentId: T:Runly.JobOptions
-  parent: Runly
-  name: JobOptions
-  nameWithType: JobOptions
-  fullName: Runly.JobOptions
-- uid: Runly.MethodOutcome
-  commentId: T:Runly.MethodOutcome
-  parent: Runly
-  name: MethodOutcome
-  nameWithType: MethodOutcome
-  fullName: Runly.MethodOutcome
-- uid: Runly.Result
-  commentId: T:Runly.Result
-  parent: Runly
-  name: Result
-  nameWithType: Result
-  fullName: Runly.Result
-- uid: Runly.ResultLog
-  commentId: T:Runly.ResultLog
-  parent: Runly
-  name: ResultLog
-  nameWithType: ResultLog
-  fullName: Runly.ResultLog
-- uid: Runly.RunlyApiConfig
-  commentId: T:Runly.RunlyApiConfig
-  parent: Runly
-  name: RunlyApiConfig
-  nameWithType: RunlyApiConfig
-  fullName: Runly.RunlyApiConfig
-- uid: Runly.StringExtensions
-  commentId: T:Runly.StringExtensions
-  name: StringExtensions
-  nameWithType: StringExtensions
-  fullName: Runly.StringExtensions
-- uid: Runly.AsyncEnumerableExtensions
-  commentId: T:Runly.AsyncEnumerableExtensions
-  name: AsyncEnumerableExtensions
-  nameWithType: AsyncEnumerableExtensions
-  fullName: Runly.AsyncEnumerableExtensions
-- uid: Runly.AsyncEnumerableWrapper`1
-  commentId: T:Runly.AsyncEnumerableWrapper`1
-  name: AsyncEnumerableWrapper<T>
-  nameWithType: AsyncEnumerableWrapper<T>
-  fullName: Runly.AsyncEnumerableWrapper<T>
-  nameWithType.vb: AsyncEnumerableWrapper(Of T)
-  fullName.vb: Runly.AsyncEnumerableWrapper(Of T)
-  name.vb: AsyncEnumerableWrapper(Of T)
-  spec.csharp:
-  - uid: Runly.AsyncEnumerableWrapper`1
-    name: AsyncEnumerableWrapper
-    nameWithType: AsyncEnumerableWrapper
-    fullName: Runly.AsyncEnumerableWrapper
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Runly.AsyncEnumerableWrapper`1
-    name: AsyncEnumerableWrapper
-    nameWithType: AsyncEnumerableWrapper
-    fullName: Runly.AsyncEnumerableWrapper
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.AsyncEnumeratorWrapper`1
-  commentId: T:Runly.AsyncEnumeratorWrapper`1
-  name: AsyncEnumeratorWrapper<T>
-  nameWithType: AsyncEnumeratorWrapper<T>
-  fullName: Runly.AsyncEnumeratorWrapper<T>
-  nameWithType.vb: AsyncEnumeratorWrapper(Of T)
-  fullName.vb: Runly.AsyncEnumeratorWrapper(Of T)
-  name.vb: AsyncEnumeratorWrapper(Of T)
-  spec.csharp:
-  - uid: Runly.AsyncEnumeratorWrapper`1
-    name: AsyncEnumeratorWrapper
-    nameWithType: AsyncEnumeratorWrapper
-    fullName: Runly.AsyncEnumeratorWrapper
-  - name: <
-    nameWithType: <
-    fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: '>'
-    nameWithType: '>'
-    fullName: '>'
-  spec.vb:
-  - uid: Runly.AsyncEnumeratorWrapper`1
-    name: AsyncEnumeratorWrapper
-    nameWithType: AsyncEnumeratorWrapper
-    fullName: Runly.AsyncEnumeratorWrapper
-  - name: '(Of '
-    nameWithType: '(Of '
-    fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: Runly.ConfigException
-  commentId: T:Runly.ConfigException
-  parent: Runly
-  name: ConfigException
-  nameWithType: ConfigException
-  fullName: Runly.ConfigException
-- uid: Runly.ConfigNullException
-  commentId: T:Runly.ConfigNullException
-  name: ConfigNullException
-  nameWithType: ConfigNullException
-  fullName: Runly.ConfigNullException
-- uid: Runly.ConfigReader
-  commentId: T:Runly.ConfigReader
-  name: ConfigReader
-  nameWithType: ConfigReader
-  fullName: Runly.ConfigReader
-- uid: Runly.ConfigServiceExtensions
-  commentId: T:Runly.ConfigServiceExtensions
-  name: ConfigServiceExtensions
-  nameWithType: ConfigServiceExtensions
-  fullName: Runly.ConfigServiceExtensions
 - uid: Runly.Job
   commentId: T:Runly.Job
   name: Job
@@ -2880,29 +2714,156 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.JobCache
-  commentId: T:Runly.JobCache
+- uid: Runly.JobConfig
+  commentId: T:Runly.JobConfig
   parent: Runly
-  name: JobCache
-  nameWithType: JobCache
-  fullName: Runly.JobCache
+  name: JobConfig
+  nameWithType: JobConfig
+  fullName: Runly.JobConfig
 - uid: Runly.JobHost
   commentId: T:Runly.JobHost
   name: JobHost
   nameWithType: JobHost
   fullName: Runly.JobHost
-- uid: Runly.JobInfo
-  commentId: T:Runly.JobInfo
+- uid: Runly.JobMethod
+  commentId: T:Runly.JobMethod
   parent: Runly
-  name: JobInfo
-  nameWithType: JobInfo
-  fullName: Runly.JobInfo
-- uid: Runly.JobLoadErrors
-  commentId: T:Runly.JobLoadErrors
+  name: JobMethod
+  nameWithType: JobMethod
+  fullName: Runly.JobMethod
+- uid: Runly.JobOptions
+  commentId: T:Runly.JobOptions
   parent: Runly
-  name: JobLoadErrors
-  nameWithType: JobLoadErrors
-  fullName: Runly.JobLoadErrors
+  name: JobOptions
+  nameWithType: JobOptions
+  fullName: Runly.JobOptions
+- uid: Runly.MethodOutcome
+  commentId: T:Runly.MethodOutcome
+  parent: Runly
+  name: MethodOutcome
+  nameWithType: MethodOutcome
+  fullName: Runly.MethodOutcome
+- uid: Runly.Result
+  commentId: T:Runly.Result
+  parent: Runly
+  name: Result
+  nameWithType: Result
+  fullName: Runly.Result
+- uid: Runly.ResultLog
+  commentId: T:Runly.ResultLog
+  parent: Runly
+  name: ResultLog
+  nameWithType: ResultLog
+  fullName: Runly.ResultLog
+- uid: Runly.RunlyApiConfig
+  commentId: T:Runly.RunlyApiConfig
+  parent: Runly
+  name: RunlyApiConfig
+  nameWithType: RunlyApiConfig
+  fullName: Runly.RunlyApiConfig
+- uid: Runly.ServiceExtensions
+  commentId: T:Runly.ServiceExtensions
+  name: ServiceExtensions
+  nameWithType: ServiceExtensions
+  fullName: Runly.ServiceExtensions
+- uid: Runly.AsyncEnumerableExtensions
+  commentId: T:Runly.AsyncEnumerableExtensions
+  name: AsyncEnumerableExtensions
+  nameWithType: AsyncEnumerableExtensions
+  fullName: Runly.AsyncEnumerableExtensions
+- uid: Runly.AsyncEnumerableWrapper`1
+  commentId: T:Runly.AsyncEnumerableWrapper`1
+  name: AsyncEnumerableWrapper<T>
+  nameWithType: AsyncEnumerableWrapper<T>
+  fullName: Runly.AsyncEnumerableWrapper<T>
+  nameWithType.vb: AsyncEnumerableWrapper(Of T)
+  fullName.vb: Runly.AsyncEnumerableWrapper(Of T)
+  name.vb: AsyncEnumerableWrapper(Of T)
+  spec.csharp:
+  - uid: Runly.AsyncEnumerableWrapper`1
+    name: AsyncEnumerableWrapper
+    nameWithType: AsyncEnumerableWrapper
+    fullName: Runly.AsyncEnumerableWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.AsyncEnumerableWrapper`1
+    name: AsyncEnumerableWrapper
+    nameWithType: AsyncEnumerableWrapper
+    fullName: Runly.AsyncEnumerableWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.AsyncEnumeratorWrapper`1
+  commentId: T:Runly.AsyncEnumeratorWrapper`1
+  name: AsyncEnumeratorWrapper<T>
+  nameWithType: AsyncEnumeratorWrapper<T>
+  fullName: Runly.AsyncEnumeratorWrapper<T>
+  nameWithType.vb: AsyncEnumeratorWrapper(Of T)
+  fullName.vb: Runly.AsyncEnumeratorWrapper(Of T)
+  name.vb: AsyncEnumeratorWrapper(Of T)
+  spec.csharp:
+  - uid: Runly.AsyncEnumeratorWrapper`1
+    name: AsyncEnumeratorWrapper
+    nameWithType: AsyncEnumeratorWrapper
+    fullName: Runly.AsyncEnumeratorWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Runly.AsyncEnumeratorWrapper`1
+    name: AsyncEnumeratorWrapper
+    nameWithType: AsyncEnumeratorWrapper
+    fullName: Runly.AsyncEnumeratorWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Runly.DictionaryExtensions
+  commentId: T:Runly.DictionaryExtensions
+  name: DictionaryExtensions
+  nameWithType: DictionaryExtensions
+  fullName: Runly.DictionaryExtensions
+- uid: Runly.ExceptionExtensions
+  commentId: T:Runly.ExceptionExtensions
+  name: ExceptionExtensions
+  nameWithType: ExceptionExtensions
+  fullName: Runly.ExceptionExtensions
+- uid: Runly.ExceptionOptions
+  commentId: T:Runly.ExceptionOptions
+  parent: Runly
+  name: ExceptionOptions
+  nameWithType: ExceptionOptions
+  fullName: Runly.ExceptionOptions
+- uid: Runly.JobConfigConverter
+  commentId: T:Runly.JobConfigConverter
+  name: JobConfigConverter
+  nameWithType: JobConfigConverter
+  fullName: Runly.JobConfigConverter
 - uid: Runly.PollingStream`1
   commentId: T:Runly.PollingStream`1
   parent: Runly
@@ -2970,42 +2931,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.ResultsChannel
-  commentId: T:Runly.ResultsChannel
-  name: ResultsChannel
-  nameWithType: ResultsChannel
-  fullName: Runly.ResultsChannel
-- uid: Runly.ResultsChannel.Connection
-  commentId: T:Runly.ResultsChannel.Connection
-  name: ResultsChannel.Connection
-  nameWithType: ResultsChannel.Connection
-  fullName: Runly.ResultsChannel.Connection
-- uid: Runly.HubMethodCall
-  commentId: T:Runly.HubMethodCall
-  name: HubMethodCall
-  nameWithType: HubMethodCall
-  fullName: Runly.HubMethodCall
-- uid: Runly.IResultsConnection
-  commentId: T:Runly.IResultsConnection
-  parent: Runly
-  name: IResultsConnection
-  nameWithType: IResultsConnection
-  fullName: Runly.IResultsConnection
-- uid: Runly.HubConnectionWrapper
-  commentId: T:Runly.HubConnectionWrapper
-  name: HubConnectionWrapper
-  nameWithType: HubConnectionWrapper
-  fullName: Runly.HubConnectionWrapper
-- uid: Runly.ServiceExtensions
-  commentId: T:Runly.ServiceExtensions
-  name: ServiceExtensions
-  nameWithType: ServiceExtensions
-  fullName: Runly.ServiceExtensions
-- uid: Runly.TypeNotFoundException
-  commentId: T:Runly.TypeNotFoundException
-  name: TypeNotFoundException
-  nameWithType: TypeNotFoundException
-  fullName: Runly.TypeNotFoundException
+- uid: Runly.StringExtensions
+  commentId: T:Runly.StringExtensions
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: Runly.StringExtensions
 - uid: Runly
   commentId: N:Runly
   name: Runly

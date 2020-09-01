@@ -19,7 +19,7 @@ items:
   source:
     id: ServiceExtensions
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 19
+    startLine: 20
   assemblies:
   - Runly
   namespace: Runly
@@ -54,7 +54,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 32
+    startLine: 33
   assemblies:
   - Runly
   namespace: Runly
@@ -98,7 +98,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 44
+    startLine: 45
   assemblies:
   - Runly
   namespace: Runly
@@ -148,7 +148,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 59
+    startLine: 60
   assemblies:
   - Runly
   namespace: Runly
@@ -195,7 +195,7 @@ items:
   source:
     id: AddRunlyJobs
     path: /github/workspace/src/Runly/ServiceExtensions.cs
-    startLine: 71
+    startLine: 72
   assemblies:
   - Runly
   namespace: Runly

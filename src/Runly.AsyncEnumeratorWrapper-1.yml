@@ -21,7 +21,7 @@ items:
   type: Class
   source:
     id: AsyncEnumeratorWrapper
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 10
   assemblies:
   - Runly
@@ -60,7 +60,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 20
   assemblies:
   - Runly
@@ -95,7 +95,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 29
   assemblies:
   - Runly
@@ -130,7 +130,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 38
   assemblies:
   - Runly
@@ -165,7 +165,7 @@ items:
   type: Method
   source:
     id: GetInnerEnumerator
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 47
   assemblies:
   - Runly
@@ -197,7 +197,7 @@ items:
   type: Property
   source:
     id: Current
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 63
   assemblies:
   - Runly
@@ -232,7 +232,7 @@ items:
   type: Method
   source:
     id: MoveNextAsync
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 69
   assemblies:
   - Runly
@@ -265,7 +265,7 @@ items:
   type: Method
   source:
     id: DisposeAsync
-    path: /github/workspace/src/Runly/AsyncEnumeratorWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumeratorWrapper.cs
     startLine: 74
   assemblies:
   - Runly

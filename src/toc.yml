@@ -18,12 +18,8 @@
     name: ConfigNullException
   - uid: Runly.ConfigReader
     name: ConfigReader
-  - uid: Runly.ConfigServiceExtensions
-    name: ConfigServiceExtensions
   - uid: Runly.ConfigWriter
     name: ConfigWriter
-  - uid: Runly.ConsoleFormat
-    name: ConsoleFormat
   - uid: Runly.DictionaryExtensions
     name: DictionaryExtensions
   - uid: Runly.Disposition
@@ -40,14 +36,8 @@
     name: ExecutionConfig
   - uid: Runly.ExecutionState
     name: ExecutionState
-  - uid: Runly.HubConnectionWrapper
-    name: HubConnectionWrapper
-  - uid: Runly.HubMethodCall
-    name: HubMethodCall
   - uid: Runly.IJob
     name: IJob
-  - uid: Runly.IResultsConnection
-    name: IResultsConnection
   - uid: Runly.ItemCategory
     name: ItemCategory
   - uid: Runly.ItemResult
@@ -114,18 +104,12 @@
   - uid: Runly.JobBase`1
     name: JobBase<TConfig>
     name.vb: JobBase(Of TConfig)
-  - uid: Runly.JobCache
-    name: JobCache
   - uid: Runly.JobConfig
     name: JobConfig
   - uid: Runly.JobConfigConverter
     name: JobConfigConverter
   - uid: Runly.JobHost
     name: JobHost
-  - uid: Runly.JobInfo
-    name: JobInfo
-  - uid: Runly.JobLoadErrors
-    name: JobLoadErrors
   - uid: Runly.JobMethod
     name: JobMethod
   - uid: Runly.JobOptions
@@ -142,23 +126,42 @@
     name: Result
   - uid: Runly.ResultLog
     name: ResultLog
-  - uid: Runly.ResultsChannel
-    name: ResultsChannel
-  - uid: Runly.ResultsChannel.Connection
-    name: ResultsChannel.Connection
   - uid: Runly.RunlyApiConfig
     name: RunlyApiConfig
   - uid: Runly.ServiceExtensions
     name: ServiceExtensions
   - uid: Runly.StringExtensions
     name: StringExtensions
-  - uid: Runly.TypeNotFoundException
-    name: TypeNotFoundException
-- uid: Runly.Internal
-  name: Runly.Internal
+- uid: Runly.Client
+  name: Runly.Client
   items:
-  - uid: Runly.Internal.JsonSchema
+  - uid: Runly.Client.ApiClientExtensions
+    name: ApiClientExtensions
+  - uid: Runly.Client.HubConnectionWrapper
+    name: HubConnectionWrapper
+  - uid: Runly.Client.HubMethodCall
+    name: HubMethodCall
+  - uid: Runly.Client.IResultsConnection
+    name: IResultsConnection
+  - uid: Runly.Client.ResultsChannel
+    name: ResultsChannel
+  - uid: Runly.Client.ResultsChannel.Connection
+    name: ResultsChannel.Connection
+- uid: Runly.Hosting
+  name: Runly.Hosting
+  items:
+  - uid: Runly.Hosting.ConsoleFormat
+    name: ConsoleFormat
+  - uid: Runly.Hosting.JobCache
+    name: JobCache
+  - uid: Runly.Hosting.JobInfo
+    name: JobInfo
+  - uid: Runly.Hosting.JobLoadErrors
+    name: JobLoadErrors
+  - uid: Runly.Hosting.JsonSchema
     name: JsonSchema
+  - uid: Runly.Hosting.TypeNotFoundException
+    name: TypeNotFoundException
 - uid: Runly.Processing
   name: Runly.Processing
   items:

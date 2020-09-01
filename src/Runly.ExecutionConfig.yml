@@ -25,10 +25,10 @@ items:
   type: Class
   source:
     id: ExecutionConfig
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 8
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nDetermines how a job will execute.\n"
   remarks: The data in this class is used by the Runly API, node and/or job host. This class should not be extended.
@@ -59,10 +59,10 @@ items:
   type: Property
   source:
     id: ParallelTaskCount
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 14
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of tasks created to call in parallel the ProcessAsync method of the job.\n"
   example: []
@@ -93,10 +93,10 @@ items:
   type: Property
   source:
     id: ItemFailureRetryCount
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 20
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of times, after the first attempt, to reprocess an item when an unhandled exception occurs or a failed result is returned.\n"
   example: []
@@ -127,10 +127,10 @@ items:
   type: Property
   source:
     id: ItemFailureCountToStopJob
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 27
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of items which must fail before the job is stopped, ending in a failure state.\n"
   remarks: When a job is executed using parallel tasks, the results for the job may indicate more items failed than is specified in this property because items are allowed to complete when the job is failing. For example, if <xref href="Runly.ExecutionConfig.ItemFailureCountToStopJob" data-throw-if-not-resolved="false"></xref> is set to 1 and <xref href="Runly.ExecutionConfig.ParallelTaskCount" data-throw-if-not-resolved="false"></xref> is set to 5 and the job tries to connect to a mis-typed URL, the first task that fails will trigger a job failure but the remaining four tasks will run to completion, ultimately resulting in five failed items.
@@ -162,10 +162,10 @@ items:
   type: Property
   source:
     id: HandleExceptions
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 34
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nWhen true, will catch exceptions that occur within the job and write the exception to the results and/or API. \n"
   remarks: This setting is true by default and should only be set to false for debugging purposes. Setting this to false will cause the application to stop when an exception occurs and FinalizeAsync is not guaranteed to execute.
@@ -197,10 +197,10 @@ items:
   type: Property
   source:
     id: ResultsToFile
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 41
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nWhen true, writes the results to the path specified in <xref href=\"Runly.ExecutionConfig.ResultsFilePath\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   remarks: If <xref href="Runly.ExecutionConfig.ResultsFilePath" data-throw-if-not-resolved="false"></xref> is not specified the results are written to a file named results.json in the same location as the config file.
@@ -232,10 +232,10 @@ items:
   type: Property
   source:
     id: ResultsFilePath
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 47
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe file path to write the results to. Used only when <xref href=\"Runly.ExecutionConfig.ResultsToFile\" data-throw-if-not-resolved=\"false\"></xref> is true.\n"
   remarks: This path is relative to the directory containing the config file.
@@ -266,10 +266,10 @@ items:
   type: Property
   source:
     id: ResultsToConsole
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 53
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nWhen true, writes the results to the console (stdout).\n"
   example: []
@@ -300,10 +300,10 @@ items:
   type: Property
   source:
     id: LaunchDebugger
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 59
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nWhen true, causes the job to prompt the user to attach a debugger.\n"
   remarks: Ignored when the job does not run in an interactive session.
@@ -334,10 +334,10 @@ items:
   type: Property
   source:
     id: Delay
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 65
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe amount of time, in seconds, to wait before allowing the job to execute after being queued.\n"
   remarks: This setting is used by the Runly API to delay the assignment of the run to a node. It has no effect when running locally.
@@ -368,10 +368,10 @@ items:
   type: Property
   source:
     id: RunAfterId
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 71
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nBlocks the execution of the job until the job identified by the Run ID has completed.\n"
   remarks: This setting is used by the Runly API to block the assignment of the run to a node until the other run has completed. It has no effect when running locally.
@@ -402,10 +402,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/ExecutionConfig.cs
+    path: /github/workspace/src/Runly/ExecutionConfig.cs
     startLine: 76
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new instance of <xref href=\"Runly.ExecutionConfig\" data-throw-if-not-resolved=\"false\"></xref>\n"
   example: []

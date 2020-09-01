@@ -1,28 +1,28 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.ConsoleFormat
-  commentId: T:Runly.ConsoleFormat
+- uid: Runly.Hosting.ConsoleFormat
+  commentId: T:Runly.Hosting.ConsoleFormat
   id: ConsoleFormat
-  parent: Runly
+  parent: Runly.Hosting
   children:
-  - Runly.ConsoleFormat.AsColumns(System.Int32,System.String[])
-  - Runly.ConsoleFormat.AsPlural(System.Int32,System.String)
-  - Runly.ConsoleFormat.DoubleLine
-  - Runly.ConsoleFormat.SingleLine
+  - Runly.Hosting.ConsoleFormat.AsColumns(System.Int32,System.String[])
+  - Runly.Hosting.ConsoleFormat.AsPlural(System.Int32,System.String)
+  - Runly.Hosting.ConsoleFormat.DoubleLine
+  - Runly.Hosting.ConsoleFormat.SingleLine
   langs:
   - csharp
   - vb
   name: ConsoleFormat
   nameWithType: ConsoleFormat
-  fullName: Runly.ConsoleFormat
+  fullName: Runly.Hosting.ConsoleFormat
   type: Class
   source:
     id: ConsoleFormat
-    path: /github/workspace/src/Core/ConsoleFormat.cs
+    path: /github/workspace/src/Runly/Hosting/ConsoleFormat.cs
     startLine: 7
   assemblies:
-  - Runly.Core
-  namespace: Runly
+  - Runly
+  namespace: Runly.Hosting
   summary: "\nMethods for formatting text written to the <see cref=\"!:System.Console\"></see>.\n"
   example: []
   syntax:
@@ -39,24 +39,24 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: Runly.ConsoleFormat.DoubleLine
-  commentId: P:Runly.ConsoleFormat.DoubleLine
+- uid: Runly.Hosting.ConsoleFormat.DoubleLine
+  commentId: P:Runly.Hosting.ConsoleFormat.DoubleLine
   id: DoubleLine
-  parent: Runly.ConsoleFormat
+  parent: Runly.Hosting.ConsoleFormat
   langs:
   - csharp
   - vb
   name: DoubleLine
   nameWithType: ConsoleFormat.DoubleLine
-  fullName: Runly.ConsoleFormat.DoubleLine
+  fullName: Runly.Hosting.ConsoleFormat.DoubleLine
   type: Property
   source:
     id: DoubleLine
-    path: /github/workspace/src/Core/ConsoleFormat.cs
+    path: /github/workspace/src/Runly/Hosting/ConsoleFormat.cs
     startLine: 12
   assemblies:
-  - Runly.Core
-  namespace: Runly
+  - Runly
+  namespace: Runly.Hosting
   summary: "\nA double line made up of sixty &apos;=&apos; characters.\n"
   example: []
   syntax:
@@ -65,7 +65,7 @@ items:
     return:
       type: System.String
     content.vb: Public Shared ReadOnly Property DoubleLine As String
-  overload: Runly.ConsoleFormat.DoubleLine*
+  overload: Runly.Hosting.ConsoleFormat.DoubleLine*
   modifiers.csharp:
   - public
   - static
@@ -74,24 +74,24 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Runly.ConsoleFormat.SingleLine
-  commentId: P:Runly.ConsoleFormat.SingleLine
+- uid: Runly.Hosting.ConsoleFormat.SingleLine
+  commentId: P:Runly.Hosting.ConsoleFormat.SingleLine
   id: SingleLine
-  parent: Runly.ConsoleFormat
+  parent: Runly.Hosting.ConsoleFormat
   langs:
   - csharp
   - vb
   name: SingleLine
   nameWithType: ConsoleFormat.SingleLine
-  fullName: Runly.ConsoleFormat.SingleLine
+  fullName: Runly.Hosting.ConsoleFormat.SingleLine
   type: Property
   source:
     id: SingleLine
-    path: /github/workspace/src/Core/ConsoleFormat.cs
+    path: /github/workspace/src/Runly/Hosting/ConsoleFormat.cs
     startLine: 17
   assemblies:
-  - Runly.Core
-  namespace: Runly
+  - Runly
+  namespace: Runly.Hosting
   summary: "\nA line made up of sixty &apos;-&apos; characters.\n"
   example: []
   syntax:
@@ -100,7 +100,7 @@ items:
     return:
       type: System.String
     content.vb: Public Shared ReadOnly Property SingleLine As String
-  overload: Runly.ConsoleFormat.SingleLine*
+  overload: Runly.Hosting.ConsoleFormat.SingleLine*
   modifiers.csharp:
   - public
   - static
@@ -109,24 +109,24 @@ items:
   - Public
   - Shared
   - ReadOnly
-- uid: Runly.ConsoleFormat.AsPlural(System.Int32,System.String)
-  commentId: M:Runly.ConsoleFormat.AsPlural(System.Int32,System.String)
+- uid: Runly.Hosting.ConsoleFormat.AsPlural(System.Int32,System.String)
+  commentId: M:Runly.Hosting.ConsoleFormat.AsPlural(System.Int32,System.String)
   id: AsPlural(System.Int32,System.String)
-  parent: Runly.ConsoleFormat
+  parent: Runly.Hosting.ConsoleFormat
   langs:
   - csharp
   - vb
   name: AsPlural(Int32, String)
   nameWithType: ConsoleFormat.AsPlural(Int32, String)
-  fullName: Runly.ConsoleFormat.AsPlural(System.Int32, System.String)
+  fullName: Runly.Hosting.ConsoleFormat.AsPlural(System.Int32, System.String)
   type: Method
   source:
     id: AsPlural
-    path: /github/workspace/src/Core/ConsoleFormat.cs
+    path: /github/workspace/src/Runly/Hosting/ConsoleFormat.cs
     startLine: 22
   assemblies:
-  - Runly.Core
-  namespace: Runly
+  - Runly
+  namespace: Runly.Hosting
   summary: "\nReturns the line ending to pluralize a word when the count is not equal to one.\n"
   example: []
   syntax:
@@ -139,31 +139,31 @@ items:
     return:
       type: System.String
     content.vb: Public Shared Function AsPlural(count As Integer, ending As String = "s") As String
-  overload: Runly.ConsoleFormat.AsPlural*
+  overload: Runly.Hosting.ConsoleFormat.AsPlural*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: Runly.ConsoleFormat.AsColumns(System.Int32,System.String[])
-  commentId: M:Runly.ConsoleFormat.AsColumns(System.Int32,System.String[])
+- uid: Runly.Hosting.ConsoleFormat.AsColumns(System.Int32,System.String[])
+  commentId: M:Runly.Hosting.ConsoleFormat.AsColumns(System.Int32,System.String[])
   id: AsColumns(System.Int32,System.String[])
-  parent: Runly.ConsoleFormat
+  parent: Runly.Hosting.ConsoleFormat
   langs:
   - csharp
   - vb
   name: AsColumns(Int32, String[])
   nameWithType: ConsoleFormat.AsColumns(Int32, String[])
-  fullName: Runly.ConsoleFormat.AsColumns(System.Int32, System.String[])
+  fullName: Runly.Hosting.ConsoleFormat.AsColumns(System.Int32, System.String[])
   type: Method
   source:
     id: AsColumns
-    path: /github/workspace/src/Core/ConsoleFormat.cs
+    path: /github/workspace/src/Runly/Hosting/ConsoleFormat.cs
     startLine: 30
   assemblies:
-  - Runly.Core
-  namespace: Runly
+  - Runly
+  namespace: Runly.Hosting
   summary: "\nCreates a single line string from the <code data-dev-comment-type=\"paramref\" class=\"paramref\">data</code>, appending space or truncating text to fit it into columns.\n"
   example: []
   syntax:
@@ -179,7 +179,7 @@ items:
       type: System.String
       description: A string with the data spaced out into columns.
     content.vb: Public Shared Function AsColumns(width As Integer, ParamArray data As String()) As String
-  overload: Runly.ConsoleFormat.AsColumns*
+  overload: Runly.Hosting.ConsoleFormat.AsColumns*
   nameWithType.vb: ConsoleFormat.AsColumns(Int32, String())
   modifiers.csharp:
   - public
@@ -187,49 +187,49 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Runly.ConsoleFormat.AsColumns(System.Int32, System.String())
+  fullName.vb: Runly.Hosting.ConsoleFormat.AsColumns(System.Int32, System.String())
   name.vb: AsColumns(Int32, String())
 references:
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
 - uid: System.Object
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.ConsoleFormat.DoubleLine*
-  commentId: Overload:Runly.ConsoleFormat.DoubleLine
+- uid: Runly.Hosting.ConsoleFormat.DoubleLine*
+  commentId: Overload:Runly.Hosting.ConsoleFormat.DoubleLine
   name: DoubleLine
   nameWithType: ConsoleFormat.DoubleLine
-  fullName: Runly.ConsoleFormat.DoubleLine
+  fullName: Runly.Hosting.ConsoleFormat.DoubleLine
 - uid: System.String
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Runly.ConsoleFormat.SingleLine*
-  commentId: Overload:Runly.ConsoleFormat.SingleLine
+- uid: Runly.Hosting.ConsoleFormat.SingleLine*
+  commentId: Overload:Runly.Hosting.ConsoleFormat.SingleLine
   name: SingleLine
   nameWithType: ConsoleFormat.SingleLine
-  fullName: Runly.ConsoleFormat.SingleLine
-- uid: Runly.ConsoleFormat.AsPlural*
-  commentId: Overload:Runly.ConsoleFormat.AsPlural
+  fullName: Runly.Hosting.ConsoleFormat.SingleLine
+- uid: Runly.Hosting.ConsoleFormat.AsPlural*
+  commentId: Overload:Runly.Hosting.ConsoleFormat.AsPlural
   name: AsPlural
   nameWithType: ConsoleFormat.AsPlural
-  fullName: Runly.ConsoleFormat.AsPlural
+  fullName: Runly.Hosting.ConsoleFormat.AsPlural
 - uid: System.Int32
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Runly.ConsoleFormat.AsColumns*
-  commentId: Overload:Runly.ConsoleFormat.AsColumns
+- uid: Runly.Hosting.ConsoleFormat.AsColumns*
+  commentId: Overload:Runly.Hosting.ConsoleFormat.AsColumns
   name: AsColumns
   nameWithType: ConsoleFormat.AsColumns
-  fullName: Runly.ConsoleFormat.AsColumns
+  fullName: Runly.Hosting.ConsoleFormat.AsColumns
 - uid: System.String[]
   isExternal: true
   name: String[]

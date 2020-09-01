@@ -23,10 +23,10 @@ items:
   type: Class
   source:
     id: RunlyApiConfig
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 8
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nRunly API connection information used to report progress and store results of the job.\n"
   remarks: The data in this class is used by the Runly API, node and/or job host. This class should not be extended.
@@ -57,10 +57,10 @@ items:
   type: Property
   source:
     id: Uri
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 13
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe URI of the Runly API, https://api.runly.io/ by default.\n"
   example: []
@@ -90,10 +90,10 @@ items:
   type: Property
   source:
     id: Token
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 18
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe auth token used to grant the job access to the API.\n"
   example: []
@@ -123,10 +123,10 @@ items:
   type: Property
   source:
     id: OrganizationId
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 23
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe org that the run is queued or executing in.\n"
   example: []
@@ -156,10 +156,10 @@ items:
   type: Property
   source:
     id: EnvironmentId
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 28
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe environment that the run is queued or executing in.\n"
   example: []
@@ -189,10 +189,10 @@ items:
   type: Property
   source:
     id: InstanceId
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 33
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe ID of the instance assigned by the API.\n"
   example: []
@@ -222,10 +222,10 @@ items:
   type: Property
   source:
     id: Cluster
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 42
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe name of the cluster that the run is assigned to.\n"
   remarks: "If a value is provided when queued, the run with be assigned to\nthe node specified. If the cluster does not exist the HTTP response will \nbe 409 Conflict. If no nodes are connected to the cluster the HTTP response\nwill be 202 Accepted."
@@ -256,10 +256,10 @@ items:
   type: Property
   source:
     id: Node
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 50
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe name of the cluster that the run is assigned to.\n"
   remarks: "If a value is provided when queued, the run with be assigned to\nthe cluster specified. If the node does not exist or is not connected the HTTP \nresponse will be 409 Conflict."
@@ -290,10 +290,10 @@ items:
   type: Property
   source:
     id: LogSuccessfulItemResults
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 55
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nWhen true, successful item results will be sent to the API. This is similar to turning on debug logging, it may severely impact the performance of jobs.\n"
   example: []
@@ -323,10 +323,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/RunlyApiConfig.cs
+    path: /github/workspace/src/Runly/RunlyApiConfig.cs
     startLine: 60
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.RunlyApiConfig\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []

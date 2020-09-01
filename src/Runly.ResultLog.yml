@@ -36,10 +36,10 @@ items:
   type: Class
   source:
     id: ResultLog
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 14
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 15
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nLogs results from a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -69,10 +69,10 @@ items:
   type: Property
   source:
     id: ConfigPath
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 22
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 23
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe file path of the config used by the run.\n"
   example: []
@@ -102,10 +102,10 @@ items:
   type: Property
   source:
     id: StartedAt
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 27
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 28
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe UTC time at which the run started.\n"
   example: []
@@ -135,10 +135,10 @@ items:
   type: Property
   source:
     id: CompletedAt
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 32
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 33
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe UTC time at which the run ended.\n"
   example: []
@@ -168,10 +168,10 @@ items:
   type: Property
   source:
     id: Disposition
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 37
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 38
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe final state of the run.\n"
   example: []
@@ -201,10 +201,10 @@ items:
   type: Property
   source:
     id: Methods
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 43
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 44
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a list of <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for each method of a job, excluding methods executed per item.\n"
   example: []
@@ -234,10 +234,10 @@ items:
   type: Property
   source:
     id: InitializeAsync
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 48
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 49
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for InitializeAsync.\n"
   example: []
@@ -267,10 +267,10 @@ items:
   type: Property
   source:
     id: GetItemsAsync
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 54
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 55
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for GetItemsAsync.\n"
   example: []
@@ -300,10 +300,10 @@ items:
   type: Property
   source:
     id: Count
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 60
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 61
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for Count.\n"
   example: []
@@ -333,10 +333,10 @@ items:
   type: Property
   source:
     id: GetEnumerator
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 66
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 67
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for GetEnumerator.\n"
   example: []
@@ -366,10 +366,10 @@ items:
   type: Property
   source:
     id: FinalizeAsync
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 72
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 73
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.MethodOutcome\" data-throw-if-not-resolved=\"false\"></xref> for FinalizeAsync.\n"
   example: []
@@ -399,10 +399,10 @@ items:
   type: Property
   source:
     id: Items
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 78
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 79
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndividual items results\n"
   example: []
@@ -432,10 +432,10 @@ items:
   type: Property
   source:
     id: Categories
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 83
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 84
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a list of item categories and counts.\n"
   example: []
@@ -465,10 +465,10 @@ items:
   type: Property
   source:
     id: SuccessfulItems
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 90
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 91
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a list of items that have completed successfully.\n"
   example: []
@@ -498,10 +498,10 @@ items:
   type: Property
   source:
     id: FailedItems
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 96
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 97
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a list of items that completed unsuccessfully.\n"
   example: []
@@ -531,10 +531,10 @@ items:
   type: Property
   source:
     id: FailedItemsThatThrewExceptions
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 102
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 103
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets a list of <xref href=\"Runly.ResultLog.FailedItems\" data-throw-if-not-resolved=\"false\"></xref> that threw an exception instead of returning a <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -564,10 +564,10 @@ items:
   type: Property
   source:
     id: TotalItemCount
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 113
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 114
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe total number of items to be processed.\n"
   remarks: "\n<xref href=\"Runly.ResultLog.TotalItemCount\" data-throw-if-not-resolved=\"false\"></xref> will be null when a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> sets canBeCounted to false when using ToAsyncEnumerable. The difference between\nthis total and the sum of <xref href=\"Runly.ResultLog.SuccessfulItemCount\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.ResultLog.FailedItemCount\" data-throw-if-not-resolved=\"false\"></xref> is the number of items\nyet to be processed or not processed in the case of a job that ended in the <xref href=\"Runly.Disposition.Failed\" data-throw-if-not-resolved=\"false\"></xref> state.\n"
@@ -598,10 +598,10 @@ items:
   type: Property
   source:
     id: SuccessfulItemCount
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 118
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 119
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of items processed with a successful (<xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -631,10 +631,10 @@ items:
   type: Property
   source:
     id: FailedItemCount
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 123
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 124
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of items processed with an unsuccessful (not <xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -664,10 +664,10 @@ items:
   type: Property
   source:
     id: Output
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 128
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 129
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe output from FinalizeAsync\n"
   example: []
@@ -697,10 +697,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 133
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 134
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.ResultLog\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -728,10 +728,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 145
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 146
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes a new <xref href=\"Runly.ResultLog\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -770,10 +770,10 @@ items:
   type: Method
   source:
     id: ToString
-    path: /github/workspace/src/Core/ResultLog.cs
-    startLine: 188
+    path: /github/workspace/src/Runly/ResultLog.cs
+    startLine: 189
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nProduces a report of this job for the console.\n"
   example: []

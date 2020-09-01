@@ -1,35 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.HubConnectionWrapper
-  commentId: T:Runly.HubConnectionWrapper
+- uid: Runly.Client.HubConnectionWrapper
+  commentId: T:Runly.Client.HubConnectionWrapper
   id: HubConnectionWrapper
-  parent: Runly
+  parent: Runly.Client
   children:
-  - Runly.HubConnectionWrapper.#ctor(HubConnection)
-  - Runly.HubConnectionWrapper.Closed
-  - Runly.HubConnectionWrapper.DisposeAsync
-  - Runly.HubConnectionWrapper.InvokeCoreAsync(System.String,System.Object[])
-  - Runly.HubConnectionWrapper.On(System.String,Action)
-  - Runly.HubConnectionWrapper.Reconnected
-  - Runly.HubConnectionWrapper.Reconnecting
-  - Runly.HubConnectionWrapper.SendCoreAsync(System.String,System.Object[])
-  - Runly.HubConnectionWrapper.StartAsync
-  - Runly.HubConnectionWrapper.State
+  - Runly.Client.HubConnectionWrapper.#ctor(HubConnection)
+  - Runly.Client.HubConnectionWrapper.Closed
+  - Runly.Client.HubConnectionWrapper.DisposeAsync
+  - Runly.Client.HubConnectionWrapper.InvokeCoreAsync(System.String,System.Object[])
+  - Runly.Client.HubConnectionWrapper.On(System.String,Action)
+  - Runly.Client.HubConnectionWrapper.Reconnected
+  - Runly.Client.HubConnectionWrapper.Reconnecting
+  - Runly.Client.HubConnectionWrapper.SendCoreAsync(System.String,System.Object[])
+  - Runly.Client.HubConnectionWrapper.StartAsync
+  - Runly.Client.HubConnectionWrapper.State
   langs:
   - csharp
   - vb
   name: HubConnectionWrapper
   nameWithType: HubConnectionWrapper
-  fullName: Runly.HubConnectionWrapper
+  fullName: Runly.Client.HubConnectionWrapper
   type: Class
   source:
     id: HubConnectionWrapper
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 470
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nWraps a SignalR <see cref=\"!:HubConnection\"></see> in the testable interface <xref href=\"Runly.IResultsConnection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Client
+  summary: "\nWraps a SignalR <see cref=\"!:HubConnection\"></see> in the testable interface <xref href=\"Runly.Client.IResultsConnection\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: 'public class HubConnectionWrapper : object, IResultsConnection, IAsyncDisposable'
@@ -40,7 +40,7 @@ items:
   inheritance:
   - System.Object
   implements:
-  - Runly.IResultsConnection
+  - Runly.Client.IResultsConnection
   - IAsyncDisposable
   modifiers.csharp:
   - public
@@ -48,25 +48,25 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.HubConnectionWrapper.#ctor(HubConnection)
-  commentId: M:Runly.HubConnectionWrapper.#ctor(HubConnection)
+- uid: Runly.Client.HubConnectionWrapper.#ctor(HubConnection)
+  commentId: M:Runly.Client.HubConnectionWrapper.#ctor(HubConnection)
   id: '#ctor(HubConnection)'
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: HubConnectionWrapper(HubConnection)
   nameWithType: HubConnectionWrapper.HubConnectionWrapper(HubConnection)
-  fullName: Runly.HubConnectionWrapper.HubConnectionWrapper(HubConnection)
+  fullName: Runly.Client.HubConnectionWrapper.HubConnectionWrapper(HubConnection)
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 478
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nInitializes a new <xref href=\"Runly.HubConnectionWrapper\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Client
+  summary: "\nInitializes a new <xref href=\"Runly.Client.HubConnectionWrapper\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public HubConnectionWrapper(HubConnection connection)
@@ -75,29 +75,29 @@ items:
       type: HubConnection
       description: ''
     content.vb: Public Sub New(connection As HubConnection)
-  overload: Runly.HubConnectionWrapper.#ctor*
+  overload: Runly.Client.HubConnectionWrapper.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.HubConnectionWrapper.Closed
-  commentId: E:Runly.HubConnectionWrapper.Closed
+- uid: Runly.Client.HubConnectionWrapper.Closed
+  commentId: E:Runly.Client.HubConnectionWrapper.Closed
   id: Closed
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: Closed
   nameWithType: HubConnectionWrapper.Closed
-  fullName: Runly.HubConnectionWrapper.Closed
+  fullName: Runly.Client.HubConnectionWrapper.Closed
   type: Event
   source:
     id: Closed
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 494
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nOccurs when the connection is closed. The connection could be closed due to an\nerror or due to either the server or client intentionally closing the connection\nwithout error.\n"
   remarks: "\nIf this event was triggered from a connection error, the System.Exception that\noccurred will be passed in as the sole argument to this handler.If this event\nwas triggered intentionally by either the client or server, then the argument\nwill be null.\n"
   example: []
@@ -107,29 +107,29 @@ items:
       type: Func{Exception,Task}
     content.vb: Public Event Closed As Func(Of Exception, Task)
   implements:
-  - Runly.IResultsConnection.Closed
+  - Runly.Client.IResultsConnection.Closed
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.HubConnectionWrapper.Reconnected
-  commentId: E:Runly.HubConnectionWrapper.Reconnected
+- uid: Runly.Client.HubConnectionWrapper.Reconnected
+  commentId: E:Runly.Client.HubConnectionWrapper.Reconnected
   id: Reconnected
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: Reconnected
   nameWithType: HubConnectionWrapper.Reconnected
-  fullName: Runly.HubConnectionWrapper.Reconnected
+  fullName: Runly.Client.HubConnectionWrapper.Reconnected
   type: Event
   source:
     id: Reconnected
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 508
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nOccurs when the Microsoft.AspNetCore.SignalR.Client.HubConnection successfully\nreconnects after losing its underlying connection.\n"
   remarks: "\nThe System.String parameter will be the Microsoft.AspNetCore.SignalR.Client.HubConnection&apos;s\nnew ConnectionId or null if negotiation was skipped.\n"
   example: []
@@ -139,29 +139,29 @@ items:
       type: Func{System.String,Task}
     content.vb: Public Event Reconnected As Func(Of String, Task)
   implements:
-  - Runly.IResultsConnection.Reconnected
+  - Runly.Client.IResultsConnection.Reconnected
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.HubConnectionWrapper.Reconnecting
-  commentId: E:Runly.HubConnectionWrapper.Reconnecting
+- uid: Runly.Client.HubConnectionWrapper.Reconnecting
+  commentId: E:Runly.Client.HubConnectionWrapper.Reconnecting
   id: Reconnecting
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: Reconnecting
   nameWithType: HubConnectionWrapper.Reconnecting
-  fullName: Runly.HubConnectionWrapper.Reconnecting
+  fullName: Runly.Client.HubConnectionWrapper.Reconnecting
   type: Event
   source:
     id: Reconnecting
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 522
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nOccurs when the Microsoft.AspNetCore.SignalR.Client.HubConnection starts reconnecting\nafter losing its underlying connection.\n"
   remarks: "\nThe System.Exception that occurred will be passed in as the sole argument to\nthis handler.\n"
   example: []
@@ -171,29 +171,29 @@ items:
       type: Func{Exception,Task}
     content.vb: Public Event Reconnecting As Func(Of Exception, Task)
   implements:
-  - Runly.IResultsConnection.Reconnecting
+  - Runly.Client.IResultsConnection.Reconnecting
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.HubConnectionWrapper.State
-  commentId: P:Runly.HubConnectionWrapper.State
+- uid: Runly.Client.HubConnectionWrapper.State
+  commentId: P:Runly.Client.HubConnectionWrapper.State
   id: State
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: State
   nameWithType: HubConnectionWrapper.State
-  fullName: Runly.HubConnectionWrapper.State
+  fullName: Runly.Client.HubConnectionWrapper.State
   type: Property
   source:
     id: State
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 531
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nIndicates the state of the <see cref=\"!:HubConnection\"></see> to the server.\n"
   example: []
   syntax:
@@ -202,63 +202,63 @@ items:
     return:
       type: HubConnectionState
     content.vb: Public ReadOnly Property State As HubConnectionState
-  overload: Runly.HubConnectionWrapper.State*
+  overload: Runly.Client.HubConnectionWrapper.State*
   implements:
-  - Runly.IResultsConnection.State
+  - Runly.Client.IResultsConnection.State
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.HubConnectionWrapper.DisposeAsync
-  commentId: M:Runly.HubConnectionWrapper.DisposeAsync
+- uid: Runly.Client.HubConnectionWrapper.DisposeAsync
+  commentId: M:Runly.Client.HubConnectionWrapper.DisposeAsync
   id: DisposeAsync
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: DisposeAsync()
   nameWithType: HubConnectionWrapper.DisposeAsync()
-  fullName: Runly.HubConnectionWrapper.DisposeAsync()
+  fullName: Runly.Client.HubConnectionWrapper.DisposeAsync()
   type: Method
   source:
     id: DisposeAsync
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 536
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nDisposes the <xref href=\"Runly.HubConnectionWrapper\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Client
+  summary: "\nDisposes the <xref href=\"Runly.Client.HubConnectionWrapper\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public ValueTask DisposeAsync()
     return:
       type: ValueTask
     content.vb: Public Function DisposeAsync As ValueTask
-  overload: Runly.HubConnectionWrapper.DisposeAsync*
+  overload: Runly.Client.HubConnectionWrapper.DisposeAsync*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.HubConnectionWrapper.StartAsync
-  commentId: M:Runly.HubConnectionWrapper.StartAsync
+- uid: Runly.Client.HubConnectionWrapper.StartAsync
+  commentId: M:Runly.Client.HubConnectionWrapper.StartAsync
   id: StartAsync
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: StartAsync()
   nameWithType: HubConnectionWrapper.StartAsync()
-  fullName: Runly.HubConnectionWrapper.StartAsync()
+  fullName: Runly.Client.HubConnectionWrapper.StartAsync()
   type: Method
   source:
     id: StartAsync
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 545
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nStarts a connetion to the server.\n"
   example: []
   syntax:
@@ -266,31 +266,31 @@ items:
     return:
       type: Task
     content.vb: Public Function StartAsync As Task
-  overload: Runly.HubConnectionWrapper.StartAsync*
+  overload: Runly.Client.HubConnectionWrapper.StartAsync*
   implements:
-  - Runly.IResultsConnection.StartAsync
+  - Runly.Client.IResultsConnection.StartAsync
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: Runly.HubConnectionWrapper.InvokeCoreAsync(System.String,System.Object[])
-  commentId: M:Runly.HubConnectionWrapper.InvokeCoreAsync(System.String,System.Object[])
+- uid: Runly.Client.HubConnectionWrapper.InvokeCoreAsync(System.String,System.Object[])
+  commentId: M:Runly.Client.HubConnectionWrapper.InvokeCoreAsync(System.String,System.Object[])
   id: InvokeCoreAsync(System.String,System.Object[])
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: InvokeCoreAsync(String, Object[])
   nameWithType: HubConnectionWrapper.InvokeCoreAsync(String, Object[])
-  fullName: Runly.HubConnectionWrapper.InvokeCoreAsync(System.String, System.Object[])
+  fullName: Runly.Client.HubConnectionWrapper.InvokeCoreAsync(System.String, System.Object[])
   type: Method
   source:
     id: InvokeCoreAsync
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 552
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nInvokes a hub method on the server.\n"
   example: []
   syntax:
@@ -305,34 +305,34 @@ items:
     return:
       type: Task
     content.vb: Public Function InvokeCoreAsync(methodName As String, args As Object()) As Task
-  overload: Runly.HubConnectionWrapper.InvokeCoreAsync*
+  overload: Runly.Client.HubConnectionWrapper.InvokeCoreAsync*
   implements:
-  - Runly.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
+  - Runly.Client.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
   nameWithType.vb: HubConnectionWrapper.InvokeCoreAsync(String, Object())
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.HubConnectionWrapper.InvokeCoreAsync(System.String, System.Object())
+  fullName.vb: Runly.Client.HubConnectionWrapper.InvokeCoreAsync(System.String, System.Object())
   name.vb: InvokeCoreAsync(String, Object())
-- uid: Runly.HubConnectionWrapper.SendCoreAsync(System.String,System.Object[])
-  commentId: M:Runly.HubConnectionWrapper.SendCoreAsync(System.String,System.Object[])
+- uid: Runly.Client.HubConnectionWrapper.SendCoreAsync(System.String,System.Object[])
+  commentId: M:Runly.Client.HubConnectionWrapper.SendCoreAsync(System.String,System.Object[])
   id: SendCoreAsync(System.String,System.Object[])
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: SendCoreAsync(String, Object[])
   nameWithType: HubConnectionWrapper.SendCoreAsync(String, Object[])
-  fullName: Runly.HubConnectionWrapper.SendCoreAsync(System.String, System.Object[])
+  fullName: Runly.Client.HubConnectionWrapper.SendCoreAsync(System.String, System.Object[])
   type: Method
   source:
     id: SendCoreAsync
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 559
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nInvokes a hub method on the server. Does not wait to a response from the receiver.\n"
   example: []
   syntax:
@@ -347,34 +347,34 @@ items:
     return:
       type: Task
     content.vb: Public Function SendCoreAsync(methodName As String, args As Object()) As Task
-  overload: Runly.HubConnectionWrapper.SendCoreAsync*
+  overload: Runly.Client.HubConnectionWrapper.SendCoreAsync*
   implements:
-  - Runly.IResultsConnection.SendCoreAsync(System.String,System.Object[])
+  - Runly.Client.IResultsConnection.SendCoreAsync(System.String,System.Object[])
   nameWithType.vb: HubConnectionWrapper.SendCoreAsync(String, Object())
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.HubConnectionWrapper.SendCoreAsync(System.String, System.Object())
+  fullName.vb: Runly.Client.HubConnectionWrapper.SendCoreAsync(System.String, System.Object())
   name.vb: SendCoreAsync(String, Object())
-- uid: Runly.HubConnectionWrapper.On(System.String,Action)
-  commentId: M:Runly.HubConnectionWrapper.On(System.String,Action)
+- uid: Runly.Client.HubConnectionWrapper.On(System.String,Action)
+  commentId: M:Runly.Client.HubConnectionWrapper.On(System.String,Action)
   id: On(System.String,Action)
-  parent: Runly.HubConnectionWrapper
+  parent: Runly.Client.HubConnectionWrapper
   langs:
   - csharp
   - vb
   name: On(String, Action)
   nameWithType: HubConnectionWrapper.On(String, Action)
-  fullName: Runly.HubConnectionWrapper.On(System.String, Action)
+  fullName: Runly.Client.HubConnectionWrapper.On(System.String, Action)
   type: Method
   source:
     id: On
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 566
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nRegisters a handler that will be invoked when the hub method with the specified name is invoked.\n"
   example: []
   syntax:
@@ -389,25 +389,25 @@ items:
     return:
       type: IDisposable
     content.vb: Public Function On(methodName As String, handler As Action) As IDisposable
-  overload: Runly.HubConnectionWrapper.On*
+  overload: Runly.Client.HubConnectionWrapper.On*
   implements:
-  - Runly.IResultsConnection.On(System.String,Action)
+  - Runly.Client.IResultsConnection.On(System.String,Action)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Runly.IResultsConnection
-  commentId: T:Runly.IResultsConnection
-  parent: Runly
+- uid: Runly.Client.IResultsConnection
+  commentId: T:Runly.Client.IResultsConnection
+  parent: Runly.Client
   name: IResultsConnection
   nameWithType: IResultsConnection
-  fullName: Runly.IResultsConnection
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
+  fullName: Runly.Client.IResultsConnection
+- uid: Runly.Client
+  commentId: N:Runly.Client
+  name: Runly.Client
+  nameWithType: Runly.Client
+  fullName: Runly.Client
 - uid: System.Object
   isExternal: true
   name: Object
@@ -419,28 +419,28 @@ references:
   name: IAsyncDisposable
   nameWithType: IAsyncDisposable
   fullName: IAsyncDisposable
-- uid: Runly.HubConnectionWrapper
-  commentId: T:Runly.HubConnectionWrapper
+- uid: Runly.Client.HubConnectionWrapper
+  commentId: T:Runly.Client.HubConnectionWrapper
   name: HubConnectionWrapper
   nameWithType: HubConnectionWrapper
-  fullName: Runly.HubConnectionWrapper
-- uid: Runly.HubConnectionWrapper.#ctor*
-  commentId: Overload:Runly.HubConnectionWrapper.#ctor
+  fullName: Runly.Client.HubConnectionWrapper
+- uid: Runly.Client.HubConnectionWrapper.#ctor*
+  commentId: Overload:Runly.Client.HubConnectionWrapper.#ctor
   name: HubConnectionWrapper
   nameWithType: HubConnectionWrapper.HubConnectionWrapper
-  fullName: Runly.HubConnectionWrapper.HubConnectionWrapper
+  fullName: Runly.Client.HubConnectionWrapper.HubConnectionWrapper
 - uid: HubConnection
   commentId: '!:HubConnection'
   isExternal: true
   name: HubConnection
   nameWithType: HubConnection
   fullName: HubConnection
-- uid: Runly.IResultsConnection.Closed
-  commentId: E:Runly.IResultsConnection.Closed
-  parent: Runly.IResultsConnection
+- uid: Runly.Client.IResultsConnection.Closed
+  commentId: E:Runly.Client.IResultsConnection.Closed
+  parent: Runly.Client.IResultsConnection
   name: Closed
   nameWithType: IResultsConnection.Closed
-  fullName: Runly.IResultsConnection.Closed
+  fullName: Runly.Client.IResultsConnection.Closed
 - uid: Func{Exception,Task}
   commentId: '!:Func{Exception,Task}'
   definition: Func`2
@@ -550,12 +550,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.IResultsConnection.Reconnected
-  commentId: E:Runly.IResultsConnection.Reconnected
-  parent: Runly.IResultsConnection
+- uid: Runly.Client.IResultsConnection.Reconnected
+  commentId: E:Runly.Client.IResultsConnection.Reconnected
+  parent: Runly.Client.IResultsConnection
   name: Reconnected
   nameWithType: IResultsConnection.Reconnected
-  fullName: Runly.IResultsConnection.Reconnected
+  fullName: Runly.Client.IResultsConnection.Reconnected
 - uid: Func{System.String,Task}
   commentId: '!:Func{System.String,Task}'
   definition: Func`2
@@ -615,54 +615,54 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.IResultsConnection.Reconnecting
-  commentId: E:Runly.IResultsConnection.Reconnecting
-  parent: Runly.IResultsConnection
+- uid: Runly.Client.IResultsConnection.Reconnecting
+  commentId: E:Runly.Client.IResultsConnection.Reconnecting
+  parent: Runly.Client.IResultsConnection
   name: Reconnecting
   nameWithType: IResultsConnection.Reconnecting
-  fullName: Runly.IResultsConnection.Reconnecting
-- uid: Runly.HubConnectionWrapper.State*
-  commentId: Overload:Runly.HubConnectionWrapper.State
+  fullName: Runly.Client.IResultsConnection.Reconnecting
+- uid: Runly.Client.HubConnectionWrapper.State*
+  commentId: Overload:Runly.Client.HubConnectionWrapper.State
   name: State
   nameWithType: HubConnectionWrapper.State
-  fullName: Runly.HubConnectionWrapper.State
-- uid: Runly.IResultsConnection.State
-  commentId: P:Runly.IResultsConnection.State
-  parent: Runly.IResultsConnection
+  fullName: Runly.Client.HubConnectionWrapper.State
+- uid: Runly.Client.IResultsConnection.State
+  commentId: P:Runly.Client.IResultsConnection.State
+  parent: Runly.Client.IResultsConnection
   name: State
   nameWithType: IResultsConnection.State
-  fullName: Runly.IResultsConnection.State
+  fullName: Runly.Client.IResultsConnection.State
 - uid: HubConnectionState
   isExternal: true
   name: HubConnectionState
   nameWithType: HubConnectionState
   fullName: HubConnectionState
-- uid: Runly.HubConnectionWrapper.DisposeAsync*
-  commentId: Overload:Runly.HubConnectionWrapper.DisposeAsync
+- uid: Runly.Client.HubConnectionWrapper.DisposeAsync*
+  commentId: Overload:Runly.Client.HubConnectionWrapper.DisposeAsync
   name: DisposeAsync
   nameWithType: HubConnectionWrapper.DisposeAsync
-  fullName: Runly.HubConnectionWrapper.DisposeAsync
+  fullName: Runly.Client.HubConnectionWrapper.DisposeAsync
 - uid: ValueTask
   isExternal: true
   name: ValueTask
   nameWithType: ValueTask
   fullName: ValueTask
-- uid: Runly.HubConnectionWrapper.StartAsync*
-  commentId: Overload:Runly.HubConnectionWrapper.StartAsync
+- uid: Runly.Client.HubConnectionWrapper.StartAsync*
+  commentId: Overload:Runly.Client.HubConnectionWrapper.StartAsync
   name: StartAsync
   nameWithType: HubConnectionWrapper.StartAsync
-  fullName: Runly.HubConnectionWrapper.StartAsync
-- uid: Runly.IResultsConnection.StartAsync
-  commentId: M:Runly.IResultsConnection.StartAsync
-  parent: Runly.IResultsConnection
+  fullName: Runly.Client.HubConnectionWrapper.StartAsync
+- uid: Runly.Client.IResultsConnection.StartAsync
+  commentId: M:Runly.Client.IResultsConnection.StartAsync
+  parent: Runly.Client.IResultsConnection
   name: StartAsync()
   nameWithType: IResultsConnection.StartAsync()
-  fullName: Runly.IResultsConnection.StartAsync()
+  fullName: Runly.Client.IResultsConnection.StartAsync()
   spec.csharp:
-  - uid: Runly.IResultsConnection.StartAsync
+  - uid: Runly.Client.IResultsConnection.StartAsync
     name: StartAsync
     nameWithType: IResultsConnection.StartAsync
-    fullName: Runly.IResultsConnection.StartAsync
+    fullName: Runly.Client.IResultsConnection.StartAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -670,10 +670,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Runly.IResultsConnection.StartAsync
+  - uid: Runly.Client.IResultsConnection.StartAsync
     name: StartAsync
     nameWithType: IResultsConnection.StartAsync
-    fullName: Runly.IResultsConnection.StartAsync
+    fullName: Runly.Client.IResultsConnection.StartAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -685,26 +685,26 @@ references:
   name: Task
   nameWithType: Task
   fullName: Task
-- uid: Runly.HubConnectionWrapper.InvokeCoreAsync*
-  commentId: Overload:Runly.HubConnectionWrapper.InvokeCoreAsync
+- uid: Runly.Client.HubConnectionWrapper.InvokeCoreAsync*
+  commentId: Overload:Runly.Client.HubConnectionWrapper.InvokeCoreAsync
   name: InvokeCoreAsync
   nameWithType: HubConnectionWrapper.InvokeCoreAsync
-  fullName: Runly.HubConnectionWrapper.InvokeCoreAsync
-- uid: Runly.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
-  commentId: M:Runly.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
-  parent: Runly.IResultsConnection
+  fullName: Runly.Client.HubConnectionWrapper.InvokeCoreAsync
+- uid: Runly.Client.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
+  commentId: M:Runly.Client.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
+  parent: Runly.Client.IResultsConnection
   isExternal: true
   name: InvokeCoreAsync(String, Object[])
   nameWithType: IResultsConnection.InvokeCoreAsync(String, Object[])
-  fullName: Runly.IResultsConnection.InvokeCoreAsync(System.String, System.Object[])
+  fullName: Runly.Client.IResultsConnection.InvokeCoreAsync(System.String, System.Object[])
   nameWithType.vb: IResultsConnection.InvokeCoreAsync(String, Object())
-  fullName.vb: Runly.IResultsConnection.InvokeCoreAsync(System.String, System.Object())
+  fullName.vb: Runly.Client.IResultsConnection.InvokeCoreAsync(System.String, System.Object())
   name.vb: InvokeCoreAsync(String, Object())
   spec.csharp:
-  - uid: Runly.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
+  - uid: Runly.Client.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
     name: InvokeCoreAsync
     nameWithType: IResultsConnection.InvokeCoreAsync
-    fullName: Runly.IResultsConnection.InvokeCoreAsync
+    fullName: Runly.Client.IResultsConnection.InvokeCoreAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -728,10 +728,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Runly.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
+  - uid: Runly.Client.IResultsConnection.InvokeCoreAsync(System.String,System.Object[])
     name: InvokeCoreAsync
     nameWithType: IResultsConnection.InvokeCoreAsync
-    fullName: Runly.IResultsConnection.InvokeCoreAsync
+    fullName: Runly.Client.IResultsConnection.InvokeCoreAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -785,26 +785,26 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Runly.HubConnectionWrapper.SendCoreAsync*
-  commentId: Overload:Runly.HubConnectionWrapper.SendCoreAsync
+- uid: Runly.Client.HubConnectionWrapper.SendCoreAsync*
+  commentId: Overload:Runly.Client.HubConnectionWrapper.SendCoreAsync
   name: SendCoreAsync
   nameWithType: HubConnectionWrapper.SendCoreAsync
-  fullName: Runly.HubConnectionWrapper.SendCoreAsync
-- uid: Runly.IResultsConnection.SendCoreAsync(System.String,System.Object[])
-  commentId: M:Runly.IResultsConnection.SendCoreAsync(System.String,System.Object[])
-  parent: Runly.IResultsConnection
+  fullName: Runly.Client.HubConnectionWrapper.SendCoreAsync
+- uid: Runly.Client.IResultsConnection.SendCoreAsync(System.String,System.Object[])
+  commentId: M:Runly.Client.IResultsConnection.SendCoreAsync(System.String,System.Object[])
+  parent: Runly.Client.IResultsConnection
   isExternal: true
   name: SendCoreAsync(String, Object[])
   nameWithType: IResultsConnection.SendCoreAsync(String, Object[])
-  fullName: Runly.IResultsConnection.SendCoreAsync(System.String, System.Object[])
+  fullName: Runly.Client.IResultsConnection.SendCoreAsync(System.String, System.Object[])
   nameWithType.vb: IResultsConnection.SendCoreAsync(String, Object())
-  fullName.vb: Runly.IResultsConnection.SendCoreAsync(System.String, System.Object())
+  fullName.vb: Runly.Client.IResultsConnection.SendCoreAsync(System.String, System.Object())
   name.vb: SendCoreAsync(String, Object())
   spec.csharp:
-  - uid: Runly.IResultsConnection.SendCoreAsync(System.String,System.Object[])
+  - uid: Runly.Client.IResultsConnection.SendCoreAsync(System.String,System.Object[])
     name: SendCoreAsync
     nameWithType: IResultsConnection.SendCoreAsync
-    fullName: Runly.IResultsConnection.SendCoreAsync
+    fullName: Runly.Client.IResultsConnection.SendCoreAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -828,10 +828,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Runly.IResultsConnection.SendCoreAsync(System.String,System.Object[])
+  - uid: Runly.Client.IResultsConnection.SendCoreAsync(System.String,System.Object[])
     name: SendCoreAsync
     nameWithType: IResultsConnection.SendCoreAsync
-    fullName: Runly.IResultsConnection.SendCoreAsync
+    fullName: Runly.Client.IResultsConnection.SendCoreAsync
   - name: (
     nameWithType: (
     fullName: (
@@ -854,23 +854,23 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.HubConnectionWrapper.On*
-  commentId: Overload:Runly.HubConnectionWrapper.On
+- uid: Runly.Client.HubConnectionWrapper.On*
+  commentId: Overload:Runly.Client.HubConnectionWrapper.On
   name: On
   nameWithType: HubConnectionWrapper.On
-  fullName: Runly.HubConnectionWrapper.On
-- uid: Runly.IResultsConnection.On(System.String,Action)
-  commentId: M:Runly.IResultsConnection.On(System.String,Action)
-  parent: Runly.IResultsConnection
+  fullName: Runly.Client.HubConnectionWrapper.On
+- uid: Runly.Client.IResultsConnection.On(System.String,Action)
+  commentId: M:Runly.Client.IResultsConnection.On(System.String,Action)
+  parent: Runly.Client.IResultsConnection
   isExternal: true
   name: On(String, Action)
   nameWithType: IResultsConnection.On(String, Action)
-  fullName: Runly.IResultsConnection.On(System.String, Action)
+  fullName: Runly.Client.IResultsConnection.On(System.String, Action)
   spec.csharp:
-  - uid: Runly.IResultsConnection.On(System.String,Action)
+  - uid: Runly.Client.IResultsConnection.On(System.String,Action)
     name: On
     nameWithType: IResultsConnection.On
-    fullName: Runly.IResultsConnection.On
+    fullName: Runly.Client.IResultsConnection.On
   - name: (
     nameWithType: (
     fullName: (
@@ -891,10 +891,10 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: Runly.IResultsConnection.On(System.String,Action)
+  - uid: Runly.Client.IResultsConnection.On(System.String,Action)
     name: On
     nameWithType: IResultsConnection.On
-    fullName: Runly.IResultsConnection.On
+    fullName: Runly.Client.IResultsConnection.On
   - name: (
     nameWithType: (
     fullName: (

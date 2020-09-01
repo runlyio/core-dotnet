@@ -23,10 +23,10 @@ items:
   type: Enum
   source:
     id: JobMethod
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 5
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nA list of methods found on a Job.\n"
   example: []
@@ -52,10 +52,10 @@ items:
   type: Field
   source:
     id: InitializeAsync
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 10
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe <xref href=\"Runly.IJob.InitializeAsync\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
   example: []
@@ -82,10 +82,10 @@ items:
   type: Field
   source:
     id: GetItemsAsync
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 15
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe GetItemsAsync method.\n"
   example: []
@@ -112,10 +112,10 @@ items:
   type: Field
   source:
     id: Count
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 20
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe Count operation performed on an enumerable list of items.\n"
   example: []
@@ -142,10 +142,10 @@ items:
   type: Field
   source:
     id: GetEnumerator
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 25
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe GetEnumeratorAsync method on an enumerable list of items.\n"
   example: []
@@ -172,10 +172,10 @@ items:
   type: Field
   source:
     id: EnumeratorMoveNext
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 30
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe MoveNextAsync method on IAsyncEnumerator.\n"
   example: []
@@ -202,10 +202,10 @@ items:
   type: Field
   source:
     id: EnumeratorCurrent
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 35
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe Current property on IAsyncEnumerator.\n"
   example: []
@@ -232,10 +232,10 @@ items:
   type: Field
   source:
     id: GetItemIdAsync
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 40
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe GetItemIdAsync method.\n"
   example: []
@@ -262,10 +262,10 @@ items:
   type: Field
   source:
     id: ProcessAsync
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 45
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nTheProcessAsync method.\n"
   example: []
@@ -292,10 +292,10 @@ items:
   type: Field
   source:
     id: FinalizeAsync
-    path: /github/workspace/src/Core/JobMethod.cs
+    path: /github/workspace/src/Runly/JobMethod.cs
     startLine: 50
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe <xref href=\"Runly.IJob.FinalizeAsync(Runly.Disposition)\" data-throw-if-not-resolved=\"false\"></xref> method.\n"
   example: []
@@ -317,13 +317,77 @@ references:
   fullName: Runly
 - uid: Runly.IJob.InitializeAsync
   commentId: M:Runly.IJob.InitializeAsync
-  isExternal: true
+  parent: Runly.IJob
+  name: InitializeAsync()
+  nameWithType: IJob.InitializeAsync()
+  fullName: Runly.IJob.InitializeAsync()
+  spec.csharp:
+  - uid: Runly.IJob.InitializeAsync
+    name: InitializeAsync
+    nameWithType: IJob.InitializeAsync
+    fullName: Runly.IJob.InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.IJob.InitializeAsync
+    name: InitializeAsync
+    nameWithType: IJob.InitializeAsync
+    fullName: Runly.IJob.InitializeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: Runly.JobMethod
   commentId: T:Runly.JobMethod
   parent: Runly
   name: JobMethod
   nameWithType: JobMethod
   fullName: Runly.JobMethod
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
 - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
   commentId: M:Runly.IJob.FinalizeAsync(Runly.Disposition)
-  isExternal: true
+  parent: Runly.IJob
+  name: FinalizeAsync(Disposition)
+  nameWithType: IJob.FinalizeAsync(Disposition)
+  fullName: Runly.IJob.FinalizeAsync(Runly.Disposition)
+  spec.csharp:
+  - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: IJob.FinalizeAsync
+    fullName: Runly.IJob.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: Runly.IJob.FinalizeAsync(Runly.Disposition)
+    name: FinalizeAsync
+    nameWithType: IJob.FinalizeAsync
+    fullName: Runly.IJob.FinalizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: Runly.Disposition
+    name: Disposition
+    nameWithType: Disposition
+    fullName: Runly.Disposition
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -46,10 +46,10 @@ items:
   type: Class
   source:
     id: Execution
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 11
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nExecutes a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>, communicating with the Runly API, handling exceptions, and providing status.\n"
   example: []
@@ -83,10 +83,10 @@ items:
   type: Event
   source:
     id: Started
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 16
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nEvent raised when execution of a job starts.\n"
   example: []
@@ -112,10 +112,10 @@ items:
   type: Event
   source:
     id: StateChanged
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 21
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nEvent raised when the state of the job changes.\n"
   example: []
@@ -141,10 +141,10 @@ items:
   type: Event
   source:
     id: ItemCompleted
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 26
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nEvent raised when an processing an item completes.\n"
   example: []
@@ -170,10 +170,10 @@ items:
   type: Event
   source:
     id: MethodCompleted
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 31
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nEvent raised when a method completes.\n"
   example: []
@@ -199,10 +199,10 @@ items:
   type: Event
   source:
     id: Completed
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 36
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nEvent raised when execution of a job is complete.\n"
   example: []
@@ -228,10 +228,10 @@ items:
   type: Property
   source:
     id: Job
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 41
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> being executed.\n"
   example: []
@@ -263,10 +263,10 @@ items:
   type: Property
   source:
     id: TotalItemCount
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 51
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe total number of items to be processed.\n"
   remarks: "\n<xref href=\"Runly.Execution.TotalItemCount\" data-throw-if-not-resolved=\"false\"></xref> will be null when a <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref> does not use ToAsyncEnumerable with canCountItems \nset to true. The difference between this total and the sum of <xref href=\"Runly.Execution.SuccessfulItemCount\" data-throw-if-not-resolved=\"false\"></xref> and <xref href=\"Runly.Execution.FailedItemCount\" data-throw-if-not-resolved=\"false\"></xref>\nis the number of items yet to be processed or not processed in the case of a job that ended in the <xref href=\"Runly.Disposition.Failed\" data-throw-if-not-resolved=\"false\"></xref> state.\n"
@@ -299,10 +299,10 @@ items:
   type: Property
   source:
     id: CompletedItemCount
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 56
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of items processed.\n"
   example: []
@@ -332,10 +332,10 @@ items:
   type: Property
   source:
     id: SuccessfulItemCount
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 63
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of items processed with a successful (<xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -365,10 +365,10 @@ items:
   type: Property
   source:
     id: FailedItemCount
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 68
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe number of items processed with an unsuccessful (not <xref href=\"Runly.Result.IsSuccessful\" data-throw-if-not-resolved=\"false\"></xref>) <xref href=\"Runly.Result\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -398,10 +398,10 @@ items:
   type: Property
   source:
     id: ItemCategories
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 75
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the completed item category results.\n"
   example: []
@@ -431,10 +431,10 @@ items:
   type: Property
   source:
     id: State
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 80
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.ExecutionState\" data-throw-if-not-resolved=\"false\"></xref> of execution.\n"
   example: []
@@ -464,10 +464,10 @@ items:
   type: Property
   source:
     id: StartedAt
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 85
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe UTC time at which the run started.\n"
   example: []
@@ -497,10 +497,10 @@ items:
   type: Property
   source:
     id: CompletedAt
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 90
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe UTC time at which the run ended.\n"
   example: []
@@ -530,10 +530,10 @@ items:
   type: Property
   source:
     id: IsComplete
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 95
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates whether the execution has completed.\n"
   example: []
@@ -563,10 +563,10 @@ items:
   type: Property
   source:
     id: Disposition
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 100
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe final state of the job.\n"
   example: []
@@ -596,10 +596,10 @@ items:
   type: Property
   source:
     id: IsCanceled
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 108
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates whether the job has been cancelled or is in the process of cancelling.\n"
   example: []
@@ -629,10 +629,10 @@ items:
   type: Property
   source:
     id: CanceledAt
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 113
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe UTC time at which execution of the job was cancelled.\n"
   example: []
@@ -662,10 +662,10 @@ items:
   type: Property
   source:
     id: IsFailed
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 118
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates whether the job has failed or in the process of failing. \n"
   example: []
@@ -695,10 +695,10 @@ items:
   type: Property
   source:
     id: FailedAt
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 123
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe UTC time at which execution of the job failed.\n"
   example: []
@@ -728,10 +728,10 @@ items:
   type: Property
   source:
     id: FailedIn
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 128
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe <xref href=\"Runly.JobMethod\" data-throw-if-not-resolved=\"false\"></xref> that was executing when the job failed.\n"
   example: []
@@ -761,10 +761,10 @@ items:
   type: Property
   source:
     id: FailedBecauseOf
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 133
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe exception that caused the job to fail.\n"
   example: []
@@ -794,10 +794,10 @@ items:
   type: Method
   source:
     id: ExecuteAsync
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 141
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nExecutes the <xref href=\"Runly.Execution.Job\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -828,10 +828,10 @@ items:
   type: Method
   source:
     id: ExecuteInternalAsync
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 164
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nExecutes an <xref href=\"Runly.IJob\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -865,10 +865,10 @@ items:
   type: Method
   source:
     id: CancelAfter
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 172
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nCauses the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> to be cancelled once the <xref href=\"Runly.Execution.CompletedItemCount\" data-throw-if-not-resolved=\"false\"></xref> reaches the <code data-dev-comment-type=\"paramref\" class=\"paramref\">numberOfItems</code> set.\n"
   remarks: Setting <code data-dev-comment-type="paramref" class="paramref">numberOfItems</code> to zero causes the job to execute normally.
@@ -897,10 +897,10 @@ items:
   type: Method
   source:
     id: EnforceCancelAfter
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 180
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nCancels the execution of the job if the number of items processed has met or exceeded the cancellation threshold set by <xref href=\"Runly.Execution.CancelAfter(System.Int32)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -925,10 +925,10 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 189
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -953,10 +953,10 @@ items:
   type: Method
   source:
     id: Start
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 215
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nCalled internally to mark the start of the execution.\n"
   example: []
@@ -985,10 +985,10 @@ items:
   type: Method
   source:
     id: SetState
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 225
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nCalled internally to set the state of the execution.\n"
   example: []
@@ -1017,10 +1017,10 @@ items:
   type: Method
   source:
     id: CompleteMethod
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 237
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nCalled internally to mark the completion of a call to a job method.\n"
   example: []
@@ -1052,10 +1052,10 @@ items:
   type: Method
   source:
     id: CompleteItem
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 246
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nCalled internally to mark the completion of an item being processed.\n"
   example: []
@@ -1084,10 +1084,10 @@ items:
   type: Method
   source:
     id: Complete
-    path: /github/workspace/src/Core/Execution.cs
+    path: /github/workspace/src/Runly/Execution.cs
     startLine: 263
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nCalled internally to mark the completion of the execution.\n"
   example: []
@@ -1195,6 +1195,7 @@ references:
     nameWithType: )
     fullName: )
 - uid: Func`3
+  commentId: '!:Func`3'
   isExternal: true
   name: Func<, , >
   nameWithType: Func<, , >

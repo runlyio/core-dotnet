@@ -20,10 +20,10 @@ items:
   type: Enum
   source:
     id: ExecutionState
-    path: /github/workspace/src/Core/ExecutionState.cs
+    path: /github/workspace/src/Runly/ExecutionState.cs
     startLine: 5
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe state of <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
@@ -49,10 +49,10 @@ items:
   type: Field
   source:
     id: NotStarted
-    path: /github/workspace/src/Core/ExecutionState.cs
+    path: /github/workspace/src/Runly/ExecutionState.cs
     startLine: 10
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the execution has not started.\n"
   example: []
@@ -79,10 +79,10 @@ items:
   type: Field
   source:
     id: Initializing
-    path: /github/workspace/src/Core/ExecutionState.cs
+    path: /github/workspace/src/Runly/ExecutionState.cs
     startLine: 15
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the execution is calling InitializeAsync.\n"
   example: []
@@ -109,10 +109,10 @@ items:
   type: Field
   source:
     id: GettingItemsToProcess
-    path: /github/workspace/src/Core/ExecutionState.cs
+    path: /github/workspace/src/Runly/ExecutionState.cs
     startLine: 20
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the execution is calling GetItemsAsync and preparing to enumerate the items.\n"
   example: []
@@ -139,10 +139,10 @@ items:
   type: Field
   source:
     id: Processing
-    path: /github/workspace/src/Core/ExecutionState.cs
+    path: /github/workspace/src/Runly/ExecutionState.cs
     startLine: 25
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the execution is calling ProcessAsync with the items.\n"
   example: []
@@ -169,10 +169,10 @@ items:
   type: Field
   source:
     id: Finalizing
-    path: /github/workspace/src/Core/ExecutionState.cs
+    path: /github/workspace/src/Runly/ExecutionState.cs
     startLine: 30
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the execution is calling FinalizeAsync.\n"
   example: []
@@ -199,10 +199,10 @@ items:
   type: Field
   source:
     id: Complete
-    path: /github/workspace/src/Core/ExecutionState.cs
+    path: /github/workspace/src/Runly/ExecutionState.cs
     startLine: 35
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nIndicates the execution has completed.\n"
   example: []

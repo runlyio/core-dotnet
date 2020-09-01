@@ -1,29 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.HubMethodCall
-  commentId: T:Runly.HubMethodCall
+- uid: Runly.Client.HubMethodCall
+  commentId: T:Runly.Client.HubMethodCall
   id: HubMethodCall
-  parent: Runly
+  parent: Runly.Client
   children:
-  - Runly.HubMethodCall.#ctor(System.String,System.Object[])
-  - Runly.HubMethodCall.Args
-  - Runly.HubMethodCall.Attempts
-  - Runly.HubMethodCall.MethodName
-  - Runly.HubMethodCall.ToString
+  - Runly.Client.HubMethodCall.#ctor(System.String,System.Object[])
+  - Runly.Client.HubMethodCall.Args
+  - Runly.Client.HubMethodCall.Attempts
+  - Runly.Client.HubMethodCall.MethodName
+  - Runly.Client.HubMethodCall.ToString
   langs:
   - csharp
   - vb
   name: HubMethodCall
   nameWithType: HubMethodCall
-  fullName: Runly.HubMethodCall
+  fullName: Runly.Client.HubMethodCall
   type: Class
   source:
     id: HubMethodCall
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 363
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nRepresents a SignalR hub method call.\n"
   example: []
   syntax:
@@ -39,24 +39,24 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.HubMethodCall.Attempts
-  commentId: P:Runly.HubMethodCall.Attempts
+- uid: Runly.Client.HubMethodCall.Attempts
+  commentId: P:Runly.Client.HubMethodCall.Attempts
   id: Attempts
-  parent: Runly.HubMethodCall
+  parent: Runly.Client.HubMethodCall
   langs:
   - csharp
   - vb
   name: Attempts
   nameWithType: HubMethodCall.Attempts
-  fullName: Runly.HubMethodCall.Attempts
+  fullName: Runly.Client.HubMethodCall.Attempts
   type: Property
   source:
     id: Attempts
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 368
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nThe number of attempts made to call this method.\n"
   example: []
   syntax:
@@ -65,31 +65,31 @@ items:
     return:
       type: System.Int32
     content.vb: Public Property Attempts As Integer
-  overload: Runly.HubMethodCall.Attempts*
+  overload: Runly.Client.HubMethodCall.Attempts*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: Runly.HubMethodCall.MethodName
-  commentId: P:Runly.HubMethodCall.MethodName
+- uid: Runly.Client.HubMethodCall.MethodName
+  commentId: P:Runly.Client.HubMethodCall.MethodName
   id: MethodName
-  parent: Runly.HubMethodCall
+  parent: Runly.Client.HubMethodCall
   langs:
   - csharp
   - vb
   name: MethodName
   nameWithType: HubMethodCall.MethodName
-  fullName: Runly.HubMethodCall.MethodName
+  fullName: Runly.Client.HubMethodCall.MethodName
   type: Property
   source:
     id: MethodName
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 373
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nThe server method to be invoked.\n"
   example: []
   syntax:
@@ -98,31 +98,31 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property MethodName As String
-  overload: Runly.HubMethodCall.MethodName*
+  overload: Runly.Client.HubMethodCall.MethodName*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.HubMethodCall.Args
-  commentId: P:Runly.HubMethodCall.Args
+- uid: Runly.Client.HubMethodCall.Args
+  commentId: P:Runly.Client.HubMethodCall.Args
   id: Args
-  parent: Runly.HubMethodCall
+  parent: Runly.Client.HubMethodCall
   langs:
   - csharp
   - vb
   name: Args
   nameWithType: HubMethodCall.Args
-  fullName: Runly.HubMethodCall.Args
+  fullName: Runly.Client.HubMethodCall.Args
   type: Property
   source:
     id: Args
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 378
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Client
   summary: "\nThe arguments to be supplied to the server method.\n"
   example: []
   syntax:
@@ -131,32 +131,32 @@ items:
     return:
       type: System.Object[]
     content.vb: Public ReadOnly Property Args As Object()
-  overload: Runly.HubMethodCall.Args*
+  overload: Runly.Client.HubMethodCall.Args*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.HubMethodCall.#ctor(System.String,System.Object[])
-  commentId: M:Runly.HubMethodCall.#ctor(System.String,System.Object[])
+- uid: Runly.Client.HubMethodCall.#ctor(System.String,System.Object[])
+  commentId: M:Runly.Client.HubMethodCall.#ctor(System.String,System.Object[])
   id: '#ctor(System.String,System.Object[])'
-  parent: Runly.HubMethodCall
+  parent: Runly.Client.HubMethodCall
   langs:
   - csharp
   - vb
   name: HubMethodCall(String, Object[])
   nameWithType: HubMethodCall.HubMethodCall(String, Object[])
-  fullName: Runly.HubMethodCall.HubMethodCall(System.String, System.Object[])
+  fullName: Runly.Client.HubMethodCall.HubMethodCall(System.String, System.Object[])
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 385
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nInitializes a new <xref href=\"Runly.HubMethodCall\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Client
+  summary: "\nInitializes a new <xref href=\"Runly.Client.HubMethodCall\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public HubMethodCall(string methodName, params object[] args)
@@ -168,40 +168,40 @@ items:
       type: System.Object[]
       description: The arguments to be supplied to the server method.
     content.vb: Public Sub New(methodName As String, ParamArray args As Object())
-  overload: Runly.HubMethodCall.#ctor*
+  overload: Runly.Client.HubMethodCall.#ctor*
   nameWithType.vb: HubMethodCall.HubMethodCall(String, Object())
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.HubMethodCall.HubMethodCall(System.String, System.Object())
+  fullName.vb: Runly.Client.HubMethodCall.HubMethodCall(System.String, System.Object())
   name.vb: HubMethodCall(String, Object())
-- uid: Runly.HubMethodCall.ToString
-  commentId: M:Runly.HubMethodCall.ToString
+- uid: Runly.Client.HubMethodCall.ToString
+  commentId: M:Runly.Client.HubMethodCall.ToString
   id: ToString
-  parent: Runly.HubMethodCall
+  parent: Runly.Client.HubMethodCall
   langs:
   - csharp
   - vb
   name: ToString()
   nameWithType: HubMethodCall.ToString()
-  fullName: Runly.HubMethodCall.ToString()
+  fullName: Runly.Client.HubMethodCall.ToString()
   type: Method
   source:
     id: ToString
-    path: /github/workspace/src/Runly/ResultsChannel.cs
+    path: /github/workspace/src/Runly/Client/ResultsChannel.cs
     startLine: 394
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nReturns the <xref href=\"Runly.HubMethodCall.MethodName\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Client
+  summary: "\nReturns the <xref href=\"Runly.Client.HubMethodCall.MethodName\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public override string ToString()
     return:
       type: System.String
     content.vb: Public Overrides Function ToString As String
-  overload: Runly.HubMethodCall.ToString*
+  overload: Runly.Client.HubMethodCall.ToString*
   modifiers.csharp:
   - public
   - override
@@ -209,41 +209,41 @@ items:
   - Public
   - Overrides
 references:
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
+- uid: Runly.Client
+  commentId: N:Runly.Client
+  name: Runly.Client
+  nameWithType: Runly.Client
+  fullName: Runly.Client
 - uid: System.Object
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.HubMethodCall.Attempts*
-  commentId: Overload:Runly.HubMethodCall.Attempts
+- uid: Runly.Client.HubMethodCall.Attempts*
+  commentId: Overload:Runly.Client.HubMethodCall.Attempts
   name: Attempts
   nameWithType: HubMethodCall.Attempts
-  fullName: Runly.HubMethodCall.Attempts
+  fullName: Runly.Client.HubMethodCall.Attempts
 - uid: System.Int32
   isExternal: true
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: Runly.HubMethodCall.MethodName*
-  commentId: Overload:Runly.HubMethodCall.MethodName
+- uid: Runly.Client.HubMethodCall.MethodName*
+  commentId: Overload:Runly.Client.HubMethodCall.MethodName
   name: MethodName
   nameWithType: HubMethodCall.MethodName
-  fullName: Runly.HubMethodCall.MethodName
+  fullName: Runly.Client.HubMethodCall.MethodName
 - uid: System.String
   isExternal: true
   name: String
   nameWithType: String
   fullName: System.String
-- uid: Runly.HubMethodCall.Args*
-  commentId: Overload:Runly.HubMethodCall.Args
+- uid: Runly.Client.HubMethodCall.Args*
+  commentId: Overload:Runly.Client.HubMethodCall.Args
   name: Args
   nameWithType: HubMethodCall.Args
-  fullName: Runly.HubMethodCall.Args
+  fullName: Runly.Client.HubMethodCall.Args
 - uid: System.Object[]
   isExternal: true
   name: Object[]
@@ -270,21 +270,21 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Runly.HubMethodCall
-  commentId: T:Runly.HubMethodCall
+- uid: Runly.Client.HubMethodCall
+  commentId: T:Runly.Client.HubMethodCall
   name: HubMethodCall
   nameWithType: HubMethodCall
-  fullName: Runly.HubMethodCall
-- uid: Runly.HubMethodCall.#ctor*
-  commentId: Overload:Runly.HubMethodCall.#ctor
+  fullName: Runly.Client.HubMethodCall
+- uid: Runly.Client.HubMethodCall.#ctor*
+  commentId: Overload:Runly.Client.HubMethodCall.#ctor
   name: HubMethodCall
   nameWithType: HubMethodCall.HubMethodCall
-  fullName: Runly.HubMethodCall.HubMethodCall
-- uid: Runly.HubMethodCall.MethodName
-  commentId: P:Runly.HubMethodCall.MethodName
+  fullName: Runly.Client.HubMethodCall.HubMethodCall
+- uid: Runly.Client.HubMethodCall.MethodName
+  commentId: P:Runly.Client.HubMethodCall.MethodName
   isExternal: true
-- uid: Runly.HubMethodCall.ToString*
-  commentId: Overload:Runly.HubMethodCall.ToString
+- uid: Runly.Client.HubMethodCall.ToString*
+  commentId: Overload:Runly.Client.HubMethodCall.ToString
   name: ToString
   nameWithType: HubMethodCall.ToString
-  fullName: Runly.HubMethodCall.ToString
+  fullName: Runly.Client.HubMethodCall.ToString

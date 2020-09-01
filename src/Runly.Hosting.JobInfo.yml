@@ -1,31 +1,31 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.JobInfo
-  commentId: T:Runly.JobInfo
+- uid: Runly.Hosting.JobInfo
+  commentId: T:Runly.Hosting.JobInfo
   id: JobInfo
-  parent: Runly
+  parent: Runly.Hosting
   children:
-  - Runly.JobInfo.#ctor(Type)
-  - Runly.JobInfo.ConfigType
-  - Runly.JobInfo.Dependencies
-  - Runly.JobInfo.Errors
-  - Runly.JobInfo.IsValid
-  - Runly.JobInfo.ItemType
-  - Runly.JobInfo.JobType
+  - Runly.Hosting.JobInfo.#ctor(Type)
+  - Runly.Hosting.JobInfo.ConfigType
+  - Runly.Hosting.JobInfo.Dependencies
+  - Runly.Hosting.JobInfo.Errors
+  - Runly.Hosting.JobInfo.IsValid
+  - Runly.Hosting.JobInfo.ItemType
+  - Runly.Hosting.JobInfo.JobType
   langs:
   - csharp
   - vb
   name: JobInfo
   nameWithType: JobInfo
-  fullName: Runly.JobInfo
+  fullName: Runly.Hosting.JobInfo
   type: Class
   source:
     id: JobInfo
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 8
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nStores the information required to use and run jobs.\n"
   example: []
   syntax:
@@ -41,24 +41,24 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.JobInfo.JobType
-  commentId: P:Runly.JobInfo.JobType
+- uid: Runly.Hosting.JobInfo.JobType
+  commentId: P:Runly.Hosting.JobInfo.JobType
   id: JobType
-  parent: Runly.JobInfo
+  parent: Runly.Hosting.JobInfo
   langs:
   - csharp
   - vb
   name: JobType
   nameWithType: JobInfo.JobType
-  fullName: Runly.JobInfo.JobType
+  fullName: Runly.Hosting.JobInfo.JobType
   type: Property
   source:
     id: JobType
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 13
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nThe <see cref=\"!:Type\"></see> of the job.\n"
   example: []
   syntax:
@@ -67,31 +67,31 @@ items:
     return:
       type: Type
     content.vb: Public ReadOnly Property JobType As Type
-  overload: Runly.JobInfo.JobType*
+  overload: Runly.Hosting.JobInfo.JobType*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.JobInfo.ItemType
-  commentId: P:Runly.JobInfo.ItemType
+- uid: Runly.Hosting.JobInfo.ItemType
+  commentId: P:Runly.Hosting.JobInfo.ItemType
   id: ItemType
-  parent: Runly.JobInfo
+  parent: Runly.Hosting.JobInfo
   langs:
   - csharp
   - vb
   name: ItemType
   nameWithType: JobInfo.ItemType
-  fullName: Runly.JobInfo.ItemType
+  fullName: Runly.Hosting.JobInfo.ItemType
   type: Property
   source:
     id: ItemType
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 18
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nThe <see cref=\"!:Type\"></see> of the item the job works with.\n"
   example: []
   syntax:
@@ -100,31 +100,31 @@ items:
     return:
       type: Type
     content.vb: Public ReadOnly Property ItemType As Type
-  overload: Runly.JobInfo.ItemType*
+  overload: Runly.Hosting.JobInfo.ItemType*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.JobInfo.ConfigType
-  commentId: P:Runly.JobInfo.ConfigType
+- uid: Runly.Hosting.JobInfo.ConfigType
+  commentId: P:Runly.Hosting.JobInfo.ConfigType
   id: ConfigType
-  parent: Runly.JobInfo
+  parent: Runly.Hosting.JobInfo
   langs:
   - csharp
   - vb
   name: ConfigType
   nameWithType: JobInfo.ConfigType
-  fullName: Runly.JobInfo.ConfigType
+  fullName: Runly.Hosting.JobInfo.ConfigType
   type: Property
   source:
     id: ConfigType
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 23
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nThe <see cref=\"!:Type\"></see> of <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref> the job uses.\n"
   example: []
   syntax:
@@ -133,31 +133,31 @@ items:
     return:
       type: Type
     content.vb: Public ReadOnly Property ConfigType As Type
-  overload: Runly.JobInfo.ConfigType*
+  overload: Runly.Hosting.JobInfo.ConfigType*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.JobInfo.Dependencies
-  commentId: P:Runly.JobInfo.Dependencies
+- uid: Runly.Hosting.JobInfo.Dependencies
+  commentId: P:Runly.Hosting.JobInfo.Dependencies
   id: Dependencies
-  parent: Runly.JobInfo
+  parent: Runly.Hosting.JobInfo
   langs:
   - csharp
   - vb
   name: Dependencies
   nameWithType: JobInfo.Dependencies
-  fullName: Runly.JobInfo.Dependencies
+  fullName: Runly.Hosting.JobInfo.Dependencies
   type: Property
   source:
     id: Dependencies
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 28
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nThe <see cref=\"!:Type\">Types</see> of the parameters for ProcessAsync.\n"
   example: []
   syntax:
@@ -166,65 +166,65 @@ items:
     return:
       type: Type[]
     content.vb: Public ReadOnly Property Dependencies As Type()
-  overload: Runly.JobInfo.Dependencies*
+  overload: Runly.Hosting.JobInfo.Dependencies*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.JobInfo.Errors
-  commentId: P:Runly.JobInfo.Errors
+- uid: Runly.Hosting.JobInfo.Errors
+  commentId: P:Runly.Hosting.JobInfo.Errors
   id: Errors
-  parent: Runly.JobInfo
+  parent: Runly.Hosting.JobInfo
   langs:
   - csharp
   - vb
   name: Errors
   nameWithType: JobInfo.Errors
-  fullName: Runly.JobInfo.Errors
+  fullName: Runly.Hosting.JobInfo.Errors
   type: Property
   source:
     id: Errors
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 33
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nThe reasons why the <xref href=\"Runly.JobInfo.JobType\" data-throw-if-not-resolved=\"false\"></xref> cannot be used as a job.\n"
+  namespace: Runly.Hosting
+  summary: "\nThe reasons why the <xref href=\"Runly.Hosting.JobInfo.JobType\" data-throw-if-not-resolved=\"false\"></xref> cannot be used as a job.\n"
   example: []
   syntax:
     content: public JobLoadErrors Errors { get; }
     parameters: []
     return:
-      type: Runly.JobLoadErrors
+      type: Runly.Hosting.JobLoadErrors
     content.vb: Public ReadOnly Property Errors As JobLoadErrors
-  overload: Runly.JobInfo.Errors*
+  overload: Runly.Hosting.JobInfo.Errors*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.JobInfo.IsValid
-  commentId: P:Runly.JobInfo.IsValid
+- uid: Runly.Hosting.JobInfo.IsValid
+  commentId: P:Runly.Hosting.JobInfo.IsValid
   id: IsValid
-  parent: Runly.JobInfo
+  parent: Runly.Hosting.JobInfo
   langs:
   - csharp
   - vb
   name: IsValid
   nameWithType: JobInfo.IsValid
-  fullName: Runly.JobInfo.IsValid
+  fullName: Runly.Hosting.JobInfo.IsValid
   type: Property
   source:
     id: IsValid
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 38
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nIndicates whether there are any errors with the <xref href=\"Runly.JobInfo.JobType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Hosting
+  summary: "\nIndicates whether there are any errors with the <xref href=\"Runly.Hosting.JobInfo.JobType\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public bool IsValid { get; }
@@ -232,32 +232,32 @@ items:
     return:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsValid As Boolean
-  overload: Runly.JobInfo.IsValid*
+  overload: Runly.Hosting.JobInfo.IsValid*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: Runly.JobInfo.#ctor(Type)
-  commentId: M:Runly.JobInfo.#ctor(Type)
+- uid: Runly.Hosting.JobInfo.#ctor(Type)
+  commentId: M:Runly.Hosting.JobInfo.#ctor(Type)
   id: '#ctor(Type)'
-  parent: Runly.JobInfo
+  parent: Runly.Hosting.JobInfo
   langs:
   - csharp
   - vb
   name: JobInfo(Type)
   nameWithType: JobInfo.JobInfo(Type)
-  fullName: Runly.JobInfo.JobInfo(Type)
+  fullName: Runly.Hosting.JobInfo.JobInfo(Type)
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/JobInfo.cs
+    path: /github/workspace/src/Runly/Hosting/JobInfo.cs
     startLine: 44
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nInitializes a new <xref href=\"Runly.JobInfo\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Hosting
+  summary: "\nInitializes a new <xref href=\"Runly.Hosting.JobInfo\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public JobInfo(Type jobType)
@@ -266,53 +266,58 @@ items:
       type: Type
       description: The <see cref="!:Type"></see> of the job.
     content.vb: Public Sub New(jobType As Type)
-  overload: Runly.JobInfo.#ctor*
+  overload: Runly.Hosting.JobInfo.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
 - uid: System.Object
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.JobInfo.JobType*
-  commentId: Overload:Runly.JobInfo.JobType
+- uid: Runly.Hosting.JobInfo.JobType*
+  commentId: Overload:Runly.Hosting.JobInfo.JobType
   name: JobType
   nameWithType: JobInfo.JobType
-  fullName: Runly.JobInfo.JobType
+  fullName: Runly.Hosting.JobInfo.JobType
 - uid: Type
   isExternal: true
   name: Type
   nameWithType: Type
   fullName: Type
-- uid: Runly.JobInfo.ItemType*
-  commentId: Overload:Runly.JobInfo.ItemType
+- uid: Runly.Hosting.JobInfo.ItemType*
+  commentId: Overload:Runly.Hosting.JobInfo.ItemType
   name: ItemType
   nameWithType: JobInfo.ItemType
-  fullName: Runly.JobInfo.ItemType
+  fullName: Runly.Hosting.JobInfo.ItemType
 - uid: Runly.Config
   commentId: T:Runly.Config
   parent: Runly
   name: Config
   nameWithType: Config
   fullName: Runly.Config
-- uid: Runly.JobInfo.ConfigType*
-  commentId: Overload:Runly.JobInfo.ConfigType
+- uid: Runly.Hosting.JobInfo.ConfigType*
+  commentId: Overload:Runly.Hosting.JobInfo.ConfigType
   name: ConfigType
   nameWithType: JobInfo.ConfigType
-  fullName: Runly.JobInfo.ConfigType
-- uid: Runly.JobInfo.Dependencies*
-  commentId: Overload:Runly.JobInfo.Dependencies
+  fullName: Runly.Hosting.JobInfo.ConfigType
+- uid: Runly
+  commentId: N:Runly
+  name: Runly
+  nameWithType: Runly
+  fullName: Runly
+- uid: Runly.Hosting.JobInfo.Dependencies*
+  commentId: Overload:Runly.Hosting.JobInfo.Dependencies
   name: Dependencies
   nameWithType: JobInfo.Dependencies
-  fullName: Runly.JobInfo.Dependencies
+  fullName: Runly.Hosting.JobInfo.Dependencies
 - uid: Type[]
   isExternal: true
   name: Type[]
@@ -339,38 +344,38 @@ references:
   - name: ()
     nameWithType: ()
     fullName: ()
-- uid: Runly.JobInfo.JobType
-  commentId: P:Runly.JobInfo.JobType
+- uid: Runly.Hosting.JobInfo.JobType
+  commentId: P:Runly.Hosting.JobInfo.JobType
   isExternal: true
-- uid: Runly.JobInfo.Errors*
-  commentId: Overload:Runly.JobInfo.Errors
+- uid: Runly.Hosting.JobInfo.Errors*
+  commentId: Overload:Runly.Hosting.JobInfo.Errors
   name: Errors
   nameWithType: JobInfo.Errors
-  fullName: Runly.JobInfo.Errors
-- uid: Runly.JobLoadErrors
-  commentId: T:Runly.JobLoadErrors
-  parent: Runly
+  fullName: Runly.Hosting.JobInfo.Errors
+- uid: Runly.Hosting.JobLoadErrors
+  commentId: T:Runly.Hosting.JobLoadErrors
+  parent: Runly.Hosting
   name: JobLoadErrors
   nameWithType: JobLoadErrors
-  fullName: Runly.JobLoadErrors
-- uid: Runly.JobInfo.IsValid*
-  commentId: Overload:Runly.JobInfo.IsValid
+  fullName: Runly.Hosting.JobLoadErrors
+- uid: Runly.Hosting.JobInfo.IsValid*
+  commentId: Overload:Runly.Hosting.JobInfo.IsValid
   name: IsValid
   nameWithType: JobInfo.IsValid
-  fullName: Runly.JobInfo.IsValid
+  fullName: Runly.Hosting.JobInfo.IsValid
 - uid: System.Boolean
   isExternal: true
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: Runly.JobInfo
-  commentId: T:Runly.JobInfo
-  parent: Runly
+- uid: Runly.Hosting.JobInfo
+  commentId: T:Runly.Hosting.JobInfo
+  parent: Runly.Hosting
   name: JobInfo
   nameWithType: JobInfo
-  fullName: Runly.JobInfo
-- uid: Runly.JobInfo.#ctor*
-  commentId: Overload:Runly.JobInfo.#ctor
+  fullName: Runly.Hosting.JobInfo
+- uid: Runly.Hosting.JobInfo.#ctor*
+  commentId: Overload:Runly.Hosting.JobInfo.#ctor
   name: JobInfo
   nameWithType: JobInfo.JobInfo
-  fullName: Runly.JobInfo.JobInfo
+  fullName: Runly.Hosting.JobInfo.JobInfo

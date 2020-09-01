@@ -1,25 +1,25 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.TypeNotFoundException
-  commentId: T:Runly.TypeNotFoundException
+- uid: Runly.Hosting.TypeNotFoundException
+  commentId: T:Runly.Hosting.TypeNotFoundException
   id: TypeNotFoundException
-  parent: Runly
+  parent: Runly.Hosting
   children:
-  - Runly.TypeNotFoundException.#ctor(System.String)
+  - Runly.Hosting.TypeNotFoundException.#ctor(System.String)
   langs:
   - csharp
   - vb
   name: TypeNotFoundException
   nameWithType: TypeNotFoundException
-  fullName: Runly.TypeNotFoundException
+  fullName: Runly.Hosting.TypeNotFoundException
   type: Class
   source:
     id: TypeNotFoundException
-    path: /github/workspace/src/Runly/TypeNotFoundException.cs
+    path: /github/workspace/src/Runly/Hosting/TypeNotFoundException.cs
     startLine: 7
   assemblies:
   - Runly
-  namespace: Runly
+  namespace: Runly.Hosting
   summary: "\nAn exception thrown when the job type cannot be resolved.\n"
   example: []
   syntax:
@@ -35,25 +35,25 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.TypeNotFoundException.#ctor(System.String)
-  commentId: M:Runly.TypeNotFoundException.#ctor(System.String)
+- uid: Runly.Hosting.TypeNotFoundException.#ctor(System.String)
+  commentId: M:Runly.Hosting.TypeNotFoundException.#ctor(System.String)
   id: '#ctor(System.String)'
-  parent: Runly.TypeNotFoundException
+  parent: Runly.Hosting.TypeNotFoundException
   langs:
   - csharp
   - vb
   name: TypeNotFoundException(String)
   nameWithType: TypeNotFoundException.TypeNotFoundException(String)
-  fullName: Runly.TypeNotFoundException.TypeNotFoundException(System.String)
+  fullName: Runly.Hosting.TypeNotFoundException.TypeNotFoundException(System.String)
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/TypeNotFoundException.cs
+    path: /github/workspace/src/Runly/Hosting/TypeNotFoundException.cs
     startLine: 13
   assemblies:
   - Runly
-  namespace: Runly
-  summary: "\nInitializes a new <xref href=\"Runly.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Hosting
+  summary: "\nInitializes a new <xref href=\"Runly.Hosting.TypeNotFoundException\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public TypeNotFoundException(string typeName)
@@ -62,32 +62,32 @@ items:
       type: System.String
       description: ''
     content.vb: Public Sub New(typeName As String)
-  overload: Runly.TypeNotFoundException.#ctor*
+  overload: Runly.Hosting.TypeNotFoundException.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: Runly
-  commentId: N:Runly
-  name: Runly
-  nameWithType: Runly
-  fullName: Runly
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
 - uid: System.Object
   isExternal: true
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: Runly.TypeNotFoundException
-  commentId: T:Runly.TypeNotFoundException
+- uid: Runly.Hosting.TypeNotFoundException
+  commentId: T:Runly.Hosting.TypeNotFoundException
   name: TypeNotFoundException
   nameWithType: TypeNotFoundException
-  fullName: Runly.TypeNotFoundException
-- uid: Runly.TypeNotFoundException.#ctor*
-  commentId: Overload:Runly.TypeNotFoundException.#ctor
+  fullName: Runly.Hosting.TypeNotFoundException
+- uid: Runly.Hosting.TypeNotFoundException.#ctor*
+  commentId: Overload:Runly.Hosting.TypeNotFoundException.#ctor
   name: TypeNotFoundException
   nameWithType: TypeNotFoundException.TypeNotFoundException
-  fullName: Runly.TypeNotFoundException.TypeNotFoundException
+  fullName: Runly.Hosting.TypeNotFoundException.TypeNotFoundException
 - uid: System.String
   isExternal: true
   name: String

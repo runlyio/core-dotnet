@@ -1,26 +1,26 @@
 ### YamlMime:ManagedReference
 items:
-- uid: Runly.Internal.JsonSchema
-  commentId: T:Runly.Internal.JsonSchema
+- uid: Runly.Hosting.JsonSchema
+  commentId: T:Runly.Hosting.JsonSchema
   id: JsonSchema
-  parent: Runly.Internal
+  parent: Runly.Hosting
   children:
-  - Runly.Internal.JsonSchema.#ctor(ILogger{Runly.Internal.JsonSchema})
-  - Runly.Internal.JsonSchema.Generate(Type)
+  - Runly.Hosting.JsonSchema.#ctor(ILogger{Runly.Hosting.JsonSchema})
+  - Runly.Hosting.JsonSchema.Generate(Type)
   langs:
   - csharp
   - vb
   name: JsonSchema
   nameWithType: JsonSchema
-  fullName: Runly.Internal.JsonSchema
+  fullName: Runly.Hosting.JsonSchema
   type: Class
   source:
     id: JsonSchema
-    path: /github/workspace/src/Runly/Internal/JsonSchema.cs
+    path: /github/workspace/src/Runly/Hosting/JsonSchema.cs
     startLine: 11
   assemblies:
   - Runly
-  namespace: Runly.Internal
+  namespace: Runly.Hosting
   summary: "\nGenerates a JSON schema for a <xref href=\"Runly.Config\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
@@ -36,59 +36,59 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: Runly.Internal.JsonSchema.#ctor(ILogger{Runly.Internal.JsonSchema})
-  commentId: M:Runly.Internal.JsonSchema.#ctor(ILogger{Runly.Internal.JsonSchema})
-  id: '#ctor(ILogger{Runly.Internal.JsonSchema})'
-  parent: Runly.Internal.JsonSchema
+- uid: Runly.Hosting.JsonSchema.#ctor(ILogger{Runly.Hosting.JsonSchema})
+  commentId: M:Runly.Hosting.JsonSchema.#ctor(ILogger{Runly.Hosting.JsonSchema})
+  id: '#ctor(ILogger{Runly.Hosting.JsonSchema})'
+  parent: Runly.Hosting.JsonSchema
   langs:
   - csharp
   - vb
   name: JsonSchema(ILogger<JsonSchema>)
   nameWithType: JsonSchema.JsonSchema(ILogger<JsonSchema>)
-  fullName: Runly.Internal.JsonSchema.JsonSchema(ILogger<Runly.Internal.JsonSchema>)
+  fullName: Runly.Hosting.JsonSchema.JsonSchema(ILogger<Runly.Hosting.JsonSchema>)
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/Internal/JsonSchema.cs
+    path: /github/workspace/src/Runly/Hosting/JsonSchema.cs
     startLine: 20
   assemblies:
   - Runly
-  namespace: Runly.Internal
-  summary: "\nInitializes a new <xref href=\"Runly.Internal.JsonSchema\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  namespace: Runly.Hosting
+  summary: "\nInitializes a new <xref href=\"Runly.Hosting.JsonSchema\" data-throw-if-not-resolved=\"false\"></xref>.\n"
   example: []
   syntax:
     content: public JsonSchema(ILogger<JsonSchema> logger)
     parameters:
     - id: logger
-      type: ILogger{Runly.Internal.JsonSchema}
+      type: ILogger{Runly.Hosting.JsonSchema}
       description: A <see cref="!:ILogger"></see>.
     content.vb: Public Sub New(logger As ILogger(Of JsonSchema))
-  overload: Runly.Internal.JsonSchema.#ctor*
+  overload: Runly.Hosting.JsonSchema.#ctor*
   nameWithType.vb: JsonSchema.JsonSchema(ILogger(Of JsonSchema))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: Runly.Internal.JsonSchema.JsonSchema(ILogger(Of Runly.Internal.JsonSchema))
+  fullName.vb: Runly.Hosting.JsonSchema.JsonSchema(ILogger(Of Runly.Hosting.JsonSchema))
   name.vb: JsonSchema(ILogger(Of JsonSchema))
-- uid: Runly.Internal.JsonSchema.Generate(Type)
-  commentId: M:Runly.Internal.JsonSchema.Generate(Type)
+- uid: Runly.Hosting.JsonSchema.Generate(Type)
+  commentId: M:Runly.Hosting.JsonSchema.Generate(Type)
   id: Generate(Type)
-  parent: Runly.Internal.JsonSchema
+  parent: Runly.Hosting.JsonSchema
   langs:
   - csharp
   - vb
   name: Generate(Type)
   nameWithType: JsonSchema.Generate(Type)
-  fullName: Runly.Internal.JsonSchema.Generate(Type)
+  fullName: Runly.Hosting.JsonSchema.Generate(Type)
   type: Method
   source:
     id: Generate
-    path: /github/workspace/src/Runly/Internal/JsonSchema.cs
+    path: /github/workspace/src/Runly/Hosting/JsonSchema.cs
     startLine: 36
   assemblies:
   - Runly
-  namespace: Runly.Internal
+  namespace: Runly.Hosting
   summary: "\nGenerates a JSON schema for the <code data-dev-comment-type=\"paramref\" class=\"paramref\">configType</code>.\n"
   example: []
   syntax:
@@ -101,7 +101,7 @@ items:
       type: JObject
       description: A <see cref="!:JObject"></see> containing the schema.
     content.vb: Public Function Generate(configType As Type) As JObject
-  overload: Runly.Internal.JsonSchema.Generate*
+  overload: Runly.Hosting.JsonSchema.Generate*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -113,11 +113,11 @@ references:
   name: Config
   nameWithType: Config
   fullName: Runly.Config
-- uid: Runly.Internal
-  commentId: N:Runly.Internal
-  name: Runly.Internal
-  nameWithType: Runly.Internal
-  fullName: Runly.Internal
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
 - uid: System.Object
   isExternal: true
   name: Object
@@ -128,24 +128,24 @@ references:
   name: Runly
   nameWithType: Runly
   fullName: Runly
-- uid: Runly.Internal.JsonSchema
-  commentId: T:Runly.Internal.JsonSchema
+- uid: Runly.Hosting.JsonSchema
+  commentId: T:Runly.Hosting.JsonSchema
   name: JsonSchema
   nameWithType: JsonSchema
-  fullName: Runly.Internal.JsonSchema
-- uid: Runly.Internal.JsonSchema.#ctor*
-  commentId: Overload:Runly.Internal.JsonSchema.#ctor
+  fullName: Runly.Hosting.JsonSchema
+- uid: Runly.Hosting.JsonSchema.#ctor*
+  commentId: Overload:Runly.Hosting.JsonSchema.#ctor
   name: JsonSchema
   nameWithType: JsonSchema.JsonSchema
-  fullName: Runly.Internal.JsonSchema.JsonSchema
-- uid: ILogger{Runly.Internal.JsonSchema}
-  commentId: '!:ILogger{Runly.Internal.JsonSchema}'
+  fullName: Runly.Hosting.JsonSchema.JsonSchema
+- uid: ILogger{Runly.Hosting.JsonSchema}
+  commentId: '!:ILogger{Runly.Hosting.JsonSchema}'
   definition: ILogger`1
   name: ILogger<JsonSchema>
   nameWithType: ILogger<JsonSchema>
-  fullName: ILogger<Runly.Internal.JsonSchema>
+  fullName: ILogger<Runly.Hosting.JsonSchema>
   nameWithType.vb: ILogger(Of JsonSchema)
-  fullName.vb: ILogger(Of Runly.Internal.JsonSchema)
+  fullName.vb: ILogger(Of Runly.Hosting.JsonSchema)
   name.vb: ILogger(Of JsonSchema)
   spec.csharp:
   - uid: ILogger`1
@@ -156,10 +156,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: Runly.Internal.JsonSchema
+  - uid: Runly.Hosting.JsonSchema
     name: JsonSchema
     nameWithType: JsonSchema
-    fullName: Runly.Internal.JsonSchema
+    fullName: Runly.Hosting.JsonSchema
   - name: '>'
     nameWithType: '>'
     fullName: '>'
@@ -172,10 +172,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: Runly.Internal.JsonSchema
+  - uid: Runly.Hosting.JsonSchema
     name: JsonSchema
     nameWithType: JsonSchema
-    fullName: Runly.Internal.JsonSchema
+    fullName: Runly.Hosting.JsonSchema
   - name: )
     nameWithType: )
     fullName: )
@@ -217,11 +217,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.Internal.JsonSchema.Generate*
-  commentId: Overload:Runly.Internal.JsonSchema.Generate
+- uid: Runly.Hosting.JsonSchema.Generate*
+  commentId: Overload:Runly.Hosting.JsonSchema.Generate
   name: Generate
   nameWithType: JsonSchema.Generate
-  fullName: Runly.Internal.JsonSchema.Generate
+  fullName: Runly.Hosting.JsonSchema.Generate
 - uid: Type
   isExternal: true
   name: Type

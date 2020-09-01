@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  id: Runly.Hosting
+  children:
+  - Runly.Hosting.ConsoleFormat
+  - Runly.Hosting.JobCache
+  - Runly.Hosting.JobInfo
+  - Runly.Hosting.JobLoadErrors
+  - Runly.Hosting.JsonSchema
+  - Runly.Hosting.TypeNotFoundException
+  langs:
+  - csharp
+  - vb
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting
+  type: Namespace
+  assemblies:
+  - Runly
+references:
+- uid: Runly.Hosting.ConsoleFormat
+  commentId: T:Runly.Hosting.ConsoleFormat
+  name: ConsoleFormat
+  nameWithType: ConsoleFormat
+  fullName: Runly.Hosting.ConsoleFormat
+- uid: Runly.Hosting.JobCache
+  commentId: T:Runly.Hosting.JobCache
+  parent: Runly.Hosting
+  name: JobCache
+  nameWithType: JobCache
+  fullName: Runly.Hosting.JobCache
+- uid: Runly.Hosting.JobInfo
+  commentId: T:Runly.Hosting.JobInfo
+  parent: Runly.Hosting
+  name: JobInfo
+  nameWithType: JobInfo
+  fullName: Runly.Hosting.JobInfo
+- uid: Runly.Hosting.JobLoadErrors
+  commentId: T:Runly.Hosting.JobLoadErrors
+  parent: Runly.Hosting
+  name: JobLoadErrors
+  nameWithType: JobLoadErrors
+  fullName: Runly.Hosting.JobLoadErrors
+- uid: Runly.Hosting.JsonSchema
+  commentId: T:Runly.Hosting.JsonSchema
+  name: JsonSchema
+  nameWithType: JsonSchema
+  fullName: Runly.Hosting.JsonSchema
+- uid: Runly.Hosting.TypeNotFoundException
+  commentId: T:Runly.Hosting.TypeNotFoundException
+  name: TypeNotFoundException
+  nameWithType: TypeNotFoundException
+  fullName: Runly.Hosting.TypeNotFoundException
+- uid: Runly.Hosting
+  commentId: N:Runly.Hosting
+  name: Runly.Hosting
+  nameWithType: Runly.Hosting
+  fullName: Runly.Hosting

@@ -21,10 +21,10 @@ items:
   type: Interface
   source:
     id: IJob
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 12
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nThe interface that all Runly jobs must implement.\n"
   remarks: "\nDo not implement this interface directly, instead you should extend one of the Runly.Job classes in the Runly library.\n"
@@ -51,10 +51,10 @@ items:
   type: Property
   source:
     id: Config
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 17
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the job&apos;s config.\n"
   example: []
@@ -82,10 +82,10 @@ items:
   type: Property
   source:
     id: Options
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 22
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the options for the job, determining how the job can be run.\n"
   example: []
@@ -113,10 +113,10 @@ items:
   type: Property
   source:
     id: CancellationToken
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 27
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.IJob.CancellationToken\" data-throw-if-not-resolved=\"false\"></xref> that the job should use when running.\n"
   example: []
@@ -143,10 +143,10 @@ items:
   type: Method
   source:
     id: GetExecution
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 34
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the <xref href=\"Runly.Execution\" data-throw-if-not-resolved=\"false\"></xref> implementation that can run the job.\n"
   example: []
@@ -174,10 +174,10 @@ items:
   type: Method
   source:
     id: GetDefaultConfig
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 40
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nGets the default config for the job.\n"
   example: []
@@ -201,10 +201,10 @@ items:
   type: Method
   source:
     id: InitializeAsync
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 46
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nInitializes the job, being called before any items are processed.\n"
   example: []
@@ -228,10 +228,10 @@ items:
   type: Method
   source:
     id: FinalizeAsync
-    path: /github/workspace/src/Core/IJob.cs
+    path: /github/workspace/src/Runly/IJob.cs
     startLine: 53
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nFinalizes the job, being called after all items have been processed.\n"
   example: []
@@ -276,7 +276,10 @@ references:
   fullName: Runly.JobOptions
 - uid: Runly.IJob.CancellationToken
   commentId: P:Runly.IJob.CancellationToken
-  isExternal: true
+  parent: Runly.IJob
+  name: CancellationToken
+  nameWithType: IJob.CancellationToken
+  fullName: Runly.IJob.CancellationToken
 - uid: Runly.IJob.CancellationToken*
   commentId: Overload:Runly.IJob.CancellationToken
   name: CancellationToken
@@ -287,6 +290,12 @@ references:
   name: CancellationToken
   nameWithType: CancellationToken
   fullName: CancellationToken
+- uid: Runly.IJob
+  commentId: T:Runly.IJob
+  parent: Runly
+  name: IJob
+  nameWithType: IJob
+  fullName: Runly.IJob
 - uid: Runly.Execution
   commentId: T:Runly.Execution
   parent: Runly

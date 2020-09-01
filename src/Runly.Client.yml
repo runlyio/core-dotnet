@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: Runly.Client
+  commentId: N:Runly.Client
+  id: Runly.Client
+  children:
+  - Runly.Client.ApiClientExtensions
+  - Runly.Client.HubConnectionWrapper
+  - Runly.Client.HubMethodCall
+  - Runly.Client.IResultsConnection
+  - Runly.Client.ResultsChannel
+  - Runly.Client.ResultsChannel.Connection
+  langs:
+  - csharp
+  - vb
+  name: Runly.Client
+  nameWithType: Runly.Client
+  fullName: Runly.Client
+  type: Namespace
+  assemblies:
+  - Runly
+references:
+- uid: Runly.Client.ApiClientExtensions
+  commentId: T:Runly.Client.ApiClientExtensions
+  name: ApiClientExtensions
+  nameWithType: ApiClientExtensions
+  fullName: Runly.Client.ApiClientExtensions
+- uid: Runly.Client.ResultsChannel
+  commentId: T:Runly.Client.ResultsChannel
+  name: ResultsChannel
+  nameWithType: ResultsChannel
+  fullName: Runly.Client.ResultsChannel
+- uid: Runly.Client.ResultsChannel.Connection
+  commentId: T:Runly.Client.ResultsChannel.Connection
+  name: ResultsChannel.Connection
+  nameWithType: ResultsChannel.Connection
+  fullName: Runly.Client.ResultsChannel.Connection
+- uid: Runly.Client.HubMethodCall
+  commentId: T:Runly.Client.HubMethodCall
+  name: HubMethodCall
+  nameWithType: HubMethodCall
+  fullName: Runly.Client.HubMethodCall
+- uid: Runly.Client.IResultsConnection
+  commentId: T:Runly.Client.IResultsConnection
+  parent: Runly.Client
+  name: IResultsConnection
+  nameWithType: IResultsConnection
+  fullName: Runly.Client.IResultsConnection
+- uid: Runly.Client.HubConnectionWrapper
+  commentId: T:Runly.Client.HubConnectionWrapper
+  name: HubConnectionWrapper
+  nameWithType: HubConnectionWrapper
+  fullName: Runly.Client.HubConnectionWrapper
+- uid: Runly.Client
+  commentId: N:Runly.Client
+  name: Runly.Client
+  nameWithType: Runly.Client
+  fullName: Runly.Client

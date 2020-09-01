@@ -19,7 +19,7 @@ items:
   type: Class
   source:
     id: AsyncEnumerableWrapper
-    path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumerableWrapper.cs
     startLine: 11
   assemblies:
   - Runly
@@ -58,7 +58,7 @@ items:
   type: Property
   source:
     id: CanBeCounted
-    path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumerableWrapper.cs
     startLine: 19
   assemblies:
   - Runly
@@ -93,7 +93,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumerableWrapper.cs
     startLine: 28
   assemblies:
   - Runly
@@ -134,7 +134,7 @@ items:
   type: Constructor
   source:
     id: .ctor
-    path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumerableWrapper.cs
     startLine: 40
   assemblies:
   - Runly
@@ -172,7 +172,7 @@ items:
   type: Method
   source:
     id: GetInnerEnumerable
-    path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumerableWrapper.cs
     startLine: 51
   assemblies:
   - Runly
@@ -204,7 +204,7 @@ items:
   type: Method
   source:
     id: GetAsyncEnumerator
-    path: /github/workspace/src/Runly/AsyncEnumerableWrapper.cs
+    path: /github/workspace/src/Runly/Util/AsyncEnumerableWrapper.cs
     startLine: 63
   assemblies:
   - Runly

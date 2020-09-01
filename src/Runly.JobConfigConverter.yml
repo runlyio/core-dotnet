@@ -17,10 +17,10 @@ items:
   type: Class
   source:
     id: JobConfigConverter
-    path: /github/workspace/src/Core/JobConfigConverter.cs
+    path: /github/workspace/src/Runly/Util/JobConfigConverter.cs
     startLine: 17
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nUsed to deserialize a simplified version of <xref href=\"Runly.JobConfig\" data-throw-if-not-resolved=\"false\"></xref> containing only the type name into the full class.\n"
   remarks: "\nDeserializes a string into the full class. In the following JSON the value &quot;Acme.Job&quot; would be placed in the <xref href=\"Runly.JobConfig.Type\" data-throw-if-not-resolved=\"false\"></xref> property.\n```json\n{\n&quot;job&quot;: &quot;Acme.Job&quot;\n}\n```\n"
@@ -51,10 +51,10 @@ items:
   type: Method
   source:
     id: CanConvert
-    path: /github/workspace/src/Core/JobConfigConverter.cs
+    path: /github/workspace/src/Runly/Util/JobConfigConverter.cs
     startLine: 22
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nDetermines whether this instance can convert the specified object type.\n"
   example: []
@@ -86,10 +86,10 @@ items:
   type: Method
   source:
     id: WriteJson
-    path: /github/workspace/src/Core/JobConfigConverter.cs
+    path: /github/workspace/src/Runly/Util/JobConfigConverter.cs
     startLine: 27
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nWrites the JSON representation of the object.\n"
   example: []
@@ -123,10 +123,10 @@ items:
   type: Method
   source:
     id: ReadJson
-    path: /github/workspace/src/Core/JobConfigConverter.cs
+    path: /github/workspace/src/Runly/Util/JobConfigConverter.cs
     startLine: 52
   assemblies:
-  - Runly.Core
+  - Runly
   namespace: Runly
   summary: "\nReads the JSON representation of the object.\n"
   example: []
