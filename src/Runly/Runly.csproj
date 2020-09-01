@@ -27,10 +27,6 @@
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>obj\Debug\netstandard2.0\Runly.xml</DocumentationFile>
-  </PropertyGroup>
-
   <ItemGroup>
 		<PackageReference Include="Ben.Demystifier" Version="0.1.6" />
     <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="3.1.5" />
