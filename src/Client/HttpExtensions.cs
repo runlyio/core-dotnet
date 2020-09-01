@@ -5,7 +5,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Runly
+namespace Runly.Client
 {
 	public static class HttpExtensions
 	{

@@ -3,7 +3,7 @@ on: push
 
 jobs:
   build_core:
-    name: Build and Test Core
+    name: Build and Test
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]

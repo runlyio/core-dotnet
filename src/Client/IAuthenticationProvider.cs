@@ -1,7 +1,7 @@
 ﻿using System.Net.Http.Headers;
 using System.Threading.Tasks;
 
-namespace Runly
+namespace Runly.Client
 {
 	public interface IAuthenticationProvider
 	{

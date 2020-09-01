@@ -2,7 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
 
-namespace Runly
+namespace Runly.Client
 {
 	public static class ServiceExtensions
 	{
@@ -44,24 +44,6 @@ namespace Runly
 			// https://github.com/aspnet/AspNetCore/issues/13346#issuecomment-535544207
 
 			services.AddHttpClient("runly", (s, client) => client.BaseAddress = new Uri(getUrl(s)));
-
-			services.AddTransient<IOrgClient>(s =>
-			{
-				var factory = s.GetRequiredService<IHttpClientFactory>();
-				return new HttpOrgClient(factory.CreateClient("runly"), s.GetRequiredService<IAuthenticationProvider>());
-			});
-
-			services.AddTransient<IAccountClient>(s =>
-			{
-				var factory = s.GetRequiredService<IHttpClientFactory>();
-				return new HttpAccountClient(factory.CreateClient("runly"), s.GetRequiredService<IAuthenticationProvider>());
-			});
-
-			services.AddTransient<IInfrastructureClient>(s =>
-			{
-				var factory = s.GetRequiredService<IHttpClientFactory>();
-				return new HttpInfrastructureClient(factory.CreateClient("runly"), s.GetRequiredService<IAuthenticationProvider>());
-			});
 
 			services.AddTransient<IRunClient>(s =>
 			{

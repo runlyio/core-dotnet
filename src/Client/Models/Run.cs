@@ -1,8 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Runly.Models
+namespace Runly.Client.Models
 {
 	public enum RunState
 	{
@@ -66,5 +67,59 @@ namespace Runly.Models
 		public ProgressInfo Progress { get; set; }
 
 		public NodeInfo Node { get; set; }
+
+		public class EnvironmentInfo
+		{
+			public string Id { get; set; }
+			public bool IsProduction { get; set; }
+		}
+
+		public class JobInfo
+		{
+			/// <summary>
+			/// The organization that owns this package.
+			/// </summary>
+			/// <example>my-org</example>
+			public string Org { get; set; }
+
+			/// <summary>
+			/// The package name where the job can be found.
+			/// </summary>
+			/// <example>MyAwesomePackage</example>
+			public string Package { get; set; }
+			/// <summary>
+			/// The package/job version.
+			/// </summary>
+			/// <example>1.0.0</example>
+			public string Version { get; set; }
+
+			/// <summary>
+			/// The fully qualified type name of the job.
+			/// </summary>
+			/// <example>My.Namespace.HelloWorld</example>
+			public string Type { get; set; }
+
+			/// <summary>
+			/// The short name of the job.
+			/// </summary>
+			/// <example>HelloWorld</example>
+			public string Name { get; set; }
+		}
+
+		public class ProgressInfo
+		{
+			public int Success { get; set; }
+			public int Failed { get; set; }
+			public int? Total { get; set; }
+
+			public IEnumerable<ItemProgress> Categories { get; set; } = new ItemProgress[0];
+		}
+
+		public class NodeInfo
+		{
+			public Guid Id { get; set; }
+			public string Machine { get; set; }
+			public string Cluster { get; set; }
+		}
 	}
 }

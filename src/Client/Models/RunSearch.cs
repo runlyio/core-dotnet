@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Runly.Models
+namespace Runly.Client.Models
 {
 	public class RunSearch
 	{

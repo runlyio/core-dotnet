@@ -1,4 +1,4 @@
-namespace Runly.Models
+namespace Runly.Client.Models
 {
 	public enum PackageType
 	{

@@ -1,12 +1,12 @@
 using Newtonsoft.Json;
-using Runly.Models;
+using Runly.Client.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Runly
+namespace Runly.Client
 {
 	public interface IPackageClient
 	{
@@ -16,11 +16,9 @@ namespace Runly
 		Task<PackageVersion> GetPackageVersion(string organization, string pkgName, string pkgVersion);
 		Task<PackageVersion> UploadPackage(string organization, Stream pkgStream);
 		Task<PackageVersion> UploadPackage(string organization, byte[] pkgBytes);
-
 		Task<IEnumerable<JobSearchResult>> SearchJobs(string organization, string query = null);
-
 		Task<JobSchema> GetJobSchema(string organization, Guid jobId);
-		Task<TConfig> GetDefaultConfig<TConfig>(string organization, Guid jobId) where TConfig : Config, new();
+		Task<string> GetDefaultConfig(string organization, Guid jobId);
 	}
 
 	public class HttpPackageClient : IPackageClient
@@ -132,8 +130,7 @@ namespace Runly
 			return await response.Content.ReadAsAsync<JobSchema>();
 		}
 
-		public async Task<TConfig> GetDefaultConfig<TConfig>(string organization, Guid jobId)
-			where TConfig : Config, new()
+		public async Task<string> GetDefaultConfig(string organization, Guid jobId)
 		{
 			var req = new HttpRequestMessage(HttpMethod.Get, $"/{organization}/jobs/{jobId}");
 			req.Headers.Authorization = await tokenProvider.AcquireAuthHeader();
@@ -142,10 +139,7 @@ namespace Runly
 
 			await response.EnsureSuccess();
 
-			string json = await response.Content.ReadAsStringAsync();
-
-			var result = JsonConvert.DeserializeAnonymousType(json, new { DefaultConfig = new TConfig() });
-			return result?.DefaultConfig;
+			return await response.Content.ReadAsStringAsync();
 		}
 	}
 }
