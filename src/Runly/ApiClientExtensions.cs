@@ -2,13 +2,13 @@
 using Newtonsoft.Json.Linq;
 using Runly.Client.Models;
 using System;
-using System.Collections.Generic;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Runly.Client
 {
+	/// <summary>
+	/// Extension methods for the API clients in Runly.Client.
+	/// </summary>
 	public static class ApiClientExtensions
 	{
 		/// <summary>
