@@ -1,4 +1,4 @@
-﻿namespace Runly.Internal
+﻿namespace Runly.Hosting
 {
 	class Debug
 	{

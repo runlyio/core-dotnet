@@ -2,7 +2,6 @@ using Microsoft.AspNetCore.Http.Connections.Client;
 using Microsoft.AspNetCore.SignalR.Client;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Runly.Client;
 using Runly.Client.Models;
 using System;
 using System.Collections.Concurrent;
@@ -11,7 +10,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Runly
+namespace Runly.Client
 {
 	/// <summary>
 	/// A SignalR channel for communicating job results to the Runly API.

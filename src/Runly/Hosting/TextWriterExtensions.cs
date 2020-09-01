@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Text;
 
-namespace Runly.Internal
+namespace Runly.Hosting
 {
 	static class TextWriterExtensions
 	{

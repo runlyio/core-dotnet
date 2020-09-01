@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Runly
+namespace Runly.Hosting
 {
 	/// <summary>
 	/// Methods for formatting text written to the <see cref="System.Console"/>.

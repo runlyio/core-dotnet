@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Runly
+namespace Runly.Hosting
 {
 	/// <summary>
 	/// Error reasons that <see cref="JobInfo"/> may encounter when loading a job.

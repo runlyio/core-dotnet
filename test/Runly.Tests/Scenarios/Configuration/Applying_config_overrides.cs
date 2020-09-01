@@ -1,10 +1,7 @@
 ﻿using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
-using Runly.Diagnostics;
-using Runly.Internal;
+using Runly.Hosting;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace Runly.Tests.Scenarios.Configuration

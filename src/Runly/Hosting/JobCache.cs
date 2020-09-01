@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace Runly
+namespace Runly.Hosting
 {
 	/// <summary>
 	/// A cache of <see cref="JobInfo">JobInfos</see> for the job types found in the assemblies provided.

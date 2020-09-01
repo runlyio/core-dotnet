@@ -1,6 +1,7 @@
 ﻿using FluentAssertions;
 using Microsoft.Extensions.DependencyInjection;
 using Runly.Diagnostics;
+using Runly.Hosting;
 using System.Linq;
 using Xunit;
 

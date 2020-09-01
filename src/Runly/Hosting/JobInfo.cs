@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Runly
+namespace Runly.Hosting
 {
 	/// <summary>
 	/// Stores the information required to use and run jobs.

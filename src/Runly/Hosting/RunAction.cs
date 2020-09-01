@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Runly.Client;
 using Runly.Client.Models;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Runly.Internal
+namespace Runly.Hosting
 {
 	class RunAction : IHostAction
 	{

@@ -2,7 +2,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Runly.Internal
+namespace Runly.Hosting
 {
 	interface IHostAction
 	{

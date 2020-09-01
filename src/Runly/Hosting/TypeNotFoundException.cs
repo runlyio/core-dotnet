@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Runly
+namespace Runly.Hosting
 {
 	/// <summary>
 	/// An exception thrown when the job type cannot be resolved.

@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Linq;
 using Runly.Diagnostics;
+using Runly.Hosting;
 using Xunit;
 
 namespace Runly.Tests.Scenarios.Configuration

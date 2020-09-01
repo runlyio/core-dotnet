@@ -4,7 +4,7 @@ using Newtonsoft.Json.Linq;
 using NJsonSchema.Generation;
 using System;
 
-namespace Runly.Internal
+namespace Runly.Hosting
 {
 	/// <summary>
 	/// Generates a JSON schema for a <see cref="Config"/>.

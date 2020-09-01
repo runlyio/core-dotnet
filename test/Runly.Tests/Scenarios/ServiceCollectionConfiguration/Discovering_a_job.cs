@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using FluentAssertions;
 using Xunit;
+using Runly.Hosting;
 
 namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 {

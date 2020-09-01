@@ -6,7 +6,7 @@ using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Runly.Internal
+namespace Runly.Hosting
 {
 	class ListAction : IHostAction
 	{

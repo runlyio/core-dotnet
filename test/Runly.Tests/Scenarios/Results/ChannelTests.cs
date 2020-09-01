@@ -1,4 +1,5 @@
 using FluentAssertions;
+using Runly.Client;
 using Runly.Client.Models;
 using System;
 using System.Linq;

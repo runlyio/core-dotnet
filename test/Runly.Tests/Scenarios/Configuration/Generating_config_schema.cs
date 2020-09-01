@@ -1,5 +1,5 @@
 using FluentAssertions;
-using Runly.Internal;
+using Runly.Hosting;
 using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
