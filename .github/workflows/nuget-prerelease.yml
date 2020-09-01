@@ -15,9 +15,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Package Core
-        run: dotnet pack src/Core/Core.csproj -c Release -o .
-
       - name: Package Client
         run: dotnet pack src/Client/Client.csproj -c Release -o .
 
