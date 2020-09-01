@@ -22,10 +22,7 @@
 
     <PackageIcon>logo.png</PackageIcon>
     <MinVerTagPrefix>v</MinVerTagPrefix>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <DocumentationFile>obj\Debug\netstandard2.0\Runly.Client.xml</DocumentationFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
