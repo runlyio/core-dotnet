@@ -1,7 +1,7 @@
 using System;
 using System.Threading.Tasks;
 
-namespace Runly
+namespace Runly.Client
 {
 	public class ApiKeyProvider : IAuthenticationProvider
 	{

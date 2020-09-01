@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Runly.Models
+namespace Runly.Client.Models
 {
 	public enum RunLogType { stdout, stderr }
 

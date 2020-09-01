@@ -1,5 +1,5 @@
 using FluentAssertions;
-using Runly.Models;
+using Runly.Client.Models;
 using System;
 using System.Linq;
 using System.Threading.Tasks;

@@ -2,7 +2,7 @@ using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
 
-namespace Runly
+namespace Runly.Client
 {
 	public static class ServiceExtensions
 	{

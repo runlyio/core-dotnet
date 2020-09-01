@@ -2,7 +2,7 @@
 using System.Net;
 using System.Net.Http;
 
-namespace Runly
+namespace Runly.Client
 {
 	public class RunlyHttpRequestException : HttpRequestException
 	{

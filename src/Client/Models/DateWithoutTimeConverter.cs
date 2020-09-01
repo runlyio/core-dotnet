@@ -1,6 +1,6 @@
 using Newtonsoft.Json.Converters;
 
-namespace Runly.Models
+namespace Runly.Client.Models
 {
 	public class DateWithoutTimeConverter : IsoDateTimeConverter
 	{

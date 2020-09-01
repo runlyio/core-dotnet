@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace Runly.Models
+namespace Runly.Client.Models
 {
 	public enum RunState
 	{

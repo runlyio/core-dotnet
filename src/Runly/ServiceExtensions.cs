@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Runly.Client;
 using Runly.Internal;
 using System;
 using System.Collections.Generic;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Runly.Models
+namespace Runly.Client.Models
 {
 	public class Job
 	{
