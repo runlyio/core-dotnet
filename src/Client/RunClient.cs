@@ -1,4 +1,3 @@
-using Newtonsoft.Json.Linq;
 using Runly.Client.Models;
 using System;
 using System.Collections.Generic;

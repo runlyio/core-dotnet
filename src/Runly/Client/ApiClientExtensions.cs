@@ -34,7 +34,7 @@ namespace Runly.Client
 		public static Task<Run> Enqueue(this IRunClient client, string organization, string environment, Config config) =>
 			client.Enqueue(organization, environment, ConfigWriter.ToJson(config));
 
-		public static Task<Run> EnqueueFromTemplate(this IRunClient client, string organization, string environment, string template, object configToMerge, bool scheduled)
+		public static Task<Run> EnqueueFromTemplate(this IRunClient client, string organization, string environment, string template, object configToMerge = null, bool scheduled = false)
 		{
 			var jobj = JObject.FromObject(configToMerge ?? new { }, ConfigWriter.Serializer);
 			jobj["template"] = template;
