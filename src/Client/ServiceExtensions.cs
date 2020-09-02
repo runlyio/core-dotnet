@@ -4,10 +4,19 @@ using System.Net.Http;
 
 namespace Runly.Client
 {
+	/// <summary>
+	/// Extension methods to add the <see cref="IRunClient"/> to an <see cref="IServiceCollection"/>.
+	/// </summary>
 	public static class ServiceExtensions
 	{
 		const string DEFAULT_API_URL = "https://api.runly.io/";
 
+		/// <summary>
+		/// Adds the <see cref="IRunClient"/> and related services to the <paramref name="services">IServiceCollection</paramref>.
+		/// </summary>
+		/// <param name="services">The <see cref="IServiceCollection"/> to modify.</param>
+		/// <param name="apiKey">The key to use when using the Runly API.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> for chaining.</returns>
 		public static IServiceCollection AddRunlyApi(this IServiceCollection services, string apiKey)
 		{
 			if (String.IsNullOrWhiteSpace(apiKey))
@@ -16,6 +25,13 @@ namespace Runly.Client
 			return AddRunlyApi(services, apiKey, DEFAULT_API_URL);
 		}
 
+		/// <summary>
+		/// Adds the <see cref="IRunClient"/> and related services to the <paramref name="services">IServiceCollection</paramref>.
+		/// </summary>
+		/// <param name="services">The <see cref="IServiceCollection"/> to modify.</param>
+		/// <param name="apiKey">The key to use when using the Runly API.</param>
+		/// <param name="url">The URL of the Runly API.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> for chaining.</returns>
 		public static IServiceCollection AddRunlyApi(this IServiceCollection services, string apiKey, string url)
 		{
 			if (String.IsNullOrWhiteSpace(apiKey))
@@ -27,9 +43,22 @@ namespace Runly.Client
 			return AddRunlyApi(services, _ => apiKey, _ => url);
 		}
 
+		/// <summary>
+		/// Adds the <see cref="IRunClient"/> and related services to the <paramref name="services">IServiceCollection</paramref>.
+		/// </summary>
+		/// <param name="services">The <see cref="IServiceCollection"/> to modify.</param>
+		/// <param name="getApiKey">A function that returns the key to use when using the Runly API.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> for chaining.</returns>
 		public static IServiceCollection AddRunlyApi(this IServiceCollection services, Func<IServiceProvider, string> getApiKey)
 			=> AddRunlyApi(services, getApiKey, _ => DEFAULT_API_URL);
 
+		/// <summary>
+		/// Adds the <see cref="IRunClient"/> and related services to the <paramref name="services">IServiceCollection</paramref>.
+		/// </summary>
+		/// <param name="services">The <see cref="IServiceCollection"/> to modify.</param>
+		/// <param name="getApiKey">A function that returns the key to use when using the Runly API.</param>
+		/// <param name="getUrl">A function that returns the URL of the Runly API.</param>
+		/// <returns>The same <see cref="IServiceCollection"/> for chaining.</returns>
 		public static IServiceCollection AddRunlyApi(this IServiceCollection services, Func<IServiceProvider, string> getApiKey, Func<IServiceProvider, string> getUrl)
 		{
 			if (getApiKey == null)

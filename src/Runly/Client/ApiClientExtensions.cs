@@ -23,23 +23,6 @@ namespace Runly.Client
 			JsonConvert.DeserializeObject<TConfig>(await client.GetConfig(organization, runId), ConfigWriter.Settings);
 
 		/// <summary>
-		/// Gets the default <see cref="Config"/> for the <paramref name="jobId"/> specified.
-		/// </summary>
-		/// <typeparam name="TConfig">The type of <see cref="Config"/>.</typeparam>
-		/// <param name="client">The API client to use.</param>
-		/// <param name="organization">The organization in which the <see cref="Job"/> can be found.</param>
-		/// <param name="jobId">The ID of the job to get the default config for.</param>
-		/// <returns>A <see cref="Config"/> of type <typeparamref name="TConfig"/>.</returns>
-		public static async Task<TConfig> GetDefaultConfig<TConfig>(this IPackageClient client, string organization, Guid jobId)
-			where TConfig : Config, new()
-		{
-			string json = await client.GetDefaultConfig(organization, jobId);
-
-			var result = JsonConvert.DeserializeAnonymousType(json, new { DefaultConfig = new TConfig() });
-			return result?.DefaultConfig;
-		}
-
-		/// <summary>
 		/// Enqueues a new run with the <paramref name="config"/> in the <paramref name="organization"/> and <paramref name="environment"/>.
 		/// </summary>
 		/// <param name="client">The API client to use.</param>
