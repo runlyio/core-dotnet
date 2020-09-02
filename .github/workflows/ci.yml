@@ -22,7 +22,7 @@ jobs:
         run: dotnet test --configuration=Release
 
   build_getting_started:
-    name: Build Getting Started Example
+    name: Build Examples
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macOS-latest]
@@ -39,24 +39,4 @@ jobs:
 
       - name: Test
         run: dotnet build --configuration=Release
-        working-directory: examples/getting-started
-
-  build_webapp:
-    name: Build Web App Example
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macOS-latest]
-    runs-on: ${{ matrix.os }}
-
-    steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: '3.1.100'
-
-      - name: Test
-        run: dotnet build --configuration=Release
-        working-directory: examples/web-app
+        working-directory: examples
