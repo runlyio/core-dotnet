@@ -23,20 +23,30 @@ namespace Runly.Client
 			JsonConvert.DeserializeObject<TConfig>(await client.GetConfig(organization, runId), ConfigWriter.Settings);
 
 		/// <summary>
-		/// Enqueues the <see cref="Job"/> described in <paramref name="config"/> to run in the <paramref name="organization"/> 
-		/// and <paramref name="environment"/> specified.
+		/// Enqueues a new run with the <paramref name="config"/> in the <paramref name="organization"/> and <paramref name="environment"/>.
 		/// </summary>
 		/// <param name="client">The API client to use.</param>
-		/// <param name="organization">The organization that the job will run in.</param>
-		/// <param name="environment">The environment that the job will run in.</param>
-		/// <param name="config">The <see cref="Config"/> for the job to run.</param>
-		/// <returns>A <see cref="Run"/> indicating the identity and status of the run.</returns>
+		/// <param name="organization">The organization in which the <paramref name="environment"/> can be found.</param>
+		/// <param name="environment">The environment to enqueue a new run in.</param>
+		/// <param name="config">The <see cref="Config"/> for the new run.</param>
+		/// <returns>A newly enqueued <see cref="Run"/>.</returns>
 		public static Task<Run> Enqueue(this IRunClient client, string organization, string environment, Config config) =>
 			client.Enqueue(organization, environment, ConfigWriter.ToJson(config));
 
-		public static Task<Run> EnqueueFromTemplate(this IRunClient client, string organization, string environment, string template, object configToMerge = null, bool scheduled = false)
+		/// <summary>
+		/// Enqueues a new run with the stored config template in the <paramref name="organization"/> and <paramref name="environment"/>. 
+		/// Overrides parameters in the config template with values found on <paramref name="overrides"/>.
+		/// </summary>
+		/// <param name="client">The API client to use.</param>
+		/// <param name="organization">The organization in which the <paramref name="environment"/> can be found.</param>
+		/// <param name="environment">The environment to enqueue a new run in.</param>
+		/// <param name="template">The name of the config template to use for the new run.</param>
+		/// <param name="overrides">When provided, will override parameters in the config template.</param>
+		/// <param name="scheduled">When true, will count the enqueued run as an occurence of the config template's schedule, affecting the next occurence of the schedule.</param>
+		/// <returns>A newly enqueued <see cref="Run"/>.</returns>
+		public static Task<Run> EnqueueFromTemplate(this IRunClient client, string organization, string environment, string template, object overrides = null, bool scheduled = false)
 		{
-			var jobj = JObject.FromObject(configToMerge ?? new { }, ConfigWriter.Serializer);
+			var jobj = JObject.FromObject(overrides ?? new { }, ConfigWriter.Serializer);
 			jobj["template"] = template;
 			jobj["scheduled"] = scheduled;
 			string json = jobj.ToString();
@@ -44,7 +54,17 @@ namespace Runly.Client
 			return client.Enqueue(organization, environment, json);
 		}
 
-		public static Task<Run> Enqueue(this IRunClient client, string organization, string environment, string jobType, string version = null, string package = null)
+		/// <summary>
+		/// Enqueues a new run with the default config for the <paramref name="jobType"/> in the <paramref name="organization"/> and <paramref name="environment"/>.
+		/// </summary>
+		/// <param name="client">The API client to use.</param>
+		/// <param name="organization">The organization in which the <paramref name="environment"/> can be found.</param>
+		/// <param name="environment">The environment to enqueue a new run in.</param>
+		/// <param name="jobType">The type of job to enqueue a new run for.</param>
+		/// <param name="version">The version of the package to use.</param>
+		/// <param name="package">The package where the job is found.</param>
+		/// <returns>A newly enqueued <see cref="Run"/>.</returns>
+		public static Task<Run> EnqueueDefaultConfig(this IRunClient client, string organization, string environment, string jobType, string version = null, string package = null)
 		{
 			return client.Enqueue(organization, environment, new Config
 			{
@@ -57,7 +77,17 @@ namespace Runly.Client
 			});
 		}
 
-		public static Task<Run> Enqueue<TJob>(this IRunClient client, string organization, string environment, string version = null, string package = null)
+		/// <summary>
+		/// Enqueues a new run with the default config for the <typeparamref name="TJob"/> in the <paramref name="organization"/> and <paramref name="environment"/>.
+		/// </summary>
+		/// <typeparam name="TJob">The type of job to enqueue a new run for.</typeparam>
+		/// <param name="client">The API client to use.</param>
+		/// <param name="organization">The organization in which the <paramref name="environment"/> can be found.</param>
+		/// <param name="environment">The environment to enqueue a new run in.</param>
+		/// <param name="version">The version of the package to use.</param>
+		/// <param name="package">The package where the job is found.</param>
+		/// <returns>A newly enqueued <see cref="Run"/>.</returns>
+		public static Task<Run> EnqueueDefaultConfig<TJob>(this IRunClient client, string organization, string environment, string version = null, string package = null)
 			where TJob : class
 		{
 			return client.Enqueue(organization, environment, new Config
@@ -69,44 +99,6 @@ namespace Runly.Client
 					Package = package
 				}
 			});
-		}
-
-		public static Task<Run> Enqueue<TConfig>(this IRunClient client, string organization, string environment, string jobType, TConfig config = null, string version = null, string package = null)
-			where TConfig : Config
-		{
-			Config cfg = config ?? new Config();
-			cfg.Job = new JobConfig
-			{
-				Type = jobType,
-				Version = version,
-				Package = package
-			};
-
-			return client.Enqueue(organization, environment, cfg);
-		}
-
-		public static Task<Run> Enqueue<TJob, TConfig>(this IRunClient client, string organization, string environment, TConfig config = null, string version = null, string package = null)
-			where TJob : class
-			where TConfig : Config
-		{
-			Config cfg = config ?? new Config();
-			cfg.Job = new JobConfig
-			{
-				Type = typeof(TJob).FullName,
-				Version = version,
-				Package = package
-			};
-
-			return client.Enqueue(organization, environment, cfg);
-		}
-
-		public static async Task<TConfig> GetDefaultConfig<TConfig>(this IPackageClient client, string organization, Guid jobId)
-			where TConfig : Config, new()
-		{
-			string json = await client.GetDefaultConfig(organization, jobId);
-
-			var result = JsonConvert.DeserializeAnonymousType(json, new { DefaultConfig = new TConfig() });
-			return result?.DefaultConfig;
 		}
 	}
 }
