@@ -130,6 +130,12 @@ namespace Runly.Client
 			return await response.Content.ReadAsAsync<JobSchema>();
 		}
 
+		/// <summary>
+		/// Gets the default config for the <paramref name="jobId"/> specified.
+		/// </summary>
+		/// <param name="organization">The organization in which the <see cref="Job"/> can be found.</param>
+		/// <param name="jobId">The ID of the job to get the default config for.</param>
+		/// <returns>A JSON config.</returns>
 		public async Task<string> GetDefaultConfig(string organization, Guid jobId)
 		{
 			var req = new HttpRequestMessage(HttpMethod.Get, $"/{organization}/jobs/{jobId}");
