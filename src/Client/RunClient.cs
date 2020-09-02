@@ -76,7 +76,7 @@ namespace Runly.Client
 			var response = await api.SendAsync(req);
 
 			await response.EnsureSuccess();
-			return await response.Content.ReadAsAsync<string>();
+			return await response.Content.ReadAsStringAsync();
 		}
 
 		public async Task<IDictionary<RunLogType, RunLogInfo>> GetLogInfo(string organization, Guid runId)
