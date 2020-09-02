@@ -6,13 +6,10 @@ items:
   parent: Runly.Client
   children:
   - Runly.Client.ApiClientExtensions.Enqueue(Runly.Client.IRunClient,System.String,System.String,Runly.Config)
-  - Runly.Client.ApiClientExtensions.Enqueue(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
-  - Runly.Client.ApiClientExtensions.Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,``0,System.String,System.String)
-  - Runly.Client.ApiClientExtensions.Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
-  - Runly.Client.ApiClientExtensions.Enqueue``2(Runly.Client.IRunClient,System.String,System.String,``1,System.String,System.String)
+  - Runly.Client.ApiClientExtensions.EnqueueDefaultConfig(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
+  - Runly.Client.ApiClientExtensions.EnqueueDefaultConfig``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
   - Runly.Client.ApiClientExtensions.EnqueueFromTemplate(Runly.Client.IRunClient,System.String,System.String,System.String,System.Object,System.Boolean)
   - Runly.Client.ApiClientExtensions.GetConfig``1(Runly.Client.IRunClient,System.String,Guid)
-  - Runly.Client.ApiClientExtensions.GetDefaultConfig``1(Runly.Client.IPackageClient,System.String,Guid)
   langs:
   - csharp
   - vb
@@ -113,11 +110,11 @@ items:
   source:
     id: Enqueue
     path: /github/workspace/src/Runly/Client/ApiClientExtensions.cs
-    startLine: 33
+    startLine: 32
   assemblies:
   - Runly
   namespace: Runly.Client
-  summary: "\nEnqueues the <xref href=\"Runly.Job\" data-throw-if-not-resolved=\"false\"></xref> described in <code data-dev-comment-type=\"paramref\" class=\"paramref\">config</code> to run in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">organization</code> \nand <code data-dev-comment-type=\"paramref\" class=\"paramref\">environment</code> specified.\n"
+  summary: "\nEnqueues a new run with the <code data-dev-comment-type=\"paramref\" class=\"paramref\">config</code> in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">organization</code> and <code data-dev-comment-type=\"paramref\" class=\"paramref\">environment</code>.\n"
   example: []
   syntax:
     content: public static Task<Run> Enqueue(this IRunClient client, string organization, string environment, Config config)
@@ -127,16 +124,16 @@ items:
       description: The API client to use.
     - id: organization
       type: System.String
-      description: The organization that the job will run in.
+      description: The organization in which the <code data-dev-comment-type="paramref" class="paramref">environment</code> can be found.
     - id: environment
       type: System.String
-      description: The environment that the job will run in.
+      description: The environment to enqueue a new run in.
     - id: config
       type: Runly.Config
-      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> for the job to run.
+      description: The <xref href="Runly.Config" data-throw-if-not-resolved="false"></xref> for the new run.
     return:
       type: Task{Runly.Client.Models.Run}
-      description: A <xref href="Runly.Client.Models.Run" data-throw-if-not-resolved="false"></xref> indicating the identity and status of the run.
+      description: A newly enqueued <xref href="Runly.Client.Models.Run" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
       <ExtensionAttribute>
 
@@ -163,31 +160,40 @@ items:
   source:
     id: EnqueueFromTemplate
     path: /github/workspace/src/Runly/Client/ApiClientExtensions.cs
-    startLine: 36
+    startLine: 46
   assemblies:
   - Runly
   namespace: Runly.Client
+  summary: "\nEnqueues a new run with the stored config template in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">organization</code> and <code data-dev-comment-type=\"paramref\" class=\"paramref\">environment</code>. \nOverrides parameters in the config template with values found on <code data-dev-comment-type=\"paramref\" class=\"paramref\">overrides</code>.\n"
+  example: []
   syntax:
-    content: public static Task<Run> EnqueueFromTemplate(this IRunClient client, string organization, string environment, string template, object configToMerge = null, bool scheduled = false)
+    content: public static Task<Run> EnqueueFromTemplate(this IRunClient client, string organization, string environment, string template, object overrides = null, bool scheduled = false)
     parameters:
     - id: client
       type: Runly.Client.IRunClient
+      description: The API client to use.
     - id: organization
       type: System.String
+      description: The organization in which the <code data-dev-comment-type="paramref" class="paramref">environment</code> can be found.
     - id: environment
       type: System.String
+      description: The environment to enqueue a new run in.
     - id: template
       type: System.String
-    - id: configToMerge
+      description: The name of the config template to use for the new run.
+    - id: overrides
       type: System.Object
+      description: When provided, will override parameters in the config template.
     - id: scheduled
       type: System.Boolean
+      description: When true, will count the enqueued run as an occurence of the config template&apos;s schedule, affecting the next occurence of the schedule.
     return:
       type: Task{Runly.Client.Models.Run}
+      description: A newly enqueued <xref href="Runly.Client.Models.Run" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function EnqueueFromTemplate(client As IRunClient, organization As String, environment As String, template As String, configToMerge As Object = Nothing, scheduled As Boolean = False) As Task(Of Run)
+      Public Shared Function EnqueueFromTemplate(client As IRunClient, organization As String, environment As String, template As String, overrides As Object = Nothing, scheduled As Boolean = False) As Task(Of Run)
   overload: Runly.Client.ApiClientExtensions.EnqueueFromTemplate*
   modifiers.csharp:
   - public
@@ -195,264 +201,123 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: Runly.Client.ApiClientExtensions.Enqueue(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
-  commentId: M:Runly.Client.ApiClientExtensions.Enqueue(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
-  id: Enqueue(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
+- uid: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
+  commentId: M:Runly.Client.ApiClientExtensions.EnqueueDefaultConfig(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
+  id: EnqueueDefaultConfig(Runly.Client.IRunClient,System.String,System.String,System.String,System.String,System.String)
   isExtensionMethod: true
   parent: Runly.Client.ApiClientExtensions
   langs:
   - csharp
   - vb
-  name: Enqueue(IRunClient, String, String, String, String, String)
-  nameWithType: ApiClientExtensions.Enqueue(IRunClient, String, String, String, String, String)
-  fullName: Runly.Client.ApiClientExtensions.Enqueue(Runly.Client.IRunClient, System.String, System.String, System.String, System.String, System.String)
+  name: EnqueueDefaultConfig(IRunClient, String, String, String, String, String)
+  nameWithType: ApiClientExtensions.EnqueueDefaultConfig(IRunClient, String, String, String, String, String)
+  fullName: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig(Runly.Client.IRunClient, System.String, System.String, System.String, System.String, System.String)
   type: Method
   source:
-    id: Enqueue
+    id: EnqueueDefaultConfig
     path: /github/workspace/src/Runly/Client/ApiClientExtensions.cs
-    startLine: 46
+    startLine: 66
   assemblies:
   - Runly
   namespace: Runly.Client
+  summary: "\nEnqueues a new run with the default config for the <code data-dev-comment-type=\"paramref\" class=\"paramref\">jobType</code> in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">organization</code> and <code data-dev-comment-type=\"paramref\" class=\"paramref\">environment</code>.\n"
+  example: []
   syntax:
-    content: public static Task<Run> Enqueue(this IRunClient client, string organization, string environment, string jobType, string version = null, string package = null)
+    content: public static Task<Run> EnqueueDefaultConfig(this IRunClient client, string organization, string environment, string jobType, string version = null, string package = null)
     parameters:
     - id: client
       type: Runly.Client.IRunClient
+      description: The API client to use.
     - id: organization
       type: System.String
+      description: The organization in which the <code data-dev-comment-type="paramref" class="paramref">environment</code> can be found.
     - id: environment
       type: System.String
+      description: The environment to enqueue a new run in.
     - id: jobType
       type: System.String
+      description: The type of job to enqueue a new run for.
     - id: version
       type: System.String
+      description: The version of the package to use.
     - id: package
       type: System.String
+      description: The package where the job is found.
     return:
       type: Task{Runly.Client.Models.Run}
+      description: A newly enqueued <xref href="Runly.Client.Models.Run" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function Enqueue(client As IRunClient, organization As String, environment As String, jobType As String, version As String = Nothing, package As String = Nothing) As Task(Of Run)
-  overload: Runly.Client.ApiClientExtensions.Enqueue*
+      Public Shared Function EnqueueDefaultConfig(client As IRunClient, organization As String, environment As String, jobType As String, version As String = Nothing, package As String = Nothing) As Task(Of Run)
+  overload: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig*
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-- uid: Runly.Client.ApiClientExtensions.Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
-  commentId: M:Runly.Client.ApiClientExtensions.Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
-  id: Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
+- uid: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
+  commentId: M:Runly.Client.ApiClientExtensions.EnqueueDefaultConfig``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
+  id: EnqueueDefaultConfig``1(Runly.Client.IRunClient,System.String,System.String,System.String,System.String)
   isExtensionMethod: true
   parent: Runly.Client.ApiClientExtensions
   langs:
   - csharp
   - vb
-  name: Enqueue<TJob>(IRunClient, String, String, String, String)
-  nameWithType: ApiClientExtensions.Enqueue<TJob>(IRunClient, String, String, String, String)
-  fullName: Runly.Client.ApiClientExtensions.Enqueue<TJob>(Runly.Client.IRunClient, System.String, System.String, System.String, System.String)
+  name: EnqueueDefaultConfig<TJob>(IRunClient, String, String, String, String)
+  nameWithType: ApiClientExtensions.EnqueueDefaultConfig<TJob>(IRunClient, String, String, String, String)
+  fullName: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig<TJob>(Runly.Client.IRunClient, System.String, System.String, System.String, System.String)
   type: Method
   source:
-    id: Enqueue
+    id: EnqueueDefaultConfig
     path: /github/workspace/src/Runly/Client/ApiClientExtensions.cs
-    startLine: 59
+    startLine: 89
   assemblies:
   - Runly
   namespace: Runly.Client
+  summary: "\nEnqueues a new run with the default config for the <code data-dev-comment-type=\"typeparamref\" class=\"typeparamref\">TJob</code> in the <code data-dev-comment-type=\"paramref\" class=\"paramref\">organization</code> and <code data-dev-comment-type=\"paramref\" class=\"paramref\">environment</code>.\n"
+  example: []
   syntax:
     content: >-
-      public static Task<Run> Enqueue<TJob>(this IRunClient client, string organization, string environment, string version = null, string package = null)
+      public static Task<Run> EnqueueDefaultConfig<TJob>(this IRunClient client, string organization, string environment, string version = null, string package = null)
           where TJob : class
     parameters:
     - id: client
       type: Runly.Client.IRunClient
+      description: The API client to use.
     - id: organization
       type: System.String
+      description: The organization in which the <code data-dev-comment-type="paramref" class="paramref">environment</code> can be found.
     - id: environment
       type: System.String
+      description: The environment to enqueue a new run in.
     - id: version
       type: System.String
+      description: The version of the package to use.
     - id: package
       type: System.String
+      description: The package where the job is found.
     typeParameters:
     - id: TJob
+      description: The type of job to enqueue a new run for.
     return:
       type: Task{Runly.Client.Models.Run}
+      description: A newly enqueued <xref href="Runly.Client.Models.Run" data-throw-if-not-resolved="false"></xref>.
     content.vb: >-
       <ExtensionAttribute>
 
-      Public Shared Function Enqueue(Of TJob As Class)(client As IRunClient, organization As String, environment As String, version As String = Nothing, package As String = Nothing) As Task(Of Run)
-  overload: Runly.Client.ApiClientExtensions.Enqueue*
-  nameWithType.vb: ApiClientExtensions.Enqueue(Of TJob)(IRunClient, String, String, String, String)
+      Public Shared Function EnqueueDefaultConfig(Of TJob As Class)(client As IRunClient, organization As String, environment As String, version As String = Nothing, package As String = Nothing) As Task(Of Run)
+  overload: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig*
+  nameWithType.vb: ApiClientExtensions.EnqueueDefaultConfig(Of TJob)(IRunClient, String, String, String, String)
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: Runly.Client.ApiClientExtensions.Enqueue(Of TJob)(Runly.Client.IRunClient, System.String, System.String, System.String, System.String)
-  name.vb: Enqueue(Of TJob)(IRunClient, String, String, String, String)
-- uid: Runly.Client.ApiClientExtensions.Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,``0,System.String,System.String)
-  commentId: M:Runly.Client.ApiClientExtensions.Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,``0,System.String,System.String)
-  id: Enqueue``1(Runly.Client.IRunClient,System.String,System.String,System.String,``0,System.String,System.String)
-  isExtensionMethod: true
-  parent: Runly.Client.ApiClientExtensions
-  langs:
-  - csharp
-  - vb
-  name: Enqueue<TConfig>(IRunClient, String, String, String, TConfig, String, String)
-  nameWithType: ApiClientExtensions.Enqueue<TConfig>(IRunClient, String, String, String, TConfig, String, String)
-  fullName: Runly.Client.ApiClientExtensions.Enqueue<TConfig>(Runly.Client.IRunClient, System.String, System.String, System.String, TConfig, System.String, System.String)
-  type: Method
-  source:
-    id: Enqueue
-    path: /github/workspace/src/Runly/Client/ApiClientExtensions.cs
-    startLine: 73
-  assemblies:
-  - Runly
-  namespace: Runly.Client
-  syntax:
-    content: >-
-      public static Task<Run> Enqueue<TConfig>(this IRunClient client, string organization, string environment, string jobType, TConfig config = null, string version = null, string package = null)
-          where TConfig : Config
-    parameters:
-    - id: client
-      type: Runly.Client.IRunClient
-    - id: organization
-      type: System.String
-    - id: environment
-      type: System.String
-    - id: jobType
-      type: System.String
-    - id: config
-      type: '{TConfig}'
-    - id: version
-      type: System.String
-    - id: package
-      type: System.String
-    typeParameters:
-    - id: TConfig
-    return:
-      type: Task{Runly.Client.Models.Run}
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function Enqueue(Of TConfig As Config)(client As IRunClient, organization As String, environment As String, jobType As String, config As TConfig = Nothing, version As String = Nothing, package As String = Nothing) As Task(Of Run)
-  overload: Runly.Client.ApiClientExtensions.Enqueue*
-  nameWithType.vb: ApiClientExtensions.Enqueue(Of TConfig)(IRunClient, String, String, String, TConfig, String, String)
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: Runly.Client.ApiClientExtensions.Enqueue(Of TConfig)(Runly.Client.IRunClient, System.String, System.String, System.String, TConfig, System.String, System.String)
-  name.vb: Enqueue(Of TConfig)(IRunClient, String, String, String, TConfig, String, String)
-- uid: Runly.Client.ApiClientExtensions.Enqueue``2(Runly.Client.IRunClient,System.String,System.String,``1,System.String,System.String)
-  commentId: M:Runly.Client.ApiClientExtensions.Enqueue``2(Runly.Client.IRunClient,System.String,System.String,``1,System.String,System.String)
-  id: Enqueue``2(Runly.Client.IRunClient,System.String,System.String,``1,System.String,System.String)
-  isExtensionMethod: true
-  parent: Runly.Client.ApiClientExtensions
-  langs:
-  - csharp
-  - vb
-  name: Enqueue<TJob, TConfig>(IRunClient, String, String, TConfig, String, String)
-  nameWithType: ApiClientExtensions.Enqueue<TJob, TConfig>(IRunClient, String, String, TConfig, String, String)
-  fullName: Runly.Client.ApiClientExtensions.Enqueue<TJob, TConfig>(Runly.Client.IRunClient, System.String, System.String, TConfig, System.String, System.String)
-  type: Method
-  source:
-    id: Enqueue
-    path: /github/workspace/src/Runly/Client/ApiClientExtensions.cs
-    startLine: 87
-  assemblies:
-  - Runly
-  namespace: Runly.Client
-  syntax:
-    content: >-
-      public static Task<Run> Enqueue<TJob, TConfig>(this IRunClient client, string organization, string environment, TConfig config = null, string version = null, string package = null)
-          where TJob : class where TConfig : Config
-    parameters:
-    - id: client
-      type: Runly.Client.IRunClient
-    - id: organization
-      type: System.String
-    - id: environment
-      type: System.String
-    - id: config
-      type: '{TConfig}'
-    - id: version
-      type: System.String
-    - id: package
-      type: System.String
-    typeParameters:
-    - id: TJob
-    - id: TConfig
-    return:
-      type: Task{Runly.Client.Models.Run}
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function Enqueue(Of TJob As Class, TConfig As Config)(client As IRunClient, organization As String, environment As String, config As TConfig = Nothing, version As String = Nothing, package As String = Nothing) As Task(Of Run)
-  overload: Runly.Client.ApiClientExtensions.Enqueue*
-  nameWithType.vb: ApiClientExtensions.Enqueue(Of TJob, TConfig)(IRunClient, String, String, TConfig, String, String)
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: Runly.Client.ApiClientExtensions.Enqueue(Of TJob, TConfig)(Runly.Client.IRunClient, System.String, System.String, TConfig, System.String, System.String)
-  name.vb: Enqueue(Of TJob, TConfig)(IRunClient, String, String, TConfig, String, String)
-- uid: Runly.Client.ApiClientExtensions.GetDefaultConfig``1(Runly.Client.IPackageClient,System.String,Guid)
-  commentId: M:Runly.Client.ApiClientExtensions.GetDefaultConfig``1(Runly.Client.IPackageClient,System.String,Guid)
-  id: GetDefaultConfig``1(Runly.Client.IPackageClient,System.String,Guid)
-  isExtensionMethod: true
-  parent: Runly.Client.ApiClientExtensions
-  langs:
-  - csharp
-  - vb
-  name: GetDefaultConfig<TConfig>(IPackageClient, String, Guid)
-  nameWithType: ApiClientExtensions.GetDefaultConfig<TConfig>(IPackageClient, String, Guid)
-  fullName: Runly.Client.ApiClientExtensions.GetDefaultConfig<TConfig>(Runly.Client.IPackageClient, System.String, Guid)
-  type: Method
-  source:
-    id: GetDefaultConfig
-    path: /github/workspace/src/Runly/Client/ApiClientExtensions.cs
-    startLine: 102
-  assemblies:
-  - Runly
-  namespace: Runly.Client
-  syntax:
-    content: >-
-      public static Task<TConfig> GetDefaultConfig<TConfig>(this IPackageClient client, string organization, Guid jobId)
-          where TConfig : Config, new()
-    parameters:
-    - id: client
-      type: Runly.Client.IPackageClient
-    - id: organization
-      type: System.String
-    - id: jobId
-      type: Guid
-    typeParameters:
-    - id: TConfig
-    return:
-      type: Task{{TConfig}}
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function GetDefaultConfig(Of TConfig As {Config, New})(client As IPackageClient, organization As String, jobId As Guid) As Task(Of TConfig)
-  overload: Runly.Client.ApiClientExtensions.GetDefaultConfig*
-  nameWithType.vb: ApiClientExtensions.GetDefaultConfig(Of TConfig)(IPackageClient, String, Guid)
-  modifiers.csharp:
-  - public
-  - static
-  modifiers.vb:
-  - Public
-  - Shared
-  fullName.vb: Runly.Client.ApiClientExtensions.GetDefaultConfig(Of TConfig)(Runly.Client.IPackageClient, System.String, Guid)
-  name.vb: GetDefaultConfig(Of TConfig)(IPackageClient, String, Guid)
+  fullName.vb: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig(Of TJob)(Runly.Client.IRunClient, System.String, System.String, System.String, System.String)
+  name.vb: EnqueueDefaultConfig(Of TJob)(IRunClient, String, String, String, String)
 references:
 - uid: Runly.Client
   commentId: N:Runly.Client
@@ -573,11 +438,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Runly.Job
-  commentId: T:Runly.Job
-  name: Job
-  nameWithType: Job
-  fullName: Runly.Job
 - uid: Runly.Client.Models.Run
   commentId: T:Runly.Client.Models.Run
   isExternal: true
@@ -637,24 +497,8 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: '{TConfig}'
-  commentId: '!:TConfig'
-  definition: TConfig
-  name: TConfig
-  nameWithType: TConfig
-  fullName: TConfig
-- uid: TConfig
-  name: TConfig
-  nameWithType: TConfig
-  fullName: TConfig
-- uid: Runly.Client.ApiClientExtensions.GetDefaultConfig*
-  commentId: Overload:Runly.Client.ApiClientExtensions.GetDefaultConfig
-  name: GetDefaultConfig
-  nameWithType: ApiClientExtensions.GetDefaultConfig
-  fullName: Runly.Client.ApiClientExtensions.GetDefaultConfig
-- uid: Runly.Client.IPackageClient
-  commentId: T:Runly.Client.IPackageClient
-  parent: Runly.Client
-  name: IPackageClient
-  nameWithType: IPackageClient
-  fullName: Runly.Client.IPackageClient
+- uid: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig*
+  commentId: Overload:Runly.Client.ApiClientExtensions.EnqueueDefaultConfig
+  name: EnqueueDefaultConfig
+  nameWithType: ApiClientExtensions.EnqueueDefaultConfig
+  fullName: Runly.Client.ApiClientExtensions.EnqueueDefaultConfig
