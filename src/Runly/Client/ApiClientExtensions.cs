@@ -44,7 +44,7 @@ namespace Runly.Client
 			return client.Enqueue(organization, environment, json);
 		}
 
-		public static Task<Run> Enqueue(this IRunClient client, string organization, string environment, string jobType, string version = null, string package = null)
+		public static Task<Run> EnqueueDefaultConfig(this IRunClient client, string organization, string environment, string jobType, string version = null, string package = null)
 		{
 			return client.Enqueue(organization, environment, new Config
 			{
@@ -57,7 +57,7 @@ namespace Runly.Client
 			});
 		}
 
-		public static Task<Run> Enqueue<TJob>(this IRunClient client, string organization, string environment, string version = null, string package = null)
+		public static Task<Run> EnqueueDefaultConfig<TJob>(this IRunClient client, string organization, string environment, string version = null, string package = null)
 			where TJob : class
 		{
 			return client.Enqueue(organization, environment, new Config
