@@ -67,7 +67,7 @@ namespace Runly.Client
 			await response.EnsureSuccess();
 			return await response.Content.ReadAsAsync<Run>();
 		}
-		ReadAsStringAsync
+
 		public async Task<string> GetConfig(string organization, Guid runId)
 		{
 			var req = new HttpRequestMessage(HttpMethod.Get, $"/{organization}/runs/{runId}/config");
