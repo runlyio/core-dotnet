@@ -13,6 +13,6 @@ namespace Runly.Processing
 
 		public Task<string> GetItemIdAsync(string item) => Task.FromResult(item);
 
-		public IAsyncEnumerable<string> GetItemsAsync() => (IAsyncEnumerable<string>)new string[] { nameof(Job<Config>.ProcessAsync) }.AsEnumerable();
+		public IAsyncEnumerable<string> GetItemsAsync() => new string[] { nameof(Job<Config>.ProcessAsync) }.ToAsyncEnumerable();
 	}
 }
