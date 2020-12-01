@@ -1,4 +1,4 @@
-﻿namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
+﻿namespace Runly.Tests
 {
 	public class Dep1 { }
 	public class Dep2 { }

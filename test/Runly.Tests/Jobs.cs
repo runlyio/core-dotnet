@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
+namespace Runly.Tests
 {
-	public class AsyncProcessNoConf : Job
+	public class JobNoConf : Job
 	{
-		public AsyncProcessNoConf() : base(new Config()) { }
+		public JobNoConf() : base(new Config()) { }
 		public override Task<Result> ProcessAsync() => Task.FromResult(Result.Success());
 	}
 
-	public class AsyncProcessConfOnly : Job<Config>
+	public class JobSingleItem : Job<Config>
 	{
-		public AsyncProcessConfOnly() : base(new Config()) { }
+		public JobSingleItem() : base(new Config()) { }
 		public override Task<Result> ProcessAsync() => Task.FromResult(Result.Success());
 	}
 
-	public class AsyncProcess0 : Job<Config, int>
+	public class Job0 : Job<Config, int>
 	{
-		public AsyncProcess0() : base(new Config()) { }
+		public Job0() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -31,9 +31,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess1 : Job<Config, int, Dep1>
+	public class Job1 : Job<Config, int, Dep1>
 	{
-		public AsyncProcess1() : base(new Config()) { }
+		public Job1() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -46,9 +46,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess2 : Job<Config, int, Dep1, Dep2>
+	public class Job2 : Job<Config, int, Dep1, Dep2>
 	{
-		public AsyncProcess2() : base(new Config()) { }
+		public Job2() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -61,9 +61,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess3 : Job<Config, int, Dep1, Dep2, Dep3>
+	public class Job3 : Job<Config, int, Dep1, Dep2, Dep3>
 	{
-		public AsyncProcess3() : base(new Config()) { }
+		public Job3() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -76,9 +76,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess4 : Job<Config, int, Dep1, Dep2, Dep3, Dep4>
+	public class Job4 : Job<Config, int, Dep1, Dep2, Dep3, Dep4>
 	{
-		public AsyncProcess4() : base(new Config()) { }
+		public Job4() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -91,9 +91,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess5 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5>
+	public class Job5 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5>
 	{
-		public AsyncProcess5() : base(new Config()) { }
+		public Job5() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -106,9 +106,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess6 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6>
+	public class Job6 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6>
 	{
-		public AsyncProcess6() : base(new Config()) { }
+		public Job6() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -121,9 +121,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess7 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7>
+	public class Job7 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7>
 	{
-		public AsyncProcess7() : base(new Config()) { }
+		public Job7() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -136,9 +136,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess8 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8>
+	public class Job8 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8>
 	{
-		public AsyncProcess8() : base(new Config()) { }
+		public Job8() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -151,9 +151,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess9 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9>
+	public class Job9 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9>
 	{
-		public AsyncProcess9() : base(new Config()) { }
+		public Job9() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -166,9 +166,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess10 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10>
+	public class Job10 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10>
 	{
-		public AsyncProcess10() : base(new Config()) { }
+		public Job10() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -181,9 +181,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess11 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11>
+	public class Job11 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11>
 	{
-		public AsyncProcess11() : base(new Config()) { }
+		public Job11() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -196,9 +196,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess12 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12>
+	public class Job12 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12>
 	{
-		public AsyncProcess12() : base(new Config()) { }
+		public Job12() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -211,9 +211,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess13 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13>
+	public class Job13 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13>
 	{
-		public AsyncProcess13() : base(new Config()) { }
+		public Job13() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -226,9 +226,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess14 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13, Dep14>
+	public class Job14 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13, Dep14>
 	{
-		public AsyncProcess14() : base(new Config()) { }
+		public Job14() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -241,9 +241,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess15 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13, Dep14, Dep15>
+	public class Job15 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13, Dep14, Dep15>
 	{
-		public AsyncProcess15() : base(new Config()) { }
+		public Job15() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{
@@ -256,9 +256,9 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		}
 	}
 
-	public class AsyncProcess16 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13, Dep14, Dep15, Dep16>
+	public class Job16 : Job<Config, int, Dep1, Dep2, Dep3, Dep4, Dep5, Dep6, Dep7, Dep8, Dep9, Dep10, Dep11, Dep12, Dep13, Dep14, Dep15, Dep16>
 	{
-		public AsyncProcess16() : base(new Config()) { }
+		public Job16() : base(new Config()) { }
 
 		public override IAsyncEnumerable<int> GetItemsAsync()
 		{

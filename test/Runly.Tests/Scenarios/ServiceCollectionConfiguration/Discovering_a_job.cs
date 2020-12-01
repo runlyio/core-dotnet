@@ -48,7 +48,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcessNoConf()
 		{
-			var type = typeof(AsyncProcessNoConf);
+			var type = typeof(JobNoConf);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -60,7 +60,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcessConfOnly()
 		{
-			var type = typeof(AsyncProcessConfOnly);
+			var type = typeof(JobSingleItem);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -72,7 +72,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess0()
 		{
-			var type = typeof(AsyncProcess0);
+			var type = typeof(Job0);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -84,7 +84,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess1()
 		{
-			var type = typeof(AsyncProcess1);
+			var type = typeof(Job1);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -97,7 +97,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess2()
 		{
-			var type = typeof(AsyncProcess2);
+			var type = typeof(Job2);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -110,7 +110,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess3()
 		{
-			var type = typeof(AsyncProcess3);
+			var type = typeof(Job3);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -123,7 +123,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess4()
 		{
-			var type = typeof(AsyncProcess4);
+			var type = typeof(Job4);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -136,7 +136,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess5()
 		{
-			var type = typeof(AsyncProcess5);
+			var type = typeof(Job5);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -149,7 +149,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess6()
 		{
-			var type = typeof(AsyncProcess6);
+			var type = typeof(Job6);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -162,7 +162,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess7()
 		{
-			var type = typeof(AsyncProcess7);
+			var type = typeof(Job7);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -175,7 +175,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess8()
 		{
-			var type = typeof(AsyncProcess8);
+			var type = typeof(Job8);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -188,7 +188,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess9()
 		{
-			var type = typeof(AsyncProcess9);
+			var type = typeof(Job9);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -201,7 +201,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess10()
 		{
-			var type = typeof(AsyncProcess10);
+			var type = typeof(Job10);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -214,7 +214,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess11()
 		{
-			var type = typeof(AsyncProcess11);
+			var type = typeof(Job11);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -227,7 +227,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess12()
 		{
-			var type = typeof(AsyncProcess12);
+			var type = typeof(Job12);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -240,7 +240,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess13()
 		{
-			var type = typeof(AsyncProcess13);
+			var type = typeof(Job13);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -253,7 +253,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess14()
 		{
-			var type = typeof(AsyncProcess14);
+			var type = typeof(Job14);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -266,7 +266,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess15()
 		{
-			var type = typeof(AsyncProcess15);
+			var type = typeof(Job15);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
@@ -279,7 +279,7 @@ namespace Runly.Tests.Scenarios.ServiceCollectionConfiguration
 		[Fact]
 		public void Should_load_AsyncProcess16()
 		{
-			var type = typeof(AsyncProcess16);
+			var type = typeof(Job16);
 			var pi = processCache.Get(type);
 
 			pi.Should().NotBeNull();
