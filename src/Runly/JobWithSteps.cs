@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Runly
@@ -9,6 +8,7 @@ namespace Runly
 		where TConfig : Config
 	{
 		StepBuilder stepBuilder;
+
 		public JobWithSteps(TConfig config)
 			: base(config) { }
 
@@ -46,7 +46,8 @@ namespace Runly
 
 	public class JobWithSteps : JobWithSteps<Config, int>
 	{
-		public JobWithSteps()
+		public JobWithSteps(Config config)
+			: base(config)
 		{
 			FirstStep(Step1)
 			.Then(_ => Step2());
