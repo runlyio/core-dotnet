@@ -106,7 +106,7 @@ namespace Runly.Hosting
 				{
 					Console.Write($"\rRunning {execution.Job.GetType().Name}: {execution.CompletedItemCount} items{(execution.TotalItemCount.HasValue ? " of " + execution.TotalItemCount.Value : string.Empty)} processed. {(!jobCancellation.IsCancellationRequested ? "Press 'q' to quit." : "Quitting...          ")}");
 
-					while (!jobCancellation.IsCancellationRequested && Console.KeyAvailable)
+					while (!jobCancellation.IsCancellationRequested && !Console.IsInputRedirected && Console.KeyAvailable)
 					{
 						var key = Console.ReadKey();
 
