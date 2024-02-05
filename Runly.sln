@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29519.181
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "src\Client\Client.csproj", "{6A5344CC-7B78-4330-9EE9-E5C96EE975E4}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Diagnostics", "src\Diagnostics\Diagnostics.csproj", "{5EAC3C62-D609-4876-BE38-2A0ABC0A59D9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Runly", "src\Runly\Runly.csproj", "{F74B45FF-BFFB-425C-9CF4-C509402E545E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Runly.Tests.Cli", "test\Runly.Tests.Cli\Runly.Tests.Cli.csproj", "{CAC30475-7E45-43E2-9775-14E6E31C837B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{F74B45FF-BFFB-425C-9CF4-C509402E545E}.Release|x64.Build.0 = Release|Any CPU
 		{F74B45FF-BFFB-425C-9CF4-C509402E545E}.Release|x86.ActiveCfg = Release|Any CPU
 		{F74B45FF-BFFB-425C-9CF4-C509402E545E}.Release|x86.Build.0 = Release|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Debug|x64.Build.0 = Debug|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Debug|x86.Build.0 = Debug|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Release|x64.ActiveCfg = Release|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Release|x64.Build.0 = Release|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Release|x86.ActiveCfg = Release|Any CPU
+		{CAC30475-7E45-43E2-9775-14E6E31C837B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
