@@ -45,9 +45,9 @@ namespace Runly
 		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
 		public static IServiceCollection AddRunlyJobs(this IServiceCollection services, Config config, params Assembly[] jobAssemblies)
 		{
-			services.AddJobCache(jobAssemblies);
+			(var cache, _) = services.AddJobCache(jobAssemblies);
 
-			services.AddRunAction(config);
+			services.AddRunAction(cache, config);
 
 			return services;
 		}
@@ -89,7 +89,7 @@ namespace Runly
 
 					ApplyCommandLineOverrides(config, result.Children);
 
-					services.AddRunAction(config);
+					services.AddRunAction(cache, config);
 				}
 				else
 				{
@@ -117,14 +117,6 @@ namespace Runly
 
 			services.AddSingleton(cache);
 			services.AddSingleton(cfgReader);
-
-			foreach (var job in cache.Jobs)
-			{
-				if (job.IsValid)
-				{
-					services.AddTransient(job.JobType);
-				}
-			}
 
 			return (cache, cfgReader);
 		}
@@ -157,7 +149,7 @@ namespace Runly
 				new Option<bool>(new[] { "--debug", "-d" }, "Optional. Prompts the user to attach a debugger when the job starts."),
 				new Option<bool>(new[] { "--silent", "-s" }, "Optional. Silences console output.")
 			};
-			run.Handler = CommandHandler.Create<FileInfo, FileInfo, bool, bool>((configPath, resultsPath, debug, silent) => services.AddRunAction(reader, configPath, resultsPath, debug, silent));
+			run.Handler = CommandHandler.Create<FileInfo, FileInfo, bool, bool>((configPath, resultsPath, debug, silent) => services.AddRunAction(cache, reader, configPath, resultsPath, debug, silent));
 			root.AddCommand(run);
 
 			// Add a command for each job, with each config path as an option
@@ -286,7 +278,7 @@ namespace Runly
 		/// <param name="configPath">The location of the JSON config to run.</param>
 		/// <param name="debug">Indicates whether to attach a debugger.</param>
 		/// <param name="silent">Indicates whether to output results to the console.</param>
-		static void AddRunAction(this IServiceCollection services, ConfigReader reader, FileInfo configPath, FileInfo resultsPath,bool debug, bool silent)
+		static void AddRunAction(this IServiceCollection services, JobCache cache, ConfigReader reader, FileInfo configPath, FileInfo resultsPath,bool debug, bool silent)
 		{
 			if (debug)
 				services.AddSingleton(new Debug() { AttachDebugger = true });
@@ -306,7 +298,7 @@ namespace Runly
 			if (silent)
 				config.Execution.ResultsToConsole = false;
 
-			services.AddRunAction(config);
+			services.AddRunAction(cache, config);
 		}
 
 		/// <summary>
@@ -314,9 +306,9 @@ namespace Runly
 		/// </summary>
 		/// <param name="services">The service collection being modified.</param>
 		/// <param name="config">The <see cref="Config"/> for the job.</param>
-		static void AddRunAction(this IServiceCollection services, Config config)
+		static void AddRunAction(this IServiceCollection services, JobCache cache, Config config)
 		{
-			services.AddConfig(config);
+			services.AddJob(cache, config);
 
 			services.AddSingleton<TextWriter>(s =>
 			{
@@ -373,9 +365,13 @@ namespace Runly
 		/// <param name="services">The service collection being modified.</param>
 		/// <param name="config">The <see cref="Config"/> to add to the service collection.</param>
 		/// <returns>The same <see cref="IServiceCollection"/> passed in for chaining.</returns>
-		public static IServiceCollection AddConfig(this IServiceCollection services, Config config)
+		public static IServiceCollection AddJob(this IServiceCollection services, JobCache cache, Config config)
 		{
-			var type = config.GetType();
+            var info = cache.Get(config.Job.Type);
+
+            services.AddTransient(info.JobType);
+
+            var type = config.GetType();
 
 			foreach (var intf in type.GetInterfaces())
 				services.AddSingleton(intf, config);

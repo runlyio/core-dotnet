@@ -9,7 +9,7 @@ namespace Runly.Tests
 	{
 		static UnitTest()
 		{
-			AssertionOptions.AssertEquivalencyUsing(opts => opts.Using<DateTime>(ctx => ctx.Subject.Should().BeCloseTo(ctx.Expectation, 2000)).WhenTypeIs<DateTime>());
+			AssertionOptions.AssertEquivalencyUsing(opts => opts.Using<DateTime>(ctx => ctx.Subject.Should().BeCloseTo(ctx.Expectation, TimeSpan.FromMilliseconds(2000))).WhenTypeIs<DateTime>());
 		}
 
 		public UnitTest() { }
