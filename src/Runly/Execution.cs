@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Runly.Testing;
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Threading;
@@ -12,9 +13,44 @@ namespace Runly
 	public abstract class Execution
 	{
 		/// <summary>
-		/// Event raised when execution of a job starts.
+		/// Gets the overall and last minute average time for an item to be processed.
 		/// </summary>
-		public event Func<string, DateTime, Task> Started;
+		public Average ItemProcessingTime { get; } = new Average("Item Processing Time");
+
+        /// <summary>
+        /// Gets a list of <see cref="MethodOutcome">MethodOutcomes</see> for each method of a job, excluding methods executed per item.
+        /// </summary>
+        public Dictionary<JobMethod, MethodOutcome> Methods { get; } = new Dictionary<JobMethod, MethodOutcome>();
+
+        /// <summary>
+        /// Gets the <see cref="MethodOutcome"/> for InitializeAsync.
+        /// </summary>
+        public MethodOutcome InitializeAsync => Methods.ValueOrDefault(JobMethod.InitializeAsync);
+
+        /// <summary>
+        /// Gets the <see cref="MethodOutcome"/> for GetItemsAsync.
+        /// </summary>
+        public MethodOutcome GetItemsAsync => Methods.ValueOrDefault(JobMethod.GetItemsAsync);
+
+        /// <summary>
+        /// Gets the <see cref="MethodOutcome"/> for Count.
+        /// </summary>
+        public MethodOutcome Count => Methods.ValueOrDefault(JobMethod.Count);
+
+        /// <summary>
+        /// Gets the <see cref="MethodOutcome"/> for GetEnumerator.
+        /// </summary>
+        public MethodOutcome GetEnumerator => Methods.ValueOrDefault(JobMethod.GetEnumerator);
+
+        /// <summary>
+        /// Gets the <see cref="MethodOutcome"/> for FinalizeAsync.
+        /// </summary>
+        public MethodOutcome FinalizeAsync => Methods.ValueOrDefault(JobMethod.FinalizeAsync);
+
+        /// <summary>
+        /// Event raised when execution of a job starts.
+        /// </summary>
+        public event Func<string, DateTime, Task> Started;
 
 		/// <summary>
 		/// Event raised when the state of the job changes.
@@ -237,7 +273,9 @@ namespace Runly
 		/// </summary>
 		protected void CompleteMethod(JobMethod method, TimeSpan duration, Exception exception)
 		{
-			events.Enqueue(new MethodOutcome(method, duration, exception));
+			var mo = new MethodOutcome(method, duration, exception);
+			Methods.Add(method, mo);
+			events.Enqueue(mo);
 		}
 
 		/// <summary>
@@ -273,10 +311,16 @@ namespace Runly
 			while (!cancellationToken.IsCancellationRequested)
 			{
 				await PublishEvents();
+
+				ItemProcessingTime.Purge();
 				
-				await Task.Delay(100);
+				await Task.Delay(50);
 			}
-		}
+
+            await PublishEvents();
+
+            ItemProcessingTime.Purge();
+        }
 
 		private async Task PublishEvents()
 		{
@@ -286,6 +330,14 @@ namespace Runly
 			{
 				try
 				{
+					if (@event is ItemResult r)
+					{
+						if (r.IsSuccessful)
+							ItemProcessingTime.RecordSuccess(r.ProcessAsync.Duration);
+						else
+							ItemProcessingTime.RecordError();
+					}
+
 					await (@event switch
 					{
 						ItemResult result => ItemCompleted != null ? ItemCompleted(result) : Task.CompletedTask,

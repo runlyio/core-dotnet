@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Diagnostics": {
+      "commandName": "Project",
+      "commandLineArgs": "diagnosticjob --milliseconddelayperitem 10 --numberofitems 5000"
+    }
+  }
+}

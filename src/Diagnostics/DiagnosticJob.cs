@@ -87,10 +87,10 @@ namespace Runly.Diagnostics
 			return Task.FromResult(item.Id);
 		}
 
-		public override Task<Result> ProcessAsync(DiagnosticItem item)
+		public override async Task<Result> ProcessAsync(DiagnosticItem item)
 		{
 			if (Config.MillisecondDelayPerItem > 0)
-				Thread.Sleep(Config.MillisecondDelayPerItem);
+				await Task.Delay(Config.MillisecondDelayPerItem);
 
 			if (Config.WaitForSignalInProcessAsync)
 				signal.WaitOne();
@@ -104,7 +104,7 @@ namespace Runly.Diagnostics
 			if (Config.ThrowExceptionInProcessAsync)
 				throw new DiagnosticJobException(JobMethod.ProcessAsync, "Exception thrown because Config.ThrowExceptionInProcess is true.");
 
-			return Task.FromResult(item.IsSuccessful ? Result.Success(item.Category) : Result.Failure(item.Category));
+			return item.IsSuccessful ? Result.Success(item.Category) : Result.Failure(item.Category);
 		}
 
 		public override Task<object> FinalizeAsync(Disposition disposition)
