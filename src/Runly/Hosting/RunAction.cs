@@ -246,7 +246,7 @@ namespace Runly.Hosting
 								foreach (var failure in log.FailedItemsThatThrewExceptions.Take(10))
 								{
 									AnsiConsole.MarkupLine($"Item '{failure.Id ?? "Unknown"}' threw an exception:");
-									AnsiConsole.WriteException(failure.ProcessAsync?.Exception ?? failure.EnumeratorCurrent?.Exception ?? failure.EnumeratorMoveNext?.Exception);
+									AnsiConsole.WriteException(failure.ProcessAsync?.Exception ?? failure.GetItemIdAsync?.Exception ?? failure.EnumeratorCurrent?.Exception ?? failure.EnumeratorMoveNext?.Exception);
 								}
 
 								AnsiConsole.WriteLine();
