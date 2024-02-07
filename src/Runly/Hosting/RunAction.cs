@@ -119,9 +119,9 @@ namespace Runly.Hosting
                     await AnsiConsole.Status()
 						.Spinner(Spinner.Known.Dots)
 						.SpinnerStyle(Style.Parse("yellow bold"))
-						.StartAsync("Starting...", async ctx =>
+						.StartAsync("Running", async ctx =>
 						{
-							AnsiConsole.Markup("Starting...");
+							AnsiConsole.Markup("Initializing...");
 
 							while (execution.State == ExecutionState.NotStarted ||
 								execution.State == ExecutionState.Initializing)
@@ -218,7 +218,7 @@ namespace Runly.Hosting
                     await AnsiConsole.Status()
                         .Spinner(Spinner.Known.Dots)
                         .SpinnerStyle(Style.Parse("yellow bold"))
-                        .StartAsync("Wrapping up...", async ctx =>
+                        .StartAsync("Running", async ctx =>
                         {
                             if (log.Categories.Any())
                             {
@@ -258,7 +258,9 @@ namespace Runly.Hosting
                                 await Task.Delay(10);
 
 							if (execution.FinalizeAsync.IsSuccessful)
+							{
 								AnsiConsole.MarkupLine("[green]Success[/]");
+							}
 							else
 							{
 								AnsiConsole.MarkupLine("[red]Failed[/]");
@@ -287,7 +289,6 @@ namespace Runly.Hosting
 					else
                         AnsiConsole.MarkupLine($"[bold red invert]JOB FAILED[/]");
 
-					AnsiConsole.WriteLine();
                 }
 
                 if (config.Execution.ResultsToFile)
@@ -314,7 +315,6 @@ namespace Runly.Hosting
 			}
 
 			// Ensure the entire output can be read by the node
-			Console.WriteLine();
 			await Console.Out.FlushAsync();
 		}
 
