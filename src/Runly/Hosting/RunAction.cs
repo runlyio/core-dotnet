@@ -214,6 +214,10 @@ namespace Runly.Hosting
 								process.StopTask();
 							});
 					}
+					else
+					{
+						AnsiConsole.WriteLine();
+					}
 
                     await AnsiConsole.Status()
                         .Spinner(Spinner.Known.Dots)
