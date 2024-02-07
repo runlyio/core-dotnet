@@ -1,13 +1,17 @@
 ﻿using Microsoft.Extensions.Logging;
 using Runly.Client;
 using Runly.Client.Models;
+using Spectre.Console;
+using Spectre.Console.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Runly.Hosting
 {
@@ -30,7 +34,15 @@ namespace Runly.Hosting
 		}
 
 		public async Task RunAsync(CancellationToken token)
-		{
+        {
+            Console.OutputEncoding = Encoding.UTF8;
+            Console.InputEncoding = Encoding.UTF8;
+
+            AnsiConsole.MarkupLine($"Running [blue]{config.Job.Type}[/]");
+            AnsiConsole.WriteLine();
+            AnsiConsole.MarkupLine($"[dim]Press 'c' to cancel[/]");
+            AnsiConsole.WriteLine();
+
 			if (debug)
 				AttachDebugger();
 
@@ -102,34 +114,183 @@ namespace Runly.Hosting
 				if (useApi)
 					pinging = PingApi(channel, pingCancellation.Token);
 
-				while (!executing.IsCompleted && config.Execution.ResultsToConsole)
+				if (config.Execution.ResultsToConsole)
 				{
-					Console.Write($"\rRunning {execution.Job.GetType().Name}: {execution.CompletedItemCount} items{(execution.TotalItemCount.HasValue ? " of " + execution.TotalItemCount.Value : string.Empty)} processed. {(!jobCancellation.IsCancellationRequested ? "Press 'q' to quit." : "Quitting...          ")}");
+                    await AnsiConsole.Status()
+						.Spinner(Spinner.Known.Dots)
+						.SpinnerStyle(Style.Parse("yellow bold"))
+						.StartAsync("Starting...", async ctx =>
+						{
+							AnsiConsole.Markup("Starting...");
 
-					while (!jobCancellation.IsCancellationRequested && !Console.IsInputRedirected && Console.KeyAvailable)
+							while (execution.State == ExecutionState.NotStarted ||
+								execution.State == ExecutionState.Initializing)
+								await Task.Delay(10);
+
+							if (execution.InitializeAsync.IsSuccessful)
+							{
+								AnsiConsole.MarkupLine("[green]Success[/]");
+
+                                AnsiConsole.Markup("Getting items...");
+
+                                while (execution.State == ExecutionState.GettingItemsToProcess)
+									await Task.Delay(10);
+
+								if (execution.GetItemsAsync.IsSuccessful && execution.GetEnumerator.IsSuccessful && execution.Count.IsSuccessful)
+								{
+									AnsiConsole.MarkupLine("[green]Success[/]");
+								}
+								else
+								{
+									AnsiConsole.MarkupLine("[red]Failed[/]");
+									AnsiConsole.WriteLine();
+									AnsiConsole.WriteException(execution.GetItemsAsync.Exception ?? execution.GetEnumerator.Exception ?? execution.Count.Exception);
+									AnsiConsole.WriteLine();
+								}
+                            }
+							else
+							{
+								AnsiConsole.MarkupLine("[red]Failed[/]");
+                                AnsiConsole.WriteLine();
+                                AnsiConsole.WriteException(execution.InitializeAsync.Exception);
+								AnsiConsole.WriteLine();
+							}
+
+                        });
+
+					if (execution.Disposition != Disposition.Failed)
 					{
-						var key = Console.ReadKey();
+						var isIndeterminate = !execution.TotalItemCount.HasValue;
 
-						if (key.KeyChar == 'q' || key.KeyChar == 'Q')
-							jobCancellation.Cancel();
+						var cols = isIndeterminate ?
+						new ProgressColumn[]
+						{
+							new TaskDescriptionColumn(),
+							new AverageTimeColumn(execution),
+							new AverageTimeLastMinColumn(execution),
+							new ElapsedTimeColumn() { Style = Style.Parse("dim") },
+							new SpinnerColumn(Spinner.Known.Dots),
+						} :
+						new ProgressColumn[]
+						{
+							new TaskDescriptionColumn(),
+                            new AverageTimeColumn(execution),
+                            new AverageTimeLastMinColumn(execution),
+                            new PercentageColumn(),
+                            new ElapsedTimeColumn() { Style = Style.Parse("dim") },
+                            new SpinnerColumn(Spinner.Known.Dots),
+                        };
+
+                        await AnsiConsole.Progress()
+							.Columns(cols)
+							.StartAsync(async ctx =>
+							{
+								var process = ctx.AddTask(isIndeterminate ? "Processing items:" : $"Processing {execution.TotalItemCount:N0} items:", maxValue: execution.TotalItemCount ?? double.MaxValue);
+
+								process.IsIndeterminate = isIndeterminate;
+
+                                while (execution.State == ExecutionState.Processing)
+								{
+									process.Value = execution.CompletedItemCount;
+
+                                    await Task.Delay(100);
+
+                                    if (!Console.IsInputRedirected)
+									{
+										while (Console.KeyAvailable)
+										{
+											var key = Console.ReadKey();
+
+											if (key.KeyChar == 'c' || key.KeyChar == 'C')
+												jobCancellation.Cancel();
+                                        }
+									}										
+								}
+
+                                await Task.Delay(100);
+                                ctx.Refresh();
+
+                                process.Value = execution.CompletedItemCount;
+								process.StopTask();
+							});
 					}
 
-					await Task.Delay(100);
-				}
+                    await AnsiConsole.Status()
+                        .Spinner(Spinner.Known.Dots)
+                        .SpinnerStyle(Style.Parse("yellow bold"))
+                        .StartAsync("Wrapping up...", async ctx =>
+                        {
+                            if (log.Categories.Any())
+                            {
+								AnsiConsole.MarkupLine("[dim]Item results:[/]");
 
-				// Execution.RunAsync will ensure all event handlers have completed before exiting
-				await executing;
+                                var grid = new Grid();
+                                grid.AddColumn();
+                                grid.AddColumn();
+
+                                foreach (var c in log.Categories)
+                                {
+                                    grid.AddRow(new Markup[]
+                                    {
+										new Markup($"{c.Count}"),
+										new Markup($"{(c.IsSuccessful ? "" : "[red]")}{c.Category}{(c.IsSuccessful ? "" : "[/]")}")
+									});
+                                }
+
+                                AnsiConsole.Write(grid);
+                                AnsiConsole.WriteLine();
+                            }
+
+							if (log.FailedItemCount > 0)
+							{
+								foreach (var failure in log.FailedItemsThatThrewExceptions.Take(10))
+								{
+									AnsiConsole.MarkupLine($"Item '{failure.Id ?? "Unknown"}' threw an exception:");
+									AnsiConsole.WriteException(failure.ProcessAsync?.Exception ?? failure.EnumeratorCurrent?.Exception ?? failure.EnumeratorMoveNext?.Exception);
+								}
+
+								AnsiConsole.WriteLine();
+							}
+
+                            AnsiConsole.Markup("Finalizing...");
+
+                            while (execution.State == ExecutionState.Finalizing)
+                                await Task.Delay(10);
+
+							if (execution.FinalizeAsync.IsSuccessful)
+								AnsiConsole.MarkupLine("[green]Success[/]");
+							else
+							{
+								AnsiConsole.MarkupLine("[red]Failed[/]");
+								AnsiConsole.WriteLine();
+								AnsiConsole.WriteException(execution.FinalizeAsync.Exception);
+								AnsiConsole.WriteLine();
+							}
+                        });
+                }
+
+
+
+                // Execution.RunAsync will ensure all event handlers have completed before exiting
+                await executing;
 
 				pingCancellation.Cancel();
 
 				if (config.Execution.ResultsToConsole)
-				{
-					Console.Write("\r" + new string(' ', 80));
-					Console.WriteLine();
-					Console.WriteLine(log);
-				}
+                {
+                    AnsiConsole.WriteLine();
 
-				if (config.Execution.ResultsToFile)
+					if (execution.Disposition == Disposition.Successful)
+						AnsiConsole.MarkupLine($"[bold green]JOB SUCCESSFUL[/]");
+					else if (execution.Disposition == Disposition.Cancelled)
+						AnsiConsole.MarkupLine($"[bold darkorange]JOB CANCELLED[/]");
+					else
+                        AnsiConsole.MarkupLine($"[bold red invert]JOB FAILED[/]");
+
+					AnsiConsole.WriteLine();
+                }
+
+                if (config.Execution.ResultsToFile)
 				{
 					using var writer = new StreamWriter(File.Open(config.Execution.ResultsFilePath, FileMode.Create));
 
@@ -271,4 +432,69 @@ namespace Runly.Hosting
 			}
 		}
 	}
+
+    internal class ValueColumn : ProgressColumn
+    {
+		protected override bool NoWrap => true;
+
+        /// <summary>
+        /// Gets or sets the style of the remaining time text.
+        /// </summary>
+        public Style Style { get; set; } = Color.Blue;
+
+        /// <inheritdoc/>
+        public override IRenderable Render(RenderOptions options, ProgressTask task, TimeSpan deltaTime)
+        {
+            if (task.IsIndeterminate)
+	            return new Text($"{task.Value:N0}", Style ?? Style.Plain);
+			else
+                return new Text($"{task.Value:N0}/{task.MaxValue:N0}", Style ?? Style.Plain);
+        }
+    }
+
+    internal class AverageTimeColumn : ProgressColumn
+    {
+		private readonly Execution _execution;
+
+		public AverageTimeColumn(Execution execution)
+		{
+			_execution = execution;
+		}
+
+        protected override bool NoWrap => true;
+
+        /// <summary>
+        /// Gets or sets the style of the remaining time text.
+        /// </summary>
+        public Style Style { get; set; } = Color.Blue;
+
+        /// <inheritdoc/>
+        public override IRenderable Render(RenderOptions options, ProgressTask task, TimeSpan deltaTime)
+        {
+            return new Markup($"[blue]{_execution.ItemProcessingTime.AllTime.Count:N0}[/] [dim]({_execution.ItemProcessingTime.AllTime.Average.TotalMilliseconds}ms avg)[/]");
+        }
+    }
+
+    internal class AverageTimeLastMinColumn : ProgressColumn
+    {
+        private readonly Execution _execution;
+
+        public AverageTimeLastMinColumn(Execution execution)
+        {
+            _execution = execution;
+        }
+
+        protected override bool NoWrap => true;
+
+        /// <summary>
+        /// Gets or sets the style of the remaining time text.
+        /// </summary>
+        public Style Style { get; set; } = Color.Blue;
+
+        /// <inheritdoc/>
+        public override IRenderable Render(RenderOptions options, ProgressTask task, TimeSpan deltaTime)
+        {
+			return new Markup($"Last min: [blue]{_execution.ItemProcessingTime.LastMinuteAverage.Count:N0}[/] [dim]({_execution.ItemProcessingTime.LastMinuteAverage.Average.TotalMilliseconds}ms avg)[/]");
+        }
+    }
 }

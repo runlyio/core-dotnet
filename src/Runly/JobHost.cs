@@ -1,11 +1,13 @@
 using System.IO;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Logging.EventLog;
 using Runly.Hosting;
 
 namespace Runly
@@ -63,7 +65,54 @@ namespace Runly
 		{
 			return Host
 				.CreateDefaultBuilder()
-				.ConfigureServices(services => services.AddRunlyJobs(args, jobAssemblies));
+				.ConfigureServices((hostingContext, services) =>
+				{
+					services.AddLogging(logging =>
+					{
+						// We need to remove the console logger that Host.CreateDefaultBuilder()
+						// adds, so we'll ClearProviders then redo everything, minus the console logger.
+						logging.ClearProviders();
+
+						bool isWindows =
+#if NETCOREAPP
+                    OperatingSystem.IsWindows();
+#elif NETFRAMEWORK
+                    Environment.OSVersion.Platform == PlatformID.Win32NT;
+#else
+		RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
+#endif
+
+						// IMPORTANT: This needs to be added *before* configuration is loaded, this lets
+						// the defaults be overridden by the configuration.
+						if (isWindows)
+						{
+							// Default the EventLogLoggerProvider to warning or above
+							logging.AddFilter<EventLogLoggerProvider>(level => level >= LogLevel.Warning);
+						}
+
+						logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+
+						logging.AddDebug();
+						logging.AddEventSourceLogger();
+
+						if (isWindows)
+						{
+							// Add the EventLogLoggerProvider on windows machines
+							logging.AddEventLog();
+						}
+
+						logging.Configure(options =>
+						{
+							options.ActivityTrackingOptions =
+								ActivityTrackingOptions.SpanId |
+								ActivityTrackingOptions.TraceId |
+								ActivityTrackingOptions.ParentId;
+						});
+					});
+
+					services.AddRunlyJobs(args, jobAssemblies);
+
+				});
 		}
 
 		/// <summary>

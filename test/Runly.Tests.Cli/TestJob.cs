@@ -4,10 +4,10 @@ public class TestJob : Job<Config>
     public TestJob(Config config)
         : base(config) { }
 
-    public override Task<Result> ProcessAsync()
+    public override async Task<Result> ProcessAsync()
     {
-        Console.WriteLine("TestJob is running");
+        await Task.Delay(2000);
 
-        return Task.FromResult(Result.Success());
+        return Result.Success();
     }
 }
