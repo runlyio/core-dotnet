@@ -3,6 +3,10 @@
     "Diagnostics": {
       "commandName": "Project",
       "commandLineArgs": "diagnosticjob --milliseconddelayperitem 10 --numberofitems 5000"
+    },
+    "List Jobs": {
+      "commandName": "Project",
+      "commandLineArgs": "list"
     }
   }
 }

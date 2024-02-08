@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Spectre.Console;
+using Spectre.Console.Json;
+using System;
 using System.Collections;
 using System.IO;
 using System.Linq;
@@ -41,11 +44,8 @@ namespace Runly.Hosting
 			await Console.Out.FlushAsync();
 		}
 
-		void WriteJson(TextWriter writer, string clientVersion)
-		{
-			var jobs = GetJobJson();
-			writer.WriteJson(new { clientVersion, jobs });
-		}
+		void WriteJson(TextWriter writer, string clientVersion) =>
+			AnsiConsole.Write(new JsonText(JsonConvert.SerializeObject(new { clientVersion, jobs = GetJobJson() })));
 
 		IEnumerable GetJobJson()
 		{
@@ -90,12 +90,15 @@ namespace Runly.Hosting
 
 				if (job.IsValid)
 				{
-					writer.WriteLine(verbose ? ConfigWriter.ToJson(cache.GetDefaultConfig(job)) : ConfigWriter.ToReducedJson(cache.GetDefaultConfig(job)));
-					writer.WriteLine();
+					AnsiConsole.Write(new Panel(new JsonText(verbose ? 
+						ConfigWriter.ToJson(cache.GetDefaultConfig(job)) : 
+						ConfigWriter.ToReducedJson(cache.GetDefaultConfig(job)))),
+						);
+					AnsiConsole.WriteLine();
 				}
 				else
 				{
-					writer.WriteLine($"Error Loading Job: {job.Errors.ToString()}");
+					AnsiConsole.WriteLine($"Error Loading Job: {job.Errors.ToString()}");
 					writer.WriteLine();
 				}
 			}
