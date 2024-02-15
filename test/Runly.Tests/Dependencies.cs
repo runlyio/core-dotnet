@@ -1,8 +1,25 @@
-﻿namespace Runly.Tests
+﻿using System;
+using System.Threading.Tasks;
+
+namespace Runly.Tests
 {
 	public interface IDep1 { }
-	public class Dep1 : IDep1 { }
-	public interface IDep2 { }
+    public class Dep1 : IDep1, IAsyncDisposable
+    {
+        public static bool IsDisposed { get; set; }
+
+        public Dep1()
+        {
+			IsDisposed = false;
+        }
+
+		public ValueTask DisposeAsync()
+		{
+			IsDisposed = true;
+			return ValueTask.CompletedTask;
+		}
+    }
+    public interface IDep2 { }
 	public class Dep2 : IDep2 { }
 	public class Dep3 { }
 	public class Dep4 { }
