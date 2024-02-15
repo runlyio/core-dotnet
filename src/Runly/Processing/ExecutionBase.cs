@@ -256,7 +256,9 @@ namespace Runly.Processing
 				{
 					try
 					{
-						await ProcessScopeAsync(provider.CreateScope());
+						using var scope = provider.CreateAsyncScope();
+
+                        await ProcessScopeAsync(scope);
 					}
 					catch (Exception ex) when (Job.Config.Execution.HandleExceptions)
 					{
@@ -275,7 +277,7 @@ namespace Runly.Processing
 		/// </summary>
 		/// <param name="scope">The <see cref="IServiceScope"/> containing a scoped <see cref="IServiceProvider"/> to get services from.</param>
 		/// <returns>A <see cref="Task"/> representing the asynchronous execution of this method.</returns>
-		async Task ProcessScopeAsync(IServiceScope scope)
+		async Task ProcessScopeAsync(AsyncServiceScope scope)
 		{
 			bool @continue = true;
 			var stopwatch = new Stopwatch();
