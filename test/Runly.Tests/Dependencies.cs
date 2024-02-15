@@ -1,7 +1,9 @@
 ﻿namespace Runly.Tests
 {
-	public class Dep1 { }
-	public class Dep2 { }
+	public interface IDep1 { }
+	public class Dep1 : IDep1 { }
+	public interface IDep2 { }
+	public class Dep2 : IDep2 { }
 	public class Dep3 { }
 	public class Dep4 { }
 	public class Dep5 { }

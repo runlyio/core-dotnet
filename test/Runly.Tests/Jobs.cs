@@ -46,7 +46,22 @@ namespace Runly.Tests
 		}
 	}
 
-	public class Job2 : Job<Config, int, Dep1, Dep2>
+    public class Job1WithConstructorDep : Job<Config, int>
+    {
+        public Job1WithConstructorDep(IDep1 dep1) : base(new Config()) { }
+
+        public override IAsyncEnumerable<int> GetItemsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task<Result> ProcessAsync(int item)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Job2 : Job<Config, int, Dep1, Dep2>
 	{
 		public Job2() : base(new Config()) { }
 
@@ -61,7 +76,22 @@ namespace Runly.Tests
 		}
 	}
 
-	public class Job3 : Job<Config, int, Dep1, Dep2, Dep3>
+    public class Job2WithConstructorDep : Job<Config, int>
+    {
+        public Job2WithConstructorDep(IDep1 dep1, IDep2 dep2) : base(new Config()) { }
+
+        public override IAsyncEnumerable<int> GetItemsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override Task<Result> ProcessAsync(int item)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class Job3 : Job<Config, int, Dep1, Dep2, Dep3>
 	{
 		public Job3() : base(new Config()) { }
 
