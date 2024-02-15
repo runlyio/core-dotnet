@@ -1,4 +1,6 @@
 ﻿using FluentAssertions;
+using Microsoft.Extensions.DependencyInjection;
+using Runly.Hosting;
 using Runly.Testing;
 using System.Threading.Tasks;
 using Xunit;
@@ -28,5 +30,24 @@ namespace Runly.Tests.Scenarios.Running
 			runner.Execution.IsComplete.Should().BeTrue();
 			runner.Execution.Disposition.Should().Be(Disposition.Successful);
 		}
-	}
+
+        [Fact]
+        public async Task should_run_a_job_with_scoped_dependency_in_constructor()
+        {
+            var builder = JobHost.CreateDefaultBuilder(["Job2WithConstructorDep"])
+                 .ConfigureServices((context, services) =>
+                 {
+                     services.AddScoped<IDep1>(s => new Dep1());
+					 services.AddSingleton<IDep2>(s => new Dep2());
+                 })
+                .Build();
+
+            var action = builder.Services.GetRequiredService<IHostAction>();
+
+            action.Should().NotBeNull()
+                .And.BeOfType<RunAction>();
+
+            await action.RunAsync();
+        }
+    }
 }
