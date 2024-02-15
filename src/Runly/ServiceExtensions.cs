@@ -340,7 +340,7 @@ namespace Runly
 				));
 			}
 
-			services.AddSingleton<Execution>(s =>
+			services.AddScoped<Execution>(s =>
 			{
 				var cache = s.GetRequiredService<JobCache>();
 
@@ -369,7 +369,7 @@ namespace Runly
 		{
             var info = cache.Get(config.Job.Type);
 
-            services.AddTransient(info.JobType);
+            services.AddScoped(info.JobType);
 
             var type = config.GetType();
 

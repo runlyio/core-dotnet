@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Runly.Hosting;
 using Runly.Testing;
+using System;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -34,7 +35,10 @@ namespace Runly.Tests.Scenarios.Running
         [Fact]
         public async Task should_run_a_job_with_scoped_dependency_in_constructor()
         {
-            var builder = JobHost.CreateDefaultBuilder(["Job2WithConstructorDep"])
+			// CreateDefaultBuilder is more strict with Environment = Dev
+			Environment.SetEnvironmentVariable("DOTNET_ENVIRONMENT", "Development");
+
+            var action = JobHost.CreateDefaultBuilder(["Job1WithConstructorDep"], typeof(UnitTest).Assembly)
                  .ConfigureServices((context, services) =>
                  {
                      services.AddScoped<IDep1>(s => new Dep1());
@@ -42,12 +46,7 @@ namespace Runly.Tests.Scenarios.Running
                  })
                 .Build();
 
-            var action = builder.Services.GetRequiredService<IHostAction>();
-
-            action.Should().NotBeNull()
-                .And.BeOfType<RunAction>();
-
-            await action.RunAsync();
+            await action.RunJobAsync();
         }
     }
 }
