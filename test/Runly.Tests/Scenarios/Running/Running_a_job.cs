@@ -46,7 +46,15 @@ namespace Runly.Tests.Scenarios.Running
                  })
                 .Build();
 
-            await action.RunJobAsync();
+			Dep1.IsDisposed.Should().BeFalse();
+
+            var run = action.RunJobAsync();
+
+            Dep1.IsDisposed.Should().BeFalse();
+
+            await run;
+
+			Dep1.IsDisposed.Should().BeTrue();
         }
     }
 }
