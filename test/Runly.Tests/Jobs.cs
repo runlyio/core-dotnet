@@ -1,9 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Runly.Tests
 {
+	public class SignalConfig : Config
+	{
+		public bool WaitForSignal { get; set; }
+	}
+
 	public class JobNoConf : Job
 	{
 		public JobNoConf() : base(new Config()) { }
@@ -76,18 +82,24 @@ namespace Runly.Tests
 		}
 	}
 
-    public class Job2WithConstructorDep : Job<Config, int>
+    public class Job2WithConstructorDep : Job<SignalConfig, int>
     {
-        public Job2WithConstructorDep(IDep1 dep1, IDep2 dep2) : base(new Config()) { }
+		readonly AutoResetEvent _signal;
 
-        public override IAsyncEnumerable<int> GetItemsAsync()
-        {
-            throw new NotImplementedException();
-        }
+        public Job2WithConstructorDep(SignalConfig config, IDep1 dep1, IDep2 dep2, AutoResetEvent signal)
+			: base(config) 
+		{
+			_signal = signal;
+		}
+
+        public override IAsyncEnumerable<int> GetItemsAsync() => new[] { 0 }.ToAsyncEnumerable();
 
         public override Task<Result> ProcessAsync(int item)
         {
-            throw new NotImplementedException();
+			if (Config.WaitForSignal)
+				_signal.WaitOne();
+
+			return Task.FromResult(Result.Success());
         }
     }
 

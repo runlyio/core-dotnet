@@ -1,5 +1,6 @@
-﻿using Runly;
+﻿using Microsoft.Extensions.Hosting;
+using Runly;
 
 await JobHost.CreateDefaultBuilder(args)
     .Build()
-    .RunJobAsync();
+    .RunAsync();

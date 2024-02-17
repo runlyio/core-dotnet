@@ -1,4 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Runly.Client;
 using Runly.Hosting;
@@ -252,21 +253,23 @@ namespace Runly
 		{
 			services.AddTransient<JsonSchema>();
 
-			services.AddTransient<IHostAction>(s => new ListAction(
+			services.AddTransient<IHostedService>(s => new ListAction(
 				verbose,
 				json,
 				s.GetRequiredService<JobCache>(),
-				s.GetRequiredService<JsonSchema>()
-			));
+				s.GetRequiredService<JsonSchema>(),
+                s.GetRequiredService<IHostApplicationLifetime>()
+            ));
 		}
 
 		static void AddGetAction(this IServiceCollection services, string type, string filePath, bool verbose)
 		{
-			services.AddTransient<IHostAction>(s => new GetAction(
+			services.AddTransient<IHostedService>(s => new GetAction(
 				verbose,
 				type,
 				string.IsNullOrWhiteSpace(filePath) ? null : filePath,
-				s.GetRequiredService<JobCache>()
+				s.GetRequiredService<JobCache>(),
+				s.GetRequiredService<IHostApplicationLifetime>()
 			));
 		}
 
@@ -350,9 +353,10 @@ namespace Runly
 				return job.GetExecution(s.GetRequiredService<IServiceProvider>());
 			});
 
-			services.AddTransient<IHostAction>(s => new RunAction(
-				s.GetRequiredService<Execution>(),
+			services.AddTransient<IHostedService>(s => new RunAction(
 				s.GetRequiredService<Config>(),
+                s.GetRequiredService<IHostApplicationLifetime>(),
+                s,
 				s.GetRequiredService<ILogger<RunAction>>(),
 				s.GetService<ResultsChannel>(),
 				s.GetService<Debug>()

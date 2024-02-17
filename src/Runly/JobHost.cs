@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Reflection;
 using System.Runtime.InteropServices;
@@ -116,27 +117,21 @@ namespace Runly
 		}
 
 		/// <summary>
-		/// Runs the job.
+		/// Deprecated. Runs the job.
 		/// </summary>
 		/// <param name="host">The <see cref="IHost"/> to run.</param>
 		/// <returns>The <see cref="Task"/> that represents the asynchronous operation.</returns>
-		public static Task RunJobAsync(this IHost host)
-		{
-			return host.RunJobAsync(new CancellationTokenSource().Token);
-		}
+		[Obsolete("Use IHost.RunAsync() instead.")]
+        public static Task RunJobAsync(this IHost host) => host.RunAsync();
 
-		/// <summary>
-		/// Runs the job.
-		/// </summary>
-		/// <param name="host">The <see cref="IHost"/> to run.</param>
-		/// <param name="cancellationToken">The token to trigger cancellation.</param>
-		/// <returns>The <see cref="Task"/> that represents the asynchronous operation.</returns>
-		public static Task RunJobAsync(this IHost host, CancellationToken cancellationToken)
-		{
-			var scope = host.Services.CreateAsyncScope();
-            var action = scope.ServiceProvider.GetRequiredService<IHostAction>();
-			
-			return action?.RunAsync(cancellationToken).ContinueWith(async action => await scope.DisposeAsync()) ?? Task.CompletedTask;
-		}
-	}
+        /// <summary>
+        /// Deprected. Runs the job.
+        /// </summary>
+        /// <param name="host">The <see cref="IHost"/> to run.</param>
+        /// <param name="cancellationToken">The token to trigger cancellation.</param>
+        /// <returns>The <see cref="Task"/> that represents the asynchronous operation.</returns>
+		[Obsolete("Use IHost.RunAsync(CancellationToken) instead.")]
+        public static Task RunJobAsync(this IHost host, CancellationToken cancellationToken) => 
+			host.RunAsync(cancellationToken);
+    }
 }
