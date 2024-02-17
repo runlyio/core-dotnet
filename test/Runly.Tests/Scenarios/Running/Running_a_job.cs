@@ -1,8 +1,11 @@
 ﻿using FluentAssertions;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Runly.Hosting;
 using Runly.Testing;
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -38,19 +41,28 @@ namespace Runly.Tests.Scenarios.Running
 			// CreateDefaultBuilder is more strict with Environment = Dev
 			Environment.SetEnvironmentVariable("DOTNET_ENVIRONMENT", "Development");
 
-            var action = JobHost.CreateDefaultBuilder(["Job1WithConstructorDep"], typeof(UnitTest).Assembly)
+			var signal = new AutoResetEvent(false);
+
+            var action = JobHost.CreateDefaultBuilder(["Job2WithConstructorDep"], typeof(UnitTest).Assembly)
                  .ConfigureServices((context, services) =>
                  {
                      services.AddScoped<IDep1>(s => new Dep1());
 					 services.AddSingleton<IDep2>(s => new Dep2());
+					 services.AddSingleton(signal);
                  })
                 .Build();
 
-			Dep1.IsDisposed.Should().BeFalse();
+			var runAction = action.Services.GetRequiredService<IHostedService>() as RunAction;
 
-            var run = action.RunJobAsync();
+			((SignalConfig)runAction.Config).WaitForSignal = true;
+
+			Dep1.IsDisposed.Should().BeFalse();
+			
+            var run = action.RunAsync();
 
             Dep1.IsDisposed.Should().BeFalse();
+
+			signal.Set();
 
             await run;
 

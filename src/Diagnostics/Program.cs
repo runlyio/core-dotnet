@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using Microsoft.Extensions.Hosting;
+using System.Threading.Tasks;
 
 namespace Runly.Diagnostics
 {
@@ -8,7 +9,7 @@ namespace Runly.Diagnostics
 		{
 			return JobHost.CreateDefaultBuilder(args)
 				.Build()
-				.RunJobAsync();
+				.RunAsync();
 		}
 	}
 }

@@ -1,71 +1,81 @@
-﻿using System;
+﻿using Microsoft.Extensions.Hosting;
+using System;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace Runly.Hosting
 {
-	class GetAction : IHostAction
+	internal class GetAction : HostedAction
 	{
-		readonly bool verbose;
-		string filePath;
-		readonly string jobType;
-		readonly JobCache cache;
+		private readonly bool _verbose;
+		private string _filePath;
+		private readonly string _jobType;
+		private readonly JobCache _cache;
+		private readonly IHostApplicationLifetime _applciationLifetime;
 
-		internal GetAction(bool verbose, string jobType, string filePath, JobCache cache)
+		internal GetAction(bool verbose, string jobType, string filePath, JobCache cache, IHostApplicationLifetime applicationLifetime)
 		{
-			this.verbose = verbose;
-			this.jobType = jobType;
-			this.filePath = filePath;
-			this.cache = cache;
+			_verbose = verbose;
+			_jobType = jobType;
+			_filePath = filePath;
+			_cache = cache;
+			_applciationLifetime = applicationLifetime;
 		}
 
-		public async Task RunAsync(CancellationToken cancel)
+        protected override async Task RunAsync(CancellationToken cancel)
 		{
-			TextWriter writer = null;
-			JobInfo job;
-
 			try
 			{
-				job = cache.Get(jobType);
-			}
-			catch (TypeNotFoundException)
-			{
-				Console.WriteLine($"Could not find the job type '{jobType}'.");
-				return;
-			}
+				TextWriter writer = null;
+				JobInfo job;
 
-			var config = cache.GetDefaultConfig(job);
-
-			try
-			{
-
-				if (filePath == null)
+				try
 				{
-					writer = Console.Out;
+					job = _cache.Get(_jobType);
 				}
-				else
+				catch (TypeNotFoundException)
 				{
-					// If path is an existing directory, such as ".", add a file name
-					if (Directory.Exists(filePath))
-						filePath = Path.Combine(filePath, job.JobType.Name + ".json");
-
-					writer = new StreamWriter(File.Open(filePath, FileMode.Create));
+					Console.WriteLine($"Could not find the job type '{_jobType}'.");
+					return;
 				}
-					
-				await writer.WriteAsync(verbose ? ConfigWriter.ToJson(config) : ConfigWriter.ToReducedJson(config));
+
+				var config = _cache.GetDefaultConfig(job);
+
+				try
+				{
+
+					if (_filePath == null)
+					{
+						writer = Console.Out;
+					}
+					else
+					{
+						// If path is an existing directory, such as ".", add a file name
+						if (Directory.Exists(_filePath))
+							_filePath = Path.Combine(_filePath, job.JobType.Name + ".json");
+
+						writer = new StreamWriter(File.Open(_filePath, FileMode.Create));
+					}
+
+					await writer.WriteAsync(_verbose ? ConfigWriter.ToJson(config) : ConfigWriter.ToReducedJson(config));
+				}
+				finally
+				{
+					if (_filePath != null && writer != null)
+					{
+						await writer.FlushAsync();
+						writer.Dispose();
+					}
+				}
+
+				if (_filePath != null)
+					Console.WriteLine($"Default config for {job.JobType.FullName} saved to {Path.GetFullPath(_filePath)}");
 			}
 			finally
 			{
-				if (filePath != null && writer != null)
-				{
-					await writer.FlushAsync();
-					writer.Dispose();
-				}
+				_applciationLifetime?.StopApplication();
 			}
-		
-			if (filePath != null)
-				Console.WriteLine($"Default config for {job.JobType.FullName} saved to {Path.GetFullPath(filePath)}");
 		}
 	}
 }
